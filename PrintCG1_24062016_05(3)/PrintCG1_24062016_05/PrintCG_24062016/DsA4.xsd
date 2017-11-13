@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsA4" targetNamespace="http://tempuri.org/DsA4.xsd" xmlns:mstns="http://tempuri.org/DsA4.xsd" xmlns="http://tempuri.org/DsA4.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsA4" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsA4" msprop:Generator_UserDSName="DsA4">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PrintA4" msprop:Generator_TableClassName="PrintA4DataTable" msprop:Generator_TableVarName="tablePrintA4" msprop:Generator_TablePropName="PrintA4" msprop:Generator_RowDeletingName="PrintA4RowDeleting" msprop:Generator_RowChangingName="PrintA4RowChanging" msprop:Generator_RowEvHandlerName="PrintA4RowChangeEventHandler" msprop:Generator_RowDeletedName="PrintA4RowDeleted" msprop:Generator_UserTableName="PrintA4" msprop:Generator_RowChangedName="PrintA4RowChanged" msprop:Generator_RowEvArgName="PrintA4RowChangeEvent" msprop:Generator_RowClassName="PrintA4Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="STT" msprop:Generator_ColumnVarNameInTable="columnSTT" msprop:Generator_ColumnPropNameInRow="STT" msprop:Generator_ColumnPropNameInTable="STTColumn" msprop:Generator_UserColumnName="STT" type="xs:string" minOccurs="0" />
+              <xs:element name="NoiDung" msprop:Generator_ColumnVarNameInTable="columnNoiDung" msprop:Generator_ColumnPropNameInRow="NoiDung" msprop:Generator_ColumnPropNameInTable="NoiDungColumn" msprop:Generator_UserColumnName="NoiDung" type="xs:string" minOccurs="0" />
+              <xs:element name="GhiChu" msprop:Generator_ColumnVarNameInTable="columnGhiChu" msprop:Generator_ColumnPropNameInRow="GhiChu" msprop:Generator_ColumnPropNameInTable="GhiChuColumn" msprop:Generator_UserColumnName="GhiChu" type="xs:string" minOccurs="0" />
+              <xs:element name="SL" msprop:Generator_ColumnVarNameInTable="columnSL" msprop:Generator_ColumnPropNameInRow="SL" msprop:Generator_ColumnPropNameInTable="SLColumn" msprop:Generator_UserColumnName="SL" type="xs:string" minOccurs="0" />
+              <xs:element name="TL" msprop:Generator_ColumnVarNameInTable="columnTL" msprop:Generator_ColumnPropNameInRow="TL" msprop:Generator_ColumnPropNameInTable="TLColumn" msprop:Generator_UserColumnName="TL" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipCode" msprop:Generator_ColumnVarNameInTable="columnShipCode" msprop:Generator_ColumnPropNameInRow="ShipCode" msprop:Generator_ColumnPropNameInTable="ShipCodeColumn" msprop:Generator_UserColumnName="ShipCode" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

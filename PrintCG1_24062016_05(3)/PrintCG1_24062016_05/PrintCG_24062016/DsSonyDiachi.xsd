@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsSonyDiachi" targetNamespace="http://tempuri.org/DsSonyDiachi.xsd" xmlns:mstns="http://tempuri.org/DsSonyDiachi.xsd" xmlns="http://tempuri.org/DsSonyDiachi.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsSonyDiachi" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsSonyDiachi" msprop:Generator_DataSetName="DsSonyDiachi" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SonyDiachi" msprop:Generator_UserTableName="SonyDiachi" msprop:Generator_RowDeletedName="SonyDiachiRowDeleted" msprop:Generator_RowChangedName="SonyDiachiRowChanged" msprop:Generator_RowClassName="SonyDiachiRow" msprop:Generator_RowChangingName="SonyDiachiRowChanging" msprop:Generator_RowEvArgName="SonyDiachiRowChangeEvent" msprop:Generator_RowEvHandlerName="SonyDiachiRowChangeEventHandler" msprop:Generator_TableClassName="SonyDiachiDataTable" msprop:Generator_TableVarName="tableSonyDiachi" msprop:Generator_RowDeletingName="SonyDiachiRowDeleting" msprop:Generator_TablePropName="SonyDiachi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ShipID" msprop:Generator_UserColumnName="ShipID" msprop:Generator_ColumnVarNameInTable="columnShipID" msprop:Generator_ColumnPropNameInRow="ShipID" msprop:Generator_ColumnPropNameInTable="ShipIDColumn" type="xs:string" />
+              <xs:element name="ShipName" msprop:Generator_UserColumnName="ShipName" msprop:Generator_ColumnVarNameInTable="columnShipName" msprop:Generator_ColumnPropNameInRow="ShipName" msprop:Generator_ColumnPropNameInTable="ShipNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipStreet" msprop:Generator_UserColumnName="ShipStreet" msprop:Generator_ColumnVarNameInTable="columnShipStreet" msprop:Generator_ColumnPropNameInRow="ShipStreet" msprop:Generator_ColumnPropNameInTable="ShipStreetColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Province" msprop:Generator_UserColumnName="Province" msprop:Generator_ColumnVarNameInTable="columnProvince" msprop:Generator_ColumnPropNameInRow="Province" msprop:Generator_ColumnPropNameInTable="ProvinceColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Remark" msprop:Generator_UserColumnName="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SonyDiachi" />
+      <xs:field xpath="mstns:ShipID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

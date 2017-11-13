@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsDHLDiachi" targetNamespace="http://tempuri.org/DsDHLDiachi.xsd" xmlns:mstns="http://tempuri.org/DsDHLDiachi.xsd" xmlns="http://tempuri.org/DsDHLDiachi.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsDHLDiachi" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsDHLDiachi" msprop:Generator_DataSetName="DsDHLDiachi" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DHLDiachi" msprop:Generator_UserTableName="DHLDiachi" msprop:Generator_RowDeletedName="DHLDiachiRowDeleted" msprop:Generator_RowChangedName="DHLDiachiRowChanged" msprop:Generator_RowClassName="DHLDiachiRow" msprop:Generator_RowChangingName="DHLDiachiRowChanging" msprop:Generator_RowEvArgName="DHLDiachiRowChangeEvent" msprop:Generator_RowEvHandlerName="DHLDiachiRowChangeEventHandler" msprop:Generator_TableClassName="DHLDiachiDataTable" msprop:Generator_TableVarName="tableDHLDiachi" msprop:Generator_RowDeletingName="DHLDiachiRowDeleting" msprop:Generator_TablePropName="DHLDiachi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Zone" msprop:Generator_UserColumnName="Zone" msprop:Generator_ColumnVarNameInTable="columnZone" msprop:Generator_ColumnPropNameInRow="Zone" msprop:Generator_ColumnPropNameInTable="ZoneColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ZoneDesc" msprop:Generator_UserColumnName="ZoneDesc" msprop:Generator_ColumnVarNameInTable="columnZoneDesc" msprop:Generator_ColumnPropNameInRow="ZoneDesc" msprop:Generator_ColumnPropNameInTable="ZoneDescColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NodeCode" msprop:Generator_UserColumnName="NodeCode" msprop:Generator_ColumnVarNameInTable="columnNodeCode" msprop:Generator_ColumnPropNameInRow="NodeCode" msprop:Generator_ColumnPropNameInTable="NodeCodeColumn" type="xs:string" />
+              <xs:element name="ShipName" msprop:Generator_UserColumnName="ShipName" msprop:Generator_ColumnVarNameInTable="columnShipName" msprop:Generator_ColumnPropNameInRow="ShipName" msprop:Generator_ColumnPropNameInTable="ShipNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipAddress" msprop:Generator_UserColumnName="ShipAddress" msprop:Generator_ColumnVarNameInTable="columnShipAddress" msprop:Generator_ColumnPropNameInRow="ShipAddress" msprop:Generator_ColumnPropNameInTable="ShipAddressColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Remark" msprop:Generator_UserColumnName="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DHLDiachi" />
+      <xs:field xpath="mstns:NodeCode" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

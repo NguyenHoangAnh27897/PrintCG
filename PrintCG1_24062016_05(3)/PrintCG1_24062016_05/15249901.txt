@@ -1,0 +1,3 @@
+in dhl
+-can xoa trong luong cua CG khi in lai
+-xu ly truong hop khi nhap du lieu khong co nguoi nhan, dia chi nhan, noi den

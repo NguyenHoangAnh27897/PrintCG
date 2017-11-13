@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsCG1Sony" targetNamespace="http://tempuri.org/DsCG1Sony.xsd" xmlns:mstns="http://tempuri.org/DsCG1Sony.xsd" xmlns="http://tempuri.org/DsCG1Sony.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsCG1Sony" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DsCG1Sony" msprop:Generator_UserDSName="DsCG1Sony" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CG1Sony" msprop:Generator_UserTableName="CG1Sony" msprop:Generator_RowDeletedName="CG1SonyRowDeleted" msprop:Generator_TableClassName="CG1SonyDataTable" msprop:Generator_RowChangedName="CG1SonyRowChanged" msprop:Generator_RowClassName="CG1SonyRow" msprop:Generator_RowChangingName="CG1SonyRowChanging" msprop:Generator_RowEvArgName="CG1SonyRowChangeEvent" msprop:Generator_RowEvHandlerName="CG1SonyRowChangeEventHandler" msprop:Generator_TablePropName="CG1Sony" msprop:Generator_TableVarName="tableCG1Sony" msprop:Generator_RowDeletingName="CG1SonyRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CG" msprop:Generator_UserColumnName="CG" msprop:Generator_ColumnPropNameInRow="CG" msprop:Generator_ColumnVarNameInTable="columnCG" msprop:Generator_ColumnPropNameInTable="CGColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SL" msprop:Generator_UserColumnName="SL" msprop:Generator_ColumnPropNameInRow="SL" msprop:Generator_ColumnVarNameInTable="columnSL" msprop:Generator_ColumnPropNameInTable="SLColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TL" msprop:Generator_UserColumnName="TL" msprop:Generator_ColumnPropNameInRow="TL" msprop:Generator_ColumnVarNameInTable="columnTL" msprop:Generator_ColumnPropNameInTable="TLColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ND" msprop:Generator_UserColumnName="ND" msprop:Generator_ColumnPropNameInRow="ND" msprop:Generator_ColumnVarNameInTable="columnND" msprop:Generator_ColumnPropNameInTable="NDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DO" msprop:Generator_UserColumnName="DO" msprop:Generator_ColumnPropNameInRow="DO" msprop:Generator_ColumnVarNameInTable="columnDO" msprop:Generator_ColumnPropNameInTable="DOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="HD" msprop:Generator_UserColumnName="HD" msprop:Generator_ColumnPropNameInRow="HD" msprop:Generator_ColumnVarNameInTable="columnHD" msprop:Generator_ColumnPropNameInTable="HDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Ghichu" msprop:Generator_UserColumnName="Ghichu" msprop:Generator_ColumnPropNameInRow="Ghichu" msprop:Generator_ColumnVarNameInTable="columnGhichu" msprop:Generator_ColumnPropNameInTable="GhichuColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

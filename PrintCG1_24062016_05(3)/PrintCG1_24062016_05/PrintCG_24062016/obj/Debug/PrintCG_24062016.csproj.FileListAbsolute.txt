@@ -1,0 +1,823 @@
+D:\Laptrinh\PrintCG_24062016\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\Laptrinh\PrintCG_24062016\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\PrintCG_24062016\PrintCG_24062016\obj\Debug\ResolveAssemblyReference.cache
+D:\Laptrinh\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\Laptrinh\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\Laptrinh\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\Laptrinh\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\Laptrinh\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\Laptrinh\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\Laptrinh\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\Laptrinh\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\Laptrinh\App\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG_24062016\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG_24062016\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG_24062016\PrintCG_24062016\obj\Debug\ResolveAssemblyReference.cache
+D:\Laptrinh\App\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\Laptrinh\App\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\Laptrinh\App\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\Laptrinh\App\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\Laptrinh\App\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\Laptrinh\App\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\Laptrinh\App\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\Laptrinh\App\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\App\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\Laptrinh\App\PrintCG_24062016\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\Laptrinh\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\Laptrinh\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\PrintCG_24062016_01\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\Laptrinh\PrintCG_24062016_01\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\ResolveAssemblyReference.cache
+D:\Laptrinh\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\Laptrinh\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\Laptrinh\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\Laptrinh\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\Laptrinh\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\Laptrinh\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\Laptrinh\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\Laptrinh\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\Laptrinh\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\Laptrinh\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\ResolveAssemblyReference.cache
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+D:\Laptrinh\App\PrintCG_24062016_01\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\ResolveAssemblyReference.cache
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\ResolveAssemblyReference.cache
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+D:\Laptrinh\App\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+D:\Laptrinh\PrintCG_24062016_02\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\ResolveAssemblyReference.cache
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\App\PrintCG1_24062016_03\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\ResolveAssemblyReference.cache
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmUpdate.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\ResolveAssemblyReference.cache
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmUpdate.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\Laptrinh\PrintCG1_24062016_04\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\ResolveAssemblyReference.cache
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_New.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_PLAN_INSERT.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmUpdate.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCOD.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCODPrint.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe.config
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayerPrint.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLPrint.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLXoaDO.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmNormal.resources
+D:\Laptrinh\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayer.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe.config
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\office.dll
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\ResolveAssemblyReference.cache
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayerPrint.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmChuyenThu.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLPrint.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLXoaDO.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmNormal.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayer.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCOD.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCODPrint.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_New.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_PLAN_INSERT.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmUpdate.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\laptrinh\Winform\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLLuyKe.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_New.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayerPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmChuyenThu.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLDiachi.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLLuyKe.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLXoaDO.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmNormal.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayer.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCOD.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCODPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_PLAN_INSERT.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmUpdate.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe.config
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony_New.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_Sony_Plan_Insert.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDiachi.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBangKe.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTracking.resources
+D:\Laptrinh\App\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG8.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe.config
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\office.dll
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csprojResolveAssemblyReference.cache
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBangKe.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayerPrint.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG8.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmChuyenThu.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLDiachi.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLLuyKe.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLPrint.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLXoaDO.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmNormal.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDiachi.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony_New.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTracking.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_Sony_Plan_Insert.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayer.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCOD.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCODPrint.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_New.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_PLAN_INSERT.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmUpdate.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+C:\Users\Shu\Documents\Visual Studio 2013\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe.config
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csprojResolveAssemblyReference.cache
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBangKe.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayerPrint.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG8.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmChuyenThu.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLDiachi.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLLuyKe.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLPrint.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLXoaDO.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmNormal.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDiachi.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony_New.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTracking.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_Sony_Plan_Insert.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayer.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCOD.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCODPrint.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_New.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_PLAN_INSERT.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmUpdate.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\VS Duong\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe.config
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBangKe.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayerPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG8.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmChuyenThu.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLDiachi.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLLuyKe.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLXoaDO.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmNormal.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDiachi.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony_New.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTracking.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_Sony_Plan_Insert.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayer.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCOD.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCODPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_New.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_PLAN_INSERT.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmUpdate.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG1_24062016_05(1)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe.config
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBangKe.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayerPrint.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG8.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmChuyenThu.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLDiachi.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLLuyKe.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLPrint.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLXoaDO.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmNormal.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDiachi.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony_New.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTracking.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_Sony_Plan_Insert.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayer.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCOD.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCODPrint.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_New.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_PLAN_INSERT.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmUpdate.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+D:\Laptrinh\PrintCG\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\office.dll
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe.config
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\office.dll
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csprojResolveAssemblyReference.cache
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBangKe.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayerPrint.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG8.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmChuyenThu.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLDiachi.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLLuyKe.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLPrint.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLXoaDO.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmNormal.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDiachi.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony_New.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTracking.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_Sony_Plan_Insert.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayer.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCOD.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCODPrint.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_New.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_PLAN_INSERT.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmUpdate.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+C:\Users\Shu\Documents\Visual Studio 2017\Projects\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe.config
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBangKe.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayerPrint.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG8.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmChuyenThu.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLDiachi.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLLuyKe.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLPrint.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLXoaDO.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmNormal.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDiachi.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony_New.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTracking.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_Sony_Plan_Insert.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayer.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCOD.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCODPrint.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_New.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_PLAN_INSERT.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmUpdate.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+C:\Users\LOIVV\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe.config
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBangKe.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayerPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG8.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmChuyenThu.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLDiachi.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLLuyKe.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLXoaDO.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmNormal.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDiachi.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony_New.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTracking.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_Sony_Plan_Insert.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayer.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCOD.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCODPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_New.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_PLAN_INSERT.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmUpdate.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csprojResolveAssemblyReference.cache
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\KeepAutomation.Barcode.Windows.dll
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe.config
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\office.dll
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csprojResolveAssemblyReference.cache
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBangKe.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayerPrint.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG8.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmChuyenThu.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLDiachi.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLLuyKe.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLPrint.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLXoaDO.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmNormal.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDiachi.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony_New.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTracking.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_DMSP.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_Sony_Plan_Insert.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayer.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCOD.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCODPrint.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_New.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_PLAN_INSERT.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmUpdate.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_DMDC.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_DMKH.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_XuatNhapKho.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_NhapKho.resources
+C:\Users\hoang\AppData\Roaming\Skype\My Skype Received Files\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_XuatKho.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe.config
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBangKe.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayerPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG8.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmChuyenThu.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLDiachi.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLLuyKe.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLXoaDO.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmNormal.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDiachi.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony_New.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTracking.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_DMDC.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_DMKH.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_DMSP.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_NhapKho.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_Sony_Plan_Insert.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_XuatKho.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_XuatNhapKho.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayer.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCOD.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCODPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_New.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_PLAN_INSERT.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmUpdate.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe.licenses
+D:\Laptrinh\App\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csprojResolveAssemblyReference.cache
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe.config
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.pdb
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.pdb
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\ExcelLibrary.dll
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csprojResolveAssemblyReference.cache
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.CG1_LE.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBangKe.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayerPrint.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG8.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmChuyenThu.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLDiachi.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLLuyKe.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLPrint.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLXoaDO.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain1.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmNormal.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDiachi.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony_New.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTracking.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_DMDC.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_DMKH.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_DMSP.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_NhapKho.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_Sony_Plan_Insert.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_XuatKho.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_XuatNhapKho.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBayer.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmBaoPhat.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG14Print.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG1Print.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCG7Print.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCOD.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmCODPrint.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_Listweight.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_New.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHL_PLAN_INSERT.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromTo.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmFromToPrint.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGui.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmInPhieuGuiPrint.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmPhieuLe.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSony.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDT.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyPrint.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmTLCan.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmUpdate.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Properties.Resources.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe.licenses
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmKHDB.resources
+C:\Users\hoang\Documents\Visual Studio 2013\PrintCG1_24062016_05(3)\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_ImportExcel.resources
