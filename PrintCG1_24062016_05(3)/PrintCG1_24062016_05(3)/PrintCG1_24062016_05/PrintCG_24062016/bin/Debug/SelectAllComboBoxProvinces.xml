@@ -1,0 +1,433 @@
+<?xml version="1.0" standalone="yes"?>
+<MyDataSet>
+  <BS_Countries>
+    <ProvinceID>...</ProvinceID>
+    <ProvinceName>...</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>AGG</ProvinceID>
+    <ProvinceName>AN GIANG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>AUS</ProvinceID>
+    <ProvinceName>AUSTRALIA</ProvinceName>
+    <CountryID>AUS</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>BCN</ProvinceID>
+    <ProvinceName>BẮC CẠN</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>BDG</ProvinceID>
+    <ProvinceName>BÌNH DƯƠNG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>BDH</ProvinceID>
+    <ProvinceName>BÌNH ĐỊNH</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>BGG</ProvinceID>
+    <ProvinceName>BẮC GIANG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>BLC</ProvinceID>
+    <ProvinceName>BẢO LỘC</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>BLU</ProvinceID>
+    <ProvinceName>BẠC LIÊU</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>BNH</ProvinceID>
+    <ProvinceName>BẮC NINH</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>BPC</ProvinceID>
+    <ProvinceName>BÌNH PHƯỚC</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>BRA</ProvinceID>
+    <ProvinceName>BÀ RỊA (VŨNG TÀU)</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>BTE</ProvinceID>
+    <ProvinceName>BẾN TRE</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>BTN</ProvinceID>
+    <ProvinceName>BÌNH THUẬN</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>CBG</ProvinceID>
+    <ProvinceName>CAO BẰNG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>CCI</ProvinceID>
+    <ProvinceName>CỦ CHI (TP.HỒ CHÍ MINH)</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>CDC</ProvinceID>
+    <ProvinceName>CHÂU ĐỐC</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>CHN</ProvinceID>
+    <ProvinceName>CHINA</ProvinceName>
+    <CountryID>CHN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>CMU</ProvinceID>
+    <ProvinceName>CÀ MAU</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>CTO</ProvinceID>
+    <ProvinceName>CẦN THƠ</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>DBN</ProvinceID>
+    <ProvinceName>ĐIỆN BIÊN</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>DCG</ProvinceID>
+    <ProvinceName>ĐẮC NÔNG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>DLK</ProvinceID>
+    <ProvinceName>ĐĂKLĂK</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>DLT</ProvinceID>
+    <ProvinceName>ĐÀ LẠT</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>DNG</ProvinceID>
+    <ProvinceName>ĐÀ NẴNG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>DNI</ProvinceID>
+    <ProvinceName>ĐỒNG NAI</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>DTP</ProvinceID>
+    <ProvinceName>ĐỒNG THÁP</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>DXI</ProvinceID>
+    <ProvinceName>ĐỒNG XOÀI</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>EGY</ProvinceID>
+    <ProvinceName>EGYPT</ProvinceName>
+    <CountryID>EGY</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>FRA</ProvinceID>
+    <ProvinceName>FRANCE</ProvinceName>
+    <CountryID>FRA</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>GLI</ProvinceID>
+    <ProvinceName>GIA LAI</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>HBH</ProvinceID>
+    <ProvinceName>HÒA BÌNH</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>HCM</ProvinceID>
+    <ProvinceName>TP. HỒ CHÍ MINH</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>HDG</ProvinceID>
+    <ProvinceName>HẢI DƯƠNG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>HGG</ProvinceID>
+    <ProvinceName>HÀ GIANG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>HNI</ProvinceID>
+    <ProvinceName>HÀ NỘI</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>HNM</ProvinceID>
+    <ProvinceName>HÀ NAM</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>HPG</ProvinceID>
+    <ProvinceName>HẢI PHÒNG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>HTH</ProvinceID>
+    <ProvinceName>HÀ TĨNH</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>HTN</ProvinceID>
+    <ProvinceName>Hà Tiên</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>HTY</ProvinceID>
+    <ProvinceName>HÀ TÂY</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>HUE</ProvinceID>
+    <ProvinceName>THỪA THIÊN - HUẾ</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>HUG</ProvinceID>
+    <ProvinceName>HẬU GIANG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>HYN</ProvinceID>
+    <ProvinceName>HƯNG YÊN</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>INN</ProvinceID>
+    <ProvinceName>INDONESIA</ProvinceName>
+    <CountryID>INN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>KGG</ProvinceID>
+    <ProvinceName>KIÊN GIANG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>KHA</ProvinceID>
+    <ProvinceName>KHÁNH HÒA</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>KOR</ProvinceID>
+    <ProvinceName>KOREA</ProvinceName>
+    <CountryID>KOR</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>KTM</ProvinceID>
+    <ProvinceName>KONTUM</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>LAN</ProvinceID>
+    <ProvinceName>LONG AN</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>LCI</ProvinceID>
+    <ProvinceName>LÀO CAI</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>LCU</ProvinceID>
+    <ProvinceName>LAI CHÂU</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>LDG</ProvinceID>
+    <ProvinceName>LÂM ĐỒNG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>LKH</ProvinceID>
+    <ProvinceName>LONG KHÁNH(P.ĐỒNG NAI)</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>LSN</ProvinceID>
+    <ProvinceName>LẠNG SƠN</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>MAS</ProvinceID>
+    <ProvinceName>MALAYSIA</ProvinceName>
+    <CountryID>MAS</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>NAN</ProvinceID>
+    <ProvinceName>NGHỆ AN</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>NBH</ProvinceID>
+    <ProvinceName>NINH BÌNH</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>NDH</ProvinceID>
+    <ProvinceName>NAM ĐỊNH</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>NTN</ProvinceID>
+    <ProvinceName>NINH THUẬN</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>OMN</ProvinceID>
+    <ProvinceName>Ô MÔN</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>PTO</ProvinceID>
+    <ProvinceName>PHÚ THỌ</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>PYN</ProvinceID>
+    <ProvinceName>PHÚ YÊN</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>QBH</ProvinceID>
+    <ProvinceName>QUẢNG BÌNH</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>QNH</ProvinceID>
+    <ProvinceName>QUẢNG NINH</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>QNI</ProvinceID>
+    <ProvinceName>QUẢNG NGÃI</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>QNM</ProvinceID>
+    <ProvinceName>QUẢNG NAM</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>QTI</ProvinceID>
+    <ProvinceName>QUẢNG TRỊ</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>SDC</ProvinceID>
+    <ProvinceName>SA ĐÉC</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>SIN</ProvinceID>
+    <ProvinceName>SINGAPORE</ProvinceName>
+    <CountryID>SIN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>SLA</ProvinceID>
+    <ProvinceName>SƠN LA</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>STG</ProvinceID>
+    <ProvinceName>SÓC TRĂNG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>TBH</ProvinceID>
+    <ProvinceName>THÁI BÌNH</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>TGG</ProvinceID>
+    <ProvinceName>TIỀN GIANG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>THA</ProvinceID>
+    <ProvinceName>THANH HÓA</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>THD</ProvinceID>
+    <ProvinceName>THAILAND</ProvinceName>
+    <CountryID>THD</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>TNH</ProvinceID>
+    <ProvinceName>TÂY NINH</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>TNN</ProvinceID>
+    <ProvinceName>THÁI NGUYÊN</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>TNT</ProvinceID>
+    <ProvinceName>THỐT NỐT (CẦN THƠ)</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>TQG</ProvinceID>
+    <ProvinceName>TUYÊN QUANG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>TTH</ProvinceID>
+    <ProvinceName>TÂN THÀNH(VŨNG TÀU)</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>TVH</ProvinceID>
+    <ProvinceName>TRÀ VINH</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>VLG</ProvinceID>
+    <ProvinceName>VĨNH LONG</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>VPC</ProvinceID>
+    <ProvinceName>VĨNH PHÚC</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>VTU</ProvinceID>
+    <ProvinceName>VŨNG TÀU</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+  <BS_Countries>
+    <ProvinceID>YBI</ProvinceID>
+    <ProvinceName>YÊN BÁI</ProvinceName>
+    <CountryID>VN</CountryID>
+  </BS_Countries>
+</MyDataSet>

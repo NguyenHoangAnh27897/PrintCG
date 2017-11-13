@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetEmployees">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="postofficeid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserLoginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserPostOfice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostOffice" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserPostOficeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserPostOficeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MailerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostOfficeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserGroupID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertHistoryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMailerDelivery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostOfficeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMailerDeliveryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMailerDeliveryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMailerDeliveryDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMailerDeliveryDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMailerDeliveryDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMailerDeliveryDetailbyID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MailerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostOfficeID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMailerDeliveryDetailbyIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMailerDeliveryDetailbyIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertMailerDeliveryDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Notes" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertMailerDeliveryDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertMailerDeliveryDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMailerDelivery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MailerCount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Weight" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumberOfPackage" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserGroupID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMailerDeliveryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateMailerDeliveryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMailerCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostOfficeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMailerCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMailerCustomerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SGP_PDA_Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostOfficeID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SGP_PDA_LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SGP_PDA_LoginResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SGP_MailerDeliveryInsert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostOfficeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmployeeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumberOfPackage" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserGroupID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MailerCount" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Weight" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SGP_MailerDeliveryInsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SGP_MailerDeliveryInsertResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SGP_MaxMailerDeliveryDocumentID">
+        <s:complexType />
+      </s:element>
+      <s:element name="SGP_MaxMailerDeliveryDocumentIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SGP_MaxMailerDeliveryDocumentIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SGP_DeleteMailerDeliveryDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SGP_DeleteMailerDeliveryDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SGP_DeleteMailerDeliveryDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SGP_CheckMailerDeliveryDocumentID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SGP_CheckMailerDeliveryDocumentIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SGP_CheckMailerDeliveryDocumentIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SGP_CG8_Employee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostOfficeID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SGP_CG8_EmployeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SGP_CG8_EmployeeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SGP_CG8_EmployeeDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Employee" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SGP_CG8_EmployeeDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SGP_CG8_EmployeeDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetEmployeesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployees" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserLogin" />
+  </wsdl:message>
+  <wsdl:message name="GetUserLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPostOficeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserPostOfice" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPostOficeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserPostOficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:InsertHistory" />
+  </wsdl:message>
+  <wsdl:message name="InsertHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:InsertHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMailerDeliverySoapIn">
+    <wsdl:part name="parameters" element="tns:GetMailerDelivery" />
+  </wsdl:message>
+  <wsdl:message name="GetMailerDeliverySoapOut">
+    <wsdl:part name="parameters" element="tns:GetMailerDeliveryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMailerDeliveryDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMailerDeliveryDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetMailerDeliveryDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMailerDeliveryDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMailerDeliveryDetailbyIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMailerDeliveryDetailbyID" />
+  </wsdl:message>
+  <wsdl:message name="GetMailerDeliveryDetailbyIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMailerDeliveryDetailbyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertMailerDeliveryDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertMailerDeliveryDetail" />
+  </wsdl:message>
+  <wsdl:message name="InsertMailerDeliveryDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertMailerDeliveryDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMailerDeliverySoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateMailerDelivery" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMailerDeliverySoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateMailerDeliveryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMailerCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMailerCustomer" />
+  </wsdl:message>
+  <wsdl:message name="GetMailerCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMailerCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="SGP_PDA_LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:SGP_PDA_Login" />
+  </wsdl:message>
+  <wsdl:message name="SGP_PDA_LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:SGP_PDA_LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="SGP_MailerDeliveryInsertSoapIn">
+    <wsdl:part name="parameters" element="tns:SGP_MailerDeliveryInsert" />
+  </wsdl:message>
+  <wsdl:message name="SGP_MailerDeliveryInsertSoapOut">
+    <wsdl:part name="parameters" element="tns:SGP_MailerDeliveryInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="SGP_MaxMailerDeliveryDocumentIDSoapIn">
+    <wsdl:part name="parameters" element="tns:SGP_MaxMailerDeliveryDocumentID" />
+  </wsdl:message>
+  <wsdl:message name="SGP_MaxMailerDeliveryDocumentIDSoapOut">
+    <wsdl:part name="parameters" element="tns:SGP_MaxMailerDeliveryDocumentIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SGP_DeleteMailerDeliveryDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:SGP_DeleteMailerDeliveryDetail" />
+  </wsdl:message>
+  <wsdl:message name="SGP_DeleteMailerDeliveryDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:SGP_DeleteMailerDeliveryDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SGP_CheckMailerDeliveryDocumentIDSoapIn">
+    <wsdl:part name="parameters" element="tns:SGP_CheckMailerDeliveryDocumentID" />
+  </wsdl:message>
+  <wsdl:message name="SGP_CheckMailerDeliveryDocumentIDSoapOut">
+    <wsdl:part name="parameters" element="tns:SGP_CheckMailerDeliveryDocumentIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SGP_CG8_EmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:SGP_CG8_Employee" />
+  </wsdl:message>
+  <wsdl:message name="SGP_CG8_EmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:SGP_CG8_EmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SGP_CG8_EmployeeDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:SGP_CG8_EmployeeDetail" />
+  </wsdl:message>
+  <wsdl:message name="SGP_CG8_EmployeeDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:SGP_CG8_EmployeeDetailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="GetEmployees">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Employees</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeesSoapIn" />
+      <wsdl:output message="tns:GetEmployeesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get User Login</wsdl:documentation>
+      <wsdl:input message="tns:GetUserLoginSoapIn" />
+      <wsdl:output message="tns:GetUserLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPostOfice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get User PostOffice</wsdl:documentation>
+      <wsdl:input message="tns:GetUserPostOficeSoapIn" />
+      <wsdl:output message="tns:GetUserPostOficeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert History</wsdl:documentation>
+      <wsdl:input message="tns:InsertHistorySoapIn" />
+      <wsdl:output message="tns:InsertHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMailerDelivery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get MailerDelivery</wsdl:documentation>
+      <wsdl:input message="tns:GetMailerDeliverySoapIn" />
+      <wsdl:output message="tns:GetMailerDeliverySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMailerDeliveryDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get MailerDeliveryDetails</wsdl:documentation>
+      <wsdl:input message="tns:GetMailerDeliveryDetailsSoapIn" />
+      <wsdl:output message="tns:GetMailerDeliveryDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMailerDeliveryDetailbyID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get MailerDeliveryDetailbyID</wsdl:documentation>
+      <wsdl:input message="tns:GetMailerDeliveryDetailbyIDSoapIn" />
+      <wsdl:output message="tns:GetMailerDeliveryDetailbyIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMailerDeliveryDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert MailerDeliveryDetail</wsdl:documentation>
+      <wsdl:input message="tns:InsertMailerDeliveryDetailSoapIn" />
+      <wsdl:output message="tns:InsertMailerDeliveryDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMailerDelivery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update MailerDelivery</wsdl:documentation>
+      <wsdl:input message="tns:UpdateMailerDeliverySoapIn" />
+      <wsdl:output message="tns:UpdateMailerDeliverySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMailerCustomer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get MailerDeliveryDetailbyID</wsdl:documentation>
+      <wsdl:input message="tns:GetMailerCustomerSoapIn" />
+      <wsdl:output message="tns:GetMailerCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SGP_PDA_Login">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PDA Login</wsdl:documentation>
+      <wsdl:input message="tns:SGP_PDA_LoginSoapIn" />
+      <wsdl:output message="tns:SGP_PDA_LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SGP_MailerDeliveryInsert">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert CG8 master CTHO</wsdl:documentation>
+      <wsdl:input message="tns:SGP_MailerDeliveryInsertSoapIn" />
+      <wsdl:output message="tns:SGP_MailerDeliveryInsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SGP_MaxMailerDeliveryDocumentID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Max DocumentID for MM_MailerDelivery</wsdl:documentation>
+      <wsdl:input message="tns:SGP_MaxMailerDeliveryDocumentIDSoapIn" />
+      <wsdl:output message="tns:SGP_MaxMailerDeliveryDocumentIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SGP_DeleteMailerDeliveryDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Delete MailerID  from MM_MailerDeliveryDetails</wsdl:documentation>
+      <wsdl:input message="tns:SGP_DeleteMailerDeliveryDetailSoapIn" />
+      <wsdl:output message="tns:SGP_DeleteMailerDeliveryDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SGP_CheckMailerDeliveryDocumentID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check MailerDelivery DocumentID exist</wsdl:documentation>
+      <wsdl:input message="tns:SGP_CheckMailerDeliveryDocumentIDSoapIn" />
+      <wsdl:output message="tns:SGP_CheckMailerDeliveryDocumentIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SGP_CG8_Employee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get CG8_Employee</wsdl:documentation>
+      <wsdl:input message="tns:SGP_CG8_EmployeeSoapIn" />
+      <wsdl:output message="tns:SGP_CG8_EmployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SGP_CG8_EmployeeDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get SGP_CG8_EmployeeDetail</wsdl:documentation>
+      <wsdl:input message="tns:SGP_CG8_EmployeeDetailSoapIn" />
+      <wsdl:output message="tns:SGP_CG8_EmployeeDetailSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEmployees">
+      <soap:operation soapAction="http://tempuri.org/GetEmployees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserLogin">
+      <soap:operation soapAction="http://tempuri.org/GetUserLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPostOfice">
+      <soap:operation soapAction="http://tempuri.org/GetUserPostOfice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertHistory">
+      <soap:operation soapAction="http://tempuri.org/InsertHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailerDelivery">
+      <soap:operation soapAction="http://tempuri.org/GetMailerDelivery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailerDeliveryDetails">
+      <soap:operation soapAction="http://tempuri.org/GetMailerDeliveryDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailerDeliveryDetailbyID">
+      <soap:operation soapAction="http://tempuri.org/GetMailerDeliveryDetailbyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMailerDeliveryDetail">
+      <soap:operation soapAction="http://tempuri.org/InsertMailerDeliveryDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMailerDelivery">
+      <soap:operation soapAction="http://tempuri.org/UpdateMailerDelivery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailerCustomer">
+      <soap:operation soapAction="http://tempuri.org/GetMailerCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_PDA_Login">
+      <soap:operation soapAction="http://tempuri.org/SGP_PDA_Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_MailerDeliveryInsert">
+      <soap:operation soapAction="http://tempuri.org/SGP_MailerDeliveryInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_MaxMailerDeliveryDocumentID">
+      <soap:operation soapAction="http://tempuri.org/SGP_MaxMailerDeliveryDocumentID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_DeleteMailerDeliveryDetail">
+      <soap:operation soapAction="http://tempuri.org/SGP_DeleteMailerDeliveryDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_CheckMailerDeliveryDocumentID">
+      <soap:operation soapAction="http://tempuri.org/SGP_CheckMailerDeliveryDocumentID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_CG8_Employee">
+      <soap:operation soapAction="http://tempuri.org/SGP_CG8_Employee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_CG8_EmployeeDetail">
+      <soap:operation soapAction="http://tempuri.org/SGP_CG8_EmployeeDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEmployees">
+      <soap12:operation soapAction="http://tempuri.org/GetEmployees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserLogin">
+      <soap12:operation soapAction="http://tempuri.org/GetUserLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPostOfice">
+      <soap12:operation soapAction="http://tempuri.org/GetUserPostOfice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertHistory">
+      <soap12:operation soapAction="http://tempuri.org/InsertHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailerDelivery">
+      <soap12:operation soapAction="http://tempuri.org/GetMailerDelivery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailerDeliveryDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetMailerDeliveryDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailerDeliveryDetailbyID">
+      <soap12:operation soapAction="http://tempuri.org/GetMailerDeliveryDetailbyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMailerDeliveryDetail">
+      <soap12:operation soapAction="http://tempuri.org/InsertMailerDeliveryDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMailerDelivery">
+      <soap12:operation soapAction="http://tempuri.org/UpdateMailerDelivery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailerCustomer">
+      <soap12:operation soapAction="http://tempuri.org/GetMailerCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_PDA_Login">
+      <soap12:operation soapAction="http://tempuri.org/SGP_PDA_Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_MailerDeliveryInsert">
+      <soap12:operation soapAction="http://tempuri.org/SGP_MailerDeliveryInsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_MaxMailerDeliveryDocumentID">
+      <soap12:operation soapAction="http://tempuri.org/SGP_MaxMailerDeliveryDocumentID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_DeleteMailerDeliveryDetail">
+      <soap12:operation soapAction="http://tempuri.org/SGP_DeleteMailerDeliveryDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_CheckMailerDeliveryDocumentID">
+      <soap12:operation soapAction="http://tempuri.org/SGP_CheckMailerDeliveryDocumentID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_CG8_Employee">
+      <soap12:operation soapAction="http://tempuri.org/SGP_CG8_Employee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_CG8_EmployeeDetail">
+      <soap12:operation soapAction="http://tempuri.org/SGP_CG8_EmployeeDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://pms.sgp.vn/KV04/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://pms.sgp.vn/KV04/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
