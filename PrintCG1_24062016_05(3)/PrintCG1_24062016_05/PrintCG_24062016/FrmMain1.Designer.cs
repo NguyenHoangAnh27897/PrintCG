@@ -55,6 +55,7 @@
             this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem18 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem19 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem25 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem20 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem21 = new DevExpress.XtraNavBar.NavBarItem();
@@ -62,7 +63,6 @@
             this.navBarItem23 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.navBarItem25 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -302,6 +302,12 @@
             this.navBarItem19.Name = "navBarItem19";
             this.navBarItem19.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem19_LinkClicked);
             // 
+            // navBarItem25
+            // 
+            this.navBarItem25.Caption = "Khách hàng đặc biệt";
+            this.navBarItem25.Name = "navBarItem25";
+            this.navBarItem25.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem25_LinkClicked);
+            // 
             // navBarGroup4
             // 
             this.navBarGroup4.Caption = "Fuji xerox";
@@ -347,12 +353,6 @@
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // navBarItem25
-            // 
-            this.navBarItem25.Caption = "Khách hàng đặc biệt";
-            this.navBarItem25.Name = "navBarItem25";
-            this.navBarItem25.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem25_LinkClicked);
-            // 
             // FrmMain1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,6 +362,7 @@
             this.IsMdiContainer = true;
             this.Name = "FrmMain1";
             this.Text = "Chương trình in SGP";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel1.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);

@@ -38,7 +38,7 @@ namespace PrintCG_24062016
                 {
                 //Update lai RealQuantity của ngày nhap kho cũ nhat cua san pham can xuat , nêu RealQuantity < OutputQuantity sẽ - RealQuantity ngày kế tiếp
                 //1 lay ra ngay cũ nhat RealQuantity > 0 theo mã sản phẩm từ bảng xuất nhập.
-                    string checkrealquantity = "SELECT CreateDate,Quantity,RealQuantity FROM tb_fujixeroxnx where RealQuantity > 0 and IDSP = '" + txtID.Text.ToUpper().Trim() + "' order by CreateDate";
+                    string checkrealquantity = "SELECT CreateDate,Quantity,RealQuantity FROM tb_fujixeroxnx where RealQuantity > 0 and IDSP = '" + txtID.Text.ToUpper().Trim() + "' order by CreateDate asc";
                     DataTable dtcheckavailable = new DataTable();
                     OleDbCommand cmdcheckavailable = new OleDbCommand();
                     cmdcheckavailable.Connection = conn;
@@ -52,17 +52,29 @@ namespace PrintCG_24062016
                     int outpuquantity = int.Parse(txtQuan.Text);
                     int realquantity = 0;
                     string strupdaterealquantity = string.Empty;
-                    DateTime createdate = DateTime.Parse(dtcheckavailable.Rows[0][0].ToString());
+                    DateTime createdate;
                     for (int i = 0; i <= rowcount; i++)
                     { 
-                        realquantity = int.Parse(dtcheckavailable.Rows[0][2].ToString());
-                        if (outpuquantity <= realquantity)
+                        realquantity = int.Parse(dtcheckavailable.Rows[i][2].ToString());
+                        createdate = DateTime.Parse(dtcheckavailable.Rows[i][0].ToString());
+                        if (realquantity > 0)
                         {
                             //do so luong xuat = hoặc ít hơn dòng đầu tiên nên update lại realquantity và thoát khỏi vòng lặp
-                            strupdaterealquantity = "update tb_fujixeroxnx set RealQuantity = RealQuantity - " + outpuquantity + " where IDSP ='" + txtID.Text.ToUpper().Trim() + "' and  CreateDate = #" + createdate.ToString("MM-dd-yyyy") + "#";
-                            OleDbCommand cmdupdaterealquantity = new OleDbCommand(strupdaterealquantity, conn);
-                            cmdupdaterealquantity.ExecuteNonQuery();
-                            break;
+                            if (realquantity >= outpuquantity)
+                            {
+                                strupdaterealquantity = "update tb_fujixeroxnx set RealQuantity = RealQuantity - " + outpuquantity + " where IDSP ='" + txtID.Text.ToUpper().Trim() + "' and  CreateDate = #" + createdate.ToString("MM-dd-yyyy") + "#";
+                                OleDbCommand cmdupdaterealquantity = new OleDbCommand(strupdaterealquantity, conn);
+                                cmdupdaterealquantity.ExecuteNonQuery();
+                                break;
+                            }else
+                            {
+                                strupdaterealquantity = "update tb_fujixeroxnx set RealQuantity = RealQuantity - " + realquantity + " where IDSP ='" + txtID.Text.ToUpper().Trim() + "' and  CreateDate = #" + createdate.ToString("MM-dd-yyyy") + "#";
+                                OleDbCommand cmdupdaterealquantity = new OleDbCommand(strupdaterealquantity, conn);
+                                cmdupdaterealquantity.ExecuteNonQuery();
+                                outpuquantity = outpuquantity - realquantity;
+                            }
+                           
+                           
                         }
                     }
                     //tru di so luong da xuat vao thuc te so luong

@@ -38,13 +38,13 @@ namespace PrintCG_24062016
                // int count = int.Parse(dt0.Rows[0][0].ToString());
                 if (int.Parse(dt0.Rows[0][0].ToString()) == 0)
                 {
-                    string query = "insert into tb_fujixeroxnx (IDSP,CreateDate,[Quantity],RealQuantity,Employee) values ('" + txtID.Text.Trim() + "',#" + DateTime.Now.ToString("MM-dd-yyyy") + "#," + int.Parse(txtQuan.Text) + "," + int.Parse(txtQuan.Text) + ",'SGP')";
+                    string query = "insert into tb_fujixeroxnx (IDSP,CreateDate,[Quantity],RealQuantity) values ('" + txtID.Text.Trim() + "',#" + DateTime.Now.ToString("MM-dd-yyyy") + "#," + int.Parse(txtQuan.Text) + "," + int.Parse(txtQuan.Text) + ")";
                     //string query = "update tb_fujixeroxdmsp set [Quantity] = [Quantity] + " + int.Parse(txtQuan.Text) + ", [Type] = 'Nhập', [Date] = #" + DateTime.Now.ToString("MM-dd-yyyy") + "# where [ID] = '" + txtID.Text + "'";
                     OleDbCommand cmd = new OleDbCommand(query, conn);
                     cmd.ExecuteNonQuery();
                 }else
                 {
-                    string query = "update tb_fujixeroxnx set RealQuantity = RealQuantity + " + int.Parse(txtQuan.Text) + ",[Quantity] = [Quantity] + "+ int.Parse(txtQuan.Text) +" where IDSP ='"+ txtID.Text +"' and Type ='N' and CreateDate = #" + DateTime.Now.ToString("MM-dd-yyyy") + "#";
+                    string query = "update tb_fujixeroxnx set RealQuantity = RealQuantity + " + int.Parse(txtQuan.Text) + ",[Quantity] = [Quantity] + "+ int.Parse(txtQuan.Text) +" where IDSP ='"+ txtID.Text +"' and CreateDate = #" + DateTime.Now.ToString("MM-dd-yyyy") + "#";
                     //string query = "update tb_fujixeroxdmsp set [Quantity] = [Quantity] + " + int.Parse(txtQuan.Text) + ", [Type] = 'Nhập', [Date] = #" + DateTime.Now.ToString("MM-dd-yyyy") + "# where [ID] = '" + txtID.Text + "'";
                     OleDbCommand cmd = new OleDbCommand(query, conn);
                     cmd.ExecuteNonQuery();
