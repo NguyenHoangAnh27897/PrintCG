@@ -48,5 +48,10 @@ namespace PrintCG_24062016
         {
 
         }
+
+        private void Frm_ImportExcel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

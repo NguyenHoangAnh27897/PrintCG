@@ -93,6 +93,7 @@
             this.Controls.Add(this.simpleButton1);
             this.Name = "Frm_ImportExcel";
             this.Text = "Frm_ImportExcel";
+            this.Load += new System.EventHandler(this.Frm_ImportExcel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSheet.Properties)).EndInit();

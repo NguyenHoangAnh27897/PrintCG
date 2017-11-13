@@ -68,10 +68,11 @@
             this.txtQuan.Size = new System.Drawing.Size(65, 20);
             this.txtQuan.TabIndex = 6;
             this.txtQuan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQuan_KeyDown);
+            this.txtQuan.Leave += new System.EventHandler(this.txtQuan_Leave);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(163, 239);
+            this.btnSave.Location = new System.Drawing.Point(144, 239);
             this.btnSave.Name = "btnSave";
             this.btnSave.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnSave.Size = new System.Drawing.Size(126, 23);
@@ -89,6 +90,7 @@
             this.cbbAdd.TabIndex = 8;
             this.cbbAdd.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.cbbAdd.Enter += new System.EventHandler(this.cbbAdd_Enter);
+            this.cbbAdd.Leave += new System.EventHandler(this.cbbAdd_Leave);
             // 
             // label3
             // 
@@ -130,6 +132,7 @@
             this.txtcg.Name = "txtcg";
             this.txtcg.Size = new System.Drawing.Size(298, 20);
             this.txtcg.TabIndex = 22;
+            this.txtcg.Leave += new System.EventHandler(this.txtcg_Leave);
             // 
             // label5
             // 
@@ -155,6 +158,7 @@
             this.txtphone.Name = "txtphone";
             this.txtphone.Size = new System.Drawing.Size(298, 20);
             this.txtphone.TabIndex = 19;
+            this.txtphone.Leave += new System.EventHandler(this.txtphone_Leave);
             // 
             // label8
             // 
@@ -171,6 +175,7 @@
             this.txtperson.Name = "txtperson";
             this.txtperson.Size = new System.Drawing.Size(298, 20);
             this.txtperson.TabIndex = 17;
+            this.txtperson.Leave += new System.EventHandler(this.txtperson_Leave);
             // 
             // label7
             // 
@@ -198,6 +203,7 @@
             this.comboBox1.Size = new System.Drawing.Size(298, 21);
             this.comboBox1.TabIndex = 10;
             this.comboBox1.Enter += new System.EventHandler(this.comboBox1_Enter);
+            this.comboBox1.Leave += new System.EventHandler(this.comboBox1_Leave);
             // 
             // txtID
             // 

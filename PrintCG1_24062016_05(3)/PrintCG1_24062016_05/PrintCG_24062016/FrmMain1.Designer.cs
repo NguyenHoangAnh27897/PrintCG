@@ -63,6 +63,7 @@
             this.navBarItem23 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.navBarItem26 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -139,7 +140,8 @@
             this.navBarItem22,
             this.navBarItem23,
             this.navBarItem24,
-            this.navBarItem25});
+            this.navBarItem25,
+            this.navBarItem26});
             this.navBarControl1.Location = new System.Drawing.Point(-4, 3);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 200;
@@ -311,12 +313,14 @@
             // navBarGroup4
             // 
             this.navBarGroup4.Caption = "Fuji xerox";
+            this.navBarGroup4.Expanded = true;
             this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem20),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem21),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem22),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem23),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem24)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem24),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem26)});
             this.navBarGroup4.Name = "navBarGroup4";
             // 
             // navBarItem20
@@ -352,6 +356,12 @@
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // navBarItem26
+            // 
+            this.navBarItem26.Caption = "Xuất Excel";
+            this.navBarItem26.Name = "navBarItem26";
+            this.navBarItem26.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem26_LinkClicked);
             // 
             // FrmMain1
             // 
@@ -408,6 +418,7 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem23;
         private DevExpress.XtraNavBar.NavBarItem navBarItem24;
         private DevExpress.XtraNavBar.NavBarItem navBarItem25;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem26;
 
     }
 }

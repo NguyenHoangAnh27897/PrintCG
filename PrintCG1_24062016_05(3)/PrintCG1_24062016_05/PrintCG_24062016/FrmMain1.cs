@@ -386,5 +386,20 @@ namespace PrintCG_24062016
                 frm.Show();
             }
         }
+
+        private void navBarItem26_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            FrmExcel frm = new FrmExcel();
+            if ((Application.OpenForms["FrmKHDB"] as FrmExcel) != null)
+            {
+                frm.Focus();
+            }
+            else
+            {
+                frm = new FrmExcel();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
     }
 }
