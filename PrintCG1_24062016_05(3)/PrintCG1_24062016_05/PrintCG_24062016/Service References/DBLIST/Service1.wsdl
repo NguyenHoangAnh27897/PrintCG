@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Payment_Insert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paymentmethod" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Payment_InsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Payment_InsertResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Payment_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paymentmethodID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentmethod" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Payment_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Payment_UpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Payment_Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paymentmethodID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Payment_DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Payment_DeleteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Customer_Insert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="taxcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phonenumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="faxnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postofficeid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Customer_InsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer_InsertResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Customer_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="taxcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phonenumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="faxnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postofficeid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Customer_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer_UpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Customer_Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Customer_DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer_DeleteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Invoices_Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Invoices_DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Invoices_DeleteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Invoices_Insert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuyerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PaymentMethodID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ServiceID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Month" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostOfficeID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Invoices_InsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Invoices_InsertResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Invoices_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Invoice" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Invoices_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Invoices_UpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Seller_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sellername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="faxnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phonenumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="taxcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Seller_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Seller_UpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Services_Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="serviceid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Services_DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Services_DeleteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Services_Insert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="servicename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Services_InsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Services_InsertResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Services_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="serviceid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="servicename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Services_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Services_UpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Customers_GetMaxID">
+        <s:complexType />
+      </s:element>
+      <s:element name="Customers_GetMaxIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customers_GetMaxIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Seller_Info">
+        <s:complexType />
+      </s:element>
+      <s:element name="Seller_InfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Seller_InfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Invoices_Info">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Invoices_InfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Invoices_InfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Services_Get">
+        <s:complexType />
+      </s:element>
+      <s:element name="Services_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Services_GetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Payment_Get">
+        <s:complexType />
+      </s:element>
+      <s:element name="Payment_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Payment_GetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Customers_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostOfficeID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Customers_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customers_GetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Invoices_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostOfficeID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Invoices_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Invoices_GetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Customers_GetID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Customers_GetIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customers_GetIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDHLPlan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DHLDO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PGI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeliveryDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToZone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZoneDesc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToNodeCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShiptoNM" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShiptoAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Quatity" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Unit1" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Weight" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Unit2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subcon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CG" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SL" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TL" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KH" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Unit3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TongSL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SenderName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SenderAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contact1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contact2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contact3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Employee" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Vung" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDHLPlanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertDHLPlanResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DHL_GetDO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DODHL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DHL_GetDOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DHL_GetDOResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertSonyPlan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DODate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DODHL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipToParty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipToName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipToStreet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Province" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="GrossWeight" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Quatity" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TongSL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Employee" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contact1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contact2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contact3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeliveryDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProvinceID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SL" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CG" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TL" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="SenderName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SenderAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertSonyPlanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertSonyPlanResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sony_GetDO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DODHL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sony_GetDOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sony_GetDOResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SGP_KT_GetPackingListbyMailerID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CG" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SGP_KT_GetPackingListbyMailerIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SGP_KT_GetPackingListbyMailerIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Payment_InsertSoapIn">
+    <wsdl:part name="parameters" element="tns:Payment_Insert" />
+  </wsdl:message>
+  <wsdl:message name="Payment_InsertSoapOut">
+    <wsdl:part name="parameters" element="tns:Payment_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="Payment_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:Payment_Update" />
+  </wsdl:message>
+  <wsdl:message name="Payment_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:Payment_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Payment_DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:Payment_Delete" />
+  </wsdl:message>
+  <wsdl:message name="Payment_DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:Payment_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Customer_InsertSoapIn">
+    <wsdl:part name="parameters" element="tns:Customer_Insert" />
+  </wsdl:message>
+  <wsdl:message name="Customer_InsertSoapOut">
+    <wsdl:part name="parameters" element="tns:Customer_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="Customer_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:Customer_Update" />
+  </wsdl:message>
+  <wsdl:message name="Customer_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:Customer_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Customer_DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:Customer_Delete" />
+  </wsdl:message>
+  <wsdl:message name="Customer_DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:Customer_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Invoices_DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:Invoices_Delete" />
+  </wsdl:message>
+  <wsdl:message name="Invoices_DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:Invoices_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Invoices_InsertSoapIn">
+    <wsdl:part name="parameters" element="tns:Invoices_Insert" />
+  </wsdl:message>
+  <wsdl:message name="Invoices_InsertSoapOut">
+    <wsdl:part name="parameters" element="tns:Invoices_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="Invoices_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:Invoices_Update" />
+  </wsdl:message>
+  <wsdl:message name="Invoices_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:Invoices_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Seller_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:Seller_Update" />
+  </wsdl:message>
+  <wsdl:message name="Seller_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:Seller_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Services_DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:Services_Delete" />
+  </wsdl:message>
+  <wsdl:message name="Services_DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:Services_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Services_InsertSoapIn">
+    <wsdl:part name="parameters" element="tns:Services_Insert" />
+  </wsdl:message>
+  <wsdl:message name="Services_InsertSoapOut">
+    <wsdl:part name="parameters" element="tns:Services_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="Services_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:Services_Update" />
+  </wsdl:message>
+  <wsdl:message name="Services_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:Services_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Customers_GetMaxIDSoapIn">
+    <wsdl:part name="parameters" element="tns:Customers_GetMaxID" />
+  </wsdl:message>
+  <wsdl:message name="Customers_GetMaxIDSoapOut">
+    <wsdl:part name="parameters" element="tns:Customers_GetMaxIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Seller_InfoSoapIn">
+    <wsdl:part name="parameters" element="tns:Seller_Info" />
+  </wsdl:message>
+  <wsdl:message name="Seller_InfoSoapOut">
+    <wsdl:part name="parameters" element="tns:Seller_InfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Invoices_InfoSoapIn">
+    <wsdl:part name="parameters" element="tns:Invoices_Info" />
+  </wsdl:message>
+  <wsdl:message name="Invoices_InfoSoapOut">
+    <wsdl:part name="parameters" element="tns:Invoices_InfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Services_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Services_Get" />
+  </wsdl:message>
+  <wsdl:message name="Services_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Services_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Payment_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Payment_Get" />
+  </wsdl:message>
+  <wsdl:message name="Payment_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Payment_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Customers_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Customers_Get" />
+  </wsdl:message>
+  <wsdl:message name="Customers_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Customers_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Invoices_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Invoices_Get" />
+  </wsdl:message>
+  <wsdl:message name="Invoices_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Invoices_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Customers_GetIDSoapIn">
+    <wsdl:part name="parameters" element="tns:Customers_GetID" />
+  </wsdl:message>
+  <wsdl:message name="Customers_GetIDSoapOut">
+    <wsdl:part name="parameters" element="tns:Customers_GetIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertDHLPlanSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertDHLPlan" />
+  </wsdl:message>
+  <wsdl:message name="InsertDHLPlanSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertDHLPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="DHL_GetDOSoapIn">
+    <wsdl:part name="parameters" element="tns:DHL_GetDO" />
+  </wsdl:message>
+  <wsdl:message name="DHL_GetDOSoapOut">
+    <wsdl:part name="parameters" element="tns:DHL_GetDOResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertSonyPlanSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertSonyPlan" />
+  </wsdl:message>
+  <wsdl:message name="InsertSonyPlanSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertSonyPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="Sony_GetDOSoapIn">
+    <wsdl:part name="parameters" element="tns:Sony_GetDO" />
+  </wsdl:message>
+  <wsdl:message name="Sony_GetDOSoapOut">
+    <wsdl:part name="parameters" element="tns:Sony_GetDOResponse" />
+  </wsdl:message>
+  <wsdl:message name="SGP_KT_GetPackingListbyMailerIDSoapIn">
+    <wsdl:part name="parameters" element="tns:SGP_KT_GetPackingListbyMailerID" />
+  </wsdl:message>
+  <wsdl:message name="SGP_KT_GetPackingListbyMailerIDSoapOut">
+    <wsdl:part name="parameters" element="tns:SGP_KT_GetPackingListbyMailerIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="Payment_Insert">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add new PaymentMethod</wsdl:documentation>
+      <wsdl:input message="tns:Payment_InsertSoapIn" />
+      <wsdl:output message="tns:Payment_InsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Payment_Update">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update Paymentmethod</wsdl:documentation>
+      <wsdl:input message="tns:Payment_UpdateSoapIn" />
+      <wsdl:output message="tns:Payment_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Payment_Delete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Delete Paymentmethod</wsdl:documentation>
+      <wsdl:input message="tns:Payment_DeleteSoapIn" />
+      <wsdl:output message="tns:Payment_DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Customer_Insert">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert Customers</wsdl:documentation>
+      <wsdl:input message="tns:Customer_InsertSoapIn" />
+      <wsdl:output message="tns:Customer_InsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Customer_Update">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update Customers</wsdl:documentation>
+      <wsdl:input message="tns:Customer_UpdateSoapIn" />
+      <wsdl:output message="tns:Customer_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Customer_Delete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Delete Customers</wsdl:documentation>
+      <wsdl:input message="tns:Customer_DeleteSoapIn" />
+      <wsdl:output message="tns:Customer_DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Invoices_Delete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Delete Invoices</wsdl:documentation>
+      <wsdl:input message="tns:Invoices_DeleteSoapIn" />
+      <wsdl:output message="tns:Invoices_DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Invoices_Insert">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert Invoices</wsdl:documentation>
+      <wsdl:input message="tns:Invoices_InsertSoapIn" />
+      <wsdl:output message="tns:Invoices_InsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Invoices_Update">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update Invoices</wsdl:documentation>
+      <wsdl:input message="tns:Invoices_UpdateSoapIn" />
+      <wsdl:output message="tns:Invoices_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Seller_Update">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update Seller</wsdl:documentation>
+      <wsdl:input message="tns:Seller_UpdateSoapIn" />
+      <wsdl:output message="tns:Seller_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Services_Delete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Delete Service</wsdl:documentation>
+      <wsdl:input message="tns:Services_DeleteSoapIn" />
+      <wsdl:output message="tns:Services_DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Services_Insert">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert Service</wsdl:documentation>
+      <wsdl:input message="tns:Services_InsertSoapIn" />
+      <wsdl:output message="tns:Services_InsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Services_Update">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update Service</wsdl:documentation>
+      <wsdl:input message="tns:Services_UpdateSoapIn" />
+      <wsdl:output message="tns:Services_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Customers_GetMaxID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get MaxID Customers</wsdl:documentation>
+      <wsdl:input message="tns:Customers_GetMaxIDSoapIn" />
+      <wsdl:output message="tns:Customers_GetMaxIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Seller_Info">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Sellers</wsdl:documentation>
+      <wsdl:input message="tns:Seller_InfoSoapIn" />
+      <wsdl:output message="tns:Seller_InfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Invoices_Info">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Invoices Info</wsdl:documentation>
+      <wsdl:input message="tns:Invoices_InfoSoapIn" />
+      <wsdl:output message="tns:Invoices_InfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Services_Get">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Services</wsdl:documentation>
+      <wsdl:input message="tns:Services_GetSoapIn" />
+      <wsdl:output message="tns:Services_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Payment_Get">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Payment</wsdl:documentation>
+      <wsdl:input message="tns:Payment_GetSoapIn" />
+      <wsdl:output message="tns:Payment_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Customers_Get">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Customers</wsdl:documentation>
+      <wsdl:input message="tns:Customers_GetSoapIn" />
+      <wsdl:output message="tns:Customers_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Invoices_Get">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Invoices Get</wsdl:documentation>
+      <wsdl:input message="tns:Invoices_GetSoapIn" />
+      <wsdl:output message="tns:Invoices_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Customers_GetID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Customers Get by ID</wsdl:documentation>
+      <wsdl:input message="tns:Customers_GetIDSoapIn" />
+      <wsdl:output message="tns:Customers_GetIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDHLPlan">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert DHL Plan into DBLIST</wsdl:documentation>
+      <wsdl:input message="tns:InsertDHLPlanSoapIn" />
+      <wsdl:output message="tns:InsertDHLPlanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DHL_GetDO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get DHL Plan by DO</wsdl:documentation>
+      <wsdl:input message="tns:DHL_GetDOSoapIn" />
+      <wsdl:output message="tns:DHL_GetDOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSonyPlan">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert Sony Plan into DBLIST</wsdl:documentation>
+      <wsdl:input message="tns:InsertSonyPlanSoapIn" />
+      <wsdl:output message="tns:InsertSonyPlanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sony_GetDO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Sony Plan by DO</wsdl:documentation>
+      <wsdl:input message="tns:Sony_GetDOSoapIn" />
+      <wsdl:output message="tns:Sony_GetDOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SGP_KT_GetPackingListbyMailerID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get DocumentID</wsdl:documentation>
+      <wsdl:input message="tns:SGP_KT_GetPackingListbyMailerIDSoapIn" />
+      <wsdl:output message="tns:SGP_KT_GetPackingListbyMailerIDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Payment_Insert">
+      <soap:operation soapAction="http://tempuri.org/Payment_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Payment_Update">
+      <soap:operation soapAction="http://tempuri.org/Payment_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Payment_Delete">
+      <soap:operation soapAction="http://tempuri.org/Payment_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Customer_Insert">
+      <soap:operation soapAction="http://tempuri.org/Customer_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Customer_Update">
+      <soap:operation soapAction="http://tempuri.org/Customer_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Customer_Delete">
+      <soap:operation soapAction="http://tempuri.org/Customer_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Invoices_Delete">
+      <soap:operation soapAction="http://tempuri.org/Invoices_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Invoices_Insert">
+      <soap:operation soapAction="http://tempuri.org/Invoices_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Invoices_Update">
+      <soap:operation soapAction="http://tempuri.org/Invoices_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seller_Update">
+      <soap:operation soapAction="http://tempuri.org/Seller_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Services_Delete">
+      <soap:operation soapAction="http://tempuri.org/Services_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Services_Insert">
+      <soap:operation soapAction="http://tempuri.org/Services_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Services_Update">
+      <soap:operation soapAction="http://tempuri.org/Services_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Customers_GetMaxID">
+      <soap:operation soapAction="http://tempuri.org/Customers_GetMaxID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seller_Info">
+      <soap:operation soapAction="http://tempuri.org/Seller_Info" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Invoices_Info">
+      <soap:operation soapAction="http://tempuri.org/Invoices_Info" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Services_Get">
+      <soap:operation soapAction="http://tempuri.org/Services_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Payment_Get">
+      <soap:operation soapAction="http://tempuri.org/Payment_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Customers_Get">
+      <soap:operation soapAction="http://tempuri.org/Customers_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Invoices_Get">
+      <soap:operation soapAction="http://tempuri.org/Invoices_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Customers_GetID">
+      <soap:operation soapAction="http://tempuri.org/Customers_GetID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDHLPlan">
+      <soap:operation soapAction="http://tempuri.org/InsertDHLPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DHL_GetDO">
+      <soap:operation soapAction="http://tempuri.org/DHL_GetDO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSonyPlan">
+      <soap:operation soapAction="http://tempuri.org/InsertSonyPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sony_GetDO">
+      <soap:operation soapAction="http://tempuri.org/Sony_GetDO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_KT_GetPackingListbyMailerID">
+      <soap:operation soapAction="http://tempuri.org/SGP_KT_GetPackingListbyMailerID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Payment_Insert">
+      <soap12:operation soapAction="http://tempuri.org/Payment_Insert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Payment_Update">
+      <soap12:operation soapAction="http://tempuri.org/Payment_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Payment_Delete">
+      <soap12:operation soapAction="http://tempuri.org/Payment_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Customer_Insert">
+      <soap12:operation soapAction="http://tempuri.org/Customer_Insert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Customer_Update">
+      <soap12:operation soapAction="http://tempuri.org/Customer_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Customer_Delete">
+      <soap12:operation soapAction="http://tempuri.org/Customer_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Invoices_Delete">
+      <soap12:operation soapAction="http://tempuri.org/Invoices_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Invoices_Insert">
+      <soap12:operation soapAction="http://tempuri.org/Invoices_Insert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Invoices_Update">
+      <soap12:operation soapAction="http://tempuri.org/Invoices_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seller_Update">
+      <soap12:operation soapAction="http://tempuri.org/Seller_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Services_Delete">
+      <soap12:operation soapAction="http://tempuri.org/Services_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Services_Insert">
+      <soap12:operation soapAction="http://tempuri.org/Services_Insert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Services_Update">
+      <soap12:operation soapAction="http://tempuri.org/Services_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Customers_GetMaxID">
+      <soap12:operation soapAction="http://tempuri.org/Customers_GetMaxID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seller_Info">
+      <soap12:operation soapAction="http://tempuri.org/Seller_Info" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Invoices_Info">
+      <soap12:operation soapAction="http://tempuri.org/Invoices_Info" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Services_Get">
+      <soap12:operation soapAction="http://tempuri.org/Services_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Payment_Get">
+      <soap12:operation soapAction="http://tempuri.org/Payment_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Customers_Get">
+      <soap12:operation soapAction="http://tempuri.org/Customers_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Invoices_Get">
+      <soap12:operation soapAction="http://tempuri.org/Invoices_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Customers_GetID">
+      <soap12:operation soapAction="http://tempuri.org/Customers_GetID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDHLPlan">
+      <soap12:operation soapAction="http://tempuri.org/InsertDHLPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DHL_GetDO">
+      <soap12:operation soapAction="http://tempuri.org/DHL_GetDO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSonyPlan">
+      <soap12:operation soapAction="http://tempuri.org/InsertSonyPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sony_GetDO">
+      <soap12:operation soapAction="http://tempuri.org/Sony_GetDO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGP_KT_GetPackingListbyMailerID">
+      <soap12:operation soapAction="http://tempuri.org/SGP_KT_GetPackingListbyMailerID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://pms.sgp.vn/HDKT/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://pms.sgp.vn/HDKT/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
