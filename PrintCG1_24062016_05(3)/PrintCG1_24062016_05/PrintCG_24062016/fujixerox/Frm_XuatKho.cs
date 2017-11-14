@@ -333,61 +333,7 @@ namespace PrintCG_24062016
 
         private void btnExcel_Click(object sender, EventArgs e)
         {
-            SaveFileDialog fsave = new SaveFileDialog();
-
-            OleDbConnection conn = new OleDbConnection();
-            DataTable dt = new DataTable();
-            string con = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + "\\PrintCG.mdb";
-            conn.ConnectionString = con;
-            OleDbCommand cmd = new OleDbCommand();
-            conn.Open();
-            cmd.CommandText = "select * from tb_fujixeroxdmsp";
-            cmd.Connection = conn;
-            OleDbDataAdapter da = new OleDbDataAdapter();
-            da.SelectCommand = cmd;
-            da.Fill(dt);
-
-            Excel.Application obj = new Excel.Application();
-            Excel.Workbook wbook;
-
-            fsave.Filter = "(All Files)|*.*|(All Files Excel)|*.xlsx";
-            fsave.ShowDialog();
-            if (fsave.FileName != "")
-            {
-                wbook = obj.Workbooks.Add(Type.Missing);
-                obj.Columns.ColumnWidth = 25;
-
-                // truyen data
-                for (int k = 0; k < dataGridView1.Rows.Count; k++)
-                {
-                    wbook.Worksheets.Add();
-
-                    //dat ten sheet
-                    for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
-                    {
-                        obj.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
-                    }
-
-                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                    {
-                        for (int j = 0; j < dataGridView1.Columns.Count; j++)
-                        {
-                            if (dataGridView1.Rows[i].Cells[j].Value != null)
-                            {
-                                obj.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
-                            }
-                        }
-                    }
-                }
-
-
-                wbook.SaveAs(fsave.FileName);
-                MessageBox.Show("Save Success", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Please Type Path", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+           
         }
     }
 }

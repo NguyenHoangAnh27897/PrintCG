@@ -389,14 +389,14 @@ namespace PrintCG_24062016
 
         private void navBarItem26_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            FrmExcel frm = new FrmExcel();
-            if ((Application.OpenForms["FrmKHDB"] as FrmExcel) != null)
+            Frm_Excel frm = new Frm_Excel();
+            if ((Application.OpenForms["FrmKHDB"] as Frm_Excel) != null)
             {
                 frm.Focus();
             }
             else
             {
-                frm = new FrmExcel();
+                frm = new Frm_Excel();
                 frm.MdiParent = this;
                 frm.Show();
             }

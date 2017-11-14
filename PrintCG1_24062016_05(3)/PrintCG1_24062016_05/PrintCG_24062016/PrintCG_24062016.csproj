@@ -238,6 +238,12 @@
     <Compile Include="FrmTracking.Designer.cs">
       <DependentUpon>FrmTracking.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Excel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Excel.Designer.cs">
+      <DependentUpon>Frm_Excel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_ImportExcel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -567,6 +573,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTracking.resx">
       <DependentUpon>FrmTracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Excel.resx">
+      <DependentUpon>Frm_Excel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_ImportExcel.resx">
       <DependentUpon>Frm_ImportExcel.cs</DependentUpon>

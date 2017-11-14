@@ -936,3 +936,4 @@ C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG1_24062016_05\PrintCG1_2406
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG1_24062016_05\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csproj.GenerateResource.Cache
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG1_24062016_05\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe.licenses
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG1_24062016_05\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmExcel.resources
+C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG1_24062016_05\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.Frm_Excel.resources
