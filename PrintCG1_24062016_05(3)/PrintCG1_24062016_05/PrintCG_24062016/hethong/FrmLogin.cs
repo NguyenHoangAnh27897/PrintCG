@@ -11,11 +11,11 @@ namespace PrintCG_24062016
 {
     public partial class FrmLogin : Form
     {
-        PrintCG_24062016.SGPService.SGPServiceClient sgpservice;
+       // PrintCG_24062016.SGPService.SGPServiceClient sgpservice;
         public FrmLogin()
         {
             InitializeComponent();
-            sgpservice = new PrintCG_24062016.SGPService.SGPServiceClient();
+            //sgpservice = new PrintCG_24062016.SGPService.SGPServiceClient();
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
@@ -24,7 +24,8 @@ namespace PrintCG_24062016
             try
             {
 
-                flag = sgpservice.login(txtuser.Text.Trim(), txtpass.Text.Trim(), txtpost.Text.Trim());
+               // flag = sgpservice.login(txtuser.Text.Trim(), txtpass.Text.Trim(), txtpost.Text.Trim());
+                flag = true;
                 if (flag == false)
                 {
                     MessageBox.Show("Check login info");
@@ -58,7 +59,8 @@ namespace PrintCG_24062016
                 bool flag = false;
                 try
                 {
-                    flag = sgpservice.login(txtuser.Text.Trim(), txtpass.Text.Trim(), txtpost.Text.Trim());
+                   // flag = sgpservice.login(txtuser.Text.Trim(), txtpass.Text.Trim(), txtpost.Text.Trim());
+                    flag = true;
                     if (flag == false)
                     {
                         MessageBox.Show("Check login info");
@@ -105,7 +107,8 @@ namespace PrintCG_24062016
                 bool flag = false;
                 try
                 {
-                    flag = sgpservice.login(txtuser.Text.Trim(), txtpass.Text.Trim(), txtpost.Text.Trim());
+                   // flag = sgpservice.login(txtuser.Text.Trim(), txtpass.Text.Trim(), txtpost.Text.Trim());
+                    flag = true;
                     if (flag == false)
                     {
                         MessageBox.Show("Check login info");

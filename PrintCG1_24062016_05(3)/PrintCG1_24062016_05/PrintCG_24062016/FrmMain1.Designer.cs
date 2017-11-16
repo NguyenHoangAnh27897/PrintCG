@@ -67,6 +67,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblmabc = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblmanv = new System.Windows.Forms.ToolStripStatusLabel();
+            this.navBarItem27 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem28 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -145,7 +147,9 @@
             this.navBarItem23,
             this.navBarItem24,
             this.navBarItem25,
-            this.navBarItem26});
+            this.navBarItem26,
+            this.navBarItem27,
+            this.navBarItem28});
             this.navBarControl1.Location = new System.Drawing.Point(-4, 3);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 200;
@@ -288,11 +292,14 @@
             // navBarGroup3
             // 
             this.navBarGroup3.Caption = "Công cụ";
+            this.navBarGroup3.Expanded = true;
             this.navBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
             this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem18),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem19),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem25)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem25),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem27),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem28)});
             this.navBarGroup3.Name = "navBarGroup3";
             // 
             // navBarItem18
@@ -388,6 +395,16 @@
             this.lblmanv.Size = new System.Drawing.Size(46, 17);
             this.lblmanv.Text = "Mã NV:";
             // 
+            // navBarItem27
+            // 
+            this.navBarItem27.Caption = "Tra hồi báo nâng cao";
+            this.navBarItem27.Name = "navBarItem27";
+            // 
+            // navBarItem28
+            // 
+            this.navBarItem28.Caption = "Chi phí ngoài tuyến";
+            this.navBarItem28.Name = "navBarItem28";
+            // 
             // FrmMain1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -452,6 +469,8 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblmabc;
         private System.Windows.Forms.ToolStripStatusLabel lblmanv;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem27;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem28;
 
     }
 }
