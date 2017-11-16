@@ -36,6 +36,9 @@ namespace SGPWebService.DB
     partial void InsertUMS_tblUserAccountPostOffice(UMS_tblUserAccountPostOffice instance);
     partial void UpdateUMS_tblUserAccountPostOffice(UMS_tblUserAccountPostOffice instance);
     partial void DeleteUMS_tblUserAccountPostOffice(UMS_tblUserAccountPostOffice instance);
+    partial void InsertBS_Province(BS_Province instance);
+    partial void UpdateBS_Province(BS_Province instance);
+    partial void DeleteBS_Province(BS_Province instance);
     #endregion
 		
 		public SGPMainDataContext() : 
@@ -81,6 +84,14 @@ namespace SGPWebService.DB
 			get
 			{
 				return this.GetTable<UMS_tblUserAccountPostOffice>();
+			}
+		}
+		
+		public System.Data.Linq.Table<BS_Province> BS_Provinces
+		{
+			get
+			{
+				return this.GetTable<BS_Province>();
 			}
 		}
 	}
@@ -661,6 +672,212 @@ namespace SGPWebService.DB
 						this._UserGroupID = default(string);
 					}
 					this.SendPropertyChanged("UMS_tblUserAccount");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BS_Provinces")]
+	public partial class BS_Province : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _ProvinceID;
+		
+		private string _ProvinceName;
+		
+		private string _CountryID;
+		
+		private string _PhoneCode;
+		
+		private bool _IsActive;
+		
+		private System.Nullable<System.DateTime> _LastEditDate;
+		
+		private System.Nullable<System.DateTime> _CreationDate;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnProvinceIDChanging(string value);
+    partial void OnProvinceIDChanged();
+    partial void OnProvinceNameChanging(string value);
+    partial void OnProvinceNameChanged();
+    partial void OnCountryIDChanging(string value);
+    partial void OnCountryIDChanged();
+    partial void OnPhoneCodeChanging(string value);
+    partial void OnPhoneCodeChanged();
+    partial void OnIsActiveChanging(bool value);
+    partial void OnIsActiveChanged();
+    partial void OnLastEditDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastEditDateChanged();
+    partial void OnCreationDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreationDateChanged();
+    #endregion
+		
+		public BS_Province()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProvinceID", DbType="VarChar(15) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string ProvinceID
+		{
+			get
+			{
+				return this._ProvinceID;
+			}
+			set
+			{
+				if ((this._ProvinceID != value))
+				{
+					this.OnProvinceIDChanging(value);
+					this.SendPropertyChanging();
+					this._ProvinceID = value;
+					this.SendPropertyChanged("ProvinceID");
+					this.OnProvinceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProvinceName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string ProvinceName
+		{
+			get
+			{
+				return this._ProvinceName;
+			}
+			set
+			{
+				if ((this._ProvinceName != value))
+				{
+					this.OnProvinceNameChanging(value);
+					this.SendPropertyChanging();
+					this._ProvinceName = value;
+					this.SendPropertyChanged("ProvinceName");
+					this.OnProvinceNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountryID", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string CountryID
+		{
+			get
+			{
+				return this._CountryID;
+			}
+			set
+			{
+				if ((this._CountryID != value))
+				{
+					this.OnCountryIDChanging(value);
+					this.SendPropertyChanging();
+					this._CountryID = value;
+					this.SendPropertyChanged("CountryID");
+					this.OnCountryIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneCode", DbType="NVarChar(10)")]
+		public string PhoneCode
+		{
+			get
+			{
+				return this._PhoneCode;
+			}
+			set
+			{
+				if ((this._PhoneCode != value))
+				{
+					this.OnPhoneCodeChanging(value);
+					this.SendPropertyChanging();
+					this._PhoneCode = value;
+					this.SendPropertyChanged("PhoneCode");
+					this.OnPhoneCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive", DbType="Bit NOT NULL")]
+		public bool IsActive
+		{
+			get
+			{
+				return this._IsActive;
+			}
+			set
+			{
+				if ((this._IsActive != value))
+				{
+					this.OnIsActiveChanging(value);
+					this.SendPropertyChanging();
+					this._IsActive = value;
+					this.SendPropertyChanged("IsActive");
+					this.OnIsActiveChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastEditDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastEditDate
+		{
+			get
+			{
+				return this._LastEditDate;
+			}
+			set
+			{
+				if ((this._LastEditDate != value))
+				{
+					this.OnLastEditDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastEditDate = value;
+					this.SendPropertyChanged("LastEditDate");
+					this.OnLastEditDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreationDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreationDate
+		{
+			get
+			{
+				return this._CreationDate;
+			}
+			set
+			{
+				if ((this._CreationDate != value))
+				{
+					this.OnCreationDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreationDate = value;
+					this.SendPropertyChanged("CreationDate");
+					this.OnCreationDateChanged();
 				}
 			}
 		}

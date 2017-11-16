@@ -8,5 +8,11 @@
         <elementListCompartment Id="810fbdd1-5de3-45c4-be45-4c10c2b6ded2" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="a28bc467-47c0-4639-b067-48fd4ae337e9" absoluteBounds="2.75, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SGPAPIDataContext/SGP_Province_Zone" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c9a2437d-a2d5-4380-aea3-428ab0e04b99" absoluteBounds="2.7649999999999997, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

@@ -9,7 +9,150 @@
 //------------------------------------------------------------------------------
 
 namespace PrintCG_24062016.SGPService {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BS_Province", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DB")]
+    [System.SerializableAttribute()]
+    public partial class BS_Province : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CountryIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> CreationDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> LastEditDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProvinceIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProvinceNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CountryID {
+            get {
+                return this.CountryIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountryIDField, value) != true)) {
+                    this.CountryIDField = value;
+                    this.RaisePropertyChanged("CountryID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> CreationDate {
+            get {
+                return this.CreationDateField;
+            }
+            set {
+                if ((this.CreationDateField.Equals(value) != true)) {
+                    this.CreationDateField = value;
+                    this.RaisePropertyChanged("CreationDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive {
+            get {
+                return this.IsActiveField;
+            }
+            set {
+                if ((this.IsActiveField.Equals(value) != true)) {
+                    this.IsActiveField = value;
+                    this.RaisePropertyChanged("IsActive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> LastEditDate {
+            get {
+                return this.LastEditDateField;
+            }
+            set {
+                if ((this.LastEditDateField.Equals(value) != true)) {
+                    this.LastEditDateField = value;
+                    this.RaisePropertyChanged("LastEditDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PhoneCode {
+            get {
+                return this.PhoneCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneCodeField, value) != true)) {
+                    this.PhoneCodeField = value;
+                    this.RaisePropertyChanged("PhoneCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProvinceID {
+            get {
+                return this.ProvinceIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProvinceIDField, value) != true)) {
+                    this.ProvinceIDField = value;
+                    this.RaisePropertyChanged("ProvinceID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProvinceName {
+            get {
+                return this.ProvinceNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProvinceNameField, value) != true)) {
+                    this.ProvinceNameField = value;
+                    this.RaisePropertyChanged("ProvinceName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SGPService.ISGPService")]
@@ -20,6 +163,12 @@ namespace PrintCG_24062016.SGPService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getmaxMailerID", ReplyAction="http://tempuri.org/ISGPService/getmaxMailerIDResponse")]
         string getmaxMailerID(string postoffice);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getProvince", ReplyAction="http://tempuri.org/ISGPService/getProvinceResponse")]
+        PrintCG_24062016.SGPService.BS_Province[] getProvince();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/insertSGP_Province_Zones", ReplyAction="http://tempuri.org/ISGPService/insertSGP_Province_ZonesResponse")]
+        bool insertSGP_Province_Zones(string ZoneID, string ProvinceID, int Zone);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +204,14 @@ namespace PrintCG_24062016.SGPService {
         
         public string getmaxMailerID(string postoffice) {
             return base.Channel.getmaxMailerID(postoffice);
+        }
+        
+        public PrintCG_24062016.SGPService.BS_Province[] getProvince() {
+            return base.Channel.getProvince();
+        }
+        
+        public bool insertSGP_Province_Zones(string ZoneID, string ProvinceID, int Zone) {
+            return base.Channel.insertSGP_Province_Zones(ZoneID, ProvinceID, Zone);
         }
     }
 }

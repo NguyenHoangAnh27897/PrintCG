@@ -15,5 +15,9 @@ namespace SGPWebService
         bool login(string user, string pass, string post);
         [OperationContract]
         string getmaxMailerID(string postoffice);
+        [OperationContract]
+        List<DB.BS_Province> getProvince();
+        [OperationContract]
+        bool insertSGP_Province_Zones(string ZoneID, string ProvinceID, int Zone);
     }
 }

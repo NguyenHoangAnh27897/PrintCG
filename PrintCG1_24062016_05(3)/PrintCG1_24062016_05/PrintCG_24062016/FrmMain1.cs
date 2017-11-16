@@ -28,10 +28,6 @@ namespace PrintCG_24062016
             lblmanv.Text = "Mã NV : " + userlogin;
             lblmabc.Text = "Mã BC : " + postlogin; 
         }
-        private void navBarControl1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
@@ -405,6 +401,21 @@ namespace PrintCG_24062016
         private void FrmMain1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void navBarItem29_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            tinhcuoc.FrmBangGia frm = new tinhcuoc.FrmBangGia();
+            if ((Application.OpenForms["FrmBangGia"] as tinhcuoc.FrmBangGia) != null)
+            {
+                frm.Focus();
+            }
+            else
+            {
+                frm = new tinhcuoc.FrmBangGia();
+                frm.MdiParent = this;
+                frm.Show();
+            }
         }
     }
 }

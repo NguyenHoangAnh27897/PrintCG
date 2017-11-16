@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:4351/SGPService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DB" />
   <xs:element name="login">
     <xs:complexType>
       <xs:sequence>
@@ -27,6 +28,34 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="getmaxMailerIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProvince">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProvinceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SGPWebService.DB" minOccurs="0" name="getProvinceResult" nillable="true" type="q1:ArrayOfBS_Province" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertSGP_Province_Zones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ZoneID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProvinceID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Zone" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertSGP_Province_ZonesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertSGP_Province_ZonesResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

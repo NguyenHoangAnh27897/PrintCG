@@ -21,5 +21,11 @@
         <classShapeMoniker Id="3b0b9cae-31e1-4a9a-9d89-f7be8195541c" />
       </nodes>
     </associationConnector>
+    <classShape Id="9513b944-3c58-47b9-8dfd-76eab2c82cf5" absoluteBounds="3.875, 4.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SGPMainDataContext/BS_Province" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c4e08b17-9ec5-4c6e-ad3c-b9d6608870b6" absoluteBounds="3.89, 4.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

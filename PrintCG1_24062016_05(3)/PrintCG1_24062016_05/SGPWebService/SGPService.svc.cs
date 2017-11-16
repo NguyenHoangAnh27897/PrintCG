@@ -58,5 +58,36 @@ namespace SGPWebService
                 return newStr;
             }
         }
+
+
+        public List<DB.BS_Province> getProvince()
+        {
+            List<DB.BS_Province> data = pms.BS_Provinces.Where(t => t.IsActive ==true && t.ProvinceID.Length ==3).ToList();
+            return data;
+        }
+        public bool insertSGP_Province_Zones(string ZoneID, string ProvinceID, int Zone)
+        {
+            //kiem tra neu zoneid + province da ton tai thi update, neu khong moi insert
+            var zone = api.SGP_Province_Zones.Where(p => p.ZoneID == ZoneID && p.ProvinceID == ProvinceID).FirstOrDefault();
+            if (zone != null)
+            {
+                zone.ZoneID = ZoneID;
+                zone.ProvinceID = ProvinceID;
+                zone.Zone = Zone;
+                api.SubmitChanges();
+                return true;
+            }else
+            {
+                var pl = new DB.SGP_Province_Zone()
+                {
+                    ZoneID = ZoneID,
+                    ProvinceID = ProvinceID,
+                    Zone = Zone
+                };
+                api.SGP_Province_Zones.InsertOnSubmit(pl);
+                api.SubmitChanges();
+                return true;
+            }            
+        }
     }
 }

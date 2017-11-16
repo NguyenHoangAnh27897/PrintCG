@@ -56,6 +56,8 @@
             this.navBarItem18 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem19 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem25 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem27 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem28 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem20 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem21 = new DevExpress.XtraNavBar.NavBarItem();
@@ -63,12 +65,12 @@
             this.navBarItem23 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem26 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem29 = new DevExpress.XtraNavBar.NavBarItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblmabc = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblmanv = new System.Windows.Forms.ToolStripStatusLabel();
-            this.navBarItem27 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem28 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -120,7 +122,8 @@
             this.navBarGroup1,
             this.navBarGroup2,
             this.navBarGroup3,
-            this.navBarGroup4});
+            this.navBarGroup4,
+            this.navBarGroup5});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.navBarItem1,
             this.navBarItem2,
@@ -149,14 +152,14 @@
             this.navBarItem25,
             this.navBarItem26,
             this.navBarItem27,
-            this.navBarItem28});
+            this.navBarItem28,
+            this.navBarItem29});
             this.navBarControl1.Location = new System.Drawing.Point(-4, 3);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 200;
             this.navBarControl1.Size = new System.Drawing.Size(200, 519);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
-            this.navBarControl1.Click += new System.EventHandler(this.navBarControl1_Click);
             // 
             // navBarGroup1
             // 
@@ -292,7 +295,6 @@
             // navBarGroup3
             // 
             this.navBarGroup3.Caption = "Công cụ";
-            this.navBarGroup3.Expanded = true;
             this.navBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
             this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem18),
@@ -319,6 +321,16 @@
             this.navBarItem25.Caption = "Khách hàng đặc biệt";
             this.navBarItem25.Name = "navBarItem25";
             this.navBarItem25.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem25_LinkClicked);
+            // 
+            // navBarItem27
+            // 
+            this.navBarItem27.Caption = "Tra hồi báo nâng cao";
+            this.navBarItem27.Name = "navBarItem27";
+            // 
+            // navBarItem28
+            // 
+            this.navBarItem28.Caption = "Chi phí ngoài tuyến";
+            this.navBarItem28.Name = "navBarItem28";
             // 
             // navBarGroup4
             // 
@@ -368,6 +380,19 @@
             this.navBarItem26.Name = "navBarItem26";
             this.navBarItem26.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem26_LinkClicked);
             // 
+            // navBarGroup5
+            // 
+            this.navBarGroup5.Caption = "Thiết lập thông tin";
+            this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem29)});
+            this.navBarGroup5.Name = "navBarGroup5";
+            // 
+            // navBarItem29
+            // 
+            this.navBarItem29.Caption = "Chính sách giá";
+            this.navBarItem29.Name = "navBarItem29";
+            this.navBarItem29.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem29_LinkClicked);
+            // 
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
@@ -379,7 +404,7 @@
             this.lblmanv});
             this.statusStrip1.Location = new System.Drawing.Point(0, 530);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1337, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1284, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -395,21 +420,11 @@
             this.lblmanv.Size = new System.Drawing.Size(46, 17);
             this.lblmanv.Text = "Mã NV:";
             // 
-            // navBarItem27
-            // 
-            this.navBarItem27.Caption = "Tra hồi báo nâng cao";
-            this.navBarItem27.Name = "navBarItem27";
-            // 
-            // navBarItem28
-            // 
-            this.navBarItem28.Caption = "Chi phí ngoài tuyến";
-            this.navBarItem28.Name = "navBarItem28";
-            // 
             // FrmMain1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1337, 552);
+            this.ClientSize = new System.Drawing.Size(1284, 552);
             this.Controls.Add(this.dockPanel1);
             this.Controls.Add(this.statusStrip1);
             this.IsMdiContainer = true;
@@ -471,6 +486,8 @@
         private System.Windows.Forms.ToolStripStatusLabel lblmanv;
         private DevExpress.XtraNavBar.NavBarItem navBarItem27;
         private DevExpress.XtraNavBar.NavBarItem navBarItem28;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem29;
 
     }
 }

@@ -6,4 +6,11 @@
       <Column Name="MaxID" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.SGP_Province_Zones" Member="SGP_Province_Zones">
+    <Type Name="SGP_Province_Zone">
+      <Column Name="ZoneID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProvinceID" Type="System.String" DbType="NVarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Zone" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

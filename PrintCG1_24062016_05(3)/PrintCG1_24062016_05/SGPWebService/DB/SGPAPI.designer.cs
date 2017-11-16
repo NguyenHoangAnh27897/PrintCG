@@ -33,6 +33,9 @@ namespace SGPWebService.DB
     partial void InsertPMS_MaxMailerID(PMS_MaxMailerID instance);
     partial void UpdatePMS_MaxMailerID(PMS_MaxMailerID instance);
     partial void DeletePMS_MaxMailerID(PMS_MaxMailerID instance);
+    partial void InsertSGP_Province_Zone(SGP_Province_Zone instance);
+    partial void UpdateSGP_Province_Zone(SGP_Province_Zone instance);
+    partial void DeleteSGP_Province_Zone(SGP_Province_Zone instance);
     #endregion
 		
 		public SGPAPIDataContext() : 
@@ -70,6 +73,14 @@ namespace SGPWebService.DB
 			get
 			{
 				return this.GetTable<PMS_MaxMailerID>();
+			}
+		}
+		
+		public System.Data.Linq.Table<SGP_Province_Zone> SGP_Province_Zones
+		{
+			get
+			{
+				return this.GetTable<SGP_Province_Zone>();
 			}
 		}
 	}
@@ -135,6 +146,116 @@ namespace SGPWebService.DB
 					this._MaxID = value;
 					this.SendPropertyChanged("MaxID");
 					this.OnMaxIDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SGP_Province_Zones")]
+	public partial class SGP_Province_Zone : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _ZoneID;
+		
+		private string _ProvinceID;
+		
+		private System.Nullable<int> _Zone;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnZoneIDChanging(string value);
+    partial void OnZoneIDChanged();
+    partial void OnProvinceIDChanging(string value);
+    partial void OnProvinceIDChanged();
+    partial void OnZoneChanging(System.Nullable<int> value);
+    partial void OnZoneChanged();
+    #endregion
+		
+		public SGP_Province_Zone()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ZoneID", DbType="NVarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string ZoneID
+		{
+			get
+			{
+				return this._ZoneID;
+			}
+			set
+			{
+				if ((this._ZoneID != value))
+				{
+					this.OnZoneIDChanging(value);
+					this.SendPropertyChanging();
+					this._ZoneID = value;
+					this.SendPropertyChanged("ZoneID");
+					this.OnZoneIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProvinceID", DbType="NVarChar(3) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string ProvinceID
+		{
+			get
+			{
+				return this._ProvinceID;
+			}
+			set
+			{
+				if ((this._ProvinceID != value))
+				{
+					this.OnProvinceIDChanging(value);
+					this.SendPropertyChanging();
+					this._ProvinceID = value;
+					this.SendPropertyChanged("ProvinceID");
+					this.OnProvinceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Zone", DbType="Int")]
+		public System.Nullable<int> Zone
+		{
+			get
+			{
+				return this._Zone;
+			}
+			set
+			{
+				if ((this._Zone != value))
+				{
+					this.OnZoneChanging(value);
+					this.SendPropertyChanging();
+					this._Zone = value;
+					this.SendPropertyChanged("Zone");
+					this.OnZoneChanged();
 				}
 			}
 		}
