@@ -20,6 +20,7 @@ namespace PrintCG_24062016
     public partial class CG1_LE : Form
     {
         PrintCG_24062016.SGPService.SGPServiceClient sgpservice;
+        bool billauto = false;
         public CG1_LE()
         {
             InitializeComponent();
@@ -33,13 +34,6 @@ namespace PrintCG_24062016
         {
             txtbuucuc.Text = FrmMain1.postofficeid;
             txtnhanvien.Text = FrmMain1.user;
-            load_settings();
-            loadsophieu();
-            
-        }
-        private void loadsophieu()
-        {
-            txtsophieu.Text = sgpservice.getmaxMailerID("SGP");           
         }
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -223,7 +217,7 @@ namespace PrintCG_24062016
                          autoText.AutoCompleteMode = AutoCompleteMode.None;
                      }
                  }
-                 catch (Exception ex)
+                 catch (Exception)
                  {
                  }              
              }
@@ -242,7 +236,7 @@ namespace PrintCG_24062016
                  {
                      nguoigui = NullToString(myGrid1.CurrentRow.Cells["Sender"].Value.ToString().ToUpper());
                  }
-                 catch (Exception ex)
+                 catch (Exception)
                  {
                      nguoigui = "";
                  }
@@ -251,7 +245,7 @@ namespace PrintCG_24062016
                  {
                      diachigui = NullToString(myGrid1.CurrentRow.Cells["SenderAddress"].Value.ToString().ToUpper());
                  }
-                 catch (Exception ex)
+                 catch (Exception )
                  {
                      diachigui = "";
                  }
@@ -260,7 +254,7 @@ namespace PrintCG_24062016
                  {
                      sdtgui = NullToString(myGrid1.CurrentRow.Cells["SenderPhone"].Value.ToString().ToUpper());
                  }
-                 catch (Exception ex)
+                 catch (Exception )
                  {
                      sdtgui = "";
                  }
@@ -269,7 +263,7 @@ namespace PrintCG_24062016
                  {
                      nguoinhan = NullToString(myGrid1.CurrentRow.Cells["ReciverName"].Value.ToString().ToUpper());
                  }
-                 catch (Exception ex)
+                 catch (Exception )
                  {
                      nguoinhan = "";
                  }
@@ -278,7 +272,7 @@ namespace PrintCG_24062016
                  {
                      diachinhan = NullToString(myGrid1.CurrentRow.Cells["Address"].Value.ToString().ToUpper());
                  }
-                 catch (Exception ex)
+                 catch (Exception )
                  {
                      diachinhan = "";
                  }
@@ -287,7 +281,7 @@ namespace PrintCG_24062016
                  {
                      sdtnhan = NullToString(myGrid1.CurrentRow.Cells["ReciverPhone"].Value.ToString().ToUpper());
                  }
-                 catch (Exception ex)
+                 catch (Exception )
                  {
                      sdtnhan = "";
                  }
@@ -309,7 +303,7 @@ namespace PrintCG_24062016
                      thanhpho = ds.Tables[0].Rows[0][0].ToString();
                      
                  }
-                 catch (Exception ex)
+                 catch (Exception )
                  {
                      thanhpho = "";
                  }
@@ -318,7 +312,7 @@ namespace PrintCG_24062016
                  {
                      quanhuyen = NullToString(myGrid1.CurrentRow.Cells["DistrictName"].Value.ToString().ToUpper());
                  }
-                 catch (Exception ex)
+                 catch (Exception )
                  {
                      quanhuyen = "";
                  }
@@ -345,7 +339,7 @@ namespace PrintCG_24062016
                          cmd.ExecuteNonQuery();
                      }
                  }
-                 catch (Exception ex)
+                 catch (Exception )
                  {
                  }           
              }
@@ -370,41 +364,7 @@ namespace PrintCG_24062016
                      }
                      else if (headerText.Equals("Số phiếu"))
                      {
-                         //if (string.IsNullOrEmpty(e.FormattedValue.ToString()))
-                         //{
-                         //    myGrid1.Rows[e.RowIndex].ErrorText = "Số phiếu không được bỏ trống";
-                         //    myGrid1.CurrentCell.Value = "";
-                         //    e.Cancel = true;
-                         //}
-                         string last = string.Empty;
-                         try
-                         {
-                             last = (int.Parse(txtsophieu.Text.Substring(8, 4)) + 1).ToString();
-                         }
-                         catch (Exception ex)
-                         {
-                             last = (int.Parse(txtsophieu.Text.Substring(8, 4)) + 1).ToString();
-                         }
-                         if (last.Length == 1)
-                         {
-                             last = "000" + last;
-                         }
-                         else if (last.Length == 2)
-                         {
-                             last = "00" + last;
-                         }
-                         else if (last.Length == 3)
-                         {
-                             last = "0" + last;
-                         }
-                         if (string.IsNullOrEmpty(myGrid1.CurrentRow.Cells["MailerID"].Value as string))
-                         // if ( myGrid1.CurrentRow.Cells["MailerID"].Value.ToString().Trim() == null)
-                         {
-                             myGrid1.CurrentRow.Cells["MailerID"].Value = txtsophieu.Text;
-                             txtsophieu.Text = txtsophieu.Text.Substring(0, 8) + last;
-                         }
-                         
-                         
+                           //trường hợp nếu cột hiện tại là số phiếu                                               
                      }
                      else if (headerText.Equals("DV"))
                      {
@@ -599,21 +559,67 @@ namespace PrintCG_24062016
                          }                                                                     
                      }
                  }
-                 catch (Exception ex)
+                 catch (Exception )
                  {
                  }
                  
              }
 
              private void btnexcel_Click(object sender, EventArgs e)
-             {
-                 try
+             {      
+           
+                 SaveFileDialog fsave = new SaveFileDialog();
+                 Excel.Application obj = new Excel.Application();
+                 Excel.Workbook wbook;
+                 object misValue = System.Reflection.Missing.Value;
+                 fsave.Filter = "(All Files)|*.*|(All Files Excel)|*.xlsx";
+                 fsave.ShowDialog();
+                 DateTime createdate;
+                 if (fsave.FileName != "")
                  {
-                     create_excel();
+                     wbook = obj.Workbooks.Add(Type.Missing);
+                     obj.Columns.ColumnWidth = 25;
+
+                     // truyen data
+                     for (int k = 0; k < myGrid1.Rows.Count; k++)
+                     {
+                         wbook.Worksheets.Add();
+                         //createdate = DateTime.Parse(dt.Rows[k][0].ToString());
+
+                         //dat ten sheet
+                         
+                         for (int i = 1; i < myGrid1.Columns.Count + 1; i++)
+                         {
+                             if (myGrid1.Columns[i - 1].Visible == true)
+                             {
+                                 obj.Cells[1, i] = myGrid1.Columns[i - 1].HeaderText;
+                             }
+                         }
+
+                         for (int i = 0; i < myGrid1.Rows.Count; i++)
+                         {
+                             for (int j = 0; j < myGrid1.Columns.Count; j++)
+                             {
+                                 if (myGrid1.Rows[i].Cells[j].Value != null && myGrid1.Columns[j].Visible == true)
+                                 {
+                                     obj.Cells[i + 2, j + 1] = myGrid1.Rows[i].Cells[j].Value.ToString();
+                                 }
+                             }
+                         }
+                     }
+
+
+                     wbook.SaveAs(fsave.FileName);
+                     wbook.Close(true, misValue, misValue);
+                     obj.Quit();
+
+                     releaseObject(wbook);
+                     releaseObject(obj);
+                     MessageBox.Show("Save Success", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                  }
-                 catch (Exception ex)
+                 else
                  {
-                     MessageBox.Show(ex.ToString());
+                     MessageBox.Show("Please Type Path", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
                  }
                  
              }
@@ -627,7 +633,7 @@ namespace PrintCG_24062016
                      return;
                  }
 
-                 string excelfile = txtfolder.Text.Trim() + "\\Excel\\" + DateTime.Today.Year.ToString() + DateTime.Today.Month.ToString() + DateTime.Today.Day.ToString() + ".xls";
+                 string excelfile =  "\\Excel\\" + DateTime.Today.Year.ToString() + DateTime.Today.Month.ToString() + DateTime.Today.Day.ToString() + ".xls";
                  Excel.Workbook xlWorkBook;
                  Excel.Worksheet xlWorkSheet;
                  object misValue = System.Reflection.Missing.Value;
@@ -706,7 +712,7 @@ namespace PrintCG_24062016
                              xlWorkSheet.Cells[i + 1, j + 1] = data;
                              i = i - 1;
                          }
-                         catch (Exception ex)
+                         catch (Exception )
                          {
 
                          }                         
@@ -756,114 +762,87 @@ namespace PrintCG_24062016
                      {
                          try
                          {
-                             TextObject _txtbcnhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtbuucuc"];
-                             _txtbcnhan.Text = txtbuucuc.Text;
-
-                             TextObject _txtDO = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtsophieu"];
-                             _txtDO.Text = "*" + row.Cells["MailerID"].Value.ToString() + "*";                       
-
-                             TextObject _txtDO1 = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtsophieu1"];
-                             _txtDO1.Text = row.Cells["MailerID"].Value.ToString();
-                             sophieu = _txtDO1.Text;
-
-                             TextObject _txtnguoigui = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnguoigui"];
-                             _txtnguoigui.Text = row.Cells["Sender"].Value.ToString();
-
-                             TextObject _txtdiachigui = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtdiachigui"];
-                             try
+                             if (row.Cells["MailerID"].Value.ToString().Trim() != "")
                              {
+                                 TextObject _txtbcnhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtbuucuc"];
+                                 _txtbcnhan.Text = txtbuucuc.Text;
+
+                                 TextObject _txtDO = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtsophieu"];
+                                 _txtDO.Text = "*" + row.Cells["MailerID"].Value.ToString() + "*";
+
+                                 TextObject _txtDO1 = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtsophieu1"];
+                                 _txtDO1.Text = row.Cells["MailerID"].Value.ToString();
+                                 sophieu = _txtDO1.Text;
+
+                                 TextObject _txtnguoigui = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnguoigui"];
+                                 _txtnguoigui.Text = (row.Cells["Sender"].Value.ToString());
+
+                                 TextObject _txtdiachigui = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtdiachigui"];
                                  _txtdiachigui.Text = row.Cells["SenderAddress"].Value.ToString();
-                             }
-                             catch (Exception ex)
-                             {
-                                 _txtdiachigui.Text = "";
-                             }
+                                 //tam khoa sdt gui vi report bi xoa
+                                 // TextObject _txttelgui = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttelgui"];
+                                 // _txttelgui.Text = convert.ConvertData.nullToString(row.Cells["SenderPhone"].Value.ToString());
 
-                             TextObject _txttelgui = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttelgui"];
-                             try
-                             {
-                                 _txttelgui.Text = row.Cells["SenderPhone"].Value.ToString();
-                             }
-                             catch (Exception ex)
-                             {
-                                 _txttelgui.Text = "";
-                             }
+                                 TextObject _txtnvnhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnvnhan"];
+                                 _txtnvnhan.Text = txtnhanvien.Text;
 
-                             TextObject _txtnvnhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnvnhan"];
-                             _txtnvnhan.Text = txtnhanvien.Text;
+                                 TextObject _txtngaynhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtngaynhan"];
+                                 _txtngaynhan.Text = row.Cells["AcceptDate"].Value.ToString();
 
-                             TextObject _txtngaynhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtngaynhan"];
-                             _txtngaynhan.Text = row.Cells["AcceptDate"].Value.ToString();
+                                 TextObject _txtnguoinhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnguoinhan"];
+                                 _txtnguoinhan.Text = row.Cells["ReciverName"].Value.ToString();
 
-                             TextObject _txtnguoinhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnguoinhan"];
-                             _txtnguoinhan.Text = row.Cells["ReciverName"].Value.ToString();
+                                 TextObject _txtdiachinhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtdiachinhan"];
+                                 _txtdiachinhan.Text = row.Cells["Address"].Value.ToString();
 
-                             TextObject _txtdiachinhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtdiachinhan"];
-                             _txtdiachinhan.Text = row.Cells["Address"].Value.ToString();
-
-                             TextObject _txttelnhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttelnhan"];
-                             try
-                             {
+                                 TextObject _txttelnhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttelnhan"];
                                  _txttelnhan.Text = row.Cells["ReciverPhone"].Value.ToString();
-                             }
-                             catch (Exception ex)
-                             {
-                                 _txttelnhan.Text = "";
-                             }
 
-                             TextObject _txtghichu = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtghichu"];
-                             try
-                             {
+                                 TextObject _txtghichu = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtghichu"];
                                  _txtghichu.Text = row.Cells["Description"].Value.ToString();
+
+                                 TextObject _txtsl = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtsoluong"];
+                                 _txtsl.Text = row.Cells["Quantity"].Value.ToString();
+
+                                 TextObject _txttl = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttrongluong"];
+                                 _txttl.Text = String.Format("{0:0,0}", float.Parse(row.Cells["Weight"].Value.ToString()));
+
+                                 TextObject _txttlkhoi = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttrongluongkhoi"];
+                                 _txttlkhoi.Text = String.Format("{0:0,0}", float.Parse(row.Cells["RealWeight"].Value.ToString()));
+
+                                 TextObject _txtthanhpho = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnoiden"];
+                                 _txtthanhpho.Text = row.Cells["Provinceid"].Value.ToString();
+
+                                 TextObject _txtcuochinh = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtcuocchinh"];
+                                 _txtcuochinh.Text = row.Cells["Price"].Value.ToString();
+
+                                 TextObject _txthengio = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txthengio"];
+                                 _txthengio.Text = row.Cells["Timer"].Value.ToString();
+
+                                 TextObject _txtphikhac = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtphikhac"];
+                                 _txtphikhac.Text = row.Cells["Priceservice"].Value.ToString();
+
+                                 TextObject _txttongcong = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttongcong"];
+                                 _txttongcong.Text = (int.Parse(row.Cells["Price"].Value.ToString()) + int.Parse(row.Cells["Timer"].Value.ToString()) + int.Parse(row.Cells["Priceservice"].Value.ToString())).ToString();
+
+                                 TextObject _txttailieu = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttl"];
+                                 TextObject _txthanghoa = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txthh"];
+                                 if (row.Cells["Mailertypeid"].Value.ToString().ToUpper() == "T")
+                                 {
+                                     _txttailieu.Text = "X";
+                                     _txthanghoa.Text = "";
+                                 }
+                                 else if (row.Cells["Mailertypeid"].Value.ToString().ToUpper() == "H")
+                                 {
+                                     _txttailieu.Text = "";
+                                     _txthanghoa.Text = "X";
+                                 }
+                                 rpt.PrintToPrinter(int.Parse(txtsoluongin.Text), false, 1, 1);
                              }
-                             catch (Exception ex)
-                             {
-                                 _txtghichu.Text = "";
-                             }
-
-                             TextObject _txtsl = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtsoluong"];
-                             _txtsl.Text = row.Cells["Quantity"].Value.ToString();
-
-                             TextObject _txttl = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttrongluong"];
-                             _txttl.Text = String.Format("{0:0,0}", float.Parse(row.Cells["Weight"].Value.ToString()));
-
-
-                             TextObject _txttlkhoi = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttrongluongkhoi"];
-                             _txttlkhoi.Text = String.Format("{0:0,0}", float.Parse(row.Cells["RealWeight"].Value.ToString()));
-
-                             TextObject _txtthanhpho = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnoiden"];
-                             _txtthanhpho.Text = row.Cells["Provinceid"].Value.ToString();
-
-                             TextObject _txtcuochinh = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtcuocchinh"];
-                             _txtcuochinh.Text = row.Cells["Price"].Value.ToString();
-
-                             TextObject _txthengio = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txthengio"];
-                             _txthengio.Text = row.Cells["Timer"].Value.ToString();
-
-                             TextObject _txtphikhac = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtphikhac"];
-                             _txtphikhac.Text = row.Cells["Priceservice"].Value.ToString();
-
-                             TextObject _txttongcong = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttongcong"];
-                             _txttongcong.Text = (int.Parse(row.Cells["Price"].Value.ToString()) + int.Parse(row.Cells["Timer"].Value.ToString()) + int.Parse(row.Cells["Priceservice"].Value.ToString())).ToString();
-
-                             TextObject _txttailieu = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttl"];
-                             TextObject _txthanghoa = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txthh"];
-                             if (row.Cells["Mailertypeid"].Value.ToString().ToUpper() == "T")
-                             {
-                                 _txttailieu.Text = "X";
-                                 _txthanghoa.Text = "";
-                             }
-                             else if (row.Cells["Mailertypeid"].Value.ToString().ToUpper() == "H")
-                             {
-                                 _txttailieu.Text = "";
-                                 _txthanghoa.Text = "X";
-                             }
-                             rpt.PrintToPrinter(int.Parse(txtsoluongin.Text), false, 1, 1);
                          }
                          catch (Exception ex)
                          {
-
-                             
+                             MessageBox.Show(ex.ToString());
                          }
                      }
                  }
@@ -875,109 +854,60 @@ namespace PrintCG_24062016
 
              private void myGrid1_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
              {
-                 if (txtsophieu.Text != "")
-                 {
+                 
                      e.Row.Cells["Acceptdate"].Value = dtppgi.Value.ToShortDateString();                    
                      e.Row.Cells["BP"].Value ="0";
                      e.Row.Cells["Price"].Value = "0";
                      e.Row.Cells["Priceservice"].Value = "0";
+                     e.Row.Cells["COD"].Value = "0";
                      e.Row.Cells["Timer"].Value = "0";
                      e.Row.Cells["Mailertypeid"].Value = "T";
                      e.Row.Cells["Servicetypeid"].Value = "SN";
-                     e.Row.Cells["Mailerid"].Value = txtmacg.Text.Trim() + txtsophieu.Text.Trim();
-                 }
-                 else
-                 {
-                     MessageBox.Show("Chưa nhập số phiếu");
-                     e.Row.Cells["Acceptdate"].Value = dtppgi.Value.ToShortDateString();
-
-
-                 }
-                 //MessageBox.Show(e.Row.Index.ToString());
-             }
-
-             private void load_settings()
-             {
-                 txtsophieu.Text = (String)Application.UserAppDataRegistry.GetValue("frminle.txtsophieu", String.Empty);
-                // txtbuucuc.Text = (String)Application.UserAppDataRegistry.GetValue("frminle.txtbuucuc", String.Empty);
-                // txtnhanvien.Text = (String)Application.UserAppDataRegistry.GetValue("frminle.txtnhanvien", String.Empty);
-                 txtmacg.Text = (String)Application.UserAppDataRegistry.GetValue("frminle.txtmacg", String.Empty);
-                 txtsophieu.Text = (String)Application.UserAppDataRegistry.GetValue("frminle.txtsophieu", String.Empty);  
-             }
-             private void save_settings()
-             {
-                 Application.UserAppDataRegistry.SetValue("frminle.txtsophieu", txtsophieu.Text);
-                 //Application.UserAppDataRegistry.SetValue("frminle.txtbuucuc", txtbuucuc.Text);
-                 //Application.UserAppDataRegistry.SetValue("frminle.txtnhanvien", txtnhanvien.Text);
-                 Application.UserAppDataRegistry.SetValue("frminle.txtmacg", txtmacg.Text);
-                 Application.UserAppDataRegistry.SetValue("frminle.txtsophieu", txtsophieu.Text);
-             }
-
-             private void CG1_LE_FormClosing(object sender, FormClosingEventArgs e)
-             {
-                 if (myGrid1.Rows.Count == 2)
-                 {
-                     int stt; ;
-                     string bef = string.Empty;
-                     string aft = string.Empty;
-                     string sophieu = string.Empty;
-                     sophieu = myGrid1.Rows[0].Cells[1].Value.ToString();
-                     bef = sophieu.Substring(txtmacg.Text.Length, 6);
-                     aft = sophieu.Substring(6 + txtmacg.Text.Length, 4);
-                     stt = int.Parse(aft);
-                     if (stt.ToString().Length == 1)
-                     {
-                         aft = "000" + (stt + 1).ToString();
-                     }
-                     else if (stt.ToString().Length == 2)
-                     {
-                         aft = "00" + (stt + 1).ToString();
-                     }
-                     else if (stt.ToString().Length == 3)
-                     {
-                         aft = "0" + (stt + 1).ToString();
-                     }
-                     else if (stt.ToString().Length == 4)
-                     {
-                         aft = (stt + 1).ToString();
-                     }
-                     txtsophieu.Text = bef + aft;
-                 }
-                 save_settings();
+                     //if (rdbtudong.Checked == true)
+                     //{
+                     //    e.Row.Cells["Mailerid"].Value = sgpservice.getmaxMailerID("SGP");
+                     //}                                                      
              }
 
              private void btnbaophat_Click(object sender, EventArgs e)
              {
-                 RptBaoPhat rpt = new RptBaoPhat();
-                 foreach (DataGridViewRow row in myGrid1.Rows)
+                 if(myGrid1.RowCount > 0)
                  {
-                     if (row.Cells["BP"].Value.ToString() == "1")
+                     RptBaoPhat rpt = new RptBaoPhat();
+                     foreach (DataGridViewRow row in myGrid1.Rows)
                      {
-                         TextObject _txtbcnhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtbuucuc"];
-                         _txtbcnhan.Text = txtbuucuc.Text;
+                         if (row.Cells["BP"].Value.ToString() == "1")
+                         {
+                             TextObject _txtbcnhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtbuucuc"];
+                             _txtbcnhan.Text = txtbuucuc.Text;
 
-                         TextObject _txtDO = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtsophieu"];
-                         _txtDO.Text = "*" + row.Cells["MailerID"].Value.ToString() + "*";
+                             TextObject _txtDO = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtsophieu"];
+                             _txtDO.Text = "*" + row.Cells["MailerID"].Value.ToString() + "*";
 
-                         TextObject _txtDO1 = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtsophieu1"];
-                         _txtDO1.Text = row.Cells["MailerID"].Value.ToString();
+                             TextObject _txtDO1 = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtsophieu1"];
+                             _txtDO1.Text = row.Cells["MailerID"].Value.ToString();
 
-                         TextObject _txtDO2 = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtsophieu2"];
-                         _txtDO2.Text = row.Cells["MailerID"].Value.ToString();
+                             TextObject _txtDO2 = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtsophieu2"];
+                             _txtDO2.Text = row.Cells["MailerID"].Value.ToString();
 
-                         TextObject _txtnguoigui = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnguoigui"];
-                         _txtnguoigui.Text = row.Cells["Sender"].Value.ToString();
+                             TextObject _txtnguoigui = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnguoigui"];
+                             _txtnguoigui.Text = row.Cells["Sender"].Value.ToString();
 
-                         TextObject _txtngaynhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtngaynhan"];
-                         _txtngaynhan.Text = row.Cells["Acceptdate"].Value.ToString();
+                             TextObject _txtngaynhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtngaynhan"];
+                             _txtngaynhan.Text = row.Cells["Acceptdate"].Value.ToString();
 
-                         TextObject _txtdiachiphat = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtdiachiphat"];
-                         _txtdiachiphat.Text = row.Cells["Address"].Value.ToString() + " " + row.Cells["Districtid"].Value.ToString() + " " + row.Cells["Provinceid"].Value.ToString() ;
+                             TextObject _txtdiachiphat = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtdiachiphat"];
+                             _txtdiachiphat.Text = row.Cells["Address"].Value.ToString() + " " + row.Cells["Districtid"].Value.ToString() + " " + row.Cells["Provinceid"].Value.ToString();
 
-                         rpt.PrintToPrinter(1, false, 1, 1);
-                         
+                             rpt.PrintToPrinter(1, false, 1, 1);
+
+                         }
                      }
+                 }else
+                 {
+                     MessageBox.Show("Không có dữ liệu");
                  }
+                 
 
              }
 
@@ -1001,7 +931,7 @@ namespace PrintCG_24062016
                          {
                              myGrid1.Rows.RemoveAt(item.Index);
                          }
-                         catch (Exception ex)
+                         catch (Exception )
                          {
                          }
                      }
@@ -1022,12 +952,6 @@ namespace PrintCG_24062016
              {
                  return;
              }
-
-             private void txtmacg_KeyUp(object sender, KeyEventArgs e)
-             {
-                 txtsophieu.Text = txtmacg.Text + txtsophieu.Text;
-             }
-
              private void myGrid1_CellEnter(object sender, DataGridViewCellEventArgs e)
              {
                  //dau tien la xac dinh index hien tai - di 1.
@@ -1038,64 +962,18 @@ namespace PrintCG_24062016
                  string aft = string.Empty;
                  int stt;
                  string headerText = myGrid1.Columns[e.ColumnIndex].HeaderText;
-                 if (headerText.Equals("Số phiếu") && e.RowIndex == 0)
+                 if (headerText.Equals("Số phiếu"))
                  {
-                     myGrid1.CurrentCell.Value = txtmacg.Text + txtsophieu.Text;
-                 }
-                 else if (headerText.Equals("Số phiếu") && e.RowIndex > 0)
-                 {
-                     Rindex = e.RowIndex;
-                     sophieu = myGrid1.Rows[Rindex - 1].Cells[1].Value.ToString();
-                     bef = sophieu.Substring(txtmacg.Text.Length, 6);
-                     aft = sophieu.Substring(6 + txtmacg.Text.Length, 4);
-                     stt = int.Parse(aft);
-                     if ((stt+ 1).ToString().Length == 1)
+                     if(billauto == true)
                      {
-                         aft = "000" + (stt + 1).ToString();
+                         if (myGrid1.CurrentCell.Value == "" || myGrid1.CurrentCell.Value == null)
+                         {
+                             myGrid1.CurrentCell.Value = sgpservice.getmaxMailerID("SGP");
+                         }
                      }
-                     else if ((stt+ 1).ToString().Length == 2)
-                     {
-                         aft = "00" + (stt + 1).ToString();
-                     }
-                     else if ((stt+ 1).ToString().Length == 3)
-                     {
-                         aft = "0" + (stt + 1).ToString();
-                     }
-                     else if ((stt+ 1).ToString().Length == 4)
-                     {
-                         aft = (stt + 1).ToString();
-                     }
-                     myGrid1.CurrentCell.Value = txtmacg.Text + bef + aft;
                      
-                 }
-                 if (headerText.Equals("Ghi chú") && e.RowIndex > 0)
-                 {
-                     Rindex = e.RowIndex;
-                     sophieu = myGrid1.Rows[Rindex - 1].Cells[1].Value.ToString();
-                     bef = sophieu.Substring(txtmacg.Text.Length, 6);
-                     aft = sophieu.Substring(6 + txtmacg.Text.Length, 4);
-                     stt = int.Parse(aft);
-                     if (stt.ToString().Length == 1)
-                     {
-                         aft = "000" + (stt + 2).ToString();
-                     }
-                     else if (stt.ToString().Length == 2)
-                     {
-                         aft = "00" + (stt + 2).ToString();
-                     }
-                     else if (stt.ToString().Length == 3)
-                     {
-                         aft = "0" + (stt + 2).ToString();
-                     }
-                     else if (stt.ToString().Length == 4)
-                     {
-                         aft = (stt + 2).ToString();
-                     }
-                     txtsophieu.Text = bef + aft;
-                 }
-                 
+                 }                                                 
              }
-
              private void btnbangke_Click(object sender, EventArgs e)
              {
                  DsCGLEBangKe dscg = new DsCGLEBangKe();
@@ -1117,7 +995,7 @@ namespace PrintCG_24062016
                      {
                          ngay = row.Cells["Acceptdate"].Value.ToString();
                      }
-                     catch (Exception ex)
+                     catch (Exception )
                      {
                      }
 
@@ -1125,7 +1003,7 @@ namespace PrintCG_24062016
                      {
                          cg = row.Cells["Mailerid"].Value.ToString();
                      }
-                     catch (Exception ex)
+                     catch (Exception )
                      {
                          cg = "";
                      }
@@ -1134,7 +1012,7 @@ namespace PrintCG_24062016
                      {
                          sl = row.Cells["Quantity"].Value.ToString();
                      }
-                     catch (Exception ex)
+                     catch (Exception )
                      {
                      }
 
@@ -1142,7 +1020,7 @@ namespace PrintCG_24062016
                      {
                          tl = row.Cells["Weight"].Value.ToString();
                      }
-                     catch (Exception ex)
+                     catch (Exception )
                      {
                      }
 
@@ -1150,7 +1028,7 @@ namespace PrintCG_24062016
                      {
                          tennhan = row.Cells["ReciverName"].Value.ToString();
                      }
-                     catch (Exception ex)
+                     catch (Exception )
                      {
                      }
 
@@ -1158,7 +1036,7 @@ namespace PrintCG_24062016
                      {
                          diachinhan = row.Cells["Address"].Value.ToString();
                      }
-                     catch (Exception ex)
+                     catch (Exception )
                      {
                      }
 
@@ -1166,7 +1044,7 @@ namespace PrintCG_24062016
                      {
                          tp = row.Cells["Provinceid"].Value.ToString();
                      }
-                     catch (Exception ex)
+                     catch (Exception )
                      {
                      }
 
@@ -1174,7 +1052,7 @@ namespace PrintCG_24062016
                      {
                          ghichu = row.Cells["Description"].Value.ToString();
                      }
-                     catch (Exception ex)
+                     catch (Exception )
                      {
                      }
 
@@ -1182,7 +1060,7 @@ namespace PrintCG_24062016
                      {
                          nguoigui = row.Cells["Sender"].Value.ToString();
                      }
-                     catch (Exception ex)
+                     catch (Exception )
                      {
                      }
 
@@ -1190,7 +1068,7 @@ namespace PrintCG_24062016
                      {
                          diachigui = row.Cells["SenderAddress"].Value.ToString();
                      }
-                     catch (Exception ex)
+                     catch (Exception )
                      {
                      }
 
@@ -1198,7 +1076,7 @@ namespace PrintCG_24062016
                      {
                          baophat = row.Cells["BP"].Value.ToString();
                      }
-                     catch (Exception ex)
+                     catch (Exception )
                      {
                      }
 
@@ -1211,22 +1089,57 @@ namespace PrintCG_24062016
                  rpt.PrintToPrinter(1, false, 0, 0);
              }
 
-             private void txtsophieu_MouseDoubleClick(object sender, MouseEventArgs e)
+             private void btnimportexcel_Click(object sender, EventArgs e)
              {
+                 try
+                 {
+                     OpenFileDialog fopen = new OpenFileDialog();
+                     fopen.Filter = "(All Files)|*.*|(All Files Excel)|*.xlsx";
+                     fopen.ShowDialog();
+                     myGrid1.Rows.Clear();
+                     DataTable dt = new DataTable();
+                     dt = ExcelReader.ExcelReader.ReadExcelFile("Sheet3$", fopen.FileName);
+                     for (int i = 0; i <= dt.Rows.Count - 1; i++)
+                     {                                                 
+                         //test
+                         DataGridViewRow row = (DataGridViewRow)myGrid1.Rows[i].Clone();
+                         for (int j = 0; j <= dt.Columns.Count - 1; j++)
+                         {
+                             row.Cells[j].Value = dt.Rows[i][j].ToString();
+                         }
+                         myGrid1.Rows.Add(row);
+                         //end test
+                     }
+
+                 }catch(Exception ex)
+                 {
+                     MessageBox.Show(ex.ToString());
+                 }
                  
+
              }
 
-             private void label2_MouseDoubleClick(object sender, MouseEventArgs e)
+             private void rdbtudong_CheckedChanged(object sender, EventArgs e)
              {
-                 if (txtsophieu.Enabled == true)
+                 if(rdbtudong.Checked == true)
                  {
-                     txtsophieu.Enabled = false;
-                     txtmacg.Enabled = false;
+                     billauto = true;
                  }
                  else
                  {
-                     txtsophieu.Enabled = true;
-                     txtmacg.Enabled = true;
+                     billauto = false;
+                 }
+             }
+
+             private void rdbthucong_CheckedChanged(object sender, EventArgs e)
+             {
+                 if (rdbthucong.Checked == true)
+                 {
+                     billauto = false;
+                 }
+                 else
+                 {
+                     billauto = true;
                  }
              }
 

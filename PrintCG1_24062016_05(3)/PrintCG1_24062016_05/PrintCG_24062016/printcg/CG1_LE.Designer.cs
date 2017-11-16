@@ -31,15 +31,13 @@ namespace PrintCG_24062016
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.rbtinlien = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtsophieu = new System.Windows.Forms.TextBox();
-            this.txtmacg = new System.Windows.Forms.TextBox();
             this.rdbthucong = new System.Windows.Forms.RadioButton();
             this.rdbtudong = new System.Windows.Forms.RadioButton();
             this.txtnhanvien = new System.Windows.Forms.TextBox();
@@ -50,13 +48,13 @@ namespace PrintCG_24062016
             this.btnlien = new System.Windows.Forms.Button();
             this.btnexcel = new System.Windows.Forms.Button();
             this.dsProvinces = new PrintCG_24062016.dataset.DsProvinces();
-            this.txtfolder = new System.Windows.Forms.TextBox();
             this.dtppgi = new System.Windows.Forms.DateTimePicker();
             this.btnbaophat = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtsoluongin = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnbangke = new System.Windows.Forms.Button();
+            this.btnimportexcel = new System.Windows.Forms.Button();
             this.myGrid1 = new PrintCG_24062016.MyGrid(this.components);
             this.Acceptdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MailerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +72,7 @@ namespace PrintCG_24062016
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Priceservice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Timer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Districtid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReciverPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -122,8 +121,6 @@ namespace PrintCG_24062016
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtsophieu);
-            this.groupBox2.Controls.Add(this.txtmacg);
             this.groupBox2.Controls.Add(this.rdbthucong);
             this.groupBox2.Controls.Add(this.rdbtudong);
             this.groupBox2.Controls.Add(this.txtnhanvien);
@@ -137,47 +134,29 @@ namespace PrintCG_24062016
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thiết lập chung";
             // 
-            // txtsophieu
-            // 
-            this.txtsophieu.Enabled = false;
-            this.txtsophieu.Location = new System.Drawing.Point(404, 24);
-            this.txtsophieu.Name = "txtsophieu";
-            this.txtsophieu.Size = new System.Drawing.Size(117, 20);
-            this.txtsophieu.TabIndex = 5;
-            this.txtsophieu.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtsophieu_MouseDoubleClick);
-            // 
-            // txtmacg
-            // 
-            this.txtmacg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtmacg.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtmacg.Enabled = false;
-            this.txtmacg.Location = new System.Drawing.Point(330, 24);
-            this.txtmacg.Name = "txtmacg";
-            this.txtmacg.Size = new System.Drawing.Size(68, 20);
-            this.txtmacg.TabIndex = 37;
-            this.txtmacg.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtmacg_KeyUp);
-            // 
             // rdbthucong
             // 
             this.rdbthucong.AutoSize = true;
-            this.rdbthucong.Location = new System.Drawing.Point(640, 24);
+            this.rdbthucong.Checked = true;
+            this.rdbthucong.Location = new System.Drawing.Point(468, 24);
             this.rdbthucong.Name = "rdbthucong";
             this.rdbthucong.Size = new System.Drawing.Size(96, 17);
             this.rdbthucong.TabIndex = 4;
+            this.rdbthucong.TabStop = true;
             this.rdbthucong.Text = "Nhập thủ công";
             this.rdbthucong.UseVisualStyleBackColor = true;
+            this.rdbthucong.CheckedChanged += new System.EventHandler(this.rdbthucong_CheckedChanged);
             // 
             // rdbtudong
             // 
             this.rdbtudong.AutoSize = true;
-            this.rdbtudong.Checked = true;
-            this.rdbtudong.Location = new System.Drawing.Point(530, 24);
+            this.rdbtudong.Location = new System.Drawing.Point(358, 24);
             this.rdbtudong.Name = "rdbtudong";
             this.rdbtudong.Size = new System.Drawing.Size(107, 17);
             this.rdbtudong.TabIndex = 2;
-            this.rdbtudong.TabStop = true;
             this.rdbtudong.Text = "Số phiếu tự động";
             this.rdbtudong.UseVisualStyleBackColor = true;
+            this.rdbtudong.CheckedChanged += new System.EventHandler(this.rdbtudong_CheckedChanged);
             // 
             // txtnhanvien
             // 
@@ -206,7 +185,6 @@ namespace PrintCG_24062016
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 33;
             this.label2.Text = "Bưu cục";
-            this.label2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.label2_MouseDoubleClick);
             // 
             // txtbuucuc
             // 
@@ -219,7 +197,7 @@ namespace PrintCG_24062016
             // btnina5
             // 
             this.btnina5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnina5.Location = new System.Drawing.Point(798, 433);
+            this.btnina5.Location = new System.Drawing.Point(140, 433);
             this.btnina5.Name = "btnina5";
             this.btnina5.Size = new System.Drawing.Size(53, 23);
             this.btnina5.TabIndex = 24;
@@ -230,7 +208,8 @@ namespace PrintCG_24062016
             // btnlien
             // 
             this.btnlien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnlien.Location = new System.Drawing.Point(859, 433);
+            this.btnlien.Enabled = false;
+            this.btnlien.Location = new System.Drawing.Point(201, 433);
             this.btnlien.Name = "btnlien";
             this.btnlien.Size = new System.Drawing.Size(52, 23);
             this.btnlien.TabIndex = 25;
@@ -240,7 +219,7 @@ namespace PrintCG_24062016
             // btnexcel
             // 
             this.btnexcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnexcel.Location = new System.Drawing.Point(1000, 433);
+            this.btnexcel.Location = new System.Drawing.Point(342, 433);
             this.btnexcel.Name = "btnexcel";
             this.btnexcel.Size = new System.Drawing.Size(74, 23);
             this.btnexcel.TabIndex = 26;
@@ -253,15 +232,6 @@ namespace PrintCG_24062016
             this.dsProvinces.DataSetName = "DsProvinces";
             this.dsProvinces.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // txtfolder
-            // 
-            this.txtfolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtfolder.Location = new System.Drawing.Point(544, 433);
-            this.txtfolder.Name = "txtfolder";
-            this.txtfolder.Size = new System.Drawing.Size(100, 20);
-            this.txtfolder.TabIndex = 27;
-            this.txtfolder.Text = "D:\\InCG";
-            // 
             // dtppgi
             // 
             this.dtppgi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -273,7 +243,7 @@ namespace PrintCG_24062016
             // btnbaophat
             // 
             this.btnbaophat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnbaophat.Location = new System.Drawing.Point(917, 433);
+            this.btnbaophat.Location = new System.Drawing.Point(259, 433);
             this.btnbaophat.Name = "btnbaophat";
             this.btnbaophat.Size = new System.Drawing.Size(74, 23);
             this.btnbaophat.TabIndex = 29;
@@ -293,7 +263,7 @@ namespace PrintCG_24062016
             // txtsoluongin
             // 
             this.txtsoluongin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtsoluongin.Location = new System.Drawing.Point(725, 433);
+            this.txtsoluongin.Location = new System.Drawing.Point(71, 435);
             this.txtsoluongin.Name = "txtsoluongin";
             this.txtsoluongin.Size = new System.Drawing.Size(67, 20);
             this.txtsoluongin.TabIndex = 35;
@@ -303,7 +273,7 @@ namespace PrintCG_24062016
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(663, 437);
+            this.label4.Location = new System.Drawing.Point(9, 438);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 36;
@@ -312,13 +282,24 @@ namespace PrintCG_24062016
             // btnbangke
             // 
             this.btnbangke.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnbangke.Location = new System.Drawing.Point(1080, 433);
+            this.btnbangke.Location = new System.Drawing.Point(499, 433);
             this.btnbangke.Name = "btnbangke";
             this.btnbangke.Size = new System.Drawing.Size(74, 23);
             this.btnbangke.TabIndex = 37;
             this.btnbangke.Text = "In bảng kê";
             this.btnbangke.UseVisualStyleBackColor = true;
             this.btnbangke.Click += new System.EventHandler(this.btnbangke_Click);
+            // 
+            // btnimportexcel
+            // 
+            this.btnimportexcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnimportexcel.Location = new System.Drawing.Point(420, 433);
+            this.btnimportexcel.Name = "btnimportexcel";
+            this.btnimportexcel.Size = new System.Drawing.Size(74, 23);
+            this.btnimportexcel.TabIndex = 38;
+            this.btnimportexcel.Text = "Nhập excel";
+            this.btnimportexcel.UseVisualStyleBackColor = true;
+            this.btnimportexcel.Click += new System.EventHandler(this.btnimportexcel_Click);
             // 
             // myGrid1
             // 
@@ -343,6 +324,7 @@ namespace PrintCG_24062016
             this.Price,
             this.Priceservice,
             this.Timer,
+            this.COD,
             this.Districtid,
             this.ReciverPhone,
             this.Description,
@@ -372,7 +354,6 @@ namespace PrintCG_24062016
             // 
             this.MailerID.HeaderText = "Số phiếu";
             this.MailerID.Name = "MailerID";
-            this.MailerID.ReadOnly = true;
             this.MailerID.Width = 90;
             // 
             // Mailertypeid
@@ -391,27 +372,27 @@ namespace PrintCG_24062016
             // 
             // Quantity
             // 
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Quantity.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Quantity.DefaultCellStyle = dataGridViewCellStyle4;
             this.Quantity.HeaderText = "SL";
             this.Quantity.Name = "Quantity";
             this.Quantity.Width = 40;
             // 
             // Weight
             // 
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle5;
             this.Weight.HeaderText = "TL";
             this.Weight.Name = "Weight";
             this.Weight.Width = 60;
             // 
             // Realweight
             // 
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Realweight.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.Realweight.DefaultCellStyle = dataGridViewCellStyle6;
             this.Realweight.HeaderText = "TL khối";
             this.Realweight.Name = "Realweight";
             this.Realweight.Width = 70;
@@ -471,6 +452,11 @@ namespace PrintCG_24062016
             this.Timer.Name = "Timer";
             this.Timer.Width = 60;
             // 
+            // COD
+            // 
+            this.COD.HeaderText = "COD";
+            this.COD.Name = "COD";
+            // 
             // Districtid
             // 
             this.Districtid.HeaderText = "Quận/Huyện";
@@ -512,13 +498,13 @@ namespace PrintCG_24062016
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1185, 459);
+            this.Controls.Add(this.btnimportexcel);
             this.Controls.Add(this.btnbangke);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtsoluongin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnbaophat);
             this.Controls.Add(this.dtppgi);
-            this.Controls.Add(this.txtfolder);
             this.Controls.Add(this.btnexcel);
             this.Controls.Add(this.btnlien);
             this.Controls.Add(this.btnina5);
@@ -527,7 +513,6 @@ namespace PrintCG_24062016
             this.Controls.Add(this.groupBox1);
             this.Name = "CG1_LE";
             this.Text = "In phiếu gửi";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CG1_LE_FormClosing);
             this.Load += new System.EventHandler(this.CG1_LE_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -553,19 +538,17 @@ namespace PrintCG_24062016
         private System.Windows.Forms.Button btnlien;
         private System.Windows.Forms.Button btnexcel;
         private DsProvinces dsProvinces;
-        private System.Windows.Forms.TextBox txtfolder;
         private System.Windows.Forms.DateTimePicker dtppgi;
         private System.Windows.Forms.Button btnbaophat;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtsoluongin;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtsophieu;
-        private System.Windows.Forms.TextBox txtmacg;
         private System.Windows.Forms.TextBox txtnhanvien;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtbuucuc;
         private System.Windows.Forms.Button btnbangke;
+        private System.Windows.Forms.Button btnimportexcel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Acceptdate;
         private System.Windows.Forms.DataGridViewTextBoxColumn MailerID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mailertypeid;
@@ -582,6 +565,7 @@ namespace PrintCG_24062016
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Priceservice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Timer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Districtid;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReciverPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;

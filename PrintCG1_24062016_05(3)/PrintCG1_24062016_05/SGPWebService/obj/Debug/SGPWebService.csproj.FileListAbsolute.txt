@@ -3,3 +3,8 @@ D:\Laptrinh\Github\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\bi
 D:\Laptrinh\Github\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\bin\SGPWebService.pdb
 D:\Laptrinh\Github\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.dll
 D:\Laptrinh\Github\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.pdb
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\bin\SGPWebService.dll.config
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\bin\SGPWebService.dll
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\bin\SGPWebService.pdb
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.dll
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.pdb

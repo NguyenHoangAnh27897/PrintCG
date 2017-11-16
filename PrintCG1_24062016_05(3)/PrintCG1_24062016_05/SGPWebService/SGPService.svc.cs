@@ -42,6 +42,9 @@ namespace SGPWebService
                     string batdau = str.Substring(0, postoffice.Length);
                     string ketthuc = str.Substring(postoffice.Length, 9);
                     newStr = batdau + (int.Parse(ketthuc) + 1).ToString("D9");
+
+                    maxid.MaxID = newStr;                 
+                    api.SubmitChanges();
                 }
                 else
                 {

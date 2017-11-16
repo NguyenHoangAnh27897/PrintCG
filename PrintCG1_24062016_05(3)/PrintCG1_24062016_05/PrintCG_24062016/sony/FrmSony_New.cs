@@ -635,7 +635,7 @@ namespace PrintCG_24062016
                     _tinhthanh = row["ProvinceID"].ToString();
 
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     _tinhthanh = "";
                 }
@@ -644,7 +644,7 @@ namespace PrintCG_24062016
                 {
                     _do = row["DO"].ToString();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     _do = "";
                 }
@@ -653,7 +653,7 @@ namespace PrintCG_24062016
                 {
                     _shop = row["ShipToName"].ToString();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     _shop = "";
                 }
@@ -662,7 +662,7 @@ namespace PrintCG_24062016
                 {
                     _somay = row["Quatity"].ToString();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     _somay = "";
                 }
@@ -671,7 +671,7 @@ namespace PrintCG_24062016
                 {
                     _makh = row["ShipToParty"].ToString();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     _makh = "";
                 }
@@ -680,7 +680,7 @@ namespace PrintCG_24062016
                 {
                     _ngayphat = row["DeliveryDate"].ToString();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     _ngayphat = "";
                 }
@@ -689,7 +689,7 @@ namespace PrintCG_24062016
                 {
                     _khuvuc = row["Vung"].ToString();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     _khuvuc = "";
                 }
@@ -697,7 +697,7 @@ namespace PrintCG_24062016
                 {
                     _tongsl = row["TongSL"].ToString();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     _tongsl = "";
                 }

@@ -117,6 +117,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="convert\ConvertData.cs" />
+    <Compile Include="ExcelReader\ExcelReader.cs" />
     <Compile Include="hethong\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
