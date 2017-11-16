@@ -117,42 +117,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CG1_LE.cs">
+    <Compile Include="hethong\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CG1_LE.Designer.cs">
+    <Compile Include="hethong\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="printcg\CG1_LE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="printcg\CG1_LE.Designer.cs">
       <DependentUpon>CG1_LE.cs</DependentUpon>
     </Compile>
-    <Compile Include="DsA4.Designer.cs">
+    <Compile Include="dataset\DsA4.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsA4.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DsCGLEBangKe.Designer.cs">
+    <Compile Include="dataset\DsCGLEBangKe.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsCGLEBangKe.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DsDHLDiachi.Designer.cs">
+    <Compile Include="dataset\DsDHLDiachi.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsDHLDiachi.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DsProvinces.Designer.cs">
+    <Compile Include="dataset\DsProvinces.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsProvinces.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DsSonyDiachi.Designer.cs">
+    <Compile Include="dataset\DsSonyDiachi.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsSonyDiachi.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="FrmBangKe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBangKe.Designer.cs">
-      <DependentUpon>FrmBangKe.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBayerPrint.cs">
       <SubType>Form</SubType>
@@ -172,34 +172,34 @@
     <Compile Include="FrmChuyenThu.Designer.cs">
       <DependentUpon>FrmChuyenThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDHLDiachi.cs">
+    <Compile Include="dhl\FrmDHLDiachi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDHLDiachi.Designer.cs">
+    <Compile Include="dhl\FrmDHLDiachi.Designer.cs">
       <DependentUpon>FrmDHLDiachi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDHLLuyKe.cs">
+    <Compile Include="dhl\FrmDHLLuyKe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDHLLuyKe.Designer.cs">
+    <Compile Include="dhl\FrmDHLLuyKe.Designer.cs">
       <DependentUpon>FrmDHLLuyKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDHLPrint.cs">
+    <Compile Include="dhl\FrmDHLPrint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDHLPrint.Designer.cs">
+    <Compile Include="dhl\FrmDHLPrint.Designer.cs">
       <DependentUpon>FrmDHLPrint.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDHLXoaDO.cs">
+    <Compile Include="dhl\FrmDHLXoaDO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDHLXoaDO.Designer.cs">
+    <Compile Include="dhl\FrmDHLXoaDO.Designer.cs">
       <DependentUpon>FrmDHLXoaDO.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmExcel.cs">
+    <Compile Include="fujixerox\FrmExcel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmExcel.Designer.cs">
+    <Compile Include="fujixerox\FrmExcel.Designer.cs">
       <DependentUpon>FrmExcel.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmKHDB.cs">
@@ -220,16 +220,21 @@
     <Compile Include="FrmNormal.Designer.cs">
       <DependentUpon>FrmNormal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSonyDiachi.cs">
+    <Compile Include="Service References\SGPService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="sony\FrmSonyDiachi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSonyDiachi.Designer.cs">
+    <Compile Include="sony\FrmSonyDiachi.Designer.cs">
       <DependentUpon>FrmSonyDiachi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSony_New.cs">
+    <Compile Include="sony\FrmSony_New.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSony_New.Designer.cs">
+    <Compile Include="sony\FrmSony_New.Designer.cs">
       <DependentUpon>FrmSony_New.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTracking.cs">
@@ -238,17 +243,11 @@
     <Compile Include="FrmTracking.Designer.cs">
       <DependentUpon>FrmTracking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Excel.cs">
+    <Compile Include="fujixerox\Frm_Excel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Excel.Designer.cs">
+    <Compile Include="fujixerox\Frm_Excel.Designer.cs">
       <DependentUpon>Frm_Excel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_ImportExcel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_ImportExcel.Designer.cs">
-      <DependentUpon>Frm_ImportExcel.cs</DependentUpon>
     </Compile>
     <Compile Include="fujixerox\Frm_DMDC.cs">
       <SubType>Form</SubType>
@@ -292,19 +291,19 @@
     <Compile Include="fujixerox\Frm_XuatNhapKho.Designer.cs">
       <DependentUpon>Frm_XuatNhapKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="RptBaoPhat.cs">
+    <Compile Include="Report\RptBaoPhat.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptBaoPhat.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptBayerBP.cs">
+    <Compile Include="Report\RptBayerBP.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptBayerBP.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptBayer_A5.cs">
+    <Compile Include="Report\RptBayer_A5.cs">
       <DependentUpon>RptBayer_A5.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
@@ -316,65 +315,65 @@
     <Compile Include="FrmBayer.Designer.cs">
       <DependentUpon>FrmBayer.cs</DependentUpon>
     </Compile>
-    <Compile Include="RptCGLEBangKE.cs">
+    <Compile Include="Report\RptCGLEBangKE.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptCGLEBangKE.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptCOD_A5.cs">
+    <Compile Include="Report\RptCOD_A5.cs">
       <DependentUpon>RptCOD_A5.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="DsCG11.cs">
+    <Compile Include="dataset\DsCG11.cs">
       <DependentUpon>DsCG11.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DsCG11.Designer.cs">
+    <Compile Include="dataset\DsCG11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsCG11.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DsCG14.cs">
+    <Compile Include="dataset\DsCG14.cs">
       <DependentUpon>DsCG14.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DsCG14.Designer.cs">
+    <Compile Include="dataset\DsCG14.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsCG14.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DsCG1Sony.cs">
+    <Compile Include="dataset\DsCG1Sony.cs">
       <DependentUpon>DsCG1Sony.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DsCG1Sony.Designer.cs">
+    <Compile Include="dataset\DsCG1Sony.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsCG1Sony.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DsCG7.Designer.cs">
+    <Compile Include="dataset\DsCG7.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsCG7.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DsExcel.Designer.cs">
+    <Compile Include="dataset\DsExcel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsExcel.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DsFromTo.Designer.cs">
+    <Compile Include="dataset\DsFromTo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsFromTo.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DsKienHangSony.Designer.cs">
+    <Compile Include="dataset\DsKienHangSony.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsKienHangSony.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dsPhieuGui.Designer.cs">
+    <Compile Include="dataset\dsPhieuGui.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPhieuGui.xsd</DependentUpon>
@@ -427,28 +426,22 @@
     <Compile Include="FrmCODPrint.Designer.cs">
       <DependentUpon>FrmCODPrint.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDHL.cs">
+    <Compile Include="dhl\FrmDHL_Listweight.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDHL.Designer.cs">
-      <DependentUpon>FrmDHL.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmDHL_Listweight.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmDHL_Listweight.Designer.cs">
+    <Compile Include="dhl\FrmDHL_Listweight.Designer.cs">
       <DependentUpon>FrmDHL_Listweight.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDHL_New.cs">
+    <Compile Include="dhl\FrmDHL_New.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDHL_New.Designer.cs">
+    <Compile Include="dhl\FrmDHL_New.Designer.cs">
       <DependentUpon>FrmDHL_New.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDHL_PLAN_INSERT.cs">
+    <Compile Include="dhl\FrmDHL_PLAN_INSERT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDHL_PLAN_INSERT.Designer.cs">
+    <Compile Include="dhl\FrmDHL_PLAN_INSERT.Designer.cs">
       <DependentUpon>FrmDHL_PLAN_INSERT.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmFromTo.cs">
@@ -487,28 +480,28 @@
     <Compile Include="FrmPhieuLe.Designer.cs">
       <DependentUpon>FrmPhieuLe.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSony.cs">
+    <Compile Include="sony\FrmSony.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSony.Designer.cs">
+    <Compile Include="sony\FrmSony.Designer.cs">
       <DependentUpon>FrmSony.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSonyDT.cs">
+    <Compile Include="sony\FrmSonyDT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSonyDT.Designer.cs">
+    <Compile Include="sony\FrmSonyDT.Designer.cs">
       <DependentUpon>FrmSonyDT.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSonyPrint.cs">
+    <Compile Include="sony\FrmSonyPrint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSonyPrint.Designer.cs">
+    <Compile Include="sony\FrmSonyPrint.Designer.cs">
       <DependentUpon>FrmSonyPrint.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTLCan.cs">
+    <Compile Include="sony\FrmTLCan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTLCan.Designer.cs">
+    <Compile Include="sony\FrmTLCan.Designer.cs">
       <DependentUpon>FrmTLCan.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUpdate.cs">
@@ -526,11 +519,11 @@
     <Compile Include="Program.cs">
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CG1_LE.resx">
-      <DependentUpon>CG1_LE.cs</DependentUpon>
+    <EmbeddedResource Include="hethong\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmBangKe.resx">
-      <DependentUpon>FrmBangKe.cs</DependentUpon>
+    <EmbeddedResource Include="printcg\CG1_LE.resx">
+      <DependentUpon>CG1_LE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBayerPrint.resx">
       <DependentUpon>FrmBayerPrint.cs</DependentUpon>
@@ -541,19 +534,19 @@
     <EmbeddedResource Include="FrmChuyenThu.resx">
       <DependentUpon>FrmChuyenThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDHLDiachi.resx">
+    <EmbeddedResource Include="dhl\FrmDHLDiachi.resx">
       <DependentUpon>FrmDHLDiachi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDHLLuyKe.resx">
+    <EmbeddedResource Include="dhl\FrmDHLLuyKe.resx">
       <DependentUpon>FrmDHLLuyKe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDHLPrint.resx">
+    <EmbeddedResource Include="dhl\FrmDHLPrint.resx">
       <DependentUpon>FrmDHLPrint.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDHLXoaDO.resx">
+    <EmbeddedResource Include="dhl\FrmDHLXoaDO.resx">
       <DependentUpon>FrmDHLXoaDO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmExcel.resx">
+    <EmbeddedResource Include="fujixerox\FrmExcel.resx">
       <DependentUpon>FrmExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKHDB.resx">
@@ -565,20 +558,17 @@
     <EmbeddedResource Include="FrmNormal.resx">
       <DependentUpon>FrmNormal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSonyDiachi.resx">
+    <EmbeddedResource Include="sony\FrmSonyDiachi.resx">
       <DependentUpon>FrmSonyDiachi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSony_New.resx">
+    <EmbeddedResource Include="sony\FrmSony_New.resx">
       <DependentUpon>FrmSony_New.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTracking.resx">
       <DependentUpon>FrmTracking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Excel.resx">
+    <EmbeddedResource Include="fujixerox\Frm_Excel.resx">
       <DependentUpon>Frm_Excel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_ImportExcel.resx">
-      <DependentUpon>Frm_ImportExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fujixerox\Frm_DMDC.resx">
       <DependentUpon>Frm_DMDC.cs</DependentUpon>
@@ -602,26 +592,26 @@
       <DependentUpon>Frm_XuatNhapKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="RptBaoPhat.rpt">
+    <EmbeddedResource Include="Report\RptBaoPhat.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptBaoPhat.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptBayerBP.rpt">
+    <EmbeddedResource Include="Report\RptBayerBP.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptBayerBP.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptBayer_A5.rpt">
+    <EmbeddedResource Include="Report\RptBayer_A5.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptBayer_A5.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBayer.resx">
       <DependentUpon>FrmBayer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptCGLEBangKE.rpt">
+    <EmbeddedResource Include="Report\RptCGLEBangKE.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCGLEBangKE.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptCOD_A5.rpt">
+    <EmbeddedResource Include="Report\RptCOD_A5.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCOD_A5.cs</LastGenOutput>
     </EmbeddedResource>
@@ -649,16 +639,13 @@
     <EmbeddedResource Include="FrmCODPrint.resx">
       <DependentUpon>FrmCODPrint.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDHL.resx">
-      <DependentUpon>FrmDHL.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmDHL_Listweight.resx">
+    <EmbeddedResource Include="dhl\FrmDHL_Listweight.resx">
       <DependentUpon>FrmDHL_Listweight.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDHL_New.resx">
+    <EmbeddedResource Include="dhl\FrmDHL_New.resx">
       <DependentUpon>FrmDHL_New.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDHL_PLAN_INSERT.resx">
+    <EmbeddedResource Include="dhl\FrmDHL_PLAN_INSERT.resx">
       <DependentUpon>FrmDHL_PLAN_INSERT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFromTo.resx">
@@ -679,16 +666,16 @@
     <EmbeddedResource Include="FrmPhieuLe.resx">
       <DependentUpon>FrmPhieuLe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSony.resx">
+    <EmbeddedResource Include="sony\FrmSony.resx">
       <DependentUpon>FrmSony.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSonyDT.resx">
+    <EmbeddedResource Include="sony\FrmSonyDT.resx">
       <DependentUpon>FrmSonyDT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSonyPrint.resx">
+    <EmbeddedResource Include="sony\FrmSonyPrint.resx">
       <DependentUpon>FrmSonyPrint.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmTLCan.resx">
+    <EmbeddedResource Include="sony\FrmTLCan.resx">
       <DependentUpon>FrmTLCan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUpdate.resx">
@@ -699,107 +686,107 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptBangKeSony.rpt">
+    <EmbeddedResource Include="Report\RptBangKeSony.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptBangKeSony.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptBangKeSony_Details.rpt">
+    <EmbeddedResource Include="Report\RptBangKeSony_Details.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptBangKeSony_Details.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptCG14.rpt">
+    <EmbeddedResource Include="Report\RptCG14.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCG14.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptCG14_Details.rpt">
+    <EmbeddedResource Include="Report\RptCG14_Details.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCG14_Details.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptCG1Sony.rpt">
+    <EmbeddedResource Include="Report\RptCG1Sony.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCG1Sony.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptCG1_A5.rpt">
+    <EmbeddedResource Include="Report\RptCG1_A5.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCG1_A5.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptCG1_Label.rpt">
+    <EmbeddedResource Include="Report\RptCG1_Label.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCG1_Label.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptCG1_Label_30.rpt">
+    <EmbeddedResource Include="Report\RptCG1_Label_30.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCG1_Label_30.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptCG1_Label_Details.rpt">
+    <EmbeddedResource Include="Report\RptCG1_Label_Details.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCG1_Label_Details.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptCG1_Label_Details_30.rpt">
+    <EmbeddedResource Include="Report\RptCG1_Label_Details_30.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCG1_Label_Details_30.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptCG7_kim.rpt">
+    <EmbeddedResource Include="Report\RptCG7_kim.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCG7_kim.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptCG7_kim_details.rpt">
+    <EmbeddedResource Include="Report\RptCG7_kim_details.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCG7_kim_details.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptCG7_Label.rpt">
+    <EmbeddedResource Include="Report\RptCG7_Label.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCG7_Label.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptCG7_Label_details.rpt">
+    <EmbeddedResource Include="Report\RptCG7_Label_details.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCG7_Label_details.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptCG7_laser.rpt">
+    <EmbeddedResource Include="Report\RptCG7_laser.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptCG7_laser.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptDHL_A5.rpt">
+    <EmbeddedResource Include="Report\RptDHL_A5.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptDHL_A5.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptFromTo.rpt">
+    <EmbeddedResource Include="Report\RptFromTo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptFromTo.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptFromTo_Details.rpt">
+    <EmbeddedResource Include="Report\RptFromTo_Details.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptFromTo_Details.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Rptinphieugui_kim_listexcel.rpt">
+    <EmbeddedResource Include="Report\Rptinphieugui_kim_listexcel.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rptinphieugui_kim_listexcel.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptInTem.rpt">
+    <EmbeddedResource Include="Report\RptInTem.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptInTem.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptPhieuGui_A4.rpt">
+    <EmbeddedResource Include="Report\RptPhieuGui_A4.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptPhieuGui_A4.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptPhieuGui_A5.rpt">
+    <EmbeddedResource Include="Report\RptPhieuGui_A5.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptPhieuGui_A5.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Rptphieugui_kim.rpt">
+    <EmbeddedResource Include="Report\Rptphieugui_kim.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rptphieugui_kim.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptSony_A5.rpt">
+    <EmbeddedResource Include="Report\RptSony_A5.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptSony_A5.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptSony_DT.rpt">
+    <EmbeddedResource Include="Report\RptSony_DT.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptSony_DT.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptSony_DT_Details.rpt">
+    <EmbeddedResource Include="Report\RptSony_DT_Details.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptSony_DT_Details.cs</LastGenOutput>
     </EmbeddedResource>
@@ -814,103 +801,103 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
-    <None Include="DsA4.xsc">
+    <None Include="dataset\DsA4.xsc">
       <DependentUpon>DsA4.xsd</DependentUpon>
     </None>
-    <None Include="DsA4.xsd">
+    <None Include="dataset\DsA4.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DsA4.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DsA4.xss">
+    <None Include="dataset\DsA4.xss">
       <DependentUpon>DsA4.xsd</DependentUpon>
     </None>
-    <None Include="DsCG11.xsc">
+    <None Include="dataset\DsCG11.xsc">
       <DependentUpon>DsCG11.xsd</DependentUpon>
     </None>
-    <None Include="DsCG11.xsd">
+    <None Include="dataset\DsCG11.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DsCG11.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DsCG11.xss">
+    <None Include="dataset\DsCG11.xss">
       <DependentUpon>DsCG11.xsd</DependentUpon>
     </None>
-    <None Include="DsCG14.xsc">
+    <None Include="dataset\DsCG14.xsc">
       <DependentUpon>DsCG14.xsd</DependentUpon>
     </None>
-    <None Include="DsCG14.xsd">
+    <None Include="dataset\DsCG14.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DsCG14.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DsCG14.xss">
+    <None Include="dataset\DsCG14.xss">
       <DependentUpon>DsCG14.xsd</DependentUpon>
     </None>
-    <None Include="DsCG1Sony.xsc">
+    <None Include="dataset\DsCG1Sony.xsc">
       <DependentUpon>DsCG1Sony.xsd</DependentUpon>
     </None>
-    <None Include="DsCG1Sony.xsd">
+    <None Include="dataset\DsCG1Sony.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DsCG1Sony.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DsCG1Sony.xss">
+    <None Include="dataset\DsCG1Sony.xss">
       <DependentUpon>DsCG1Sony.xsd</DependentUpon>
     </None>
-    <None Include="DsCG7.xsc">
+    <None Include="dataset\DsCG7.xsc">
       <DependentUpon>DsCG7.xsd</DependentUpon>
     </None>
-    <None Include="DsCG7.xsd">
+    <None Include="dataset\DsCG7.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DsCG7.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DsCG7.xss">
+    <None Include="dataset\DsCG7.xss">
       <DependentUpon>DsCG7.xsd</DependentUpon>
     </None>
-    <None Include="DsExcel.xsc">
+    <None Include="dataset\DsExcel.xsc">
       <DependentUpon>DsExcel.xsd</DependentUpon>
     </None>
-    <None Include="DsExcel.xsd">
+    <None Include="dataset\DsExcel.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DsExcel.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DsExcel.xss">
+    <None Include="dataset\DsExcel.xss">
       <DependentUpon>DsExcel.xsd</DependentUpon>
     </None>
-    <None Include="DsFromTo.xsc">
+    <None Include="dataset\DsFromTo.xsc">
       <DependentUpon>DsFromTo.xsd</DependentUpon>
     </None>
-    <None Include="DsFromTo.xsd">
+    <None Include="dataset\DsFromTo.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DsFromTo.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DsFromTo.xss">
+    <None Include="dataset\DsFromTo.xss">
       <DependentUpon>DsFromTo.xsd</DependentUpon>
     </None>
-    <None Include="DsKienHangSony.xsc">
+    <None Include="dataset\DsKienHangSony.xsc">
       <DependentUpon>DsKienHangSony.xsd</DependentUpon>
     </None>
-    <None Include="DsKienHangSony.xsd">
+    <None Include="dataset\DsKienHangSony.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DsKienHangSony.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DsKienHangSony.xss">
+    <None Include="dataset\DsKienHangSony.xss">
       <DependentUpon>DsKienHangSony.xsd</DependentUpon>
     </None>
-    <None Include="dsPhieuGui.xsc">
+    <None Include="dataset\dsPhieuGui.xsc">
       <DependentUpon>dsPhieuGui.xsd</DependentUpon>
     </None>
-    <None Include="dsPhieuGui.xsd">
+    <None Include="dataset\dsPhieuGui.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsPhieuGui.Designer.cs</LastGenOutput>
     </None>
-    <None Include="dsPhieuGui.xss">
+    <None Include="dataset\dsPhieuGui.xss">
       <DependentUpon>dsPhieuGui.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
@@ -923,157 +910,157 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="RptBangKeSony.cs">
+    <Compile Include="Report\RptBangKeSony.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptBangKeSony.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptBangKeSony_Details.cs">
+    <Compile Include="Report\RptBangKeSony_Details.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptBangKeSony_Details.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptCG14.cs">
+    <Compile Include="Report\RptCG14.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptCG14.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptCG14_Details.cs">
+    <Compile Include="Report\RptCG14_Details.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptCG14_Details.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptCG1Sony.cs">
+    <Compile Include="Report\RptCG1Sony.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptCG1Sony.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptCG1_A5.cs">
+    <Compile Include="Report\RptCG1_A5.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptCG1_A5.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptCG1_Label.cs">
+    <Compile Include="Report\RptCG1_Label.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptCG1_Label.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptCG1_Label_30.cs">
+    <Compile Include="Report\RptCG1_Label_30.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptCG1_Label_30.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptCG1_Label_Details.cs">
+    <Compile Include="Report\RptCG1_Label_Details.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptCG1_Label_Details.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptCG1_Label_Details_30.cs">
+    <Compile Include="Report\RptCG1_Label_Details_30.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptCG1_Label_Details_30.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptCG7_kim.cs">
+    <Compile Include="Report\RptCG7_kim.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptCG7_kim.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptCG7_kim_details.cs">
+    <Compile Include="Report\RptCG7_kim_details.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptCG7_kim_details.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptCG7_Label.cs">
+    <Compile Include="Report\RptCG7_Label.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptCG7_Label.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptCG7_Label_details.cs">
+    <Compile Include="Report\RptCG7_Label_details.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptCG7_Label_details.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptCG7_laser.cs">
+    <Compile Include="Report\RptCG7_laser.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptCG7_laser.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptDHL_A5.cs">
+    <Compile Include="Report\RptDHL_A5.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptDHL_A5.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptFromTo.cs">
+    <Compile Include="Report\RptFromTo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptFromTo.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptFromTo_Details.cs">
+    <Compile Include="Report\RptFromTo_Details.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptFromTo_Details.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Rptinphieugui_kim_listexcel.cs">
+    <Compile Include="Report\Rptinphieugui_kim_listexcel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Rptinphieugui_kim_listexcel.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptInTem.cs">
+    <Compile Include="Report\RptInTem.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptInTem.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptPhieuGui_A4.cs">
+    <Compile Include="Report\RptPhieuGui_A4.cs">
       <DependentUpon>RptPhieuGui_A4.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="RptPhieuGui_A5.cs">
+    <Compile Include="Report\RptPhieuGui_A5.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptPhieuGui_A5.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Rptphieugui_kim.cs">
+    <Compile Include="Report\Rptphieugui_kim.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Rptphieugui_kim.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptSony_A5.cs">
+    <Compile Include="Report\RptSony_A5.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptSony_A5.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptSony_DT.cs">
+    <Compile Include="Report\RptSony_DT.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptSony_DT.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RptSony_DT_Details.cs">
+    <Compile Include="Report\RptSony_DT_Details.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptSony_DT_Details.rpt</DependentUpon>
@@ -1095,6 +1082,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <None Include="Service References\SGPService\SGPService.wsdl" />
+    <None Include="Service References\SGPService\SGPService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SGPService\SGPService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
@@ -1102,38 +1096,45 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1436857928_Package-Download.ico" />
+    <None Include="Service References\SGPService\SGPService.disco" />
+    <None Include="Service References\SGPService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SGPService\configuration.svcinfo" />
+    <None Include="Service References\SGPService\configuration91.svcinfo" />
     <None Include="Service References\ChuyenThu\Service1.disco" />
-    <None Include="DsCGLEBangKe.xsc">
+    <None Include="dataset\DsCGLEBangKe.xsc">
       <DependentUpon>DsCGLEBangKe.xsd</DependentUpon>
     </None>
-    <None Include="DsCGLEBangKe.xsd">
+    <None Include="dataset\DsCGLEBangKe.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DsCGLEBangKe.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DsCGLEBangKe.xss">
+    <None Include="dataset\DsCGLEBangKe.xss">
       <DependentUpon>DsCGLEBangKe.xsd</DependentUpon>
     </None>
-    <None Include="DsDHLDiachi.xsc">
+    <None Include="dataset\DsDHLDiachi.xsc">
       <DependentUpon>DsDHLDiachi.xsd</DependentUpon>
     </None>
-    <None Include="DsDHLDiachi.xsd">
+    <None Include="dataset\DsDHLDiachi.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DsDHLDiachi.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DsDHLDiachi.xss">
+    <None Include="dataset\DsDHLDiachi.xss">
       <DependentUpon>DsDHLDiachi.xsd</DependentUpon>
     </None>
-    <None Include="DsSonyDiachi.xsc">
+    <None Include="dataset\DsSonyDiachi.xsc">
       <DependentUpon>DsSonyDiachi.xsd</DependentUpon>
     </None>
-    <None Include="DsSonyDiachi.xsd">
+    <None Include="dataset\DsSonyDiachi.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DsSonyDiachi.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DsSonyDiachi.xss">
+    <None Include="dataset\DsSonyDiachi.xss">
       <DependentUpon>DsSonyDiachi.xsd</DependentUpon>
     </None>
     <None Include="Service References\ChuyenThu\Reference.svcmap">
@@ -1142,15 +1143,15 @@
     </None>
     <None Include="Service References\ChuyenThu\configuration.svcinfo" />
     <None Include="Service References\ChuyenThu\configuration91.svcinfo" />
-    <None Include="DsProvinces.xsc">
+    <None Include="dataset\DsProvinces.xsc">
       <DependentUpon>DsProvinces.xsd</DependentUpon>
     </None>
-    <None Include="DsProvinces.xsd">
+    <None Include="dataset\DsProvinces.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DsProvinces.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DsProvinces.xss">
+    <None Include="dataset\DsProvinces.xss">
       <DependentUpon>DsProvinces.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
@@ -1169,10 +1170,9 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ChuyenThu\" />
     <WCFMetadataStorage Include="Service References\DBLIST\" />
+    <WCFMetadataStorage Include="Service References\SGPService\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Report\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
       <Visible>False</Visible>

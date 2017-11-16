@@ -19,8 +19,7 @@ namespace PrintCG_24062016
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Frm_ImportExcel frm = new Frm_ImportExcel();
-            frm.ShowDialog();
+            
         }
     }
 }

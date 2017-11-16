@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SGPMain">
+  <DataContextMoniker Name="/SGPMainDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cd59a79e-eb06-41ff-baa0-68f35657ad6d" absoluteBounds="0.625, 0.875, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/SGPMainDataContext/UMS_tblUserAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4141fca3-0c1b-40e1-9f71-754f70152764" absoluteBounds="0.63999999999999968, 1.335, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3b0b9cae-31e1-4a9a-9d89-f7be8195541c" absoluteBounds="4.375, 1.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SGPMainDataContext/UMS_tblUserAccountPostOffice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="abe86655-9224-4300-8ad2-f7cdd6528d25" absoluteBounds="4.39, 1.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.625 : 2.28929768880208); (4.375 : 2.28929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SGPMainDataContext/UMS_tblUserAccount/UMS_tblUserAccount_UMS_tblUserAccountPostOffice" />
+      <nodes>
+        <classShapeMoniker Id="cd59a79e-eb06-41ff-baa0-68f35657ad6d" />
+        <classShapeMoniker Id="3b0b9cae-31e1-4a9a-9d89-f7be8195541c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

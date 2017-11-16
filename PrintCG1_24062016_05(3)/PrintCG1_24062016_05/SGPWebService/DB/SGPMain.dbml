@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PMSSGP_200911" Class="SGPMainDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=10.0.10.10;Initial Catalog=PMSSGP_200911;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="PMSSGP_200911ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.UMS_tblUserAccount" Member="UMS_tblUserAccounts">
+    <Type Name="UMS_tblUserAccount">
+      <Column Name="UserGroupID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserGroupName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FValid" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FGroup" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FAdm" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FSpv" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(240)" CanBeNull="true" />
+      <Column Name="CantChangePwd" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PwdNeverExpire" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MustChangePwd" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DateOfChangePwd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastEditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MemberOf" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="UMS_tblUserAccount_UMS_tblUserAccountPostOffice" Member="UMS_tblUserAccountPostOffices" ThisKey="UserGroupID" OtherKey="UserGroupID" Type="UMS_tblUserAccountPostOffice" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UMS_tblUserAccountPostOffice" Member="UMS_tblUserAccountPostOffices">
+    <Type Name="UMS_tblUserAccountPostOffice">
+      <Column Name="UserGroupID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PostOfficeID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LastEditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="UMS_tblUserAccount_UMS_tblUserAccountPostOffice" Member="UMS_tblUserAccount" ThisKey="UserGroupID" OtherKey="UserGroupID" Type="UMS_tblUserAccount" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>

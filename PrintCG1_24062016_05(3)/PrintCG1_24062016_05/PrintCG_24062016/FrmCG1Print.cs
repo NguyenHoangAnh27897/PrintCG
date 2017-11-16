@@ -10,6 +10,8 @@ using System.Data.OleDb;
 using System.IO;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
+using PrintCG_24062016.Report;
+using PrintCG_24062016.dataset;
 namespace PrintCG_24062016
 {
     public partial class FrmCG1Print : Form

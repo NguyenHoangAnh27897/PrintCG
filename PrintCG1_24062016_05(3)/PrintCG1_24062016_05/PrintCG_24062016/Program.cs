@@ -15,7 +15,7 @@ namespace PrintCG_24062016
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMain1());
+            Application.Run(new FrmLogin());
             //Application.Run(new FrmCG1());
            // Application.Run(new FrmUpdate());
         }

@@ -62,13 +62,17 @@
             this.navBarItem22 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem23 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.navBarItem26 = new DevExpress.XtraNavBar.NavBarItem();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblmabc = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblmanv = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -96,7 +100,7 @@
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.Options.ShowCloseButton = false;
             this.dockPanel1.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanel1.Size = new System.Drawing.Size(200, 552);
+            this.dockPanel1.Size = new System.Drawing.Size(200, 530);
             this.dockPanel1.Text = "Thanh menu";
             // 
             // dockPanel1_Container
@@ -104,7 +108,7 @@
             this.dockPanel1_Container.Controls.Add(this.navBarControl1);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(192, 525);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(192, 503);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // navBarControl1
@@ -284,7 +288,6 @@
             // navBarGroup3
             // 
             this.navBarGroup3.Caption = "Công cụ";
-            this.navBarGroup3.Expanded = true;
             this.navBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
             this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem18),
@@ -313,7 +316,6 @@
             // navBarGroup4
             // 
             this.navBarGroup4.Caption = "Fuji xerox";
-            this.navBarGroup4.Expanded = true;
             this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem20),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem21),
@@ -353,15 +355,38 @@
             this.navBarItem24.Name = "navBarItem24";
             this.navBarItem24.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem24_LinkClicked);
             // 
-            // xtraTabbedMdiManager1
-            // 
-            this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
             // navBarItem26
             // 
             this.navBarItem26.Caption = "Xuất Excel";
             this.navBarItem26.Name = "navBarItem26";
             this.navBarItem26.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem26_LinkClicked);
+            // 
+            // xtraTabbedMdiManager1
+            // 
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblmabc,
+            this.lblmanv});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 530);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1337, 22);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblmabc
+            // 
+            this.lblmabc.Name = "lblmabc";
+            this.lblmabc.Size = new System.Drawing.Size(51, 17);
+            this.lblmabc.Text = "Mã BC : ";
+            // 
+            // lblmanv
+            // 
+            this.lblmanv.Name = "lblmanv";
+            this.lblmanv.Size = new System.Drawing.Size(46, 17);
+            this.lblmanv.Text = "Mã NV:";
             // 
             // FrmMain1
             // 
@@ -369,16 +394,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1337, 552);
             this.Controls.Add(this.dockPanel1);
+            this.Controls.Add(this.statusStrip1);
             this.IsMdiContainer = true;
             this.Name = "FrmMain1";
             this.Text = "Chương trình in SGP";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmMain1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel1.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -419,6 +449,9 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem24;
         private DevExpress.XtraNavBar.NavBarItem navBarItem25;
         private DevExpress.XtraNavBar.NavBarItem navBarItem26;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblmabc;
+        private System.Windows.Forms.ToolStripStatusLabel lblmanv;
 
     }
 }

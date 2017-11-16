@@ -62,10 +62,7 @@ namespace PrintCG_24062016
 
         private void inDHLToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmDHL frmdhl = new FrmDHL();
-            frmdhl.MdiParent = this;
-            frmdhl.Dock = DockStyle.Fill;
-            frmdhl.Show();
+            
         }
 
         private void inCG1ToolStripMenuItem_Click(object sender, EventArgs e)

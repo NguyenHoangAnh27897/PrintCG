@@ -11,6 +11,8 @@ using System.IO;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 using System.Drawing.Printing;
+using PrintCG_24062016.Report;
+using PrintCG_24062016.dataset;
 namespace PrintCG_24062016
 {
     public partial class FrmInPhieuGui : Form

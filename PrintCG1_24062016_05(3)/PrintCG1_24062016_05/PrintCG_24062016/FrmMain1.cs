@@ -15,8 +15,19 @@ namespace PrintCG_24062016
         public FrmMain1()
         {
             InitializeComponent();
+            Sender = new SendMessage(GetMessage);
         }
-
+        public static string user {get;set;}
+        public static string postofficeid{get;set;}
+        public delegate void SendMessage(string userlogin, string postlogin);
+        public SendMessage Sender;
+        private void GetMessage(string userlogin, string postlogin)
+        {
+            user = userlogin;
+            postofficeid = postlogin;            
+            lblmanv.Text = "Mã NV : " + userlogin;
+            lblmabc.Text = "Mã BC : " + postlogin; 
+        }
         private void navBarControl1_Click(object sender, EventArgs e)
         {
 
@@ -119,18 +130,7 @@ namespace PrintCG_24062016
 
         private void navBarItem7_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            FrmDHL frmdhl = new FrmDHL();
-            if ((Application.OpenForms["FrmDHL"] as FrmDHL) != null)
-            {
-                frmdhl.Focus();
-            }
-            else
-            {
-                frmdhl = new FrmDHL();
-                frmdhl.MdiParent = this;
-                frmdhl.Dock = DockStyle.Fill;
-                frmdhl.Show();
-            }
+           
         }
 
         private void navBarItem8_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -400,6 +400,11 @@ namespace PrintCG_24062016
                 frm.MdiParent = this;
                 frm.Show();
             }
+        }
+
+        private void FrmMain1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

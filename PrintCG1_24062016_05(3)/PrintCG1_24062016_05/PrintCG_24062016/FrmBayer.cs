@@ -9,6 +9,7 @@ using System.IO;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Data.OleDb;
+using PrintCG_24062016.dataset;
 namespace PrintCG_24062016
 {
     public partial class FrmBayer : Form

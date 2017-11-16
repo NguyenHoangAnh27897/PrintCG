@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="24600b5a-8f59-4bca-addc-0df35b5f662d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:4351/SGPService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SGPService.xsd" MetadataType="Schema" ID="5a7a4563-4da1-4ee0-a0b4-d7cab7b0731e" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SGPService1.xsd" MetadataType="Schema" ID="58d8c09c-f615-4525-8e94-b2e2fececdc6" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SGPService.wsdl" MetadataType="Wsdl" ID="9e621d54-c433-4e1c-8c2d-906f1754b6ff" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?wsdl" />
+    <MetadataFile FileName="SGPService.disco" MetadataType="Disco" ID="f3b54c94-1430-4cca-9060-426d5ed0600f" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

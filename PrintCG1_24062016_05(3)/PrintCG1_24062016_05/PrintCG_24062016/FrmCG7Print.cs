@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.IO;
+using PrintCG_24062016.dataset;
+using PrintCG_24062016.Report;
 
 namespace PrintCG_24062016
 {

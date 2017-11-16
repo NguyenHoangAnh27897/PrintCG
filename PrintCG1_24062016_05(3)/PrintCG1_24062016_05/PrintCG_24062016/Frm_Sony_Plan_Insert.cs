@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.IO;
+using PrintCG_24062016.dataset;
 namespace PrintCG_24062016
 {
     public partial class Frm_Sony_Plan_Insert : Form
