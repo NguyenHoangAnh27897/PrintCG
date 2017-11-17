@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:4351/SGPService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:4351/SGPService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:4351/SGPService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DB" />
+      <xsd:import schemaLocation="http://localhost:4351/SGPService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ISGPService_login_InputMessage">
@@ -43,6 +44,18 @@
   <wsdl:message name="ISGPService_getCustomer_OutputMessage">
     <wsdl:part name="parameters" element="tns:getCustomerResponse" />
   </wsdl:message>
+  <wsdl:message name="ISGPService_getZoneList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getZoneList" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getZoneList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getZoneListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getmaxZone_InputMessage">
+    <wsdl:part name="parameters" element="tns:getmaxZone" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getmaxZone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getmaxZoneResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISGPService">
     <wsdl:operation name="login">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/login" message="tns:ISGPService_login_InputMessage" />
@@ -67,6 +80,14 @@
     <wsdl:operation name="getCustomer">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getCustomer" message="tns:ISGPService_getCustomer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getCustomerResponse" message="tns:ISGPService_getCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getZoneList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getZoneList" message="tns:ISGPService_getZoneList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getZoneListResponse" message="tns:ISGPService_getZoneList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getmaxZone">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getmaxZone" message="tns:ISGPService_getmaxZone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getmaxZoneResponse" message="tns:ISGPService_getmaxZone_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISGPService" type="tns:ISGPService">
@@ -118,6 +139,24 @@
     </wsdl:operation>
     <wsdl:operation name="getCustomer">
       <soap:operation soapAction="http://tempuri.org/ISGPService/getCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZoneList">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getZoneList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getmaxZone">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getmaxZone" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

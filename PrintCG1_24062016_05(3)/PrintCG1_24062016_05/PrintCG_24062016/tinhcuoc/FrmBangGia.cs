@@ -11,9 +11,11 @@ namespace PrintCG_24062016.tinhcuoc
 {
     public partial class FrmBangGia : Form
     {
+        PrintCG_24062016.SGPService.SGPServiceClient sgpservice;
         public FrmBangGia()
         {
             InitializeComponent();
+            sgpservice = new PrintCG_24062016.SGPService.SGPServiceClient();
         }
         public static string priceid { get; set; }
         private void btncreatezone_Click(object sender, EventArgs e)
@@ -26,10 +28,9 @@ namespace PrintCG_24062016.tinhcuoc
         {
             dataGridView1.Rows.Clear();
             dataGridView1.Columns.Clear();
-            
+            int columns = sgpservice.getmaxZone(cmbmavung.Text.Trim());
             if(cmbcongthuc.SelectedIndex == 0)
-            {                
-                int columns = 3;
+            {               
                 int rows = 8;
                 dataGridView1.Columns.Add("Begin", "Bắt đầu");
                 dataGridView1.Columns.Add("End", "Kết thúc");
@@ -50,7 +51,6 @@ namespace PrintCG_24062016.tinhcuoc
             else if (cmbcongthuc.SelectedIndex == 1)
             {
                 //phan ra cot và phan ra dong              
-                int columns = 3;
                 int rows = 2;
                 dataGridView1.Columns.Add("Weight", "Trọng lượng(gram)");
                 for (int i = 0; i <= columns - 1; i++)
@@ -72,7 +72,6 @@ namespace PrintCG_24062016.tinhcuoc
             else if (cmbcongthuc.SelectedIndex == 2)
             {
                 //phan ra cot và phan ra dong              
-                int columns = 3;
                 int rows = 1;
                 dataGridView1.Columns.Add("Quantity", "Số lượng");
                 for (int i = 0; i <= columns - 1; i++)
@@ -107,6 +106,20 @@ namespace PrintCG_24062016.tinhcuoc
         private void button2_Click(object sender, EventArgs e)
         {
             MessageBox.Show(FrmProvinceZone.dtprovince.Rows.Count.ToString());
+        }
+
+        private void FrmBangGia_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //clear all datatable
+            FrmProvinceZone.dtprovince.Clear();
+        }
+
+        private void cmbmavung_Enter(object sender, EventArgs e)
+        {
+            var zonelist = sgpservice.getZoneList();
+            cmbmavung.DataSource = zonelist;
+            cmbmavung.DisplayMember = "ZoneID";
+            cmbmavung.ValueMember = "ZoneID";
         }
     }
 }

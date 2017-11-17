@@ -14,5 +14,11 @@
         <elementListCompartment Id="c9a2437d-a2d5-4380-aea3-428ab0e04b99" absoluteBounds="2.7649999999999997, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="48db8f4b-c945-4f83-b09e-5b482e478854" absoluteBounds="5, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/SGPAPIDataContext/SGP_Price_Policy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c8292353-5604-4dc1-a9c4-9d0f011fa944" absoluteBounds="5.015, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

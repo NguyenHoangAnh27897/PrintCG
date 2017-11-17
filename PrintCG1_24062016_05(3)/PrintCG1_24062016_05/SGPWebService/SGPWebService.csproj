@@ -64,6 +64,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataClass\Data.cs" />
     <Compile Include="DB\SGPAPI.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

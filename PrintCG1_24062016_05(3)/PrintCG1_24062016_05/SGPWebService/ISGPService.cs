@@ -23,6 +23,10 @@ namespace SGPWebService
         List<DB.MM_ServiceType> getServiceType();
         [OperationContract]
         List<DB.MM_Customer> getCustomer(string PostOfficeID);
+        [OperationContract]
+        List<DataClass.ZoneList> getZoneList();
+        [OperationContract]
+        int getmaxZone(string ZoneID);
 
     }
 }

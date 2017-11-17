@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:4351/SGPService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DB" />
+  <xs:import schemaLocation="http://localhost:4351/SGPService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" />
   <xs:element name="login">
     <xs:complexType>
       <xs:sequence>
@@ -82,6 +83,32 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SGPWebService.DB" minOccurs="0" name="getCustomerResult" nillable="true" type="q3:ArrayOfMM_Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getZoneList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getZoneListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="getZoneListResult" nillable="true" type="q4:ArrayOfZoneList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getmaxZone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ZoneID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getmaxZoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getmaxZoneResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -1125,6 +1125,9 @@
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.MM_ServiceType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.ZoneList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SGPService\SGPService.wsdl" />
     <None Include="Service References\SGPService\SGPService.xsd">
       <SubType>Designer</SubType>
@@ -1133,6 +1136,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\SGPService\SGPService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SGPService\SGPService3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="tinhcuoc\dataset\DsCuoc.xsc">

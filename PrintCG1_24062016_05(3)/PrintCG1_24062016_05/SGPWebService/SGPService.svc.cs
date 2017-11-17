@@ -59,7 +59,6 @@ namespace SGPWebService
             }
         }
 
-
         public List<DB.BS_Province> getProvince()
         {
             List<DB.BS_Province> data = pms.BS_Provinces.Where(t => t.IsActive ==true && t.ProvinceID.Length ==3).ToList();
@@ -90,7 +89,6 @@ namespace SGPWebService
             }            
         }
 
-
         public List<DB.MM_ServiceType> getServiceType()
         {
             List<DB.MM_ServiceType> data = pms.MM_ServiceTypes.Where(t => t.IsActive == true).ToList();
@@ -101,6 +99,23 @@ namespace SGPWebService
         {
             List<DB.MM_Customer> data = pms.MM_Customers.Where(t => t.IsActive == true && t.PostOfficeID == PostOfficeID).ToList();
             return data;
+        }
+
+        public List<DataClass.ZoneList> getZoneList()
+        {
+            var query = (from ds in api.SGP_Province_Zones
+                         select new DataClass.ZoneList()
+                         {
+                             ZoneID = ds.ZoneID,
+                         }).Distinct();
+            return query.ToList();
+            
+        }
+        public int getmaxZone(string ZoneID)
+        {
+            var maxid = api.SGP_Province_Zones.OrderByDescending(x => x.Zone).Where(t => t.ZoneID == ZoneID).First();
+            return int.Parse(maxid.Zone.ToString());
+
         }
     }
 }

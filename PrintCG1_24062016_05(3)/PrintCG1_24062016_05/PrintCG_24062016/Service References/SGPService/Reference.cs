@@ -740,6 +740,51 @@ namespace PrintCG_24062016.SGPService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ZoneList", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass")]
+    [System.SerializableAttribute()]
+    public partial class ZoneList : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ZoneIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ZoneID {
+            get {
+                return this.ZoneIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ZoneIDField, value) != true)) {
+                    this.ZoneIDField = value;
+                    this.RaisePropertyChanged("ZoneID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SGPService.ISGPService")]
     public interface ISGPService {
@@ -761,6 +806,12 @@ namespace PrintCG_24062016.SGPService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getCustomer", ReplyAction="http://tempuri.org/ISGPService/getCustomerResponse")]
         PrintCG_24062016.SGPService.MM_Customer[] getCustomer(string PostOfficeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getZoneList", ReplyAction="http://tempuri.org/ISGPService/getZoneListResponse")]
+        PrintCG_24062016.SGPService.ZoneList[] getZoneList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getmaxZone", ReplyAction="http://tempuri.org/ISGPService/getmaxZoneResponse")]
+        int getmaxZone(string ZoneID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -812,6 +863,14 @@ namespace PrintCG_24062016.SGPService {
         
         public PrintCG_24062016.SGPService.MM_Customer[] getCustomer(string PostOfficeID) {
             return base.Channel.getCustomer(PostOfficeID);
+        }
+        
+        public PrintCG_24062016.SGPService.ZoneList[] getZoneList() {
+            return base.Channel.getZoneList();
+        }
+        
+        public int getmaxZone(string ZoneID) {
+            return base.Channel.getmaxZone(ZoneID);
         }
     }
 }

@@ -13,6 +13,7 @@ namespace PrintCG_24062016.tinhcuoc
     {
         PrintCG_24062016.SGPService.SGPServiceClient sgpservice;
         public static tinhcuoc.dataset.DsCuoc.DtProvinceDataTable dtprovince = new dataset.DsCuoc.DtProvinceDataTable();
+        public static int zonenumber = 0;
         public FrmProvinceZone()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace PrintCG_24062016.tinhcuoc
         private void btntaovung_Click(object sender, EventArgs e)
         {
             int isovung = int.Parse(txtsovung.Text);
+            zonenumber = isovung;
             dataGridView1.Rows.Clear();
             for (int i = 0; i <= isovung - 1; i++)
             {
@@ -135,7 +137,7 @@ namespace PrintCG_24062016.tinhcuoc
                     dr[1] = lblvung.Text;
                     dr[2] = txtmavung.Text;
                     dtprovince.Rows.Add(dr);//this will add the row at the end of the datatable
-                    //insert = sgpservice.insertSGP_Province_Zones(txtmavung.Text.Trim(), provinceid, int.Parse(lblvung.Text));
+                    insert = sgpservice.insertSGP_Province_Zones(txtmavung.Text.Trim(), provinceid, int.Parse(lblvung.Text));
                 }
                 dataGridView3.Rows.Clear();
             }
