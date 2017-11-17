@@ -812,6 +812,18 @@ namespace PrintCG_24062016.SGPService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getmaxZone", ReplyAction="http://tempuri.org/ISGPService/getmaxZoneResponse")]
         int getmaxZone(string ZoneID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/insertSGP_Price_Policy", ReplyAction="http://tempuri.org/ISGPService/insertSGP_Price_PolicyResponse")]
+        bool insertSGP_Price_Policy(string PriceID, string PostOfficeID, string Type, System.DateTime CreateDate, int Status, int Service, string Description, string ZoneID, string CalPrice);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/insertSGP_Price_Customer", ReplyAction="http://tempuri.org/ISGPService/insertSGP_Price_CustomerResponse")]
+        bool insertSGP_Price_Customer(string PriceID, string CustomerID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/insertSGP_Price_Service", ReplyAction="http://tempuri.org/ISGPService/insertSGP_Price_ServiceResponse")]
+        bool insertSGP_Price_Service(string PriceID, string ServiceID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/insertSGP_Price_Value", ReplyAction="http://tempuri.org/ISGPService/insertSGP_Price_ValueResponse")]
+        bool insertSGP_Price_Value(string PriceID, float FW, float TW, int Zone, float Price, int CalType, int RowIndex, int ColumnIndex);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -871,6 +883,22 @@ namespace PrintCG_24062016.SGPService {
         
         public int getmaxZone(string ZoneID) {
             return base.Channel.getmaxZone(ZoneID);
+        }
+        
+        public bool insertSGP_Price_Policy(string PriceID, string PostOfficeID, string Type, System.DateTime CreateDate, int Status, int Service, string Description, string ZoneID, string CalPrice) {
+            return base.Channel.insertSGP_Price_Policy(PriceID, PostOfficeID, Type, CreateDate, Status, Service, Description, ZoneID, CalPrice);
+        }
+        
+        public bool insertSGP_Price_Customer(string PriceID, string CustomerID) {
+            return base.Channel.insertSGP_Price_Customer(PriceID, CustomerID);
+        }
+        
+        public bool insertSGP_Price_Service(string PriceID, string ServiceID) {
+            return base.Channel.insertSGP_Price_Service(PriceID, ServiceID);
+        }
+        
+        public bool insertSGP_Price_Value(string PriceID, float FW, float TW, int Zone, float Price, int CalType, int RowIndex, int ColumnIndex) {
+            return base.Channel.insertSGP_Price_Value(PriceID, FW, TW, Zone, Price, CalType, RowIndex, ColumnIndex);
         }
     }
 }

@@ -13,6 +13,18 @@
       <Column Name="Zone" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.SGP_Price_Customer" Member="SGP_Price_Customers">
+    <Type Name="SGP_Price_Customer">
+      <Column Name="PriceID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SGP_Price_Service" Member="SGP_Price_Services">
+    <Type Name="SGP_Price_Service">
+      <Column Name="PriceID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ServiceID" Type="System.String" DbType="NVarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
   <Table Name="dbo.SGP_Price_Policy" Member="SGP_Price_Policies">
     <Type Name="SGP_Price_Policy">
       <Column Name="PricePolicyID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -23,6 +35,19 @@
       <Column Name="Service" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="ZoneID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CalPrice" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SGP_Price_Value" Member="SGP_Price_Values">
+    <Type Name="SGP_Price_Value">
+      <Column Name="PriceID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FW" Type="System.Double" DbType="Float NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TW" Type="System.Double" DbType="Float NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Zone" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RowIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ColumnIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

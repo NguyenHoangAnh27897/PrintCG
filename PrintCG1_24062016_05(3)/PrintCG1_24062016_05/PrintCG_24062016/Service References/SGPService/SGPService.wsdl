@@ -56,6 +56,30 @@
   <wsdl:message name="ISGPService_getmaxZone_OutputMessage">
     <wsdl:part name="parameters" element="tns:getmaxZoneResponse" />
   </wsdl:message>
+  <wsdl:message name="ISGPService_insertSGP_Price_Policy_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertSGP_Price_Policy" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_insertSGP_Price_Policy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertSGP_Price_PolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_insertSGP_Price_Customer_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertSGP_Price_Customer" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_insertSGP_Price_Customer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertSGP_Price_CustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_insertSGP_Price_Service_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertSGP_Price_Service" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_insertSGP_Price_Service_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertSGP_Price_ServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_insertSGP_Price_Value_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertSGP_Price_Value" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_insertSGP_Price_Value_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertSGP_Price_ValueResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISGPService">
     <wsdl:operation name="login">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/login" message="tns:ISGPService_login_InputMessage" />
@@ -88,6 +112,22 @@
     <wsdl:operation name="getmaxZone">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getmaxZone" message="tns:ISGPService_getmaxZone_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getmaxZoneResponse" message="tns:ISGPService_getmaxZone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertSGP_Price_Policy">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/insertSGP_Price_Policy" message="tns:ISGPService_insertSGP_Price_Policy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/insertSGP_Price_PolicyResponse" message="tns:ISGPService_insertSGP_Price_Policy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertSGP_Price_Customer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/insertSGP_Price_Customer" message="tns:ISGPService_insertSGP_Price_Customer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/insertSGP_Price_CustomerResponse" message="tns:ISGPService_insertSGP_Price_Customer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertSGP_Price_Service">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/insertSGP_Price_Service" message="tns:ISGPService_insertSGP_Price_Service_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/insertSGP_Price_ServiceResponse" message="tns:ISGPService_insertSGP_Price_Service_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertSGP_Price_Value">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/insertSGP_Price_Value" message="tns:ISGPService_insertSGP_Price_Value_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/insertSGP_Price_ValueResponse" message="tns:ISGPService_insertSGP_Price_Value_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISGPService" type="tns:ISGPService">
@@ -157,6 +197,42 @@
     </wsdl:operation>
     <wsdl:operation name="getmaxZone">
       <soap:operation soapAction="http://tempuri.org/ISGPService/getmaxZone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertSGP_Price_Policy">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/insertSGP_Price_Policy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertSGP_Price_Customer">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/insertSGP_Price_Customer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertSGP_Price_Service">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/insertSGP_Price_Service" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertSGP_Price_Value">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/insertSGP_Price_Value" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

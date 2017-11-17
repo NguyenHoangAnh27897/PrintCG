@@ -52,7 +52,7 @@ namespace PrintCG_24062016.tinhcuoc
             {
                 customer = dataGridView2.Rows[i].Cells[0].Value.ToString();
                 DataRow dr = dtcustomer.NewRow();
-                dr[0] = serviceid;
+                dr[0] = customer;
                 dtcustomer.Rows.Add(dr);//this will add the row at the end of the datatable
                 //insert = sgpservice.insertSGP_Province_Zones(txtmavung.Text.Trim(), provinceid, int.Parse(lblvung.Text));
             }

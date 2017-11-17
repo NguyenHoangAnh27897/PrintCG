@@ -117,5 +117,93 @@ namespace SGPWebService
             return int.Parse(maxid.Zone.ToString());
 
         }
+        public bool insertSGP_Price_Policy(string PriceID, string PostOfficeID, string Type, DateTime CreateDate, int Status, int Service, string Description, string ZoneID,string CalPrice)
+        {
+            try
+            {
+                var pl = new DB.SGP_Price_Policy()
+                {
+                    PricePolicyID = PriceID,
+                    PostOfficeID = PostOfficeID,
+                    Type = Type,
+                    CreateDate = CreateDate,
+                    Status = Status,
+                    Service = Service,
+                    Description = Description,
+                    ZoneID = ZoneID,
+                    CalPrice = CalPrice
+                };
+                api.SGP_Price_Policies.InsertOnSubmit(pl);
+                api.SubmitChanges();
+                return true;
+            }catch
+            {
+                return false;
+            }
+            
+        }
+
+
+        public bool insertSGP_Price_Customer(string PriceID, string CustomerID)
+        {
+            try
+            {
+                var pl = new DB.SGP_Price_Customer()
+                {
+                    PriceID = PriceID,
+                    CustomerID = CustomerID                   
+                };
+                api.SGP_Price_Customers.InsertOnSubmit(pl);
+                api.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool insertSGP_Price_Service(string PriceID, string ServiceID)
+        {
+            try
+            {
+                var pl = new DB.SGP_Price_Service()
+                {
+                    PriceID = PriceID,
+                    ServiceID = ServiceID
+                };
+                api.SGP_Price_Services.InsertOnSubmit(pl);
+                api.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool insertSGP_Price_Value(string PriceID, float FW, float TW, int Zone, float Price, int CalType, int RowIndex, int ColumnIndex)
+        {
+            try
+            {
+                var pl = new DB.SGP_Price_Value()
+                {
+                    PriceID = PriceID,
+                    FW = FW,
+                    TW= TW,
+                    Zone = Zone,
+                    Price = Price,
+                    Type = CalType,
+                    RowIndex = RowIndex,
+                    ColumnIndex = ColumnIndex
+                };
+                api.SGP_Price_Values.InsertOnSubmit(pl);
+                api.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

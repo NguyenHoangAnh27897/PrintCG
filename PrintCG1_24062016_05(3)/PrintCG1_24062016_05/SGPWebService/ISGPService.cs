@@ -27,6 +27,13 @@ namespace SGPWebService
         List<DataClass.ZoneList> getZoneList();
         [OperationContract]
         int getmaxZone(string ZoneID);
-
+        [OperationContract]
+        bool insertSGP_Price_Policy(string PriceID, string PostOfficeID,string Type,DateTime CreateDate,int Status,int Service,string Description,string ZoneID,string CalPrice);
+        [OperationContract]
+        bool insertSGP_Price_Customer(string PriceID, string CustomerID);
+        [OperationContract]
+        bool insertSGP_Price_Service(string PriceID, string ServiceID);
+        [OperationContract]
+        bool insertSGP_Price_Value(string PriceID, float FW,float TW,int Zone,float Price,int CalType,int RowIndex,int ColumnIndex);
     }
 }

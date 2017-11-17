@@ -36,9 +36,18 @@ namespace SGPWebService.DB
     partial void InsertSGP_Province_Zone(SGP_Province_Zone instance);
     partial void UpdateSGP_Province_Zone(SGP_Province_Zone instance);
     partial void DeleteSGP_Province_Zone(SGP_Province_Zone instance);
+    partial void InsertSGP_Price_Customer(SGP_Price_Customer instance);
+    partial void UpdateSGP_Price_Customer(SGP_Price_Customer instance);
+    partial void DeleteSGP_Price_Customer(SGP_Price_Customer instance);
+    partial void InsertSGP_Price_Service(SGP_Price_Service instance);
+    partial void UpdateSGP_Price_Service(SGP_Price_Service instance);
+    partial void DeleteSGP_Price_Service(SGP_Price_Service instance);
     partial void InsertSGP_Price_Policy(SGP_Price_Policy instance);
     partial void UpdateSGP_Price_Policy(SGP_Price_Policy instance);
     partial void DeleteSGP_Price_Policy(SGP_Price_Policy instance);
+    partial void InsertSGP_Price_Value(SGP_Price_Value instance);
+    partial void UpdateSGP_Price_Value(SGP_Price_Value instance);
+    partial void DeleteSGP_Price_Value(SGP_Price_Value instance);
     #endregion
 		
 		public SGPAPIDataContext() : 
@@ -87,11 +96,35 @@ namespace SGPWebService.DB
 			}
 		}
 		
+		public System.Data.Linq.Table<SGP_Price_Customer> SGP_Price_Customers
+		{
+			get
+			{
+				return this.GetTable<SGP_Price_Customer>();
+			}
+		}
+		
+		public System.Data.Linq.Table<SGP_Price_Service> SGP_Price_Services
+		{
+			get
+			{
+				return this.GetTable<SGP_Price_Service>();
+			}
+		}
+		
 		public System.Data.Linq.Table<SGP_Price_Policy> SGP_Price_Policies
 		{
 			get
 			{
 				return this.GetTable<SGP_Price_Policy>();
+			}
+		}
+		
+		public System.Data.Linq.Table<SGP_Price_Value> SGP_Price_Values
+		{
+			get
+			{
+				return this.GetTable<SGP_Price_Value>();
 			}
 		}
 	}
@@ -292,6 +325,178 @@ namespace SGPWebService.DB
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SGP_Price_Customer")]
+	public partial class SGP_Price_Customer : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _PriceID;
+		
+		private string _CustomerID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPriceIDChanging(string value);
+    partial void OnPriceIDChanged();
+    partial void OnCustomerIDChanging(string value);
+    partial void OnCustomerIDChanged();
+    #endregion
+		
+		public SGP_Price_Customer()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PriceID", DbType="NVarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string PriceID
+		{
+			get
+			{
+				return this._PriceID;
+			}
+			set
+			{
+				if ((this._PriceID != value))
+				{
+					this.OnPriceIDChanging(value);
+					this.SendPropertyChanging();
+					this._PriceID = value;
+					this.SendPropertyChanged("PriceID");
+					this.OnPriceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerID", DbType="NVarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string CustomerID
+		{
+			get
+			{
+				return this._CustomerID;
+			}
+			set
+			{
+				if ((this._CustomerID != value))
+				{
+					this.OnCustomerIDChanging(value);
+					this.SendPropertyChanging();
+					this._CustomerID = value;
+					this.SendPropertyChanged("CustomerID");
+					this.OnCustomerIDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SGP_Price_Service")]
+	public partial class SGP_Price_Service : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _PriceID;
+		
+		private string _ServiceID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPriceIDChanging(string value);
+    partial void OnPriceIDChanged();
+    partial void OnServiceIDChanging(string value);
+    partial void OnServiceIDChanged();
+    #endregion
+		
+		public SGP_Price_Service()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PriceID", DbType="NVarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string PriceID
+		{
+			get
+			{
+				return this._PriceID;
+			}
+			set
+			{
+				if ((this._PriceID != value))
+				{
+					this.OnPriceIDChanging(value);
+					this.SendPropertyChanging();
+					this._PriceID = value;
+					this.SendPropertyChanged("PriceID");
+					this.OnPriceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceID", DbType="NVarChar(2) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string ServiceID
+		{
+			get
+			{
+				return this._ServiceID;
+			}
+			set
+			{
+				if ((this._ServiceID != value))
+				{
+					this.OnServiceIDChanging(value);
+					this.SendPropertyChanging();
+					this._ServiceID = value;
+					this.SendPropertyChanged("ServiceID");
+					this.OnServiceIDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SGP_Price_Policy")]
 	public partial class SGP_Price_Policy : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -314,6 +519,8 @@ namespace SGPWebService.DB
 		
 		private string _ZoneID;
 		
+		private string _CalPrice;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -334,6 +541,8 @@ namespace SGPWebService.DB
     partial void OnDescriptionChanged();
     partial void OnZoneIDChanging(string value);
     partial void OnZoneIDChanged();
+    partial void OnCalPriceChanging(string value);
+    partial void OnCalPriceChanged();
     #endregion
 		
 		public SGP_Price_Policy()
@@ -497,6 +706,256 @@ namespace SGPWebService.DB
 					this._ZoneID = value;
 					this.SendPropertyChanged("ZoneID");
 					this.OnZoneIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CalPrice", DbType="NVarChar(50)")]
+		public string CalPrice
+		{
+			get
+			{
+				return this._CalPrice;
+			}
+			set
+			{
+				if ((this._CalPrice != value))
+				{
+					this.OnCalPriceChanging(value);
+					this.SendPropertyChanging();
+					this._CalPrice = value;
+					this.SendPropertyChanged("CalPrice");
+					this.OnCalPriceChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SGP_Price_Value")]
+	public partial class SGP_Price_Value : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _PriceID;
+		
+		private double _FW;
+		
+		private double _TW;
+		
+		private int _Zone;
+		
+		private System.Nullable<double> _Price;
+		
+		private System.Nullable<int> _Type;
+		
+		private System.Nullable<int> _RowIndex;
+		
+		private System.Nullable<int> _ColumnIndex;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPriceIDChanging(string value);
+    partial void OnPriceIDChanged();
+    partial void OnFWChanging(double value);
+    partial void OnFWChanged();
+    partial void OnTWChanging(double value);
+    partial void OnTWChanged();
+    partial void OnZoneChanging(int value);
+    partial void OnZoneChanged();
+    partial void OnPriceChanging(System.Nullable<double> value);
+    partial void OnPriceChanged();
+    partial void OnTypeChanging(System.Nullable<int> value);
+    partial void OnTypeChanged();
+    partial void OnRowIndexChanging(System.Nullable<int> value);
+    partial void OnRowIndexChanged();
+    partial void OnColumnIndexChanging(System.Nullable<int> value);
+    partial void OnColumnIndexChanged();
+    #endregion
+		
+		public SGP_Price_Value()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PriceID", DbType="NVarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string PriceID
+		{
+			get
+			{
+				return this._PriceID;
+			}
+			set
+			{
+				if ((this._PriceID != value))
+				{
+					this.OnPriceIDChanging(value);
+					this.SendPropertyChanging();
+					this._PriceID = value;
+					this.SendPropertyChanged("PriceID");
+					this.OnPriceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FW", DbType="Float NOT NULL", IsPrimaryKey=true)]
+		public double FW
+		{
+			get
+			{
+				return this._FW;
+			}
+			set
+			{
+				if ((this._FW != value))
+				{
+					this.OnFWChanging(value);
+					this.SendPropertyChanging();
+					this._FW = value;
+					this.SendPropertyChanged("FW");
+					this.OnFWChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TW", DbType="Float NOT NULL", IsPrimaryKey=true)]
+		public double TW
+		{
+			get
+			{
+				return this._TW;
+			}
+			set
+			{
+				if ((this._TW != value))
+				{
+					this.OnTWChanging(value);
+					this.SendPropertyChanging();
+					this._TW = value;
+					this.SendPropertyChanged("TW");
+					this.OnTWChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Zone", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Zone
+		{
+			get
+			{
+				return this._Zone;
+			}
+			set
+			{
+				if ((this._Zone != value))
+				{
+					this.OnZoneChanging(value);
+					this.SendPropertyChanging();
+					this._Zone = value;
+					this.SendPropertyChanged("Zone");
+					this.OnZoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Float")]
+		public System.Nullable<double> Price
+		{
+			get
+			{
+				return this._Price;
+			}
+			set
+			{
+				if ((this._Price != value))
+				{
+					this.OnPriceChanging(value);
+					this.SendPropertyChanging();
+					this._Price = value;
+					this.SendPropertyChanged("Price");
+					this.OnPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Type", DbType="Int")]
+		public System.Nullable<int> Type
+		{
+			get
+			{
+				return this._Type;
+			}
+			set
+			{
+				if ((this._Type != value))
+				{
+					this.OnTypeChanging(value);
+					this.SendPropertyChanging();
+					this._Type = value;
+					this.SendPropertyChanged("Type");
+					this.OnTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowIndex", DbType="Int")]
+		public System.Nullable<int> RowIndex
+		{
+			get
+			{
+				return this._RowIndex;
+			}
+			set
+			{
+				if ((this._RowIndex != value))
+				{
+					this.OnRowIndexChanging(value);
+					this.SendPropertyChanging();
+					this._RowIndex = value;
+					this.SendPropertyChanged("RowIndex");
+					this.OnRowIndexChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ColumnIndex", DbType="Int")]
+		public System.Nullable<int> ColumnIndex
+		{
+			get
+			{
+				return this._ColumnIndex;
+			}
+			set
+			{
+				if ((this._ColumnIndex != value))
+				{
+					this.OnColumnIndexChanging(value);
+					this.SendPropertyChanging();
+					this._ColumnIndex = value;
+					this.SendPropertyChanged("ColumnIndex");
+					this.OnColumnIndexChanged();
 				}
 			}
 		}

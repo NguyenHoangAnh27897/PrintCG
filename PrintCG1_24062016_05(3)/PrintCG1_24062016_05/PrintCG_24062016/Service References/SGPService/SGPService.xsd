@@ -112,4 +112,77 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="insertSGP_Price_Policy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PriceID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PostOfficeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Status" type="xs:int" />
+        <xs:element minOccurs="0" name="Service" type="xs:int" />
+        <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ZoneID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CalPrice" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertSGP_Price_PolicyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertSGP_Price_PolicyResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertSGP_Price_Customer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PriceID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertSGP_Price_CustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertSGP_Price_CustomerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertSGP_Price_Service">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PriceID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ServiceID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertSGP_Price_ServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertSGP_Price_ServiceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertSGP_Price_Value">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PriceID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FW" type="xs:float" />
+        <xs:element minOccurs="0" name="TW" type="xs:float" />
+        <xs:element minOccurs="0" name="Zone" type="xs:int" />
+        <xs:element minOccurs="0" name="Price" type="xs:float" />
+        <xs:element minOccurs="0" name="CalType" type="xs:int" />
+        <xs:element minOccurs="0" name="RowIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="ColumnIndex" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertSGP_Price_ValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertSGP_Price_ValueResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

@@ -12,6 +12,27 @@ namespace PrintCG_24062016.tinhcuoc
     public partial class FrmBangGia : Form
     {
         PrintCG_24062016.SGPService.SGPServiceClient sgpservice;
+        string _priceid = string.Empty;
+        string _PostOfficeID = string.Empty;
+        string _Type = string.Empty;
+        int _Status = 0;
+        int _Service = 0;
+        string _Description = string.Empty;
+        string _ZoneID = string.Empty;
+        DateTime _CreateDate = DateTime.Now;
+        string _CalPrice = string.Empty;
+
+        string _Serviceid = string.Empty;
+        string _Customerid = string.Empty;
+
+        //thong tin bang gia
+        float _FW = 0;
+        float _TW = 0;
+        int _Zone = 0;
+        float _Price = 0;        
+        int caltype = 0;
+        //khai báo biến insert
+        bool insert = false;
         public FrmBangGia()
         {
             InitializeComponent();
@@ -26,6 +47,7 @@ namespace PrintCG_24062016.tinhcuoc
 
         private void btnphanra_Click(object sender, EventArgs e)
         {
+            
             dataGridView1.Rows.Clear();
             dataGridView1.Columns.Clear();
             int columns = sgpservice.getmaxZone(cmbmavung.Text.Trim());
@@ -120,6 +142,68 @@ namespace PrintCG_24062016.tinhcuoc
             cmbmavung.DataSource = zonelist;
             cmbmavung.DisplayMember = "ZoneID";
             cmbmavung.ValueMember = "ZoneID";
+        }
+
+        private void btnluu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //lưu bang master trước
+                _priceid = txtpriceid.Text;
+                _PostOfficeID = FrmMain1.postofficeid;
+                _Type = cmbloai.Text;
+                _Status = 1;
+                _CalPrice = cmbcongthuc.Text;
+                if(chkphuphi.Checked ==true)
+                {
+                    _Service = 1;
+                }
+                _Description = txtghichu.Text;
+                _ZoneID = cmbmavung.Text;
+                insert = sgpservice.insertSGP_Price_Policy(_priceid,_PostOfficeID,_Type,_CreateDate,_Status,_Service,_Description,_ZoneID,_CalPrice);
+                if (insert == true)
+                {
+                    //insert danh sach dich vu
+                    for (int i = 0; i <= FrmDichVuKhachHang.dtservice.Rows.Count - 1; i++)
+                    {
+                        insert = sgpservice.insertSGP_Price_Service(_priceid, FrmDichVuKhachHang.dtservice.Rows[i][0].ToString());
+                    }
+                    //insert danh sach khach hang
+                    for (int i = 0; i <= FrmDichVuKhachHang.dtcustomer.Rows.Count - 1; i++)
+                    {
+                        insert = sgpservice.insertSGP_Price_Customer(_priceid, FrmDichVuKhachHang.dtcustomer.Rows[i][0].ToString());
+                    }
+                    //insert bang gia
+                    if(cmbcongthuc.Text.Trim() =="nấc trọng lượng")
+                    {
+                        caltype = 0;
+                    }else if(cmbcongthuc.Text.Trim() =="trọng lượng")
+                    {
+                        caltype = 1;
+                    }else if(cmbcongthuc.Text.Trim() =="số lượng")
+                    {
+                        caltype = 2;
+                    }
+                    for (int i = 0; i <= dataGridView1.RowCount - 1; i++)
+                    {
+                         _FW = float.Parse(dataGridView1.Rows[i].Cells[0].Value.ToString());
+                         _TW = float.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString());
+                        for(int j = 2; j  <= dataGridView1.ColumnCount -1;j++ )
+                        {                          
+                            //_Zone = int.Parse(dataGridView1.Rows[0].Cells[j].Value.ToString());
+                            _Zone = int.Parse(dataGridView1.Columns[j].HeaderText);
+                            _Price = float.Parse(dataGridView1.Rows[i].Cells[j].Value.ToString());
+                            insert = sgpservice.insertSGP_Price_Value(_priceid,_FW,_TW,_Zone,_Price,caltype,i,j);
+                        }
+                    }
+
+                }
+                
+
+            }catch
+            {
+
+            }
         }
     }
 }
