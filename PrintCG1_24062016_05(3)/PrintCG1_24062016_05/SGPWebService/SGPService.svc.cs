@@ -89,5 +89,18 @@ namespace SGPWebService
                 return true;
             }            
         }
+
+
+        public List<DB.MM_ServiceType> getServiceType()
+        {
+            List<DB.MM_ServiceType> data = pms.MM_ServiceTypes.Where(t => t.IsActive == true).ToList();
+            return data;
+        }
+
+        public List<DB.MM_Customer> getCustomer(string PostOfficeID)
+        {
+            List<DB.MM_Customer> data = pms.MM_Customers.Where(t => t.IsActive == true && t.PostOfficeID == PostOfficeID).ToList();
+            return data;
+        }
     }
 }

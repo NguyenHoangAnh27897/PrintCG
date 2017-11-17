@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtpriceid = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -41,27 +41,28 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btncreatezone = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.cmbcongthuc = new System.Windows.Forms.ComboBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnphanra = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cmbcongthuc = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btncreatezone = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnapdung = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -73,12 +74,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã bảng giá";
             // 
-            // textBox1
+            // txtpriceid
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtpriceid.Location = new System.Drawing.Point(75, 26);
+            this.txtpriceid.Name = "txtpriceid";
+            this.txtpriceid.Size = new System.Drawing.Size(124, 20);
+            this.txtpriceid.TabIndex = 1;
             // 
             // textBox2
             // 
@@ -166,7 +167,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtpriceid);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox6);
@@ -182,6 +183,16 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin cơ bản";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(492, 58);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(64, 17);
+            this.checkBox1.TabIndex = 21;
+            this.checkBox1.Text = "Phụ phí";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -208,41 +219,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vùng tính cước";
             // 
-            // btncreatezone
+            // btnphanra
             // 
-            this.btncreatezone.Location = new System.Drawing.Point(8, 19);
-            this.btncreatezone.Name = "btncreatezone";
-            this.btncreatezone.Size = new System.Drawing.Size(75, 23);
-            this.btncreatezone.TabIndex = 0;
-            this.btncreatezone.Text = "Tạo vùng";
-            this.btncreatezone.UseVisualStyleBackColor = true;
-            this.btncreatezone.Click += new System.EventHandler(this.btncreatezone_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(118, 23);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 13);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Chọn mã vùng";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(199, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 16;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(326, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Sửa vùng";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnphanra.Location = new System.Drawing.Point(689, 17);
+            this.btnphanra.Name = "btnphanra";
+            this.btnphanra.Size = new System.Drawing.Size(75, 23);
+            this.btnphanra.TabIndex = 19;
+            this.btnphanra.Text = "Phân rã lưới";
+            this.btnphanra.UseVisualStyleBackColor = true;
+            this.btnphanra.Click += new System.EventHandler(this.btnphanra_Click);
             // 
             // cmbcongthuc
             // 
@@ -256,6 +241,42 @@
             this.cmbcongthuc.Size = new System.Drawing.Size(175, 21);
             this.cmbcongthuc.TabIndex = 18;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(326, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Sửa vùng";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(199, 20);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 16;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(118, 23);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 13);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Chọn mã vùng";
+            // 
+            // btncreatezone
+            // 
+            this.btncreatezone.Location = new System.Drawing.Point(8, 19);
+            this.btncreatezone.Name = "btncreatezone";
+            this.btncreatezone.Size = new System.Drawing.Size(75, 23);
+            this.btncreatezone.TabIndex = 0;
+            this.btncreatezone.Text = "Tạo vùng";
+            this.btncreatezone.UseVisualStyleBackColor = true;
+            this.btncreatezone.Click += new System.EventHandler(this.btncreatezone_Click);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.tabControl1);
@@ -265,34 +286,6 @@
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chi tiết";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(926, 216);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // btnphanra
-            // 
-            this.btnphanra.Location = new System.Drawing.Point(689, 17);
-            this.btnphanra.Name = "btnphanra";
-            this.btnphanra.Size = new System.Drawing.Size(75, 23);
-            this.btnphanra.TabIndex = 19;
-            this.btnphanra.Text = "Phân rã lưới";
-            this.btnphanra.UseVisualStyleBackColor = true;
-            this.btnphanra.Click += new System.EventHandler(this.btnphanra_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(492, 58);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(64, 17);
-            this.checkBox1.TabIndex = 21;
-            this.checkBox1.Text = "Phụ phí";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
@@ -315,6 +308,14 @@
             this.tabPage1.Text = "Giá cước";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(926, 216);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -325,14 +326,25 @@
             this.tabPage2.Text = "Phụ phí";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnapdung
+            // 
+            this.btnapdung.Location = new System.Drawing.Point(870, 515);
+            this.btnapdung.Name = "btnapdung";
+            this.btnapdung.Size = new System.Drawing.Size(93, 23);
+            this.btnapdung.TabIndex = 20;
+            this.btnapdung.Text = "Áp dụng cho";
+            this.btnapdung.UseVisualStyleBackColor = true;
+            this.btnapdung.Click += new System.EventHandler(this.btnapdung_Click);
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(870, 515);
+            this.button2.Location = new System.Drawing.Point(779, 515);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 23);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 20;
-            this.button2.Text = "Áp dụng cho";
+            this.button2.Text = "Test dt";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FrmBangGia
             // 
@@ -340,19 +352,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(967, 546);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnapdung);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmBangGia";
             this.Text = "FrmBangGia";
+            this.Load += new System.EventHandler(this.FrmBangGia_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -360,7 +374,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtpriceid;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox3;
@@ -386,6 +400,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button btnapdung;
         private System.Windows.Forms.Button button2;
     }
 }

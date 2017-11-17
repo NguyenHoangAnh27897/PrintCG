@@ -18,4 +18,59 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="BS_Province" nillable="true" type="tns:BS_Province" />
+  <xs:complexType name="ArrayOfMM_ServiceType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MM_ServiceType" nillable="true" type="tns:MM_ServiceType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMM_ServiceType" nillable="true" type="tns:ArrayOfMM_ServiceType" />
+  <xs:complexType name="MM_ServiceType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreationDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DisplayColor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastEditDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutsideLine" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PriceType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceTypeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceTypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MM_ServiceType" nillable="true" type="tns:MM_ServiceType" />
+  <xs:complexType name="ArrayOfMM_Customer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MM_Customer" nillable="true" type="tns:MM_Customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMM_Customer" nillable="true" type="tns:ArrayOfMM_Customer" />
+  <xs:complexType name="MM_Customer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreationDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CustomerGroupID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerType" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DebitObjectID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DebtDayInMonth" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="DistrictID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FaxNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastEditDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MemberOf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonalInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostOfficeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProvinceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MM_Customer" nillable="true" type="tns:MM_Customer" />
 </xs:schema>

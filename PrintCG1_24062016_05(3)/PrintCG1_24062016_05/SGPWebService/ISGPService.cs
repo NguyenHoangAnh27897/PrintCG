@@ -19,5 +19,10 @@ namespace SGPWebService
         List<DB.BS_Province> getProvince();
         [OperationContract]
         bool insertSGP_Province_Zones(string ZoneID, string ProvinceID, int Zone);
+        [OperationContract]
+        List<DB.MM_ServiceType> getServiceType();
+        [OperationContract]
+        List<DB.MM_Customer> getCustomer(string PostOfficeID);
+
     }
 }

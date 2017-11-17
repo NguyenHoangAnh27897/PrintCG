@@ -59,4 +59,30 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getServiceType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getServiceTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SGPWebService.DB" minOccurs="0" name="getServiceTypeResult" nillable="true" type="q2:ArrayOfMM_ServiceType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PostOfficeID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SGPWebService.DB" minOccurs="0" name="getCustomerResult" nillable="true" type="q3:ArrayOfMM_Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

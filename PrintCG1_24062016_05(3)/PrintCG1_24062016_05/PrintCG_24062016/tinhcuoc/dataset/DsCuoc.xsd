@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsCuoc" targetNamespace="http://tempuri.org/DsCuoc.xsd" xmlns:mstns="http://tempuri.org/DsCuoc.xsd" xmlns="http://tempuri.org/DsCuoc.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsCuoc" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsCuoc" msprop:Generator_UserDSName="DsCuoc">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtProvince" msprop:Generator_TableClassName="DtProvinceDataTable" msprop:Generator_TableVarName="tableDtProvince" msprop:Generator_RowChangedName="DtProvinceRowChanged" msprop:Generator_TablePropName="DtProvince" msprop:Generator_RowDeletingName="DtProvinceRowDeleting" msprop:Generator_RowChangingName="DtProvinceRowChanging" msprop:Generator_RowEvHandlerName="DtProvinceRowChangeEventHandler" msprop:Generator_RowDeletedName="DtProvinceRowDeleted" msprop:Generator_RowClassName="DtProvinceRow" msprop:Generator_UserTableName="DtProvince" msprop:Generator_RowEvArgName="DtProvinceRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProvinceID" msprop:Generator_ColumnVarNameInTable="columnProvinceID" msprop:Generator_ColumnPropNameInRow="ProvinceID" msprop:Generator_ColumnPropNameInTable="ProvinceIDColumn" msprop:Generator_UserColumnName="ProvinceID" type="xs:string" minOccurs="0" />
+              <xs:element name="ZoneID" msprop:Generator_ColumnVarNameInTable="columnZoneID" msprop:Generator_ColumnPropNameInRow="ZoneID" msprop:Generator_ColumnPropNameInTable="ZoneIDColumn" msprop:Generator_UserColumnName="ZoneID" type="xs:string" minOccurs="0" />
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DtService" msprop:Generator_TableClassName="DtServiceDataTable" msprop:Generator_TableVarName="tableDtService" msprop:Generator_RowChangedName="DtServiceRowChanged" msprop:Generator_TablePropName="DtService" msprop:Generator_RowDeletingName="DtServiceRowDeleting" msprop:Generator_RowChangingName="DtServiceRowChanging" msprop:Generator_RowEvHandlerName="DtServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="DtServiceRowDeleted" msprop:Generator_RowClassName="DtServiceRow" msprop:Generator_UserTableName="DtService" msprop:Generator_RowEvArgName="DtServiceRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ServiceTypeID" msprop:Generator_ColumnVarNameInTable="columnServiceTypeID" msprop:Generator_ColumnPropNameInRow="ServiceTypeID" msprop:Generator_ColumnPropNameInTable="ServiceTypeIDColumn" msprop:Generator_UserColumnName="ServiceTypeID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DtCustomer" msprop:Generator_TableClassName="DtCustomerDataTable" msprop:Generator_TableVarName="tableDtCustomer" msprop:Generator_RowChangedName="DtCustomerRowChanged" msprop:Generator_TablePropName="DtCustomer" msprop:Generator_RowDeletingName="DtCustomerRowDeleting" msprop:Generator_RowChangingName="DtCustomerRowChanging" msprop:Generator_RowEvHandlerName="DtCustomerRowChangeEventHandler" msprop:Generator_RowDeletedName="DtCustomerRowDeleted" msprop:Generator_RowClassName="DtCustomerRow" msprop:Generator_UserTableName="DtCustomer" msprop:Generator_RowEvArgName="DtCustomerRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerID" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_UserColumnName="CustomerID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

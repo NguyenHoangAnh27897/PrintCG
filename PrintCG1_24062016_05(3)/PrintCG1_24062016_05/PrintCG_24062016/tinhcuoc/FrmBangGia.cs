@@ -15,7 +15,7 @@ namespace PrintCG_24062016.tinhcuoc
         {
             InitializeComponent();
         }
-
+        public static string priceid { get; set; }
         private void btncreatezone_Click(object sender, EventArgs e)
         {
             FrmProvinceZone frm = new FrmProvinceZone();
@@ -90,6 +90,23 @@ namespace PrintCG_24062016.tinhcuoc
 
             }
             
+        }
+
+        private void btnapdung_Click(object sender, EventArgs e)
+        {
+            priceid = txtpriceid.Text.Trim();
+            tinhcuoc.FrmDichVuKhachHang frm = new FrmDichVuKhachHang();
+            frm.ShowDialog();
+        }
+
+        private void FrmBangGia_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(FrmProvinceZone.dtprovince.Rows.Count.ToString());
         }
     }
 }

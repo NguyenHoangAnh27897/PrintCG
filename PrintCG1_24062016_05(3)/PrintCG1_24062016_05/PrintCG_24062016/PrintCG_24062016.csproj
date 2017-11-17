@@ -521,6 +521,11 @@
     <Compile Include="Program.cs">
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tinhcuoc\dataset\DsCuoc.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsCuoc.xsd</DependentUpon>
+    </Compile>
     <Compile Include="tinhcuoc\FrmBangGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1114,6 +1119,12 @@
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.BS_Province.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.MM_Customer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.MM_ServiceType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SGPService\SGPService.wsdl" />
     <None Include="Service References\SGPService\SGPService.xsd">
       <SubType>Designer</SubType>
@@ -1123,6 +1134,17 @@
     </None>
     <None Include="Service References\SGPService\SGPService2.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="tinhcuoc\dataset\DsCuoc.xsc">
+      <DependentUpon>DsCuoc.xsd</DependentUpon>
+    </None>
+    <None Include="tinhcuoc\dataset\DsCuoc.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsCuoc.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="tinhcuoc\dataset\DsCuoc.xss">
+      <DependentUpon>DsCuoc.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

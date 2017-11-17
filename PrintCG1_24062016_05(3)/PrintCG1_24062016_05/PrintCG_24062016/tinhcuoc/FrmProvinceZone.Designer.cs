@@ -32,25 +32,26 @@
             this.txtsovung = new System.Windows.Forms.TextBox();
             this.btntaovung = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Zone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.txtmavung = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.ProvinceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProvinceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.lblvung = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.ProvinceID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProvinceName1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnright = new System.Windows.Forms.Button();
             this.btnleft = new System.Windows.Forms.Button();
             this.btnluuvung = new System.Windows.Forms.Button();
-            this.Zone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProvinceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProvinceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProvinceID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProvinceName1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblvung = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -96,6 +97,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(207, 408);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // Zone
+            // 
+            this.Zone.HeaderText = "Vùng";
+            this.Zone.Name = "Zone";
+            this.Zone.ReadOnly = true;
+            this.Zone.Width = 80;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Số tỉnh";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            this.Total.Width = 70;
             // 
             // label2
             // 
@@ -145,6 +160,18 @@
             this.dataGridView2.TabIndex = 5;
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
+            // ProvinceID
+            // 
+            this.ProvinceID.HeaderText = "ID";
+            this.ProvinceID.Name = "ProvinceID";
+            this.ProvinceID.Width = 40;
+            // 
+            // ProvinceName
+            // 
+            this.ProvinceName.HeaderText = "Tên";
+            this.ProvinceName.Name = "ProvinceName";
+            this.ProvinceName.Width = 190;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lblvung);
@@ -156,6 +183,24 @@
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tỉnh đã xác lập vùng";
+            // 
+            // lblvung
+            // 
+            this.lblvung.AutoSize = true;
+            this.lblvung.ForeColor = System.Drawing.Color.Maroon;
+            this.lblvung.Location = new System.Drawing.Point(127, 23);
+            this.lblvung.Name = "lblvung";
+            this.lblvung.Size = new System.Drawing.Size(0, 13);
+            this.lblvung.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Bạn đang chọn vùng :";
             // 
             // dataGridView3
             // 
@@ -169,14 +214,17 @@
             this.dataGridView3.TabIndex = 5;
             this.dataGridView3.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellDoubleClick);
             // 
-            // label3
+            // ProvinceID1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Bạn đang chọn vùng :";
+            this.ProvinceID1.HeaderText = "ID";
+            this.ProvinceID1.Name = "ProvinceID1";
+            this.ProvinceID1.Width = 40;
+            // 
+            // ProvinceName1
+            // 
+            this.ProvinceName1.HeaderText = "Tên";
+            this.ProvinceName1.Name = "ProvinceName1";
+            this.ProvinceName1.Width = 190;
             // 
             // btnright
             // 
@@ -208,53 +256,6 @@
             this.btnluuvung.UseVisualStyleBackColor = true;
             this.btnluuvung.Click += new System.EventHandler(this.btnluuvung_Click);
             // 
-            // Zone
-            // 
-            this.Zone.HeaderText = "Vùng";
-            this.Zone.Name = "Zone";
-            this.Zone.ReadOnly = true;
-            this.Zone.Width = 80;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Số tỉnh";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Width = 70;
-            // 
-            // ProvinceID
-            // 
-            this.ProvinceID.HeaderText = "ID";
-            this.ProvinceID.Name = "ProvinceID";
-            this.ProvinceID.Width = 40;
-            // 
-            // ProvinceName
-            // 
-            this.ProvinceName.HeaderText = "Tên";
-            this.ProvinceName.Name = "ProvinceName";
-            this.ProvinceName.Width = 190;
-            // 
-            // ProvinceID1
-            // 
-            this.ProvinceID1.HeaderText = "ID";
-            this.ProvinceID1.Name = "ProvinceID1";
-            this.ProvinceID1.Width = 40;
-            // 
-            // ProvinceName1
-            // 
-            this.ProvinceName1.HeaderText = "Tên";
-            this.ProvinceName1.Name = "ProvinceName1";
-            this.ProvinceName1.Width = 190;
-            // 
-            // lblvung
-            // 
-            this.lblvung.AutoSize = true;
-            this.lblvung.ForeColor = System.Drawing.Color.Maroon;
-            this.lblvung.Location = new System.Drawing.Point(127, 23);
-            this.lblvung.Name = "lblvung";
-            this.lblvung.Size = new System.Drawing.Size(0, 13);
-            this.lblvung.TabIndex = 13;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -265,11 +266,22 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Tỉnh đặc biệt được tính như một vùng";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(711, 511);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "Test";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FrmProvinceZone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 541);
+            this.ClientSize = new System.Drawing.Size(888, 622);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnluuvung);
             this.Controls.Add(this.btnleft);
@@ -323,5 +335,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProvinceName1;
         private System.Windows.Forms.Label lblvung;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button2;
     }
 }

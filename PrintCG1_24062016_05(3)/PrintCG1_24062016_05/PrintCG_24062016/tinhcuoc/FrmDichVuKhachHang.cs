@@ -11,9 +11,51 @@ namespace PrintCG_24062016.tinhcuoc
 {
     public partial class FrmDichVuKhachHang : Form
     {
+        public static tinhcuoc.dataset.DsCuoc.DtServiceDataTable dtservice = new dataset.DsCuoc.DtServiceDataTable();
+        public static tinhcuoc.dataset.DsCuoc.DtCustomerDataTable dtcustomer = new dataset.DsCuoc.DtCustomerDataTable();
         public FrmDichVuKhachHang()
         {
             InitializeComponent();
+        }
+        string postofficeid = string.Empty;
+        private void btnthemdv_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Add(cmbdv.Text.Trim());
+        }
+
+        private void btnthemkh_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Rows.Add(cmbkh.Text.Trim());
+        }
+
+        private void FrmDichVuKhachHang_Load(object sender, EventArgs e)
+        {
+            lblpriceid.Text = FrmBangGia.priceid;
+            postofficeid = FrmMain1.postofficeid;
+        }
+
+        private void btncapnhat_Click(object sender, EventArgs e)
+        {
+            string serviceid = string.Empty;
+            string customer = string.Empty;
+            //datagridview1 là dich vu
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                serviceid = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                DataRow dr = dtservice.NewRow();
+                dr[0] = serviceid;
+                dtservice.Rows.Add(dr);//this will add the row at the end of the datatable
+                //insert = sgpservice.insertSGP_Province_Zones(txtmavung.Text.Trim(), provinceid, int.Parse(lblvung.Text));
+            }
+            //datagridview2 la khach hang
+            for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
+            {
+                customer = dataGridView2.Rows[i].Cells[0].Value.ToString();
+                DataRow dr = dtcustomer.NewRow();
+                dr[0] = serviceid;
+                dtcustomer.Rows.Add(dr);//this will add the row at the end of the datatable
+                //insert = sgpservice.insertSGP_Province_Zones(txtmavung.Text.Trim(), provinceid, int.Parse(lblvung.Text));
+            }
         }
     }
 }

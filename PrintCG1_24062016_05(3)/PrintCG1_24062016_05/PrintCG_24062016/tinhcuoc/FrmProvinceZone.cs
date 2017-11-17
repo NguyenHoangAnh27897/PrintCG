@@ -12,6 +12,7 @@ namespace PrintCG_24062016.tinhcuoc
     public partial class FrmProvinceZone : Form
     {
         PrintCG_24062016.SGPService.SGPServiceClient sgpservice;
+        public static tinhcuoc.dataset.DsCuoc.DtProvinceDataTable dtprovince = new dataset.DsCuoc.DtProvinceDataTable();
         public FrmProvinceZone()
         {
             InitializeComponent();
@@ -121,7 +122,7 @@ namespace PrintCG_24062016.tinhcuoc
 
         private void btnluuvung_Click(object sender, EventArgs e)
         {
-            //luu tung vung
+            //luu tung vung           
             if(lblvung.Text != "" && txtmavung.Text != "")
             {
                 string provinceid = string.Empty;
@@ -129,11 +130,21 @@ namespace PrintCG_24062016.tinhcuoc
                 for (int i = 0; i < dataGridView3.Rows.Count - 1; i++)
                 {
                     provinceid = dataGridView3.Rows[i].Cells[0].Value.ToString();
-                    insert = sgpservice.insertSGP_Province_Zones(txtmavung.Text.Trim(), provinceid, int.Parse(lblvung.Text));
+                    DataRow dr = dtprovince.NewRow();
+                    dr[0] = provinceid;
+                    dr[1] = lblvung.Text;
+                    dr[2] = txtmavung.Text;
+                    dtprovince.Rows.Add(dr);//this will add the row at the end of the datatable
+                    //insert = sgpservice.insertSGP_Province_Zones(txtmavung.Text.Trim(), provinceid, int.Parse(lblvung.Text));
                 }
                 dataGridView3.Rows.Clear();
             }
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(dtprovince.Rows.Count.ToString());
         }
     }
 }
