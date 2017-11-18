@@ -1125,6 +1125,18 @@
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.MM_ServiceType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.SGP_Price_Customer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.SGP_Price_Policy.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.SGP_Price_Service.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.SGP_Price_Value.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.ZoneList.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

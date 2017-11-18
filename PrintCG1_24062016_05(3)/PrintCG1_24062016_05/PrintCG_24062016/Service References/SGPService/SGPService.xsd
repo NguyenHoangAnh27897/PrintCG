@@ -185,4 +185,58 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getPricePolicy">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPricePolicyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SGPWebService.DB" minOccurs="0" name="getPricePolicyResult" nillable="true" type="q5:ArrayOfSGP_Price_Policy" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPriceCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PriceID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPriceCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SGPWebService.DB" minOccurs="0" name="getPriceCustomerResult" nillable="true" type="q6:ArrayOfSGP_Price_Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPriceService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PriceID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPriceServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SGPWebService.DB" minOccurs="0" name="getPriceServiceResult" nillable="true" type="q7:ArrayOfSGP_Price_Service" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPriceValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PriceID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPriceValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SGPWebService.DB" minOccurs="0" name="getPriceValueResult" nillable="true" type="q8:ArrayOfSGP_Price_Value" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

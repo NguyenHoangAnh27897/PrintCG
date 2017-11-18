@@ -785,6 +785,458 @@ namespace PrintCG_24062016.SGPService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGP_Price_Policy", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DB")]
+    [System.SerializableAttribute()]
+    public partial class SGP_Price_Policy : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CalPriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> CreateDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PostOfficeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PricePolicyIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> ServiceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ZoneIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CalPrice {
+            get {
+                return this.CalPriceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CalPriceField, value) != true)) {
+                    this.CalPriceField = value;
+                    this.RaisePropertyChanged("CalPrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> CreateDate {
+            get {
+                return this.CreateDateField;
+            }
+            set {
+                if ((this.CreateDateField.Equals(value) != true)) {
+                    this.CreateDateField = value;
+                    this.RaisePropertyChanged("CreateDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PostOfficeID {
+            get {
+                return this.PostOfficeIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PostOfficeIDField, value) != true)) {
+                    this.PostOfficeIDField = value;
+                    this.RaisePropertyChanged("PostOfficeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PricePolicyID {
+            get {
+                return this.PricePolicyIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PricePolicyIDField, value) != true)) {
+                    this.PricePolicyIDField = value;
+                    this.RaisePropertyChanged("PricePolicyID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Service {
+            get {
+                return this.ServiceField;
+            }
+            set {
+                if ((this.ServiceField.Equals(value) != true)) {
+                    this.ServiceField = value;
+                    this.RaisePropertyChanged("Service");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((this.StatusField.Equals(value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TypeField, value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ZoneID {
+            get {
+                return this.ZoneIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ZoneIDField, value) != true)) {
+                    this.ZoneIDField = value;
+                    this.RaisePropertyChanged("ZoneID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGP_Price_Customer", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DB")]
+    [System.SerializableAttribute()]
+    public partial class SGP_Price_Customer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PriceIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerID {
+            get {
+                return this.CustomerIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerIDField, value) != true)) {
+                    this.CustomerIDField = value;
+                    this.RaisePropertyChanged("CustomerID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PriceID {
+            get {
+                return this.PriceIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PriceIDField, value) != true)) {
+                    this.PriceIDField = value;
+                    this.RaisePropertyChanged("PriceID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGP_Price_Service", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DB")]
+    [System.SerializableAttribute()]
+    public partial class SGP_Price_Service : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PriceIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ServiceIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PriceID {
+            get {
+                return this.PriceIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PriceIDField, value) != true)) {
+                    this.PriceIDField = value;
+                    this.RaisePropertyChanged("PriceID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ServiceID {
+            get {
+                return this.ServiceIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ServiceIDField, value) != true)) {
+                    this.ServiceIDField = value;
+                    this.RaisePropertyChanged("ServiceID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGP_Price_Value", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DB")]
+    [System.SerializableAttribute()]
+    public partial class SGP_Price_Value : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> ColumnIndexField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double FWField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<double> PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PriceIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> RowIndexField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double TWField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> TypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ZoneField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> ColumnIndex {
+            get {
+                return this.ColumnIndexField;
+            }
+            set {
+                if ((this.ColumnIndexField.Equals(value) != true)) {
+                    this.ColumnIndexField = value;
+                    this.RaisePropertyChanged("ColumnIndex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double FW {
+            get {
+                return this.FWField;
+            }
+            set {
+                if ((this.FWField.Equals(value) != true)) {
+                    this.FWField = value;
+                    this.RaisePropertyChanged("FW");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PriceID {
+            get {
+                return this.PriceIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PriceIDField, value) != true)) {
+                    this.PriceIDField = value;
+                    this.RaisePropertyChanged("PriceID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> RowIndex {
+            get {
+                return this.RowIndexField;
+            }
+            set {
+                if ((this.RowIndexField.Equals(value) != true)) {
+                    this.RowIndexField = value;
+                    this.RaisePropertyChanged("RowIndex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double TW {
+            get {
+                return this.TWField;
+            }
+            set {
+                if ((this.TWField.Equals(value) != true)) {
+                    this.TWField = value;
+                    this.RaisePropertyChanged("TW");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((this.TypeField.Equals(value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Zone {
+            get {
+                return this.ZoneField;
+            }
+            set {
+                if ((this.ZoneField.Equals(value) != true)) {
+                    this.ZoneField = value;
+                    this.RaisePropertyChanged("Zone");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SGPService.ISGPService")]
     public interface ISGPService {
@@ -824,6 +1276,18 @@ namespace PrintCG_24062016.SGPService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/insertSGP_Price_Value", ReplyAction="http://tempuri.org/ISGPService/insertSGP_Price_ValueResponse")]
         bool insertSGP_Price_Value(string PriceID, float FW, float TW, int Zone, float Price, int CalType, int RowIndex, int ColumnIndex);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getPricePolicy", ReplyAction="http://tempuri.org/ISGPService/getPricePolicyResponse")]
+        PrintCG_24062016.SGPService.SGP_Price_Policy[] getPricePolicy();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getPriceCustomer", ReplyAction="http://tempuri.org/ISGPService/getPriceCustomerResponse")]
+        PrintCG_24062016.SGPService.SGP_Price_Customer[] getPriceCustomer(string PriceID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getPriceService", ReplyAction="http://tempuri.org/ISGPService/getPriceServiceResponse")]
+        PrintCG_24062016.SGPService.SGP_Price_Service[] getPriceService(string PriceID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getPriceValue", ReplyAction="http://tempuri.org/ISGPService/getPriceValueResponse")]
+        PrintCG_24062016.SGPService.SGP_Price_Value[] getPriceValue(string PriceID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -899,6 +1363,22 @@ namespace PrintCG_24062016.SGPService {
         
         public bool insertSGP_Price_Value(string PriceID, float FW, float TW, int Zone, float Price, int CalType, int RowIndex, int ColumnIndex) {
             return base.Channel.insertSGP_Price_Value(PriceID, FW, TW, Zone, Price, CalType, RowIndex, ColumnIndex);
+        }
+        
+        public PrintCG_24062016.SGPService.SGP_Price_Policy[] getPricePolicy() {
+            return base.Channel.getPricePolicy();
+        }
+        
+        public PrintCG_24062016.SGPService.SGP_Price_Customer[] getPriceCustomer(string PriceID) {
+            return base.Channel.getPriceCustomer(PriceID);
+        }
+        
+        public PrintCG_24062016.SGPService.SGP_Price_Service[] getPriceService(string PriceID) {
+            return base.Channel.getPriceService(PriceID);
+        }
+        
+        public PrintCG_24062016.SGPService.SGP_Price_Value[] getPriceValue(string PriceID) {
+            return base.Channel.getPriceValue(PriceID);
         }
     }
 }

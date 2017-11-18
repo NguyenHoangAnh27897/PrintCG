@@ -73,4 +73,69 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="MM_Customer" nillable="true" type="tns:MM_Customer" />
+  <xs:complexType name="ArrayOfSGP_Price_Policy">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGP_Price_Policy" nillable="true" type="tns:SGP_Price_Policy" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGP_Price_Policy" nillable="true" type="tns:ArrayOfSGP_Price_Policy" />
+  <xs:complexType name="SGP_Price_Policy">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CalPrice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostOfficeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PricePolicyID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZoneID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SGP_Price_Policy" nillable="true" type="tns:SGP_Price_Policy" />
+  <xs:complexType name="ArrayOfSGP_Price_Customer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGP_Price_Customer" nillable="true" type="tns:SGP_Price_Customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGP_Price_Customer" nillable="true" type="tns:ArrayOfSGP_Price_Customer" />
+  <xs:complexType name="SGP_Price_Customer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PriceID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SGP_Price_Customer" nillable="true" type="tns:SGP_Price_Customer" />
+  <xs:complexType name="ArrayOfSGP_Price_Service">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGP_Price_Service" nillable="true" type="tns:SGP_Price_Service" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGP_Price_Service" nillable="true" type="tns:ArrayOfSGP_Price_Service" />
+  <xs:complexType name="SGP_Price_Service">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PriceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SGP_Price_Service" nillable="true" type="tns:SGP_Price_Service" />
+  <xs:complexType name="ArrayOfSGP_Price_Value">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGP_Price_Value" nillable="true" type="tns:SGP_Price_Value" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGP_Price_Value" nillable="true" type="tns:ArrayOfSGP_Price_Value" />
+  <xs:complexType name="SGP_Price_Value">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ColumnIndex" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FW" type="xs:double" />
+      <xs:element minOccurs="0" name="Price" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="PriceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RowIndex" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TW" type="xs:double" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Zone" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SGP_Price_Value" nillable="true" type="tns:SGP_Price_Value" />
 </xs:schema>

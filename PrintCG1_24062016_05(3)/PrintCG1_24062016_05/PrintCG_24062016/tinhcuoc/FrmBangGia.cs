@@ -205,5 +205,32 @@ namespace PrintCG_24062016.tinhcuoc
 
             }
         }
+
+        private void btnxem_Click(object sender, EventArgs e)
+        {
+            var data = sgpservice.getPricePolicy();
+            dataGridView2.DataSource = data;
+        }
+
+        private void dataGridView2_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tabControl2.SelectedTab = tabPage4;
+            var rowIdx = dataGridView2.CurrentCell.RowIndex;
+            int pp = 0; 
+            txtpriceid.Text = dataGridView2.Rows[rowIdx].Cells["PricePolicyID"].Value.ToString();
+            txtpostofficeid.Text = dataGridView2.Rows[rowIdx].Cells["PostOfficeID"].Value.ToString();
+            cmbloai.Text = dataGridView2.Rows[rowIdx].Cells["Type"].Value.ToString();
+            txtghichu.Text = dataGridView2.Rows[rowIdx].Cells["Description"].Value.ToString();
+            txtngaytao.Text = dataGridView2.Rows[rowIdx].Cells["CreateDate"].Value.ToString();
+            txttrangthai.Text = dataGridView2.Rows[rowIdx].Cells["Status"].Value.ToString();
+            pp = int.Parse(dataGridView2.Rows[rowIdx].Cells["Service"].Value.ToString());
+            if (pp == 0)
+            {
+                chkphuphi.Checked = false;
+            }else
+            {
+                chkphuphi.Checked = true;
+            }
+        }
     }
 }

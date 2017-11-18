@@ -35,5 +35,13 @@ namespace SGPWebService
         bool insertSGP_Price_Service(string PriceID, string ServiceID);
         [OperationContract]
         bool insertSGP_Price_Value(string PriceID, float FW,float TW,int Zone,float Price,int CalType,int RowIndex,int ColumnIndex);
+        [OperationContract]
+        List<DB.SGP_Price_Policy> getPricePolicy();
+        [OperationContract]
+        List<DB.SGP_Price_Customer> getPriceCustomer(string PriceID);
+        [OperationContract]
+        List<DB.SGP_Price_Service> getPriceService(string PriceID);
+        [OperationContract]
+        List<DB.SGP_Price_Value> getPriceValue(string PriceID);
     }
 }

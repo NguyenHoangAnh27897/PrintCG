@@ -80,6 +80,30 @@
   <wsdl:message name="ISGPService_insertSGP_Price_Value_OutputMessage">
     <wsdl:part name="parameters" element="tns:insertSGP_Price_ValueResponse" />
   </wsdl:message>
+  <wsdl:message name="ISGPService_getPricePolicy_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPricePolicy" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getPricePolicy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPricePolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getPriceCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPriceCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getPriceCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPriceCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getPriceService_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPriceService" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getPriceService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPriceServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getPriceValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPriceValue" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getPriceValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPriceValueResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISGPService">
     <wsdl:operation name="login">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/login" message="tns:ISGPService_login_InputMessage" />
@@ -128,6 +152,22 @@
     <wsdl:operation name="insertSGP_Price_Value">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/insertSGP_Price_Value" message="tns:ISGPService_insertSGP_Price_Value_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/insertSGP_Price_ValueResponse" message="tns:ISGPService_insertSGP_Price_Value_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPricePolicy">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getPricePolicy" message="tns:ISGPService_getPricePolicy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getPricePolicyResponse" message="tns:ISGPService_getPricePolicy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPriceCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getPriceCustomer" message="tns:ISGPService_getPriceCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getPriceCustomerResponse" message="tns:ISGPService_getPriceCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPriceService">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getPriceService" message="tns:ISGPService_getPriceService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getPriceServiceResponse" message="tns:ISGPService_getPriceService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPriceValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getPriceValue" message="tns:ISGPService_getPriceValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getPriceValueResponse" message="tns:ISGPService_getPriceValue_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISGPService" type="tns:ISGPService">
@@ -233,6 +273,42 @@
     </wsdl:operation>
     <wsdl:operation name="insertSGP_Price_Value">
       <soap:operation soapAction="http://tempuri.org/ISGPService/insertSGP_Price_Value" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPricePolicy">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getPricePolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPriceCustomer">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getPriceCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPriceService">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getPriceService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPriceValue">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getPriceValue" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

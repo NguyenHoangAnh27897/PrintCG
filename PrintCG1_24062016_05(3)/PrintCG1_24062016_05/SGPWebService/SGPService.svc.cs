@@ -205,5 +205,30 @@ namespace SGPWebService
                 return false;
             }
         }
+
+        public List<DB.SGP_Price_Policy> getPricePolicy()
+        {
+            List<DB.SGP_Price_Policy> data = api.SGP_Price_Policies.ToList();
+            return data;
+        }
+
+
+        public List<DB.SGP_Price_Customer> getPriceCustomer(string PriceID)
+        {
+            List<DB.SGP_Price_Customer> data = api.SGP_Price_Customers.Where(t =>t.PriceID == PriceID).ToList();
+            return data;
+        }
+
+        public List<DB.SGP_Price_Service> getPriceService(string PriceID)
+        {
+            List<DB.SGP_Price_Service> data = api.SGP_Price_Services.Where(t => t.PriceID == PriceID).ToList();
+            return data;
+        }
+
+        public List<DB.SGP_Price_Value> getPriceValue(string PriceID)
+        {
+            List<DB.SGP_Price_Value> data = api.SGP_Price_Values.Where(t => t.PriceID == PriceID).ToList();
+            return data;
+        }
     }
 }
