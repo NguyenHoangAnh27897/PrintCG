@@ -12,4 +12,9 @@ namespace SGPWebService.DataClass
     {
         public string ZoneID { get; set; }
     }
+    public class PriceList
+    {
+        public float Price { get; set; }
+        public float PriceService { get; set; }
+    }
 }

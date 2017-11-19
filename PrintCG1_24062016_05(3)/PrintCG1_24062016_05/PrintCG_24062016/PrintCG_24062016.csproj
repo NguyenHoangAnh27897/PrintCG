@@ -1125,6 +1125,9 @@
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.MM_ServiceType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.PriceList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.SGP_Price_Customer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

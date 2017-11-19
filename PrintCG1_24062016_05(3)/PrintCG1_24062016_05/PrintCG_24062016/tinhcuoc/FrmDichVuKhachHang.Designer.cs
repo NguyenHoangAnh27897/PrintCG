@@ -57,9 +57,11 @@
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 8);
+            this.groupBox1.Location = new System.Drawing.Point(16, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(221, 433);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(295, 533);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dịch vụ";
@@ -67,16 +69,18 @@
             // cmbdv
             // 
             this.cmbdv.FormattingEnabled = true;
-            this.cmbdv.Location = new System.Drawing.Point(51, 39);
+            this.cmbdv.Location = new System.Drawing.Point(68, 48);
+            this.cmbdv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbdv.Name = "cmbdv";
-            this.cmbdv.Size = new System.Drawing.Size(100, 21);
+            this.cmbdv.Size = new System.Drawing.Size(132, 24);
             this.cmbdv.TabIndex = 11;
             // 
             // btnthemdv
             // 
-            this.btnthemdv.Location = new System.Drawing.Point(157, 39);
+            this.btnthemdv.Location = new System.Drawing.Point(209, 48);
+            this.btnthemdv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnthemdv.Name = "btnthemdv";
-            this.btnthemdv.Size = new System.Drawing.Size(49, 23);
+            this.btnthemdv.Size = new System.Drawing.Size(65, 28);
             this.btnthemdv.TabIndex = 14;
             this.btnthemdv.Text = "V";
             this.btnthemdv.UseVisualStyleBackColor = true;
@@ -85,9 +89,10 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(10, 19);
+            this.checkBox1.Location = new System.Drawing.Point(13, 23);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(95, 17);
+            this.checkBox1.Size = new System.Drawing.Size(119, 21);
             this.checkBox1.TabIndex = 11;
             this.checkBox1.Text = "Tất cả dịch vụ";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -97,9 +102,10 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ServiceTypeID});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 81);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 100);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(207, 345);
+            this.dataGridView1.Size = new System.Drawing.Size(276, 425);
             this.dataGridView1.TabIndex = 5;
             // 
             // ServiceTypeID
@@ -110,9 +116,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 42);
+            this.label1.Location = new System.Drawing.Point(8, 52);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(55, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "Dịch vụ";
             // 
@@ -123,9 +130,11 @@
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.dataGridView2);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(239, 12);
+            this.groupBox2.Location = new System.Drawing.Point(319, 15);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(458, 433);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(611, 533);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dịch vụ";
@@ -133,16 +142,18 @@
             // cmbkh
             // 
             this.cmbkh.FormattingEnabled = true;
-            this.cmbkh.Location = new System.Drawing.Point(74, 39);
+            this.cmbkh.Location = new System.Drawing.Point(99, 48);
+            this.cmbkh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbkh.Name = "cmbkh";
-            this.cmbkh.Size = new System.Drawing.Size(100, 21);
+            this.cmbkh.Size = new System.Drawing.Size(132, 24);
             this.cmbkh.TabIndex = 11;
             // 
             // btnthemkh
             // 
-            this.btnthemkh.Location = new System.Drawing.Point(180, 39);
+            this.btnthemkh.Location = new System.Drawing.Point(240, 48);
+            this.btnthemkh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnthemkh.Name = "btnthemkh";
-            this.btnthemkh.Size = new System.Drawing.Size(49, 23);
+            this.btnthemkh.Size = new System.Drawing.Size(65, 28);
             this.btnthemkh.TabIndex = 14;
             this.btnthemkh.Text = "V";
             this.btnthemkh.UseVisualStyleBackColor = true;
@@ -151,9 +162,10 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(10, 19);
+            this.checkBox2.Location = new System.Drawing.Point(13, 23);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(117, 17);
+            this.checkBox2.Size = new System.Drawing.Size(148, 21);
             this.checkBox2.TabIndex = 11;
             this.checkBox2.Text = "Tất cả khách hàng";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -163,9 +175,10 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CustomerID});
-            this.dataGridView2.Location = new System.Drawing.Point(6, 81);
+            this.dataGridView2.Location = new System.Drawing.Point(8, 100);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(446, 345);
+            this.dataGridView2.Size = new System.Drawing.Size(595, 425);
             this.dataGridView2.TabIndex = 5;
             // 
             // CustomerID
@@ -177,17 +190,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 43);
+            this.label2.Location = new System.Drawing.Point(7, 53);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.Size = new System.Drawing.Size(84, 17);
             this.label2.TabIndex = 12;
             this.label2.Text = "Khách hàng";
             // 
             // btncapnhat
             // 
-            this.btncapnhat.Location = new System.Drawing.Point(621, 451);
+            this.btncapnhat.Location = new System.Drawing.Point(828, 555);
+            this.btncapnhat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btncapnhat.Name = "btncapnhat";
-            this.btncapnhat.Size = new System.Drawing.Size(70, 23);
+            this.btncapnhat.Size = new System.Drawing.Size(93, 28);
             this.btncapnhat.TabIndex = 15;
             this.btncapnhat.Text = "Cập nhật";
             this.btncapnhat.UseVisualStyleBackColor = true;
@@ -196,21 +211,23 @@
             // lblpriceid
             // 
             this.lblpriceid.AutoSize = true;
-            this.lblpriceid.Location = new System.Drawing.Point(19, 451);
+            this.lblpriceid.Location = new System.Drawing.Point(25, 555);
+            this.lblpriceid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblpriceid.Name = "lblpriceid";
-            this.lblpriceid.Size = new System.Drawing.Size(72, 13);
+            this.lblpriceid.Size = new System.Drawing.Size(20, 17);
             this.lblpriceid.TabIndex = 15;
-            this.lblpriceid.Text = "Mã bảng giá :";
+            this.lblpriceid.Text = "...";
             // 
             // FrmDichVuKhachHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 486);
+            this.ClientSize = new System.Drawing.Size(945, 598);
             this.Controls.Add(this.lblpriceid);
             this.Controls.Add(this.btncapnhat);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmDichVuKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDichVuKhachHang";

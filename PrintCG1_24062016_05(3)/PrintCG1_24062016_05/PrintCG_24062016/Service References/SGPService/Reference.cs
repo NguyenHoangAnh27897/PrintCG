@@ -1237,6 +1237,67 @@ namespace PrintCG_24062016.SGPService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PriceList", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass")]
+    [System.SerializableAttribute()]
+    public partial class PriceList : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float PriceServiceField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float PriceService {
+            get {
+                return this.PriceServiceField;
+            }
+            set {
+                if ((this.PriceServiceField.Equals(value) != true)) {
+                    this.PriceServiceField = value;
+                    this.RaisePropertyChanged("PriceService");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SGPService.ISGPService")]
     public interface ISGPService {
@@ -1288,6 +1349,9 @@ namespace PrintCG_24062016.SGPService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getPriceValue", ReplyAction="http://tempuri.org/ISGPService/getPriceValueResponse")]
         PrintCG_24062016.SGPService.SGP_Price_Value[] getPriceValue(string PriceID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/calPrice", ReplyAction="http://tempuri.org/ISGPService/calPriceResponse")]
+        PrintCG_24062016.SGPService.PriceList[] calPrice(int Quantity, float Weight, string ProvinceID, string CustomerID, string ServiceType);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1379,6 +1443,10 @@ namespace PrintCG_24062016.SGPService {
         
         public PrintCG_24062016.SGPService.SGP_Price_Value[] getPriceValue(string PriceID) {
             return base.Channel.getPriceValue(PriceID);
+        }
+        
+        public PrintCG_24062016.SGPService.PriceList[] calPrice(int Quantity, float Weight, string ProvinceID, string CustomerID, string ServiceType) {
+            return base.Channel.calPrice(Quantity, Weight, ProvinceID, CustomerID, ServiceType);
         }
     }
 }

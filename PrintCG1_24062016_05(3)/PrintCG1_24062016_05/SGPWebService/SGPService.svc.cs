@@ -142,8 +142,6 @@ namespace SGPWebService
             }
             
         }
-
-
         public bool insertSGP_Price_Customer(string PriceID, string CustomerID)
         {
             try
@@ -162,7 +160,6 @@ namespace SGPWebService
                 return false;
             }
         }
-
         public bool insertSGP_Price_Service(string PriceID, string ServiceID)
         {
             try
@@ -205,30 +202,56 @@ namespace SGPWebService
                 return false;
             }
         }
-
         public List<DB.SGP_Price_Policy> getPricePolicy()
         {
             List<DB.SGP_Price_Policy> data = api.SGP_Price_Policies.ToList();
             return data;
         }
-
-
         public List<DB.SGP_Price_Customer> getPriceCustomer(string PriceID)
         {
             List<DB.SGP_Price_Customer> data = api.SGP_Price_Customers.Where(t =>t.PriceID == PriceID).ToList();
             return data;
         }
-
         public List<DB.SGP_Price_Service> getPriceService(string PriceID)
         {
             List<DB.SGP_Price_Service> data = api.SGP_Price_Services.Where(t => t.PriceID == PriceID).ToList();
             return data;
         }
-
         public List<DB.SGP_Price_Value> getPriceValue(string PriceID)
         {
             List<DB.SGP_Price_Value> data = api.SGP_Price_Values.Where(t => t.PriceID == PriceID).ToList();
             return data;
+        }
+        public List<DataClass.PriceList> calPrice(int Quantity, float Weight, string ProvinceID, string CustomerID, string ServiceType)
+        {
+            //can xác dinh kh có bảng giả hay không
+            //xac dinh loai bang gia
+            //xac dinh trong luong
+            //xac dinh nac trong luong
+            //tinh gia
+            List<DataClass.PriceList> list = new List<DataClass.PriceList>();
+            string PriceID = string.Empty;
+            var query = (from post in api.SGP_Price_Customers
+                        join meta in api.SGP_Price_Services on post.PriceID equals meta.PriceID
+                        where post.CustomerID == CustomerID && meta.ServiceID == ServiceType
+                        select new { post.PriceID }).FirstOrDefault();
+            PriceID = query.PriceID;
+            if (PriceID != string.Empty) // neu lon hon 0 thi có bang giá
+            {
+                var zoneid = api.SGP_Price_Policies.Where(m => m.PricePolicyID == PriceID).FirstOrDefault();
+                var zone = api.SGP_Province_Zones.Where(t => t.ZoneID == zoneid.ZoneID && t.ProvinceID == ProvinceID).FirstOrDefault();
+                var nactl = api.SGP_Price_Values.Where(t => t.PriceID == PriceID && (t.FW<= Weight && t.TW >= Weight) && t.Zone == zone.Zone).FirstOrDefault();
+                if(nactl != null)
+                {
+                    list.Add(new DataClass.PriceList()
+                        {
+                            Price = float.Parse(nactl.Price.Value.ToString()),
+                            PriceService = 0
+                        });
+                }
+            }
+            return list;
+
         }
     }
 }

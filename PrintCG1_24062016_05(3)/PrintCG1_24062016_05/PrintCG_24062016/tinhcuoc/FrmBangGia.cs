@@ -56,7 +56,7 @@ namespace PrintCG_24062016.tinhcuoc
                 int rows = 8;
                 dataGridView1.Columns.Add("Begin", "Bắt đầu");
                 dataGridView1.Columns.Add("End", "Kết thúc");
-                for (int i = 0; i <= columns - 1; i++)
+                for (int i = 0; i <= columns ; i++)
                 {
                     dataGridView1.Columns.Add(i.ToString(), i.ToString());
                 }
@@ -198,8 +198,7 @@ namespace PrintCG_24062016.tinhcuoc
                     }
 
                 }
-                
-
+               
             }catch
             {
 
@@ -223,6 +222,8 @@ namespace PrintCG_24062016.tinhcuoc
             txtghichu.Text = dataGridView2.Rows[rowIdx].Cells["Description"].Value.ToString();
             txtngaytao.Text = dataGridView2.Rows[rowIdx].Cells["CreateDate"].Value.ToString();
             txttrangthai.Text = dataGridView2.Rows[rowIdx].Cells["Status"].Value.ToString();
+            cmbcongthuc.Text = dataGridView2.Rows[rowIdx].Cells["CalPrice"].Value.ToString();
+            cmbmavung.Text = dataGridView2.Rows[rowIdx].Cells["ZoneID"].Value.ToString();
             pp = int.Parse(dataGridView2.Rows[rowIdx].Cells["Service"].Value.ToString());
             if (pp == 0)
             {
@@ -231,6 +232,40 @@ namespace PrintCG_24062016.tinhcuoc
             {
                 chkphuphi.Checked = true;
             }
+            var pricevalue = sgpservice.getPriceValue(txtpriceid.Text);
+            var maxrow = pricevalue.OrderByDescending(item => item.RowIndex).First();
+            //lay ra so cot theo mavung
+            if (cmbcongthuc.Text == "nấc trọng lượng")
+            {
+                int columns = sgpservice.getmaxZone(cmbmavung.Text.Trim());
+                dataGridView1.Columns.Add("Begin", "Bắt đầu");
+                dataGridView1.Columns.Add("End", "Kết thúc");
+                for (int i = 0; i <= columns - 1; i++)
+                {
+                    dataGridView1.Columns.Add(i.ToString(), i.ToString());
+                }
+                for (int i = 0; i <= int.Parse(maxrow.RowIndex.ToString()) - 1; i++)
+                {
+                    dataGridView1.Rows.Add();
+                }
+                //khai bao cac dong can nhan dư liệu
+                foreach (var item in pricevalue)
+                {
+                    var row = this.dataGridView1.Rows[item.RowIndex.Value];
+                    row.Cells["Begin"].Value = item.FW;
+                    row.Cells["End"].Value = item.TW;
+                    for (int i = 2; i <= columns + 2 - 1; i++) // cong 2 do tinh them 2 cot nac trong luong
+                    {
+                        int col = dataGridView1.Columns[i].Index;
+                        if (col == item.ColumnIndex)
+                        {
+                            row.Cells[i].Value = item.Price;   
+                        }
+                    }
+                }
+            }
+            
+
         }
     }
 }

@@ -492,7 +492,7 @@ namespace PrintCG_24062016
                      }
                      else if (headerText.Equals("Thành phố"))
                      {
-
+                         string matinh = string.Empty;
                          Boolean flag = false;
                          DataSet ds = new DataSet();
                          OleDbConnection conn = new OleDbConnection();
@@ -508,6 +508,7 @@ namespace PrintCG_24062016
                          conn.Close();
                          foreach (DataRow row in ds.Tables[0].Rows)
                          {
+                             matinh = row["Matinh"].ToString();
                              if (e.FormattedValue.ToString().ToUpper() == row["Matinh"].ToString())
                              {
                                  flag = true;
@@ -541,6 +542,19 @@ namespace PrintCG_24062016
                              conn.Close();
                              myGrid1.CurrentRow.Cells["ProvinceName"].Value = ds1.Tables[0].Rows[0]["TenTinh"].ToString() ;//
                          }
+                         int quantity = int.Parse(myGrid1.CurrentRow.Cells["Quantity"].Value.ToString());
+                         float weight = float.Parse(myGrid1.CurrentRow.Cells["Weight"].Value.ToString());
+                         //string province = myGrid1.CurrentRow.Cells["Provinceid"].Value.ToString();
+                         string customer = myGrid1.CurrentRow.Cells["Sender"].Value.ToString();
+                         string servicetype = myGrid1.CurrentRow.Cells["Servicetypeid"].Value.ToString();
+                         
+                             //myGrid1.Rows[e.RowIndex].ErrorText = "Chưa khai báo thông tin";
+                             var pricelist = sgpservice.calPrice(quantity, weight, matinh, customer, servicetype);
+                             foreach (var item in pricelist)
+                             {
+                                 myGrid1.CurrentRow.Cells["Price"].Value = item.Price;
+                                 myGrid1.CurrentRow.Cells["Priceservice"].Value = item.PriceService;
+                             }
                          
                      }
                      else if (headerText.Equals("Quận/Huyện"))
@@ -556,7 +570,27 @@ namespace PrintCG_24062016
                              myGrid1.Rows[e.RowIndex].ErrorText = "Ngày nhận không được bỏ trống";
                              myGrid1.CurrentCell.Value = dtppgi.Value.ToShortDateString();
                              e.Cancel = true;
-                         }                                                                     
+                         }
+                     }
+                     else if (headerText.Equals("Cước"))
+                     {
+                         int quantity = int.Parse(myGrid1.CurrentRow.Cells["Quantity"].Value.ToString());
+                         float weight = float.Parse(myGrid1.CurrentRow.Cells["Weight"].Value.ToString());
+                         string province = myGrid1.CurrentRow.Cells["Provinceid"].Value.ToString();
+                         string customer = myGrid1.CurrentRow.Cells["Sender"].Value.ToString();
+                         string servicetype = myGrid1.CurrentRow.Cells["Servicetypeid"].Value.ToString();
+                         if (string.IsNullOrEmpty(e.FormattedValue.ToString()))
+                         {
+                             myGrid1.Rows[e.RowIndex].ErrorText = "Chưa khai báo thông tin";
+                             var pricelist = sgpservice.calPrice(quantity, weight, province, customer, servicetype);
+                             foreach(var item in pricelist)
+                             {
+                                 myGrid1.CurrentCell.Value = item.Price;
+                                 myGrid1.CurrentRow.Cells["Priceservice"].Value = item.PriceService;
+                             }                           
+                             e.Cancel = true;
+                         }
+                         
                      }
                  }
                  catch (Exception )

@@ -13,9 +13,11 @@ namespace PrintCG_24062016.tinhcuoc
     {
         public static tinhcuoc.dataset.DsCuoc.DtServiceDataTable dtservice = new dataset.DsCuoc.DtServiceDataTable();
         public static tinhcuoc.dataset.DsCuoc.DtCustomerDataTable dtcustomer = new dataset.DsCuoc.DtCustomerDataTable();
+        PrintCG_24062016.SGPService.SGPServiceClient sgpservice;
         public FrmDichVuKhachHang()
         {
             InitializeComponent();
+            sgpservice = new PrintCG_24062016.SGPService.SGPServiceClient();
         }
         string postofficeid = string.Empty;
         private void btnthemdv_Click(object sender, EventArgs e)
@@ -32,6 +34,19 @@ namespace PrintCG_24062016.tinhcuoc
         {
             lblpriceid.Text = FrmBangGia.priceid;
             postofficeid = FrmMain1.postofficeid;
+            if(lblpriceid.Text != "...")
+            {
+                var service = sgpservice.getPriceService(lblpriceid.Text);
+                var customer = sgpservice.getPriceCustomer(lblpriceid.Text);
+                foreach(var item in service)
+                {
+                    dataGridView1.Rows.Add(item.ServiceID);
+                }
+                foreach (var item in customer)
+                {
+                    dataGridView2.Rows.Add(item.CustomerID);
+                }
+            }
         }
 
         private void btncapnhat_Click(object sender, EventArgs e)
