@@ -45,5 +45,10 @@ namespace SGPWebService
         List<DB.SGP_Price_Value> getPriceValue(string PriceID);
         [OperationContract]
         List<DataClass.PriceList> calPrice(int Quantity, float Weight,string ProvinceID,string CustomerID,string ServiceType);
+        [OperationContract]
+        List<DB.Tools_Tracking> getUserTrackingProfile(string User);
+        [OperationContract]
+        List<DataClass.Trackings> ToolTracking(string MailerID);
+        
     }
 }

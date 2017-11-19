@@ -253,5 +253,35 @@ namespace SGPWebService
             return list;
 
         }
+        public List<DB.Tools_Tracking> getUserTrackingProfile(string User)
+        {
+            var userprofife = api.Tools_Trackings.Where(m => m.UserName == User).ToList();
+            if(userprofife != null)
+            {
+                return userprofife;
+            }
+            else
+            {
+                var sysuser = api.Tools_Trackings.Where(m => m.UserName == "sys").ToList();
+                return sysuser;
+            }
+        }
+        public List<DataClass.Trackings> ToolTracking(string MailerID)
+        {
+            var query = (from m in pms.MM_Mailers
+                         join mdd in pms.MM_MailerDeliveryDetails on m.MailerID equals mdd.MailerID
+                         join pid in pms.MM_PackingListInternalDetails on m.MailerID equals pid.MailerID
+                         join pi in pms.MM_PackingListInternals on pid.DocumentID equals pi.DocumentID
+                         join md in pms.MM_MailerDeliveries on mdd.DocumentID equals md.DocumentID
+                         join e in pms.BS_Employees on md.EmployeeID equals e.EmployeeID
+                         join s in pms.MM_Status on m.CurrentStatusID equals s.StatusID
+                         join r in pms.MM_ReturnReasons on mdd.ReturnReasonID equals r.ReturnReasonID
+                         where m.MailerID == MailerID orderby mdd.ID descending
+                         select new DataClass.Trackings()
+                         {
+                             BS_Employees_EmployeeID = e.EmployeeID,
+                         }).ToList();
+            return query;
+        }
     }
 }

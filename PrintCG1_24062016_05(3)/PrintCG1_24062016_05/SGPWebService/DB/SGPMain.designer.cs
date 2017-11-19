@@ -45,6 +45,30 @@ namespace SGPWebService.DB
     partial void InsertMM_Customer(MM_Customer instance);
     partial void UpdateMM_Customer(MM_Customer instance);
     partial void DeleteMM_Customer(MM_Customer instance);
+    partial void InsertMM_MailerDeliveryDetail(MM_MailerDeliveryDetail instance);
+    partial void UpdateMM_MailerDeliveryDetail(MM_MailerDeliveryDetail instance);
+    partial void DeleteMM_MailerDeliveryDetail(MM_MailerDeliveryDetail instance);
+    partial void InsertMM_Mailer(MM_Mailer instance);
+    partial void UpdateMM_Mailer(MM_Mailer instance);
+    partial void DeleteMM_Mailer(MM_Mailer instance);
+    partial void InsertMM_PackingListInternalDetail(MM_PackingListInternalDetail instance);
+    partial void UpdateMM_PackingListInternalDetail(MM_PackingListInternalDetail instance);
+    partial void DeleteMM_PackingListInternalDetail(MM_PackingListInternalDetail instance);
+    partial void InsertMM_PackingListInternal(MM_PackingListInternal instance);
+    partial void UpdateMM_PackingListInternal(MM_PackingListInternal instance);
+    partial void DeleteMM_PackingListInternal(MM_PackingListInternal instance);
+    partial void InsertMM_MailerDelivery(MM_MailerDelivery instance);
+    partial void UpdateMM_MailerDelivery(MM_MailerDelivery instance);
+    partial void DeleteMM_MailerDelivery(MM_MailerDelivery instance);
+    partial void InsertBS_Employee(BS_Employee instance);
+    partial void UpdateBS_Employee(BS_Employee instance);
+    partial void DeleteBS_Employee(BS_Employee instance);
+    partial void InsertMM_Status(MM_Status instance);
+    partial void UpdateMM_Status(MM_Status instance);
+    partial void DeleteMM_Status(MM_Status instance);
+    partial void InsertMM_ReturnReason(MM_ReturnReason instance);
+    partial void UpdateMM_ReturnReason(MM_ReturnReason instance);
+    partial void DeleteMM_ReturnReason(MM_ReturnReason instance);
     #endregion
 		
 		public SGPMainDataContext() : 
@@ -114,6 +138,70 @@ namespace SGPWebService.DB
 			get
 			{
 				return this.GetTable<MM_Customer>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MM_MailerDeliveryDetail> MM_MailerDeliveryDetails
+		{
+			get
+			{
+				return this.GetTable<MM_MailerDeliveryDetail>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MM_Mailer> MM_Mailers
+		{
+			get
+			{
+				return this.GetTable<MM_Mailer>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MM_PackingListInternalDetail> MM_PackingListInternalDetails
+		{
+			get
+			{
+				return this.GetTable<MM_PackingListInternalDetail>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MM_PackingListInternal> MM_PackingListInternals
+		{
+			get
+			{
+				return this.GetTable<MM_PackingListInternal>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MM_MailerDelivery> MM_MailerDeliveries
+		{
+			get
+			{
+				return this.GetTable<MM_MailerDelivery>();
+			}
+		}
+		
+		public System.Data.Linq.Table<BS_Employee> BS_Employees
+		{
+			get
+			{
+				return this.GetTable<BS_Employee>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MM_Status> MM_Status
+		{
+			get
+			{
+				return this.GetTable<MM_Status>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MM_ReturnReason> MM_ReturnReasons
+		{
+			get
+			{
+				return this.GetTable<MM_ReturnReason>();
 			}
 		}
 	}
@@ -739,6 +827,8 @@ namespace SGPWebService.DB
 		
 		private System.Nullable<System.DateTime> _CreationDate;
 		
+		private EntitySet<MM_Mailer> _MM_Mailers;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -761,6 +851,7 @@ namespace SGPWebService.DB
 		
 		public BS_Province()
 		{
+			this._MM_Mailers = new EntitySet<MM_Mailer>(new Action<MM_Mailer>(this.attach_MM_Mailers), new Action<MM_Mailer>(this.detach_MM_Mailers));
 			OnCreated();
 		}
 		
@@ -904,6 +995,19 @@ namespace SGPWebService.DB
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BS_Province_MM_Mailer", Storage="_MM_Mailers", ThisKey="ProvinceID", OtherKey="RecieverProvinceID")]
+		public EntitySet<MM_Mailer> MM_Mailers
+		{
+			get
+			{
+				return this._MM_Mailers;
+			}
+			set
+			{
+				this._MM_Mailers.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -922,6 +1026,18 @@ namespace SGPWebService.DB
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_MM_Mailers(MM_Mailer entity)
+		{
+			this.SendPropertyChanging();
+			entity.BS_Province = this;
+		}
+		
+		private void detach_MM_Mailers(MM_Mailer entity)
+		{
+			this.SendPropertyChanging();
+			entity.BS_Province = null;
 		}
 	}
 	
@@ -947,6 +1063,8 @@ namespace SGPWebService.DB
 		
 		private System.Nullable<System.DateTime> _CreationDate;
 		
+		private EntitySet<MM_Mailer> _MM_Mailers;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -971,6 +1089,7 @@ namespace SGPWebService.DB
 		
 		public MM_ServiceType()
 		{
+			this._MM_Mailers = new EntitySet<MM_Mailer>(new Action<MM_Mailer>(this.attach_MM_Mailers), new Action<MM_Mailer>(this.detach_MM_Mailers));
 			OnCreated();
 		}
 		
@@ -1134,6 +1253,19 @@ namespace SGPWebService.DB
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_ServiceType_MM_Mailer", Storage="_MM_Mailers", ThisKey="ServiceTypeID", OtherKey="ServiceTypeID")]
+		public EntitySet<MM_Mailer> MM_Mailers
+		{
+			get
+			{
+				return this._MM_Mailers;
+			}
+			set
+			{
+				this._MM_Mailers.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1152,6 +1284,18 @@ namespace SGPWebService.DB
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_MM_Mailers(MM_Mailer entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_ServiceType = this;
+		}
+		
+		private void detach_MM_Mailers(MM_Mailer entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_ServiceType = null;
 		}
 	}
 	
@@ -1211,6 +1355,8 @@ namespace SGPWebService.DB
 		
 		private string _DebitObjectID;
 		
+		private EntitySet<MM_Mailer> _MM_Mailers;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1269,6 +1415,7 @@ namespace SGPWebService.DB
 		
 		public MM_Customer()
 		{
+			this._MM_Mailers = new EntitySet<MM_Mailer>(new Action<MM_Mailer>(this.attach_MM_Mailers), new Action<MM_Mailer>(this.detach_MM_Mailers));
 			OnCreated();
 		}
 		
@@ -1768,6 +1915,4945 @@ namespace SGPWebService.DB
 					this._DebitObjectID = value;
 					this.SendPropertyChanged("DebitObjectID");
 					this.OnDebitObjectIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_Customer_MM_Mailer", Storage="_MM_Mailers", ThisKey="CustomerID", OtherKey="SenderID")]
+		public EntitySet<MM_Mailer> MM_Mailers
+		{
+			get
+			{
+				return this._MM_Mailers;
+			}
+			set
+			{
+				this._MM_Mailers.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_MM_Mailers(MM_Mailer entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_Customer = this;
+		}
+		
+		private void detach_MM_Mailers(MM_Mailer entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_Customer = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MM_MailerDeliveryDetail")]
+	public partial class MM_MailerDeliveryDetail : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _DocumentID;
+		
+		private string _MailerID;
+		
+		private string _Notes;
+		
+		private System.Nullable<bool> _IsDeliverOver;
+		
+		private string _DeliveryTo;
+		
+		private System.Nullable<System.DateTime> _DeliveryDate;
+		
+		private string _DeliveryStatus;
+		
+		private System.Nullable<bool> _PaymentFinished;
+		
+		private string _DeliveryNotes;
+		
+		private System.Nullable<System.DateTime> _ConfirmDate;
+		
+		private string _ConfirmUserID;
+		
+		private string _ConfirmIndex;
+		
+		private System.Nullable<System.DateTime> _LastEditDate;
+		
+		private System.Nullable<System.DateTime> _CreationDate;
+		
+		private long _ID;
+		
+		private string _ReturnReasonID;
+		
+		private bool _SyncFlag;
+		
+		private System.Nullable<System.DateTime> _LastSyncDate;
+		
+		private EntityRef<MM_Mailer> _MM_Mailer;
+		
+		private EntityRef<MM_Mailer> _MM_Mailer1;
+		
+		private EntityRef<MM_MailerDelivery> _MM_MailerDelivery;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDocumentIDChanging(string value);
+    partial void OnDocumentIDChanged();
+    partial void OnMailerIDChanging(string value);
+    partial void OnMailerIDChanged();
+    partial void OnNotesChanging(string value);
+    partial void OnNotesChanged();
+    partial void OnIsDeliverOverChanging(System.Nullable<bool> value);
+    partial void OnIsDeliverOverChanged();
+    partial void OnDeliveryToChanging(string value);
+    partial void OnDeliveryToChanged();
+    partial void OnDeliveryDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnDeliveryDateChanged();
+    partial void OnDeliveryStatusChanging(string value);
+    partial void OnDeliveryStatusChanged();
+    partial void OnPaymentFinishedChanging(System.Nullable<bool> value);
+    partial void OnPaymentFinishedChanged();
+    partial void OnDeliveryNotesChanging(string value);
+    partial void OnDeliveryNotesChanged();
+    partial void OnConfirmDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnConfirmDateChanged();
+    partial void OnConfirmUserIDChanging(string value);
+    partial void OnConfirmUserIDChanged();
+    partial void OnConfirmIndexChanging(string value);
+    partial void OnConfirmIndexChanged();
+    partial void OnLastEditDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastEditDateChanged();
+    partial void OnCreationDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreationDateChanged();
+    partial void OnIDChanging(long value);
+    partial void OnIDChanged();
+    partial void OnReturnReasonIDChanging(string value);
+    partial void OnReturnReasonIDChanged();
+    partial void OnSyncFlagChanging(bool value);
+    partial void OnSyncFlagChanged();
+    partial void OnLastSyncDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastSyncDateChanged();
+    #endregion
+		
+		public MM_MailerDeliveryDetail()
+		{
+			this._MM_Mailer = default(EntityRef<MM_Mailer>);
+			this._MM_Mailer1 = default(EntityRef<MM_Mailer>);
+			this._MM_MailerDelivery = default(EntityRef<MM_MailerDelivery>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DocumentID", DbType="VarChar(15) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string DocumentID
+		{
+			get
+			{
+				return this._DocumentID;
+			}
+			set
+			{
+				if ((this._DocumentID != value))
+				{
+					if (this._MM_MailerDelivery.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnDocumentIDChanging(value);
+					this.SendPropertyChanging();
+					this._DocumentID = value;
+					this.SendPropertyChanged("DocumentID");
+					this.OnDocumentIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MailerID", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MailerID
+		{
+			get
+			{
+				return this._MailerID;
+			}
+			set
+			{
+				if ((this._MailerID != value))
+				{
+					if ((this._MM_Mailer.HasLoadedOrAssignedValue || this._MM_Mailer1.HasLoadedOrAssignedValue))
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMailerIDChanging(value);
+					this.SendPropertyChanging();
+					this._MailerID = value;
+					this.SendPropertyChanged("MailerID");
+					this.OnMailerIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Notes", DbType="NVarChar(200)")]
+		public string Notes
+		{
+			get
+			{
+				return this._Notes;
+			}
+			set
+			{
+				if ((this._Notes != value))
+				{
+					this.OnNotesChanging(value);
+					this.SendPropertyChanging();
+					this._Notes = value;
+					this.SendPropertyChanged("Notes");
+					this.OnNotesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsDeliverOver", DbType="Bit")]
+		public System.Nullable<bool> IsDeliverOver
+		{
+			get
+			{
+				return this._IsDeliverOver;
+			}
+			set
+			{
+				if ((this._IsDeliverOver != value))
+				{
+					this.OnIsDeliverOverChanging(value);
+					this.SendPropertyChanging();
+					this._IsDeliverOver = value;
+					this.SendPropertyChanged("IsDeliverOver");
+					this.OnIsDeliverOverChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeliveryTo", DbType="NVarChar(50)")]
+		public string DeliveryTo
+		{
+			get
+			{
+				return this._DeliveryTo;
+			}
+			set
+			{
+				if ((this._DeliveryTo != value))
+				{
+					this.OnDeliveryToChanging(value);
+					this.SendPropertyChanging();
+					this._DeliveryTo = value;
+					this.SendPropertyChanged("DeliveryTo");
+					this.OnDeliveryToChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeliveryDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DeliveryDate
+		{
+			get
+			{
+				return this._DeliveryDate;
+			}
+			set
+			{
+				if ((this._DeliveryDate != value))
+				{
+					this.OnDeliveryDateChanging(value);
+					this.SendPropertyChanging();
+					this._DeliveryDate = value;
+					this.SendPropertyChanged("DeliveryDate");
+					this.OnDeliveryDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeliveryStatus", DbType="VarChar(2)")]
+		public string DeliveryStatus
+		{
+			get
+			{
+				return this._DeliveryStatus;
+			}
+			set
+			{
+				if ((this._DeliveryStatus != value))
+				{
+					this.OnDeliveryStatusChanging(value);
+					this.SendPropertyChanging();
+					this._DeliveryStatus = value;
+					this.SendPropertyChanged("DeliveryStatus");
+					this.OnDeliveryStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymentFinished", DbType="Bit")]
+		public System.Nullable<bool> PaymentFinished
+		{
+			get
+			{
+				return this._PaymentFinished;
+			}
+			set
+			{
+				if ((this._PaymentFinished != value))
+				{
+					this.OnPaymentFinishedChanging(value);
+					this.SendPropertyChanging();
+					this._PaymentFinished = value;
+					this.SendPropertyChanged("PaymentFinished");
+					this.OnPaymentFinishedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeliveryNotes", DbType="NVarChar(200)")]
+		public string DeliveryNotes
+		{
+			get
+			{
+				return this._DeliveryNotes;
+			}
+			set
+			{
+				if ((this._DeliveryNotes != value))
+				{
+					this.OnDeliveryNotesChanging(value);
+					this.SendPropertyChanging();
+					this._DeliveryNotes = value;
+					this.SendPropertyChanged("DeliveryNotes");
+					this.OnDeliveryNotesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ConfirmDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ConfirmDate
+		{
+			get
+			{
+				return this._ConfirmDate;
+			}
+			set
+			{
+				if ((this._ConfirmDate != value))
+				{
+					this.OnConfirmDateChanging(value);
+					this.SendPropertyChanging();
+					this._ConfirmDate = value;
+					this.SendPropertyChanged("ConfirmDate");
+					this.OnConfirmDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ConfirmUserID", DbType="VarChar(20)")]
+		public string ConfirmUserID
+		{
+			get
+			{
+				return this._ConfirmUserID;
+			}
+			set
+			{
+				if ((this._ConfirmUserID != value))
+				{
+					this.OnConfirmUserIDChanging(value);
+					this.SendPropertyChanging();
+					this._ConfirmUserID = value;
+					this.SendPropertyChanged("ConfirmUserID");
+					this.OnConfirmUserIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ConfirmIndex", DbType="VarChar(30)")]
+		public string ConfirmIndex
+		{
+			get
+			{
+				return this._ConfirmIndex;
+			}
+			set
+			{
+				if ((this._ConfirmIndex != value))
+				{
+					this.OnConfirmIndexChanging(value);
+					this.SendPropertyChanging();
+					this._ConfirmIndex = value;
+					this.SendPropertyChanged("ConfirmIndex");
+					this.OnConfirmIndexChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastEditDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastEditDate
+		{
+			get
+			{
+				return this._LastEditDate;
+			}
+			set
+			{
+				if ((this._LastEditDate != value))
+				{
+					this.OnLastEditDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastEditDate = value;
+					this.SendPropertyChanged("LastEditDate");
+					this.OnLastEditDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreationDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreationDate
+		{
+			get
+			{
+				return this._CreationDate;
+			}
+			set
+			{
+				if ((this._CreationDate != value))
+				{
+					this.OnCreationDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreationDate = value;
+					this.SendPropertyChanged("CreationDate");
+					this.OnCreationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.Always, DbType="BigInt NOT NULL IDENTITY", IsDbGenerated=true)]
+		public long ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReturnReasonID", DbType="VarChar(15)")]
+		public string ReturnReasonID
+		{
+			get
+			{
+				return this._ReturnReasonID;
+			}
+			set
+			{
+				if ((this._ReturnReasonID != value))
+				{
+					this.OnReturnReasonIDChanging(value);
+					this.SendPropertyChanging();
+					this._ReturnReasonID = value;
+					this.SendPropertyChanged("ReturnReasonID");
+					this.OnReturnReasonIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SyncFlag", DbType="Bit NOT NULL")]
+		public bool SyncFlag
+		{
+			get
+			{
+				return this._SyncFlag;
+			}
+			set
+			{
+				if ((this._SyncFlag != value))
+				{
+					this.OnSyncFlagChanging(value);
+					this.SendPropertyChanging();
+					this._SyncFlag = value;
+					this.SendPropertyChanged("SyncFlag");
+					this.OnSyncFlagChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastSyncDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastSyncDate
+		{
+			get
+			{
+				return this._LastSyncDate;
+			}
+			set
+			{
+				if ((this._LastSyncDate != value))
+				{
+					this.OnLastSyncDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastSyncDate = value;
+					this.SendPropertyChanged("LastSyncDate");
+					this.OnLastSyncDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_Mailer_MM_MailerDeliveryDetail", Storage="_MM_Mailer", ThisKey="MailerID", OtherKey="MailerID", IsForeignKey=true)]
+		public MM_Mailer MM_Mailer
+		{
+			get
+			{
+				return this._MM_Mailer.Entity;
+			}
+			set
+			{
+				MM_Mailer previousValue = this._MM_Mailer.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_Mailer.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_Mailer.Entity = null;
+						previousValue.MM_MailerDeliveryDetails.Remove(this);
+					}
+					this._MM_Mailer.Entity = value;
+					if ((value != null))
+					{
+						value.MM_MailerDeliveryDetails.Add(this);
+						this._MailerID = value.MailerID;
+					}
+					else
+					{
+						this._MailerID = default(string);
+					}
+					this.SendPropertyChanged("MM_Mailer");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_Mailer_MM_MailerDeliveryDetail1", Storage="_MM_Mailer1", ThisKey="MailerID", OtherKey="MailerID", IsForeignKey=true)]
+		public MM_Mailer MM_Mailer1
+		{
+			get
+			{
+				return this._MM_Mailer1.Entity;
+			}
+			set
+			{
+				MM_Mailer previousValue = this._MM_Mailer1.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_Mailer1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_Mailer1.Entity = null;
+						previousValue.MM_MailerDeliveryDetails1.Remove(this);
+					}
+					this._MM_Mailer1.Entity = value;
+					if ((value != null))
+					{
+						value.MM_MailerDeliveryDetails1.Add(this);
+						this._MailerID = value.MailerID;
+					}
+					else
+					{
+						this._MailerID = default(string);
+					}
+					this.SendPropertyChanged("MM_Mailer1");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_MailerDelivery_MM_MailerDeliveryDetail", Storage="_MM_MailerDelivery", ThisKey="DocumentID", OtherKey="DocumentID", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
+		public MM_MailerDelivery MM_MailerDelivery
+		{
+			get
+			{
+				return this._MM_MailerDelivery.Entity;
+			}
+			set
+			{
+				MM_MailerDelivery previousValue = this._MM_MailerDelivery.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_MailerDelivery.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_MailerDelivery.Entity = null;
+						previousValue.MM_MailerDeliveryDetails.Remove(this);
+					}
+					this._MM_MailerDelivery.Entity = value;
+					if ((value != null))
+					{
+						value.MM_MailerDeliveryDetails.Add(this);
+						this._DocumentID = value.DocumentID;
+					}
+					else
+					{
+						this._DocumentID = default(string);
+					}
+					this.SendPropertyChanged("MM_MailerDelivery");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MM_Mailers")]
+	public partial class MM_Mailer : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private System.DateTime _AcceptDate;
+		
+		private System.DateTime _AcceptTime;
+		
+		private string _MailerID;
+		
+		private string _SenderID;
+		
+		private string _SenderRepresenterID;
+		
+		private string _SenderName;
+		
+		private string _SenderAddress;
+		
+		private string _SenderPhone;
+		
+		private string _SenderCountryID;
+		
+		private string _SenderProvinceID;
+		
+		private string _SenderDistrictID;
+		
+		private string _RecieverID;
+		
+		private string _RecieverRepresenterID;
+		
+		private string _RecieverName;
+		
+		private string _RecieverAddress;
+		
+		private string _RecieverPhone;
+		
+		private string _RecieverCountryID;
+		
+		private string _RecieverProvinceID;
+		
+		private string _RecieverDistrictID;
+		
+		private string _ServiceTypeID;
+		
+		private string _MailerTypeID;
+		
+		private int _Quantity;
+		
+		private double _RealWeight;
+		
+		private double _Weight;
+		
+		private decimal _Money;
+		
+		private decimal _Price;
+		
+		private decimal _PriceDefault;
+		
+		private decimal _PriceService;
+		
+		private double _Discount;
+		
+		private decimal _BefVATAmount;
+		
+		private double _VATPercent;
+		
+		private decimal _VATAmount;
+		
+		private decimal _Amount;
+		
+		private decimal _AmountBefDiscount;
+		
+		private string _PostOfficeAcceptID;
+		
+		private string _PaymentMethodID;
+		
+		private string _PostOfficeRecieverMoneyID;
+		
+		private string _EmployeeID;
+		
+		private string _MailerDescription;
+		
+		private string _ThirdpartyDocID;
+		
+		private System.Nullable<decimal> _ThirdpartyCost;
+		
+		private string _ThirdpartyPaymentMethodID;
+		
+		private string _ParentMailerID;
+		
+		private string _UserGroupID;
+		
+		private string _LastUserGroupID;
+		
+		private System.DateTime _CreateDate;
+		
+		private System.Nullable<System.DateTime> _ModifyDate;
+		
+		private string _CurrentStatusID;
+		
+		private string _CurrentPostOfficeID;
+		
+		private System.Nullable<System.DateTime> _LastEditDate;
+		
+		private System.Nullable<System.DateTime> _CreationDate;
+		
+		private string _DocIndex;
+		
+		private string _RangeWeightID;
+		
+		private string _RangeDistanceID;
+		
+		private string _PriceType;
+		
+		private System.Nullable<bool> _PriceIncludeVAT;
+		
+		private System.Nullable<decimal> _CommissionAmt;
+		
+		private System.Nullable<double> _CommissionPercent;
+		
+		private System.Nullable<decimal> _CostAmt;
+		
+		private System.Nullable<System.DateTime> _SalesClosingDate;
+		
+		private string _RecieverAddressNbr;
+		
+		private string _ReceiveProvinceID;
+		
+		private System.Nullable<double> _DiscountPercent;
+		
+		private System.Nullable<System.DateTime> _LastUpdDate;
+		
+		private int _RecordState;
+		
+		private bool _SyncFlag;
+		
+		private System.Nullable<System.DateTime> _LastSyncDate;
+		
+		private System.Nullable<decimal> _Amt4Comm;
+		
+		private System.Nullable<System.DateTime> _LastUpdStatusTime;
+		
+		private EntitySet<MM_MailerDeliveryDetail> _MM_MailerDeliveryDetails;
+		
+		private EntitySet<MM_MailerDeliveryDetail> _MM_MailerDeliveryDetails1;
+		
+		private EntitySet<MM_PackingListInternalDetail> _MM_PackingListInternalDetails;
+		
+		private EntityRef<BS_Province> _BS_Province;
+		
+		private EntityRef<MM_Customer> _MM_Customer;
+		
+		private EntityRef<MM_ServiceType> _MM_ServiceType;
+		
+		private EntityRef<MM_Status> _MM_Status;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAcceptDateChanging(System.DateTime value);
+    partial void OnAcceptDateChanged();
+    partial void OnAcceptTimeChanging(System.DateTime value);
+    partial void OnAcceptTimeChanged();
+    partial void OnMailerIDChanging(string value);
+    partial void OnMailerIDChanged();
+    partial void OnSenderIDChanging(string value);
+    partial void OnSenderIDChanged();
+    partial void OnSenderRepresenterIDChanging(string value);
+    partial void OnSenderRepresenterIDChanged();
+    partial void OnSenderNameChanging(string value);
+    partial void OnSenderNameChanged();
+    partial void OnSenderAddressChanging(string value);
+    partial void OnSenderAddressChanged();
+    partial void OnSenderPhoneChanging(string value);
+    partial void OnSenderPhoneChanged();
+    partial void OnSenderCountryIDChanging(string value);
+    partial void OnSenderCountryIDChanged();
+    partial void OnSenderProvinceIDChanging(string value);
+    partial void OnSenderProvinceIDChanged();
+    partial void OnSenderDistrictIDChanging(string value);
+    partial void OnSenderDistrictIDChanged();
+    partial void OnRecieverIDChanging(string value);
+    partial void OnRecieverIDChanged();
+    partial void OnRecieverRepresenterIDChanging(string value);
+    partial void OnRecieverRepresenterIDChanged();
+    partial void OnRecieverNameChanging(string value);
+    partial void OnRecieverNameChanged();
+    partial void OnRecieverAddressChanging(string value);
+    partial void OnRecieverAddressChanged();
+    partial void OnRecieverPhoneChanging(string value);
+    partial void OnRecieverPhoneChanged();
+    partial void OnRecieverCountryIDChanging(string value);
+    partial void OnRecieverCountryIDChanged();
+    partial void OnRecieverProvinceIDChanging(string value);
+    partial void OnRecieverProvinceIDChanged();
+    partial void OnRecieverDistrictIDChanging(string value);
+    partial void OnRecieverDistrictIDChanged();
+    partial void OnServiceTypeIDChanging(string value);
+    partial void OnServiceTypeIDChanged();
+    partial void OnMailerTypeIDChanging(string value);
+    partial void OnMailerTypeIDChanged();
+    partial void OnQuantityChanging(int value);
+    partial void OnQuantityChanged();
+    partial void OnRealWeightChanging(double value);
+    partial void OnRealWeightChanged();
+    partial void OnWeightChanging(double value);
+    partial void OnWeightChanged();
+    partial void OnMoneyChanging(decimal value);
+    partial void OnMoneyChanged();
+    partial void OnPriceChanging(decimal value);
+    partial void OnPriceChanged();
+    partial void OnPriceDefaultChanging(decimal value);
+    partial void OnPriceDefaultChanged();
+    partial void OnPriceServiceChanging(decimal value);
+    partial void OnPriceServiceChanged();
+    partial void OnDiscountChanging(double value);
+    partial void OnDiscountChanged();
+    partial void OnBefVATAmountChanging(decimal value);
+    partial void OnBefVATAmountChanged();
+    partial void OnVATPercentChanging(double value);
+    partial void OnVATPercentChanged();
+    partial void OnVATAmountChanging(decimal value);
+    partial void OnVATAmountChanged();
+    partial void OnAmountChanging(decimal value);
+    partial void OnAmountChanged();
+    partial void OnAmountBefDiscountChanging(decimal value);
+    partial void OnAmountBefDiscountChanged();
+    partial void OnPostOfficeAcceptIDChanging(string value);
+    partial void OnPostOfficeAcceptIDChanged();
+    partial void OnPaymentMethodIDChanging(string value);
+    partial void OnPaymentMethodIDChanged();
+    partial void OnPostOfficeRecieverMoneyIDChanging(string value);
+    partial void OnPostOfficeRecieverMoneyIDChanged();
+    partial void OnEmployeeIDChanging(string value);
+    partial void OnEmployeeIDChanged();
+    partial void OnMailerDescriptionChanging(string value);
+    partial void OnMailerDescriptionChanged();
+    partial void OnThirdpartyDocIDChanging(string value);
+    partial void OnThirdpartyDocIDChanged();
+    partial void OnThirdpartyCostChanging(System.Nullable<decimal> value);
+    partial void OnThirdpartyCostChanged();
+    partial void OnThirdpartyPaymentMethodIDChanging(string value);
+    partial void OnThirdpartyPaymentMethodIDChanged();
+    partial void OnParentMailerIDChanging(string value);
+    partial void OnParentMailerIDChanged();
+    partial void OnUserGroupIDChanging(string value);
+    partial void OnUserGroupIDChanged();
+    partial void OnLastUserGroupIDChanging(string value);
+    partial void OnLastUserGroupIDChanged();
+    partial void OnCreateDateChanging(System.DateTime value);
+    partial void OnCreateDateChanged();
+    partial void OnModifyDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnModifyDateChanged();
+    partial void OnCurrentStatusIDChanging(string value);
+    partial void OnCurrentStatusIDChanged();
+    partial void OnCurrentPostOfficeIDChanging(string value);
+    partial void OnCurrentPostOfficeIDChanged();
+    partial void OnLastEditDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastEditDateChanged();
+    partial void OnCreationDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreationDateChanged();
+    partial void OnDocIndexChanging(string value);
+    partial void OnDocIndexChanged();
+    partial void OnRangeWeightIDChanging(string value);
+    partial void OnRangeWeightIDChanged();
+    partial void OnRangeDistanceIDChanging(string value);
+    partial void OnRangeDistanceIDChanged();
+    partial void OnPriceTypeChanging(string value);
+    partial void OnPriceTypeChanged();
+    partial void OnPriceIncludeVATChanging(System.Nullable<bool> value);
+    partial void OnPriceIncludeVATChanged();
+    partial void OnCommissionAmtChanging(System.Nullable<decimal> value);
+    partial void OnCommissionAmtChanged();
+    partial void OnCommissionPercentChanging(System.Nullable<double> value);
+    partial void OnCommissionPercentChanged();
+    partial void OnCostAmtChanging(System.Nullable<decimal> value);
+    partial void OnCostAmtChanged();
+    partial void OnSalesClosingDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnSalesClosingDateChanged();
+    partial void OnRecieverAddressNbrChanging(string value);
+    partial void OnRecieverAddressNbrChanged();
+    partial void OnReceiveProvinceIDChanging(string value);
+    partial void OnReceiveProvinceIDChanged();
+    partial void OnDiscountPercentChanging(System.Nullable<double> value);
+    partial void OnDiscountPercentChanged();
+    partial void OnLastUpdDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastUpdDateChanged();
+    partial void OnRecordStateChanging(int value);
+    partial void OnRecordStateChanged();
+    partial void OnSyncFlagChanging(bool value);
+    partial void OnSyncFlagChanged();
+    partial void OnLastSyncDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastSyncDateChanged();
+    partial void OnAmt4CommChanging(System.Nullable<decimal> value);
+    partial void OnAmt4CommChanged();
+    partial void OnLastUpdStatusTimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastUpdStatusTimeChanged();
+    #endregion
+		
+		public MM_Mailer()
+		{
+			this._MM_MailerDeliveryDetails = new EntitySet<MM_MailerDeliveryDetail>(new Action<MM_MailerDeliveryDetail>(this.attach_MM_MailerDeliveryDetails), new Action<MM_MailerDeliveryDetail>(this.detach_MM_MailerDeliveryDetails));
+			this._MM_MailerDeliveryDetails1 = new EntitySet<MM_MailerDeliveryDetail>(new Action<MM_MailerDeliveryDetail>(this.attach_MM_MailerDeliveryDetails1), new Action<MM_MailerDeliveryDetail>(this.detach_MM_MailerDeliveryDetails1));
+			this._MM_PackingListInternalDetails = new EntitySet<MM_PackingListInternalDetail>(new Action<MM_PackingListInternalDetail>(this.attach_MM_PackingListInternalDetails), new Action<MM_PackingListInternalDetail>(this.detach_MM_PackingListInternalDetails));
+			this._BS_Province = default(EntityRef<BS_Province>);
+			this._MM_Customer = default(EntityRef<MM_Customer>);
+			this._MM_ServiceType = default(EntityRef<MM_ServiceType>);
+			this._MM_Status = default(EntityRef<MM_Status>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AcceptDate", DbType="DateTime NOT NULL")]
+		public System.DateTime AcceptDate
+		{
+			get
+			{
+				return this._AcceptDate;
+			}
+			set
+			{
+				if ((this._AcceptDate != value))
+				{
+					this.OnAcceptDateChanging(value);
+					this.SendPropertyChanging();
+					this._AcceptDate = value;
+					this.SendPropertyChanged("AcceptDate");
+					this.OnAcceptDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AcceptTime", DbType="DateTime NOT NULL")]
+		public System.DateTime AcceptTime
+		{
+			get
+			{
+				return this._AcceptTime;
+			}
+			set
+			{
+				if ((this._AcceptTime != value))
+				{
+					this.OnAcceptTimeChanging(value);
+					this.SendPropertyChanging();
+					this._AcceptTime = value;
+					this.SendPropertyChanged("AcceptTime");
+					this.OnAcceptTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MailerID", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MailerID
+		{
+			get
+			{
+				return this._MailerID;
+			}
+			set
+			{
+				if ((this._MailerID != value))
+				{
+					this.OnMailerIDChanging(value);
+					this.SendPropertyChanging();
+					this._MailerID = value;
+					this.SendPropertyChanged("MailerID");
+					this.OnMailerIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SenderID", DbType="VarChar(15)")]
+		public string SenderID
+		{
+			get
+			{
+				return this._SenderID;
+			}
+			set
+			{
+				if ((this._SenderID != value))
+				{
+					if (this._MM_Customer.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnSenderIDChanging(value);
+					this.SendPropertyChanging();
+					this._SenderID = value;
+					this.SendPropertyChanged("SenderID");
+					this.OnSenderIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SenderRepresenterID", DbType="VarChar(15)")]
+		public string SenderRepresenterID
+		{
+			get
+			{
+				return this._SenderRepresenterID;
+			}
+			set
+			{
+				if ((this._SenderRepresenterID != value))
+				{
+					this.OnSenderRepresenterIDChanging(value);
+					this.SendPropertyChanging();
+					this._SenderRepresenterID = value;
+					this.SendPropertyChanged("SenderRepresenterID");
+					this.OnSenderRepresenterIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SenderName", DbType="NVarChar(100)")]
+		public string SenderName
+		{
+			get
+			{
+				return this._SenderName;
+			}
+			set
+			{
+				if ((this._SenderName != value))
+				{
+					this.OnSenderNameChanging(value);
+					this.SendPropertyChanging();
+					this._SenderName = value;
+					this.SendPropertyChanged("SenderName");
+					this.OnSenderNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SenderAddress", DbType="NVarChar(255)")]
+		public string SenderAddress
+		{
+			get
+			{
+				return this._SenderAddress;
+			}
+			set
+			{
+				if ((this._SenderAddress != value))
+				{
+					this.OnSenderAddressChanging(value);
+					this.SendPropertyChanging();
+					this._SenderAddress = value;
+					this.SendPropertyChanged("SenderAddress");
+					this.OnSenderAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SenderPhone", DbType="VarChar(50)")]
+		public string SenderPhone
+		{
+			get
+			{
+				return this._SenderPhone;
+			}
+			set
+			{
+				if ((this._SenderPhone != value))
+				{
+					this.OnSenderPhoneChanging(value);
+					this.SendPropertyChanging();
+					this._SenderPhone = value;
+					this.SendPropertyChanged("SenderPhone");
+					this.OnSenderPhoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SenderCountryID", DbType="VarChar(15)")]
+		public string SenderCountryID
+		{
+			get
+			{
+				return this._SenderCountryID;
+			}
+			set
+			{
+				if ((this._SenderCountryID != value))
+				{
+					this.OnSenderCountryIDChanging(value);
+					this.SendPropertyChanging();
+					this._SenderCountryID = value;
+					this.SendPropertyChanged("SenderCountryID");
+					this.OnSenderCountryIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SenderProvinceID", DbType="VarChar(15)")]
+		public string SenderProvinceID
+		{
+			get
+			{
+				return this._SenderProvinceID;
+			}
+			set
+			{
+				if ((this._SenderProvinceID != value))
+				{
+					this.OnSenderProvinceIDChanging(value);
+					this.SendPropertyChanging();
+					this._SenderProvinceID = value;
+					this.SendPropertyChanged("SenderProvinceID");
+					this.OnSenderProvinceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SenderDistrictID", DbType="VarChar(15)")]
+		public string SenderDistrictID
+		{
+			get
+			{
+				return this._SenderDistrictID;
+			}
+			set
+			{
+				if ((this._SenderDistrictID != value))
+				{
+					this.OnSenderDistrictIDChanging(value);
+					this.SendPropertyChanging();
+					this._SenderDistrictID = value;
+					this.SendPropertyChanged("SenderDistrictID");
+					this.OnSenderDistrictIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecieverID", DbType="VarChar(15)")]
+		public string RecieverID
+		{
+			get
+			{
+				return this._RecieverID;
+			}
+			set
+			{
+				if ((this._RecieverID != value))
+				{
+					this.OnRecieverIDChanging(value);
+					this.SendPropertyChanging();
+					this._RecieverID = value;
+					this.SendPropertyChanged("RecieverID");
+					this.OnRecieverIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecieverRepresenterID", DbType="VarChar(15)")]
+		public string RecieverRepresenterID
+		{
+			get
+			{
+				return this._RecieverRepresenterID;
+			}
+			set
+			{
+				if ((this._RecieverRepresenterID != value))
+				{
+					this.OnRecieverRepresenterIDChanging(value);
+					this.SendPropertyChanging();
+					this._RecieverRepresenterID = value;
+					this.SendPropertyChanged("RecieverRepresenterID");
+					this.OnRecieverRepresenterIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecieverName", DbType="NVarChar(100)")]
+		public string RecieverName
+		{
+			get
+			{
+				return this._RecieverName;
+			}
+			set
+			{
+				if ((this._RecieverName != value))
+				{
+					this.OnRecieverNameChanging(value);
+					this.SendPropertyChanging();
+					this._RecieverName = value;
+					this.SendPropertyChanged("RecieverName");
+					this.OnRecieverNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecieverAddress", DbType="NVarChar(255)")]
+		public string RecieverAddress
+		{
+			get
+			{
+				return this._RecieverAddress;
+			}
+			set
+			{
+				if ((this._RecieverAddress != value))
+				{
+					this.OnRecieverAddressChanging(value);
+					this.SendPropertyChanging();
+					this._RecieverAddress = value;
+					this.SendPropertyChanged("RecieverAddress");
+					this.OnRecieverAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecieverPhone", DbType="VarChar(14)")]
+		public string RecieverPhone
+		{
+			get
+			{
+				return this._RecieverPhone;
+			}
+			set
+			{
+				if ((this._RecieverPhone != value))
+				{
+					this.OnRecieverPhoneChanging(value);
+					this.SendPropertyChanging();
+					this._RecieverPhone = value;
+					this.SendPropertyChanged("RecieverPhone");
+					this.OnRecieverPhoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecieverCountryID", DbType="VarChar(15)")]
+		public string RecieverCountryID
+		{
+			get
+			{
+				return this._RecieverCountryID;
+			}
+			set
+			{
+				if ((this._RecieverCountryID != value))
+				{
+					this.OnRecieverCountryIDChanging(value);
+					this.SendPropertyChanging();
+					this._RecieverCountryID = value;
+					this.SendPropertyChanged("RecieverCountryID");
+					this.OnRecieverCountryIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecieverProvinceID", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string RecieverProvinceID
+		{
+			get
+			{
+				return this._RecieverProvinceID;
+			}
+			set
+			{
+				if ((this._RecieverProvinceID != value))
+				{
+					if (this._BS_Province.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnRecieverProvinceIDChanging(value);
+					this.SendPropertyChanging();
+					this._RecieverProvinceID = value;
+					this.SendPropertyChanged("RecieverProvinceID");
+					this.OnRecieverProvinceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecieverDistrictID", DbType="VarChar(15)")]
+		public string RecieverDistrictID
+		{
+			get
+			{
+				return this._RecieverDistrictID;
+			}
+			set
+			{
+				if ((this._RecieverDistrictID != value))
+				{
+					this.OnRecieverDistrictIDChanging(value);
+					this.SendPropertyChanging();
+					this._RecieverDistrictID = value;
+					this.SendPropertyChanged("RecieverDistrictID");
+					this.OnRecieverDistrictIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceTypeID", DbType="VarChar(3) NOT NULL", CanBeNull=false)]
+		public string ServiceTypeID
+		{
+			get
+			{
+				return this._ServiceTypeID;
+			}
+			set
+			{
+				if ((this._ServiceTypeID != value))
+				{
+					if (this._MM_ServiceType.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnServiceTypeIDChanging(value);
+					this.SendPropertyChanging();
+					this._ServiceTypeID = value;
+					this.SendPropertyChanged("ServiceTypeID");
+					this.OnServiceTypeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MailerTypeID", DbType="VarChar(2) NOT NULL", CanBeNull=false)]
+		public string MailerTypeID
+		{
+			get
+			{
+				return this._MailerTypeID;
+			}
+			set
+			{
+				if ((this._MailerTypeID != value))
+				{
+					this.OnMailerTypeIDChanging(value);
+					this.SendPropertyChanging();
+					this._MailerTypeID = value;
+					this.SendPropertyChanged("MailerTypeID");
+					this.OnMailerTypeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Int NOT NULL")]
+		public int Quantity
+		{
+			get
+			{
+				return this._Quantity;
+			}
+			set
+			{
+				if ((this._Quantity != value))
+				{
+					this.OnQuantityChanging(value);
+					this.SendPropertyChanging();
+					this._Quantity = value;
+					this.SendPropertyChanged("Quantity");
+					this.OnQuantityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RealWeight", DbType="Float NOT NULL")]
+		public double RealWeight
+		{
+			get
+			{
+				return this._RealWeight;
+			}
+			set
+			{
+				if ((this._RealWeight != value))
+				{
+					this.OnRealWeightChanging(value);
+					this.SendPropertyChanging();
+					this._RealWeight = value;
+					this.SendPropertyChanged("RealWeight");
+					this.OnRealWeightChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Weight", DbType="Float NOT NULL")]
+		public double Weight
+		{
+			get
+			{
+				return this._Weight;
+			}
+			set
+			{
+				if ((this._Weight != value))
+				{
+					this.OnWeightChanging(value);
+					this.SendPropertyChanging();
+					this._Weight = value;
+					this.SendPropertyChanged("Weight");
+					this.OnWeightChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Money", DbType="Money NOT NULL")]
+		public decimal Money
+		{
+			get
+			{
+				return this._Money;
+			}
+			set
+			{
+				if ((this._Money != value))
+				{
+					this.OnMoneyChanging(value);
+					this.SendPropertyChanging();
+					this._Money = value;
+					this.SendPropertyChanged("Money");
+					this.OnMoneyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Money NOT NULL")]
+		public decimal Price
+		{
+			get
+			{
+				return this._Price;
+			}
+			set
+			{
+				if ((this._Price != value))
+				{
+					this.OnPriceChanging(value);
+					this.SendPropertyChanging();
+					this._Price = value;
+					this.SendPropertyChanged("Price");
+					this.OnPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PriceDefault", DbType="Money NOT NULL")]
+		public decimal PriceDefault
+		{
+			get
+			{
+				return this._PriceDefault;
+			}
+			set
+			{
+				if ((this._PriceDefault != value))
+				{
+					this.OnPriceDefaultChanging(value);
+					this.SendPropertyChanging();
+					this._PriceDefault = value;
+					this.SendPropertyChanged("PriceDefault");
+					this.OnPriceDefaultChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PriceService", DbType="Money NOT NULL")]
+		public decimal PriceService
+		{
+			get
+			{
+				return this._PriceService;
+			}
+			set
+			{
+				if ((this._PriceService != value))
+				{
+					this.OnPriceServiceChanging(value);
+					this.SendPropertyChanging();
+					this._PriceService = value;
+					this.SendPropertyChanged("PriceService");
+					this.OnPriceServiceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Discount", DbType="Float NOT NULL")]
+		public double Discount
+		{
+			get
+			{
+				return this._Discount;
+			}
+			set
+			{
+				if ((this._Discount != value))
+				{
+					this.OnDiscountChanging(value);
+					this.SendPropertyChanging();
+					this._Discount = value;
+					this.SendPropertyChanged("Discount");
+					this.OnDiscountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BefVATAmount", DbType="Money NOT NULL")]
+		public decimal BefVATAmount
+		{
+			get
+			{
+				return this._BefVATAmount;
+			}
+			set
+			{
+				if ((this._BefVATAmount != value))
+				{
+					this.OnBefVATAmountChanging(value);
+					this.SendPropertyChanging();
+					this._BefVATAmount = value;
+					this.SendPropertyChanged("BefVATAmount");
+					this.OnBefVATAmountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VATPercent", DbType="Float NOT NULL")]
+		public double VATPercent
+		{
+			get
+			{
+				return this._VATPercent;
+			}
+			set
+			{
+				if ((this._VATPercent != value))
+				{
+					this.OnVATPercentChanging(value);
+					this.SendPropertyChanging();
+					this._VATPercent = value;
+					this.SendPropertyChanged("VATPercent");
+					this.OnVATPercentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VATAmount", DbType="Money NOT NULL")]
+		public decimal VATAmount
+		{
+			get
+			{
+				return this._VATAmount;
+			}
+			set
+			{
+				if ((this._VATAmount != value))
+				{
+					this.OnVATAmountChanging(value);
+					this.SendPropertyChanging();
+					this._VATAmount = value;
+					this.SendPropertyChanged("VATAmount");
+					this.OnVATAmountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Amount", DbType="Money NOT NULL")]
+		public decimal Amount
+		{
+			get
+			{
+				return this._Amount;
+			}
+			set
+			{
+				if ((this._Amount != value))
+				{
+					this.OnAmountChanging(value);
+					this.SendPropertyChanging();
+					this._Amount = value;
+					this.SendPropertyChanged("Amount");
+					this.OnAmountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AmountBefDiscount", DbType="Money NOT NULL")]
+		public decimal AmountBefDiscount
+		{
+			get
+			{
+				return this._AmountBefDiscount;
+			}
+			set
+			{
+				if ((this._AmountBefDiscount != value))
+				{
+					this.OnAmountBefDiscountChanging(value);
+					this.SendPropertyChanging();
+					this._AmountBefDiscount = value;
+					this.SendPropertyChanged("AmountBefDiscount");
+					this.OnAmountBefDiscountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostOfficeAcceptID", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string PostOfficeAcceptID
+		{
+			get
+			{
+				return this._PostOfficeAcceptID;
+			}
+			set
+			{
+				if ((this._PostOfficeAcceptID != value))
+				{
+					this.OnPostOfficeAcceptIDChanging(value);
+					this.SendPropertyChanging();
+					this._PostOfficeAcceptID = value;
+					this.SendPropertyChanged("PostOfficeAcceptID");
+					this.OnPostOfficeAcceptIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymentMethodID", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string PaymentMethodID
+		{
+			get
+			{
+				return this._PaymentMethodID;
+			}
+			set
+			{
+				if ((this._PaymentMethodID != value))
+				{
+					this.OnPaymentMethodIDChanging(value);
+					this.SendPropertyChanging();
+					this._PaymentMethodID = value;
+					this.SendPropertyChanged("PaymentMethodID");
+					this.OnPaymentMethodIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostOfficeRecieverMoneyID", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string PostOfficeRecieverMoneyID
+		{
+			get
+			{
+				return this._PostOfficeRecieverMoneyID;
+			}
+			set
+			{
+				if ((this._PostOfficeRecieverMoneyID != value))
+				{
+					this.OnPostOfficeRecieverMoneyIDChanging(value);
+					this.SendPropertyChanging();
+					this._PostOfficeRecieverMoneyID = value;
+					this.SendPropertyChanged("PostOfficeRecieverMoneyID");
+					this.OnPostOfficeRecieverMoneyIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeID", DbType="VarChar(20)")]
+		public string EmployeeID
+		{
+			get
+			{
+				return this._EmployeeID;
+			}
+			set
+			{
+				if ((this._EmployeeID != value))
+				{
+					this.OnEmployeeIDChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeID = value;
+					this.SendPropertyChanged("EmployeeID");
+					this.OnEmployeeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MailerDescription", DbType="NVarChar(200)")]
+		public string MailerDescription
+		{
+			get
+			{
+				return this._MailerDescription;
+			}
+			set
+			{
+				if ((this._MailerDescription != value))
+				{
+					this.OnMailerDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._MailerDescription = value;
+					this.SendPropertyChanged("MailerDescription");
+					this.OnMailerDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThirdpartyDocID", DbType="VarChar(20)")]
+		public string ThirdpartyDocID
+		{
+			get
+			{
+				return this._ThirdpartyDocID;
+			}
+			set
+			{
+				if ((this._ThirdpartyDocID != value))
+				{
+					this.OnThirdpartyDocIDChanging(value);
+					this.SendPropertyChanging();
+					this._ThirdpartyDocID = value;
+					this.SendPropertyChanged("ThirdpartyDocID");
+					this.OnThirdpartyDocIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThirdpartyCost", DbType="Money")]
+		public System.Nullable<decimal> ThirdpartyCost
+		{
+			get
+			{
+				return this._ThirdpartyCost;
+			}
+			set
+			{
+				if ((this._ThirdpartyCost != value))
+				{
+					this.OnThirdpartyCostChanging(value);
+					this.SendPropertyChanging();
+					this._ThirdpartyCost = value;
+					this.SendPropertyChanged("ThirdpartyCost");
+					this.OnThirdpartyCostChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThirdpartyPaymentMethodID", DbType="VarChar(15)")]
+		public string ThirdpartyPaymentMethodID
+		{
+			get
+			{
+				return this._ThirdpartyPaymentMethodID;
+			}
+			set
+			{
+				if ((this._ThirdpartyPaymentMethodID != value))
+				{
+					this.OnThirdpartyPaymentMethodIDChanging(value);
+					this.SendPropertyChanging();
+					this._ThirdpartyPaymentMethodID = value;
+					this.SendPropertyChanged("ThirdpartyPaymentMethodID");
+					this.OnThirdpartyPaymentMethodIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ParentMailerID", DbType="VarChar(20)")]
+		public string ParentMailerID
+		{
+			get
+			{
+				return this._ParentMailerID;
+			}
+			set
+			{
+				if ((this._ParentMailerID != value))
+				{
+					this.OnParentMailerIDChanging(value);
+					this.SendPropertyChanging();
+					this._ParentMailerID = value;
+					this.SendPropertyChanged("ParentMailerID");
+					this.OnParentMailerIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserGroupID", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string UserGroupID
+		{
+			get
+			{
+				return this._UserGroupID;
+			}
+			set
+			{
+				if ((this._UserGroupID != value))
+				{
+					this.OnUserGroupIDChanging(value);
+					this.SendPropertyChanging();
+					this._UserGroupID = value;
+					this.SendPropertyChanged("UserGroupID");
+					this.OnUserGroupIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastUserGroupID", DbType="VarChar(20)")]
+		public string LastUserGroupID
+		{
+			get
+			{
+				return this._LastUserGroupID;
+			}
+			set
+			{
+				if ((this._LastUserGroupID != value))
+				{
+					this.OnLastUserGroupIDChanging(value);
+					this.SendPropertyChanging();
+					this._LastUserGroupID = value;
+					this.SendPropertyChanged("LastUserGroupID");
+					this.OnLastUserGroupIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateDate", DbType="DateTime NOT NULL")]
+		public System.DateTime CreateDate
+		{
+			get
+			{
+				return this._CreateDate;
+			}
+			set
+			{
+				if ((this._CreateDate != value))
+				{
+					this.OnCreateDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreateDate = value;
+					this.SendPropertyChanged("CreateDate");
+					this.OnCreateDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifyDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ModifyDate
+		{
+			get
+			{
+				return this._ModifyDate;
+			}
+			set
+			{
+				if ((this._ModifyDate != value))
+				{
+					this.OnModifyDateChanging(value);
+					this.SendPropertyChanging();
+					this._ModifyDate = value;
+					this.SendPropertyChanged("ModifyDate");
+					this.OnModifyDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CurrentStatusID", DbType="VarChar(2) NOT NULL", CanBeNull=false)]
+		public string CurrentStatusID
+		{
+			get
+			{
+				return this._CurrentStatusID;
+			}
+			set
+			{
+				if ((this._CurrentStatusID != value))
+				{
+					if (this._MM_Status.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnCurrentStatusIDChanging(value);
+					this.SendPropertyChanging();
+					this._CurrentStatusID = value;
+					this.SendPropertyChanged("CurrentStatusID");
+					this.OnCurrentStatusIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CurrentPostOfficeID", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string CurrentPostOfficeID
+		{
+			get
+			{
+				return this._CurrentPostOfficeID;
+			}
+			set
+			{
+				if ((this._CurrentPostOfficeID != value))
+				{
+					this.OnCurrentPostOfficeIDChanging(value);
+					this.SendPropertyChanging();
+					this._CurrentPostOfficeID = value;
+					this.SendPropertyChanged("CurrentPostOfficeID");
+					this.OnCurrentPostOfficeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastEditDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastEditDate
+		{
+			get
+			{
+				return this._LastEditDate;
+			}
+			set
+			{
+				if ((this._LastEditDate != value))
+				{
+					this.OnLastEditDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastEditDate = value;
+					this.SendPropertyChanged("LastEditDate");
+					this.OnLastEditDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreationDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreationDate
+		{
+			get
+			{
+				return this._CreationDate;
+			}
+			set
+			{
+				if ((this._CreationDate != value))
+				{
+					this.OnCreationDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreationDate = value;
+					this.SendPropertyChanged("CreationDate");
+					this.OnCreationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DocIndex", DbType="VarChar(30)")]
+		public string DocIndex
+		{
+			get
+			{
+				return this._DocIndex;
+			}
+			set
+			{
+				if ((this._DocIndex != value))
+				{
+					this.OnDocIndexChanging(value);
+					this.SendPropertyChanging();
+					this._DocIndex = value;
+					this.SendPropertyChanged("DocIndex");
+					this.OnDocIndexChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RangeWeightID", DbType="VarChar(15)")]
+		public string RangeWeightID
+		{
+			get
+			{
+				return this._RangeWeightID;
+			}
+			set
+			{
+				if ((this._RangeWeightID != value))
+				{
+					this.OnRangeWeightIDChanging(value);
+					this.SendPropertyChanging();
+					this._RangeWeightID = value;
+					this.SendPropertyChanged("RangeWeightID");
+					this.OnRangeWeightIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RangeDistanceID", DbType="VarChar(15)")]
+		public string RangeDistanceID
+		{
+			get
+			{
+				return this._RangeDistanceID;
+			}
+			set
+			{
+				if ((this._RangeDistanceID != value))
+				{
+					this.OnRangeDistanceIDChanging(value);
+					this.SendPropertyChanging();
+					this._RangeDistanceID = value;
+					this.SendPropertyChanged("RangeDistanceID");
+					this.OnRangeDistanceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PriceType", DbType="VarChar(1)")]
+		public string PriceType
+		{
+			get
+			{
+				return this._PriceType;
+			}
+			set
+			{
+				if ((this._PriceType != value))
+				{
+					this.OnPriceTypeChanging(value);
+					this.SendPropertyChanging();
+					this._PriceType = value;
+					this.SendPropertyChanged("PriceType");
+					this.OnPriceTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PriceIncludeVAT", DbType="Bit")]
+		public System.Nullable<bool> PriceIncludeVAT
+		{
+			get
+			{
+				return this._PriceIncludeVAT;
+			}
+			set
+			{
+				if ((this._PriceIncludeVAT != value))
+				{
+					this.OnPriceIncludeVATChanging(value);
+					this.SendPropertyChanging();
+					this._PriceIncludeVAT = value;
+					this.SendPropertyChanged("PriceIncludeVAT");
+					this.OnPriceIncludeVATChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CommissionAmt", DbType="Money")]
+		public System.Nullable<decimal> CommissionAmt
+		{
+			get
+			{
+				return this._CommissionAmt;
+			}
+			set
+			{
+				if ((this._CommissionAmt != value))
+				{
+					this.OnCommissionAmtChanging(value);
+					this.SendPropertyChanging();
+					this._CommissionAmt = value;
+					this.SendPropertyChanged("CommissionAmt");
+					this.OnCommissionAmtChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CommissionPercent", DbType="Float")]
+		public System.Nullable<double> CommissionPercent
+		{
+			get
+			{
+				return this._CommissionPercent;
+			}
+			set
+			{
+				if ((this._CommissionPercent != value))
+				{
+					this.OnCommissionPercentChanging(value);
+					this.SendPropertyChanging();
+					this._CommissionPercent = value;
+					this.SendPropertyChanged("CommissionPercent");
+					this.OnCommissionPercentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CostAmt", DbType="Money")]
+		public System.Nullable<decimal> CostAmt
+		{
+			get
+			{
+				return this._CostAmt;
+			}
+			set
+			{
+				if ((this._CostAmt != value))
+				{
+					this.OnCostAmtChanging(value);
+					this.SendPropertyChanging();
+					this._CostAmt = value;
+					this.SendPropertyChanged("CostAmt");
+					this.OnCostAmtChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SalesClosingDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> SalesClosingDate
+		{
+			get
+			{
+				return this._SalesClosingDate;
+			}
+			set
+			{
+				if ((this._SalesClosingDate != value))
+				{
+					this.OnSalesClosingDateChanging(value);
+					this.SendPropertyChanging();
+					this._SalesClosingDate = value;
+					this.SendPropertyChanged("SalesClosingDate");
+					this.OnSalesClosingDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecieverAddressNbr", DbType="NVarChar(50)")]
+		public string RecieverAddressNbr
+		{
+			get
+			{
+				return this._RecieverAddressNbr;
+			}
+			set
+			{
+				if ((this._RecieverAddressNbr != value))
+				{
+					this.OnRecieverAddressNbrChanging(value);
+					this.SendPropertyChanging();
+					this._RecieverAddressNbr = value;
+					this.SendPropertyChanged("RecieverAddressNbr");
+					this.OnRecieverAddressNbrChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReceiveProvinceID", DbType="VarChar(15)")]
+		public string ReceiveProvinceID
+		{
+			get
+			{
+				return this._ReceiveProvinceID;
+			}
+			set
+			{
+				if ((this._ReceiveProvinceID != value))
+				{
+					this.OnReceiveProvinceIDChanging(value);
+					this.SendPropertyChanging();
+					this._ReceiveProvinceID = value;
+					this.SendPropertyChanged("ReceiveProvinceID");
+					this.OnReceiveProvinceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiscountPercent", DbType="Float")]
+		public System.Nullable<double> DiscountPercent
+		{
+			get
+			{
+				return this._DiscountPercent;
+			}
+			set
+			{
+				if ((this._DiscountPercent != value))
+				{
+					this.OnDiscountPercentChanging(value);
+					this.SendPropertyChanging();
+					this._DiscountPercent = value;
+					this.SendPropertyChanged("DiscountPercent");
+					this.OnDiscountPercentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastUpdDate", DbType="Date")]
+		public System.Nullable<System.DateTime> LastUpdDate
+		{
+			get
+			{
+				return this._LastUpdDate;
+			}
+			set
+			{
+				if ((this._LastUpdDate != value))
+				{
+					this.OnLastUpdDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastUpdDate = value;
+					this.SendPropertyChanged("LastUpdDate");
+					this.OnLastUpdDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecordState", DbType="Int NOT NULL")]
+		public int RecordState
+		{
+			get
+			{
+				return this._RecordState;
+			}
+			set
+			{
+				if ((this._RecordState != value))
+				{
+					this.OnRecordStateChanging(value);
+					this.SendPropertyChanging();
+					this._RecordState = value;
+					this.SendPropertyChanged("RecordState");
+					this.OnRecordStateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SyncFlag", DbType="Bit NOT NULL")]
+		public bool SyncFlag
+		{
+			get
+			{
+				return this._SyncFlag;
+			}
+			set
+			{
+				if ((this._SyncFlag != value))
+				{
+					this.OnSyncFlagChanging(value);
+					this.SendPropertyChanging();
+					this._SyncFlag = value;
+					this.SendPropertyChanged("SyncFlag");
+					this.OnSyncFlagChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastSyncDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastSyncDate
+		{
+			get
+			{
+				return this._LastSyncDate;
+			}
+			set
+			{
+				if ((this._LastSyncDate != value))
+				{
+					this.OnLastSyncDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastSyncDate = value;
+					this.SendPropertyChanged("LastSyncDate");
+					this.OnLastSyncDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Amt4Comm", DbType="Money")]
+		public System.Nullable<decimal> Amt4Comm
+		{
+			get
+			{
+				return this._Amt4Comm;
+			}
+			set
+			{
+				if ((this._Amt4Comm != value))
+				{
+					this.OnAmt4CommChanging(value);
+					this.SendPropertyChanging();
+					this._Amt4Comm = value;
+					this.SendPropertyChanged("Amt4Comm");
+					this.OnAmt4CommChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastUpdStatusTime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastUpdStatusTime
+		{
+			get
+			{
+				return this._LastUpdStatusTime;
+			}
+			set
+			{
+				if ((this._LastUpdStatusTime != value))
+				{
+					this.OnLastUpdStatusTimeChanging(value);
+					this.SendPropertyChanging();
+					this._LastUpdStatusTime = value;
+					this.SendPropertyChanged("LastUpdStatusTime");
+					this.OnLastUpdStatusTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_Mailer_MM_MailerDeliveryDetail", Storage="_MM_MailerDeliveryDetails", ThisKey="MailerID", OtherKey="MailerID")]
+		public EntitySet<MM_MailerDeliveryDetail> MM_MailerDeliveryDetails
+		{
+			get
+			{
+				return this._MM_MailerDeliveryDetails;
+			}
+			set
+			{
+				this._MM_MailerDeliveryDetails.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_Mailer_MM_MailerDeliveryDetail1", Storage="_MM_MailerDeliveryDetails1", ThisKey="MailerID", OtherKey="MailerID")]
+		public EntitySet<MM_MailerDeliveryDetail> MM_MailerDeliveryDetails1
+		{
+			get
+			{
+				return this._MM_MailerDeliveryDetails1;
+			}
+			set
+			{
+				this._MM_MailerDeliveryDetails1.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_Mailer_MM_PackingListInternalDetail", Storage="_MM_PackingListInternalDetails", ThisKey="MailerID", OtherKey="MailerID")]
+		public EntitySet<MM_PackingListInternalDetail> MM_PackingListInternalDetails
+		{
+			get
+			{
+				return this._MM_PackingListInternalDetails;
+			}
+			set
+			{
+				this._MM_PackingListInternalDetails.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BS_Province_MM_Mailer", Storage="_BS_Province", ThisKey="RecieverProvinceID", OtherKey="ProvinceID", IsForeignKey=true)]
+		public BS_Province BS_Province
+		{
+			get
+			{
+				return this._BS_Province.Entity;
+			}
+			set
+			{
+				BS_Province previousValue = this._BS_Province.Entity;
+				if (((previousValue != value) 
+							|| (this._BS_Province.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._BS_Province.Entity = null;
+						previousValue.MM_Mailers.Remove(this);
+					}
+					this._BS_Province.Entity = value;
+					if ((value != null))
+					{
+						value.MM_Mailers.Add(this);
+						this._RecieverProvinceID = value.ProvinceID;
+					}
+					else
+					{
+						this._RecieverProvinceID = default(string);
+					}
+					this.SendPropertyChanged("BS_Province");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_Customer_MM_Mailer", Storage="_MM_Customer", ThisKey="SenderID", OtherKey="CustomerID", IsForeignKey=true)]
+		public MM_Customer MM_Customer
+		{
+			get
+			{
+				return this._MM_Customer.Entity;
+			}
+			set
+			{
+				MM_Customer previousValue = this._MM_Customer.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_Customer.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_Customer.Entity = null;
+						previousValue.MM_Mailers.Remove(this);
+					}
+					this._MM_Customer.Entity = value;
+					if ((value != null))
+					{
+						value.MM_Mailers.Add(this);
+						this._SenderID = value.CustomerID;
+					}
+					else
+					{
+						this._SenderID = default(string);
+					}
+					this.SendPropertyChanged("MM_Customer");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_ServiceType_MM_Mailer", Storage="_MM_ServiceType", ThisKey="ServiceTypeID", OtherKey="ServiceTypeID", IsForeignKey=true)]
+		public MM_ServiceType MM_ServiceType
+		{
+			get
+			{
+				return this._MM_ServiceType.Entity;
+			}
+			set
+			{
+				MM_ServiceType previousValue = this._MM_ServiceType.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_ServiceType.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_ServiceType.Entity = null;
+						previousValue.MM_Mailers.Remove(this);
+					}
+					this._MM_ServiceType.Entity = value;
+					if ((value != null))
+					{
+						value.MM_Mailers.Add(this);
+						this._ServiceTypeID = value.ServiceTypeID;
+					}
+					else
+					{
+						this._ServiceTypeID = default(string);
+					}
+					this.SendPropertyChanged("MM_ServiceType");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_Status_MM_Mailer", Storage="_MM_Status", ThisKey="CurrentStatusID", OtherKey="StatusID", IsForeignKey=true)]
+		public MM_Status MM_Status
+		{
+			get
+			{
+				return this._MM_Status.Entity;
+			}
+			set
+			{
+				MM_Status previousValue = this._MM_Status.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_Status.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_Status.Entity = null;
+						previousValue.MM_Mailers.Remove(this);
+					}
+					this._MM_Status.Entity = value;
+					if ((value != null))
+					{
+						value.MM_Mailers.Add(this);
+						this._CurrentStatusID = value.StatusID;
+					}
+					else
+					{
+						this._CurrentStatusID = default(string);
+					}
+					this.SendPropertyChanged("MM_Status");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_MM_MailerDeliveryDetails(MM_MailerDeliveryDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_Mailer = this;
+		}
+		
+		private void detach_MM_MailerDeliveryDetails(MM_MailerDeliveryDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_Mailer = null;
+		}
+		
+		private void attach_MM_MailerDeliveryDetails1(MM_MailerDeliveryDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_Mailer1 = this;
+		}
+		
+		private void detach_MM_MailerDeliveryDetails1(MM_MailerDeliveryDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_Mailer1 = null;
+		}
+		
+		private void attach_MM_PackingListInternalDetails(MM_PackingListInternalDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_Mailer = this;
+		}
+		
+		private void detach_MM_PackingListInternalDetails(MM_PackingListInternalDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_Mailer = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MM_PackingListInternalDetail")]
+	public partial class MM_PackingListInternalDetail : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _DocumentID;
+		
+		private string _MailerID;
+		
+		private bool _Accept;
+		
+		private string _SendNotes;
+		
+		private string _AcceptNotes;
+		
+		private System.Nullable<System.DateTime> _AcceptDate;
+		
+		private System.Nullable<System.DateTime> _LastEditDate;
+		
+		private System.Nullable<System.DateTime> _CreationDate;
+		
+		private bool _SyncFlag;
+		
+		private System.Nullable<System.DateTime> _LastSyncDate;
+		
+		private EntityRef<MM_Mailer> _MM_Mailer;
+		
+		private EntityRef<MM_PackingListInternal> _MM_PackingListInternal;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDocumentIDChanging(string value);
+    partial void OnDocumentIDChanged();
+    partial void OnMailerIDChanging(string value);
+    partial void OnMailerIDChanged();
+    partial void OnAcceptChanging(bool value);
+    partial void OnAcceptChanged();
+    partial void OnSendNotesChanging(string value);
+    partial void OnSendNotesChanged();
+    partial void OnAcceptNotesChanging(string value);
+    partial void OnAcceptNotesChanged();
+    partial void OnAcceptDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnAcceptDateChanged();
+    partial void OnLastEditDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastEditDateChanged();
+    partial void OnCreationDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreationDateChanged();
+    partial void OnSyncFlagChanging(bool value);
+    partial void OnSyncFlagChanged();
+    partial void OnLastSyncDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastSyncDateChanged();
+    #endregion
+		
+		public MM_PackingListInternalDetail()
+		{
+			this._MM_Mailer = default(EntityRef<MM_Mailer>);
+			this._MM_PackingListInternal = default(EntityRef<MM_PackingListInternal>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DocumentID", DbType="VarChar(15) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string DocumentID
+		{
+			get
+			{
+				return this._DocumentID;
+			}
+			set
+			{
+				if ((this._DocumentID != value))
+				{
+					if (this._MM_PackingListInternal.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnDocumentIDChanging(value);
+					this.SendPropertyChanging();
+					this._DocumentID = value;
+					this.SendPropertyChanged("DocumentID");
+					this.OnDocumentIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MailerID", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MailerID
+		{
+			get
+			{
+				return this._MailerID;
+			}
+			set
+			{
+				if ((this._MailerID != value))
+				{
+					if (this._MM_Mailer.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMailerIDChanging(value);
+					this.SendPropertyChanging();
+					this._MailerID = value;
+					this.SendPropertyChanged("MailerID");
+					this.OnMailerIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Accept", DbType="Bit NOT NULL")]
+		public bool Accept
+		{
+			get
+			{
+				return this._Accept;
+			}
+			set
+			{
+				if ((this._Accept != value))
+				{
+					this.OnAcceptChanging(value);
+					this.SendPropertyChanging();
+					this._Accept = value;
+					this.SendPropertyChanged("Accept");
+					this.OnAcceptChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SendNotes", DbType="NVarChar(200)")]
+		public string SendNotes
+		{
+			get
+			{
+				return this._SendNotes;
+			}
+			set
+			{
+				if ((this._SendNotes != value))
+				{
+					this.OnSendNotesChanging(value);
+					this.SendPropertyChanging();
+					this._SendNotes = value;
+					this.SendPropertyChanged("SendNotes");
+					this.OnSendNotesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AcceptNotes", DbType="NVarChar(200)")]
+		public string AcceptNotes
+		{
+			get
+			{
+				return this._AcceptNotes;
+			}
+			set
+			{
+				if ((this._AcceptNotes != value))
+				{
+					this.OnAcceptNotesChanging(value);
+					this.SendPropertyChanging();
+					this._AcceptNotes = value;
+					this.SendPropertyChanged("AcceptNotes");
+					this.OnAcceptNotesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AcceptDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> AcceptDate
+		{
+			get
+			{
+				return this._AcceptDate;
+			}
+			set
+			{
+				if ((this._AcceptDate != value))
+				{
+					this.OnAcceptDateChanging(value);
+					this.SendPropertyChanging();
+					this._AcceptDate = value;
+					this.SendPropertyChanged("AcceptDate");
+					this.OnAcceptDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastEditDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastEditDate
+		{
+			get
+			{
+				return this._LastEditDate;
+			}
+			set
+			{
+				if ((this._LastEditDate != value))
+				{
+					this.OnLastEditDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastEditDate = value;
+					this.SendPropertyChanged("LastEditDate");
+					this.OnLastEditDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreationDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreationDate
+		{
+			get
+			{
+				return this._CreationDate;
+			}
+			set
+			{
+				if ((this._CreationDate != value))
+				{
+					this.OnCreationDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreationDate = value;
+					this.SendPropertyChanged("CreationDate");
+					this.OnCreationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SyncFlag", DbType="Bit NOT NULL")]
+		public bool SyncFlag
+		{
+			get
+			{
+				return this._SyncFlag;
+			}
+			set
+			{
+				if ((this._SyncFlag != value))
+				{
+					this.OnSyncFlagChanging(value);
+					this.SendPropertyChanging();
+					this._SyncFlag = value;
+					this.SendPropertyChanged("SyncFlag");
+					this.OnSyncFlagChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastSyncDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastSyncDate
+		{
+			get
+			{
+				return this._LastSyncDate;
+			}
+			set
+			{
+				if ((this._LastSyncDate != value))
+				{
+					this.OnLastSyncDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastSyncDate = value;
+					this.SendPropertyChanged("LastSyncDate");
+					this.OnLastSyncDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_Mailer_MM_PackingListInternalDetail", Storage="_MM_Mailer", ThisKey="MailerID", OtherKey="MailerID", IsForeignKey=true)]
+		public MM_Mailer MM_Mailer
+		{
+			get
+			{
+				return this._MM_Mailer.Entity;
+			}
+			set
+			{
+				MM_Mailer previousValue = this._MM_Mailer.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_Mailer.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_Mailer.Entity = null;
+						previousValue.MM_PackingListInternalDetails.Remove(this);
+					}
+					this._MM_Mailer.Entity = value;
+					if ((value != null))
+					{
+						value.MM_PackingListInternalDetails.Add(this);
+						this._MailerID = value.MailerID;
+					}
+					else
+					{
+						this._MailerID = default(string);
+					}
+					this.SendPropertyChanged("MM_Mailer");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PackingListInternal_MM_PackingListInternalDetail", Storage="_MM_PackingListInternal", ThisKey="DocumentID", OtherKey="DocumentID", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
+		public MM_PackingListInternal MM_PackingListInternal
+		{
+			get
+			{
+				return this._MM_PackingListInternal.Entity;
+			}
+			set
+			{
+				MM_PackingListInternal previousValue = this._MM_PackingListInternal.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_PackingListInternal.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_PackingListInternal.Entity = null;
+						previousValue.MM_PackingListInternalDetails.Remove(this);
+					}
+					this._MM_PackingListInternal.Entity = value;
+					if ((value != null))
+					{
+						value.MM_PackingListInternalDetails.Add(this);
+						this._DocumentID = value.DocumentID;
+					}
+					else
+					{
+						this._DocumentID = default(string);
+					}
+					this.SendPropertyChanged("MM_PackingListInternal");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MM_PackingListInternal")]
+	public partial class MM_PackingListInternal : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _DocumentID;
+		
+		private System.Nullable<System.DateTime> _DocumentDate;
+		
+		private System.Nullable<System.DateTime> _DocumentTime;
+		
+		private string _PostOfficeID;
+		
+		private string _PostOfficeIDAccept;
+		
+		private string _NumberOfPackage;
+		
+		private System.Nullable<double> _Weight;
+		
+		private string _TripNumber;
+		
+		private System.Nullable<System.DateTime> _ArrivedDate;
+		
+		private string _TransportObjectID;
+		
+		private string _SendDescription;
+		
+		private string _AcceptDescription;
+		
+		private System.Nullable<int> _PackingListStatus;
+		
+		private string _MailerType;
+		
+		private string _UserGroupSend;
+		
+		private string _UserGroupAccept;
+		
+		private System.Nullable<System.DateTime> _AcceptDate;
+		
+		private string _EmployeeSend;
+		
+		private string _EmployeeAccept;
+		
+		private string _UserGroupLastModified;
+		
+		private System.Nullable<System.DateTime> _LastEditDate;
+		
+		private System.Nullable<System.DateTime> _CreationDate;
+		
+		private System.Nullable<System.DateTime> _LastUpdDate;
+		
+		private int _RecordState;
+		
+		private bool _SyncFlag;
+		
+		private System.Nullable<System.DateTime> _LastSyncDate;
+		
+		private EntitySet<MM_PackingListInternalDetail> _MM_PackingListInternalDetails;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDocumentIDChanging(string value);
+    partial void OnDocumentIDChanged();
+    partial void OnDocumentDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnDocumentDateChanged();
+    partial void OnDocumentTimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnDocumentTimeChanged();
+    partial void OnPostOfficeIDChanging(string value);
+    partial void OnPostOfficeIDChanged();
+    partial void OnPostOfficeIDAcceptChanging(string value);
+    partial void OnPostOfficeIDAcceptChanged();
+    partial void OnNumberOfPackageChanging(string value);
+    partial void OnNumberOfPackageChanged();
+    partial void OnWeightChanging(System.Nullable<double> value);
+    partial void OnWeightChanged();
+    partial void OnTripNumberChanging(string value);
+    partial void OnTripNumberChanged();
+    partial void OnArrivedDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnArrivedDateChanged();
+    partial void OnTransportObjectIDChanging(string value);
+    partial void OnTransportObjectIDChanged();
+    partial void OnSendDescriptionChanging(string value);
+    partial void OnSendDescriptionChanged();
+    partial void OnAcceptDescriptionChanging(string value);
+    partial void OnAcceptDescriptionChanged();
+    partial void OnPackingListStatusChanging(System.Nullable<int> value);
+    partial void OnPackingListStatusChanged();
+    partial void OnMailerTypeChanging(string value);
+    partial void OnMailerTypeChanged();
+    partial void OnUserGroupSendChanging(string value);
+    partial void OnUserGroupSendChanged();
+    partial void OnUserGroupAcceptChanging(string value);
+    partial void OnUserGroupAcceptChanged();
+    partial void OnAcceptDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnAcceptDateChanged();
+    partial void OnEmployeeSendChanging(string value);
+    partial void OnEmployeeSendChanged();
+    partial void OnEmployeeAcceptChanging(string value);
+    partial void OnEmployeeAcceptChanged();
+    partial void OnUserGroupLastModifiedChanging(string value);
+    partial void OnUserGroupLastModifiedChanged();
+    partial void OnLastEditDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastEditDateChanged();
+    partial void OnCreationDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreationDateChanged();
+    partial void OnLastUpdDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastUpdDateChanged();
+    partial void OnRecordStateChanging(int value);
+    partial void OnRecordStateChanged();
+    partial void OnSyncFlagChanging(bool value);
+    partial void OnSyncFlagChanged();
+    partial void OnLastSyncDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastSyncDateChanged();
+    #endregion
+		
+		public MM_PackingListInternal()
+		{
+			this._MM_PackingListInternalDetails = new EntitySet<MM_PackingListInternalDetail>(new Action<MM_PackingListInternalDetail>(this.attach_MM_PackingListInternalDetails), new Action<MM_PackingListInternalDetail>(this.detach_MM_PackingListInternalDetails));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DocumentID", DbType="VarChar(15) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string DocumentID
+		{
+			get
+			{
+				return this._DocumentID;
+			}
+			set
+			{
+				if ((this._DocumentID != value))
+				{
+					this.OnDocumentIDChanging(value);
+					this.SendPropertyChanging();
+					this._DocumentID = value;
+					this.SendPropertyChanged("DocumentID");
+					this.OnDocumentIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DocumentDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DocumentDate
+		{
+			get
+			{
+				return this._DocumentDate;
+			}
+			set
+			{
+				if ((this._DocumentDate != value))
+				{
+					this.OnDocumentDateChanging(value);
+					this.SendPropertyChanging();
+					this._DocumentDate = value;
+					this.SendPropertyChanged("DocumentDate");
+					this.OnDocumentDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DocumentTime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DocumentTime
+		{
+			get
+			{
+				return this._DocumentTime;
+			}
+			set
+			{
+				if ((this._DocumentTime != value))
+				{
+					this.OnDocumentTimeChanging(value);
+					this.SendPropertyChanging();
+					this._DocumentTime = value;
+					this.SendPropertyChanged("DocumentTime");
+					this.OnDocumentTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostOfficeID", DbType="VarChar(15)")]
+		public string PostOfficeID
+		{
+			get
+			{
+				return this._PostOfficeID;
+			}
+			set
+			{
+				if ((this._PostOfficeID != value))
+				{
+					this.OnPostOfficeIDChanging(value);
+					this.SendPropertyChanging();
+					this._PostOfficeID = value;
+					this.SendPropertyChanged("PostOfficeID");
+					this.OnPostOfficeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostOfficeIDAccept", DbType="VarChar(15)")]
+		public string PostOfficeIDAccept
+		{
+			get
+			{
+				return this._PostOfficeIDAccept;
+			}
+			set
+			{
+				if ((this._PostOfficeIDAccept != value))
+				{
+					this.OnPostOfficeIDAcceptChanging(value);
+					this.SendPropertyChanging();
+					this._PostOfficeIDAccept = value;
+					this.SendPropertyChanged("PostOfficeIDAccept");
+					this.OnPostOfficeIDAcceptChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumberOfPackage", DbType="NVarChar(10)")]
+		public string NumberOfPackage
+		{
+			get
+			{
+				return this._NumberOfPackage;
+			}
+			set
+			{
+				if ((this._NumberOfPackage != value))
+				{
+					this.OnNumberOfPackageChanging(value);
+					this.SendPropertyChanging();
+					this._NumberOfPackage = value;
+					this.SendPropertyChanged("NumberOfPackage");
+					this.OnNumberOfPackageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Weight", DbType="Float")]
+		public System.Nullable<double> Weight
+		{
+			get
+			{
+				return this._Weight;
+			}
+			set
+			{
+				if ((this._Weight != value))
+				{
+					this.OnWeightChanging(value);
+					this.SendPropertyChanging();
+					this._Weight = value;
+					this.SendPropertyChanged("Weight");
+					this.OnWeightChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TripNumber", DbType="NVarChar(10)")]
+		public string TripNumber
+		{
+			get
+			{
+				return this._TripNumber;
+			}
+			set
+			{
+				if ((this._TripNumber != value))
+				{
+					this.OnTripNumberChanging(value);
+					this.SendPropertyChanging();
+					this._TripNumber = value;
+					this.SendPropertyChanged("TripNumber");
+					this.OnTripNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ArrivedDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ArrivedDate
+		{
+			get
+			{
+				return this._ArrivedDate;
+			}
+			set
+			{
+				if ((this._ArrivedDate != value))
+				{
+					this.OnArrivedDateChanging(value);
+					this.SendPropertyChanging();
+					this._ArrivedDate = value;
+					this.SendPropertyChanged("ArrivedDate");
+					this.OnArrivedDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransportObjectID", DbType="VarChar(15)")]
+		public string TransportObjectID
+		{
+			get
+			{
+				return this._TransportObjectID;
+			}
+			set
+			{
+				if ((this._TransportObjectID != value))
+				{
+					this.OnTransportObjectIDChanging(value);
+					this.SendPropertyChanging();
+					this._TransportObjectID = value;
+					this.SendPropertyChanged("TransportObjectID");
+					this.OnTransportObjectIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SendDescription", DbType="NVarChar(200)")]
+		public string SendDescription
+		{
+			get
+			{
+				return this._SendDescription;
+			}
+			set
+			{
+				if ((this._SendDescription != value))
+				{
+					this.OnSendDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._SendDescription = value;
+					this.SendPropertyChanged("SendDescription");
+					this.OnSendDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AcceptDescription", DbType="NVarChar(200)")]
+		public string AcceptDescription
+		{
+			get
+			{
+				return this._AcceptDescription;
+			}
+			set
+			{
+				if ((this._AcceptDescription != value))
+				{
+					this.OnAcceptDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._AcceptDescription = value;
+					this.SendPropertyChanged("AcceptDescription");
+					this.OnAcceptDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PackingListStatus", DbType="Int")]
+		public System.Nullable<int> PackingListStatus
+		{
+			get
+			{
+				return this._PackingListStatus;
+			}
+			set
+			{
+				if ((this._PackingListStatus != value))
+				{
+					this.OnPackingListStatusChanging(value);
+					this.SendPropertyChanging();
+					this._PackingListStatus = value;
+					this.SendPropertyChanged("PackingListStatus");
+					this.OnPackingListStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MailerType", DbType="VarChar(1)")]
+		public string MailerType
+		{
+			get
+			{
+				return this._MailerType;
+			}
+			set
+			{
+				if ((this._MailerType != value))
+				{
+					this.OnMailerTypeChanging(value);
+					this.SendPropertyChanging();
+					this._MailerType = value;
+					this.SendPropertyChanged("MailerType");
+					this.OnMailerTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserGroupSend", DbType="NVarChar(20)")]
+		public string UserGroupSend
+		{
+			get
+			{
+				return this._UserGroupSend;
+			}
+			set
+			{
+				if ((this._UserGroupSend != value))
+				{
+					this.OnUserGroupSendChanging(value);
+					this.SendPropertyChanging();
+					this._UserGroupSend = value;
+					this.SendPropertyChanged("UserGroupSend");
+					this.OnUserGroupSendChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserGroupAccept", DbType="NVarChar(20)")]
+		public string UserGroupAccept
+		{
+			get
+			{
+				return this._UserGroupAccept;
+			}
+			set
+			{
+				if ((this._UserGroupAccept != value))
+				{
+					this.OnUserGroupAcceptChanging(value);
+					this.SendPropertyChanging();
+					this._UserGroupAccept = value;
+					this.SendPropertyChanged("UserGroupAccept");
+					this.OnUserGroupAcceptChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AcceptDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> AcceptDate
+		{
+			get
+			{
+				return this._AcceptDate;
+			}
+			set
+			{
+				if ((this._AcceptDate != value))
+				{
+					this.OnAcceptDateChanging(value);
+					this.SendPropertyChanging();
+					this._AcceptDate = value;
+					this.SendPropertyChanged("AcceptDate");
+					this.OnAcceptDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeSend", DbType="NVarChar(10)")]
+		public string EmployeeSend
+		{
+			get
+			{
+				return this._EmployeeSend;
+			}
+			set
+			{
+				if ((this._EmployeeSend != value))
+				{
+					this.OnEmployeeSendChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeSend = value;
+					this.SendPropertyChanged("EmployeeSend");
+					this.OnEmployeeSendChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeAccept", DbType="NVarChar(10)")]
+		public string EmployeeAccept
+		{
+			get
+			{
+				return this._EmployeeAccept;
+			}
+			set
+			{
+				if ((this._EmployeeAccept != value))
+				{
+					this.OnEmployeeAcceptChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeAccept = value;
+					this.SendPropertyChanged("EmployeeAccept");
+					this.OnEmployeeAcceptChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserGroupLastModified", DbType="NVarChar(20)")]
+		public string UserGroupLastModified
+		{
+			get
+			{
+				return this._UserGroupLastModified;
+			}
+			set
+			{
+				if ((this._UserGroupLastModified != value))
+				{
+					this.OnUserGroupLastModifiedChanging(value);
+					this.SendPropertyChanging();
+					this._UserGroupLastModified = value;
+					this.SendPropertyChanged("UserGroupLastModified");
+					this.OnUserGroupLastModifiedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastEditDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastEditDate
+		{
+			get
+			{
+				return this._LastEditDate;
+			}
+			set
+			{
+				if ((this._LastEditDate != value))
+				{
+					this.OnLastEditDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastEditDate = value;
+					this.SendPropertyChanged("LastEditDate");
+					this.OnLastEditDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreationDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreationDate
+		{
+			get
+			{
+				return this._CreationDate;
+			}
+			set
+			{
+				if ((this._CreationDate != value))
+				{
+					this.OnCreationDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreationDate = value;
+					this.SendPropertyChanged("CreationDate");
+					this.OnCreationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastUpdDate", DbType="Date")]
+		public System.Nullable<System.DateTime> LastUpdDate
+		{
+			get
+			{
+				return this._LastUpdDate;
+			}
+			set
+			{
+				if ((this._LastUpdDate != value))
+				{
+					this.OnLastUpdDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastUpdDate = value;
+					this.SendPropertyChanged("LastUpdDate");
+					this.OnLastUpdDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecordState", DbType="Int NOT NULL")]
+		public int RecordState
+		{
+			get
+			{
+				return this._RecordState;
+			}
+			set
+			{
+				if ((this._RecordState != value))
+				{
+					this.OnRecordStateChanging(value);
+					this.SendPropertyChanging();
+					this._RecordState = value;
+					this.SendPropertyChanged("RecordState");
+					this.OnRecordStateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SyncFlag", DbType="Bit NOT NULL")]
+		public bool SyncFlag
+		{
+			get
+			{
+				return this._SyncFlag;
+			}
+			set
+			{
+				if ((this._SyncFlag != value))
+				{
+					this.OnSyncFlagChanging(value);
+					this.SendPropertyChanging();
+					this._SyncFlag = value;
+					this.SendPropertyChanged("SyncFlag");
+					this.OnSyncFlagChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastSyncDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastSyncDate
+		{
+			get
+			{
+				return this._LastSyncDate;
+			}
+			set
+			{
+				if ((this._LastSyncDate != value))
+				{
+					this.OnLastSyncDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastSyncDate = value;
+					this.SendPropertyChanged("LastSyncDate");
+					this.OnLastSyncDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PackingListInternal_MM_PackingListInternalDetail", Storage="_MM_PackingListInternalDetails", ThisKey="DocumentID", OtherKey="DocumentID")]
+		public EntitySet<MM_PackingListInternalDetail> MM_PackingListInternalDetails
+		{
+			get
+			{
+				return this._MM_PackingListInternalDetails;
+			}
+			set
+			{
+				this._MM_PackingListInternalDetails.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_MM_PackingListInternalDetails(MM_PackingListInternalDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PackingListInternal = this;
+		}
+		
+		private void detach_MM_PackingListInternalDetails(MM_PackingListInternalDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PackingListInternal = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MM_MailerDelivery")]
+	public partial class MM_MailerDelivery : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _DocumentID;
+		
+		private string _TripNumber;
+		
+		private System.Nullable<System.DateTime> _DocumentDate;
+		
+		private System.Nullable<System.DateTime> _DocumentTime;
+		
+		private string _PostOfficeID;
+		
+		private string _EmployeeID;
+		
+		private System.Nullable<int> _MailerCount;
+		
+		private System.Nullable<int> _Quantity;
+		
+		private System.Nullable<double> _Weight;
+		
+		private string _Status;
+		
+		private string _Description;
+		
+		private System.Nullable<System.DateTime> _LastEditDate;
+		
+		private System.Nullable<System.DateTime> _CreationDate;
+		
+		private string _NumberOfPackage;
+		
+		private string _UserGroupID;
+		
+		private System.Nullable<System.DateTime> _LastUpdDate;
+		
+		private int _RecordState;
+		
+		private bool _SyncFlag;
+		
+		private System.Nullable<System.DateTime> _LastSyncDate;
+		
+		private EntitySet<MM_MailerDeliveryDetail> _MM_MailerDeliveryDetails;
+		
+		private EntityRef<BS_Employee> _BS_Employee;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDocumentIDChanging(string value);
+    partial void OnDocumentIDChanged();
+    partial void OnTripNumberChanging(string value);
+    partial void OnTripNumberChanged();
+    partial void OnDocumentDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnDocumentDateChanged();
+    partial void OnDocumentTimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnDocumentTimeChanged();
+    partial void OnPostOfficeIDChanging(string value);
+    partial void OnPostOfficeIDChanged();
+    partial void OnEmployeeIDChanging(string value);
+    partial void OnEmployeeIDChanged();
+    partial void OnMailerCountChanging(System.Nullable<int> value);
+    partial void OnMailerCountChanged();
+    partial void OnQuantityChanging(System.Nullable<int> value);
+    partial void OnQuantityChanged();
+    partial void OnWeightChanging(System.Nullable<double> value);
+    partial void OnWeightChanged();
+    partial void OnStatusChanging(string value);
+    partial void OnStatusChanged();
+    partial void OnDescriptionChanging(string value);
+    partial void OnDescriptionChanged();
+    partial void OnLastEditDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastEditDateChanged();
+    partial void OnCreationDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreationDateChanged();
+    partial void OnNumberOfPackageChanging(string value);
+    partial void OnNumberOfPackageChanged();
+    partial void OnUserGroupIDChanging(string value);
+    partial void OnUserGroupIDChanged();
+    partial void OnLastUpdDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastUpdDateChanged();
+    partial void OnRecordStateChanging(int value);
+    partial void OnRecordStateChanged();
+    partial void OnSyncFlagChanging(bool value);
+    partial void OnSyncFlagChanged();
+    partial void OnLastSyncDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastSyncDateChanged();
+    #endregion
+		
+		public MM_MailerDelivery()
+		{
+			this._MM_MailerDeliveryDetails = new EntitySet<MM_MailerDeliveryDetail>(new Action<MM_MailerDeliveryDetail>(this.attach_MM_MailerDeliveryDetails), new Action<MM_MailerDeliveryDetail>(this.detach_MM_MailerDeliveryDetails));
+			this._BS_Employee = default(EntityRef<BS_Employee>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DocumentID", DbType="VarChar(15) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string DocumentID
+		{
+			get
+			{
+				return this._DocumentID;
+			}
+			set
+			{
+				if ((this._DocumentID != value))
+				{
+					this.OnDocumentIDChanging(value);
+					this.SendPropertyChanging();
+					this._DocumentID = value;
+					this.SendPropertyChanged("DocumentID");
+					this.OnDocumentIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TripNumber", DbType="VarChar(30)")]
+		public string TripNumber
+		{
+			get
+			{
+				return this._TripNumber;
+			}
+			set
+			{
+				if ((this._TripNumber != value))
+				{
+					this.OnTripNumberChanging(value);
+					this.SendPropertyChanging();
+					this._TripNumber = value;
+					this.SendPropertyChanged("TripNumber");
+					this.OnTripNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DocumentDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DocumentDate
+		{
+			get
+			{
+				return this._DocumentDate;
+			}
+			set
+			{
+				if ((this._DocumentDate != value))
+				{
+					this.OnDocumentDateChanging(value);
+					this.SendPropertyChanging();
+					this._DocumentDate = value;
+					this.SendPropertyChanged("DocumentDate");
+					this.OnDocumentDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DocumentTime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DocumentTime
+		{
+			get
+			{
+				return this._DocumentTime;
+			}
+			set
+			{
+				if ((this._DocumentTime != value))
+				{
+					this.OnDocumentTimeChanging(value);
+					this.SendPropertyChanging();
+					this._DocumentTime = value;
+					this.SendPropertyChanged("DocumentTime");
+					this.OnDocumentTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostOfficeID", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string PostOfficeID
+		{
+			get
+			{
+				return this._PostOfficeID;
+			}
+			set
+			{
+				if ((this._PostOfficeID != value))
+				{
+					this.OnPostOfficeIDChanging(value);
+					this.SendPropertyChanging();
+					this._PostOfficeID = value;
+					this.SendPropertyChanged("PostOfficeID");
+					this.OnPostOfficeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeID", DbType="VarChar(15)")]
+		public string EmployeeID
+		{
+			get
+			{
+				return this._EmployeeID;
+			}
+			set
+			{
+				if ((this._EmployeeID != value))
+				{
+					if (this._BS_Employee.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnEmployeeIDChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeID = value;
+					this.SendPropertyChanged("EmployeeID");
+					this.OnEmployeeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MailerCount", DbType="Int")]
+		public System.Nullable<int> MailerCount
+		{
+			get
+			{
+				return this._MailerCount;
+			}
+			set
+			{
+				if ((this._MailerCount != value))
+				{
+					this.OnMailerCountChanging(value);
+					this.SendPropertyChanging();
+					this._MailerCount = value;
+					this.SendPropertyChanged("MailerCount");
+					this.OnMailerCountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Int")]
+		public System.Nullable<int> Quantity
+		{
+			get
+			{
+				return this._Quantity;
+			}
+			set
+			{
+				if ((this._Quantity != value))
+				{
+					this.OnQuantityChanging(value);
+					this.SendPropertyChanging();
+					this._Quantity = value;
+					this.SendPropertyChanged("Quantity");
+					this.OnQuantityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Weight", DbType="Float")]
+		public System.Nullable<double> Weight
+		{
+			get
+			{
+				return this._Weight;
+			}
+			set
+			{
+				if ((this._Weight != value))
+				{
+					this.OnWeightChanging(value);
+					this.SendPropertyChanging();
+					this._Weight = value;
+					this.SendPropertyChanged("Weight");
+					this.OnWeightChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="VarChar(2)")]
+		public string Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this.OnStatusChanging(value);
+					this.SendPropertyChanging();
+					this._Status = value;
+					this.SendPropertyChanged("Status");
+					this.OnStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(200)")]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this.OnDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._Description = value;
+					this.SendPropertyChanged("Description");
+					this.OnDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastEditDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastEditDate
+		{
+			get
+			{
+				return this._LastEditDate;
+			}
+			set
+			{
+				if ((this._LastEditDate != value))
+				{
+					this.OnLastEditDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastEditDate = value;
+					this.SendPropertyChanged("LastEditDate");
+					this.OnLastEditDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreationDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreationDate
+		{
+			get
+			{
+				return this._CreationDate;
+			}
+			set
+			{
+				if ((this._CreationDate != value))
+				{
+					this.OnCreationDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreationDate = value;
+					this.SendPropertyChanged("CreationDate");
+					this.OnCreationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumberOfPackage", DbType="NVarChar(10)")]
+		public string NumberOfPackage
+		{
+			get
+			{
+				return this._NumberOfPackage;
+			}
+			set
+			{
+				if ((this._NumberOfPackage != value))
+				{
+					this.OnNumberOfPackageChanging(value);
+					this.SendPropertyChanging();
+					this._NumberOfPackage = value;
+					this.SendPropertyChanged("NumberOfPackage");
+					this.OnNumberOfPackageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserGroupID", DbType="VarChar(20)")]
+		public string UserGroupID
+		{
+			get
+			{
+				return this._UserGroupID;
+			}
+			set
+			{
+				if ((this._UserGroupID != value))
+				{
+					this.OnUserGroupIDChanging(value);
+					this.SendPropertyChanging();
+					this._UserGroupID = value;
+					this.SendPropertyChanged("UserGroupID");
+					this.OnUserGroupIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastUpdDate", DbType="Date")]
+		public System.Nullable<System.DateTime> LastUpdDate
+		{
+			get
+			{
+				return this._LastUpdDate;
+			}
+			set
+			{
+				if ((this._LastUpdDate != value))
+				{
+					this.OnLastUpdDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastUpdDate = value;
+					this.SendPropertyChanged("LastUpdDate");
+					this.OnLastUpdDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecordState", DbType="Int NOT NULL")]
+		public int RecordState
+		{
+			get
+			{
+				return this._RecordState;
+			}
+			set
+			{
+				if ((this._RecordState != value))
+				{
+					this.OnRecordStateChanging(value);
+					this.SendPropertyChanging();
+					this._RecordState = value;
+					this.SendPropertyChanged("RecordState");
+					this.OnRecordStateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SyncFlag", DbType="Bit NOT NULL")]
+		public bool SyncFlag
+		{
+			get
+			{
+				return this._SyncFlag;
+			}
+			set
+			{
+				if ((this._SyncFlag != value))
+				{
+					this.OnSyncFlagChanging(value);
+					this.SendPropertyChanging();
+					this._SyncFlag = value;
+					this.SendPropertyChanged("SyncFlag");
+					this.OnSyncFlagChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastSyncDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastSyncDate
+		{
+			get
+			{
+				return this._LastSyncDate;
+			}
+			set
+			{
+				if ((this._LastSyncDate != value))
+				{
+					this.OnLastSyncDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastSyncDate = value;
+					this.SendPropertyChanged("LastSyncDate");
+					this.OnLastSyncDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_MailerDelivery_MM_MailerDeliveryDetail", Storage="_MM_MailerDeliveryDetails", ThisKey="DocumentID", OtherKey="DocumentID")]
+		public EntitySet<MM_MailerDeliveryDetail> MM_MailerDeliveryDetails
+		{
+			get
+			{
+				return this._MM_MailerDeliveryDetails;
+			}
+			set
+			{
+				this._MM_MailerDeliveryDetails.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BS_Employee_MM_MailerDelivery", Storage="_BS_Employee", ThisKey="EmployeeID", OtherKey="EmployeeID", IsForeignKey=true)]
+		public BS_Employee BS_Employee
+		{
+			get
+			{
+				return this._BS_Employee.Entity;
+			}
+			set
+			{
+				BS_Employee previousValue = this._BS_Employee.Entity;
+				if (((previousValue != value) 
+							|| (this._BS_Employee.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._BS_Employee.Entity = null;
+						previousValue.MM_MailerDeliveries.Remove(this);
+					}
+					this._BS_Employee.Entity = value;
+					if ((value != null))
+					{
+						value.MM_MailerDeliveries.Add(this);
+						this._EmployeeID = value.EmployeeID;
+					}
+					else
+					{
+						this._EmployeeID = default(string);
+					}
+					this.SendPropertyChanged("BS_Employee");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_MM_MailerDeliveryDetails(MM_MailerDeliveryDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_MailerDelivery = this;
+		}
+		
+		private void detach_MM_MailerDeliveryDetails(MM_MailerDeliveryDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_MailerDelivery = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BS_Employees")]
+	public partial class BS_Employee : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _EmployeeID;
+		
+		private string _EmployeeName;
+		
+		private string _DepartmentID;
+		
+		private string _PostOfficeID;
+		
+		private System.Nullable<System.DateTime> _Birthday;
+		
+		private bool _IsActive;
+		
+		private string _Address;
+		
+		private string _Phone;
+		
+		private string _FaxNo;
+		
+		private string _Email;
+		
+		private string _Notes;
+		
+		private System.Nullable<System.DateTime> _LastEditDate;
+		
+		private System.Nullable<System.DateTime> _CreationDate;
+		
+		private string _MemberOf;
+		
+		private string _ProvinceID;
+		
+		private System.Nullable<bool> _IsCollaborators;
+		
+		private string _SGPEmployeeID;
+		
+		private string _Imei;
+		
+		private EntitySet<MM_MailerDelivery> _MM_MailerDeliveries;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnEmployeeIDChanging(string value);
+    partial void OnEmployeeIDChanged();
+    partial void OnEmployeeNameChanging(string value);
+    partial void OnEmployeeNameChanged();
+    partial void OnDepartmentIDChanging(string value);
+    partial void OnDepartmentIDChanged();
+    partial void OnPostOfficeIDChanging(string value);
+    partial void OnPostOfficeIDChanged();
+    partial void OnBirthdayChanging(System.Nullable<System.DateTime> value);
+    partial void OnBirthdayChanged();
+    partial void OnIsActiveChanging(bool value);
+    partial void OnIsActiveChanged();
+    partial void OnAddressChanging(string value);
+    partial void OnAddressChanged();
+    partial void OnPhoneChanging(string value);
+    partial void OnPhoneChanged();
+    partial void OnFaxNoChanging(string value);
+    partial void OnFaxNoChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnNotesChanging(string value);
+    partial void OnNotesChanged();
+    partial void OnLastEditDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastEditDateChanged();
+    partial void OnCreationDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreationDateChanged();
+    partial void OnMemberOfChanging(string value);
+    partial void OnMemberOfChanged();
+    partial void OnProvinceIDChanging(string value);
+    partial void OnProvinceIDChanged();
+    partial void OnIsCollaboratorsChanging(System.Nullable<bool> value);
+    partial void OnIsCollaboratorsChanged();
+    partial void OnSGPEmployeeIDChanging(string value);
+    partial void OnSGPEmployeeIDChanged();
+    partial void OnImeiChanging(string value);
+    partial void OnImeiChanged();
+    #endregion
+		
+		public BS_Employee()
+		{
+			this._MM_MailerDeliveries = new EntitySet<MM_MailerDelivery>(new Action<MM_MailerDelivery>(this.attach_MM_MailerDeliveries), new Action<MM_MailerDelivery>(this.detach_MM_MailerDeliveries));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeID", DbType="VarChar(15) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string EmployeeID
+		{
+			get
+			{
+				return this._EmployeeID;
+			}
+			set
+			{
+				if ((this._EmployeeID != value))
+				{
+					this.OnEmployeeIDChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeID = value;
+					this.SendPropertyChanged("EmployeeID");
+					this.OnEmployeeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string EmployeeName
+		{
+			get
+			{
+				return this._EmployeeName;
+			}
+			set
+			{
+				if ((this._EmployeeName != value))
+				{
+					this.OnEmployeeNameChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeName = value;
+					this.SendPropertyChanged("EmployeeName");
+					this.OnEmployeeNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartmentID", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string DepartmentID
+		{
+			get
+			{
+				return this._DepartmentID;
+			}
+			set
+			{
+				if ((this._DepartmentID != value))
+				{
+					this.OnDepartmentIDChanging(value);
+					this.SendPropertyChanging();
+					this._DepartmentID = value;
+					this.SendPropertyChanged("DepartmentID");
+					this.OnDepartmentIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostOfficeID", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string PostOfficeID
+		{
+			get
+			{
+				return this._PostOfficeID;
+			}
+			set
+			{
+				if ((this._PostOfficeID != value))
+				{
+					this.OnPostOfficeIDChanging(value);
+					this.SendPropertyChanging();
+					this._PostOfficeID = value;
+					this.SendPropertyChanged("PostOfficeID");
+					this.OnPostOfficeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Birthday", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Birthday
+		{
+			get
+			{
+				return this._Birthday;
+			}
+			set
+			{
+				if ((this._Birthday != value))
+				{
+					this.OnBirthdayChanging(value);
+					this.SendPropertyChanging();
+					this._Birthday = value;
+					this.SendPropertyChanged("Birthday");
+					this.OnBirthdayChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive", DbType="Bit NOT NULL")]
+		public bool IsActive
+		{
+			get
+			{
+				return this._IsActive;
+			}
+			set
+			{
+				if ((this._IsActive != value))
+				{
+					this.OnIsActiveChanging(value);
+					this.SendPropertyChanging();
+					this._IsActive = value;
+					this.SendPropertyChanged("IsActive");
+					this.OnIsActiveChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NVarChar(150)")]
+		public string Address
+		{
+			get
+			{
+				return this._Address;
+			}
+			set
+			{
+				if ((this._Address != value))
+				{
+					this.OnAddressChanging(value);
+					this.SendPropertyChanging();
+					this._Address = value;
+					this.SendPropertyChanged("Address");
+					this.OnAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="NVarChar(25)")]
+		public string Phone
+		{
+			get
+			{
+				return this._Phone;
+			}
+			set
+			{
+				if ((this._Phone != value))
+				{
+					this.OnPhoneChanging(value);
+					this.SendPropertyChanging();
+					this._Phone = value;
+					this.SendPropertyChanged("Phone");
+					this.OnPhoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FaxNo", DbType="NVarChar(25)")]
+		public string FaxNo
+		{
+			get
+			{
+				return this._FaxNo;
+			}
+			set
+			{
+				if ((this._FaxNo != value))
+				{
+					this.OnFaxNoChanging(value);
+					this.SendPropertyChanging();
+					this._FaxNo = value;
+					this.SendPropertyChanged("FaxNo");
+					this.OnFaxNoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Notes", DbType="NVarChar(200)")]
+		public string Notes
+		{
+			get
+			{
+				return this._Notes;
+			}
+			set
+			{
+				if ((this._Notes != value))
+				{
+					this.OnNotesChanging(value);
+					this.SendPropertyChanging();
+					this._Notes = value;
+					this.SendPropertyChanged("Notes");
+					this.OnNotesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastEditDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastEditDate
+		{
+			get
+			{
+				return this._LastEditDate;
+			}
+			set
+			{
+				if ((this._LastEditDate != value))
+				{
+					this.OnLastEditDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastEditDate = value;
+					this.SendPropertyChanged("LastEditDate");
+					this.OnLastEditDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreationDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreationDate
+		{
+			get
+			{
+				return this._CreationDate;
+			}
+			set
+			{
+				if ((this._CreationDate != value))
+				{
+					this.OnCreationDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreationDate = value;
+					this.SendPropertyChanged("CreationDate");
+					this.OnCreationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MemberOf", DbType="VarChar(50)")]
+		public string MemberOf
+		{
+			get
+			{
+				return this._MemberOf;
+			}
+			set
+			{
+				if ((this._MemberOf != value))
+				{
+					this.OnMemberOfChanging(value);
+					this.SendPropertyChanging();
+					this._MemberOf = value;
+					this.SendPropertyChanged("MemberOf");
+					this.OnMemberOfChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProvinceID", DbType="VarChar(15)")]
+		public string ProvinceID
+		{
+			get
+			{
+				return this._ProvinceID;
+			}
+			set
+			{
+				if ((this._ProvinceID != value))
+				{
+					this.OnProvinceIDChanging(value);
+					this.SendPropertyChanging();
+					this._ProvinceID = value;
+					this.SendPropertyChanged("ProvinceID");
+					this.OnProvinceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsCollaborators", DbType="Bit")]
+		public System.Nullable<bool> IsCollaborators
+		{
+			get
+			{
+				return this._IsCollaborators;
+			}
+			set
+			{
+				if ((this._IsCollaborators != value))
+				{
+					this.OnIsCollaboratorsChanging(value);
+					this.SendPropertyChanging();
+					this._IsCollaborators = value;
+					this.SendPropertyChanged("IsCollaborators");
+					this.OnIsCollaboratorsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SGPEmployeeID", DbType="NVarChar(20)")]
+		public string SGPEmployeeID
+		{
+			get
+			{
+				return this._SGPEmployeeID;
+			}
+			set
+			{
+				if ((this._SGPEmployeeID != value))
+				{
+					this.OnSGPEmployeeIDChanging(value);
+					this.SendPropertyChanging();
+					this._SGPEmployeeID = value;
+					this.SendPropertyChanged("SGPEmployeeID");
+					this.OnSGPEmployeeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Imei", DbType="NVarChar(20)")]
+		public string Imei
+		{
+			get
+			{
+				return this._Imei;
+			}
+			set
+			{
+				if ((this._Imei != value))
+				{
+					this.OnImeiChanging(value);
+					this.SendPropertyChanging();
+					this._Imei = value;
+					this.SendPropertyChanged("Imei");
+					this.OnImeiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BS_Employee_MM_MailerDelivery", Storage="_MM_MailerDeliveries", ThisKey="EmployeeID", OtherKey="EmployeeID")]
+		public EntitySet<MM_MailerDelivery> MM_MailerDeliveries
+		{
+			get
+			{
+				return this._MM_MailerDeliveries;
+			}
+			set
+			{
+				this._MM_MailerDeliveries.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_MM_MailerDeliveries(MM_MailerDelivery entity)
+		{
+			this.SendPropertyChanging();
+			entity.BS_Employee = this;
+		}
+		
+		private void detach_MM_MailerDeliveries(MM_MailerDelivery entity)
+		{
+			this.SendPropertyChanging();
+			entity.BS_Employee = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MM_Status")]
+	public partial class MM_Status : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _StatusID;
+		
+		private string _StatusName;
+		
+		private System.Nullable<System.DateTime> _LastEditDate;
+		
+		private System.Nullable<System.DateTime> _CreationDate;
+		
+		private EntitySet<MM_Mailer> _MM_Mailers;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnStatusIDChanging(string value);
+    partial void OnStatusIDChanged();
+    partial void OnStatusNameChanging(string value);
+    partial void OnStatusNameChanged();
+    partial void OnLastEditDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastEditDateChanged();
+    partial void OnCreationDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreationDateChanged();
+    #endregion
+		
+		public MM_Status()
+		{
+			this._MM_Mailers = new EntitySet<MM_Mailer>(new Action<MM_Mailer>(this.attach_MM_Mailers), new Action<MM_Mailer>(this.detach_MM_Mailers));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StatusID", DbType="VarChar(2) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string StatusID
+		{
+			get
+			{
+				return this._StatusID;
+			}
+			set
+			{
+				if ((this._StatusID != value))
+				{
+					this.OnStatusIDChanging(value);
+					this.SendPropertyChanging();
+					this._StatusID = value;
+					this.SendPropertyChanged("StatusID");
+					this.OnStatusIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StatusName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string StatusName
+		{
+			get
+			{
+				return this._StatusName;
+			}
+			set
+			{
+				if ((this._StatusName != value))
+				{
+					this.OnStatusNameChanging(value);
+					this.SendPropertyChanging();
+					this._StatusName = value;
+					this.SendPropertyChanged("StatusName");
+					this.OnStatusNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastEditDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastEditDate
+		{
+			get
+			{
+				return this._LastEditDate;
+			}
+			set
+			{
+				if ((this._LastEditDate != value))
+				{
+					this.OnLastEditDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastEditDate = value;
+					this.SendPropertyChanged("LastEditDate");
+					this.OnLastEditDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreationDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreationDate
+		{
+			get
+			{
+				return this._CreationDate;
+			}
+			set
+			{
+				if ((this._CreationDate != value))
+				{
+					this.OnCreationDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreationDate = value;
+					this.SendPropertyChanged("CreationDate");
+					this.OnCreationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_Status_MM_Mailer", Storage="_MM_Mailers", ThisKey="StatusID", OtherKey="CurrentStatusID")]
+		public EntitySet<MM_Mailer> MM_Mailers
+		{
+			get
+			{
+				return this._MM_Mailers;
+			}
+			set
+			{
+				this._MM_Mailers.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_MM_Mailers(MM_Mailer entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_Status = this;
+		}
+		
+		private void detach_MM_Mailers(MM_Mailer entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_Status = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MM_ReturnReason")]
+	public partial class MM_ReturnReason : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _ReturnReasonID;
+		
+		private string _ReturnReasonName;
+		
+		private System.Nullable<bool> _IsActive;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnReturnReasonIDChanging(string value);
+    partial void OnReturnReasonIDChanged();
+    partial void OnReturnReasonNameChanging(string value);
+    partial void OnReturnReasonNameChanged();
+    partial void OnIsActiveChanging(System.Nullable<bool> value);
+    partial void OnIsActiveChanged();
+    #endregion
+		
+		public MM_ReturnReason()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReturnReasonID", DbType="VarChar(15) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string ReturnReasonID
+		{
+			get
+			{
+				return this._ReturnReasonID;
+			}
+			set
+			{
+				if ((this._ReturnReasonID != value))
+				{
+					this.OnReturnReasonIDChanging(value);
+					this.SendPropertyChanging();
+					this._ReturnReasonID = value;
+					this.SendPropertyChanged("ReturnReasonID");
+					this.OnReturnReasonIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReturnReasonName", DbType="NVarChar(250)")]
+		public string ReturnReasonName
+		{
+			get
+			{
+				return this._ReturnReasonName;
+			}
+			set
+			{
+				if ((this._ReturnReasonName != value))
+				{
+					this.OnReturnReasonNameChanging(value);
+					this.SendPropertyChanging();
+					this._ReturnReasonName = value;
+					this.SendPropertyChanged("ReturnReasonName");
+					this.OnReturnReasonNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive", DbType="Bit")]
+		public System.Nullable<bool> IsActive
+		{
+			get
+			{
+				return this._IsActive;
+			}
+			set
+			{
+				if ((this._IsActive != value))
+				{
+					this.OnIsActiveChanging(value);
+					this.SendPropertyChanging();
+					this._IsActive = value;
+					this.SendPropertyChanged("IsActive");
+					this.OnIsActiveChanged();
 				}
 			}
 		}

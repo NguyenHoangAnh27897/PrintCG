@@ -48,6 +48,9 @@ namespace SGPWebService.DB
     partial void InsertSGP_Price_Value(SGP_Price_Value instance);
     partial void UpdateSGP_Price_Value(SGP_Price_Value instance);
     partial void DeleteSGP_Price_Value(SGP_Price_Value instance);
+    partial void InsertTools_Tracking(Tools_Tracking instance);
+    partial void UpdateTools_Tracking(Tools_Tracking instance);
+    partial void DeleteTools_Tracking(Tools_Tracking instance);
     #endregion
 		
 		public SGPAPIDataContext() : 
@@ -125,6 +128,14 @@ namespace SGPWebService.DB
 			get
 			{
 				return this.GetTable<SGP_Price_Value>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Tools_Tracking> Tools_Trackings
+		{
+			get
+			{
+				return this.GetTable<Tools_Tracking>();
 			}
 		}
 	}
@@ -956,6 +967,164 @@ namespace SGPWebService.DB
 					this._ColumnIndex = value;
 					this.SendPropertyChanged("ColumnIndex");
 					this.OnColumnIndexChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tools_Trackings")]
+	public partial class Tools_Tracking : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _ColumnID;
+		
+		private string _Columnname;
+		
+		private System.Nullable<int> _IsCheck;
+		
+		private string _UserName;
+		
+		private int _ID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnColumnIDChanging(string value);
+    partial void OnColumnIDChanged();
+    partial void OnColumnnameChanging(string value);
+    partial void OnColumnnameChanged();
+    partial void OnIsCheckChanging(System.Nullable<int> value);
+    partial void OnIsCheckChanged();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    #endregion
+		
+		public Tools_Tracking()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ColumnID", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string ColumnID
+		{
+			get
+			{
+				return this._ColumnID;
+			}
+			set
+			{
+				if ((this._ColumnID != value))
+				{
+					this.OnColumnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ColumnID = value;
+					this.SendPropertyChanged("ColumnID");
+					this.OnColumnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Columnname", DbType="NVarChar(50)")]
+		public string Columnname
+		{
+			get
+			{
+				return this._Columnname;
+			}
+			set
+			{
+				if ((this._Columnname != value))
+				{
+					this.OnColumnnameChanging(value);
+					this.SendPropertyChanging();
+					this._Columnname = value;
+					this.SendPropertyChanged("Columnname");
+					this.OnColumnnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsCheck", DbType="Int")]
+		public System.Nullable<int> IsCheck
+		{
+			get
+			{
+				return this._IsCheck;
+			}
+			set
+			{
+				if ((this._IsCheck != value))
+				{
+					this.OnIsCheckChanging(value);
+					this.SendPropertyChanging();
+					this._IsCheck = value;
+					this.SendPropertyChanged("IsCheck");
+					this.OnIsCheckChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this.OnUserNameChanging(value);
+					this.SendPropertyChanging();
+					this._UserName = value;
+					this.SendPropertyChanged("UserName");
+					this.OnUserNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
 				}
 			}
 		}

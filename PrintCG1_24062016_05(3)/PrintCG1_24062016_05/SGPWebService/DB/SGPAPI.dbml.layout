@@ -38,5 +38,11 @@
         <elementListCompartment Id="4b39def7-e653-481a-933c-c079dec34bfa" absoluteBounds="0.76500000000000012, 3.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="10130da3-3de3-40a4-9691-f5a1fcab3706" absoluteBounds="3, 3.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SGPAPIDataContext/Tools_Tracking" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4bbfcb9a-1868-4e5e-9d3f-5bedf721c8c8" absoluteBounds="3.0149999999999997, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>
