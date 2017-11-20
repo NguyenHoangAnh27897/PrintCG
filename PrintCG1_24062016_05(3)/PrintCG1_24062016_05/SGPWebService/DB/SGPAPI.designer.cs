@@ -51,6 +51,9 @@ namespace SGPWebService.DB
     partial void InsertTools_Tracking(Tools_Tracking instance);
     partial void UpdateTools_Tracking(Tools_Tracking instance);
     partial void DeleteTools_Tracking(Tools_Tracking instance);
+    partial void InsertSGP_Price_Service_Value(SGP_Price_Service_Value instance);
+    partial void UpdateSGP_Price_Service_Value(SGP_Price_Service_Value instance);
+    partial void DeleteSGP_Price_Service_Value(SGP_Price_Service_Value instance);
     #endregion
 		
 		public SGPAPIDataContext() : 
@@ -136,6 +139,14 @@ namespace SGPWebService.DB
 			get
 			{
 				return this.GetTable<Tools_Tracking>();
+			}
+		}
+		
+		public System.Data.Linq.Table<SGP_Price_Service_Value> SGP_Price_Service_Values
+		{
+			get
+			{
+				return this.GetTable<SGP_Price_Service_Value>();
 			}
 		}
 	}
@@ -1125,6 +1136,260 @@ namespace SGPWebService.DB
 					this._ID = value;
 					this.SendPropertyChanged("ID");
 					this.OnIDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SGP_Price_Service_Value")]
+	public partial class SGP_Price_Service_Value : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _PriceID;
+		
+		private string _Service;
+		
+		private int _PercentOnPrice;
+		
+		private double _ConditionApply;
+		
+		private double _Weight;
+		
+		private int _Zone;
+		
+		private System.Nullable<double> _Price;
+		
+		private System.Nullable<int> _RowIndex;
+		
+		private System.Nullable<int> _ColumnIndex;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPriceIDChanging(string value);
+    partial void OnPriceIDChanged();
+    partial void OnServiceChanging(string value);
+    partial void OnServiceChanged();
+    partial void OnPercentOnPriceChanging(int value);
+    partial void OnPercentOnPriceChanged();
+    partial void OnConditionApplyChanging(double value);
+    partial void OnConditionApplyChanged();
+    partial void OnWeightChanging(double value);
+    partial void OnWeightChanged();
+    partial void OnZoneChanging(int value);
+    partial void OnZoneChanged();
+    partial void OnPriceChanging(System.Nullable<double> value);
+    partial void OnPriceChanged();
+    partial void OnRowIndexChanging(System.Nullable<int> value);
+    partial void OnRowIndexChanged();
+    partial void OnColumnIndexChanging(System.Nullable<int> value);
+    partial void OnColumnIndexChanged();
+    #endregion
+		
+		public SGP_Price_Service_Value()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PriceID", DbType="NVarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string PriceID
+		{
+			get
+			{
+				return this._PriceID;
+			}
+			set
+			{
+				if ((this._PriceID != value))
+				{
+					this.OnPriceIDChanging(value);
+					this.SendPropertyChanging();
+					this._PriceID = value;
+					this.SendPropertyChanged("PriceID");
+					this.OnPriceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Service", DbType="NVarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Service
+		{
+			get
+			{
+				return this._Service;
+			}
+			set
+			{
+				if ((this._Service != value))
+				{
+					this.OnServiceChanging(value);
+					this.SendPropertyChanging();
+					this._Service = value;
+					this.SendPropertyChanged("Service");
+					this.OnServiceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PercentOnPrice", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int PercentOnPrice
+		{
+			get
+			{
+				return this._PercentOnPrice;
+			}
+			set
+			{
+				if ((this._PercentOnPrice != value))
+				{
+					this.OnPercentOnPriceChanging(value);
+					this.SendPropertyChanging();
+					this._PercentOnPrice = value;
+					this.SendPropertyChanged("PercentOnPrice");
+					this.OnPercentOnPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ConditionApply", DbType="Float NOT NULL", IsPrimaryKey=true)]
+		public double ConditionApply
+		{
+			get
+			{
+				return this._ConditionApply;
+			}
+			set
+			{
+				if ((this._ConditionApply != value))
+				{
+					this.OnConditionApplyChanging(value);
+					this.SendPropertyChanging();
+					this._ConditionApply = value;
+					this.SendPropertyChanged("ConditionApply");
+					this.OnConditionApplyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Weight", DbType="Float NOT NULL", IsPrimaryKey=true)]
+		public double Weight
+		{
+			get
+			{
+				return this._Weight;
+			}
+			set
+			{
+				if ((this._Weight != value))
+				{
+					this.OnWeightChanging(value);
+					this.SendPropertyChanging();
+					this._Weight = value;
+					this.SendPropertyChanged("Weight");
+					this.OnWeightChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Zone", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Zone
+		{
+			get
+			{
+				return this._Zone;
+			}
+			set
+			{
+				if ((this._Zone != value))
+				{
+					this.OnZoneChanging(value);
+					this.SendPropertyChanging();
+					this._Zone = value;
+					this.SendPropertyChanged("Zone");
+					this.OnZoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Float")]
+		public System.Nullable<double> Price
+		{
+			get
+			{
+				return this._Price;
+			}
+			set
+			{
+				if ((this._Price != value))
+				{
+					this.OnPriceChanging(value);
+					this.SendPropertyChanging();
+					this._Price = value;
+					this.SendPropertyChanged("Price");
+					this.OnPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RowIndex", DbType="Int")]
+		public System.Nullable<int> RowIndex
+		{
+			get
+			{
+				return this._RowIndex;
+			}
+			set
+			{
+				if ((this._RowIndex != value))
+				{
+					this.OnRowIndexChanging(value);
+					this.SendPropertyChanging();
+					this._RowIndex = value;
+					this.SendPropertyChanged("RowIndex");
+					this.OnRowIndexChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ColumnIndex", DbType="Int")]
+		public System.Nullable<int> ColumnIndex
+		{
+			get
+			{
+				return this._ColumnIndex;
+			}
+			set
+			{
+				if ((this._ColumnIndex != value))
+				{
+					this.OnColumnIndexChanging(value);
+					this.SendPropertyChanging();
+					this._ColumnIndex = value;
+					this.SendPropertyChanged("ColumnIndex");
+					this.OnColumnIndexChanged();
 				}
 			}
 		}

@@ -104,11 +104,29 @@
   <wsdl:message name="ISGPService_getPriceValue_OutputMessage">
     <wsdl:part name="parameters" element="tns:getPriceValueResponse" />
   </wsdl:message>
+  <wsdl:message name="ISGPService_getPriceServiceValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPriceServiceValue" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getPriceServiceValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPriceServiceValueResponse" />
+  </wsdl:message>
   <wsdl:message name="ISGPService_calPrice_InputMessage">
     <wsdl:part name="parameters" element="tns:calPrice" />
   </wsdl:message>
   <wsdl:message name="ISGPService_calPrice_OutputMessage">
     <wsdl:part name="parameters" element="tns:calPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getUserTrackingProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserTrackingProfile" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getUserTrackingProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserTrackingProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_ToolTracking_InputMessage">
+    <wsdl:part name="parameters" element="tns:ToolTracking" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_ToolTracking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ToolTrackingResponse" />
   </wsdl:message>
   <wsdl:portType name="ISGPService">
     <wsdl:operation name="login">
@@ -175,9 +193,21 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getPriceValue" message="tns:ISGPService_getPriceValue_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getPriceValueResponse" message="tns:ISGPService_getPriceValue_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="getPriceServiceValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getPriceServiceValue" message="tns:ISGPService_getPriceServiceValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getPriceServiceValueResponse" message="tns:ISGPService_getPriceServiceValue_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="calPrice">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/calPrice" message="tns:ISGPService_calPrice_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/calPriceResponse" message="tns:ISGPService_calPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserTrackingProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getUserTrackingProfile" message="tns:ISGPService_getUserTrackingProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getUserTrackingProfileResponse" message="tns:ISGPService_getUserTrackingProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ToolTracking">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/ToolTracking" message="tns:ISGPService_ToolTracking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/ToolTrackingResponse" message="tns:ISGPService_ToolTracking_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISGPService" type="tns:ISGPService">
@@ -326,8 +356,35 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getPriceServiceValue">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getPriceServiceValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="calPrice">
       <soap:operation soapAction="http://tempuri.org/ISGPService/calPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserTrackingProfile">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getUserTrackingProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ToolTracking">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/ToolTracking" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

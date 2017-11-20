@@ -239,6 +239,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getPriceServiceValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PriceID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPriceServiceValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/SGPWebService.DB" minOccurs="0" name="getPriceServiceValueResult" nillable="true" type="q9:ArrayOfSGP_Price_Service_Value" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="calPrice">
     <xs:complexType>
       <xs:sequence>
@@ -253,7 +267,35 @@
   <xs:element name="calPriceResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="calPriceResult" nillable="true" type="q9:ArrayOfPriceList" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="calPriceResult" nillable="true" type="q10:ArrayOfPriceList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserTrackingProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserTrackingProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/SGPWebService.DB" minOccurs="0" name="getUserTrackingProfileResult" nillable="true" type="q11:ArrayOfTools_Tracking" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ToolTracking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MailerID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ToolTrackingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="ToolTrackingResult" nillable="true" type="q12:ArrayOfTrackings" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

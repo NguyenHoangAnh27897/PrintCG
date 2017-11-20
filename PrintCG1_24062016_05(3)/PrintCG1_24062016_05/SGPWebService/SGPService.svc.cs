@@ -285,5 +285,12 @@ namespace SGPWebService
                          }).ToList();
             return query;
         }
+
+
+        public List<DB.SGP_Price_Service_Value> getPriceServiceValue(string PriceID)
+        {
+            List<DB.SGP_Price_Service_Value> data = api.SGP_Price_Service_Values.Where(t => t.PriceID == PriceID).ToList();
+            return data;
+        }
     }
 }

@@ -232,6 +232,8 @@ namespace PrintCG_24062016.tinhcuoc
             {
                 chkphuphi.Checked = true;
             }
+
+            #region load bang gia chinh
             var pricevalue = sgpservice.getPriceValue(txtpriceid.Text);
             var maxrow = pricevalue.OrderByDescending(item => item.RowIndex).First();
             //lay ra so cot theo mavung
@@ -259,12 +261,24 @@ namespace PrintCG_24062016.tinhcuoc
                         int col = dataGridView1.Columns[i].Index;
                         if (col == item.ColumnIndex)
                         {
-                            row.Cells[i].Value = item.Price;   
+                            row.Cells[i].Value = item.Price;
                         }
                     }
                 }
             }
-            
+            #endregion
+            #region load bang gia dich vu 
+            if(pp== 1)
+            {
+                var priceservicevalue = sgpservice.getPriceServiceValue(txtpriceid.Text);
+                var maxservicerow = pricevalue.OrderByDescending(item => item.RowIndex).First();
+                dataGridView2.Columns.Add("Service", "DV");
+                dataGridView2.Columns.Add("PercentOnPrice", "% cước");
+                dataGridView2.Columns.Add("ConditionApply", "ĐK");
+                dataGridView2.Columns.Add("Weight", "Nấc TL");
+            }
+            #endregion
+
 
         }
     }

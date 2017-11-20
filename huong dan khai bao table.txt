@@ -1,0 +1,9 @@
+PriceID : m? b?ng giá
+Service : M? d?ch v? c?ng thêm
+PercentOnPrice : Ph?n trãm cý?c chính
+ConditionApply : Ði?u ki?n áp d?ng : vd  > 1000 (kg)
+Weight : N?c tr?ng lý?ng
+Zone : Vùng tính cý?c.
+Price : Giá
+RowIndex : D?ng trên lý?i
+ColumnIndex : C?t trên lý?i
