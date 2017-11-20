@@ -8,4 +8,3 @@ D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebSe
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\bin\SGPWebService.pdb
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.dll
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.pdb
-D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.csprojResolveAssemblyReference.cache

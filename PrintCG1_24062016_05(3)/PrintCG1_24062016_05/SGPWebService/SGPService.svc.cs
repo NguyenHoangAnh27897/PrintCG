@@ -280,6 +280,7 @@ namespace SGPWebService
                          select new DataClass.Trackings()
                          {
                              BS_Employees_EmployeeID = e.EmployeeID,
+                             BS_Employees_EmployeeName = e.EmployeeName,
                          }).ToList();
             return query;
         }
