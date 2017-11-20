@@ -4567,6 +4567,12 @@ namespace PrintCG_24062016.SGPService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float PPHKField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float PPXDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private float PriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -4579,6 +4585,32 @@ namespace PrintCG_24062016.SGPService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float PPHK {
+            get {
+                return this.PPHKField;
+            }
+            set {
+                if ((this.PPHKField.Equals(value) != true)) {
+                    this.PPHKField = value;
+                    this.RaisePropertyChanged("PPHK");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float PPXD {
+            get {
+                return this.PPXDField;
+            }
+            set {
+                if ((this.PPXDField.Equals(value) != true)) {
+                    this.PPXDField = value;
+                    this.RaisePropertyChanged("PPXD");
+                }
             }
         }
         

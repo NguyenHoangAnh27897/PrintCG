@@ -67,16 +67,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dtptungay = new System.Windows.Forms.DateTimePicker();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -333,7 +336,7 @@
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(976, 285);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Giá cước";
@@ -349,9 +352,10 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridView3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(976, 285);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Phụ phí";
@@ -383,7 +387,7 @@
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(1183, 603);
@@ -398,10 +402,10 @@
             this.tabPage3.Controls.Add(this.label5);
             this.tabPage3.Controls.Add(this.dtptungay);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage3.Size = new System.Drawing.Size(1051, 536);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Size = new System.Drawing.Size(1175, 577);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Danh mục";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -410,7 +414,7 @@
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(8, 40);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 28;
@@ -421,7 +425,7 @@
             // btnxem
             // 
             this.btnxem.Location = new System.Drawing.Point(349, 13);
-            this.btnxem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnxem.Margin = new System.Windows.Forms.Padding(2);
             this.btnxem.Name = "btnxem";
             this.btnxem.Size = new System.Drawing.Size(50, 23);
             this.btnxem.TabIndex = 4;
@@ -443,7 +447,7 @@
             // 
             this.dtpdenngay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpdenngay.Location = new System.Drawing.Point(234, 13);
-            this.dtpdenngay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpdenngay.Margin = new System.Windows.Forms.Padding(2);
             this.dtpdenngay.Name = "dtpdenngay";
             this.dtpdenngay.Size = new System.Drawing.Size(95, 20);
             this.dtpdenngay.TabIndex = 2;
@@ -462,7 +466,7 @@
             // 
             this.dtptungay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtptungay.Location = new System.Drawing.Point(54, 12);
-            this.dtptungay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtptungay.Margin = new System.Windows.Forms.Padding(2);
             this.dtptungay.Name = "dtptungay";
             this.dtptungay.Size = new System.Drawing.Size(95, 20);
             this.dtptungay.TabIndex = 0;
@@ -475,13 +479,21 @@
             this.tabPage4.Controls.Add(this.button2);
             this.tabPage4.Controls.Add(this.groupBox3);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage4.Size = new System.Drawing.Size(1175, 577);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Chi tiết";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(950, 273);
+            this.dataGridView3.TabIndex = 0;
             // 
             // FrmBangGia
             // 
@@ -501,11 +513,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -551,5 +565,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtptungay;
         private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.DataGridView dataGridView3;
     }
 }

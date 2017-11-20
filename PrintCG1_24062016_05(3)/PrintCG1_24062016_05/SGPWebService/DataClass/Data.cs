@@ -16,6 +16,8 @@ namespace SGPWebService.DataClass
     {
         public float Price { get; set; }
         public float PriceService { get; set; }
+        public float PPXD { get; set; }
+        public float PPHK { get; set; }
     }
     public class Trackings
     {

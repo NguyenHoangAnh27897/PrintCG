@@ -229,6 +229,10 @@ namespace SGPWebService
             //xac dinh trong luong
             //xac dinh nac trong luong
             //tinh gia
+            float price = 0;
+            float priceservice = 0;
+            float ppxd = 0;
+            float pphk = 0;
             List<DataClass.PriceList> list = new List<DataClass.PriceList>();
             string PriceID = string.Empty;
             var query = (from post in api.SGP_Price_Customers
@@ -236,20 +240,60 @@ namespace SGPWebService
                         where post.CustomerID == CustomerID && meta.ServiceID == ServiceType
                         select new { post.PriceID }).FirstOrDefault();
             PriceID = query.PriceID;
+            var zoneid = api.SGP_Price_Policies.Where(m => m.PricePolicyID == PriceID).FirstOrDefault();
+            var zone = api.SGP_Province_Zones.Where(t => t.ZoneID == zoneid.ZoneID && t.ProvinceID == ProvinceID).FirstOrDefault();
+            var nactl = api.SGP_Price_Values.Where(t => t.PriceID == PriceID && (t.FW <= Weight && t.TW >= Weight) && t.Zone == zone.Zone).FirstOrDefault();
             if (PriceID != string.Empty) // neu lon hon 0 thi có bang giá
-            {
-                var zoneid = api.SGP_Price_Policies.Where(m => m.PricePolicyID == PriceID).FirstOrDefault();
-                var zone = api.SGP_Province_Zones.Where(t => t.ZoneID == zoneid.ZoneID && t.ProvinceID == ProvinceID).FirstOrDefault();
-                var nactl = api.SGP_Price_Values.Where(t => t.PriceID == PriceID && (t.FW<= Weight && t.TW >= Weight) && t.Zone == zone.Zone).FirstOrDefault();
-                if(nactl != null)
+            {              
+                if(nactl != null)//neu nam trong khoang 2000 gram
                 {
-                    list.Add(new DataClass.PriceList()
+                    price = float.Parse(nactl.Price.Value.ToString());
+                }else
+                {
+                    var nactltt = api.SGP_Price_Values.Where(t => t.PriceID == PriceID && t.FW == t.TW && t.Zone == zone.Zone).FirstOrDefault();
+                    var cuoc2kg = api.SGP_Price_Values.Where(t => t.PriceID == PriceID &&  t.TW == 2000 && t.Zone == zone.Zone).FirstOrDefault();
+                    if(Weight >2000)
+                    {
+                        double tldu = Weight - 2000;
+                        var tongtldu  = Math.Round(tldu / 500, 0, MidpointRounding.ToEven);
+                        //double nactldu = Math.Round(double.Parse((Weight - 2000).ToString()) / nactltt.FW, 0, MidpointRounding.ToEven);
+                        double nactldu = 0;
+                        if (tldu <= 500)
                         {
-                            Price = float.Parse(nactl.Price.Value.ToString()),
-                            PriceService = 0
-                        });
+                            nactldu = 1;
+                        }else if(tldu > 500 && tldu<=1000)
+                        {
+                            nactldu = 2;
+                        }
+                        
+                        price = float.Parse((cuoc2kg.Price + nactltt.Price * nactldu).ToString());
+
+                    }
                 }
             }
+            //them service neu co
+            if(zoneid.Service ==1)
+            {
+                var pp_xd = api.SGP_Price_Service_Values.Where(t => t.PriceID == PriceID && t.Service =="PPXD" && t.Zone == zone.Zone).FirstOrDefault();
+                var pp_hk = api.SGP_Price_Service_Values.Where(t => t.PriceID == PriceID && t.Service == "PPHK" && t.Zone == zone.Zone).FirstOrDefault();
+                //ppxd
+                ppxd = float.Parse((pp_xd.Price/100 * price).ToString());
+                //pphk
+                if(Weight > pp_hk.ConditionApply)
+                {
+                    var nachk = Math.Round(Weight / pp_hk.Weight, 0, MidpointRounding.ToEven);
+                    pphk = float.Parse((nachk * pp_hk.Price).ToString());
+                }
+                priceservice = ppxd + pphk;
+            }
+            //them gia vao class
+            list.Add(new DataClass.PriceList()
+            {
+                Price = price,
+                PriceService = priceservice,
+                PPXD = ppxd,
+                PPHK =pphk
+            });
             return list;
 
         }

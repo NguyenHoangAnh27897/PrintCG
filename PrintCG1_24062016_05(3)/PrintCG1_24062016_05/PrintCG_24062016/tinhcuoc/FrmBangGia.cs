@@ -236,13 +236,14 @@ namespace PrintCG_24062016.tinhcuoc
             #region load bang gia chinh
             var pricevalue = sgpservice.getPriceValue(txtpriceid.Text);
             var maxrow = pricevalue.OrderByDescending(item => item.RowIndex).First();
+            int columns = sgpservice.getmaxZone(cmbmavung.Text.Trim());
             //lay ra so cot theo mavung
             if (cmbcongthuc.Text == "nấc trọng lượng")
             {
-                int columns = sgpservice.getmaxZone(cmbmavung.Text.Trim());
+               
                 dataGridView1.Columns.Add("Begin", "Bắt đầu");
                 dataGridView1.Columns.Add("End", "Kết thúc");
-                for (int i = 0; i <= columns - 1; i++)
+                for (int i = 0; i <= columns; i++)
                 {
                     dataGridView1.Columns.Add(i.ToString(), i.ToString());
                 }
@@ -256,7 +257,7 @@ namespace PrintCG_24062016.tinhcuoc
                     var row = this.dataGridView1.Rows[item.RowIndex.Value];
                     row.Cells["Begin"].Value = item.FW;
                     row.Cells["End"].Value = item.TW;
-                    for (int i = 2; i <= columns + 2 - 1; i++) // cong 2 do tinh them 2 cot nac trong luong
+                    for (int i = 2; i <= columns + 2 ; i++) // cong 2 do tinh them 2 cot nac trong luong
                     {
                         int col = dataGridView1.Columns[i].Index;
                         if (col == item.ColumnIndex)
@@ -266,16 +267,42 @@ namespace PrintCG_24062016.tinhcuoc
                     }
                 }
             }
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             #endregion
             #region load bang gia dich vu 
             if(pp== 1)
             {
                 var priceservicevalue = sgpservice.getPriceServiceValue(txtpriceid.Text);
                 var maxservicerow = pricevalue.OrderByDescending(item => item.RowIndex).First();
-                dataGridView2.Columns.Add("Service", "DV");
-                dataGridView2.Columns.Add("PercentOnPrice", "% cước");
-                dataGridView2.Columns.Add("ConditionApply", "ĐK");
-                dataGridView2.Columns.Add("Weight", "Nấc TL");
+                dataGridView3.Columns.Add("Service", "DV");
+                dataGridView3.Columns.Add("PercentOnPrice", "% cước");
+                dataGridView3.Columns.Add("ConditionApply", "ĐK");
+                dataGridView3.Columns.Add("Weight", "Nấc TL");
+                for (int i = 0; i <= columns ; i++)
+                {
+                    dataGridView3.Columns.Add(i.ToString(), i.ToString());
+                }
+                for (int i = 0; i <= int.Parse(maxservicerow.RowIndex.ToString()) - 1; i++)
+                {
+                    dataGridView3.Rows.Add();
+                }
+                foreach (var item in priceservicevalue)
+                {
+                    var row = this.dataGridView3.Rows[item.RowIndex.Value];
+                    row.Cells["Service"].Value = item.Service;
+                    row.Cells["PercentOnPrice"].Value = item.PercentOnPrice;
+                    row.Cells["ConditionApply"].Value = item.ConditionApply;
+                    row.Cells["Weight"].Value = item.Weight;
+                    for (int i = 4; i <= columns + 4 ; i++) // cong 2 do tinh them 2 cot nac trong luong
+                    {
+                        int col = dataGridView3.Columns[i].Index;
+                        if (col == item.ColumnIndex)
+                        {
+                            row.Cells[i].Value = item.Price;
+                        }
+                    }
+                }
+                dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             }
             #endregion
 

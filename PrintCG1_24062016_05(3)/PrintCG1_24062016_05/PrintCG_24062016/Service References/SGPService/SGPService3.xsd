@@ -20,6 +20,8 @@
   <xs:element name="ArrayOfPriceList" nillable="true" type="tns:ArrayOfPriceList" />
   <xs:complexType name="PriceList">
     <xs:sequence>
+      <xs:element minOccurs="0" name="PPHK" type="xs:float" />
+      <xs:element minOccurs="0" name="PPXD" type="xs:float" />
       <xs:element minOccurs="0" name="Price" type="xs:float" />
       <xs:element minOccurs="0" name="PriceService" type="xs:float" />
     </xs:sequence>
