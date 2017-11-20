@@ -43,7 +43,7 @@
             // cbbType
             // 
             this.cbbType.FormattingEnabled = true;
-            this.cbbType.Location = new System.Drawing.Point(369, 25);
+            this.cbbType.Location = new System.Drawing.Point(422, 25);
             this.cbbType.Name = "cbbType";
             this.cbbType.Size = new System.Drawing.Size(107, 21);
             this.cbbType.TabIndex = 23;
@@ -51,7 +51,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(344, 28);
+            this.labelControl3.Location = new System.Drawing.Point(379, 28);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(19, 13);
             this.labelControl3.TabIndex = 22;
@@ -59,7 +59,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(182, 28);
+            this.labelControl2.Location = new System.Drawing.Point(198, 28);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(47, 13);
             this.labelControl2.TabIndex = 19;
@@ -104,7 +104,7 @@
             // dtp1
             // 
             this.dtp1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp1.Location = new System.Drawing.Point(58, 25);
+            this.dtp1.Location = new System.Drawing.Point(70, 25);
             this.dtp1.Name = "dtp1";
             this.dtp1.Size = new System.Drawing.Size(109, 20);
             this.dtp1.TabIndex = 26;
@@ -112,7 +112,7 @@
             // dtp2
             // 
             this.dtp2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp2.Location = new System.Drawing.Point(235, 25);
+            this.dtp2.Location = new System.Drawing.Point(261, 26);
             this.dtp2.Name = "dtp2";
             this.dtp2.Size = new System.Drawing.Size(102, 20);
             this.dtp2.TabIndex = 27;

@@ -222,6 +222,12 @@
     <Compile Include="FrmNormal.Designer.cs">
       <DependentUpon>FrmNormal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rpt_XuatNhapTon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_XuatNhapTon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Service References\SGPService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -582,6 +588,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNormal.resx">
       <DependentUpon>FrmNormal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt_XuatNhapTon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_XuatNhapTon.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="sony\FrmSonyDiachi.resx">
       <DependentUpon>FrmSonyDiachi.cs</DependentUpon>
