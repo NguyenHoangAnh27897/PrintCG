@@ -281,6 +281,7 @@ namespace SGPWebService
                          {
                              BS_Employees_EmployeeID = e.EmployeeID,
                              BS_Employees_EmployeeName = e.EmployeeName,
+                             MM_Mailers_Amount =double.Parse( m.Amount.ToString()),
                          }).ToList();
             return query;
         }
