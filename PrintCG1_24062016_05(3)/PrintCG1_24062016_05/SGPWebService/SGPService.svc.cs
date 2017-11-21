@@ -254,19 +254,23 @@ namespace SGPWebService
                     var cuoc2kg = api.SGP_Price_Values.Where(t => t.PriceID == PriceID &&  t.TW == 2000 && t.Zone == zone.Zone).FirstOrDefault();
                     if(Weight >2000)
                     {
-                        double tldu = Weight - 2000;
-                        var tongtldu  = Math.Round(tldu / 500, 0, MidpointRounding.ToEven);
-                        //double nactldu = Math.Round(double.Parse((Weight - 2000).ToString()) / nactltt.FW, 0, MidpointRounding.ToEven);
-                        double nactldu = 0;
-                        if (tldu <= 500)
+                        //sua code
+                        float tlthua = Weight - 2000;
+                        if (tlthua <= 500)
                         {
-                            nactldu = 1;
-                        }else if(tldu > 500 && tldu<=1000)
-                        {
-                            nactldu = 2;
+                            price = float.Parse((nactltt.Price + cuoc2kg.Price).ToString());
                         }
-                        
-                        price = float.Parse((cuoc2kg.Price + nactltt.Price * nactldu).ToString());
+                        else if (tlthua > 500)
+                        {
+                            double tile = (tlthua / 500);
+                            float a = (tlthua % 500);
+                            if (a > 0)
+                            {
+                                tile = tile + 1;
+                            }
+                            price = float.Parse((cuoc2kg.Price + nactltt.Price * tile).ToString());
+                        }
+                        //sua code 
 
                     }
                 }
@@ -281,7 +285,12 @@ namespace SGPWebService
                 //pphk
                 if(Weight > pp_hk.ConditionApply)
                 {
-                    var nachk = Math.Round(Weight / pp_hk.Weight, 0, MidpointRounding.ToEven);
+                    float nachk = float.Parse(Math.Round(Weight / pp_hk.Weight, 0, MidpointRounding.AwayFromZero).ToString());
+                    float a = float.Parse((Weight % pp_hk.Weight).ToString());
+                    if (a > 0)
+                    {
+                        nachk = nachk + 1;
+                    }
                     pphk = float.Parse((nachk * pp_hk.Price).ToString());
                 }
                 priceservice = ppxd + pphk;

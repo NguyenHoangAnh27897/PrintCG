@@ -1,0 +1,3388 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Tong Vi Dan</Author>
+  <LastAuthor>ADMIN</LastAuthor>
+  <LastPrinted>2017-09-13T04:22:41Z</LastPrinted>
+  <Created>2009-03-31T07:13:45Z</Created>
+  <LastSaved>2014-12-07T15:14:40Z</LastSaved>
+  <Company>VDC</Company>
+  <Version>14.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>5745</WindowHeight>
+  <WindowWidth>17040</WindowWidth>
+  <WindowTopX>8775</WindowTopX>
+  <WindowTopY>1095</WindowTopY>
+  <RefModeR1C1/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62" ss:Name="Normal 2">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s63" ss:Name="Normal_Mau bao cao boi thuong_Tr">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="VNI-Times" ss:Size="12"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="m24131776" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m24131796" ss:Parent="s63">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Bold="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="m24131816">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Times New Roman" x:Family="Roman" ss:Size="11"
+    ss:Color="#000000" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="m24131328" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m24131348" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m24131368" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m24131388" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m24131408" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m24131428" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m24131612" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m24131632" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m24131652" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m24131672" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m24131692" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m24131712" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="m24131732" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s64">
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s66">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Times New Roman" x:Family="Roman" ss:Size="14"
+    ss:Color="#333333" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s68" ss:Parent="s63">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="16" ss:Bold="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s70">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Times New Roman" x:Family="Roman" ss:Size="14"
+    ss:Color="#333333" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s71" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="16" ss:Bold="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s73">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="9" ss:Color="#333333"
+    ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s74">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="Times New Roman" x:Family="Roman" ss:Size="12"
+    ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s76" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Times New Roman" x:Family="Roman" ss:Size="16" ss:Bold="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s78">
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s79" ss:Parent="s63">
+   <Alignment ss:Vertical="Top"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Bold="1" ss:Italic="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s80" ss:Parent="s63">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Top"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s81" ss:Parent="s63">
+   <Alignment ss:Vertical="Top"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s82" ss:Parent="s63">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s83" ss:Parent="s63">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Bold="1" ss:Italic="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s84" ss:Parent="s63">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s85" ss:Parent="s63">
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s86" ss:Parent="s63">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s87" ss:Parent="s63">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s88" ss:Parent="s63">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s89" ss:Parent="s63">
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Italic="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s90" ss:Parent="s63">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s91" ss:Parent="s63">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s92" ss:Parent="s63">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s93" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="8"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s94" ss:Parent="s63">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s103" ss:Parent="s63">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior/>
+   <NumberFormat ss:Format="#,##0"/>
+  </Style>
+  <Style ss:ID="s104" ss:Parent="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="7"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s105" ss:Parent="s63">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="7"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s106" ss:Parent="s63">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="7"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s107" ss:Parent="s63">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="7"/>
+   <Interior/>
+   <NumberFormat/>
+  </Style>
+  <Style ss:ID="s108" ss:Parent="s63">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="7"/>
+   <Interior/>
+   <NumberFormat ss:Format="#,##0"/>
+  </Style>
+  <Style ss:ID="s109" ss:Parent="s63">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="7"/>
+   <Interior/>
+   <NumberFormat/>
+  </Style>
+  <Style ss:ID="s110">
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s111">
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="8" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s119" ss:Parent="s63">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="7" ss:Bold="1"/>
+   <Interior/>
+   <NumberFormat ss:Format="#,##0"/>
+  </Style>
+  <Style ss:ID="s120">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s121">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Times New Roman" x:Family="Roman" ss:Size="11"
+    ss:Color="#000000" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s124" ss:Parent="s63">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="9" ss:Bold="1"/>
+   <Interior/>
+   <NumberFormat ss:Format="#,##0"/>
+  </Style>
+  <Style ss:ID="s126">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Times New Roman" x:Family="Roman" ss:Size="11"
+    ss:Color="#000000" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s127">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Times New Roman" x:Family="Roman" ss:Size="11"
+    ss:Color="#000000" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s128" ss:Parent="s63">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="7" ss:Bold="1"/>
+   <Interior/>
+   <NumberFormat ss:Format="#,##0"/>
+  </Style>
+  <Style ss:ID="s129" ss:Parent="s63">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Bold="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s130" ss:Parent="s63">
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Bold="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s131">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Times New Roman" x:Family="Roman" ss:Size="11"
+    ss:Color="#000000" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s133">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Times New Roman" x:Family="Roman" ss:Size="11"
+    ss:Color="#000000" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s134">
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+  </Style>
+  <Style ss:ID="s135">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Times New Roman" x:Family="Roman" ss:Bold="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s136">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+  </Style>
+  <Style ss:ID="s137">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+  </Style>
+  <Style ss:ID="s138">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s139">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s140">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Times New Roman" x:Family="Roman" ss:Size="11"
+    ss:Color="#000000" ss:Italic="1"/>
+  </Style>
+  <Style ss:ID="s142">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Times New Roman" x:Family="Roman" ss:Size="11"
+    ss:Color="#000000" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s145">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Times New Roman" x:Family="Roman" ss:Color="#000000"
+    ss:Bold="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s146">
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s147">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Italic="1"/>
+  </Style>
+  <Style ss:ID="s148">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Italic="1"/>
+  </Style>
+  <Style ss:ID="s150" ss:Parent="s62">
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s151">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Italic="1"/>
+  </Style>
+  <Style ss:ID="s152">
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <NumberFormat ss:Format="0"/>
+  </Style>
+ </Styles>
+ <Names>
+  <NamedRange ss:Name="BKBCUOC" ss:RefersTo="=&quot;BKBCUOC&quot;"/>
+  <NamedRange ss:Name="BKBO_SUNG" ss:RefersTo="=&quot;BKBO_SUNG&quot;"/>
+  <NamedRange ss:Name="BKBO_SUNG_sum" ss:RefersTo="=&quot;BKBO_SUNG_sum&quot;"/>
+  <NamedRange ss:Name="BKCC_BS_QD_VAT" ss:RefersTo="=&quot;BKCC_BS_QD_VAT&quot;"/>
+  <NamedRange ss:Name="BKCC_BS_QD_VAT_sum" ss:RefersTo="=&quot;BKCC_BS_QD_VAT_sum&quot;"/>
+  <NamedRange ss:Name="BKCK_VAT" ss:RefersTo="=&quot;BKCK_VAT&quot;"/>
+  <NamedRange ss:Name="BKCUOC_CHINH" ss:RefersTo="=&quot;BKCUOC_CHINH&quot;"/>
+  <NamedRange ss:Name="BKCUOC_CHINH_sum" ss:RefersTo="=&quot;BKCUOC_CHINH_sum&quot;"/>
+  <NamedRange ss:Name="BKDCHI" ss:RefersTo="=&quot;BKDCHI&quot;"/>
+  <NamedRange ss:Name="BKDTHU" ss:RefersTo="=&quot;BKDTHU&quot;"/>
+  <NamedRange ss:Name="BKDTHU_sum" ss:RefersTo="=&quot;BKDTHU_sum&quot;"/>
+  <NamedRange ss:Name="BKGHI_CHU" ss:RefersTo="=&quot;BKGHI_CHU&quot;"/>
+  <NamedRange ss:Name="BKKLUONG" ss:RefersTo="=&quot;BKKLUONG&quot;"/>
+  <NamedRange ss:Name="BKNGAY_HT" ss:RefersTo="=&quot;BKNGAY_HT&quot;"/>
+  <NamedRange ss:Name="BKPHU_PHI" ss:RefersTo="=&quot;BKPHU_PHI&quot;"/>
+  <NamedRange ss:Name="BKPHU_PHI_sum" ss:RefersTo="=&quot;BKPHU_PHI_sum&quot;"/>
+  <NamedRange ss:Name="BKPPNL" ss:RefersTo="=&quot;BKPPNL&quot;"/>
+  <NamedRange ss:Name="BKPPNL_sum" ss:RefersTo="=&quot;BKPPNL_sum&quot;"/>
+  <NamedRange ss:Name="BKPPNL_VAT" ss:RefersTo="=&quot;BKPPNL_VAT&quot;"/>
+  <NamedRange ss:Name="BKPPNL_VAT_sum" ss:RefersTo="=&quot;BKPPNL_VAT_sum&quot;"/>
+  <NamedRange ss:Name="BKSMLRepeat" ss:RefersTo="=&quot;BKSMLRepeat&quot;"/>
+  <NamedRange ss:Name="BKSO_HIEU" ss:RefersTo="=&quot;BKSO_HIEU&quot;"/>
+  <NamedRange ss:Name="BKSTT" ss:RefersTo="=&quot;BKSTT&quot;"/>
+  <NamedRange ss:Name="BKTONG" ss:RefersTo="=&quot;BKTONG&quot;"/>
+  <NamedRange ss:Name="BKTONG_sum" ss:RefersTo="=&quot;BKTONG_sum&quot;"/>
+  <NamedRange ss:Name="BKVAT" ss:RefersTo="=&quot;BKVAT&quot;"/>
+  <NamedRange ss:Name="BKVAT_sum" ss:RefersTo="=&quot;BKVAT_sum&quot;"/>
+  <NamedRange ss:Name="CHBO_SUNG" ss:RefersTo="=&quot;CHBO_SUNG&quot;"/>
+  <NamedRange ss:Name="CHCUOC_CHINH" ss:RefersTo="=&quot;CHCUOC_CHINH&quot;"/>
+  <NamedRange ss:Name="CHDCHI" ss:RefersTo="=&quot;CHDCHI&quot;"/>
+  <NamedRange ss:Name="CHDCHI_CTY" ss:RefersTo="=&quot;CHDCHI_CTY&quot;"/>
+  <NamedRange ss:Name="CHDTHU" ss:RefersTo="=&quot;CHDTHU&quot;"/>
+  <NamedRange ss:Name="CHKLUONG" ss:RefersTo="=&quot;CHKLUONG&quot;"/>
+  <NamedRange ss:Name="CHMA_KH" ss:RefersTo="=&quot;CHMA_KH&quot;"/>
+  <NamedRange ss:Name="CHMST" ss:RefersTo="=&quot;CHMST&quot;"/>
+  <NamedRange ss:Name="CHNGAY_BC" ss:RefersTo="=&quot;CHNGAY_BC&quot;"/>
+  <NamedRange ss:Name="CHNGAY_C" ss:RefersTo="=&quot;CHNGAY_C&quot;"/>
+  <NamedRange ss:Name="CHNGAY_D" ss:RefersTo="=&quot;CHNGAY_D&quot;"/>
+  <NamedRange ss:Name="CHPHU_PHI" ss:RefersTo="=&quot;CHPHU_PHI&quot;"/>
+  <NamedRange ss:Name="CHPPNL" ss:RefersTo="=&quot;CHPPNL&quot;"/>
+  <NamedRange ss:Name="CHTEL" ss:RefersTo="=&quot;CHTEL&quot;"/>
+  <NamedRange ss:Name="CHTEN_CTY" ss:RefersTo="=&quot;CHTEN_CTY&quot;"/>
+  <NamedRange ss:Name="CHTEN_KH" ss:RefersTo="=&quot;CHTEN_KH&quot;"/>
+  <NamedRange ss:Name="CHTONG" ss:RefersTo="=&quot;CHTONG&quot;"/>
+  <NamedRange ss:Name="CHTONG_PHI" ss:RefersTo="=&quot;CHTONG_PHI&quot;"/>
+  <NamedRange ss:Name="CHTU_NGAY" ss:RefersTo="=&quot;CHTU_NGAY&quot;"/>
+  <NamedRange ss:Name="CHVAT" ss:RefersTo="=&quot;CHVAT&quot;"/>
+ </Names>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="30" ss:ExpandedRowCount="109" x:FullColumns="1"
+   x:FullRows="1" ss:StyleID="s64" ss:DefaultRowHeight="14.25">
+   <Column ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="23.25"/>
+   <Column ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="45.75" ss:Span="1"/>
+   <Column ss:Index="4" ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="51.75"/>
+   <Column ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="54.75" ss:Span="1"/>
+   <Column ss:Index="7" ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="59.25"/>
+   <Column ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="51" ss:Span="1"/>
+   <Column ss:Index="10" ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="43.5"/>
+   <Column ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="45" ss:Span="1"/>
+   <Column ss:Index="13" ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="57"/>
+   <Column ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="66.75"/>
+   <Column ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="36.75"/>
+   <Column ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="37.5"/>
+   <Column ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="54" ss:Span="1"/>
+   <Column ss:Index="19" ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="42"/>
+   <Column ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="54"/>
+   <Column ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="35.25"/>
+   <Column ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="39"/>
+   <Column ss:StyleID="s64" ss:AutoFitWidth="0" ss:Width="38.25"/>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">&#160;Công ty Cổ phần Dịch vụ Bưu chính Viễn thông Sài Gòn (SPT)</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:MergeAcross="9" ss:StyleID="s70"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:Index="5" ss:MergeAcross="9" ss:StyleID="s73"/>
+    <Cell ss:Index="25" ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:Index="5" ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:Index="25" ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+    <Cell ss:StyleID="s71"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:MergeAcross="13" ss:StyleID="s76"><Data ss:Type="String">BẢNG KÊ CHI TIẾT CƯỚC DVBC </Data></Cell>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s78"/>
+    <Cell ss:StyleID="s78"/>
+    <Cell ss:StyleID="s78"/>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s80"/>
+    <Cell ss:StyleID="s80"><Data ss:Type="String">Từ ngày </Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s80"><Data ss:Type="String">Đến ngày</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s83"/>
+    <Cell ss:StyleID="s83"/>
+    <Cell ss:StyleID="s83"/>
+    <Cell ss:StyleID="s83"/>
+    <Cell ss:StyleID="s83"/>
+    <Cell ss:StyleID="s83"/>
+    <Cell ss:StyleID="s83"/>
+    <Cell ss:StyleID="s83"/>
+    <Cell ss:StyleID="s83"/>
+    <Cell ss:StyleID="s83"/>
+    <Cell ss:StyleID="s68"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Mã KH</Data></Cell>
+    <Cell ss:StyleID="s84"/>
+    <Cell ss:StyleID="s84"/>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">TTTSHB</Data></Cell>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">Tên KH</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Trung tâm thẻ SHB</Data></Cell>
+    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s87"><Data ss:Type="String">Địa chỉ</Data></Cell>
+    <Cell ss:StyleID="s87"/>
+    <Cell ss:StyleID="s87"/>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s89"/>
+    <Cell ss:StyleID="s89"/>
+    <Cell ss:StyleID="s89"/>
+    <Cell ss:StyleID="s89"/>
+    <Cell ss:StyleID="s89"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s90"/>
+    <Cell ss:StyleID="s90"/>
+    <Cell ss:StyleID="s91"/>
+    <Cell ss:StyleID="s92"/>
+    <Cell ss:StyleID="s93"/>
+    <Cell ss:StyleID="s93"/>
+    <Cell ss:StyleID="s94"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s89"/>
+    <Cell ss:StyleID="s89"/>
+    <Cell ss:StyleID="s89"/>
+    <Cell ss:StyleID="s89"/>
+    <Cell ss:StyleID="s89"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+    <Cell ss:StyleID="s85"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeDown="1" ss:StyleID="m24131612"><Data ss:Type="String">soct</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m24131632"><Data ss:Type="String">ngay</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m24131652"><Data ss:Type="String">loai</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m24131672"><Data ss:Type="String">barcode</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m24131692"><Data ss:Type="String">noiden</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m24131712"><Data ss:Type="String">chinhanh</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m24131732"><Data ss:Type="String">trluong</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m24131328"><Data ss:Type="String">cuoc</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m24131348"><Data ss:Type="String">phi</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m24131368"><Data ss:Type="String">phixd</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m24131388"><Data ss:Type="String">tienck</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m24131408"><Data ss:Type="String">phihk</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m24131428"><Data ss:Type="String">tien</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m24131776"><Data ss:Type="String">Ghi Chú</Data></Cell>
+    <Cell ss:Index="17" ss:StyleID="s103"/>
+   </Row>
+   <Row ss:AutoFitHeight="0"/>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050548</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HA NOI</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">2</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209101</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HA NOI - PGD THAI HA</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">3</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209097</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HA NOI - PGD HOANG QUOC VIET</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">4</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209131</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HA NOI - PGD TRAN DUY HUNG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">5</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209127</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN THANG LONG - PGD LE DUC THO</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">6</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209123</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HA NOI - PGD DINH CONG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">7</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209119</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN THANG LONG - PGD NGUYEN HUE</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">8</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">EMS</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209115</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6900</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HA NOI - PGD ME LINH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">9</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209111</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HA NOI - PGD BA TRIEU</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">10</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209130</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">QUẢNG NINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN QUANG NINH - CAM TAY</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">11</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209107</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">QUẢNG NINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN QUANG NINH - PGD HA LONG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">12</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">EMS</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209103</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">QUẢNG NINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN QUANG NINH - PGD CUA ONG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">13</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209099</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">QUẢNG NINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">110</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">16500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">2475</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">3795</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">15180</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN QUANG NINH - PGD UONG BI</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">14</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209126</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">QUẢNG NINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">PGD SO 1 - CN QUANG NINH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">15</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209122</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">QUẢNG NINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">PGD SO 2 - CN QUANG NINH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">16</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209118</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">QUẢNG NINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">PGD CAU SEN - CN QUANG NINH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">17</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209114</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HẢI PHÒNG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">70</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">12500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1875</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2875</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">11500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HAI PHONG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">18</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209110</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HẢI PHÒNG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HAI PHONG - PGD VAN CAO</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">19</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209106</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN THANG LONG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">20</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209102</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN THANG LONG - PGD LAC LONG QUAN</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">21</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209098</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">THANH HÓA</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN THANH HOA</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">22</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209132</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">THANH HÓA</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN THANH HOA - PGD LE HOAN</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">23</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209120</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN BA DINH - PGD GIANG VO</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">24</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209112</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HOAN KIEM</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">25</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209108</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN TAY NAM HN - PGD CAU DIEN</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">26</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209128</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">BẮC NINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN BAC NINH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">27</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209135</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN TAY HA NOI</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">28</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209104</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HANG TRONG - PGD XUAN DINH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">29</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209139</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN TAY HA NOI - PGD NGUYEN TRAI</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">30</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209143</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HANG TRONG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">31</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209124</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN BA DINH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">32</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209116</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN BA DINH - PGD CAT LINH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">33</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209147</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">130</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">7500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN TRUNG HOA NHAN CHINH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">34</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209163</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">VĨNH PHÚC</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN VINH PHUC - PHUC YEN</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">35</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209151</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HA DONG - PGD VAN PHUC</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">36</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209155</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">BẮC NINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN KINH BAC</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">37</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209159</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">VĨNH PHÚC</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN VINH PHUC</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">38</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209167</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">THÁI BÌNH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN THAI BINH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">39</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209171</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">THÁI NGUYÊN</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN THAI NGUYEN</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">40</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209175</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">TUYÊN QUANG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">60</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">12500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1875</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2875</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">11500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN TUYEN QUANG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">41</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209179</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">NINH BÌNH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1425</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2185</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8740</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN NINH BINH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">42</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209183</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">ĐÀ NẴNG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">150</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">3000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">4600</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">18400</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN DA NANG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">43</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209187</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">ĐÀ NẴNG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN DA NANG - PGD HOA KHANH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">44</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209191</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">NGHỆ AN</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">60</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">12500</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1875</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2875</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">11500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN NGHE AN</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">45</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209195</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">KHÁNH HÒA</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">130</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">3000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">4600</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">18400</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN KHANH HOA</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">46</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209199</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">KHÁNH HÒA</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN KHANH HOA - PGD VINH PHUOC</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">47</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209219</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">QUẢNG NAM</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN QUANG NAM - PGD HOI AN</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">48</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">EMS</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209223</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">QUẢNG NAM</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN QUANG NAM - PGD DIEN BAN</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">49</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209136</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">TT.HUẾ</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HUE</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">50</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">162091401</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">QUẢNG NGÃI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN QUANG NGAI</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">51</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209144</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HỒ CHÍ MINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HO CHI MINH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">52</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209148</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HỒ CHÍ MINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HCM - PGD HOA HUNG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">53</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209152</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HỒ CHÍ MINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HCM - PGD GO VAP</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">54</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209156</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HỒ CHÍ MINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HCM - PGD NGUYEN THIEN THUAT</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">55</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209160</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HỒ CHÍ MINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HCM - PGD TAN BINH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">56</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">EMS</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209168</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">BÌNH DƯƠNG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN BINH DUONG - PGD SO SAO</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">57</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209176</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">CẦN THƠ</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN CAN THO</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">58</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050572</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">CẦN THƠ</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN CAN THO - PGD PHAN DINH PHUNG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">59</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050570</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">CẦN THƠ</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN CAN THO - PGD THOT NOT</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">60</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050568</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">CẦN THƠ</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN CAN THO - PGD AN HOA</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">61</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050566</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">ĐỒNG NAI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN DONG NAI -</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">62</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050564</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">ĐỒNG NAI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN DONG NAI - PGD TAM HIEP</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">63</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050562</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">ĐỒNG NAI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN DONG NAI - PGD DONG KHOI</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">64</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050560</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">ĐỒNG NAI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN DONG NAI - PGD BIEN HOA</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">65</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050558</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">GIA LAI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN GIA LAI</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">66</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050556</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">GIA LAI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN GIA LAI - PGD BIEN HO</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">67</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">EMS</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050554</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">GIA LAI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN GIA LAI - PGD CHU SE</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">68</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050552</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">KIÊN GIANG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN KIEN GIANG - PGD SOC SON</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">69</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050547</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">AN GIANG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN AN GIANG - PGD MY QUY</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">70</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050541</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">BÌNH PHƯỚC</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN BINH PHUOC</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">71</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050539</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">LONG AN</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN LONG AN</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">72</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050535</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">TIỀN GIANG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN TIEN GIANG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">73</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209203</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">KHÁNH HÒA</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN KHANH HOA - PGD CAM RANH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">74</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209207</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">LÂM ĐỒNG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN LAM DONG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">75</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209211</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">LÂM ĐỒNG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN LAM DONG - PGD DUC TRONG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">76</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209215</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">LÂM ĐỒNG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN LAM DONG - PGD BAO LOC</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">77</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">EMS</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209172</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">BÌNH DƯƠNG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN BINH DUONG - PGD DI AN</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">78</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209164</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">BÌNH DƯƠNG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">190</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">3000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">4600</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">18400</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN BINH DUONG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">79</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050545</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HỒ CHÍ MINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN SAI GON - PGD NGUYEN VAN LINH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">80</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050549</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">AN GIANG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN AN GIANG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">81</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050537</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">SÓC TRĂNG</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN SOC TRANG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">82</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050533</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">ĐỒNG THÁP</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN DONG THAP</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">83</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16209100</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HÀ NỘI</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">6000</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN HAM LONG</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">84</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050543</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">HỒ CHÍ MINH</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">2300</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">9200</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN SAI GON - PGD TRUONG CHINH</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:StyleID="s104"><Data ss:Type="String">85</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">01/08/2017</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">SN</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="String">16050550</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">CÀ MAU</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">60</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">14000</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">2100</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">3220</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">12880</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">CN CA MAU</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">           </Data></Cell>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+    <Cell ss:StyleID="s111"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18" ss:StyleID="s111">
+    <Cell ss:MergeAcross="6" ss:StyleID="m24131796"><Data ss:Type="String">TỔNG</Data></Cell>
+    <Cell ss:StyleID="s119"><Data ss:Type="Number">846000</Data></Cell>
+    <Cell ss:StyleID="s119"/>
+    <Cell ss:StyleID="s119"><Data ss:Type="Number">100200</Data></Cell>
+    <Cell ss:StyleID="s119"><Data ss:Type="Number">198600</Data></Cell>
+    <Cell ss:StyleID="s119"/>
+    <Cell ss:StyleID="s119"><Data ss:Type="Number">747600</Data></Cell>
+    <Cell ss:StyleID="s119"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18" ss:StyleID="s111">
+    <Cell ss:MergeAcross="10" ss:StyleID="m24131816"><Data ss:Type="String">CỘNG CƯỚC DV</Data></Cell>
+    <Cell ss:StyleID="s121"/>
+    <Cell ss:StyleID="s119"><Data ss:Type="Number">747600</Data></Cell>
+    <Cell ss:StyleID="s124"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18" ss:StyleID="s111">
+    <Cell ss:MergeAcross="10" ss:StyleID="s126"><Data ss:Type="String">VAT: 10%</Data></Cell>
+    <Cell ss:StyleID="s127"/>
+    <Cell ss:StyleID="s128" ss:Formula="=R[-1]C*0.1"><Data ss:Type="Number">74760</Data></Cell>
+    <Cell ss:StyleID="s124"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+    <Cell ss:StyleID="s120"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:MergeAcross="10" ss:StyleID="s126"><Data ss:Type="String">TỔNG CỘNG</Data></Cell>
+    <Cell ss:StyleID="s127"/>
+    <Cell ss:StyleID="s128" ss:Formula="=R[-2]C+R[-1]C"><Data ss:Type="Number">822360</Data></Cell>
+    <Cell ss:StyleID="s129"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18">
+    <Cell ss:MergeAcross="1" ss:StyleID="s131"/>
+    <Cell ss:StyleID="s131"/>
+    <Cell ss:StyleID="s133"/>
+    <Cell ss:StyleID="s133"/>
+    <Cell ss:StyleID="s133"/>
+    <Cell ss:StyleID="s133"/>
+    <Cell ss:StyleID="s133"/>
+    <Cell ss:StyleID="s133"/>
+    <Cell ss:StyleID="s133"/>
+    <Cell ss:StyleID="s133"/>
+    <Cell ss:StyleID="s133"/>
+    <Cell ss:StyleID="s133"/>
+    <Cell ss:StyleID="s133"/>
+    <Cell ss:StyleID="s133"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+    <Cell ss:StyleID="s130"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18" ss:StyleID="s134">
+    <Cell ss:StyleID="s135"/>
+    <Cell ss:StyleID="s136"/>
+    <Cell ss:StyleID="s136"/>
+    <Cell ss:StyleID="s137"/>
+    <Cell ss:StyleID="s136"/>
+    <Cell ss:StyleID="s136"/>
+    <Cell ss:StyleID="s138"/>
+    <Cell ss:StyleID="s138"/>
+    <Cell ss:StyleID="s138"/>
+    <Cell ss:Index="15" ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s136"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18" ss:StyleID="s134">
+    <Cell ss:MergeAcross="7" ss:StyleID="s140"><Data ss:Type="String">Ngày…… tháng …… năm 2017</Data></Cell>
+    <Cell ss:StyleID="s140"/>
+    <Cell ss:Index="11" ss:StyleID="s137"><Data ss:Type="String">Hà Nội, Ngày</Data></Cell>
+    <Cell ss:StyleID="s137"/>
+    <Cell ss:StyleID="s136"><Data ss:Type="String">20/11/2017</Data></Cell>
+    <Cell ss:StyleID="s136"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s136"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="18" ss:StyleID="s134">
+    <Cell ss:MergeAcross="7" ss:StyleID="s142"><Data ss:Type="String">XÁC NHẬN KHÁCH HÀNG</Data></Cell>
+    <Cell ss:StyleID="s142"/>
+    <Cell ss:Index="11" ss:MergeAcross="2" ss:StyleID="s139"><Data ss:Type="String">Lập bảng</Data></Cell>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s136"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s134">
+    <Cell ss:StyleID="s145"/>
+    <Cell ss:StyleID="s136"/>
+    <Cell ss:StyleID="s136"/>
+    <Cell ss:StyleID="s137"/>
+    <Cell ss:StyleID="s136"/>
+    <Cell ss:StyleID="s136"/>
+    <Cell ss:StyleID="s138"/>
+    <Cell ss:StyleID="s138"/>
+    <Cell ss:StyleID="s138"/>
+    <Cell ss:Index="15" ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s136"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s146">
+    <Cell ss:StyleID="s136"/>
+    <Cell ss:StyleID="s147"/>
+    <Cell ss:StyleID="s147"/>
+    <Cell ss:Index="5" ss:StyleID="s147"/>
+    <Cell ss:StyleID="s147"/>
+    <Cell ss:StyleID="s147"/>
+    <Cell ss:StyleID="s147"/>
+    <Cell ss:StyleID="s147"/>
+    <Cell ss:MergeAcross="4" ss:StyleID="s139"/>
+    <Cell ss:StyleID="s148"/>
+    <Cell ss:StyleID="s148"/>
+    <Cell ss:StyleID="s148"/>
+    <Cell ss:StyleID="s148"/>
+    <Cell ss:StyleID="s148"/>
+    <Cell ss:StyleID="s148"/>
+    <Cell ss:StyleID="s148"/>
+    <Cell ss:StyleID="s148"/>
+    <Cell ss:StyleID="s148"/>
+    <Cell ss:StyleID="s148"/>
+    <Cell ss:StyleID="s138"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s136"/>
+    <Cell ss:StyleID="s136"/>
+    <Cell ss:StyleID="s136"/>
+    <Cell ss:StyleID="s136"/>
+    <Cell ss:StyleID="s136"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s151"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:MergeAcross="1" ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s139"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+    <Cell ss:StyleID="s150"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="21" ss:StyleID="s152"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.1" x:Right="0.01" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>1200</HorizontalResolution>
+    <VerticalResolution>1200</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>14</ActiveRow>
+     <RangeSelection>R15C1:R15C11</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet2">
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Row ss:AutoFitHeight="0"/>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet3">
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Row ss:AutoFitHeight="0"/>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

@@ -1,0 +1,6 @@
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\bin\SGPWebService.dll.config
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\bin\SGPWebService.dll
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\bin\SGPWebService.pdb
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Release\SGPWebService.csprojResolveAssemblyReference.cache
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Release\SGPWebService.dll
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Release\SGPWebService.pdb

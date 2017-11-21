@@ -222,6 +222,12 @@
     <Compile Include="FrmNormal.Designer.cs">
       <DependentUpon>FrmNormal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\RptCGLEBangKE11.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptCGLEBangKE1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Rpt_XuatNhapTon.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -326,7 +332,7 @@
     <Compile Include="Report\RptCGLEBangKE.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RptCGLEBangKE.rpt</DependentUpon>
+      <DependentUpon>RptCGLEBangKE1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\RptCOD_A5.cs">
@@ -642,9 +648,9 @@
     <EmbeddedResource Include="FrmBayer.resx">
       <DependentUpon>FrmBayer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\RptCGLEBangKE.rpt">
+    <EmbeddedResource Include="Report\RptCGLEBangKE1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RptCGLEBangKE.cs</LastGenOutput>
+      <LastGenOutput>RptCGLEBangKE11.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\RptCOD_A5.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1162,17 +1168,17 @@
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.ZoneList.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SGPService\SGPService.wsdl" />
-    <None Include="Service References\SGPService\SGPService.xsd">
+    <None Include="Service References\SGPService\SGPService1.wsdl" />
+    <None Include="Service References\SGPService\SGPService4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SGPService\SGPService1.xsd">
+    <None Include="Service References\SGPService\SGPService41.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SGPService\SGPService2.xsd">
+    <None Include="Service References\SGPService\SGPService42.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SGPService\SGPService3.xsd">
+    <None Include="Service References\SGPService\SGPService43.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="tinhcuoc\dataset\DsCuoc.xsc">
@@ -1193,7 +1199,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1436857928_Package-Download.ico" />
-    <None Include="Service References\SGPService\SGPService.disco" />
+    <None Include="Service References\SGPService\SGPService1.disco" />
     <None Include="Service References\SGPService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

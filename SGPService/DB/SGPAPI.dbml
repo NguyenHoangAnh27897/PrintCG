@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SGPAPI" Class="SGPAPIDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=10.0.10.10;Initial Catalog=SGPAPI;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SGPAPIConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PMS_MaxMailerID" Member="PMS_MaxMailerIDs">
+    <Type Name="PMS_MaxMailerID">
+      <Column Name="PostOfficeID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaxID" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SGP_Province_Zones" Member="SGP_Province_Zones">
+    <Type Name="SGP_Province_Zone">
+      <Column Name="ZoneID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProvinceID" Type="System.String" DbType="NVarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Zone" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SGP_Price_Customer" Member="SGP_Price_Customers">
+    <Type Name="SGP_Price_Customer">
+      <Column Name="PriceID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SGP_Price_Service" Member="SGP_Price_Services">
+    <Type Name="SGP_Price_Service">
+      <Column Name="PriceID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ServiceID" Type="System.String" DbType="NVarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SGP_Price_Policy" Member="SGP_Price_Policies">
+    <Type Name="SGP_Price_Policy">
+      <Column Name="PricePolicyID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PostOfficeID" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Service" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ZoneID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CalPrice" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SGP_Price_Value" Member="SGP_Price_Values">
+    <Type Name="SGP_Price_Value">
+      <Column Name="PriceID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FW" Type="System.Double" DbType="Float NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TW" Type="System.Double" DbType="Float NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Zone" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RowIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ColumnIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tools_Trackings" Member="Tools_Trackings">
+    <Type Name="Tools_Tracking">
+      <Column Name="ColumnID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Columnname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsCheck" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SGP_Price_Service_Value" Member="SGP_Price_Service_Values">
+    <Type Name="SGP_Price_Service_Value">
+      <Column Name="PriceID" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Service" Type="System.String" DbType="NVarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PercentOnPrice" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ConditionApply" Type="System.Double" DbType="Float NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Weight" Type="System.Double" DbType="Float NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Zone" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RowIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ColumnIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
