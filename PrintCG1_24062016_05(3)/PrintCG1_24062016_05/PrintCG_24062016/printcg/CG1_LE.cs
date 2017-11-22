@@ -1136,39 +1136,12 @@ namespace PrintCG_24062016
                      for (int i = 0; i <= dt.Rows.Count - 1; i++)
                      {                                                 
                          //test
-                        // DataGridViewRow row = (DataGridViewRow)myGrid1.Rows[i].Clone();
-                         myGrid1.Rows.Add();
-                         float priceservice = 0;
+                         DataGridViewRow row = (DataGridViewRow)myGrid1.Rows[i].Clone();
                          for (int j = 0; j <= dt.Columns.Count - 1; j++)
                          {
-                             if (myGrid1.Columns[j].Name == "Price")
-                             {
-                                 int quantity = int.Parse(myGrid1.Rows[i].Cells["Quantity"].Value.ToString());
-                                 float weight = float.Parse(myGrid1.Rows[i].Cells["Weight"].Value.ToString());
-                                 //string province = myGrid1.CurrentRow.Cells["Provinceid"].Value.ToString();
-                                 string customer = myGrid1.Rows[i].Cells["Sender"].Value.ToString();
-                                 string servicetype = myGrid1.Rows[i].Cells["Servicetypeid"].Value.ToString();
-                                 string matinh = myGrid1.Rows[i].Cells["Provinceid"].Value.ToString();
-                                 //myGrid1.Rows[e.RowIndex].ErrorText = "Chưa khai báo thông tin";
-                                 var pricelist = sgpservice.calPrice(quantity, weight, matinh, customer, servicetype);
-                                 foreach(var item in pricelist)
-                                 {
-                                     myGrid1.Rows[i].Cells["Price"].Value = item.Price;
-                                     priceservice = item.PriceService;
-                                 }
-
-                             }
-                             else if (myGrid1.Columns[j].Name == "Priceservice")
-                             {
-                                 myGrid1.Rows[i].Cells["Priceservice"].Value = priceservice;
-                             }
-                             else
-                             {
-                                 myGrid1.Rows[i].Cells[j].Value = dt.Rows[i][j].ToString();
-                             }
-                            
+                             row.Cells[j].Value = dt.Rows[i][j].ToString();
                          }
-                         //myGrid1.Rows.Add(row);
+                         myGrid1.Rows.Add(row);
                          //end test
                      }
 

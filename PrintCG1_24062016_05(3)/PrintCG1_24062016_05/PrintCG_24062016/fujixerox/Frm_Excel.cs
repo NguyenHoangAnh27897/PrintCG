@@ -31,7 +31,11 @@ namespace PrintCG_24062016
             cbbType.DisplayMember = "Text";
             cbbType.ValueMember = "Value";
 
+            cbbXN.Items.Add(new { Text = "Nhập", Value = "1" });
+            cbbXN.Items.Add(new { Text = "Xuất", Value = "2" });
 
+            cbbXN.DisplayMember = "Text";
+            cbbXN.ValueMember = "Value";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,10 +69,10 @@ namespace PrintCG_24062016
                     quan = int.Parse(dt.Rows[i][3].ToString());
                     employee = dt.Rows[i][4].ToString();
                     DateTime date = DateTime.Parse(dt.Rows[i][0].ToString());
-                    string[] row = new string[] { (i+1).ToString(), date.ToString("MM-dd-yyyy"), date.ToString("HH:mm"), name, id, "",quan.ToString(), employee};
+                    string[] row = new string[] { (i + 1).ToString(), date.ToString("dd-MM-yyyy"), date.ToString("HH:mm"), name, id, "", quan.ToString(), employee };
                     dataGridView1.Rows.Add(row);
                 }
-                    //dataGridView1.DataSource = dt;
+                //dataGridView1.DataSource = dt;
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             else if (cbb == "Xuất hàng")
@@ -88,7 +92,7 @@ namespace PrintCG_24062016
                     quan = int.Parse(dt.Rows[i][3].ToString());
                     employee = dt.Rows[i][4].ToString();
                     DateTime date = DateTime.Parse(dt.Rows[i][0].ToString());
-                    string[] row = new string[] { (i + 1).ToString(), date.ToString("MM-dd-yyyy"), date.ToString("HH:mm"), name, id, "", quan.ToString(), employee };
+                    string[] row = new string[] { (i + 1).ToString(), date.ToString("dd-MM-yyyy"), date.ToString("HH:mm"), name, id, "", quan.ToString(), employee };
                     dataGridView1.Rows.Add(row);
                 }
                 //dataGridView1.DataSource = dt;
@@ -109,7 +113,7 @@ namespace PrintCG_24062016
                     slt = int.Parse(dt.Rows[i][2].ToString());
                     real = int.Parse(dt.Rows[i][3].ToString());
                     DateTime date = DateTime.Parse(dt.Rows[i][0].ToString());
-                    string[] row = new string[] { (i + 1).ToString(), date.ToString("MM-dd-yyyy"), name, slt.ToString(), real.ToString(), ""};
+                    string[] row = new string[] { (i + 1).ToString(), date.ToString("dd-MM-yyyy"), name, slt.ToString(), real.ToString(), "" };
                     dataGridView1.Rows.Add(row);
                 }
                 //dataGridView1.DataSource = dt;
@@ -117,22 +121,50 @@ namespace PrintCG_24062016
             }
             else if (cbb == "In Xuất nhập tồn")
             {
-                cmd.CommandText = "select CreateDate, IDSP, Quantity - RealQuantity as SLT from tb_fujixeroxnx where CreateDate = #" + dtp1.Value.ToString("MM-dd-yyyy") + "#";
-                da.SelectCommand = cmd;
-                da.Fill(dt);
-                count = dt.Rows.Count;
-                DateTime date = DateTime.Parse(dt.Rows[0][0].ToString());
-                string idsp;
-                int slt;
-                for (int i = 0; i < count; i++)
+                if (cbbXN.Text == "Nhập")
                 {
-                    slt = int.Parse(dt.Rows[i][2].ToString());
-                    idsp = dt.Rows[i][1].ToString();
-                    
-                    string[] row = new string[] {date.ToString(), idsp, slt.ToString()};
-                    dataGridView1.Rows.Add(row);
+                    cmd.CommandText = "select CreateDate, IDSP, Quantity - RealQuantity as SLT from tb_fujixeroxnx where CreateDate = #" + dtp1.Value.ToString("MM-dd-yyyy") + "#";
+                    da.SelectCommand = cmd;
+                    da.Fill(dt);
+                    count = dt.Rows.Count;
+                    DateTime date;
+                    string idsp;
+                    int slt;
+                    if (count > 0)
+                    {
+                        date = DateTime.Parse(dt.Rows[0][0].ToString());
+                        for (int i = 0; i < count; i++)
+                        {
+                            slt = int.Parse(dt.Rows[i][2].ToString());
+                            idsp = dt.Rows[i][1].ToString();
+
+                            string[] row = new string[] { date.ToString("dd-MM-yyyy"), idsp, slt.ToString() };
+                            dataGridView1.Rows.Add(row);
+                        }
+                        dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    }
                 }
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                else if (cbbXN.Text == "Xuất")
+                {
+                    cmd.CommandText = "select CreateDate, IDSP, Quantity - RealQuantity as SLT from tb_fujixeroxnx where CreateDate between #1/1/2017# and #" + dtp1.Value.ToString("MM-dd-yyyy") + "# order by CreateDate";
+                    da.SelectCommand = cmd;
+                    da.Fill(dt);
+                    count = dt.Rows.Count;
+                    DateTime date;
+                    string idsp;
+                    int slt;
+                    for (int i = 0; i < count; i++)
+                    {
+                        slt = int.Parse(dt.Rows[i][2].ToString());
+                        idsp = dt.Rows[i][1].ToString();
+                        date = DateTime.Parse(dt.Rows[i][0].ToString());
+
+                        string[] row = new string[] { date.ToString("dd-MM-yyyy"), idsp, slt.ToString() };
+                        dataGridView1.Rows.Add(row);
+                    }
+                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                }
+
             }
         }
 
@@ -145,6 +177,8 @@ namespace PrintCG_24062016
                 labelControl2.Visible = true;
                 button2.Text = "Xuất Excel";
                 dtp2.Visible = true;
+                labelControl4.Visible = false;
+                cbbXN.Visible = false;
                 dataGridView1.ColumnCount = 8;
                 dataGridView1.Columns[0].Name = "STT";
                 dataGridView1.Columns[1].Name = "Ngay nhap hang";
@@ -161,6 +195,8 @@ namespace PrintCG_24062016
                 labelControl2.Visible = true;
                 button2.Text = "Xuất Excel";
                 dtp2.Visible = true;
+                labelControl4.Visible = false;
+                cbbXN.Visible = false;
                 dataGridView1.ColumnCount = 8;
                 dataGridView1.Columns[0].Name = "STT";
                 dataGridView1.Columns[1].Name = "Ngay xuat hang";
@@ -177,6 +213,8 @@ namespace PrintCG_24062016
                 labelControl2.Visible = true;
                 button2.Text = "Xuất Excel";
                 dtp2.Visible = true;
+                labelControl4.Visible = false;
+                cbbXN.Visible = false;
                 dataGridView1.ColumnCount = 6;
                 dataGridView1.Columns[0].Name = "STT";
                 dataGridView1.Columns[1].Name = "Ngay thuc hien";
@@ -191,6 +229,8 @@ namespace PrintCG_24062016
                 labelControl2.Visible = false;
                 button2.Text = "In";
                 dtp2.Visible = false;
+                labelControl4.Visible = true;
+                cbbXN.Visible = true;
                 dataGridView1.ColumnCount = 3;
                 dataGridView1.Columns[0].Name = "Ngay";
                 dataGridView1.Columns[1].Name = "Ma san pham";
@@ -209,7 +249,6 @@ namespace PrintCG_24062016
 
                 fsave.Filter = "(All Files)|*.*|(All Files Excel)|*.xlsx";
                 fsave.ShowDialog();
-                DateTime createdate;
                 if (fsave.FileName != "")
                 {
                     wbook = obj.Workbooks.Add(Type.Missing);
@@ -249,28 +288,85 @@ namespace PrintCG_24062016
                 }
             }
             if (cbbType.Text == "In Xuất nhập tồn")
-            {  
+            {
                 Rpt_XuatNhapTon rpt = new Rpt_XuatNhapTon();
+                DsFuji ds = new DsFuji();
 
                 int count = dt.Rows.Count;
-                string idsp;
-                int slt;
-                DateTime date = DateTime.Parse(dt.Rows[0][0].ToString());
-                string printdate = date.ToString("dd-MM-yyyy");
-                TextObject _txtPrintDate = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtPrintDate"];
-                _txtPrintDate.Text = printdate;
-                TextObject[] textoj = new TextObject[count];
-                TextObject[] textobj = new TextObject[count];
-                for (int i = 0; i < count; i++)
+                string idsp = string.Empty;
+                string slt = string.Empty;
+                string date = string.Empty;
+                string cdate = "";
+                DateTime dtime;
+                int countdate = 1;
+                if (cbbXN.Text == "Nhập")
                 {
-                    slt = int.Parse(dt.Rows[i][2].ToString());
-                    idsp = dt.Rows[i][1].ToString();
-                    textoj[i] = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtIDSP"];
-                    textoj[i].Text = idsp;
-                    textobj[i] = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtQuantity"];
-                    textobj[i].Text = slt.ToString();
+                    cdate = dtp1.Value.ToString("dd-MM-yyyy");
+                    TextObject _txtPrintDate = (TextObject)rpt.ReportDefinition.Sections["Section1"].ReportObjects["txtPrintDate"];
+                    _txtPrintDate.Text = cdate;
+                    for (int i = 0; i < count; i++)
+                    {
+                        slt = dt.Rows[i][2].ToString();
+                        idsp = dt.Rows[i][1].ToString();
+                        date = dt.Rows[i][0].ToString();
+                        ds.Fujixerox.AddFujixeroxRow(date, idsp, slt);
+                    }
+                    rpt.SetDataSource(ds);
+                    rpt.PrintToPrinter(1, false, 0, 0);
                 }
-                rpt.PrintToPrinter(1, false, 1, 1);
+                else if (cbbXN.Text == "Xuất")
+                {
+                    int counst = 0;
+                    int j;
+                    for (int i = 0; i <= count - 1; i++)
+                    {
+                        if (i < count - 1 )
+                        {
+                            if (dt.Rows[i][0].ToString() != dt.Rows[i + 1][0].ToString())
+                            {
+                                ds.Clear();
+                                dtime = DateTime.Parse(dt.Rows[i][0].ToString());
+                                TextObject _txtPrintDate = (TextObject)rpt.ReportDefinition.Sections["Section1"].ReportObjects["txtPrintDate"];
+                                _txtPrintDate.Text = dtime.ToString("dd-MM-yyyy");
+                                for (j = counst; j < countdate + counst; j++)
+                                {
+                                    slt = dt.Rows[j][2].ToString();
+                                    idsp = dt.Rows[j][1].ToString();
+                                    date = dt.Rows[j][0].ToString();
+                                    ds.Fujixerox.AddFujixeroxRow(date, idsp, slt);
+
+                                }
+                                counst = j;
+                                rpt.SetDataSource(ds);
+                                rpt.PrintToPrinter(1, false, 0, 0);
+                                countdate = 1;
+                            }
+                            else
+                            {
+                                countdate++;
+                            }
+                        }
+                        else if(i == count - 1)
+                        {
+                            ds.Clear();
+                            dtime = DateTime.Parse(dt.Rows[i][0].ToString());
+                            TextObject _txtPrintDate = (TextObject)rpt.ReportDefinition.Sections["Section1"].ReportObjects["txtPrintDate"];
+                            _txtPrintDate.Text = dtime.ToString("dd-MM-yyyy");
+                            for (j = counst; j < countdate + counst; j++)
+                            {
+                                slt = dt.Rows[j][2].ToString();
+                                idsp = dt.Rows[j][1].ToString();
+                                date = dt.Rows[j][0].ToString();
+                                ds.Fujixerox.AddFujixeroxRow(date, idsp, slt);
+
+                            }
+                            rpt.SetDataSource(ds);
+                            rpt.PrintToPrinter(1, false, 0, 0);
+                        }
+                        
+                    }
+
+                }
             }
         }
     }
