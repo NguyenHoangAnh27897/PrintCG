@@ -46,7 +46,6 @@
             this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem13 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem14 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem15 = new DevExpress.XtraNavBar.NavBarItem();
@@ -71,6 +70,9 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblmabc = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblmanv = new System.Windows.Forms.ToolStripStatusLabel();
+            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem30 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem31 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -120,9 +122,9 @@
             this.navBarControl1.ActiveGroup = this.navBarGroup1;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup1,
-            this.navBarGroup2,
             this.navBarGroup3,
             this.navBarGroup4,
+            this.navBarGroup2,
             this.navBarGroup5});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.navBarItem1,
@@ -153,7 +155,9 @@
             this.navBarItem26,
             this.navBarItem27,
             this.navBarItem28,
-            this.navBarItem29});
+            this.navBarItem29,
+            this.navBarItem30,
+            this.navBarItem31});
             this.navBarControl1.Location = new System.Drawing.Point(-4, 3);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 200;
@@ -251,17 +255,6 @@
             this.navBarItem12.Name = "navBarItem12";
             this.navBarItem12.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem12_LinkClicked);
             // 
-            // navBarGroup2
-            // 
-            this.navBarGroup2.Caption = "Tra cứu thông tin";
-            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem13),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem14),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem15),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem16),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem17)});
-            this.navBarGroup2.Name = "navBarGroup2";
-            // 
             // navBarItem13
             // 
             this.navBarItem13.Caption = "Tra hồi báo";
@@ -326,6 +319,7 @@
             // 
             this.navBarItem27.Caption = "Tra hồi báo nâng cao";
             this.navBarItem27.Name = "navBarItem27";
+            this.navBarItem27.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem27_LinkClicked);
             // 
             // navBarItem28
             // 
@@ -420,6 +414,24 @@
             this.lblmanv.Size = new System.Drawing.Size(46, 17);
             this.lblmanv.Text = "Mã NV:";
             // 
+            // navBarGroup2
+            // 
+            this.navBarGroup2.Caption = "SamSung";
+            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem30),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem31)});
+            this.navBarGroup2.Name = "navBarGroup2";
+            // 
+            // navBarItem30
+            // 
+            this.navBarItem30.Caption = "In phiếu gửi";
+            this.navBarItem30.Name = "navBarItem30";
+            // 
+            // navBarItem31
+            // 
+            this.navBarItem31.Caption = "Lũy kế";
+            this.navBarItem31.Name = "navBarItem31";
+            // 
             // FrmMain1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -452,7 +464,6 @@
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraNavBar.NavBarItem navBarItem1;
         private DevExpress.XtraNavBar.NavBarItem navBarItem2;
         private DevExpress.XtraNavBar.NavBarItem navBarItem3;
@@ -488,6 +499,9 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem28;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
         private DevExpress.XtraNavBar.NavBarItem navBarItem29;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem30;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem31;
 
     }
 }

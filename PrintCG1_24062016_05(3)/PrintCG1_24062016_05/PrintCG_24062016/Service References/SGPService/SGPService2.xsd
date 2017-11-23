@@ -37,18 +37,21 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="BS_Employees_EmployeeID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="BS_Employees_EmployeeName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="MM_MailerDeliveryDetail_ConfirmDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MM_MailerDeliveryDetail_ConfirmDate" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="MM_MailerDeliveryDetail_ConfirmIndex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_MailerDeliveryDetail_DeliveryDate" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="MM_MailerDeliveryDetail_DeliveryNotes" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MM_MailerDeliveryDetail_DeliveryStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_MailerDeliveryDetail_DeliveryTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MM_MailerDeliveryDetail_DeliveryTo" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MM_MailerDeliveryDetail_Notes" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MM_MailerDelivery_Description" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="MM_MailerDelivery_DocumentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MM_MailerDelivery_DocumentDate" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="MM_MailerDelivery_DocumentID" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="MM_MailerDelivery_DocumentTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MM_MailerDelivery_DocumentTime" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="MM_MailerDelivery_PostOfficeID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MM_MailerDelivery_TripNumber" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="MM_Mailers_AcceptDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MM_Mailers_AcceptDate" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="MM_Mailers_Amount" type="xs:double" />
       <xs:element minOccurs="0" name="MM_Mailers_BefVATAmount" type="xs:double" />
       <xs:element minOccurs="0" name="MM_Mailers_CurrentPostOfficeID" nillable="true" type="xs:string" />
@@ -58,14 +61,14 @@
       <xs:element minOccurs="0" name="MM_Mailers_Quantity" type="xs:double" />
       <xs:element minOccurs="0" name="MM_Mailers_RecieverAddress" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MM_Mailers_RecieverProvinceID" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="MM_Mailers_SalesClosingDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MM_Mailers_SalesClosingDate" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="MM_Mailers_SenderID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MM_Mailers_SenderName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MM_Mailers_ServiceTypeID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MM_Mailers_ThirdpartyDocID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MM_Mailers_Weight" type="xs:double" />
       <xs:element minOccurs="0" name="MM_ReturnReason_ReturnReasonName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="MM_Status_StatusID" type="xs:int" />
+      <xs:element minOccurs="0" name="MM_Status_StatusID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MM_Status_StatusName" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

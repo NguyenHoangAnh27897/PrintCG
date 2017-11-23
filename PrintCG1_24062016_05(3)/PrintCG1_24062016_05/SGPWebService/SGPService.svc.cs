@@ -322,19 +322,58 @@ namespace SGPWebService
         public List<DataClass.Trackings> ToolTracking(string MailerID)
         {
             var query = (from m in pms.MM_Mailers
-                         join mdd in pms.MM_MailerDeliveryDetails on m.MailerID equals mdd.MailerID
-                         join pid in pms.MM_PackingListInternalDetails on m.MailerID equals pid.MailerID
-                         join pi in pms.MM_PackingListInternals on pid.DocumentID equals pi.DocumentID
-                         join md in pms.MM_MailerDeliveries on mdd.DocumentID equals md.DocumentID
-                         join e in pms.BS_Employees on md.EmployeeID equals e.EmployeeID
-                         join s in pms.MM_Status on m.CurrentStatusID equals s.StatusID
-                         join r in pms.MM_ReturnReasons on mdd.ReturnReasonID equals r.ReturnReasonID
+                         from mdd in pms.MM_MailerDeliveryDetails
+                             .Where(mdds => mdds.MailerID == m.MailerID).DefaultIfEmpty()
+                         from pid in pms.MM_PackingListInternalDetails
+                             .Where(pids => pids.MailerID == m.MailerID).DefaultIfEmpty()
+                         from  pi in pms.MM_PackingListInternals
+                             .Where(pids => pids.DocumentID == pid.DocumentID).DefaultIfEmpty()
+                         from md in pms.MM_MailerDeliveries
+                             .Where(pids => pids.DocumentID == mdd.DocumentID).DefaultIfEmpty()
+                         from e in pms.BS_Employees
+                              .Where(pids => pids.EmployeeID == md.EmployeeID).DefaultIfEmpty()
+                         from s in pms.MM_Status
+                             .Where(pids => pids.StatusID == m.CurrentStatusID).DefaultIfEmpty()
+                         from r in pms.MM_ReturnReasons
+                             .Where(pids => pids.ReturnReasonID == mdd.ReturnReasonID).DefaultIfEmpty()
                          where m.MailerID == MailerID orderby mdd.ID descending
                          select new DataClass.Trackings()
                          {
+                             MM_MailerDeliveryDetail_DeliveryTo = mdd.DeliveryTo,
+                             MM_MailerDeliveryDetail_DeliveryDate = mdd.DeliveryDate,
+                             MM_MailerDeliveryDetail_DeliveryTime = mdd.DeliveryDate,
                              BS_Employees_EmployeeID = e.EmployeeID,
                              BS_Employees_EmployeeName = e.EmployeeName,
+                             MM_MailerDelivery_Description = md.Description,
+                             MM_MailerDelivery_DocumentDate = md.DocumentDate,
+                             MM_MailerDelivery_DocumentID = md.DocumentID,
+                             MM_MailerDelivery_DocumentTime = md.DocumentTime,
+                             MM_MailerDelivery_PostOfficeID = md.PostOfficeID,
+                             MM_MailerDelivery_TripNumber = md.TripNumber,                            
+                             MM_MailerDeliveryDetail_ConfirmDate = mdd.ConfirmDate,
+                             MM_MailerDeliveryDetail_ConfirmIndex = mdd.ConfirmIndex,
+                             MM_MailerDeliveryDetail_DeliveryNotes = mdd.DeliveryNotes,
+                             MM_MailerDeliveryDetail_DeliveryStatus = mdd.DeliveryStatus,
+                             MM_MailerDeliveryDetail_Notes = mdd.Notes,
                              MM_Mailers_Amount =double.Parse( m.Amount.ToString()),
+                             MM_Mailers_BefVATAmount = double.Parse(m.BefVATAmount.ToString()),
+                             MM_Mailers_AcceptDate = m.AcceptDate,
+                             MM_Mailers_CurrentPostOfficeID = m.CurrentPostOfficeID,
+                             MM_Mailers_MailerDescription = m.MailerDescription,
+                             MM_Mailers_MailerTypeID = m.MailerTypeID,
+                             MM_Mailers_PostOfficeAcceptID = m.PostOfficeAcceptID,
+                             MM_Mailers_Quantity = m.Quantity,
+                             MM_Mailers_RecieverAddress = m.RecieverAddress,
+                             MM_Mailers_RecieverProvinceID = m.ReceiveProvinceID,
+                             MM_Mailers_SalesClosingDate = m.SalesClosingDate,
+                             MM_Mailers_SenderID = m.SenderID,
+                             MM_Mailers_SenderName = m.SenderName,
+                             MM_Mailers_ServiceTypeID = m.ServiceTypeID,
+                             MM_Mailers_ThirdpartyDocID = m.ThirdpartyDocID,
+                             MM_Mailers_Weight = m.Weight,
+                             MM_ReturnReason_ReturnReasonName = r.ReturnReasonName,
+                             MM_Status_StatusID = s.StatusID,
+                             MM_Status_StatusName = s.StatusName
                          }).ToList();
             return query;
         }
