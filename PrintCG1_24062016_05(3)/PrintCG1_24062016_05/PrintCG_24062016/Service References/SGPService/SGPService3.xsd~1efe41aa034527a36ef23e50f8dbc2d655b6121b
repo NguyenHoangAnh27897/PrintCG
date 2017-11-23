@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfZoneList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZoneList" nillable="true" type="tns:ZoneList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZoneList" nillable="true" type="tns:ArrayOfZoneList" />
+  <xs:complexType name="ZoneList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ZoneID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZoneList" nillable="true" type="tns:ZoneList" />
+  <xs:complexType name="ArrayOfPriceList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PriceList" nillable="true" type="tns:PriceList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPriceList" nillable="true" type="tns:ArrayOfPriceList" />
+  <xs:complexType name="PriceList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PPHK" type="xs:float" />
+      <xs:element minOccurs="0" name="PPXD" type="xs:float" />
+      <xs:element minOccurs="0" name="Price" type="xs:float" />
+      <xs:element minOccurs="0" name="PriceService" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PriceList" nillable="true" type="tns:PriceList" />
+  <xs:complexType name="ArrayOfTrackings">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Trackings" nillable="true" type="tns:Trackings" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrackings" nillable="true" type="tns:ArrayOfTrackings" />
+  <xs:complexType name="Trackings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BS_Employees_EmployeeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BS_Employees_EmployeeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_MailerDeliveryDetail_ConfirmDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MM_MailerDeliveryDetail_ConfirmIndex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_MailerDeliveryDetail_DeliveryNotes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_MailerDeliveryDetail_DeliveryStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_MailerDeliveryDetail_Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_MailerDelivery_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_MailerDelivery_DocumentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MM_MailerDelivery_DocumentID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_MailerDelivery_DocumentTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MM_MailerDelivery_PostOfficeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_MailerDelivery_TripNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_Mailers_AcceptDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MM_Mailers_Amount" type="xs:double" />
+      <xs:element minOccurs="0" name="MM_Mailers_BefVATAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="MM_Mailers_CurrentPostOfficeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_Mailers_MailerDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_Mailers_MailerTypeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_Mailers_PostOfficeAcceptID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_Mailers_Quantity" type="xs:double" />
+      <xs:element minOccurs="0" name="MM_Mailers_RecieverAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_Mailers_RecieverProvinceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_Mailers_SalesClosingDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MM_Mailers_SenderID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_Mailers_SenderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_Mailers_ServiceTypeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_Mailers_ThirdpartyDocID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_Mailers_Weight" type="xs:double" />
+      <xs:element minOccurs="0" name="MM_ReturnReason_ReturnReasonName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MM_Status_StatusID" type="xs:int" />
+      <xs:element minOccurs="0" name="MM_Status_StatusName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Trackings" nillable="true" type="tns:Trackings" />
+</xs:schema>

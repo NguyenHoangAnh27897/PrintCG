@@ -130,6 +130,23 @@
       <DependentUpon>FrmTraHBOnline.cs</DependentUpon>
     </Compile>
     <Compile Include="convert\ConvertData.cs" />
+    <Compile Include="dataset\DsA4.cs">
+      <DependentUpon>DsA4.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dataset\DsCGLEBangKe.cs">
+      <DependentUpon>DsCGLEBangKe.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DsFuji.cs">
+      <DependentUpon>DsFuji.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DsFuji.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsFuji.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ExcelReader\ExcelReader.cs" />
     <Compile Include="hethong\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -227,12 +244,6 @@
     </Compile>
     <Compile Include="FrmNormal.Designer.cs">
       <DependentUpon>FrmNormal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\RptCGLEBangKE11.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RptCGLEBangKE1.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Rpt_XuatNhapTon.cs">
       <AutoGen>True</AutoGen>
@@ -338,7 +349,7 @@
     <Compile Include="Report\RptCGLEBangKE.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RptCGLEBangKE1.rpt</DependentUpon>
+      <DependentUpon>RptCGLEBangKE.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\RptCOD_A5.cs">
@@ -657,9 +668,9 @@
     <EmbeddedResource Include="FrmBayer.resx">
       <DependentUpon>FrmBayer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\RptCGLEBangKE1.rpt">
+    <EmbeddedResource Include="Report\RptCGLEBangKE.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RptCGLEBangKE11.cs</LastGenOutput>
+      <LastGenOutput>RptCGLEBangKE.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\RptCOD_A5.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -958,6 +969,17 @@
     </None>
     <None Include="dataset\dsPhieuGui.xss">
       <DependentUpon>dsPhieuGui.xsd</DependentUpon>
+    </None>
+    <None Include="DsFuji.xsc">
+      <DependentUpon>DsFuji.xsd</DependentUpon>
+    </None>
+    <None Include="DsFuji.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsFuji.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsFuji.xss">
+      <DependentUpon>DsFuji.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

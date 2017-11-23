@@ -8,4 +8,13 @@ D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebSe
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\bin\SGPWebService.pdb
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.dll
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.pdb
+<<<<<<< HEAD
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.csprojResolveAssemblyReference.cache
+=======
+C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\bin\SGPWebService.dll.config
+C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\bin\SGPWebService.dll
+C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\bin\SGPWebService.pdb
+C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.csprojResolveAssemblyReference.cache
+C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.dll
+C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.pdb
+>>>>>>> 1efe41aa034527a36ef23e50f8dbc2d655b6121b
