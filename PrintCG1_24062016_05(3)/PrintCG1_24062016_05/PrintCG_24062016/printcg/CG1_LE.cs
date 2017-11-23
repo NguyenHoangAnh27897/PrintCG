@@ -1134,24 +1134,52 @@ namespace PrintCG_24062016
                      DataTable dt = new DataTable();
                      dt = ExcelReader.ExcelReader.ReadExcelFile("Sheet3$", fopen.FileName);
                      for (int i = 0; i <= dt.Rows.Count - 1; i++)
-                     {                                                 
+                     {
                          //test
-                         DataGridViewRow row = (DataGridViewRow)myGrid1.Rows[i].Clone();
+                         // DataGridViewRow row = (DataGridViewRow)myGrid1.Rows[i].Clone()
+                         myGrid1.Rows.Add();
+                         float priceservice = 0;
                          for (int j = 0; j <= dt.Columns.Count - 1; j++)
                          {
-                             row.Cells[j].Value = dt.Rows[i][j].ToString();
-                         }
-                         myGrid1.Rows.Add(row);
-                         //end test
-                     }
+                             if (myGrid1.Columns[j].Name == "Price")
+                             {
+                                 int quantity = int.Parse(myGrid1.Rows[i].Cells["Quantity"].Value.ToString());
+                                 float weight = float.Parse(myGrid1.Rows[i].Cells["Weight"].Value.ToString());
+                                 //string province = myGrid1.CurrentRow.Cells["Provinceid"].Value.ToString();		
+                                 string customer = myGrid1.Rows[i].Cells["Sender"].Value.ToString();
+                                 string servicetype = myGrid1.Rows[i].Cells["Servicetypeid"].Value.ToString();
+                                 string matinh = myGrid1.Rows[i].Cells["Provinceid"].Value.ToString();
+                                 //myGrid1.Rows[e.RowIndex].ErrorText = "Chưa khai báo thông tin";		
+                                 var pricelist = sgpservice.calPrice(quantity, weight, matinh, customer, servicetype);
+                                 foreach (var item in pricelist)
+                                 {
+                                     myGrid1.Rows[i].Cells["Price"].Value = item.Price;
+                                     priceservice = item.PriceService;
+                                 }
 
-                 }catch(Exception ex)
+                             }
+                             else if (myGrid1.Columns[j].Name == "Priceservice")
+                             {
+                                 myGrid1.Rows[i].Cells["Priceservice"].Value = priceservice;
+                             }
+                             else
+                             {
+                                 myGrid1.Rows[i].Cells[j].Value = dt.Rows[i][j].ToString();
+                             }
+
+                         }
+                         //myGrid1.Rows.Add(row);
+                         //end test
+
+                     }
+                 }
+                 catch (Exception ex)
                  {
                      MessageBox.Show(ex.ToString());
                  }
-                 
 
              }
+             
 
              private void rdbtudong_CheckedChanged(object sender, EventArgs e)
              {
