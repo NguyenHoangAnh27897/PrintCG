@@ -4775,10 +4775,13 @@ namespace PrintCG_24062016.SGPService {
         private string BS_Employees_EmployeeNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime MM_MailerDeliveryDetail_ConfirmDateField;
+        private System.Nullable<System.DateTime> MM_MailerDeliveryDetail_ConfirmDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MM_MailerDeliveryDetail_ConfirmIndexField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> MM_MailerDeliveryDetail_DeliveryDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MM_MailerDeliveryDetail_DeliveryNotesField;
@@ -4787,19 +4790,25 @@ namespace PrintCG_24062016.SGPService {
         private string MM_MailerDeliveryDetail_DeliveryStatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> MM_MailerDeliveryDetail_DeliveryTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MM_MailerDeliveryDetail_DeliveryToField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MM_MailerDeliveryDetail_NotesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MM_MailerDelivery_DescriptionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime MM_MailerDelivery_DocumentDateField;
+        private System.Nullable<System.DateTime> MM_MailerDelivery_DocumentDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MM_MailerDelivery_DocumentIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime MM_MailerDelivery_DocumentTimeField;
+        private System.Nullable<System.DateTime> MM_MailerDelivery_DocumentTimeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MM_MailerDelivery_PostOfficeIDField;
@@ -4808,7 +4817,7 @@ namespace PrintCG_24062016.SGPService {
         private string MM_MailerDelivery_TripNumberField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime MM_Mailers_AcceptDateField;
+        private System.Nullable<System.DateTime> MM_Mailers_AcceptDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private double MM_Mailers_AmountField;
@@ -4838,7 +4847,7 @@ namespace PrintCG_24062016.SGPService {
         private string MM_Mailers_RecieverProvinceIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime MM_Mailers_SalesClosingDateField;
+        private System.Nullable<System.DateTime> MM_Mailers_SalesClosingDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MM_Mailers_SenderIDField;
@@ -4859,7 +4868,7 @@ namespace PrintCG_24062016.SGPService {
         private string MM_ReturnReason_ReturnReasonNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int MM_Status_StatusIDField;
+        private string MM_Status_StatusIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MM_Status_StatusNameField;
@@ -4901,7 +4910,7 @@ namespace PrintCG_24062016.SGPService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime MM_MailerDeliveryDetail_ConfirmDate {
+        public System.Nullable<System.DateTime> MM_MailerDeliveryDetail_ConfirmDate {
             get {
                 return this.MM_MailerDeliveryDetail_ConfirmDateField;
             }
@@ -4922,6 +4931,19 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.MM_MailerDeliveryDetail_ConfirmIndexField, value) != true)) {
                     this.MM_MailerDeliveryDetail_ConfirmIndexField = value;
                     this.RaisePropertyChanged("MM_MailerDeliveryDetail_ConfirmIndex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> MM_MailerDeliveryDetail_DeliveryDate {
+            get {
+                return this.MM_MailerDeliveryDetail_DeliveryDateField;
+            }
+            set {
+                if ((this.MM_MailerDeliveryDetail_DeliveryDateField.Equals(value) != true)) {
+                    this.MM_MailerDeliveryDetail_DeliveryDateField = value;
+                    this.RaisePropertyChanged("MM_MailerDeliveryDetail_DeliveryDate");
                 }
             }
         }
@@ -4953,6 +4975,32 @@ namespace PrintCG_24062016.SGPService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> MM_MailerDeliveryDetail_DeliveryTime {
+            get {
+                return this.MM_MailerDeliveryDetail_DeliveryTimeField;
+            }
+            set {
+                if ((this.MM_MailerDeliveryDetail_DeliveryTimeField.Equals(value) != true)) {
+                    this.MM_MailerDeliveryDetail_DeliveryTimeField = value;
+                    this.RaisePropertyChanged("MM_MailerDeliveryDetail_DeliveryTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MM_MailerDeliveryDetail_DeliveryTo {
+            get {
+                return this.MM_MailerDeliveryDetail_DeliveryToField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MM_MailerDeliveryDetail_DeliveryToField, value) != true)) {
+                    this.MM_MailerDeliveryDetail_DeliveryToField = value;
+                    this.RaisePropertyChanged("MM_MailerDeliveryDetail_DeliveryTo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string MM_MailerDeliveryDetail_Notes {
             get {
                 return this.MM_MailerDeliveryDetail_NotesField;
@@ -4979,7 +5027,7 @@ namespace PrintCG_24062016.SGPService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime MM_MailerDelivery_DocumentDate {
+        public System.Nullable<System.DateTime> MM_MailerDelivery_DocumentDate {
             get {
                 return this.MM_MailerDelivery_DocumentDateField;
             }
@@ -5005,7 +5053,7 @@ namespace PrintCG_24062016.SGPService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime MM_MailerDelivery_DocumentTime {
+        public System.Nullable<System.DateTime> MM_MailerDelivery_DocumentTime {
             get {
                 return this.MM_MailerDelivery_DocumentTimeField;
             }
@@ -5044,7 +5092,7 @@ namespace PrintCG_24062016.SGPService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime MM_Mailers_AcceptDate {
+        public System.Nullable<System.DateTime> MM_Mailers_AcceptDate {
             get {
                 return this.MM_Mailers_AcceptDateField;
             }
@@ -5174,7 +5222,7 @@ namespace PrintCG_24062016.SGPService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime MM_Mailers_SalesClosingDate {
+        public System.Nullable<System.DateTime> MM_Mailers_SalesClosingDate {
             get {
                 return this.MM_Mailers_SalesClosingDateField;
             }
@@ -5265,12 +5313,12 @@ namespace PrintCG_24062016.SGPService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int MM_Status_StatusID {
+        public string MM_Status_StatusID {
             get {
                 return this.MM_Status_StatusIDField;
             }
             set {
-                if ((this.MM_Status_StatusIDField.Equals(value) != true)) {
+                if ((object.ReferenceEquals(this.MM_Status_StatusIDField, value) != true)) {
                     this.MM_Status_StatusIDField = value;
                     this.RaisePropertyChanged("MM_Status_StatusID");
                 }

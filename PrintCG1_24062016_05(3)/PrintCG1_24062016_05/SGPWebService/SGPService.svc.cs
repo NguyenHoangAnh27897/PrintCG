@@ -254,19 +254,23 @@ namespace SGPWebService
                     var cuoc2kg = api.SGP_Price_Values.Where(t => t.PriceID == PriceID &&  t.TW == 2000 && t.Zone == zone.Zone).FirstOrDefault();
                     if(Weight >2000)
                     {
-                        double tldu = Weight - 2000;
-                        var tongtldu  = Math.Round(tldu / 500, 0, MidpointRounding.ToEven);
-                        //double nactldu = Math.Round(double.Parse((Weight - 2000).ToString()) / nactltt.FW, 0, MidpointRounding.ToEven);
-                        double nactldu = 0;
-                        if (tldu <= 500)
+                        //sua code
+                        float tlthua = Weight - 2000;
+                        if (tlthua <= 500)                 
                         {
-                            nactldu = 1;
-                        }else if(tldu > 500 && tldu<=1000)
+                            price = float.Parse((nactltt.Price + cuoc2kg.Price).ToString());
+                        }else if(tlthua > 500)
                         {
-                            nactldu = 2;
+                            double tile = (tlthua / 500);
+                            float a = (tlthua % 500);
+                            if (a > 0)
+                            {
+                                tile = tile + 1;
+                            }
+                            price = float.Parse((cuoc2kg.Price + nactltt.Price * tile).ToString());
                         }
+                        //sua code 
                         
-                        price = float.Parse((cuoc2kg.Price + nactltt.Price * nactldu).ToString());
 
                     }
                 }
@@ -281,7 +285,12 @@ namespace SGPWebService
                 //pphk
                 if(Weight > pp_hk.ConditionApply)
                 {
-                    var nachk = Math.Round(Weight / pp_hk.Weight, 0, MidpointRounding.ToEven);
+                    float nachk = float.Parse(Math.Round(Weight / pp_hk.Weight, 0, MidpointRounding.AwayFromZero).ToString());
+                    float a = float.Parse((Weight % pp_hk.Weight).ToString());
+                    if (a > 0)
+                    {
+                        nachk = nachk + 1;
+                    }
                     pphk = float.Parse((nachk * pp_hk.Price).ToString());
                 }
                 priceservice = ppxd + pphk;
@@ -313,19 +322,58 @@ namespace SGPWebService
         public List<DataClass.Trackings> ToolTracking(string MailerID)
         {
             var query = (from m in pms.MM_Mailers
-                         join mdd in pms.MM_MailerDeliveryDetails on m.MailerID equals mdd.MailerID
-                         join pid in pms.MM_PackingListInternalDetails on m.MailerID equals pid.MailerID
-                         join pi in pms.MM_PackingListInternals on pid.DocumentID equals pi.DocumentID
-                         join md in pms.MM_MailerDeliveries on mdd.DocumentID equals md.DocumentID
-                         join e in pms.BS_Employees on md.EmployeeID equals e.EmployeeID
-                         join s in pms.MM_Status on m.CurrentStatusID equals s.StatusID
-                         join r in pms.MM_ReturnReasons on mdd.ReturnReasonID equals r.ReturnReasonID
+                         from mdd in pms.MM_MailerDeliveryDetails
+                             .Where(mdds => mdds.MailerID == m.MailerID).DefaultIfEmpty()
+                         from pid in pms.MM_PackingListInternalDetails
+                             .Where(pids => pids.MailerID == m.MailerID).DefaultIfEmpty()
+                         from  pi in pms.MM_PackingListInternals
+                             .Where(pids => pids.DocumentID == pid.DocumentID).DefaultIfEmpty()
+                         from md in pms.MM_MailerDeliveries
+                             .Where(pids => pids.DocumentID == mdd.DocumentID).DefaultIfEmpty()
+                         from e in pms.BS_Employees
+                              .Where(pids => pids.EmployeeID == md.EmployeeID).DefaultIfEmpty()
+                         from s in pms.MM_Status
+                             .Where(pids => pids.StatusID == m.CurrentStatusID).DefaultIfEmpty()
+                         from r in pms.MM_ReturnReasons
+                             .Where(pids => pids.ReturnReasonID == mdd.ReturnReasonID).DefaultIfEmpty()
                          where m.MailerID == MailerID orderby mdd.ID descending
                          select new DataClass.Trackings()
                          {
+                             MM_MailerDeliveryDetail_DeliveryTo = mdd.DeliveryTo,
+                             MM_MailerDeliveryDetail_DeliveryDate = mdd.DeliveryDate,
+                             MM_MailerDeliveryDetail_DeliveryTime = mdd.DeliveryDate,
                              BS_Employees_EmployeeID = e.EmployeeID,
                              BS_Employees_EmployeeName = e.EmployeeName,
+                             MM_MailerDelivery_Description = md.Description,
+                             MM_MailerDelivery_DocumentDate = md.DocumentDate,
+                             MM_MailerDelivery_DocumentID = md.DocumentID,
+                             MM_MailerDelivery_DocumentTime = md.DocumentTime,
+                             MM_MailerDelivery_PostOfficeID = md.PostOfficeID,
+                             MM_MailerDelivery_TripNumber = md.TripNumber,                            
+                             MM_MailerDeliveryDetail_ConfirmDate = mdd.ConfirmDate,
+                             MM_MailerDeliveryDetail_ConfirmIndex = mdd.ConfirmIndex,
+                             MM_MailerDeliveryDetail_DeliveryNotes = mdd.DeliveryNotes,
+                             MM_MailerDeliveryDetail_DeliveryStatus = mdd.DeliveryStatus,
+                             MM_MailerDeliveryDetail_Notes = mdd.Notes,
                              MM_Mailers_Amount =double.Parse( m.Amount.ToString()),
+                             MM_Mailers_BefVATAmount = double.Parse(m.BefVATAmount.ToString()),
+                             MM_Mailers_AcceptDate = m.AcceptDate,
+                             MM_Mailers_CurrentPostOfficeID = m.CurrentPostOfficeID,
+                             MM_Mailers_MailerDescription = m.MailerDescription,
+                             MM_Mailers_MailerTypeID = m.MailerTypeID,
+                             MM_Mailers_PostOfficeAcceptID = m.PostOfficeAcceptID,
+                             MM_Mailers_Quantity = m.Quantity,
+                             MM_Mailers_RecieverAddress = m.RecieverAddress,
+                             MM_Mailers_RecieverProvinceID = m.ReceiveProvinceID,
+                             MM_Mailers_SalesClosingDate = m.SalesClosingDate,
+                             MM_Mailers_SenderID = m.SenderID,
+                             MM_Mailers_SenderName = m.SenderName,
+                             MM_Mailers_ServiceTypeID = m.ServiceTypeID,
+                             MM_Mailers_ThirdpartyDocID = m.ThirdpartyDocID,
+                             MM_Mailers_Weight = m.Weight,
+                             MM_ReturnReason_ReturnReasonName = r.ReturnReasonName,
+                             MM_Status_StatusID = s.StatusID,
+                             MM_Status_StatusName = s.StatusName
                          }).ToList();
             return query;
         }

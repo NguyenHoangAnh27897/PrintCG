@@ -117,6 +117,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="congcu\FrmChiPhiNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="congcu\FrmChiPhiNT.Designer.cs">
+      <DependentUpon>FrmChiPhiNT.cs</DependentUpon>
+    </Compile>
     <Compile Include="congcu\FrmTraHBOnline.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -567,6 +573,9 @@
     <Compile Include="tinhcuoc\FrmProvinceZone.Designer.cs">
       <DependentUpon>FrmProvinceZone.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="congcu\FrmChiPhiNT.resx">
+      <DependentUpon>FrmChiPhiNT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="congcu\FrmTraHBOnline.resx">
       <DependentUpon>FrmTraHBOnline.cs</DependentUpon>
     </EmbeddedResource>
