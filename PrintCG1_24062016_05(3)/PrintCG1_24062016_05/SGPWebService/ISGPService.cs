@@ -51,7 +51,12 @@ namespace SGPWebService
         List<DB.Tools_Tracking> getUserTrackingProfile(string User);
         [OperationContract]
         List<DataClass.Trackings> ToolTracking(string MailerID);
+        [OperationContract]
+        List<DataClass.MailerPPNT> getMailer(string MailerID);
+        [OperationContract]
+        List<DataClass.District> getDisitrct(string ProvinceID);
+        [OperationContract]
+        bool insertSGP_ChiPhi(string ctvphat, DateTime ngay,string cg, double tl, string lh, string noiden,double cptt,double cpnt,string bcchapnhan,string khachang,double cuoc,double phuphi,string quan,DateTime ngaynhan,string tinh,string bcnhan);
 
-        
     }
 }

@@ -73,4 +73,36 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Trackings" nillable="true" type="tns:Trackings" />
+  <xs:complexType name="ArrayOfMailerPPNT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailerPPNT" nillable="true" type="tns:MailerPPNT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailerPPNT" nillable="true" type="tns:ArrayOfMailerPPNT" />
+  <xs:complexType name="MailerPPNT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AcceptDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CPNT" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostOfficeAcceptID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PriceService" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ProvinceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailerPPNT" nillable="true" type="tns:MailerPPNT" />
+  <xs:complexType name="ArrayOfDistrict">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="District" nillable="true" type="tns:District" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDistrict" nillable="true" type="tns:ArrayOfDistrict" />
+  <xs:complexType name="District">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DistrictID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="District" nillable="true" type="tns:District" />
 </xs:schema>

@@ -23,6 +23,9 @@ namespace PrintCG_24062016.SGPService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PrintCG_24062016.SGPService.BS_District[] BS_DistrictsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CountryIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -53,6 +56,19 @@ namespace PrintCG_24062016.SGPService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PrintCG_24062016.SGPService.BS_District[] BS_Districts {
+            get {
+                return this.BS_DistrictsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BS_DistrictsField, value) != true)) {
+                    this.BS_DistrictsField = value;
+                    this.RaisePropertyChanged("BS_Districts");
+                }
             }
         }
         
@@ -156,6 +172,147 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.ProvinceNameField, value) != true)) {
                     this.ProvinceNameField = value;
                     this.RaisePropertyChanged("ProvinceName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BS_District", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DB")]
+    [System.SerializableAttribute()]
+    public partial class BS_District : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PrintCG_24062016.SGPService.BS_Province BS_ProvinceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> CreationDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DistrictIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DistrictNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> LastEditDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProvinceIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PrintCG_24062016.SGPService.BS_Province BS_Province {
+            get {
+                return this.BS_ProvinceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BS_ProvinceField, value) != true)) {
+                    this.BS_ProvinceField = value;
+                    this.RaisePropertyChanged("BS_Province");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> CreationDate {
+            get {
+                return this.CreationDateField;
+            }
+            set {
+                if ((this.CreationDateField.Equals(value) != true)) {
+                    this.CreationDateField = value;
+                    this.RaisePropertyChanged("CreationDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DistrictID {
+            get {
+                return this.DistrictIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DistrictIDField, value) != true)) {
+                    this.DistrictIDField = value;
+                    this.RaisePropertyChanged("DistrictID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DistrictName {
+            get {
+                return this.DistrictNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DistrictNameField, value) != true)) {
+                    this.DistrictNameField = value;
+                    this.RaisePropertyChanged("DistrictName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive {
+            get {
+                return this.IsActiveField;
+            }
+            set {
+                if ((this.IsActiveField.Equals(value) != true)) {
+                    this.IsActiveField = value;
+                    this.RaisePropertyChanged("IsActive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> LastEditDate {
+            get {
+                return this.LastEditDateField;
+            }
+            set {
+                if ((this.LastEditDateField.Equals(value) != true)) {
+                    this.LastEditDateField = value;
+                    this.RaisePropertyChanged("LastEditDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProvinceID {
+            get {
+                return this.ProvinceIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProvinceIDField, value) != true)) {
+                    this.ProvinceIDField = value;
+                    this.RaisePropertyChanged("ProvinceID");
                 }
             }
         }
@@ -5348,6 +5505,224 @@ namespace PrintCG_24062016.SGPService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MailerPPNT", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass")]
+    [System.SerializableAttribute()]
+    public partial class MailerPPNT : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> AcceptDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<double> CPNTField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PostOfficeAcceptIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> PriceServiceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProvinceIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SenderNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double WeightField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> AcceptDate {
+            get {
+                return this.AcceptDateField;
+            }
+            set {
+                if ((this.AcceptDateField.Equals(value) != true)) {
+                    this.AcceptDateField = value;
+                    this.RaisePropertyChanged("AcceptDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> CPNT {
+            get {
+                return this.CPNTField;
+            }
+            set {
+                if ((this.CPNTField.Equals(value) != true)) {
+                    this.CPNTField = value;
+                    this.RaisePropertyChanged("CPNT");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PostOfficeAcceptID {
+            get {
+                return this.PostOfficeAcceptIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PostOfficeAcceptIDField, value) != true)) {
+                    this.PostOfficeAcceptIDField = value;
+                    this.RaisePropertyChanged("PostOfficeAcceptID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> PriceService {
+            get {
+                return this.PriceServiceField;
+            }
+            set {
+                if ((this.PriceServiceField.Equals(value) != true)) {
+                    this.PriceServiceField = value;
+                    this.RaisePropertyChanged("PriceService");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProvinceID {
+            get {
+                return this.ProvinceIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProvinceIDField, value) != true)) {
+                    this.ProvinceIDField = value;
+                    this.RaisePropertyChanged("ProvinceID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SenderName {
+            get {
+                return this.SenderNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SenderNameField, value) != true)) {
+                    this.SenderNameField = value;
+                    this.RaisePropertyChanged("SenderName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Weight {
+            get {
+                return this.WeightField;
+            }
+            set {
+                if ((this.WeightField.Equals(value) != true)) {
+                    this.WeightField = value;
+                    this.RaisePropertyChanged("Weight");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="District", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass")]
+    [System.SerializableAttribute()]
+    public partial class District : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DistrictIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DistrictID {
+            get {
+                return this.DistrictIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DistrictIDField, value) != true)) {
+                    this.DistrictIDField = value;
+                    this.RaisePropertyChanged("DistrictID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SGPService.ISGPService")]
     public interface ISGPService {
@@ -5411,6 +5786,31 @@ namespace PrintCG_24062016.SGPService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/ToolTracking", ReplyAction="http://tempuri.org/ISGPService/ToolTrackingResponse")]
         PrintCG_24062016.SGPService.Trackings[] ToolTracking(string MailerID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getMailer", ReplyAction="http://tempuri.org/ISGPService/getMailerResponse")]
+        PrintCG_24062016.SGPService.MailerPPNT[] getMailer(string MailerID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getDisitrct", ReplyAction="http://tempuri.org/ISGPService/getDisitrctResponse")]
+        PrintCG_24062016.SGPService.District[] getDisitrct(string ProvinceID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/insertSGP_ChiPhi", ReplyAction="http://tempuri.org/ISGPService/insertSGP_ChiPhiResponse")]
+        bool insertSGP_ChiPhi(
+                    string ctvphat, 
+                    System.DateTime ngay, 
+                    string cg, 
+                    double tl, 
+                    string lh, 
+                    string noiden, 
+                    double cptt, 
+                    double cpnt, 
+                    string bcchapnhan, 
+                    string khachang, 
+                    double cuoc, 
+                    double phuphi, 
+                    string quan, 
+                    System.DateTime ngaynhan, 
+                    string tinh, 
+                    string bcnhan);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -5518,6 +5918,34 @@ namespace PrintCG_24062016.SGPService {
         
         public PrintCG_24062016.SGPService.Trackings[] ToolTracking(string MailerID) {
             return base.Channel.ToolTracking(MailerID);
+        }
+        
+        public PrintCG_24062016.SGPService.MailerPPNT[] getMailer(string MailerID) {
+            return base.Channel.getMailer(MailerID);
+        }
+        
+        public PrintCG_24062016.SGPService.District[] getDisitrct(string ProvinceID) {
+            return base.Channel.getDisitrct(ProvinceID);
+        }
+        
+        public bool insertSGP_ChiPhi(
+                    string ctvphat, 
+                    System.DateTime ngay, 
+                    string cg, 
+                    double tl, 
+                    string lh, 
+                    string noiden, 
+                    double cptt, 
+                    double cpnt, 
+                    string bcchapnhan, 
+                    string khachang, 
+                    double cuoc, 
+                    double phuphi, 
+                    string quan, 
+                    System.DateTime ngaynhan, 
+                    string tinh, 
+                    string bcnhan) {
+            return base.Channel.insertSGP_ChiPhi(ctvphat, ngay, cg, tl, lh, noiden, cptt, cpnt, bcchapnhan, khachang, cuoc, phuphi, quan, ngaynhan, tinh, bcnhan);
         }
     }
 }

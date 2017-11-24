@@ -46,11 +46,6 @@
             this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem13 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem14 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem15 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem16 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem17 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem18 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem19 = new DevExpress.XtraNavBar.NavBarItem();
@@ -64,15 +59,20 @@
             this.navBarItem23 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem26 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem30 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem31 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem29 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem13 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem14 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem15 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem16 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem17 = new DevExpress.XtraNavBar.NavBarItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblmabc = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblmanv = new System.Windows.Forms.ToolStripStatusLabel();
-            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem30 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem31 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -255,36 +255,6 @@
             this.navBarItem12.Name = "navBarItem12";
             this.navBarItem12.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem12_LinkClicked);
             // 
-            // navBarItem13
-            // 
-            this.navBarItem13.Caption = "Tra hồi báo";
-            this.navBarItem13.Name = "navBarItem13";
-            this.navBarItem13.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem13_LinkClicked);
-            // 
-            // navBarItem14
-            // 
-            this.navBarItem14.Caption = "Tra hồi báo từ Excel";
-            this.navBarItem14.Name = "navBarItem14";
-            this.navBarItem14.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem14_LinkClicked);
-            // 
-            // navBarItem15
-            // 
-            this.navBarItem15.Caption = "Luỹ kế DHL";
-            this.navBarItem15.Name = "navBarItem15";
-            this.navBarItem15.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem15_LinkClicked);
-            // 
-            // navBarItem16
-            // 
-            this.navBarItem16.Caption = "In danh sách phiếu gửi";
-            this.navBarItem16.Name = "navBarItem16";
-            this.navBarItem16.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem16_LinkClicked);
-            // 
-            // navBarItem17
-            // 
-            this.navBarItem17.Caption = "Phát CTV";
-            this.navBarItem17.Name = "navBarItem17";
-            this.navBarItem17.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem17_LinkClicked);
-            // 
             // navBarGroup3
             // 
             this.navBarGroup3.Caption = "Công cụ";
@@ -325,6 +295,7 @@
             // 
             this.navBarItem28.Caption = "Chi phí ngoài tuyến";
             this.navBarItem28.Name = "navBarItem28";
+            this.navBarItem28.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem28_LinkClicked);
             // 
             // navBarGroup4
             // 
@@ -374,6 +345,24 @@
             this.navBarItem26.Name = "navBarItem26";
             this.navBarItem26.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem26_LinkClicked);
             // 
+            // navBarGroup2
+            // 
+            this.navBarGroup2.Caption = "SamSung";
+            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem30),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem31)});
+            this.navBarGroup2.Name = "navBarGroup2";
+            // 
+            // navBarItem30
+            // 
+            this.navBarItem30.Caption = "In phiếu gửi";
+            this.navBarItem30.Name = "navBarItem30";
+            // 
+            // navBarItem31
+            // 
+            this.navBarItem31.Caption = "Lũy kế";
+            this.navBarItem31.Name = "navBarItem31";
+            // 
             // navBarGroup5
             // 
             this.navBarGroup5.Caption = "Thiết lập thông tin";
@@ -386,6 +375,36 @@
             this.navBarItem29.Caption = "Chính sách giá";
             this.navBarItem29.Name = "navBarItem29";
             this.navBarItem29.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem29_LinkClicked);
+            // 
+            // navBarItem13
+            // 
+            this.navBarItem13.Caption = "Tra hồi báo";
+            this.navBarItem13.Name = "navBarItem13";
+            this.navBarItem13.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem13_LinkClicked);
+            // 
+            // navBarItem14
+            // 
+            this.navBarItem14.Caption = "Tra hồi báo từ Excel";
+            this.navBarItem14.Name = "navBarItem14";
+            this.navBarItem14.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem14_LinkClicked);
+            // 
+            // navBarItem15
+            // 
+            this.navBarItem15.Caption = "Luỹ kế DHL";
+            this.navBarItem15.Name = "navBarItem15";
+            this.navBarItem15.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem15_LinkClicked);
+            // 
+            // navBarItem16
+            // 
+            this.navBarItem16.Caption = "In danh sách phiếu gửi";
+            this.navBarItem16.Name = "navBarItem16";
+            this.navBarItem16.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem16_LinkClicked);
+            // 
+            // navBarItem17
+            // 
+            this.navBarItem17.Caption = "Phát CTV";
+            this.navBarItem17.Name = "navBarItem17";
+            this.navBarItem17.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem17_LinkClicked);
             // 
             // xtraTabbedMdiManager1
             // 
@@ -413,24 +432,6 @@
             this.lblmanv.Name = "lblmanv";
             this.lblmanv.Size = new System.Drawing.Size(46, 17);
             this.lblmanv.Text = "Mã NV:";
-            // 
-            // navBarGroup2
-            // 
-            this.navBarGroup2.Caption = "SamSung";
-            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem30),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem31)});
-            this.navBarGroup2.Name = "navBarGroup2";
-            // 
-            // navBarItem30
-            // 
-            this.navBarItem30.Caption = "In phiếu gửi";
-            this.navBarItem30.Name = "navBarItem30";
-            // 
-            // navBarItem31
-            // 
-            this.navBarItem31.Caption = "Lũy kế";
-            this.navBarItem31.Name = "navBarItem31";
             // 
             // FrmMain1
             // 

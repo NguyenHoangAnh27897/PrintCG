@@ -57,4 +57,20 @@ namespace SGPWebService.DataClass
         public string MM_Status_StatusID{get;set;}
         public string MM_Status_StatusName { get; set; }
     }
+    public class MailerPPNT
+    {
+        public double Weight { get; set; }
+        public string PostOfficeAcceptID { get; set; }
+        public string SenderName { get; set; }
+        public string ProvinceID { get; set; }
+        public decimal? Price { get; set; }
+        public decimal? PriceService { get;set; }
+        public DateTime? AcceptDate { get; set; }
+        public double? CPNT { get; set; }
+        public string Description { get; set; }
+    }
+    public class District
+    {
+        public string DistrictID { get; set; }
+    }
 }

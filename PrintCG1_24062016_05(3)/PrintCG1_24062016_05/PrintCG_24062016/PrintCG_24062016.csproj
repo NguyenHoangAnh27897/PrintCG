@@ -1166,6 +1166,12 @@
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.BS_Province.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.District.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.MailerPPNT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.MM_Customer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1230,13 +1236,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1436857928_Package-Download.ico" />
-    <None Include="Service References\SGPService\SGPService.disco" />
     <None Include="Service References\SGPService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Service References\SGPService\configuration.svcinfo" />
     <None Include="Service References\SGPService\configuration91.svcinfo" />
+    <None Include="Service References\SGPService\SGPService.disco" />
     <None Include="Service References\ChuyenThu\Service1.disco" />
     <None Include="dataset\DsCGLEBangKe.xsc">
       <DependentUpon>DsCGLEBangKe.xsd</DependentUpon>
