@@ -39,6 +39,7 @@
       <Column Name="LastEditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="BS_Province_MM_Mailer" Member="MM_Mailers" ThisKey="ProvinceID" OtherKey="RecieverProvinceID" Type="MM_Mailer" />
+      <Association Name="BS_Province_BS_District" Member="BS_Districts" ThisKey="ProvinceID" OtherKey="ProvinceID" Type="BS_District" />
     </Type>
   </Table>
   <Table Name="dbo.MM_ServiceTypes" Member="MM_ServiceTypes">
@@ -298,6 +299,38 @@
       <Column Name="ReturnReasonID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ReturnReasonName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
       <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BS_Districts" Member="BS_Districts">
+    <Type Name="BS_District">
+      <Column Name="DistrictID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DistrictName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ProvinceID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastEditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="BS_Province_BS_District" Member="BS_Province" ThisKey="ProvinceID" OtherKey="ProvinceID" Type="BS_Province" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SGP_ChiPhi" Member="SGP_ChiPhis">
+    <Type Name="SGP_ChiPhi">
+      <Column Name="ctvphat" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="cg" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="tl" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="loaihang" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="noiden" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cptt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cpnt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="bcchapnhan" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="khachhang" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="cuocchinh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="phuphi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="quan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaynhan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tinh" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="bcnhap" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

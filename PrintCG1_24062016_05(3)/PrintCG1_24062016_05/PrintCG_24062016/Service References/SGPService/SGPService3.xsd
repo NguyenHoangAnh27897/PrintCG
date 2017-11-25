@@ -8,6 +8,7 @@
   <xs:element name="ArrayOfBS_Province" nillable="true" type="tns:ArrayOfBS_Province" />
   <xs:complexType name="BS_Province">
     <xs:sequence>
+      <xs:element minOccurs="0" name="BS_Districts" nillable="true" type="tns:ArrayOfBS_District" />
       <xs:element minOccurs="0" name="CountryID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CreationDate" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
@@ -19,6 +20,24 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="BS_Province" nillable="true" type="tns:BS_Province" />
+  <xs:complexType name="ArrayOfBS_District">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BS_District" nillable="true" type="tns:BS_District" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBS_District" nillable="true" type="tns:ArrayOfBS_District" />
+  <xs:complexType name="BS_District">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BS_Province" nillable="true" type="tns:BS_Province" />
+      <xs:element minOccurs="0" name="CreationDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DistrictID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistrictName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastEditDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ProvinceID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BS_District" nillable="true" type="tns:BS_District" />
   <xs:complexType name="ArrayOfMM_Mailer">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="MM_Mailer" nillable="true" type="tns:MM_Mailer" />

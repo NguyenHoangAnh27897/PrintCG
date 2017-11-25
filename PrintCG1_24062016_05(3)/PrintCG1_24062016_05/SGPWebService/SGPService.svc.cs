@@ -384,5 +384,72 @@ namespace SGPWebService
             List<DB.SGP_Price_Service_Value> data = api.SGP_Price_Service_Values.Where(t => t.PriceID == PriceID).ToList();
             return data;
         }
+
+        public List<DataClass.MailerPPNT> getMailer(string MailerID)
+        {
+            var query = (from ds in pms.MM_Mailers
+                         from mdd in pms.SGP_ChiPhis
+                            .Where(mdds => mdds.cg == ds.MailerID ).DefaultIfEmpty()
+                         where ds.MailerID == MailerID
+                         select new DataClass.MailerPPNT()
+                         {
+                             Weight = ds.Weight,
+                             PostOfficeAcceptID = ds.PostOfficeAcceptID,
+                             SenderName = ds.SenderName,
+                             ProvinceID = ds.ReceiveProvinceID,
+                             Price = ds.Price,
+                             PriceService = ds.PriceService,
+                             AcceptDate = ds.AcceptDate,
+                             CPNT = mdd.cpnt,
+                             Description = ds.MailerDescription,
+
+                         });
+            return query.ToList();
+        }
+
+        public List<DataClass.District> getDisitrct(string ProvinceID)
+        {             
+             var query = (from ds in pms.BS_Districts                         
+                          where ds.ProvinceID == ProvinceID
+                          select new DataClass.District()
+                          {
+                              DistrictID = ds.DistrictID,                             
+
+                          });
+             return query.ToList();
+        }
+
+
+        public bool insertSGP_ChiPhi(string ctvphat, DateTime ngay, string cg, double tl, string lh, string noiden, double cptt, double cpnt, string bcchapnhan, string khachang, double cuoc, double phuphi, string quan, DateTime ngaynhan, string tinh, string bcnhan)
+        {
+            try
+            {
+                var pl = new DB.SGP_ChiPhi()
+                {
+                    ctvphat = ctvphat,
+                    ngay = ngay,
+                    cg = cg,
+                    tl = tl,
+                    noiden = noiden,
+                    cptt = cptt,
+                    cpnt = cpnt,
+                    bcchapnhan = bcchapnhan,
+                    khachhang = khachang,
+                    cuocchinh = cuoc,
+                    phuphi = phuphi,
+                    quan = quan,
+                    ngaynhan = ngaynhan,
+                    tinh = tinh,
+                    bcnhap = bcchapnhan,
+                };
+                pms.SGP_ChiPhis.InsertOnSubmit(pl);
+                api.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

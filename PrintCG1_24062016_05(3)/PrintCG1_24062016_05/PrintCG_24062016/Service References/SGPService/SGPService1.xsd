@@ -299,4 +299,61 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getMailer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MailerID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMailerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="getMailerResult" nillable="true" type="q13:ArrayOfMailerPPNT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDisitrct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProvinceID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDisitrctResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="getDisitrctResult" nillable="true" type="q14:ArrayOfDistrict" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertSGP_ChiPhi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ctvphat" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ngay" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="cg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tl" type="xs:double" />
+        <xs:element minOccurs="0" name="lh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="noiden" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cptt" type="xs:double" />
+        <xs:element minOccurs="0" name="cpnt" type="xs:double" />
+        <xs:element minOccurs="0" name="bcchapnhan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="khachang" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cuoc" type="xs:double" />
+        <xs:element minOccurs="0" name="phuphi" type="xs:double" />
+        <xs:element minOccurs="0" name="quan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ngaynhan" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="tinh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bcnhan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertSGP_ChiPhiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertSGP_ChiPhiResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
