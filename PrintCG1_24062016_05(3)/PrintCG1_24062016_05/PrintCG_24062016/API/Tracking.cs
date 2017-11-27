@@ -185,7 +185,7 @@ namespace PrintCG_24062016.API
             _shipmentPackageCount = trackingJSON["shipment_package_count"] == null ? 0 :
                 (int)trackingJSON["shipment_package_count"];
             _shipmentType = trackingJSON["shipment_type"] == null ? null : (String)trackingJSON["shipment_type"];
-            _signedBy = trackingJSON["singned_by"] == null ? null : (String)trackingJSON["signed_by"];
+            _signedBy = trackingJSON["signed_by"] == null ? null : (String)trackingJSON["signed_by"];
             _source = trackingJSON["source"] == null ? null : (String)trackingJSON["source"];
             _tag = (String)trackingJSON["tag"] == null ? 0 :
                 (StatusTag)Enum.Parse(typeof(StatusTag), (String)trackingJSON["tag"]);

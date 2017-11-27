@@ -60,6 +60,27 @@ namespace PrintCG_24062016.API
                     string jsonString = connection.json_response;
                     JToken token = JObject.Parse(jsonString);
 
+                     String parametersExtra;
+                    if (tracking.id != null && !tracking.id.Equals(""))
+                    {
+                        parametersExtra = tracking.id;
+
+                    }
+                    else
+                    {
+                        //get the require fields if any (postal_code, tracking_account etc..)
+                        String paramRequiredFields = connection.replaceFirst(tracking.getQueryRequiredFields(), "&", "?");
+                        parametersExtra = tracking.slug + "/" + tracking.trackingNumber +
+                            paramRequiredFields;
+                    }
+                    JObject response1 = connection.request("GET", "/trackings/" + parametersExtra, null);
+                    JObject trackingJSON = (JObject)response1["data"]["tracking"];
+                    Tracking tracking1 = null;
+                    if (trackingJSON.Count != 0)
+                    {
+                        tracking1 = new Tracking(trackingJSON);
+                    }
+
                     string parameter;
                     if (tracking.id != null && tracking.id.Equals(""))
                     {
@@ -80,9 +101,9 @@ namespace PrintCG_24062016.API
                     {
                         checkpoint = new Checkpoint(checkpointJSON);
                     }
+                    var signedby = tracking1.signedBy;
 
-
-                    string[] row = new string[] { arrayi[i], checkpoint.city, checkpoint.countryName, checkpoint.checkpointTime,tracking.signedBy };
+                    string[] row = new string[] { arrayi[i], checkpoint.city, checkpoint.countryName, checkpoint.checkpointTime,signedby };
                     dgvPromotion.Rows.Add(row);
                 }
 
@@ -125,11 +146,11 @@ namespace PrintCG_24062016.API
                 {
                     tracking1 = new Tracking(trackingJSON);
                 }
-                var signby = tracking1.source;
+                var signby = tracking1.signedBy;
                 var rs = tracking1.checkpoints.ToList();
                 foreach (var item in rs)
                 {
-                    string[] row = new string[] { item.city, item.countryName, item.checkpointTime,signby };
+                    string[] row = new string[] { item.city, item.countryName, item.checkpointTime, signby };
                     dgvPromotion.Rows.Add(row);
                 }
 
@@ -149,7 +170,7 @@ namespace PrintCG_24062016.API
                 txtID.Visible = false;
                 //label2.Visible = false;
                 //txtCourier.Visible = false;
-
+                dgvPromotion.Rows.Clear();
                 dgvPromotion.ColumnCount = 5;
                 dgvPromotion.Columns[0].Name = "Tracking Number";
                 dgvPromotion.Columns[1].Name = "City";
@@ -163,6 +184,7 @@ namespace PrintCG_24062016.API
                 txtID.Visible = true;
                 //label2.Visible = true;
                 //txtCourier.Visible = true;
+                dgvPromotion.Rows.Clear();
                 dgvPromotion.ColumnCount = 4;
                 dgvPromotion.Columns[0].Name = "City";
                 dgvPromotion.Columns[1].Name = "Country Name";
