@@ -52,6 +52,7 @@
             this.navBarItem25 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem27 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem28 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem32 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem20 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem21 = new DevExpress.XtraNavBar.NavBarItem();
@@ -157,7 +158,8 @@
             this.navBarItem28,
             this.navBarItem29,
             this.navBarItem30,
-            this.navBarItem31});
+            this.navBarItem31,
+            this.navBarItem32});
             this.navBarControl1.Location = new System.Drawing.Point(-4, 3);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 200;
@@ -264,7 +266,8 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem19),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem25),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem27),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem28)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem28),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem32)});
             this.navBarGroup3.Name = "navBarGroup3";
             // 
             // navBarItem18
@@ -296,6 +299,12 @@
             this.navBarItem28.Caption = "Chi phí ngoài tuyến";
             this.navBarItem28.Name = "navBarItem28";
             this.navBarItem28.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem28_LinkClicked);
+            // 
+            // navBarItem32
+            // 
+            this.navBarItem32.Caption = "Tracking API";
+            this.navBarItem32.Name = "navBarItem32";
+            this.navBarItem32.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem32_LinkClicked);
             // 
             // navBarGroup4
             // 
@@ -503,6 +512,7 @@
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraNavBar.NavBarItem navBarItem30;
         private DevExpress.XtraNavBar.NavBarItem navBarItem31;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem32;
 
     }
 }
