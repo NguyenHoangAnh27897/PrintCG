@@ -252,12 +252,6 @@
     <Compile Include="dhl\FrmDHLXoaDO.Designer.cs">
       <DependentUpon>FrmDHLXoaDO.cs</DependentUpon>
     </Compile>
-    <Compile Include="congcu\FrmKHDB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="congcu\FrmKHDB.Designer.cs">
-      <DependentUpon>FrmKHDB.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmMain1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -636,9 +630,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dhl\FrmDHLXoaDO.resx">
       <DependentUpon>FrmDHLXoaDO.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="congcu\FrmKHDB.resx">
-      <DependentUpon>FrmKHDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain1.resx">
       <DependentUpon>FrmMain1.cs</DependentUpon>
