@@ -356,4 +356,99 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="addCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="noigui" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="socg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sochungtuthuve" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sochungtulienquan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deliverydate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nodename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shiptoaddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="province" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="zone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="date" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hour" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="staff" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="note" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addCustomerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSpCustomer">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSpCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="getSpCustomerResult" nillable="true" type="q15:ArrayOfSpecialCustomer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCustomerID">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCustomerIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="getCustomerIDResult" nillable="true" type="q16:ArrayOfSpCustomer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="changeCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="noigui" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="socg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sochungtuthuve" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sochungtulienquan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deliverydate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nodename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shiptoaddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="province" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="zone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="date" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hour" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="staff" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="note" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="changeCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="changeCustomerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addCustomerID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zoneid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customername" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addCustomerIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addCustomerIDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

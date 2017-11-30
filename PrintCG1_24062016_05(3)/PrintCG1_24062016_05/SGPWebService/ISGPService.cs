@@ -57,6 +57,15 @@ namespace SGPWebService
         List<DataClass.District> getDisitrct(string ProvinceID);
         [OperationContract]
         bool insertSGP_ChiPhi(string ctvphat, DateTime ngay,string cg, double tl, string lh, string noiden,double cptt,double cpnt,string bcchapnhan,string khachang,double cuoc,double phuphi,string quan,DateTime ngaynhan,string tinh,string bcnhan);
-
+        [OperationContract]
+        bool addCustomer(string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note);
+        [OperationContract]
+        List<DataClass.SpecialCustomer> getSpCustomer();
+        [OperationContract]
+        List<DataClass.SpCustomer> getCustomerID();
+        [OperationContract]
+        bool changeCustomer(int id, string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note);
+        [OperationContract]
+        bool addCustomerID(string zoneid, string customerid, string customername);
     }
 }

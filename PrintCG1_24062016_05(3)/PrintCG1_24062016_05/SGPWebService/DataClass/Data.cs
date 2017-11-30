@@ -73,4 +73,30 @@ namespace SGPWebService.DataClass
     {
         public string DistrictID { get; set; }
     }
+
+    public class SpecialCustomer
+    {
+        public int ID { get; set; }
+        public string FromPlace { get; set; }
+        public string CGNumber { get; set; }
+        public string SoChungTuThuVe { get; set; }
+        public string SoChungTuLienQuan { get; set; }
+        public string DeliveryDate { get; set; }
+        public string NodeName { get; set; }
+        public string ShiptoAddress { get; set; }
+        public string Province { get; set; }
+        public string Date { get; set; }
+        public string Hour { get; set; }
+        public string Staff { get; set; }
+        public string Note { get; set; }
+        public string Zone { get; set; }
+        public string CustomerID { get; set; }
+    }
+
+    public class SpCustomer
+    {
+        public string Zone { get; set; }
+        public string CustomerID { get; set; }
+        public string CustomerName { get; set; }
+    }
 }

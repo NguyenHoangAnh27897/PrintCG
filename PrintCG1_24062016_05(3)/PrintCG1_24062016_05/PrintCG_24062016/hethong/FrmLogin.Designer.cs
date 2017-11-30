@@ -66,6 +66,7 @@
             this.txtpost.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtpost.Size = new System.Drawing.Size(130, 20);
             this.txtpost.TabIndex = 13;
+            this.txtpost.EditValueChanged += new System.EventHandler(this.txtpost_EditValueChanged);
             this.txtpost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpost_KeyPress);
             // 
             // txtpass
@@ -138,11 +139,11 @@
 
         private DevExpress.XtraEditors.SimpleButton btncancel;
         private DevExpress.XtraEditors.SimpleButton btnlogin;
-        private DevExpress.XtraEditors.TextEdit txtpost;
         private DevExpress.XtraEditors.TextEdit txtpass;
         private DevExpress.XtraEditors.TextEdit txtuser;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        public DevExpress.XtraEditors.TextEdit txtpost;
     }
 }

@@ -146,6 +146,36 @@
   <wsdl:message name="ISGPService_insertSGP_ChiPhi_OutputMessage">
     <wsdl:part name="parameters" element="tns:insertSGP_ChiPhiResponse" />
   </wsdl:message>
+  <wsdl:message name="ISGPService_addCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:addCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_addCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getSpCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSpCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getSpCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSpCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getCustomerID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerID" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getCustomerID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_changeCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:changeCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_changeCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changeCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_addCustomerID_InputMessage">
+    <wsdl:part name="parameters" element="tns:addCustomerID" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_addCustomerID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addCustomerIDResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISGPService">
     <wsdl:operation name="login">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/login" message="tns:ISGPService_login_InputMessage" />
@@ -238,6 +268,26 @@
     <wsdl:operation name="insertSGP_ChiPhi">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/insertSGP_ChiPhi" message="tns:ISGPService_insertSGP_ChiPhi_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/insertSGP_ChiPhiResponse" message="tns:ISGPService_insertSGP_ChiPhi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/addCustomer" message="tns:ISGPService_addCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/addCustomerResponse" message="tns:ISGPService_addCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSpCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getSpCustomer" message="tns:ISGPService_getSpCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getSpCustomerResponse" message="tns:ISGPService_getSpCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getCustomerID" message="tns:ISGPService_getCustomerID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getCustomerIDResponse" message="tns:ISGPService_getCustomerID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changeCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/changeCustomer" message="tns:ISGPService_changeCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/changeCustomerResponse" message="tns:ISGPService_changeCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addCustomerID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/addCustomerID" message="tns:ISGPService_addCustomerID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/addCustomerIDResponse" message="tns:ISGPService_addCustomerID_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISGPService" type="tns:ISGPService">
@@ -442,6 +492,51 @@
     </wsdl:operation>
     <wsdl:operation name="insertSGP_ChiPhi">
       <soap:operation soapAction="http://tempuri.org/ISGPService/insertSGP_ChiPhi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCustomer">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/addCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpCustomer">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getSpCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerID">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getCustomerID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeCustomer">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/changeCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCustomerID">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/addCustomerID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -105,4 +105,44 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="District" nillable="true" type="tns:District" />
+  <xs:complexType name="ArrayOfSpecialCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpecialCustomer" nillable="true" type="tns:SpecialCustomer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSpecialCustomer" nillable="true" type="tns:ArrayOfSpecialCustomer" />
+  <xs:complexType name="SpecialCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CGNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromPlace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hour" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="NodeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Province" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShiptoAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoChungTuLienQuan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoChungTuThuVe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Staff" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SpecialCustomer" nillable="true" type="tns:SpecialCustomer" />
+  <xs:complexType name="ArrayOfSpCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpCustomer" nillable="true" type="tns:SpCustomer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSpCustomer" nillable="true" type="tns:ArrayOfSpCustomer" />
+  <xs:complexType name="SpCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SpCustomer" nillable="true" type="tns:SpCustomer" />
 </xs:schema>

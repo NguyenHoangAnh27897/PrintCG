@@ -11,8 +11,8 @@ namespace SGPWebService
     // NOTE: In order to launch WCF Test Client for testing this service, please select SGPService.svc or SGPService.svc.cs at the Solution Explorer and start debugging.
     public class SGPService : ISGPService
     {
-        private DB.SGPAPIDataContext api = new DB.SGPAPIDataContext(); //PMS-TEST
-        private DB.SGPMainDataContext pms = new DB.SGPMainDataContext(); //SGPAPI
+        private DB.SGPAPIDataContext api = new DB.SGPAPIDataContext();  //API
+        private DB.SGPMainDataContext pms = new DB.SGPMainDataContext(); //PMS-TEST
         public bool login(string user, string pass, string post)
         {
             bool flag = false;
@@ -43,7 +43,7 @@ namespace SGPWebService
                     string ketthuc = str.Substring(postoffice.Length, 9);
                     newStr = batdau + (int.Parse(ketthuc) + 1).ToString("D9");
 
-                    maxid.MaxID = newStr;                 
+                    maxid.MaxID = newStr;
                     api.SubmitChanges();
                 }
                 else
@@ -61,7 +61,7 @@ namespace SGPWebService
 
         public List<DB.BS_Province> getProvince()
         {
-            List<DB.BS_Province> data = pms.BS_Provinces.Where(t => t.IsActive ==true && t.ProvinceID.Length ==3).ToList();
+            List<DB.BS_Province> data = pms.BS_Provinces.Where(t => t.IsActive == true && t.ProvinceID.Length == 3).ToList();
             return data;
         }
         public bool insertSGP_Province_Zones(string ZoneID, string ProvinceID, int Zone)
@@ -75,7 +75,8 @@ namespace SGPWebService
                 zone.Zone = Zone;
                 api.SubmitChanges();
                 return true;
-            }else
+            }
+            else
             {
                 var pl = new DB.SGP_Province_Zone()
                 {
@@ -86,7 +87,7 @@ namespace SGPWebService
                 api.SGP_Province_Zones.InsertOnSubmit(pl);
                 api.SubmitChanges();
                 return true;
-            }            
+            }
         }
 
         public List<DB.MM_ServiceType> getServiceType()
@@ -109,7 +110,7 @@ namespace SGPWebService
                              ZoneID = ds.ZoneID,
                          }).Distinct();
             return query.ToList();
-            
+
         }
         public int getmaxZone(string ZoneID)
         {
@@ -117,7 +118,7 @@ namespace SGPWebService
             return int.Parse(maxid.Zone.ToString());
 
         }
-        public bool insertSGP_Price_Policy(string PriceID, string PostOfficeID, string Type, DateTime CreateDate, int Status, int Service, string Description, string ZoneID,string CalPrice)
+        public bool insertSGP_Price_Policy(string PriceID, string PostOfficeID, string Type, DateTime CreateDate, int Status, int Service, string Description, string ZoneID, string CalPrice)
         {
             try
             {
@@ -136,11 +137,12 @@ namespace SGPWebService
                 api.SGP_Price_Policies.InsertOnSubmit(pl);
                 api.SubmitChanges();
                 return true;
-            }catch
+            }
+            catch
             {
                 return false;
             }
-            
+
         }
         public bool insertSGP_Price_Customer(string PriceID, string CustomerID)
         {
@@ -149,7 +151,7 @@ namespace SGPWebService
                 var pl = new DB.SGP_Price_Customer()
                 {
                     PriceID = PriceID,
-                    CustomerID = CustomerID                   
+                    CustomerID = CustomerID
                 };
                 api.SGP_Price_Customers.InsertOnSubmit(pl);
                 api.SubmitChanges();
@@ -186,7 +188,7 @@ namespace SGPWebService
                 {
                     PriceID = PriceID,
                     FW = FW,
-                    TW= TW,
+                    TW = TW,
                     Zone = Zone,
                     Price = Price,
                     Type = CalType,
@@ -209,7 +211,7 @@ namespace SGPWebService
         }
         public List<DB.SGP_Price_Customer> getPriceCustomer(string PriceID)
         {
-            List<DB.SGP_Price_Customer> data = api.SGP_Price_Customers.Where(t =>t.PriceID == PriceID).ToList();
+            List<DB.SGP_Price_Customer> data = api.SGP_Price_Customers.Where(t => t.PriceID == PriceID).ToList();
             return data;
         }
         public List<DB.SGP_Price_Service> getPriceService(string PriceID)
@@ -236,30 +238,32 @@ namespace SGPWebService
             List<DataClass.PriceList> list = new List<DataClass.PriceList>();
             string PriceID = string.Empty;
             var query = (from post in api.SGP_Price_Customers
-                        join meta in api.SGP_Price_Services on post.PriceID equals meta.PriceID
-                        where post.CustomerID == CustomerID && meta.ServiceID == ServiceType
-                        select new { post.PriceID }).FirstOrDefault();
+                         join meta in api.SGP_Price_Services on post.PriceID equals meta.PriceID
+                         where post.CustomerID == CustomerID && meta.ServiceID == ServiceType
+                         select new { post.PriceID }).FirstOrDefault();
             PriceID = query.PriceID;
             var zoneid = api.SGP_Price_Policies.Where(m => m.PricePolicyID == PriceID).FirstOrDefault();
             var zone = api.SGP_Province_Zones.Where(t => t.ZoneID == zoneid.ZoneID && t.ProvinceID == ProvinceID).FirstOrDefault();
             var nactl = api.SGP_Price_Values.Where(t => t.PriceID == PriceID && (t.FW <= Weight && t.TW >= Weight) && t.Zone == zone.Zone).FirstOrDefault();
             if (PriceID != string.Empty) // neu lon hon 0 thi có bang giá
-            {              
-                if(nactl != null)//neu nam trong khoang 2000 gram
+            {
+                if (nactl != null)//neu nam trong khoang 2000 gram
                 {
                     price = float.Parse(nactl.Price.Value.ToString());
-                }else
+                }
+                else
                 {
                     var nactltt = api.SGP_Price_Values.Where(t => t.PriceID == PriceID && t.FW == t.TW && t.Zone == zone.Zone).FirstOrDefault();
-                    var cuoc2kg = api.SGP_Price_Values.Where(t => t.PriceID == PriceID &&  t.TW == 2000 && t.Zone == zone.Zone).FirstOrDefault();
-                    if(Weight >2000)
+                    var cuoc2kg = api.SGP_Price_Values.Where(t => t.PriceID == PriceID && t.TW == 2000 && t.Zone == zone.Zone).FirstOrDefault();
+                    if (Weight > 2000)
                     {
                         //sua code
                         float tlthua = Weight - 2000;
-                        if (tlthua <= 500)                 
+                        if (tlthua <= 500)
                         {
                             price = float.Parse((nactltt.Price + cuoc2kg.Price).ToString());
-                        }else if(tlthua > 500)
+                        }
+                        else if (tlthua > 500)
                         {
                             double tile = (tlthua / 500);
                             float a = (tlthua % 500);
@@ -270,20 +274,20 @@ namespace SGPWebService
                             price = float.Parse((cuoc2kg.Price + nactltt.Price * tile).ToString());
                         }
                         //sua code 
-                        
+
 
                     }
                 }
             }
             //them service neu co
-            if(zoneid.Service ==1)
+            if (zoneid.Service == 1)
             {
-                var pp_xd = api.SGP_Price_Service_Values.Where(t => t.PriceID == PriceID && t.Service =="PPXD" && t.Zone == zone.Zone).FirstOrDefault();
+                var pp_xd = api.SGP_Price_Service_Values.Where(t => t.PriceID == PriceID && t.Service == "PPXD" && t.Zone == zone.Zone).FirstOrDefault();
                 var pp_hk = api.SGP_Price_Service_Values.Where(t => t.PriceID == PriceID && t.Service == "PPHK" && t.Zone == zone.Zone).FirstOrDefault();
                 //ppxd
-                ppxd = float.Parse((pp_xd.Price/100 * price).ToString());
+                ppxd = float.Parse((pp_xd.Price / 100 * price).ToString());
                 //pphk
-                if(Weight > pp_hk.ConditionApply)
+                if (Weight > pp_hk.ConditionApply)
                 {
                     float nachk = float.Parse(Math.Round(Weight / pp_hk.Weight, 0, MidpointRounding.AwayFromZero).ToString());
                     float a = float.Parse((Weight % pp_hk.Weight).ToString());
@@ -301,7 +305,7 @@ namespace SGPWebService
                 Price = price,
                 PriceService = priceservice,
                 PPXD = ppxd,
-                PPHK =pphk
+                PPHK = pphk
             });
             return list;
 
@@ -309,7 +313,7 @@ namespace SGPWebService
         public List<DB.Tools_Tracking> getUserTrackingProfile(string User)
         {
             var userprofife = api.Tools_Trackings.Where(m => m.UserName == User).ToList();
-            if(userprofife != null)
+            if (userprofife != null)
             {
                 return userprofife;
             }
@@ -326,8 +330,8 @@ namespace SGPWebService
                              .Where(mdds => mdds.MailerID == m.MailerID).DefaultIfEmpty()
                          from pid in pms.MM_PackingListInternalDetails
                              .Where(pids => pids.MailerID == m.MailerID).DefaultIfEmpty()
-                         from  pi in pms.MM_PackingListInternals
-                             .Where(pids => pids.DocumentID == pid.DocumentID).DefaultIfEmpty()
+                         from pi in pms.MM_PackingListInternals
+                            .Where(pids => pids.DocumentID == pid.DocumentID).DefaultIfEmpty()
                          from md in pms.MM_MailerDeliveries
                              .Where(pids => pids.DocumentID == mdd.DocumentID).DefaultIfEmpty()
                          from e in pms.BS_Employees
@@ -336,7 +340,8 @@ namespace SGPWebService
                              .Where(pids => pids.StatusID == m.CurrentStatusID).DefaultIfEmpty()
                          from r in pms.MM_ReturnReasons
                              .Where(pids => pids.ReturnReasonID == mdd.ReturnReasonID).DefaultIfEmpty()
-                         where m.MailerID == MailerID orderby mdd.ID descending
+                         where m.MailerID == MailerID
+                         orderby mdd.ID descending
                          select new DataClass.Trackings()
                          {
                              MM_MailerDeliveryDetail_DeliveryTo = mdd.DeliveryTo,
@@ -349,13 +354,13 @@ namespace SGPWebService
                              MM_MailerDelivery_DocumentID = md.DocumentID,
                              MM_MailerDelivery_DocumentTime = md.DocumentTime,
                              MM_MailerDelivery_PostOfficeID = md.PostOfficeID,
-                             MM_MailerDelivery_TripNumber = md.TripNumber,                            
+                             MM_MailerDelivery_TripNumber = md.TripNumber,
                              MM_MailerDeliveryDetail_ConfirmDate = mdd.ConfirmDate,
                              MM_MailerDeliveryDetail_ConfirmIndex = mdd.ConfirmIndex,
                              MM_MailerDeliveryDetail_DeliveryNotes = mdd.DeliveryNotes,
                              MM_MailerDeliveryDetail_DeliveryStatus = mdd.DeliveryStatus,
                              MM_MailerDeliveryDetail_Notes = mdd.Notes,
-                             MM_Mailers_Amount =double.Parse( m.Amount.ToString()),
+                             MM_Mailers_Amount = double.Parse(m.Amount.ToString()),
                              MM_Mailers_BefVATAmount = double.Parse(m.BefVATAmount.ToString()),
                              MM_Mailers_AcceptDate = m.AcceptDate,
                              MM_Mailers_CurrentPostOfficeID = m.CurrentPostOfficeID,
@@ -389,7 +394,7 @@ namespace SGPWebService
         {
             var query = (from ds in pms.MM_Mailers
                          from mdd in pms.SGP_ChiPhis
-                            .Where(mdds => mdds.cg == ds.MailerID ).DefaultIfEmpty()
+                            .Where(mdds => mdds.cg == ds.MailerID).DefaultIfEmpty()
                          where ds.MailerID == MailerID
                          select new DataClass.MailerPPNT()
                          {
@@ -408,15 +413,15 @@ namespace SGPWebService
         }
 
         public List<DataClass.District> getDisitrct(string ProvinceID)
-        {             
-             var query = (from ds in pms.BS_Districts                         
-                          where ds.ProvinceID == ProvinceID
-                          select new DataClass.District()
-                          {
-                              DistrictID = ds.DistrictID,                             
+        {
+            var query = (from ds in pms.BS_Districts
+                         where ds.ProvinceID == ProvinceID
+                         select new DataClass.District()
+                         {
+                             DistrictID = ds.DistrictID,
 
-                          });
-             return query.ToList();
+                         });
+            return query.ToList();
         }
 
 
@@ -443,6 +448,118 @@ namespace SGPWebService
                     bcnhap = bcchapnhan,
                 };
                 pms.SGP_ChiPhis.InsertOnSubmit(pl);
+                api.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool addCustomer(string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note)
+        {
+            try
+            {
+                var rs = new DB.SGP_SpecialCustomer()
+                {
+                    FromPlace = noigui,
+                    CGNumber = socg,
+                    SoChungTuThuVe = sochungtuthuve,
+                    SoChungTuLienQuan = sochungtulienquan,
+                    DeliveryDate = deliverydate,
+                    NodeName = nodename,
+                    ShiptoAddress = shiptoaddress,
+                    Province = province,
+                    Date = date,
+                    Hour = hour,
+                    Staff = staff,
+                    Note = note,
+                    Zone = zone,
+                    CustomerID = customerid
+                };
+                api.SGP_SpecialCustomers.InsertOnSubmit(rs);
+                api.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool changeCustomer(int id,string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note)
+        {
+            try
+            {
+                var query = api.SGP_SpecialCustomers.FirstOrDefault(s=>s.ID == id);
+                query.FromPlace = noigui;
+                query.CGNumber = socg;
+                query.SoChungTuThuVe = sochungtuthuve;
+                query.SoChungTuLienQuan = sochungtulienquan;
+                query.DeliveryDate = deliverydate;
+                query.NodeName = nodename;
+                query.ShiptoAddress = shiptoaddress;
+                query.Province = province;
+                query.Date = date;
+                query.Hour = hour;
+                query.Staff = staff;
+                query.Note = note;
+                api.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public List<DataClass.SpCustomer> getCustomerID()
+        {
+            var query = (from cus in api.SGP_CustomerWithZones
+                         select new DataClass.SpCustomer()
+                         { 
+                         CustomerID = cus.CustomerID,
+                         CustomerName = cus.CustomerName
+                         });
+            return query.ToList();
+        }
+
+        public List<DataClass.SpecialCustomer> getSpCustomer() 
+        {
+            var query = (from sp in api.SGP_SpecialCustomers
+                         select new DataClass.SpecialCustomer()
+                         {
+                             ID = sp.ID,
+                             FromPlace = sp.FromPlace,
+                             CGNumber = sp.CGNumber,
+                             SoChungTuThuVe = sp.SoChungTuThuVe,
+                             SoChungTuLienQuan = sp.SoChungTuLienQuan,
+                             DeliveryDate = sp.DeliveryDate,
+                             NodeName = sp.NodeName,
+                             ShiptoAddress = sp.ShiptoAddress,
+                             Province = sp.Province,
+                             Date = sp.Date,
+                             Hour = sp.Hour,
+                             Staff = sp.Staff,
+                             Note = sp.Note,
+                             Zone = sp.Zone,
+                             CustomerID = sp.CustomerID
+                         });
+            return query.ToList();
+        }
+
+        public bool addCustomerID(string zoneid, string customerid, string customername) 
+        {
+            try
+            {
+                var result = new DB.SGP_CustomerWithZone()
+                {
+                    ZoneID = zoneid,
+                    CustomerID = customerid,
+                    CustomerName = customername
+                };
+                api.SGP_CustomerWithZones.InsertOnSubmit(result);
                 api.SubmitChanges();
                 return true;
             }

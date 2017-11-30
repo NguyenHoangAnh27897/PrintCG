@@ -131,5 +131,10 @@ namespace PrintCG_24062016
                 }
             }
         }
+
+        private void txtpost_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

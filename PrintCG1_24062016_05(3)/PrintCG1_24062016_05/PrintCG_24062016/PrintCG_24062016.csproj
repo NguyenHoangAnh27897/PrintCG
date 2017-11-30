@@ -150,6 +150,12 @@
     <Compile Include="congcu\FrmTraHBOnline.Designer.cs">
       <DependentUpon>FrmTraHBOnline.cs</DependentUpon>
     </Compile>
+    <Compile Include="congcu\Frm_SpecialCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="congcu\Frm_SpecialCustomer.Designer.cs">
+      <DependentUpon>Frm_SpecialCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="convert\ConvertData.cs" />
     <Compile Include="dataset\DsA4.cs">
       <DependentUpon>DsA4.xsd</DependentUpon>
@@ -246,10 +252,10 @@
     <Compile Include="dhl\FrmDHLXoaDO.Designer.cs">
       <DependentUpon>FrmDHLXoaDO.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmKHDB.cs">
+    <Compile Include="congcu\FrmKHDB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmKHDB.Designer.cs">
+    <Compile Include="congcu\FrmKHDB.Designer.cs">
       <DependentUpon>FrmKHDB.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain1.cs">
@@ -601,6 +607,9 @@
     <EmbeddedResource Include="congcu\FrmTraHBOnline.resx">
       <DependentUpon>FrmTraHBOnline.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="congcu\Frm_SpecialCustomer.resx">
+      <DependentUpon>Frm_SpecialCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="hethong\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -628,7 +637,7 @@
     <EmbeddedResource Include="dhl\FrmDHLXoaDO.resx">
       <DependentUpon>FrmDHLXoaDO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmKHDB.resx">
+    <EmbeddedResource Include="congcu\FrmKHDB.resx">
       <DependentUpon>FrmKHDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain1.resx">
@@ -1216,6 +1225,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.SGP_Price_Value.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.SpCustomer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.SpecialCustomer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.Tools_Tracking.datasource">

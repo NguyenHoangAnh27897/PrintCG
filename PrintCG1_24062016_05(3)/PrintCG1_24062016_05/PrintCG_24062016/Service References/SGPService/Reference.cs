@@ -5723,6 +5723,352 @@ namespace PrintCG_24062016.SGPService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SpecialCustomer", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass")]
+    [System.SerializableAttribute()]
+    public partial class SpecialCustomer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CGNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DeliveryDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FromPlaceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HourField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NodeNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NoteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProvinceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ShiptoAddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SoChungTuLienQuanField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SoChungTuThuVeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StaffField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ZoneField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CGNumber {
+            get {
+                return this.CGNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CGNumberField, value) != true)) {
+                    this.CGNumberField = value;
+                    this.RaisePropertyChanged("CGNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerID {
+            get {
+                return this.CustomerIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerIDField, value) != true)) {
+                    this.CustomerIDField = value;
+                    this.RaisePropertyChanged("CustomerID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Date {
+            get {
+                return this.DateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DateField, value) != true)) {
+                    this.DateField = value;
+                    this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DeliveryDate {
+            get {
+                return this.DeliveryDateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DeliveryDateField, value) != true)) {
+                    this.DeliveryDateField = value;
+                    this.RaisePropertyChanged("DeliveryDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FromPlace {
+            get {
+                return this.FromPlaceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FromPlaceField, value) != true)) {
+                    this.FromPlaceField = value;
+                    this.RaisePropertyChanged("FromPlace");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Hour {
+            get {
+                return this.HourField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HourField, value) != true)) {
+                    this.HourField = value;
+                    this.RaisePropertyChanged("Hour");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NodeName {
+            get {
+                return this.NodeNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NodeNameField, value) != true)) {
+                    this.NodeNameField = value;
+                    this.RaisePropertyChanged("NodeName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Note {
+            get {
+                return this.NoteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NoteField, value) != true)) {
+                    this.NoteField = value;
+                    this.RaisePropertyChanged("Note");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Province {
+            get {
+                return this.ProvinceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProvinceField, value) != true)) {
+                    this.ProvinceField = value;
+                    this.RaisePropertyChanged("Province");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ShiptoAddress {
+            get {
+                return this.ShiptoAddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ShiptoAddressField, value) != true)) {
+                    this.ShiptoAddressField = value;
+                    this.RaisePropertyChanged("ShiptoAddress");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SoChungTuLienQuan {
+            get {
+                return this.SoChungTuLienQuanField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SoChungTuLienQuanField, value) != true)) {
+                    this.SoChungTuLienQuanField = value;
+                    this.RaisePropertyChanged("SoChungTuLienQuan");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SoChungTuThuVe {
+            get {
+                return this.SoChungTuThuVeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SoChungTuThuVeField, value) != true)) {
+                    this.SoChungTuThuVeField = value;
+                    this.RaisePropertyChanged("SoChungTuThuVe");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Staff {
+            get {
+                return this.StaffField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StaffField, value) != true)) {
+                    this.StaffField = value;
+                    this.RaisePropertyChanged("Staff");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Zone {
+            get {
+                return this.ZoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ZoneField, value) != true)) {
+                    this.ZoneField = value;
+                    this.RaisePropertyChanged("Zone");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SpCustomer", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass")]
+    [System.SerializableAttribute()]
+    public partial class SpCustomer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ZoneField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerID {
+            get {
+                return this.CustomerIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerIDField, value) != true)) {
+                    this.CustomerIDField = value;
+                    this.RaisePropertyChanged("CustomerID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerName {
+            get {
+                return this.CustomerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
+                    this.CustomerNameField = value;
+                    this.RaisePropertyChanged("CustomerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Zone {
+            get {
+                return this.ZoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ZoneField, value) != true)) {
+                    this.ZoneField = value;
+                    this.RaisePropertyChanged("Zone");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SGPService.ISGPService")]
     public interface ISGPService {
@@ -5811,6 +6157,21 @@ namespace PrintCG_24062016.SGPService {
                     System.DateTime ngaynhan, 
                     string tinh, 
                     string bcnhan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/addCustomer", ReplyAction="http://tempuri.org/ISGPService/addCustomerResponse")]
+        bool addCustomer(string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getSpCustomer", ReplyAction="http://tempuri.org/ISGPService/getSpCustomerResponse")]
+        PrintCG_24062016.SGPService.SpecialCustomer[] getSpCustomer();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getCustomerID", ReplyAction="http://tempuri.org/ISGPService/getCustomerIDResponse")]
+        PrintCG_24062016.SGPService.SpCustomer[] getCustomerID();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/changeCustomer", ReplyAction="http://tempuri.org/ISGPService/changeCustomerResponse")]
+        bool changeCustomer(int id, string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/addCustomerID", ReplyAction="http://tempuri.org/ISGPService/addCustomerIDResponse")]
+        bool addCustomerID(string zoneid, string customerid, string customername);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -5946,6 +6307,26 @@ namespace PrintCG_24062016.SGPService {
                     string tinh, 
                     string bcnhan) {
             return base.Channel.insertSGP_ChiPhi(ctvphat, ngay, cg, tl, lh, noiden, cptt, cpnt, bcchapnhan, khachang, cuoc, phuphi, quan, ngaynhan, tinh, bcnhan);
+        }
+        
+        public bool addCustomer(string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note) {
+            return base.Channel.addCustomer(noigui, socg, sochungtuthuve, sochungtulienquan, deliverydate, nodename, shiptoaddress, province, zone, customerid, date, hour, staff, note);
+        }
+        
+        public PrintCG_24062016.SGPService.SpecialCustomer[] getSpCustomer() {
+            return base.Channel.getSpCustomer();
+        }
+        
+        public PrintCG_24062016.SGPService.SpCustomer[] getCustomerID() {
+            return base.Channel.getCustomerID();
+        }
+        
+        public bool changeCustomer(int id, string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note) {
+            return base.Channel.changeCustomer(id, noigui, socg, sochungtuthuve, sochungtulienquan, deliverydate, nodename, shiptoaddress, province, zone, customerid, date, hour, staff, note);
+        }
+        
+        public bool addCustomerID(string zoneid, string customerid, string customername) {
+            return base.Channel.addCustomerID(zoneid, customerid, customername);
         }
     }
 }
