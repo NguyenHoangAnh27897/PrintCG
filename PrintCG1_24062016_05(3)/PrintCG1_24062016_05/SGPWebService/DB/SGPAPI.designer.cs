@@ -54,6 +54,12 @@ namespace SGPWebService.DB
     partial void InsertSGP_Price_Service_Value(SGP_Price_Service_Value instance);
     partial void UpdateSGP_Price_Service_Value(SGP_Price_Service_Value instance);
     partial void DeleteSGP_Price_Service_Value(SGP_Price_Service_Value instance);
+    partial void InsertSGP_SpecialCustomer(SGP_SpecialCustomer instance);
+    partial void UpdateSGP_SpecialCustomer(SGP_SpecialCustomer instance);
+    partial void DeleteSGP_SpecialCustomer(SGP_SpecialCustomer instance);
+    partial void InsertSGP_CustomerWithZone(SGP_CustomerWithZone instance);
+    partial void UpdateSGP_CustomerWithZone(SGP_CustomerWithZone instance);
+    partial void DeleteSGP_CustomerWithZone(SGP_CustomerWithZone instance);
     #endregion
 		
 		public SGPAPIDataContext() : 
@@ -147,6 +153,22 @@ namespace SGPWebService.DB
 			get
 			{
 				return this.GetTable<SGP_Price_Service_Value>();
+			}
+		}
+		
+		public System.Data.Linq.Table<SGP_SpecialCustomer> SGP_SpecialCustomers
+		{
+			get
+			{
+				return this.GetTable<SGP_SpecialCustomer>();
+			}
+		}
+		
+		public System.Data.Linq.Table<SGP_CustomerWithZone> SGP_CustomerWithZones
+		{
+			get
+			{
+				return this.GetTable<SGP_CustomerWithZone>();
 			}
 		}
 	}
@@ -1390,6 +1412,538 @@ namespace SGPWebService.DB
 					this._ColumnIndex = value;
 					this.SendPropertyChanged("ColumnIndex");
 					this.OnColumnIndexChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SGP_SpecialCustomer")]
+	public partial class SGP_SpecialCustomer : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _FromPlace;
+		
+		private string _CGNumber;
+		
+		private string _SoChungTuThuVe;
+		
+		private string _SoChungTuLienQuan;
+		
+		private string _DeliveryDate;
+		
+		private string _NodeName;
+		
+		private string _ShiptoAddress;
+		
+		private string _Province;
+		
+		private string _Date;
+		
+		private string _Hour;
+		
+		private string _Staff;
+		
+		private string _Note;
+		
+		private string _Zone;
+		
+		private string _CustomerID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnFromPlaceChanging(string value);
+    partial void OnFromPlaceChanged();
+    partial void OnCGNumberChanging(string value);
+    partial void OnCGNumberChanged();
+    partial void OnSoChungTuThuVeChanging(string value);
+    partial void OnSoChungTuThuVeChanged();
+    partial void OnSoChungTuLienQuanChanging(string value);
+    partial void OnSoChungTuLienQuanChanged();
+    partial void OnDeliveryDateChanging(string value);
+    partial void OnDeliveryDateChanged();
+    partial void OnNodeNameChanging(string value);
+    partial void OnNodeNameChanged();
+    partial void OnShiptoAddressChanging(string value);
+    partial void OnShiptoAddressChanged();
+    partial void OnProvinceChanging(string value);
+    partial void OnProvinceChanged();
+    partial void OnDateChanging(string value);
+    partial void OnDateChanged();
+    partial void OnHourChanging(string value);
+    partial void OnHourChanged();
+    partial void OnStaffChanging(string value);
+    partial void OnStaffChanged();
+    partial void OnNoteChanging(string value);
+    partial void OnNoteChanged();
+    partial void OnZoneChanging(string value);
+    partial void OnZoneChanged();
+    partial void OnCustomerIDChanging(string value);
+    partial void OnCustomerIDChanged();
+    #endregion
+		
+		public SGP_SpecialCustomer()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FromPlace", DbType="NVarChar(50)")]
+		public string FromPlace
+		{
+			get
+			{
+				return this._FromPlace;
+			}
+			set
+			{
+				if ((this._FromPlace != value))
+				{
+					this.OnFromPlaceChanging(value);
+					this.SendPropertyChanging();
+					this._FromPlace = value;
+					this.SendPropertyChanged("FromPlace");
+					this.OnFromPlaceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CGNumber", DbType="NVarChar(50)")]
+		public string CGNumber
+		{
+			get
+			{
+				return this._CGNumber;
+			}
+			set
+			{
+				if ((this._CGNumber != value))
+				{
+					this.OnCGNumberChanging(value);
+					this.SendPropertyChanging();
+					this._CGNumber = value;
+					this.SendPropertyChanged("CGNumber");
+					this.OnCGNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoChungTuThuVe", DbType="NVarChar(50)")]
+		public string SoChungTuThuVe
+		{
+			get
+			{
+				return this._SoChungTuThuVe;
+			}
+			set
+			{
+				if ((this._SoChungTuThuVe != value))
+				{
+					this.OnSoChungTuThuVeChanging(value);
+					this.SendPropertyChanging();
+					this._SoChungTuThuVe = value;
+					this.SendPropertyChanged("SoChungTuThuVe");
+					this.OnSoChungTuThuVeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoChungTuLienQuan", DbType="NVarChar(50)")]
+		public string SoChungTuLienQuan
+		{
+			get
+			{
+				return this._SoChungTuLienQuan;
+			}
+			set
+			{
+				if ((this._SoChungTuLienQuan != value))
+				{
+					this.OnSoChungTuLienQuanChanging(value);
+					this.SendPropertyChanging();
+					this._SoChungTuLienQuan = value;
+					this.SendPropertyChanged("SoChungTuLienQuan");
+					this.OnSoChungTuLienQuanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeliveryDate", DbType="NVarChar(50)")]
+		public string DeliveryDate
+		{
+			get
+			{
+				return this._DeliveryDate;
+			}
+			set
+			{
+				if ((this._DeliveryDate != value))
+				{
+					this.OnDeliveryDateChanging(value);
+					this.SendPropertyChanging();
+					this._DeliveryDate = value;
+					this.SendPropertyChanged("DeliveryDate");
+					this.OnDeliveryDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NodeName", DbType="NVarChar(50)")]
+		public string NodeName
+		{
+			get
+			{
+				return this._NodeName;
+			}
+			set
+			{
+				if ((this._NodeName != value))
+				{
+					this.OnNodeNameChanging(value);
+					this.SendPropertyChanging();
+					this._NodeName = value;
+					this.SendPropertyChanged("NodeName");
+					this.OnNodeNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ShiptoAddress", DbType="NVarChar(200)")]
+		public string ShiptoAddress
+		{
+			get
+			{
+				return this._ShiptoAddress;
+			}
+			set
+			{
+				if ((this._ShiptoAddress != value))
+				{
+					this.OnShiptoAddressChanging(value);
+					this.SendPropertyChanging();
+					this._ShiptoAddress = value;
+					this.SendPropertyChanged("ShiptoAddress");
+					this.OnShiptoAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Province", DbType="NVarChar(50)")]
+		public string Province
+		{
+			get
+			{
+				return this._Province;
+			}
+			set
+			{
+				if ((this._Province != value))
+				{
+					this.OnProvinceChanging(value);
+					this.SendPropertyChanging();
+					this._Province = value;
+					this.SendPropertyChanged("Province");
+					this.OnProvinceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="NVarChar(50)")]
+		public string Date
+		{
+			get
+			{
+				return this._Date;
+			}
+			set
+			{
+				if ((this._Date != value))
+				{
+					this.OnDateChanging(value);
+					this.SendPropertyChanging();
+					this._Date = value;
+					this.SendPropertyChanged("Date");
+					this.OnDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Hour", DbType="NVarChar(10)")]
+		public string Hour
+		{
+			get
+			{
+				return this._Hour;
+			}
+			set
+			{
+				if ((this._Hour != value))
+				{
+					this.OnHourChanging(value);
+					this.SendPropertyChanging();
+					this._Hour = value;
+					this.SendPropertyChanged("Hour");
+					this.OnHourChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Staff", DbType="NVarChar(100)")]
+		public string Staff
+		{
+			get
+			{
+				return this._Staff;
+			}
+			set
+			{
+				if ((this._Staff != value))
+				{
+					this.OnStaffChanging(value);
+					this.SendPropertyChanging();
+					this._Staff = value;
+					this.SendPropertyChanged("Staff");
+					this.OnStaffChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="NVarChar(200)")]
+		public string Note
+		{
+			get
+			{
+				return this._Note;
+			}
+			set
+			{
+				if ((this._Note != value))
+				{
+					this.OnNoteChanging(value);
+					this.SendPropertyChanging();
+					this._Note = value;
+					this.SendPropertyChanged("Note");
+					this.OnNoteChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Zone", DbType="NVarChar(50)")]
+		public string Zone
+		{
+			get
+			{
+				return this._Zone;
+			}
+			set
+			{
+				if ((this._Zone != value))
+				{
+					this.OnZoneChanging(value);
+					this.SendPropertyChanging();
+					this._Zone = value;
+					this.SendPropertyChanged("Zone");
+					this.OnZoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerID", DbType="NVarChar(50)")]
+		public string CustomerID
+		{
+			get
+			{
+				return this._CustomerID;
+			}
+			set
+			{
+				if ((this._CustomerID != value))
+				{
+					this.OnCustomerIDChanging(value);
+					this.SendPropertyChanging();
+					this._CustomerID = value;
+					this.SendPropertyChanged("CustomerID");
+					this.OnCustomerIDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SGP_CustomerWithZone")]
+	public partial class SGP_CustomerWithZone : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _ZoneID;
+		
+		private string _CustomerID;
+		
+		private string _CustomerName;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnZoneIDChanging(string value);
+    partial void OnZoneIDChanged();
+    partial void OnCustomerIDChanging(string value);
+    partial void OnCustomerIDChanged();
+    partial void OnCustomerNameChanging(string value);
+    partial void OnCustomerNameChanged();
+    #endregion
+		
+		public SGP_CustomerWithZone()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ZoneID", DbType="NVarChar(50)")]
+		public string ZoneID
+		{
+			get
+			{
+				return this._ZoneID;
+			}
+			set
+			{
+				if ((this._ZoneID != value))
+				{
+					this.OnZoneIDChanging(value);
+					this.SendPropertyChanging();
+					this._ZoneID = value;
+					this.SendPropertyChanged("ZoneID");
+					this.OnZoneIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerID", DbType="NVarChar(50)")]
+		public string CustomerID
+		{
+			get
+			{
+				return this._CustomerID;
+			}
+			set
+			{
+				if ((this._CustomerID != value))
+				{
+					this.OnCustomerIDChanging(value);
+					this.SendPropertyChanging();
+					this._CustomerID = value;
+					this.SendPropertyChanged("CustomerID");
+					this.OnCustomerIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerName", DbType="NVarChar(50)")]
+		public string CustomerName
+		{
+			get
+			{
+				return this._CustomerName;
+			}
+			set
+			{
+				if ((this._CustomerName != value))
+				{
+					this.OnCustomerNameChanging(value);
+					this.SendPropertyChanging();
+					this._CustomerName = value;
+					this.SendPropertyChanged("CustomerName");
+					this.OnCustomerNameChanged();
 				}
 			}
 		}

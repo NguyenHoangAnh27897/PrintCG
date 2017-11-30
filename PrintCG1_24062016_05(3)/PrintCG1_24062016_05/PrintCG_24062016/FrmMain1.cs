@@ -7,6 +7,7 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using PrintCG_24062016.API;
 
 namespace PrintCG_24062016
 {
@@ -443,6 +444,36 @@ namespace PrintCG_24062016
             else
             {
                 frm = new congcu.FrmChiPhiNT();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void navBarItem32_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            TrackingAPI frm = new TrackingAPI();
+            if ((Application.OpenForms["TrackingAPI"] as TrackingAPI) != null)
+            {
+                frm.Focus();
+            }
+            else
+            {
+                frm = new TrackingAPI();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void navBarItem33_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            congcu.Frm_SpecialCustomer frm = new congcu.Frm_SpecialCustomer();
+            if ((Application.OpenForms["Frm_SpecialCustomer"] as congcu.Frm_SpecialCustomer) != null)
+            {
+                frm.Focus();
+            }
+            else
+            {
+                frm = new congcu.Frm_SpecialCustomer();
                 frm.MdiParent = this;
                 frm.Show();
             }

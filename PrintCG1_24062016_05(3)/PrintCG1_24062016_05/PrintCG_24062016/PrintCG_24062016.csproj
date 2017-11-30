@@ -87,6 +87,10 @@
       <HintPath>..\..\..\..\..\setup\application\KA.Barcode.for.NETSuite\KeepAutomation.Barcode.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Newtonsoft.Json.10.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
@@ -117,6 +121,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\Checking.cs" />
+    <Compile Include="API\ConnectionAPI.cs" />
+    <Compile Include="API\Courier.cs" />
+    <Compile Include="API\DateMethods.cs" />
+    <Compile Include="API\Enums\FieldCheckpoint.cs" />
+    <Compile Include="API\Enums\FieldTracking.cs" />
+    <Compile Include="API\Enums\ISO3Country.cs" />
+    <Compile Include="API\Enums\ParametersTracking.cs" />
+    <Compile Include="API\Enums\StatusTag.cs" />
+    <Compile Include="API\QueryString.cs" />
+    <Compile Include="API\Tracking.cs" />
+    <Compile Include="API\TrackingAPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="API\TrackingAPI.Designer.cs">
+      <DependentUpon>TrackingAPI.cs</DependentUpon>
+    </Compile>
     <Compile Include="congcu\FrmChiPhiNT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +149,12 @@
     </Compile>
     <Compile Include="congcu\FrmTraHBOnline.Designer.cs">
       <DependentUpon>FrmTraHBOnline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="congcu\Frm_SpecialCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="congcu\Frm_SpecialCustomer.Designer.cs">
+      <DependentUpon>Frm_SpecialCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="convert\ConvertData.cs" />
     <Compile Include="dataset\DsA4.cs">
@@ -225,10 +252,10 @@
     <Compile Include="dhl\FrmDHLXoaDO.Designer.cs">
       <DependentUpon>FrmDHLXoaDO.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmKHDB.cs">
+    <Compile Include="congcu\FrmKHDB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmKHDB.Designer.cs">
+    <Compile Include="congcu\FrmKHDB.Designer.cs">
       <DependentUpon>FrmKHDB.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain1.cs">
@@ -571,11 +598,17 @@
     <Compile Include="tinhcuoc\FrmProvinceZone.Designer.cs">
       <DependentUpon>FrmProvinceZone.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="API\TrackingAPI.resx">
+      <DependentUpon>TrackingAPI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="congcu\FrmChiPhiNT.resx">
       <DependentUpon>FrmChiPhiNT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="congcu\FrmTraHBOnline.resx">
       <DependentUpon>FrmTraHBOnline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="congcu\Frm_SpecialCustomer.resx">
+      <DependentUpon>Frm_SpecialCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hethong\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -604,7 +637,7 @@
     <EmbeddedResource Include="dhl\FrmDHLXoaDO.resx">
       <DependentUpon>FrmDHLXoaDO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmKHDB.resx">
+    <EmbeddedResource Include="congcu\FrmKHDB.resx">
       <DependentUpon>FrmKHDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain1.resx">
@@ -1195,6 +1228,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.SGP_Price_Value.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.SpCustomer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.SpecialCustomer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.Tools_Tracking.datasource">
