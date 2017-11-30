@@ -1,0 +1,3 @@
+con cu ho tro
+-in phieu le : chua nhap dc excel
+-chi phi ngoai tuyen : nhap luu =>chua kiem tra

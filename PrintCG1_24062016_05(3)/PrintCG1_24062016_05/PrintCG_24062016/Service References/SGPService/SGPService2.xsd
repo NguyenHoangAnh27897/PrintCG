@@ -67,6 +67,7 @@
       <xs:element minOccurs="0" name="MM_Mailers_ServiceTypeID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MM_Mailers_ThirdpartyDocID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MM_Mailers_Weight" type="xs:double" />
+      <xs:element minOccurs="0" name="MM_PackingListInternal_UserGroupSend" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MM_ReturnReason_ReturnReasonName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MM_Status_StatusID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MM_Status_StatusName" nillable="true" type="xs:string" />

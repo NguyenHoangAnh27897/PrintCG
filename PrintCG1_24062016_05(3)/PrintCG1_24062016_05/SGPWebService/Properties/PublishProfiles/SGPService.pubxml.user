@@ -6,23 +6,23 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>D:\Laptrinh\Github\PrintCG</_PublishTargetUrl>
+    <_PublishTargetUrl>D:\Laptrinh\Github\PrintCG\SGPService</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/SGPWebService.dll">
-      <publishTime>11/21/2017 15:02:43</publishTime>
+      <publishTime>11/27/2017 10:22:02</publishTime>
     </File>
     <File Include="DB/SGPAPI.dbml">
-      <publishTime>11/21/2017 13:43:30</publishTime>
+      <publishTime>11/25/2017 13:23:40</publishTime>
     </File>
     <File Include="DB/SGPMain.dbml">
-      <publishTime>11/21/2017 13:43:30</publishTime>
+      <publishTime>11/25/2017 13:23:40</publishTime>
     </File>
     <File Include="SGPService.svc">
-      <publishTime>11/21/2017 13:43:30</publishTime>
+      <publishTime>11/25/2017 13:23:40</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/21/2017 15:02:44</publishTime>
+      <publishTime>11/25/2017 13:23:40</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -57,6 +57,7 @@ namespace SGPWebService
         List<DataClass.District> getDisitrct(string ProvinceID);
         [OperationContract]
         bool insertSGP_ChiPhi(string ctvphat, DateTime ngay,string cg, double tl, string lh, string noiden,double cptt,double cpnt,string bcchapnhan,string khachang,double cuoc,double phuphi,string quan,DateTime ngaynhan,string tinh,string bcnhan);
-
+        [OperationContract]
+        List<DB.SGP_ChiPhi> getCPNT(DateTime FromDate,DateTime ToDate,int type,string Post);
     }
 }

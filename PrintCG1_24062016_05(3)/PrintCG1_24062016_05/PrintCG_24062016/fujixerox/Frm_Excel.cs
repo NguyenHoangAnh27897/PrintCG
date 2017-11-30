@@ -243,7 +243,6 @@ namespace PrintCG_24062016
             if (cbbType.Text == "Nhập hàng" || cbbType.Text == "Xuất hàng" || cbbType.Text == "Báo cáo tồn")
             {
                 SaveFileDialog fsave = new SaveFileDialog();
-
                 Excel.Application obj = new Excel.Application();
                 Excel.Workbook wbook;
 

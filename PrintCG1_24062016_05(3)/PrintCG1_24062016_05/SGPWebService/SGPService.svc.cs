@@ -373,11 +373,11 @@ namespace SGPWebService
                              MM_Mailers_Weight = m.Weight,
                              MM_ReturnReason_ReturnReasonName = r.ReturnReasonName,
                              MM_Status_StatusID = s.StatusID,
-                             MM_Status_StatusName = s.StatusName
+                             MM_Status_StatusName = s.StatusName,
+                             MM_PackingListInternal_UserGroupSend = pi.UserGroupSend
                          }).ToList();
             return query;
         }
-
 
         public List<DB.SGP_Price_Service_Value> getPriceServiceValue(string PriceID)
         {
@@ -419,7 +419,6 @@ namespace SGPWebService
              return query.ToList();
         }
 
-
         public bool insertSGP_ChiPhi(string ctvphat, DateTime ngay, string cg, double tl, string lh, string noiden, double cptt, double cpnt, string bcchapnhan, string khachang, double cuoc, double phuphi, string quan, DateTime ngaynhan, string tinh, string bcnhan)
         {
             try
@@ -430,6 +429,7 @@ namespace SGPWebService
                     ngay = ngay,
                     cg = cg,
                     tl = tl,
+                    loaihang = lh,
                     noiden = noiden,
                     cptt = cptt,
                     cpnt = cpnt,
@@ -440,16 +440,31 @@ namespace SGPWebService
                     quan = quan,
                     ngaynhan = ngaynhan,
                     tinh = tinh,
-                    bcnhap = bcchapnhan,
+                    bcnhap = bcnhan,
                 };
                 pms.SGP_ChiPhis.InsertOnSubmit(pl);
-                api.SubmitChanges();
+                pms.SubmitChanges();
                 return true;
             }
             catch
             {
                 return false;
             }
+        }
+
+
+        public List<DB.SGP_ChiPhi> getCPNT(DateTime FromDate, DateTime ToDate, int type,string Post)
+        {
+            if(type == 0) //lay theo ngay nhap
+            {
+                List<DB.SGP_ChiPhi> data = pms.SGP_ChiPhis.Where(t => (t.ngay >= FromDate.Date && t.ngay <= ToDate.Date) && t.bcnhap == Post).ToList();
+                return data;
+            }else // lay theo ngay cg
+            {
+                List<DB.SGP_ChiPhi> data = pms.SGP_ChiPhis.Where(t => (t.ngaynhan >= FromDate.Date && t.ngaynhan <= ToDate.Date) && t.bcnhap == Post).ToList();
+                return data;
+            }
+                        
         }
     }
 }

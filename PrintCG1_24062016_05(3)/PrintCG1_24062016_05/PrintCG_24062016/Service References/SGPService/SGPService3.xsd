@@ -436,4 +436,32 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Tools_Tracking" nillable="true" type="tns:Tools_Tracking" />
+  <xs:complexType name="ArrayOfSGP_ChiPhi">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGP_ChiPhi" nillable="true" type="tns:SGP_ChiPhi" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGP_ChiPhi" nillable="true" type="tns:ArrayOfSGP_ChiPhi" />
+  <xs:complexType name="SGP_ChiPhi">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bcchapnhan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bcnhap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cpnt" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="cptt" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="ctvphat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cuocchinh" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="khachhang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="loaihang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ngay" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ngaynhan" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="noiden" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="phuphi" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="quan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tinh" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tl" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SGP_ChiPhi" nillable="true" type="tns:SGP_ChiPhi" />
 </xs:schema>

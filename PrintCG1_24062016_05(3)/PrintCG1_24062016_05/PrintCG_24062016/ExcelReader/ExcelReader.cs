@@ -18,7 +18,7 @@ namespace PrintCG_24062016.ExcelReader
                 string Import_FileName = path;
                 string fileExtension = Path.GetExtension(Import_FileName);
                 if (fileExtension == ".xls")
-                    conn.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Import_FileName + ";" + "Extended Properties='Excel 8.0;HDR=YES;'";
+                    conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Import_FileName + ";" + "Extended Properties='Excel 8.0;HDR=YES;'";
                 if (fileExtension == ".xlsx")
                     conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Import_FileName + ";" + "Extended Properties='Excel 12.0 Xml;HDR=YES;'";
                 using (OleDbCommand comm = new OleDbCommand())

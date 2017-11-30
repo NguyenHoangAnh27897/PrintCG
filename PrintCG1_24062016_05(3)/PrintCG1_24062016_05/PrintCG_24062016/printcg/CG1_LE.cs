@@ -115,8 +115,8 @@ namespace PrintCG_24062016
         }
              public void addlh(AutoCompleteStringCollection col)
              {
-                 col.Add("T");
-                 col.Add("H");
+                 col.Add("TL");
+                 col.Add("HH");
              }
              public void adddv(AutoCompleteStringCollection col)
              {
@@ -232,63 +232,18 @@ namespace PrintCG_24062016
                  string sdtnhan = string.Empty;
                  string thanhpho = string.Empty;
                  string quanhuyen = string.Empty;
+                 
+                 nguoigui = myGrid1.CurrentRow.Cells["Sender"].Value == null ? string.Empty : myGrid1.CurrentRow.Cells["Sender"].Value.ToString().ToUpper();
+                 diachigui = myGrid1.CurrentRow.Cells["SenderAddress"].Value == null ? string.Empty : myGrid1.CurrentRow.Cells["SenderAddress"].Value.ToString().ToUpper();
+                 sdtgui = myGrid1.CurrentRow.Cells["SenderPhone"].Value == null ? string.Empty : myGrid1.CurrentRow.Cells["SenderPhone"].Value.ToString().ToUpper();
+                 nguoinhan = myGrid1.CurrentRow.Cells["ReciverName"].Value == null ? string.Empty : myGrid1.CurrentRow.Cells["ReciverName"].Value.ToString().ToUpper();
+                 diachinhan = myGrid1.CurrentRow.Cells["Address"].Value == null ? string.Empty : myGrid1.CurrentRow.Cells["Address"].Value.ToString().ToUpper();
+                 sdtnhan = myGrid1.CurrentRow.Cells["ReciverPhone"].Value== null ? string.Empty : myGrid1.CurrentRow.Cells["ReciverPhone"].Value.ToString().ToUpper();
+                 thanhpho = myGrid1.CurrentRow.Cells["ProvinceName"].Value== null ? string.Empty : myGrid1.CurrentRow.Cells["ProvinceName"].Value.ToString().ToUpper();
+                 quanhuyen = myGrid1.CurrentRow.Cells["DistrictName"].Value == null ? string.Empty : myGrid1.CurrentRow.Cells["ProvinceName"].Value.ToString().ToUpper();
                  try
                  {
-                     nguoigui = NullToString(myGrid1.CurrentRow.Cells["Sender"].Value.ToString().ToUpper());
-                 }
-                 catch (Exception)
-                 {
-                     nguoigui = "";
-                 }
-
-                 try
-                 {
-                     diachigui = NullToString(myGrid1.CurrentRow.Cells["SenderAddress"].Value.ToString().ToUpper());
-                 }
-                 catch (Exception )
-                 {
-                     diachigui = "";
-                 }
-
-                 try
-                 {
-                     sdtgui = NullToString(myGrid1.CurrentRow.Cells["SenderPhone"].Value.ToString().ToUpper());
-                 }
-                 catch (Exception )
-                 {
-                     sdtgui = "";
-                 }
-
-                 try
-                 {
-                     nguoinhan = NullToString(myGrid1.CurrentRow.Cells["ReciverName"].Value.ToString().ToUpper());
-                 }
-                 catch (Exception )
-                 {
-                     nguoinhan = "";
-                 }
-
-                 try
-                 {
-                     diachinhan = NullToString(myGrid1.CurrentRow.Cells["Address"].Value.ToString().ToUpper());
-                 }
-                 catch (Exception )
-                 {
-                     diachinhan = "";
-                 }
-
-                 try
-                 {
-                     sdtnhan = NullToString(myGrid1.CurrentRow.Cells["ReciverPhone"].Value.ToString().ToUpper());
-                 }
-                 catch (Exception )
-                 {
-                     sdtnhan = "";
-                 }
-
-                 try
-                 {
-                     thanhpho = NullToString(myGrid1.CurrentRow.Cells["ProvinceName"].Value.ToString().ToUpper());
+                     
                      DataSet ds = new DataSet();
                      OleDbConnection conn = new OleDbConnection();
                      string con = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + "\\PrintCG.mdb";
@@ -305,20 +260,8 @@ namespace PrintCG_24062016
                  }
                  catch (Exception )
                  {
-                     thanhpho = "";
+                     
                  }
-
-                 try
-                 {
-                     quanhuyen = NullToString(myGrid1.CurrentRow.Cells["DistrictName"].Value.ToString().ToUpper());
-                 }
-                 catch (Exception )
-                 {
-                     quanhuyen = "";
-                 }
-
-
-
                  try
                  {
                      DataSet ds = new DataSet();
@@ -351,7 +294,7 @@ namespace PrintCG_24062016
                      string headerText = myGrid1.Columns[e.ColumnIndex].HeaderText;
                      if (headerText.Equals("LH"))
                      {
-                         if (string.IsNullOrEmpty(e.FormattedValue.ToString()) || ((e.FormattedValue.ToString().ToUpper()) != "T" && (e.FormattedValue.ToString().ToUpper()) != "H"))
+                         if (string.IsNullOrEmpty(e.FormattedValue.ToString()) || ((e.FormattedValue.ToString().ToUpper()) != "TL" && (e.FormattedValue.ToString().ToUpper()) != "HH"))
                          {
                              myGrid1.Rows[e.RowIndex].ErrorText = "Loại hàng nhập không đúng";
                              myGrid1.CurrentCell.Value = "";
@@ -549,12 +492,20 @@ namespace PrintCG_24062016
                          string servicetype = myGrid1.CurrentRow.Cells["Servicetypeid"].Value.ToString();
                          
                              //myGrid1.Rows[e.RowIndex].ErrorText = "Chưa khai báo thông tin";
-                             var pricelist = sgpservice.calPrice(quantity, weight, matinh, customer, servicetype);
-                             foreach (var item in pricelist)
-                             {
-                                 myGrid1.CurrentRow.Cells["Price"].Value = item.Price;
-                                 myGrid1.CurrentRow.Cells["Priceservice"].Value = item.PriceService;
-                             }
+                            if(chktinhcuoc.Checked == true)
+                            {
+                                var pricelist = sgpservice.calPrice(quantity, weight, matinh, customer, servicetype);
+                                foreach (var item in pricelist)
+                                {
+                                    myGrid1.CurrentRow.Cells["Price"].Value = item.Price;
+                                    myGrid1.CurrentRow.Cells["Priceservice"].Value = item.PriceService;
+                                }
+                            }else
+                            {
+                                myGrid1.CurrentRow.Cells["Price"].Value = 0;
+                                myGrid1.CurrentRow.Cells["Priceservice"].Value = 0;
+                            }
+                             
                          
                      }
                      else if (headerText.Equals("Quận/Huyện"))
@@ -582,12 +533,16 @@ namespace PrintCG_24062016
                          if (string.IsNullOrEmpty(e.FormattedValue.ToString()))
                          {
                              myGrid1.Rows[e.RowIndex].ErrorText = "Chưa khai báo thông tin";
-                             var pricelist = sgpservice.calPrice(quantity, weight, province, customer, servicetype);
-                             foreach(var item in pricelist)
+                             if (chktinhcuoc.Checked == true)
                              {
-                                 myGrid1.CurrentCell.Value = item.Price;
-                                 myGrid1.CurrentRow.Cells["Priceservice"].Value = item.PriceService;
-                             }                           
+                                 var pricelist = sgpservice.calPrice(quantity, weight, province, customer, servicetype);
+                                 foreach (var item in pricelist)
+                                 {
+                                     myGrid1.CurrentCell.Value = item.Price;
+                                     myGrid1.CurrentRow.Cells["Priceservice"].Value = item.PriceService;
+                                 }  
+                             }
+                                                      
                              e.Cancel = true;
                          }
                          
@@ -598,173 +553,116 @@ namespace PrintCG_24062016
                  }
                  
              }
-
              private void btnexcel_Click(object sender, EventArgs e)
-             {      
-           
-                 SaveFileDialog fsave = new SaveFileDialog();
-                 Excel.Application obj = new Excel.Application();
-                 Excel.Workbook wbook;
-                 object misValue = System.Reflection.Missing.Value;
-                 fsave.Filter = "(All Files)|*.*|(All Files Excel)|*.xlsx";
-                 fsave.ShowDialog();
-                 DateTime createdate;
-                 if (fsave.FileName != "")
-                 {
-                     wbook = obj.Workbooks.Add(Type.Missing);
-                     obj.Columns.ColumnWidth = 25;
-
-                     // truyen data
-                     for (int k = 0; k < myGrid1.Rows.Count; k++)
-                     {
-                         wbook.Worksheets.Add();
-                         //createdate = DateTime.Parse(dt.Rows[k][0].ToString());
-
-                         //dat ten sheet
-                         
-                         for (int i = 1; i < myGrid1.Columns.Count + 1; i++)
-                         {
-                             if (myGrid1.Columns[i - 1].Visible == true)
-                             {
-                                 obj.Cells[1, i] = myGrid1.Columns[i - 1].HeaderText;
-                             }
-                         }
-
-                         for (int i = 0; i < myGrid1.Rows.Count; i++)
-                         {
-                             for (int j = 0; j < myGrid1.Columns.Count; j++)
-                             {
-                                 if (myGrid1.Rows[i].Cells[j].Value != null && myGrid1.Columns[j].Visible == true)
-                                 {
-                                     obj.Cells[i + 2, j + 1] = myGrid1.Rows[i].Cells[j].Value.ToString();
-                                 }
-                             }
-                         }
-                     }
-
-
-                     wbook.SaveAs(fsave.FileName);
-                     wbook.Close(true, misValue, misValue);
-                     obj.Quit();
-
-                     releaseObject(wbook);
-                     releaseObject(obj);
-                     MessageBox.Show("Save Success", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                 }
-                 else
-                 {
-                     MessageBox.Show("Please Type Path", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                 }
-                 
+             {
+                 create_excel();                     
              }
              private void create_excel()
              {
-                 Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+                DsExcel dsexcel = new DsExcel();
+                string data;
+                string _ngaynhan;
+                string _gio = "00:00";
+                string _sophieu;
+                string _loaihang = "HH";
+                string _dichvu = "SN";
+                string _soluong = "1";
+                string _trongluong;
+                string _trongluongkhoi;
+                string _tenduong;
+                string _tinhthanh;
+                string _quanhuyen;
+                string _ghichu = "";
+                SaveFileDialog fsave = new SaveFileDialog();
+                Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+                fsave.Filter = "Excel |*.xls";
+                string excelfile = fsave.FileName;
+                Excel.Workbook xlWorkBook;
+                Excel.Worksheet xlWorkSheet;
+                object misValue = System.Reflection.Missing.Value;               
+                xlWorkBook = xlApp.Workbooks.Add(misValue);
+                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+                xlWorkSheet.Name = "CG11";
+                fsave.ShowDialog();
+                if (fsave.FileName != "")
+                {
+                if (xlApp == null)
+                {
+                    MessageBox.Show("Excel is not properly installed!!");
+                    return;
+                }
+               
+                xlWorkSheet.Cells[1, 1] = "Ngày";
+                xlWorkSheet.Cells[1, 2] = "Giờ";
+                xlWorkSheet.Cells[1, 3] = "Số phiếu";
+                xlWorkSheet.Cells[1, 4] = "LH";
+                xlWorkSheet.Cells[1, 5] = "DV";
+                xlWorkSheet.Cells[1, 6] = "SL";
+                xlWorkSheet.Cells[1, 7] = "TL";
+                xlWorkSheet.Cells[1, 8] = "TL Khối";
+                xlWorkSheet.Cells[1, 9] = "Địa chỉ(Nhận)";
+                xlWorkSheet.Cells[1, 10] = "Nơi đến";
+                xlWorkSheet.Cells[1, 11] = "Q/Huyện(Nhận)";
+                xlWorkSheet.Cells[1, 12] = "Ghi chú";
 
-                 if (xlApp == null)
-                 {
-                     MessageBox.Show("Excel is not properly installed!!");
-                     return;
-                 }
+                                                           
+                for (int a = 0; a <= myGrid1.RowCount - 1; a++ )
+                {
+                    try
+                    {
+                        _sophieu = convert.ConvertData.nullToString(myGrid1.Rows[a].Cells["MailerID"].Value.ToString());
+                        if (_sophieu != string.Empty)
+                        {
+                            _ngaynhan = myGrid1.Rows[a].Cells["Acceptdate"].Value.ToString();
+                            _gio = "00:00";
+                            _loaihang = myGrid1.Rows[a].Cells["Mailertypeid"].Value.ToString();
+                            _dichvu = myGrid1.Rows[a].Cells["Servicetypeid"].Value.ToString();
+                            _soluong = convert.ConvertData.ToInt32(myGrid1.Rows[a].Cells["Quantity"].Value.ToString()).ToString();
+                            _trongluong = convert.ConvertData.ToInt32(myGrid1.Rows[a].Cells["Weight"].Value.ToString()).ToString();
+                            _trongluongkhoi = convert.ConvertData.ToInt32(myGrid1.Rows[a].Cells["RealWeight"].Value.ToString()).ToString();
+                            _tenduong = convert.ConvertData.nullToString(myGrid1.Rows[a].Cells["Address"].Value.ToString());
+                            _tinhthanh = convert.ConvertData.nullToString(myGrid1.Rows[a].Cells["Provinceid"].Value.ToString());
+                            _quanhuyen = myGrid1.Rows[a].Cells["Districtid"].Value == null ? string.Empty : myGrid1.Rows[a].Cells["Districtid"].Value.ToString().ToUpper();
+                            _quanhuyen = "";//gan huyen vao
+                            _ghichu = myGrid1.Rows[a].Cells["Description"].Value== null ? string.Empty : myGrid1.Rows[a].Cells["Description"].Value.ToString().ToUpper();
+                            dsexcel.Excel.AddExcelRow(DateTime.Parse(_ngaynhan).ToString("MM/dd/yyyy"), _gio, _sophieu, _loaihang, _dichvu, _soluong,
+                            _trongluong, _trongluongkhoi, _tenduong, _tinhthanh, _quanhuyen, _ghichu, "", "", "", "", "", "", "", "");
+                        }
+                    }catch
+                    {
 
-                 string excelfile =  "\\Excel\\" + DateTime.Today.Year.ToString() + DateTime.Today.Month.ToString() + DateTime.Today.Day.ToString() + ".xls";
-                 Excel.Workbook xlWorkBook;
-                 Excel.Worksheet xlWorkSheet;
-                 object misValue = System.Reflection.Missing.Value;
+                    }
+                   
+                    
+                }
+                    
+                }
+                    for (int i = 0; i <= dsexcel.Tables[0].Rows.Count - 1; i++)
+                    {
+                        for (int j = 0; j <= dsexcel.Tables[0].Columns.Count - 1; j++)
+                        {
 
-                 xlWorkBook = xlApp.Workbooks.Add(misValue);
-                 xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+                            data = dsexcel.Tables[0].Rows[i].ItemArray[j].ToString().ToUpper();
+                            i = i + 1;
+                            xlWorkSheet.Cells[i + 1, j + 1] = data;
+                            i = i - 1;
+                        }
+                    }
 
+                if (File.Exists(excelfile) == true)
+                {
+                    File.Delete(excelfile);
+                }
 
-                 //số phiếu, ngày nhận, lh, sl,tl ,tl khối, dv, thành phố, quận huyện, người nhận, địa chỉ nhận, ghi chú, bp, giờ nhận.
+                xlWorkBook.SaveAs(fsave.FileName, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+                xlWorkBook.Close(true, misValue, misValue);
+                xlApp.Quit();
 
-                 xlWorkSheet.Cells[1, 1] = "Ngày nhận";
-                 xlWorkSheet.Cells[1, 2] = "Số phiếu";
-                 xlWorkSheet.Cells[1, 3] = "LH";
-                 xlWorkSheet.Cells[1, 4] = "DV";
-                 xlWorkSheet.Cells[1, 5] = "SL";
-                 xlWorkSheet.Cells[1, 6] = "TL";
-                 xlWorkSheet.Cells[1, 7] = "TL Khối";
-                 //thong tin nguoi gui
-                 xlWorkSheet.Cells[1, 8] = "Họ Tên(Gửi)";
-                 xlWorkSheet.Cells[1, 9] = "Địa chỉ(Gửi)";
-                 xlWorkSheet.Cells[1, 10] = "Điện thoại(Gửi)";
-                 //thong tin nguoi nhan
-                 xlWorkSheet.Cells[1, 11] = "Người nhận";
-                 xlWorkSheet.Cells[1, 12] = "Tên đường(Nhận)";
-                 xlWorkSheet.Cells[1, 13] = "T/Thành(NĐ)";
-
-                 xlWorkSheet.Cells[1, 14] = "Cước";
-                 xlWorkSheet.Cells[1, 15] = "Thu#";
-                 xlWorkSheet.Cells[1, 16] = "Hẹn giờ";
-
-
-                 xlWorkSheet.Cells[1, 17] = "Quận/Huyện(Nhận)";
-                 //xlWorkSheet.Cells[1, 14] = "Q/Huyện(Nhận)";
-                 xlWorkSheet.Cells[1, 18] = "Điện thoại(Nhận)";
-
-                 xlWorkSheet.Cells[1, 19] = "Ghi chú";
-                 xlWorkSheet.Cells[1, 20] = "BP";
-
-                 xlWorkSheet.Cells[1, 21] = "Tên Tỉnh Thành";
-                 xlWorkSheet.Cells[1, 22] = "Tên Quận Huyện";
-
-                 xlWorkSheet.Cells[1, 23] = "Giờ";
-
-                 //bo sung them cac cot khac theo yeu cau cua HNI
-
-                 xlWorkSheet.Cells.NumberFormat = "@";
-
-                 string _ngaynhan = dtppgi.Value.ToString();               
-                 string data;
-                 int i = 0;
-                 int j = 0;
-
-                 dataset.DsExcel dsexcel = new dataset.DsExcel();
-                 DataTable dt = new DataTable();
-                                 
-                 for (i = 0; i <= myGrid1.Rows.Count - 1; i++)
-                 {
-                     for (j = 0; j <= myGrid1.Columns.Count - 1; j++)
-                     {
-                         try
-                         {
-
-                             data = myGrid1.Rows[i].Cells[j].Value.ToString().ToUpper();
-                             i = i + 1;
-                             if (myGrid1.Columns[j].HeaderText == "LH")
-                             {
-                                 if (data == "T")
-                                 {
-                                     data = "TL";
-                                 }
-                                 else
-                                 {
-                                     data = "HH";
-                                 }
-                             }
-                             xlWorkSheet.Cells[i + 1, j + 1] = data;
-                             i = i - 1;
-                         }
-                         catch (Exception )
-                         {
-
-                         }                         
-                     }
-                 }
-                 if (File.Exists(excelfile) == true)
-                 {
-                     File.Delete(excelfile);
-                 }
-
-                 xlWorkBook.SaveAs(excelfile, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
-                 xlWorkBook.Close(true, misValue, misValue);
-                 xlApp.Quit();
-
-                 releaseObject(xlWorkSheet);
-                 releaseObject(xlWorkBook);
-                 releaseObject(xlApp);
-                 MessageBox.Show("Xuất thành công " + excelfile);
+                releaseObject(xlWorkSheet);
+                releaseObject(xlWorkBook);
+                releaseObject(xlApp);
+                MessageBox.Show("Xuất thành công " + excelfile);
+                 
              }
              private void releaseObject(object obj)
              {
@@ -785,7 +683,66 @@ namespace PrintCG_24062016
                      GC.Collect();
                  }
              }
+             private void createexcel1()
+             {
+                 try
+                 {
+                     Excel.Application xlApp;
+                     Excel.Workbook xlWorkBook;
+                     Excel.Worksheet xlWorkSheet;
+                     object misValue = System.Reflection.Missing.Value;
 
+                     xlApp = new Excel.Application();
+                     xlWorkBook = xlApp.Workbooks.Add(misValue);
+                     xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+                     xlWorkSheet.Name = "CG11";
+
+                     try
+                     {
+                         for (int i = 0; i < myGrid1.Columns.Count; i++)
+                         {
+                             xlWorkSheet.Cells[1, i + 1] = myGrid1.Columns[i].HeaderText;
+                         }
+                         for (int i = 0; i < myGrid1.Rows.Count; i++)
+                         {
+                             for (int j = 0; j < myGrid1.Columns.Count; j++)
+                             {
+                                 if (myGrid1.Rows[i].Cells[j].Value != null)
+                                 {
+                                     xlWorkSheet.Cells[i + 2, j + 1] = myGrid1.Rows[i].Cells[j].Value.ToString();
+                                 }
+                                 else
+                                 {
+                                     xlWorkSheet.Cells[i + 2, j + 1] = "";
+                                 }
+                             }
+                         }
+
+                         //Getting the location and file name of the excel to save from user. 
+                         SaveFileDialog saveDialog = new SaveFileDialog();
+                         saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+                         saveDialog.FilterIndex = 2;
+
+                         if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                         {
+                             xlWorkBook.SaveAs(saveDialog.FileName);
+                             MessageBox.Show("Export Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                         }
+                     }
+                     catch (System.Exception ex)
+                     {
+                         MessageBox.Show(ex.Message);
+                     }
+
+                     finally
+                     {
+                         xlApp.Quit();
+                         xlWorkBook = null;
+                         xlWorkSheet = null;
+                     }
+                 }
+                 catch (Exception ex) { MessageBox.Show(ex.Message.ToString()); }  
+             }
              private void btnina5_Click(object sender, EventArgs e)
              {
                 string sophieu = string.Empty;
@@ -796,7 +753,7 @@ namespace PrintCG_24062016
                      {
                          try
                          {
-                             if (row.Cells["MailerID"].Value.ToString().Trim() != "")
+                             if ((row.Cells["MailerID"].Value == null ? "" : row.Cells["MailerID"].Value.ToString().Trim()) != "")
                              {
                                  TextObject _txtbcnhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtbuucuc"];
                                  _txtbcnhan.Text = txtbuucuc.Text;
@@ -824,16 +781,16 @@ namespace PrintCG_24062016
                                  _txtngaynhan.Text = row.Cells["AcceptDate"].Value.ToString();
 
                                  TextObject _txtnguoinhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnguoinhan"];
-                                 _txtnguoinhan.Text = row.Cells["ReciverName"].Value.ToString();
+                                 _txtnguoinhan.Text = row.Cells["ReciverName"].Value == null ? "" : row.Cells["ReciverName"].Value.ToString();
 
                                  TextObject _txtdiachinhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtdiachinhan"];
-                                 _txtdiachinhan.Text = row.Cells["Address"].Value.ToString();
+                                 _txtdiachinhan.Text = row.Cells["Address"].Value == null ? "" : row.Cells["Address"].Value.ToString();
 
                                  TextObject _txttelnhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttelnhan"];
-                                 _txttelnhan.Text = row.Cells["ReciverPhone"].Value.ToString();
+                                 _txttelnhan.Text = row.Cells["ReciverPhone"].Value.ToString() == null ? "" : row.Cells["ReciverPhone"].Value.ToString();
 
                                  TextObject _txtghichu = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtghichu"];
-                                 _txtghichu.Text = row.Cells["Description"].Value.ToString();
+                                 _txtghichu.Text = row.Cells["Description"].Value == null ? "" : row.Cells["Description"].Value.ToString();
 
                                  TextObject _txtsl = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtsoluong"];
                                  _txtsl.Text = row.Cells["Quantity"].Value.ToString();
@@ -845,7 +802,7 @@ namespace PrintCG_24062016
                                  _txttlkhoi.Text = String.Format("{0:0,0}", float.Parse(row.Cells["RealWeight"].Value.ToString()));
 
                                  TextObject _txtthanhpho = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnoiden"];
-                                 _txtthanhpho.Text = row.Cells["Provinceid"].Value.ToString();
+                                 _txtthanhpho.Text = row.Cells["Provinceid"].Value == null ? "" : row.Cells["Provinceid"].Value.ToString().ToUpper();
 
                                  TextObject _txtcuochinh = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtcuocchinh"];
                                  _txtcuochinh.Text = row.Cells["Price"].Value.ToString();
@@ -861,12 +818,12 @@ namespace PrintCG_24062016
 
                                  TextObject _txttailieu = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttl"];
                                  TextObject _txthanghoa = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txthh"];
-                                 if (row.Cells["Mailertypeid"].Value.ToString().ToUpper() == "T")
+                                 if (row.Cells["Mailertypeid"].Value.ToString().ToUpper() == "TL")
                                  {
                                      _txttailieu.Text = "X";
                                      _txthanghoa.Text = "";
                                  }
-                                 else if (row.Cells["Mailertypeid"].Value.ToString().ToUpper() == "H")
+                                 else if (row.Cells["Mailertypeid"].Value.ToString().ToUpper() == "HH")
                                  {
                                      _txttailieu.Text = "";
                                      _txthanghoa.Text = "X";
@@ -895,8 +852,9 @@ namespace PrintCG_24062016
                      e.Row.Cells["Priceservice"].Value = "0";
                      e.Row.Cells["COD"].Value = "0";
                      e.Row.Cells["Timer"].Value = "0";
-                     e.Row.Cells["Mailertypeid"].Value = "T";
+                     e.Row.Cells["Mailertypeid"].Value = "TL";
                      e.Row.Cells["Servicetypeid"].Value = "SN";
+                     e.Row.Cells["Quantity"].Value = "1";
                      //if (rdbtudong.Checked == true)
                      //{
                      //    e.Row.Cells["Mailerid"].Value = sgpservice.getmaxMailerID("SGP");
@@ -1128,11 +1086,11 @@ namespace PrintCG_24062016
                  try
                  {
                      OpenFileDialog fopen = new OpenFileDialog();
-                     fopen.Filter = "(All Files)|*.*|(All Files Excel)|*.xlsx";
+                     fopen.Filter = "(All Files)|*.*|(All Files Excel)|*.xls";
                      fopen.ShowDialog();
                      myGrid1.Rows.Clear();
                      DataTable dt = new DataTable();
-                     dt = ExcelReader.ExcelReader.ReadExcelFile("Sheet3$", fopen.FileName);
+                     dt = ExcelReader.ExcelReader.ReadExcelFile("CG11$", fopen.FileName);
                      for (int i = 0; i <= dt.Rows.Count - 1; i++)
                      {
                          //test

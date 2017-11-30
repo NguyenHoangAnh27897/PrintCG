@@ -356,4 +356,21 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getCPNT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FromDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ToDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="type" type="xs:int" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCPNTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/SGPWebService.DB" minOccurs="0" name="getCPNTResult" nillable="true" type="q15:ArrayOfSGP_ChiPhi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

@@ -56,6 +56,7 @@ namespace SGPWebService.DataClass
         public string MM_ReturnReason_ReturnReasonName{get;set;}
         public string MM_Status_StatusID{get;set;}
         public string MM_Status_StatusName { get; set; }
+        public string MM_PackingListInternal_UserGroupSend { get; set; }
     }
     public class MailerPPNT
     {

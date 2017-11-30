@@ -739,172 +739,176 @@ namespace PrintCG_24062016
             }
 
         }
+        SaveFileDialog fsave = new SaveFileDialog();
         private void create_excel()
         {
             Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
-
-            if (xlApp == null)
+            fsave.Filter = "|Excel file|*.xls";
+            fsave.ShowDialog();
+            if (fsave.FileName != "")
             {
-                MessageBox.Show("Excel is not properly installed!!");
-                return;
+                if (xlApp == null)
+                {
+                    MessageBox.Show("Excel is not properly installed!!");
+                    return;
+                }
+
+                string excelfile = fsave.FileName;
+                Excel.Workbook xlWorkBook;
+                Excel.Worksheet xlWorkSheet;
+                object misValue = System.Reflection.Missing.Value;
+
+                xlWorkBook = xlApp.Workbooks.Add(misValue);
+                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+                xlWorkSheet.Cells[1, 1] = "Ngày nhận";
+                xlWorkSheet.Cells[1, 2] = "Giờ";
+                xlWorkSheet.Cells[1, 3] = "Số phiếu";
+                xlWorkSheet.Cells[1, 4] = "LH";
+                xlWorkSheet.Cells[1, 5] = "DV";
+                xlWorkSheet.Cells[1, 6] = "SL";
+                xlWorkSheet.Cells[1, 7] = "TL";
+                xlWorkSheet.Cells[1, 8] = "TL Khối";
+                xlWorkSheet.Cells[1, 9] = "Tên đường(Nhận)";
+                xlWorkSheet.Cells[1, 10] = "T/Thành(NĐ)";
+                xlWorkSheet.Cells[1, 11] = "Q/Huyện(Nhận)";
+                xlWorkSheet.Cells[1, 12] = "Ghi chú";
+
+                string _ngaynhan;
+                string _gio = "00:00";
+                string _sophieu;
+                string _loaihang = "HH";
+                string _dichvu = "SN";
+                string _soluong = "1";
+                string _trongluong;
+                string _trongluongkhoi;
+                string _tenduong;
+                string _tinhthanh;
+                string _quanhuyen;
+                string _ghichu = "";
+                string data;
+                int i = 0;
+                int j = 0;
+
+                DsExcel dsexcel = new DsExcel();
+                DataTable dt = new DataTable();
+                dt = ReadExcelFile1(cmbsheet.Text, path);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    try
+                    {
+
+                        _ngaynhan = txtngaygui.Text;
+                    }
+                    catch (Exception ex)
+                    {
+                        _ngaynhan = "";
+                    }
+
+                    try
+                    {
+                        _sophieu = row["CG"].ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        _sophieu = "";
+                    }
+
+                    try
+                    {
+                        _soluong = row["SL"].ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        _soluong = "0";
+                    }
+
+                    try
+                    {
+                        _trongluong = row["TL"].ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        _trongluong = "0";
+                    }
+
+                    try
+                    {
+                        _trongluongkhoi = row["TL"].ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        _trongluongkhoi = "0";
+                    }
+
+                    try
+                    {
+                        _tenduong = row[cmbdiachi.Text].ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        _tenduong = "";
+                    }
+
+                    try
+                    {
+                        _quanhuyen = "";
+
+                    }
+                    catch (Exception ex)
+                    {
+                        _quanhuyen = "";
+                    }
+
+                    try
+                    {
+                        _tinhthanh = row["TP"].ToString();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        _tinhthanh = "";
+                    }
+
+                    _ghichu = row[cmbdo.Text].ToString() + "/" + row["HD"].ToString();
+                    dsexcel.Excel.AddExcelRow(DateTime.Parse(_ngaynhan).ToString("MM/dd/yyyy"), _gio, _sophieu, _loaihang, _dichvu, _soluong, _trongluong, _trongluongkhoi, _tenduong, _tinhthanh, _quanhuyen, _ghichu, "", "", "", "", "", "", "", "");
+
+                }
+                for (i = 0; i <= dsexcel.Tables[0].Rows.Count - 1; i++)
+                {
+                    for (j = 0; j <= dsexcel.Tables[0].Columns.Count - 1; j++)
+                    {
+
+                        data = dsexcel.Tables[0].Rows[i].ItemArray[j].ToString();
+                        i = i + 1;
+                        xlWorkSheet.Cells[i + 1, j + 1] = data;
+
+                        i = i - 1;
+                        //excelSheet.Cells[i , j ] = data;
+                    }
+                }
+
+
+                if (File.Exists(excelfile) == true)
+                {
+                    File.Delete(excelfile);
+                }
+
+                xlWorkBook.SaveAs(excelfile, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+                xlWorkBook.Close(true, misValue, misValue);
+
+
+
+                xlApp.Quit();
+
+                releaseObject(xlWorkSheet);
+                releaseObject(xlWorkBook);
+                releaseObject(xlApp);
+                MessageBox.Show("Xuất thành công " + excelfile);
+                // MessageBox.Show("Excel file created , you can find the file d:\\csharp-Excel.xls");
             }
-
-            string excelfile = "D:\\InSony\\Excel\\Sony_" + DateTime.Today.Year.ToString() + DateTime.Today.Month.ToString() + DateTime.Today.Day.ToString() + ".xls";
-            Excel.Workbook xlWorkBook;
-            Excel.Worksheet xlWorkSheet;
-            object misValue = System.Reflection.Missing.Value;
-
-            xlWorkBook = xlApp.Workbooks.Add(misValue);
-            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-
-           
-
-            xlWorkSheet.Cells[1, 1] = "Ngày nhận";
-            xlWorkSheet.Cells[1, 2] = "Giờ";
-            xlWorkSheet.Cells[1, 3] = "Số phiếu";
-            xlWorkSheet.Cells[1, 4] = "LH";
-            xlWorkSheet.Cells[1, 5] = "DV";
-            xlWorkSheet.Cells[1, 6] = "SL";
-            xlWorkSheet.Cells[1, 7] = "TL";
-            xlWorkSheet.Cells[1, 8] = "TL Khối";
-            xlWorkSheet.Cells[1, 9] = "Tên đường(Nhận)";
-            xlWorkSheet.Cells[1, 10] = "T/Thành(NĐ)";
-            xlWorkSheet.Cells[1, 11] = "Q/Huyện(Nhận)";
-            xlWorkSheet.Cells[1, 12] = "Ghi chú";
-
-            string _ngaynhan;
-            string _gio = "00:00";
-            string _sophieu;
-            string _loaihang = "HH";
-            string _dichvu = "SN";
-            string _soluong = "1";
-            string _trongluong;
-            string _trongluongkhoi;
-            string _tenduong;
-            string _tinhthanh;
-            string _quanhuyen;
-            string _ghichu = "";
-            string data;
-            int i = 0;
-            int j = 0;
-
-            DsExcel dsexcel = new DsExcel();
-            DataTable dt = new DataTable();
-            dt = ReadExcelFile1(cmbsheet.Text, path);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                try
-                {
-
-                    _ngaynhan = txtngaygui.Text;
-                }
-                catch (Exception ex)
-                {
-                    _ngaynhan = "";
-                }
-
-                try
-                {
-                    _sophieu = row["CG"].ToString();
-                }
-                catch (Exception ex)
-                {
-                    _sophieu = "";
-                }
-
-                try
-                {
-                    _soluong = row["SL"].ToString();
-                }
-                catch (Exception ex)
-                {
-                    _soluong = "0";
-                }
-
-                try
-                {
-                    _trongluong = row["TL"].ToString();
-                }
-                catch (Exception ex)
-                {
-                    _trongluong = "0";
-                }
-
-                try
-                {
-                    _trongluongkhoi = row["TL"].ToString();
-                }
-                catch (Exception ex)
-                {
-                    _trongluongkhoi = "0";
-                }
-
-                try
-                {
-                    _tenduong = row[cmbdiachi.Text].ToString();
-                }
-                catch (Exception ex)
-                {
-                    _tenduong = "";
-                }
-
-                try
-                {
-                    _quanhuyen = "";
-
-                }
-                catch (Exception ex)
-                {
-                    _quanhuyen = "";
-                }
-
-                try
-                {
-                    _tinhthanh = row["TP"].ToString();
-
-                }
-                catch (Exception ex)
-                {
-                    _tinhthanh = "";
-                }
-
-                _ghichu = row[cmbdo.Text].ToString() + "/" + row["HD"].ToString();
-                dsexcel.Excel.AddExcelRow(DateTime.Parse(_ngaynhan).ToString("MM/dd/yyyy"), _gio, _sophieu, _loaihang, _dichvu, _soluong, _trongluong, _trongluongkhoi, _tenduong, _tinhthanh, _quanhuyen, _ghichu,"","","","","","","","");
-
-            }
-            for (i = 0; i <= dsexcel.Tables[0].Rows.Count - 1; i++)
-            {
-                for (j = 0; j <= dsexcel.Tables[0].Columns.Count - 1; j++)
-                {
-
-                    data = dsexcel.Tables[0].Rows[i].ItemArray[j].ToString();
-                    i = i + 1;
-                    xlWorkSheet.Cells[i + 1, j + 1] = data;
-                   
-                    i = i - 1;
-                    //excelSheet.Cells[i , j ] = data;
-                }
-            }
-           
-
-            if (File.Exists(excelfile) == true)
-            {
-                File.Delete(excelfile);
-            }
-
-            xlWorkBook.SaveAs(excelfile, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
-            xlWorkBook.Close(true, misValue, misValue);
-
-
-
-            xlApp.Quit();
-
-            releaseObject(xlWorkSheet);
-            releaseObject(xlWorkBook);
-            releaseObject(xlApp);
-            MessageBox.Show("Xuất thành công " + excelfile);
-            // MessageBox.Show("Excel file created , you can find the file d:\\csharp-Excel.xls");
+            
 
         }
         private DataTable ReadExcelFile1(string sheetName, string path)

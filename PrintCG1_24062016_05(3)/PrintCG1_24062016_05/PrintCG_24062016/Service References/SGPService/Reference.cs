@@ -5022,6 +5022,9 @@ namespace PrintCG_24062016.SGPService {
         private double MM_Mailers_WeightField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MM_PackingListInternal_UserGroupSendField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MM_ReturnReason_ReturnReasonNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -5457,6 +5460,19 @@ namespace PrintCG_24062016.SGPService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MM_PackingListInternal_UserGroupSend {
+            get {
+                return this.MM_PackingListInternal_UserGroupSendField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MM_PackingListInternal_UserGroupSendField, value) != true)) {
+                    this.MM_PackingListInternal_UserGroupSendField = value;
+                    this.RaisePropertyChanged("MM_PackingListInternal_UserGroupSend");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string MM_ReturnReason_ReturnReasonName {
             get {
                 return this.MM_ReturnReason_ReturnReasonNameField;
@@ -5723,6 +5739,307 @@ namespace PrintCG_24062016.SGPService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGP_ChiPhi", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DB")]
+    [System.SerializableAttribute()]
+    public partial class SGP_ChiPhi : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string bcchapnhanField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string bcnhapField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string cgField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<double> cpntField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<double> cpttField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ctvphatField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<double> cuocchinhField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string khachhangField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string loaihangField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> ngayField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> ngaynhanField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string noidenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<double> phuphiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string quanField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tinhField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<double> tlField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string bcchapnhan {
+            get {
+                return this.bcchapnhanField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.bcchapnhanField, value) != true)) {
+                    this.bcchapnhanField = value;
+                    this.RaisePropertyChanged("bcchapnhan");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string bcnhap {
+            get {
+                return this.bcnhapField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.bcnhapField, value) != true)) {
+                    this.bcnhapField = value;
+                    this.RaisePropertyChanged("bcnhap");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string cg {
+            get {
+                return this.cgField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.cgField, value) != true)) {
+                    this.cgField = value;
+                    this.RaisePropertyChanged("cg");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> cpnt {
+            get {
+                return this.cpntField;
+            }
+            set {
+                if ((this.cpntField.Equals(value) != true)) {
+                    this.cpntField = value;
+                    this.RaisePropertyChanged("cpnt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> cptt {
+            get {
+                return this.cpttField;
+            }
+            set {
+                if ((this.cpttField.Equals(value) != true)) {
+                    this.cpttField = value;
+                    this.RaisePropertyChanged("cptt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ctvphat {
+            get {
+                return this.ctvphatField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ctvphatField, value) != true)) {
+                    this.ctvphatField = value;
+                    this.RaisePropertyChanged("ctvphat");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> cuocchinh {
+            get {
+                return this.cuocchinhField;
+            }
+            set {
+                if ((this.cuocchinhField.Equals(value) != true)) {
+                    this.cuocchinhField = value;
+                    this.RaisePropertyChanged("cuocchinh");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string khachhang {
+            get {
+                return this.khachhangField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.khachhangField, value) != true)) {
+                    this.khachhangField = value;
+                    this.RaisePropertyChanged("khachhang");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string loaihang {
+            get {
+                return this.loaihangField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.loaihangField, value) != true)) {
+                    this.loaihangField = value;
+                    this.RaisePropertyChanged("loaihang");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> ngay {
+            get {
+                return this.ngayField;
+            }
+            set {
+                if ((this.ngayField.Equals(value) != true)) {
+                    this.ngayField = value;
+                    this.RaisePropertyChanged("ngay");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> ngaynhan {
+            get {
+                return this.ngaynhanField;
+            }
+            set {
+                if ((this.ngaynhanField.Equals(value) != true)) {
+                    this.ngaynhanField = value;
+                    this.RaisePropertyChanged("ngaynhan");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string noiden {
+            get {
+                return this.noidenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.noidenField, value) != true)) {
+                    this.noidenField = value;
+                    this.RaisePropertyChanged("noiden");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> phuphi {
+            get {
+                return this.phuphiField;
+            }
+            set {
+                if ((this.phuphiField.Equals(value) != true)) {
+                    this.phuphiField = value;
+                    this.RaisePropertyChanged("phuphi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string quan {
+            get {
+                return this.quanField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.quanField, value) != true)) {
+                    this.quanField = value;
+                    this.RaisePropertyChanged("quan");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tinh {
+            get {
+                return this.tinhField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tinhField, value) != true)) {
+                    this.tinhField = value;
+                    this.RaisePropertyChanged("tinh");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> tl {
+            get {
+                return this.tlField;
+            }
+            set {
+                if ((this.tlField.Equals(value) != true)) {
+                    this.tlField = value;
+                    this.RaisePropertyChanged("tl");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SGPService.ISGPService")]
     public interface ISGPService {
@@ -5811,6 +6128,9 @@ namespace PrintCG_24062016.SGPService {
                     System.DateTime ngaynhan, 
                     string tinh, 
                     string bcnhan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getCPNT", ReplyAction="http://tempuri.org/ISGPService/getCPNTResponse")]
+        PrintCG_24062016.SGPService.SGP_ChiPhi[] getCPNT(System.DateTime FromDate, System.DateTime ToDate, int type, string Post);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -5946,6 +6266,10 @@ namespace PrintCG_24062016.SGPService {
                     string tinh, 
                     string bcnhan) {
             return base.Channel.insertSGP_ChiPhi(ctvphat, ngay, cg, tl, lh, noiden, cptt, cpnt, bcchapnhan, khachang, cuoc, phuphi, quan, ngaynhan, tinh, bcnhan);
+        }
+        
+        public PrintCG_24062016.SGPService.SGP_ChiPhi[] getCPNT(System.DateTime FromDate, System.DateTime ToDate, int type, string Post) {
+            return base.Channel.getCPNT(FromDate, ToDate, type, Post);
         }
     }
 }

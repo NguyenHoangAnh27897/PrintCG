@@ -132,11 +132,9 @@
     <Compile Include="convert\ConvertData.cs" />
     <Compile Include="dataset\DsA4.cs">
       <DependentUpon>DsA4.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="dataset\DsCGLEBangKe.cs">
       <DependentUpon>DsCGLEBangKe.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DsFuji.cs">
       <DependentUpon>DsFuji.xsd</DependentUpon>
@@ -487,10 +485,10 @@
     <Compile Include="FrmFromToPrint.Designer.cs">
       <DependentUpon>FrmFromToPrint.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInPhieuGui.cs">
+    <Compile Include="printcg\FrmInPhieuGui.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInPhieuGui.Designer.cs">
+    <Compile Include="printcg\FrmInPhieuGui.Designer.cs">
       <DependentUpon>FrmInPhieuGui.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmInPhieuGuiPrint.cs">
@@ -715,7 +713,7 @@
     <EmbeddedResource Include="FrmFromToPrint.resx">
       <DependentUpon>FrmFromToPrint.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInPhieuGui.resx">
+    <EmbeddedResource Include="printcg\FrmInPhieuGui.resx">
       <DependentUpon>FrmInPhieuGui.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInPhieuGuiPrint.resx">
@@ -1181,6 +1179,9 @@
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.PriceList.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.SGP_ChiPhi.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.SGP_Price_Customer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1236,13 +1237,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1436857928_Package-Download.ico" />
+    <None Include="Service References\SGPService\SGPService.disco" />
     <None Include="Service References\SGPService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Service References\SGPService\configuration.svcinfo" />
     <None Include="Service References\SGPService\configuration91.svcinfo" />
-    <None Include="Service References\SGPService\SGPService.disco" />
     <None Include="Service References\ChuyenThu\Service1.disco" />
     <None Include="dataset\DsCGLEBangKe.xsc">
       <DependentUpon>DsCGLEBangKe.xsd</DependentUpon>

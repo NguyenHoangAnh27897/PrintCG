@@ -146,6 +146,12 @@
   <wsdl:message name="ISGPService_insertSGP_ChiPhi_OutputMessage">
     <wsdl:part name="parameters" element="tns:insertSGP_ChiPhiResponse" />
   </wsdl:message>
+  <wsdl:message name="ISGPService_getCPNT_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCPNT" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getCPNT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCPNTResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISGPService">
     <wsdl:operation name="login">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/login" message="tns:ISGPService_login_InputMessage" />
@@ -238,6 +244,10 @@
     <wsdl:operation name="insertSGP_ChiPhi">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/insertSGP_ChiPhi" message="tns:ISGPService_insertSGP_ChiPhi_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/insertSGP_ChiPhiResponse" message="tns:ISGPService_insertSGP_ChiPhi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCPNT">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getCPNT" message="tns:ISGPService_getCPNT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getCPNTResponse" message="tns:ISGPService_getCPNT_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISGPService" type="tns:ISGPService">
@@ -442,6 +452,15 @@
     </wsdl:operation>
     <wsdl:operation name="insertSGP_ChiPhi">
       <soap:operation soapAction="http://tempuri.org/ISGPService/insertSGP_ChiPhi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCPNT">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getCPNT" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
