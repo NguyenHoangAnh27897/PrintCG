@@ -48,6 +48,7 @@
             this.dgv3 = new System.Windows.Forms.DataGridView();
             this.dgv2 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnXuat = new System.Windows.Forms.Button();
             this.btnXem = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNhanvien = new System.Windows.Forms.TextBox();
@@ -261,9 +262,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv3.Location = new System.Drawing.Point(12, 187);
+            this.dgv3.Location = new System.Drawing.Point(817, 187);
             this.dgv3.Name = "dgv3";
-            this.dgv3.Size = new System.Drawing.Size(1021, 189);
+            this.dgv3.Size = new System.Drawing.Size(216, 189);
             this.dgv3.TabIndex = 20;
             this.dgv3.Visible = false;
             // 
@@ -280,6 +281,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnXuat);
             this.panel2.Controls.Add(this.btnXem);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txtNhanvien);
@@ -290,8 +292,18 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(456, 60);
+            this.panel2.Size = new System.Drawing.Size(532, 60);
             this.panel2.TabIndex = 18;
+            // 
+            // btnXuat
+            // 
+            this.btnXuat.Location = new System.Drawing.Point(450, 4);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(75, 23);
+            this.btnXuat.TabIndex = 18;
+            this.btnXuat.Text = "Xuất Excel";
+            this.btnXuat.UseVisualStyleBackColor = true;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // btnXem
             // 
@@ -509,5 +521,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         protected internal System.Windows.Forms.DataGridView dgv3;
         private System.Windows.Forms.DataGridView dgv4;
+        private System.Windows.Forms.Button btnXuat;
     }
 }

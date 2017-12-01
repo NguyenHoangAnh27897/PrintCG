@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Data.OleDb;
 using PrintCG_24062016;
+using Excel = Microsoft.Office.Interop.Excel;
 namespace PrintCG_24062016.congcu
 {
     public partial class Frm_SpecialCustomer : Form
@@ -254,6 +255,54 @@ namespace PrintCG_24062016.congcu
 
                 cbbCus.DisplayMember = "Value";
                 //cbbCus.ValueMember = 
+            }
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog fsave = new SaveFileDialog();
+
+            Excel.Application obj = new Excel.Application();
+            Excel.Workbook wbook;
+
+            fsave.Filter = "(All Files)|*.*|(All Files Excel)|*.xlsx";
+            fsave.ShowDialog();
+            if (fsave.FileName != "")
+            {
+                wbook = obj.Workbooks.Add(Type.Missing);
+                obj.Columns.ColumnWidth = 25;
+
+                // truyen data
+                for (int k = 0; k < dgv2.Rows.Count; k++)
+                {
+                    wbook.Worksheets.Add();
+                    //createdate = DateTime.Parse(dt.Rows[k][0].ToString());
+
+                    //dat ten sheet
+                    for (int i = 1; i < dgv2.Columns.Count + 1; i++)
+                    {
+                        obj.Cells[1, i] = dgv2.Columns[i - 1].HeaderText;
+                    }
+
+                    for (int i = 0; i < dgv2.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dgv2.Columns.Count; j++)
+                        {
+                            if (dgv2.Rows[i].Cells[j].Value != null)
+                            {
+                                obj.Cells[i + 2, j + 1] = dgv2.Rows[i].Cells[j].Value.ToString();
+                            }
+                        }
+                    }
+                }
+
+
+                wbook.SaveAs(fsave.FileName);
+                MessageBox.Show("Save Success", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Please Type Path", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
