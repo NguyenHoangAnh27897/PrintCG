@@ -146,13 +146,12 @@
   <wsdl:message name="ISGPService_insertSGP_ChiPhi_OutputMessage">
     <wsdl:part name="parameters" element="tns:insertSGP_ChiPhiResponse" />
   </wsdl:message>
-<<<<<<< HEAD
   <wsdl:message name="ISGPService_getCPNT_InputMessage">
     <wsdl:part name="parameters" element="tns:getCPNT" />
   </wsdl:message>
   <wsdl:message name="ISGPService_getCPNT_OutputMessage">
     <wsdl:part name="parameters" element="tns:getCPNTResponse" />
-=======
+  </wsdl:message>
   <wsdl:message name="ISGPService_addCustomer_InputMessage">
     <wsdl:part name="parameters" element="tns:addCustomer" />
   </wsdl:message>
@@ -182,7 +181,6 @@
   </wsdl:message>
   <wsdl:message name="ISGPService_addCustomerID_OutputMessage">
     <wsdl:part name="parameters" element="tns:addCustomerIDResponse" />
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
   </wsdl:message>
   <wsdl:portType name="ISGPService">
     <wsdl:operation name="login">
@@ -277,11 +275,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/insertSGP_ChiPhi" message="tns:ISGPService_insertSGP_ChiPhi_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/insertSGP_ChiPhiResponse" message="tns:ISGPService_insertSGP_ChiPhi_OutputMessage" />
     </wsdl:operation>
-<<<<<<< HEAD
     <wsdl:operation name="getCPNT">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getCPNT" message="tns:ISGPService_getCPNT_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getCPNTResponse" message="tns:ISGPService_getCPNT_OutputMessage" />
-=======
+    </wsdl:operation>
     <wsdl:operation name="addCustomer">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/addCustomer" message="tns:ISGPService_addCustomer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/addCustomerResponse" message="tns:ISGPService_addCustomer_OutputMessage" />
@@ -301,7 +298,6 @@
     <wsdl:operation name="addCustomerID">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/addCustomerID" message="tns:ISGPService_addCustomerID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/addCustomerIDResponse" message="tns:ISGPService_addCustomerID_OutputMessage" />
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISGPService" type="tns:ISGPService">
@@ -513,10 +509,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-<<<<<<< HEAD
     <wsdl:operation name="getCPNT">
       <soap:operation soapAction="http://tempuri.org/ISGPService/getCPNT" style="document" />
-=======
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="addCustomer">
       <soap:operation soapAction="http://tempuri.org/ISGPService/addCustomer" style="document" />
       <wsdl:input>
@@ -555,7 +556,6 @@
     </wsdl:operation>
     <wsdl:operation name="addCustomerID">
       <soap:operation soapAction="http://tempuri.org/ISGPService/addCustomerID" style="document" />
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -371,17 +371,7 @@ namespace PrintCG_24062016
 
         private void navBarItem25_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            FrmKHDB frm = new FrmKHDB();
-            if ((Application.OpenForms["FrmKHDB"] as FrmKHDB) != null)
-            {
-                frm.Focus();
-            }
-            else
-            {
-                frm = new FrmKHDB();
-                frm.MdiParent = this;
-                frm.Show();
-            }
+           
         }
 
         private void navBarItem26_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)

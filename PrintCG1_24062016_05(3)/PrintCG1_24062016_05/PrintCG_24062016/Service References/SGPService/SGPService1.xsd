@@ -356,7 +356,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-<<<<<<< HEAD
   <xs:element name="getCPNT">
     <xs:complexType>
       <xs:sequence>
@@ -371,7 +370,9 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/SGPWebService.DB" minOccurs="0" name="getCPNTResult" nillable="true" type="q15:ArrayOfSGP_ChiPhi" />
-=======
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="addCustomer">
     <xs:complexType>
       <xs:sequence>
@@ -407,7 +408,7 @@
   <xs:element name="getSpCustomerResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="getSpCustomerResult" nillable="true" type="q15:ArrayOfSpecialCustomer" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="getSpCustomerResult" nillable="true" type="q16:ArrayOfSpecialCustomer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -419,7 +420,7 @@
   <xs:element name="getCustomerIDResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="getCustomerIDResult" nillable="true" type="q16:ArrayOfSpCustomer" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="getCustomerIDResult" nillable="true" type="q17:ArrayOfSpCustomer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -464,7 +465,6 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="addCustomerIDResult" type="xs:boolean" />
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -5741,21 +5741,14 @@ namespace PrintCG_24062016.SGPService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-<<<<<<< HEAD
     [System.Runtime.Serialization.DataContractAttribute(Name="SGP_ChiPhi", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DB")]
     [System.SerializableAttribute()]
     public partial class SGP_ChiPhi : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-=======
-    [System.Runtime.Serialization.DataContractAttribute(Name="SpecialCustomer", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass")]
-    [System.SerializableAttribute()]
-    public partial class SpecialCustomer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-<<<<<<< HEAD
         private string bcchapnhanField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -5805,7 +5798,258 @@ namespace PrintCG_24062016.SGPService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<double> tlField;
-=======
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string bcchapnhan {
+            get {
+                return this.bcchapnhanField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.bcchapnhanField, value) != true)) {
+                    this.bcchapnhanField = value;
+                    this.RaisePropertyChanged("bcchapnhan");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string bcnhap {
+            get {
+                return this.bcnhapField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.bcnhapField, value) != true)) {
+                    this.bcnhapField = value;
+                    this.RaisePropertyChanged("bcnhap");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string cg {
+            get {
+                return this.cgField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.cgField, value) != true)) {
+                    this.cgField = value;
+                    this.RaisePropertyChanged("cg");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> cpnt {
+            get {
+                return this.cpntField;
+            }
+            set {
+                if ((this.cpntField.Equals(value) != true)) {
+                    this.cpntField = value;
+                    this.RaisePropertyChanged("cpnt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> cptt {
+            get {
+                return this.cpttField;
+            }
+            set {
+                if ((this.cpttField.Equals(value) != true)) {
+                    this.cpttField = value;
+                    this.RaisePropertyChanged("cptt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ctvphat {
+            get {
+                return this.ctvphatField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ctvphatField, value) != true)) {
+                    this.ctvphatField = value;
+                    this.RaisePropertyChanged("ctvphat");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> cuocchinh {
+            get {
+                return this.cuocchinhField;
+            }
+            set {
+                if ((this.cuocchinhField.Equals(value) != true)) {
+                    this.cuocchinhField = value;
+                    this.RaisePropertyChanged("cuocchinh");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string khachhang {
+            get {
+                return this.khachhangField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.khachhangField, value) != true)) {
+                    this.khachhangField = value;
+                    this.RaisePropertyChanged("khachhang");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string loaihang {
+            get {
+                return this.loaihangField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.loaihangField, value) != true)) {
+                    this.loaihangField = value;
+                    this.RaisePropertyChanged("loaihang");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> ngay {
+            get {
+                return this.ngayField;
+            }
+            set {
+                if ((this.ngayField.Equals(value) != true)) {
+                    this.ngayField = value;
+                    this.RaisePropertyChanged("ngay");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> ngaynhan {
+            get {
+                return this.ngaynhanField;
+            }
+            set {
+                if ((this.ngaynhanField.Equals(value) != true)) {
+                    this.ngaynhanField = value;
+                    this.RaisePropertyChanged("ngaynhan");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string noiden {
+            get {
+                return this.noidenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.noidenField, value) != true)) {
+                    this.noidenField = value;
+                    this.RaisePropertyChanged("noiden");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> phuphi {
+            get {
+                return this.phuphiField;
+            }
+            set {
+                if ((this.phuphiField.Equals(value) != true)) {
+                    this.phuphiField = value;
+                    this.RaisePropertyChanged("phuphi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string quan {
+            get {
+                return this.quanField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.quanField, value) != true)) {
+                    this.quanField = value;
+                    this.RaisePropertyChanged("quan");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tinh {
+            get {
+                return this.tinhField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tinhField, value) != true)) {
+                    this.tinhField = value;
+                    this.RaisePropertyChanged("tinh");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> tl {
+            get {
+                return this.tlField;
+            }
+            set {
+                if ((this.tlField.Equals(value) != true)) {
+                    this.tlField = value;
+                    this.RaisePropertyChanged("tl");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SpecialCustomer", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass")]
+    [System.SerializableAttribute()]
+    public partial class SpecialCustomer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CGNumberField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -5849,7 +6093,6 @@ namespace PrintCG_24062016.SGPService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ZoneField;
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -5862,16 +6105,6 @@ namespace PrintCG_24062016.SGPService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public string bcchapnhan {
-            get {
-                return this.bcchapnhanField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.bcchapnhanField, value) != true)) {
-                    this.bcchapnhanField = value;
-                    this.RaisePropertyChanged("bcchapnhan");
-=======
         public string CGNumber {
             get {
                 return this.CGNumberField;
@@ -5893,22 +6126,11 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.CustomerIDField, value) != true)) {
                     this.CustomerIDField = value;
                     this.RaisePropertyChanged("CustomerID");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public string bcnhap {
-            get {
-                return this.bcnhapField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.bcnhapField, value) != true)) {
-                    this.bcnhapField = value;
-                    this.RaisePropertyChanged("bcnhap");
-=======
         public string Date {
             get {
                 return this.DateField;
@@ -5917,22 +6139,11 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.DateField, value) != true)) {
                     this.DateField = value;
                     this.RaisePropertyChanged("Date");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public string cg {
-            get {
-                return this.cgField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.cgField, value) != true)) {
-                    this.cgField = value;
-                    this.RaisePropertyChanged("cg");
-=======
         public string DeliveryDate {
             get {
                 return this.DeliveryDateField;
@@ -5941,22 +6152,11 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.DeliveryDateField, value) != true)) {
                     this.DeliveryDateField = value;
                     this.RaisePropertyChanged("DeliveryDate");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public System.Nullable<double> cpnt {
-            get {
-                return this.cpntField;
-            }
-            set {
-                if ((this.cpntField.Equals(value) != true)) {
-                    this.cpntField = value;
-                    this.RaisePropertyChanged("cpnt");
-=======
         public string FromPlace {
             get {
                 return this.FromPlaceField;
@@ -5965,22 +6165,11 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.FromPlaceField, value) != true)) {
                     this.FromPlaceField = value;
                     this.RaisePropertyChanged("FromPlace");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public System.Nullable<double> cptt {
-            get {
-                return this.cpttField;
-            }
-            set {
-                if ((this.cpttField.Equals(value) != true)) {
-                    this.cpttField = value;
-                    this.RaisePropertyChanged("cptt");
-=======
         public string Hour {
             get {
                 return this.HourField;
@@ -5989,22 +6178,11 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.HourField, value) != true)) {
                     this.HourField = value;
                     this.RaisePropertyChanged("Hour");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public string ctvphat {
-            get {
-                return this.ctvphatField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ctvphatField, value) != true)) {
-                    this.ctvphatField = value;
-                    this.RaisePropertyChanged("ctvphat");
-=======
         public int ID {
             get {
                 return this.IDField;
@@ -6013,22 +6191,11 @@ namespace PrintCG_24062016.SGPService {
                 if ((this.IDField.Equals(value) != true)) {
                     this.IDField = value;
                     this.RaisePropertyChanged("ID");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public System.Nullable<double> cuocchinh {
-            get {
-                return this.cuocchinhField;
-            }
-            set {
-                if ((this.cuocchinhField.Equals(value) != true)) {
-                    this.cuocchinhField = value;
-                    this.RaisePropertyChanged("cuocchinh");
-=======
         public string NodeName {
             get {
                 return this.NodeNameField;
@@ -6037,22 +6204,11 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.NodeNameField, value) != true)) {
                     this.NodeNameField = value;
                     this.RaisePropertyChanged("NodeName");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public long id {
-            get {
-                return this.idField;
-            }
-            set {
-                if ((this.idField.Equals(value) != true)) {
-                    this.idField = value;
-                    this.RaisePropertyChanged("id");
-=======
         public string Note {
             get {
                 return this.NoteField;
@@ -6061,22 +6217,11 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.NoteField, value) != true)) {
                     this.NoteField = value;
                     this.RaisePropertyChanged("Note");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public string khachhang {
-            get {
-                return this.khachhangField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.khachhangField, value) != true)) {
-                    this.khachhangField = value;
-                    this.RaisePropertyChanged("khachhang");
-=======
         public string Province {
             get {
                 return this.ProvinceField;
@@ -6085,22 +6230,11 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.ProvinceField, value) != true)) {
                     this.ProvinceField = value;
                     this.RaisePropertyChanged("Province");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public string loaihang {
-            get {
-                return this.loaihangField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.loaihangField, value) != true)) {
-                    this.loaihangField = value;
-                    this.RaisePropertyChanged("loaihang");
-=======
         public string ShiptoAddress {
             get {
                 return this.ShiptoAddressField;
@@ -6109,22 +6243,11 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.ShiptoAddressField, value) != true)) {
                     this.ShiptoAddressField = value;
                     this.RaisePropertyChanged("ShiptoAddress");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public System.Nullable<System.DateTime> ngay {
-            get {
-                return this.ngayField;
-            }
-            set {
-                if ((this.ngayField.Equals(value) != true)) {
-                    this.ngayField = value;
-                    this.RaisePropertyChanged("ngay");
-=======
         public string SoChungTuLienQuan {
             get {
                 return this.SoChungTuLienQuanField;
@@ -6133,22 +6256,11 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.SoChungTuLienQuanField, value) != true)) {
                     this.SoChungTuLienQuanField = value;
                     this.RaisePropertyChanged("SoChungTuLienQuan");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public System.Nullable<System.DateTime> ngaynhan {
-            get {
-                return this.ngaynhanField;
-            }
-            set {
-                if ((this.ngaynhanField.Equals(value) != true)) {
-                    this.ngaynhanField = value;
-                    this.RaisePropertyChanged("ngaynhan");
-=======
         public string SoChungTuThuVe {
             get {
                 return this.SoChungTuThuVeField;
@@ -6157,22 +6269,11 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.SoChungTuThuVeField, value) != true)) {
                     this.SoChungTuThuVeField = value;
                     this.RaisePropertyChanged("SoChungTuThuVe");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public string noiden {
-            get {
-                return this.noidenField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.noidenField, value) != true)) {
-                    this.noidenField = value;
-                    this.RaisePropertyChanged("noiden");
-=======
         public string Staff {
             get {
                 return this.StaffField;
@@ -6181,22 +6282,11 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.StaffField, value) != true)) {
                     this.StaffField = value;
                     this.RaisePropertyChanged("Staff");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public System.Nullable<double> phuphi {
-            get {
-                return this.phuphiField;
-            }
-            set {
-                if ((this.phuphiField.Equals(value) != true)) {
-                    this.phuphiField = value;
-                    this.RaisePropertyChanged("phuphi");
-=======
         public string Zone {
             get {
                 return this.ZoneField;
@@ -6205,22 +6295,10 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.ZoneField, value) != true)) {
                     this.ZoneField = value;
                     this.RaisePropertyChanged("Zone");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
-<<<<<<< HEAD
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string quan {
-            get {
-                return this.quanField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.quanField, value) != true)) {
-                    this.quanField = value;
-                    this.RaisePropertyChanged("quan");
-=======
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -6268,22 +6346,11 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.CustomerIDField, value) != true)) {
                     this.CustomerIDField = value;
                     this.RaisePropertyChanged("CustomerID");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public string tinh {
-            get {
-                return this.tinhField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tinhField, value) != true)) {
-                    this.tinhField = value;
-                    this.RaisePropertyChanged("tinh");
-=======
         public string CustomerName {
             get {
                 return this.CustomerNameField;
@@ -6292,22 +6359,11 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
                     this.CustomerNameField = value;
                     this.RaisePropertyChanged("CustomerName");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-<<<<<<< HEAD
-        public System.Nullable<double> tl {
-            get {
-                return this.tlField;
-            }
-            set {
-                if ((this.tlField.Equals(value) != true)) {
-                    this.tlField = value;
-                    this.RaisePropertyChanged("tl");
-=======
         public string Zone {
             get {
                 return this.ZoneField;
@@ -6316,7 +6372,6 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.ZoneField, value) != true)) {
                     this.ZoneField = value;
                     this.RaisePropertyChanged("Zone");
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
                 }
             }
         }
@@ -6420,10 +6475,9 @@ namespace PrintCG_24062016.SGPService {
                     string tinh, 
                     string bcnhan);
         
-<<<<<<< HEAD
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getCPNT", ReplyAction="http://tempuri.org/ISGPService/getCPNTResponse")]
         PrintCG_24062016.SGPService.SGP_ChiPhi[] getCPNT(System.DateTime FromDate, System.DateTime ToDate, int type, string Post);
-=======
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/addCustomer", ReplyAction="http://tempuri.org/ISGPService/addCustomerResponse")]
         bool addCustomer(string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note);
         
@@ -6438,7 +6492,6 @@ namespace PrintCG_24062016.SGPService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/addCustomerID", ReplyAction="http://tempuri.org/ISGPService/addCustomerIDResponse")]
         bool addCustomerID(string zoneid, string customerid, string customername);
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -6576,10 +6629,10 @@ namespace PrintCG_24062016.SGPService {
             return base.Channel.insertSGP_ChiPhi(ctvphat, ngay, cg, tl, lh, noiden, cptt, cpnt, bcchapnhan, khachang, cuoc, phuphi, quan, ngaynhan, tinh, bcnhan);
         }
         
-<<<<<<< HEAD
         public PrintCG_24062016.SGPService.SGP_ChiPhi[] getCPNT(System.DateTime FromDate, System.DateTime ToDate, int type, string Post) {
             return base.Channel.getCPNT(FromDate, ToDate, type, Post);
-=======
+        }
+        
         public bool addCustomer(string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note) {
             return base.Channel.addCustomer(noigui, socg, sochungtuthuve, sochungtulienquan, deliverydate, nodename, shiptoaddress, province, zone, customerid, date, hour, staff, note);
         }
@@ -6598,7 +6651,6 @@ namespace PrintCG_24062016.SGPService {
         
         public bool addCustomerID(string zoneid, string customerid, string customername) {
             return base.Channel.addCustomerID(zoneid, customerid, customername);
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
         }
     }
 }

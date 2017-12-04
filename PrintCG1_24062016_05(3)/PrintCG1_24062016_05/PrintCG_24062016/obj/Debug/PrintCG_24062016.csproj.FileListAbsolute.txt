@@ -1012,7 +1012,6 @@ C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\Pr
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLLuyKe.resources
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLPrint.resources
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLXoaDO.resources
-C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmKHDB.resources
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain1.resources
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmNormal.resources
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDiachi.resources

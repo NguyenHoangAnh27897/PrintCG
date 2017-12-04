@@ -457,21 +457,20 @@ namespace SGPWebService
             }
         }
 
-<<<<<<< HEAD
 
-        public List<DB.SGP_ChiPhi> getCPNT(DateTime FromDate, DateTime ToDate, int type,string Post)
+        public List<DB.SGP_ChiPhi> getCPNT(DateTime FromDate, DateTime ToDate, int type, string Post)
         {
-            if(type == 0) //lay theo ngay nhap
+            if (type == 0) //lay theo ngay nhap
             {
                 List<DB.SGP_ChiPhi> data = pms.SGP_ChiPhis.Where(t => (t.ngay >= FromDate.Date && t.ngay <= ToDate.Date) && t.bcnhap == Post).ToList();
                 return data;
-            }else // lay theo ngay cg
+            }
+            else // lay theo ngay cg
             {
                 List<DB.SGP_ChiPhi> data = pms.SGP_ChiPhis.Where(t => (t.ngaynhan >= FromDate.Date && t.ngaynhan <= ToDate.Date) && t.bcnhap == Post).ToList();
                 return data;
             }
-                        
-=======
+        }
         public bool addCustomer(string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note)
         {
             try
@@ -582,7 +581,6 @@ namespace SGPWebService
             {
                 return false;
             }
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
         }
     }
 }

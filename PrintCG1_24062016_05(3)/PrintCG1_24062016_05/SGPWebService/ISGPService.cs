@@ -58,9 +58,8 @@ namespace SGPWebService
         [OperationContract]
         bool insertSGP_ChiPhi(string ctvphat, DateTime ngay,string cg, double tl, string lh, string noiden,double cptt,double cpnt,string bcchapnhan,string khachang,double cuoc,double phuphi,string quan,DateTime ngaynhan,string tinh,string bcnhan);
         [OperationContract]
-<<<<<<< HEAD
         List<DB.SGP_ChiPhi> getCPNT(DateTime FromDate,DateTime ToDate,int type,string Post);
-=======
+        [OperationContract]
         bool addCustomer(string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note);
         [OperationContract]
         List<DataClass.SpecialCustomer> getSpCustomer();
@@ -70,6 +69,5 @@ namespace SGPWebService
         bool changeCustomer(int id, string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note);
         [OperationContract]
         bool addCustomerID(string zoneid, string customerid, string customername);
->>>>>>> ed86390220c3e2a0d81c1bc6f9872c7ed02e65a4
     }
 }
