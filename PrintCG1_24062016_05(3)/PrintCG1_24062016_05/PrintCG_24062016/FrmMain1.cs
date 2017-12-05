@@ -468,5 +468,20 @@ namespace PrintCG_24062016
                 frm.Show();
             }
         }
+
+        private void navBarItem34_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            congcu.FrmHoaDon frm = new congcu.FrmHoaDon();
+            if ((Application.OpenForms["FrmHoaDon"] as congcu.FrmHoaDon) != null)
+            {
+                frm.Focus();
+            }
+            else
+            {
+                frm = new congcu.FrmHoaDon();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
     }
 }

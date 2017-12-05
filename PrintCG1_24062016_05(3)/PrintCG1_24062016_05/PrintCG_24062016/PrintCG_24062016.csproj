@@ -144,6 +144,18 @@
     <Compile Include="congcu\FrmChiPhiNT.Designer.cs">
       <DependentUpon>FrmChiPhiNT.cs</DependentUpon>
     </Compile>
+    <Compile Include="congcu\FrmChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="congcu\FrmChiTietHoaDon.Designer.cs">
+      <DependentUpon>FrmChiTietHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="congcu\FrmHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="congcu\FrmHoaDon.Designer.cs">
+      <DependentUpon>FrmHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="congcu\FrmTraHBOnline.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +167,12 @@
     </Compile>
     <Compile Include="congcu\Frm_SpecialCustomer.Designer.cs">
       <DependentUpon>Frm_SpecialCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="congcu\Rpt_HoaDon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_HoaDon.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="convert\ConvertData.cs" />
     <Compile Include="dataset\DsA4.cs">
@@ -171,6 +189,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsFuji.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsHoaDon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsHoaDon.xsd</DependentUpon>
     </Compile>
     <Compile Include="ExcelReader\ExcelReader.cs" />
     <Compile Include="hethong\FrmLogin.cs">
@@ -598,11 +621,21 @@
     <EmbeddedResource Include="congcu\FrmChiPhiNT.resx">
       <DependentUpon>FrmChiPhiNT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="congcu\FrmChiTietHoaDon.resx">
+      <DependentUpon>FrmChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="congcu\FrmHoaDon.resx">
+      <DependentUpon>FrmHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="congcu\FrmTraHBOnline.resx">
       <DependentUpon>FrmTraHBOnline.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="congcu\Frm_SpecialCustomer.resx">
       <DependentUpon>Frm_SpecialCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="congcu\Rpt_HoaDon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_HoaDon.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="hethong\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -1003,6 +1036,17 @@
     <None Include="DsFuji.xss">
       <DependentUpon>DsFuji.xsd</DependentUpon>
     </None>
+    <None Include="DsHoaDon.xsc">
+      <DependentUpon>DsHoaDon.xsd</DependentUpon>
+    </None>
+    <None Include="DsHoaDon.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsHoaDon.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsHoaDon.xss">
+      <DependentUpon>DsHoaDon.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1188,7 +1232,13 @@
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.BS_Province.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.ChiTietHoaDon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.District.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.HoaDon.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.MailerPPNT.datasource">

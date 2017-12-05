@@ -156,7 +156,7 @@ namespace PrintCG_24062016.congcu
         {
             DataTable dt = ReadExcelFile(cbbsheet.SelectedValue.ToString(), path);
             int count = dt.Rows.Count;
-            for (int i = 1; i < count; i++)
+            for (int i = 0; i < count; i++)
             {
                 string[] row = new string[] { dt.Rows[i][0].ToString(), dt.Rows[i][1].ToString(), dt.Rows[i][2].ToString(), dt.Rows[i][3].ToString(), dt.Rows[i][4].ToString(), dt.Rows[i][5].ToString(), dt.Rows[i][6].ToString(), dt.Rows[i][7].ToString() };
                 dgv1.Rows.Add(row);

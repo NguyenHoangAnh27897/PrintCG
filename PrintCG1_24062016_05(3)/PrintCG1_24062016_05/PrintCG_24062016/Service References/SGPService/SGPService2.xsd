@@ -146,4 +146,38 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="SpCustomer" nillable="true" type="tns:SpCustomer" />
+  <xs:complexType name="ArrayOfHoaDon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HoaDon" nillable="true" type="tns:HoaDon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHoaDon" nillable="true" type="tns:ArrayOfHoaDon" />
+  <xs:complexType name="HoaDon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="SoCT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoHD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HoaDon" nillable="true" type="tns:HoaDon" />
+  <xs:complexType name="ArrayOfChiTietHoaDon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChiTietHoaDon" nillable="true" type="tns:ChiTietHoaDon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChiTietHoaDon" nillable="true" type="tns:ArrayOfChiTietHoaDon" />
+  <xs:complexType name="ChiTietHoaDon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CuocDV" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="SoCG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoCT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TenHangHoa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="VAT" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChiTietHoaDon" nillable="true" type="tns:ChiTietHoaDon" />
 </xs:schema>

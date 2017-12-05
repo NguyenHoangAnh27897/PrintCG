@@ -75,6 +75,12 @@ namespace SGPWebService.DB
     partial void InsertSGP_ChiPhi(SGP_ChiPhi instance);
     partial void UpdateSGP_ChiPhi(SGP_ChiPhi instance);
     partial void DeleteSGP_ChiPhi(SGP_ChiPhi instance);
+    partial void InsertMM_PostOffice(MM_PostOffice instance);
+    partial void UpdateMM_PostOffice(MM_PostOffice instance);
+    partial void DeleteMM_PostOffice(MM_PostOffice instance);
+    partial void InsertBS_Employee1(BS_Employee1 instance);
+    partial void UpdateBS_Employee1(BS_Employee1 instance);
+    partial void DeleteBS_Employee1(BS_Employee1 instance);
     #endregion
 		
 		public SGPMainDataContext() : 
@@ -224,6 +230,22 @@ namespace SGPWebService.DB
 			get
 			{
 				return this.GetTable<SGP_ChiPhi>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MM_PostOffice> MM_PostOffices
+		{
+			get
+			{
+				return this.GetTable<MM_PostOffice>();
+			}
+		}
+		
+		public System.Data.Linq.Table<BS_Employee1> BS_Employee1s
+		{
+			get
+			{
+				return this.GetTable<BS_Employee1>();
 			}
 		}
 	}
@@ -670,6 +692,8 @@ namespace SGPWebService.DB
 		
 		private EntityRef<UMS_tblUserAccount> _UMS_tblUserAccount;
 		
+		private EntityRef<MM_PostOffice> _MM_PostOffice;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -687,6 +711,7 @@ namespace SGPWebService.DB
 		public UMS_tblUserAccountPostOffice()
 		{
 			this._UMS_tblUserAccount = default(EntityRef<UMS_tblUserAccount>);
+			this._MM_PostOffice = default(EntityRef<MM_PostOffice>);
 			OnCreated();
 		}
 		
@@ -725,6 +750,10 @@ namespace SGPWebService.DB
 			{
 				if ((this._PostOfficeID != value))
 				{
+					if (this._MM_PostOffice.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnPostOfficeIDChanging(value);
 					this.SendPropertyChanging();
 					this._PostOfficeID = value;
@@ -808,6 +837,40 @@ namespace SGPWebService.DB
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PostOffice_UMS_tblUserAccountPostOffice", Storage="_MM_PostOffice", ThisKey="PostOfficeID", OtherKey="PostOfficeID", IsForeignKey=true)]
+		public MM_PostOffice MM_PostOffice
+		{
+			get
+			{
+				return this._MM_PostOffice.Entity;
+			}
+			set
+			{
+				MM_PostOffice previousValue = this._MM_PostOffice.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_PostOffice.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_PostOffice.Entity = null;
+						previousValue.UMS_tblUserAccountPostOffices.Remove(this);
+					}
+					this._MM_PostOffice.Entity = value;
+					if ((value != null))
+					{
+						value.UMS_tblUserAccountPostOffices.Add(this);
+						this._PostOfficeID = value.PostOfficeID;
+					}
+					else
+					{
+						this._PostOfficeID = default(string);
+					}
+					this.SendPropertyChanged("MM_PostOffice");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -853,6 +916,8 @@ namespace SGPWebService.DB
 		
 		private EntitySet<BS_District> _BS_Districts;
 		
+		private EntitySet<MM_PostOffice> _MM_PostOffices;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -877,6 +942,7 @@ namespace SGPWebService.DB
 		{
 			this._MM_Mailers = new EntitySet<MM_Mailer>(new Action<MM_Mailer>(this.attach_MM_Mailers), new Action<MM_Mailer>(this.detach_MM_Mailers));
 			this._BS_Districts = new EntitySet<BS_District>(new Action<BS_District>(this.attach_BS_Districts), new Action<BS_District>(this.detach_BS_Districts));
+			this._MM_PostOffices = new EntitySet<MM_PostOffice>(new Action<MM_PostOffice>(this.attach_MM_PostOffices), new Action<MM_PostOffice>(this.detach_MM_PostOffices));
 			OnCreated();
 		}
 		
@@ -1046,6 +1112,19 @@ namespace SGPWebService.DB
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BS_Province_MM_PostOffice", Storage="_MM_PostOffices", ThisKey="ProvinceID", OtherKey="ProvinceID")]
+		public EntitySet<MM_PostOffice> MM_PostOffices
+		{
+			get
+			{
+				return this._MM_PostOffices;
+			}
+			set
+			{
+				this._MM_PostOffices.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1085,6 +1164,18 @@ namespace SGPWebService.DB
 		}
 		
 		private void detach_BS_Districts(BS_District entity)
+		{
+			this.SendPropertyChanging();
+			entity.BS_Province = null;
+		}
+		
+		private void attach_MM_PostOffices(MM_PostOffice entity)
+		{
+			this.SendPropertyChanging();
+			entity.BS_Province = this;
+		}
+		
+		private void detach_MM_PostOffices(MM_PostOffice entity)
 		{
 			this.SendPropertyChanging();
 			entity.BS_Province = null;
@@ -2762,6 +2853,10 @@ namespace SGPWebService.DB
 		
 		private EntityRef<MM_Status> _MM_Status;
 		
+		private EntityRef<MM_PostOffice> _MM_PostOffice;
+		
+		private EntityRef<MM_PostOffice> _MM_PostOffice1;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -2915,6 +3010,8 @@ namespace SGPWebService.DB
 			this._MM_Customer = default(EntityRef<MM_Customer>);
 			this._MM_ServiceType = default(EntityRef<MM_ServiceType>);
 			this._MM_Status = default(EntityRef<MM_Status>);
+			this._MM_PostOffice = default(EntityRef<MM_PostOffice>);
+			this._MM_PostOffice1 = default(EntityRef<MM_PostOffice>);
 			OnCreated();
 		}
 		
@@ -3621,6 +3718,10 @@ namespace SGPWebService.DB
 			{
 				if ((this._PostOfficeAcceptID != value))
 				{
+					if (this._MM_PostOffice.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnPostOfficeAcceptIDChanging(value);
 					this.SendPropertyChanging();
 					this._PostOfficeAcceptID = value;
@@ -3661,6 +3762,10 @@ namespace SGPWebService.DB
 			{
 				if ((this._PostOfficeRecieverMoneyID != value))
 				{
+					if (this._MM_PostOffice1.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnPostOfficeRecieverMoneyIDChanging(value);
 					this.SendPropertyChanging();
 					this._PostOfficeRecieverMoneyID = value;
@@ -4485,6 +4590,74 @@ namespace SGPWebService.DB
 						this._CurrentStatusID = default(string);
 					}
 					this.SendPropertyChanged("MM_Status");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PostOffice_MM_Mailer", Storage="_MM_PostOffice", ThisKey="PostOfficeAcceptID", OtherKey="PostOfficeID", IsForeignKey=true)]
+		public MM_PostOffice MM_PostOffice
+		{
+			get
+			{
+				return this._MM_PostOffice.Entity;
+			}
+			set
+			{
+				MM_PostOffice previousValue = this._MM_PostOffice.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_PostOffice.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_PostOffice.Entity = null;
+						previousValue.MM_Mailers.Remove(this);
+					}
+					this._MM_PostOffice.Entity = value;
+					if ((value != null))
+					{
+						value.MM_Mailers.Add(this);
+						this._PostOfficeAcceptID = value.PostOfficeID;
+					}
+					else
+					{
+						this._PostOfficeAcceptID = default(string);
+					}
+					this.SendPropertyChanged("MM_PostOffice");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PostOffice_MM_Mailer1", Storage="_MM_PostOffice1", ThisKey="PostOfficeRecieverMoneyID", OtherKey="PostOfficeID", IsForeignKey=true)]
+		public MM_PostOffice MM_PostOffice1
+		{
+			get
+			{
+				return this._MM_PostOffice1.Entity;
+			}
+			set
+			{
+				MM_PostOffice previousValue = this._MM_PostOffice1.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_PostOffice1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_PostOffice1.Entity = null;
+						previousValue.MM_Mailers1.Remove(this);
+					}
+					this._MM_PostOffice1.Entity = value;
+					if ((value != null))
+					{
+						value.MM_Mailers1.Add(this);
+						this._PostOfficeRecieverMoneyID = value.PostOfficeID;
+					}
+					else
+					{
+						this._PostOfficeRecieverMoneyID = default(string);
+					}
+					this.SendPropertyChanged("MM_PostOffice1");
 				}
 			}
 		}
@@ -5644,6 +5817,10 @@ namespace SGPWebService.DB
 		
 		private EntityRef<BS_Employee> _BS_Employee;
 		
+		private EntityRef<MM_PostOffice> _MM_PostOffice;
+		
+		private EntityRef<BS_Employee1> _BS_Employee1;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -5692,6 +5869,8 @@ namespace SGPWebService.DB
 		{
 			this._MM_MailerDeliveryDetails = new EntitySet<MM_MailerDeliveryDetail>(new Action<MM_MailerDeliveryDetail>(this.attach_MM_MailerDeliveryDetails), new Action<MM_MailerDeliveryDetail>(this.detach_MM_MailerDeliveryDetails));
 			this._BS_Employee = default(EntityRef<BS_Employee>);
+			this._MM_PostOffice = default(EntityRef<MM_PostOffice>);
+			this._BS_Employee1 = default(EntityRef<BS_Employee1>);
 			OnCreated();
 		}
 		
@@ -5786,6 +5965,10 @@ namespace SGPWebService.DB
 			{
 				if ((this._PostOfficeID != value))
 				{
+					if (this._MM_PostOffice.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnPostOfficeIDChanging(value);
 					this.SendPropertyChanging();
 					this._PostOfficeID = value;
@@ -5806,7 +5989,7 @@ namespace SGPWebService.DB
 			{
 				if ((this._EmployeeID != value))
 				{
-					if (this._BS_Employee.HasLoadedOrAssignedValue)
+					if ((this._BS_Employee.HasLoadedOrAssignedValue || this._BS_Employee1.HasLoadedOrAssignedValue))
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -6126,6 +6309,74 @@ namespace SGPWebService.DB
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PostOffice_MM_MailerDelivery", Storage="_MM_PostOffice", ThisKey="PostOfficeID", OtherKey="PostOfficeID", IsForeignKey=true)]
+		public MM_PostOffice MM_PostOffice
+		{
+			get
+			{
+				return this._MM_PostOffice.Entity;
+			}
+			set
+			{
+				MM_PostOffice previousValue = this._MM_PostOffice.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_PostOffice.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_PostOffice.Entity = null;
+						previousValue.MM_MailerDeliveries.Remove(this);
+					}
+					this._MM_PostOffice.Entity = value;
+					if ((value != null))
+					{
+						value.MM_MailerDeliveries.Add(this);
+						this._PostOfficeID = value.PostOfficeID;
+					}
+					else
+					{
+						this._PostOfficeID = default(string);
+					}
+					this.SendPropertyChanged("MM_PostOffice");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BS_Employee1_MM_MailerDelivery", Storage="_BS_Employee1", ThisKey="EmployeeID", OtherKey="EmployeeID", IsForeignKey=true)]
+		public BS_Employee1 BS_Employee1
+		{
+			get
+			{
+				return this._BS_Employee1.Entity;
+			}
+			set
+			{
+				BS_Employee1 previousValue = this._BS_Employee1.Entity;
+				if (((previousValue != value) 
+							|| (this._BS_Employee1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._BS_Employee1.Entity = null;
+						previousValue.MM_MailerDeliveries.Remove(this);
+					}
+					this._BS_Employee1.Entity = value;
+					if ((value != null))
+					{
+						value.MM_MailerDeliveries.Add(this);
+						this._EmployeeID = value.EmployeeID;
+					}
+					else
+					{
+						this._EmployeeID = default(string);
+					}
+					this.SendPropertyChanged("BS_Employee1");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -6203,6 +6454,8 @@ namespace SGPWebService.DB
 		
 		private EntitySet<MM_MailerDelivery> _MM_MailerDeliveries;
 		
+		private EntityRef<MM_PostOffice> _MM_PostOffice;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -6248,6 +6501,7 @@ namespace SGPWebService.DB
 		public BS_Employee()
 		{
 			this._MM_MailerDeliveries = new EntitySet<MM_MailerDelivery>(new Action<MM_MailerDelivery>(this.attach_MM_MailerDeliveries), new Action<MM_MailerDelivery>(this.detach_MM_MailerDeliveries));
+			this._MM_PostOffice = default(EntityRef<MM_PostOffice>);
 			OnCreated();
 		}
 		
@@ -6322,6 +6576,10 @@ namespace SGPWebService.DB
 			{
 				if ((this._PostOfficeID != value))
 				{
+					if (this._MM_PostOffice.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnPostOfficeIDChanging(value);
 					this.SendPropertyChanging();
 					this._PostOfficeID = value;
@@ -6621,6 +6879,40 @@ namespace SGPWebService.DB
 			set
 			{
 				this._MM_MailerDeliveries.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PostOffice_BS_Employee", Storage="_MM_PostOffice", ThisKey="PostOfficeID", OtherKey="PostOfficeID", IsForeignKey=true)]
+		public MM_PostOffice MM_PostOffice
+		{
+			get
+			{
+				return this._MM_PostOffice.Entity;
+			}
+			set
+			{
+				MM_PostOffice previousValue = this._MM_PostOffice.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_PostOffice.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_PostOffice.Entity = null;
+						previousValue.BS_Employees.Remove(this);
+					}
+					this._MM_PostOffice.Entity = value;
+					if ((value != null))
+					{
+						value.BS_Employees.Add(this);
+						this._PostOfficeID = value.PostOfficeID;
+					}
+					else
+					{
+						this._PostOfficeID = default(string);
+					}
+					this.SendPropertyChanged("MM_PostOffice");
+				}
 			}
 		}
 		
@@ -7595,6 +7887,1221 @@ namespace SGPWebService.DB
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MM_PostOffices")]
+	public partial class MM_PostOffice : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _PostOfficeID;
+		
+		private string _PostOfficeName;
+		
+		private string _Address;
+		
+		private string _ZoneID;
+		
+		private string _ProvinceID;
+		
+		private string _Phone;
+		
+		private string _FaxNo;
+		
+		private string _Email;
+		
+		private bool _IsCollaborator;
+		
+		private string _Notes;
+		
+		private System.Nullable<System.DateTime> _LastEditDate;
+		
+		private System.Nullable<System.DateTime> _CreationDate;
+		
+		private string _TaxCode;
+		
+		private string _BankAccount;
+		
+		private string _MemberOf;
+		
+		private EntitySet<UMS_tblUserAccountPostOffice> _UMS_tblUserAccountPostOffices;
+		
+		private EntitySet<MM_Mailer> _MM_Mailers;
+		
+		private EntitySet<MM_Mailer> _MM_Mailers1;
+		
+		private EntitySet<MM_MailerDelivery> _MM_MailerDeliveries;
+		
+		private EntitySet<BS_Employee> _BS_Employees;
+		
+		private EntitySet<MM_PostOffice> _MM_PostOffices;
+		
+		private EntitySet<BS_Employee1> _BS_Employee1s;
+		
+		private EntityRef<BS_Province> _BS_Province;
+		
+		private EntityRef<MM_PostOffice> _MM_PostOffice1;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPostOfficeIDChanging(string value);
+    partial void OnPostOfficeIDChanged();
+    partial void OnPostOfficeNameChanging(string value);
+    partial void OnPostOfficeNameChanged();
+    partial void OnAddressChanging(string value);
+    partial void OnAddressChanged();
+    partial void OnZoneIDChanging(string value);
+    partial void OnZoneIDChanged();
+    partial void OnProvinceIDChanging(string value);
+    partial void OnProvinceIDChanged();
+    partial void OnPhoneChanging(string value);
+    partial void OnPhoneChanged();
+    partial void OnFaxNoChanging(string value);
+    partial void OnFaxNoChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnIsCollaboratorChanging(bool value);
+    partial void OnIsCollaboratorChanged();
+    partial void OnNotesChanging(string value);
+    partial void OnNotesChanged();
+    partial void OnLastEditDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastEditDateChanged();
+    partial void OnCreationDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreationDateChanged();
+    partial void OnTaxCodeChanging(string value);
+    partial void OnTaxCodeChanged();
+    partial void OnBankAccountChanging(string value);
+    partial void OnBankAccountChanged();
+    partial void OnMemberOfChanging(string value);
+    partial void OnMemberOfChanged();
+    #endregion
+		
+		public MM_PostOffice()
+		{
+			this._UMS_tblUserAccountPostOffices = new EntitySet<UMS_tblUserAccountPostOffice>(new Action<UMS_tblUserAccountPostOffice>(this.attach_UMS_tblUserAccountPostOffices), new Action<UMS_tblUserAccountPostOffice>(this.detach_UMS_tblUserAccountPostOffices));
+			this._MM_Mailers = new EntitySet<MM_Mailer>(new Action<MM_Mailer>(this.attach_MM_Mailers), new Action<MM_Mailer>(this.detach_MM_Mailers));
+			this._MM_Mailers1 = new EntitySet<MM_Mailer>(new Action<MM_Mailer>(this.attach_MM_Mailers1), new Action<MM_Mailer>(this.detach_MM_Mailers1));
+			this._MM_MailerDeliveries = new EntitySet<MM_MailerDelivery>(new Action<MM_MailerDelivery>(this.attach_MM_MailerDeliveries), new Action<MM_MailerDelivery>(this.detach_MM_MailerDeliveries));
+			this._BS_Employees = new EntitySet<BS_Employee>(new Action<BS_Employee>(this.attach_BS_Employees), new Action<BS_Employee>(this.detach_BS_Employees));
+			this._MM_PostOffices = new EntitySet<MM_PostOffice>(new Action<MM_PostOffice>(this.attach_MM_PostOffices), new Action<MM_PostOffice>(this.detach_MM_PostOffices));
+			this._BS_Employee1s = new EntitySet<BS_Employee1>(new Action<BS_Employee1>(this.attach_BS_Employee1s), new Action<BS_Employee1>(this.detach_BS_Employee1s));
+			this._BS_Province = default(EntityRef<BS_Province>);
+			this._MM_PostOffice1 = default(EntityRef<MM_PostOffice>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostOfficeID", DbType="VarChar(15) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string PostOfficeID
+		{
+			get
+			{
+				return this._PostOfficeID;
+			}
+			set
+			{
+				if ((this._PostOfficeID != value))
+				{
+					this.OnPostOfficeIDChanging(value);
+					this.SendPropertyChanging();
+					this._PostOfficeID = value;
+					this.SendPropertyChanged("PostOfficeID");
+					this.OnPostOfficeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostOfficeName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string PostOfficeName
+		{
+			get
+			{
+				return this._PostOfficeName;
+			}
+			set
+			{
+				if ((this._PostOfficeName != value))
+				{
+					this.OnPostOfficeNameChanging(value);
+					this.SendPropertyChanging();
+					this._PostOfficeName = value;
+					this.SendPropertyChanged("PostOfficeName");
+					this.OnPostOfficeNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NVarChar(100)")]
+		public string Address
+		{
+			get
+			{
+				return this._Address;
+			}
+			set
+			{
+				if ((this._Address != value))
+				{
+					this.OnAddressChanging(value);
+					this.SendPropertyChanging();
+					this._Address = value;
+					this.SendPropertyChanged("Address");
+					this.OnAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ZoneID", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string ZoneID
+		{
+			get
+			{
+				return this._ZoneID;
+			}
+			set
+			{
+				if ((this._ZoneID != value))
+				{
+					this.OnZoneIDChanging(value);
+					this.SendPropertyChanging();
+					this._ZoneID = value;
+					this.SendPropertyChanged("ZoneID");
+					this.OnZoneIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProvinceID", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string ProvinceID
+		{
+			get
+			{
+				return this._ProvinceID;
+			}
+			set
+			{
+				if ((this._ProvinceID != value))
+				{
+					if (this._BS_Province.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnProvinceIDChanging(value);
+					this.SendPropertyChanging();
+					this._ProvinceID = value;
+					this.SendPropertyChanged("ProvinceID");
+					this.OnProvinceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="NVarChar(25)")]
+		public string Phone
+		{
+			get
+			{
+				return this._Phone;
+			}
+			set
+			{
+				if ((this._Phone != value))
+				{
+					this.OnPhoneChanging(value);
+					this.SendPropertyChanging();
+					this._Phone = value;
+					this.SendPropertyChanged("Phone");
+					this.OnPhoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FaxNo", DbType="NVarChar(25)")]
+		public string FaxNo
+		{
+			get
+			{
+				return this._FaxNo;
+			}
+			set
+			{
+				if ((this._FaxNo != value))
+				{
+					this.OnFaxNoChanging(value);
+					this.SendPropertyChanging();
+					this._FaxNo = value;
+					this.SendPropertyChanged("FaxNo");
+					this.OnFaxNoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsCollaborator", DbType="Bit NOT NULL")]
+		public bool IsCollaborator
+		{
+			get
+			{
+				return this._IsCollaborator;
+			}
+			set
+			{
+				if ((this._IsCollaborator != value))
+				{
+					this.OnIsCollaboratorChanging(value);
+					this.SendPropertyChanging();
+					this._IsCollaborator = value;
+					this.SendPropertyChanged("IsCollaborator");
+					this.OnIsCollaboratorChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Notes", DbType="NVarChar(200)")]
+		public string Notes
+		{
+			get
+			{
+				return this._Notes;
+			}
+			set
+			{
+				if ((this._Notes != value))
+				{
+					this.OnNotesChanging(value);
+					this.SendPropertyChanging();
+					this._Notes = value;
+					this.SendPropertyChanged("Notes");
+					this.OnNotesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastEditDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastEditDate
+		{
+			get
+			{
+				return this._LastEditDate;
+			}
+			set
+			{
+				if ((this._LastEditDate != value))
+				{
+					this.OnLastEditDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastEditDate = value;
+					this.SendPropertyChanged("LastEditDate");
+					this.OnLastEditDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreationDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreationDate
+		{
+			get
+			{
+				return this._CreationDate;
+			}
+			set
+			{
+				if ((this._CreationDate != value))
+				{
+					this.OnCreationDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreationDate = value;
+					this.SendPropertyChanged("CreationDate");
+					this.OnCreationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TaxCode", DbType="VarChar(50)")]
+		public string TaxCode
+		{
+			get
+			{
+				return this._TaxCode;
+			}
+			set
+			{
+				if ((this._TaxCode != value))
+				{
+					this.OnTaxCodeChanging(value);
+					this.SendPropertyChanging();
+					this._TaxCode = value;
+					this.SendPropertyChanged("TaxCode");
+					this.OnTaxCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BankAccount", DbType="VarChar(50)")]
+		public string BankAccount
+		{
+			get
+			{
+				return this._BankAccount;
+			}
+			set
+			{
+				if ((this._BankAccount != value))
+				{
+					this.OnBankAccountChanging(value);
+					this.SendPropertyChanging();
+					this._BankAccount = value;
+					this.SendPropertyChanged("BankAccount");
+					this.OnBankAccountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MemberOf", DbType="VarChar(15)")]
+		public string MemberOf
+		{
+			get
+			{
+				return this._MemberOf;
+			}
+			set
+			{
+				if ((this._MemberOf != value))
+				{
+					if (this._MM_PostOffice1.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMemberOfChanging(value);
+					this.SendPropertyChanging();
+					this._MemberOf = value;
+					this.SendPropertyChanged("MemberOf");
+					this.OnMemberOfChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PostOffice_UMS_tblUserAccountPostOffice", Storage="_UMS_tblUserAccountPostOffices", ThisKey="PostOfficeID", OtherKey="PostOfficeID")]
+		public EntitySet<UMS_tblUserAccountPostOffice> UMS_tblUserAccountPostOffices
+		{
+			get
+			{
+				return this._UMS_tblUserAccountPostOffices;
+			}
+			set
+			{
+				this._UMS_tblUserAccountPostOffices.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PostOffice_MM_Mailer", Storage="_MM_Mailers", ThisKey="PostOfficeID", OtherKey="PostOfficeAcceptID")]
+		public EntitySet<MM_Mailer> MM_Mailers
+		{
+			get
+			{
+				return this._MM_Mailers;
+			}
+			set
+			{
+				this._MM_Mailers.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PostOffice_MM_Mailer1", Storage="_MM_Mailers1", ThisKey="PostOfficeID", OtherKey="PostOfficeRecieverMoneyID")]
+		public EntitySet<MM_Mailer> MM_Mailers1
+		{
+			get
+			{
+				return this._MM_Mailers1;
+			}
+			set
+			{
+				this._MM_Mailers1.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PostOffice_MM_MailerDelivery", Storage="_MM_MailerDeliveries", ThisKey="PostOfficeID", OtherKey="PostOfficeID")]
+		public EntitySet<MM_MailerDelivery> MM_MailerDeliveries
+		{
+			get
+			{
+				return this._MM_MailerDeliveries;
+			}
+			set
+			{
+				this._MM_MailerDeliveries.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PostOffice_BS_Employee", Storage="_BS_Employees", ThisKey="PostOfficeID", OtherKey="PostOfficeID")]
+		public EntitySet<BS_Employee> BS_Employees
+		{
+			get
+			{
+				return this._BS_Employees;
+			}
+			set
+			{
+				this._BS_Employees.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PostOffice_MM_PostOffice", Storage="_MM_PostOffices", ThisKey="PostOfficeID", OtherKey="MemberOf")]
+		public EntitySet<MM_PostOffice> MM_PostOffices
+		{
+			get
+			{
+				return this._MM_PostOffices;
+			}
+			set
+			{
+				this._MM_PostOffices.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PostOffice_BS_Employee1", Storage="_BS_Employee1s", ThisKey="PostOfficeID", OtherKey="PostOfficeID")]
+		public EntitySet<BS_Employee1> BS_Employee1s
+		{
+			get
+			{
+				return this._BS_Employee1s;
+			}
+			set
+			{
+				this._BS_Employee1s.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BS_Province_MM_PostOffice", Storage="_BS_Province", ThisKey="ProvinceID", OtherKey="ProvinceID", IsForeignKey=true)]
+		public BS_Province BS_Province
+		{
+			get
+			{
+				return this._BS_Province.Entity;
+			}
+			set
+			{
+				BS_Province previousValue = this._BS_Province.Entity;
+				if (((previousValue != value) 
+							|| (this._BS_Province.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._BS_Province.Entity = null;
+						previousValue.MM_PostOffices.Remove(this);
+					}
+					this._BS_Province.Entity = value;
+					if ((value != null))
+					{
+						value.MM_PostOffices.Add(this);
+						this._ProvinceID = value.ProvinceID;
+					}
+					else
+					{
+						this._ProvinceID = default(string);
+					}
+					this.SendPropertyChanged("BS_Province");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PostOffice_MM_PostOffice", Storage="_MM_PostOffice1", ThisKey="MemberOf", OtherKey="PostOfficeID", IsForeignKey=true)]
+		public MM_PostOffice MM_PostOffice1
+		{
+			get
+			{
+				return this._MM_PostOffice1.Entity;
+			}
+			set
+			{
+				MM_PostOffice previousValue = this._MM_PostOffice1.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_PostOffice1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_PostOffice1.Entity = null;
+						previousValue.MM_PostOffices.Remove(this);
+					}
+					this._MM_PostOffice1.Entity = value;
+					if ((value != null))
+					{
+						value.MM_PostOffices.Add(this);
+						this._MemberOf = value.PostOfficeID;
+					}
+					else
+					{
+						this._MemberOf = default(string);
+					}
+					this.SendPropertyChanged("MM_PostOffice1");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_UMS_tblUserAccountPostOffices(UMS_tblUserAccountPostOffice entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PostOffice = this;
+		}
+		
+		private void detach_UMS_tblUserAccountPostOffices(UMS_tblUserAccountPostOffice entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PostOffice = null;
+		}
+		
+		private void attach_MM_Mailers(MM_Mailer entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PostOffice = this;
+		}
+		
+		private void detach_MM_Mailers(MM_Mailer entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PostOffice = null;
+		}
+		
+		private void attach_MM_Mailers1(MM_Mailer entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PostOffice1 = this;
+		}
+		
+		private void detach_MM_Mailers1(MM_Mailer entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PostOffice1 = null;
+		}
+		
+		private void attach_MM_MailerDeliveries(MM_MailerDelivery entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PostOffice = this;
+		}
+		
+		private void detach_MM_MailerDeliveries(MM_MailerDelivery entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PostOffice = null;
+		}
+		
+		private void attach_BS_Employees(BS_Employee entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PostOffice = this;
+		}
+		
+		private void detach_BS_Employees(BS_Employee entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PostOffice = null;
+		}
+		
+		private void attach_MM_PostOffices(MM_PostOffice entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PostOffice1 = this;
+		}
+		
+		private void detach_MM_PostOffices(MM_PostOffice entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PostOffice1 = null;
+		}
+		
+		private void attach_BS_Employee1s(BS_Employee1 entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PostOffice = this;
+		}
+		
+		private void detach_BS_Employee1s(BS_Employee1 entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_PostOffice = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BS_Employees")]
+	public partial class BS_Employee1 : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _EmployeeID;
+		
+		private string _EmployeeName;
+		
+		private string _DepartmentID;
+		
+		private string _PostOfficeID;
+		
+		private System.Nullable<System.DateTime> _Birthday;
+		
+		private bool _IsActive;
+		
+		private string _Address;
+		
+		private string _Phone;
+		
+		private string _FaxNo;
+		
+		private string _Email;
+		
+		private string _Notes;
+		
+		private System.Nullable<System.DateTime> _LastEditDate;
+		
+		private System.Nullable<System.DateTime> _CreationDate;
+		
+		private string _MemberOf;
+		
+		private string _ProvinceID;
+		
+		private System.Nullable<bool> _IsCollaborators;
+		
+		private string _SGPEmployeeID;
+		
+		private string _Imei;
+		
+		private EntitySet<MM_MailerDelivery> _MM_MailerDeliveries;
+		
+		private EntityRef<MM_PostOffice> _MM_PostOffice;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnEmployeeIDChanging(string value);
+    partial void OnEmployeeIDChanged();
+    partial void OnEmployeeNameChanging(string value);
+    partial void OnEmployeeNameChanged();
+    partial void OnDepartmentIDChanging(string value);
+    partial void OnDepartmentIDChanged();
+    partial void OnPostOfficeIDChanging(string value);
+    partial void OnPostOfficeIDChanged();
+    partial void OnBirthdayChanging(System.Nullable<System.DateTime> value);
+    partial void OnBirthdayChanged();
+    partial void OnIsActiveChanging(bool value);
+    partial void OnIsActiveChanged();
+    partial void OnAddressChanging(string value);
+    partial void OnAddressChanged();
+    partial void OnPhoneChanging(string value);
+    partial void OnPhoneChanged();
+    partial void OnFaxNoChanging(string value);
+    partial void OnFaxNoChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnNotesChanging(string value);
+    partial void OnNotesChanged();
+    partial void OnLastEditDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastEditDateChanged();
+    partial void OnCreationDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreationDateChanged();
+    partial void OnMemberOfChanging(string value);
+    partial void OnMemberOfChanged();
+    partial void OnProvinceIDChanging(string value);
+    partial void OnProvinceIDChanged();
+    partial void OnIsCollaboratorsChanging(System.Nullable<bool> value);
+    partial void OnIsCollaboratorsChanged();
+    partial void OnSGPEmployeeIDChanging(string value);
+    partial void OnSGPEmployeeIDChanged();
+    partial void OnImeiChanging(string value);
+    partial void OnImeiChanged();
+    #endregion
+		
+		public BS_Employee1()
+		{
+			this._MM_MailerDeliveries = new EntitySet<MM_MailerDelivery>(new Action<MM_MailerDelivery>(this.attach_MM_MailerDeliveries), new Action<MM_MailerDelivery>(this.detach_MM_MailerDeliveries));
+			this._MM_PostOffice = default(EntityRef<MM_PostOffice>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeID", DbType="VarChar(15) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string EmployeeID
+		{
+			get
+			{
+				return this._EmployeeID;
+			}
+			set
+			{
+				if ((this._EmployeeID != value))
+				{
+					this.OnEmployeeIDChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeID = value;
+					this.SendPropertyChanged("EmployeeID");
+					this.OnEmployeeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string EmployeeName
+		{
+			get
+			{
+				return this._EmployeeName;
+			}
+			set
+			{
+				if ((this._EmployeeName != value))
+				{
+					this.OnEmployeeNameChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeName = value;
+					this.SendPropertyChanged("EmployeeName");
+					this.OnEmployeeNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartmentID", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string DepartmentID
+		{
+			get
+			{
+				return this._DepartmentID;
+			}
+			set
+			{
+				if ((this._DepartmentID != value))
+				{
+					this.OnDepartmentIDChanging(value);
+					this.SendPropertyChanging();
+					this._DepartmentID = value;
+					this.SendPropertyChanged("DepartmentID");
+					this.OnDepartmentIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostOfficeID", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string PostOfficeID
+		{
+			get
+			{
+				return this._PostOfficeID;
+			}
+			set
+			{
+				if ((this._PostOfficeID != value))
+				{
+					if (this._MM_PostOffice.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnPostOfficeIDChanging(value);
+					this.SendPropertyChanging();
+					this._PostOfficeID = value;
+					this.SendPropertyChanged("PostOfficeID");
+					this.OnPostOfficeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Birthday", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Birthday
+		{
+			get
+			{
+				return this._Birthday;
+			}
+			set
+			{
+				if ((this._Birthday != value))
+				{
+					this.OnBirthdayChanging(value);
+					this.SendPropertyChanging();
+					this._Birthday = value;
+					this.SendPropertyChanged("Birthday");
+					this.OnBirthdayChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive", DbType="Bit NOT NULL")]
+		public bool IsActive
+		{
+			get
+			{
+				return this._IsActive;
+			}
+			set
+			{
+				if ((this._IsActive != value))
+				{
+					this.OnIsActiveChanging(value);
+					this.SendPropertyChanging();
+					this._IsActive = value;
+					this.SendPropertyChanged("IsActive");
+					this.OnIsActiveChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NVarChar(150)")]
+		public string Address
+		{
+			get
+			{
+				return this._Address;
+			}
+			set
+			{
+				if ((this._Address != value))
+				{
+					this.OnAddressChanging(value);
+					this.SendPropertyChanging();
+					this._Address = value;
+					this.SendPropertyChanged("Address");
+					this.OnAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="NVarChar(25)")]
+		public string Phone
+		{
+			get
+			{
+				return this._Phone;
+			}
+			set
+			{
+				if ((this._Phone != value))
+				{
+					this.OnPhoneChanging(value);
+					this.SendPropertyChanging();
+					this._Phone = value;
+					this.SendPropertyChanged("Phone");
+					this.OnPhoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FaxNo", DbType="NVarChar(25)")]
+		public string FaxNo
+		{
+			get
+			{
+				return this._FaxNo;
+			}
+			set
+			{
+				if ((this._FaxNo != value))
+				{
+					this.OnFaxNoChanging(value);
+					this.SendPropertyChanging();
+					this._FaxNo = value;
+					this.SendPropertyChanged("FaxNo");
+					this.OnFaxNoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Notes", DbType="NVarChar(200)")]
+		public string Notes
+		{
+			get
+			{
+				return this._Notes;
+			}
+			set
+			{
+				if ((this._Notes != value))
+				{
+					this.OnNotesChanging(value);
+					this.SendPropertyChanging();
+					this._Notes = value;
+					this.SendPropertyChanged("Notes");
+					this.OnNotesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastEditDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastEditDate
+		{
+			get
+			{
+				return this._LastEditDate;
+			}
+			set
+			{
+				if ((this._LastEditDate != value))
+				{
+					this.OnLastEditDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastEditDate = value;
+					this.SendPropertyChanged("LastEditDate");
+					this.OnLastEditDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreationDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreationDate
+		{
+			get
+			{
+				return this._CreationDate;
+			}
+			set
+			{
+				if ((this._CreationDate != value))
+				{
+					this.OnCreationDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreationDate = value;
+					this.SendPropertyChanged("CreationDate");
+					this.OnCreationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MemberOf", DbType="VarChar(50)")]
+		public string MemberOf
+		{
+			get
+			{
+				return this._MemberOf;
+			}
+			set
+			{
+				if ((this._MemberOf != value))
+				{
+					this.OnMemberOfChanging(value);
+					this.SendPropertyChanging();
+					this._MemberOf = value;
+					this.SendPropertyChanged("MemberOf");
+					this.OnMemberOfChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProvinceID", DbType="VarChar(15)")]
+		public string ProvinceID
+		{
+			get
+			{
+				return this._ProvinceID;
+			}
+			set
+			{
+				if ((this._ProvinceID != value))
+				{
+					this.OnProvinceIDChanging(value);
+					this.SendPropertyChanging();
+					this._ProvinceID = value;
+					this.SendPropertyChanged("ProvinceID");
+					this.OnProvinceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsCollaborators", DbType="Bit")]
+		public System.Nullable<bool> IsCollaborators
+		{
+			get
+			{
+				return this._IsCollaborators;
+			}
+			set
+			{
+				if ((this._IsCollaborators != value))
+				{
+					this.OnIsCollaboratorsChanging(value);
+					this.SendPropertyChanging();
+					this._IsCollaborators = value;
+					this.SendPropertyChanged("IsCollaborators");
+					this.OnIsCollaboratorsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SGPEmployeeID", DbType="NVarChar(20)")]
+		public string SGPEmployeeID
+		{
+			get
+			{
+				return this._SGPEmployeeID;
+			}
+			set
+			{
+				if ((this._SGPEmployeeID != value))
+				{
+					this.OnSGPEmployeeIDChanging(value);
+					this.SendPropertyChanging();
+					this._SGPEmployeeID = value;
+					this.SendPropertyChanged("SGPEmployeeID");
+					this.OnSGPEmployeeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Imei", DbType="NVarChar(20)")]
+		public string Imei
+		{
+			get
+			{
+				return this._Imei;
+			}
+			set
+			{
+				if ((this._Imei != value))
+				{
+					this.OnImeiChanging(value);
+					this.SendPropertyChanging();
+					this._Imei = value;
+					this.SendPropertyChanged("Imei");
+					this.OnImeiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BS_Employee1_MM_MailerDelivery", Storage="_MM_MailerDeliveries", ThisKey="EmployeeID", OtherKey="EmployeeID")]
+		public EntitySet<MM_MailerDelivery> MM_MailerDeliveries
+		{
+			get
+			{
+				return this._MM_MailerDeliveries;
+			}
+			set
+			{
+				this._MM_MailerDeliveries.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_PostOffice_BS_Employee1", Storage="_MM_PostOffice", ThisKey="PostOfficeID", OtherKey="PostOfficeID", IsForeignKey=true)]
+		public MM_PostOffice MM_PostOffice
+		{
+			get
+			{
+				return this._MM_PostOffice.Entity;
+			}
+			set
+			{
+				MM_PostOffice previousValue = this._MM_PostOffice.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_PostOffice.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_PostOffice.Entity = null;
+						previousValue.BS_Employee1s.Remove(this);
+					}
+					this._MM_PostOffice.Entity = value;
+					if ((value != null))
+					{
+						value.BS_Employee1s.Add(this);
+						this._PostOfficeID = value.PostOfficeID;
+					}
+					else
+					{
+						this._PostOfficeID = default(string);
+					}
+					this.SendPropertyChanged("MM_PostOffice");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_MM_MailerDeliveries(MM_MailerDelivery entity)
+		{
+			this.SendPropertyChanging();
+			entity.BS_Employee1 = this;
+		}
+		
+		private void detach_MM_MailerDeliveries(MM_MailerDelivery entity)
+		{
+			this.SendPropertyChanging();
+			entity.BS_Employee1 = null;
 		}
 	}
 }

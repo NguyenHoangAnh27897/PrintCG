@@ -582,5 +582,99 @@ namespace SGPWebService
                 return false;
             }
         }
+
+        public bool addChiTietHoaDon(string soCT, DateTime createdate, string soCG, int cuocDV, int vat, int total, string tenhanghoa)
+        {
+            try
+            {
+                var result = new DB.SGP_ChiTietHoaDon()
+                {
+                    SoCT = soCT,
+                    CreateDate = createdate,
+                    CGNumber =soCG,
+                    CuocDV = cuocDV,
+                    VAT = vat,
+                    Total = total,
+                    PackageName = tenhanghoa
+                };
+                api.SGP_ChiTietHoaDons.InsertOnSubmit(result);
+                api.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool addHoaDon(string soCT, string soHD, DateTime createdate)
+        {
+            try
+            {
+                var result = new DB.SGP_HoaDon()
+                {
+                    SoCT = soCT,
+                    InvoiceNumber = soHD,
+                    CreateDate = createdate
+                };
+                api.SGP_HoaDons.InsertOnSubmit(result);
+                api.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public List<DataClass.HoaDon> getHoaDon(DateTime Fromdate, DateTime Todate)
+        {
+            var query = (from hd in api.SGP_HoaDons
+                         where (hd.CreateDate >= Fromdate && hd.CreateDate <= Todate) 
+                         select new DataClass.HoaDon()
+                         {
+                            SoCT = hd.SoCT,
+                            SoHD = hd.InvoiceNumber,
+                            CreateDate = hd.CreateDate
+                         });
+            return query.Distinct().ToList();
+        }
+
+        public List<DataClass.ChiTietHoaDon> getChiTietHoaDon(string soCT)
+        {
+            var query = (from cthd in api.SGP_ChiTietHoaDons
+                         where cthd.SoCT == soCT
+                         select new DataClass.ChiTietHoaDon()
+                         {
+                             SoCT = cthd.SoCT,//5
+                             SoCG = cthd.CGNumber,//3
+                             CreateDate = cthd.CreateDate,//0
+                             TenHangHoa = cthd.PackageName,//4
+                             CuocDV = cthd.CuocDV,//1
+                             VAT = cthd.VAT,//7
+                             Total = cthd.Total,//6
+                             ID = cthd.ID//2
+                         });
+            return query.ToList();
+        }
+
+        public string getPostOfficeName(string postofficeid)
+        {
+            var name = from po in pms.MM_PostOffices
+                       where po.PostOfficeID == postofficeid
+                       select po.PostOfficeName;
+            string postname = name.FirstOrDefault();
+            return postname;
+        }
+
+        public string getUserName(string userid)
+        {
+            var name = from po in pms.BS_Employees
+                       where po.EmployeeID == userid
+                       select po.EmployeeName;
+
+            string username = name.FirstOrDefault();
+            return username;
+        }
     }
 }

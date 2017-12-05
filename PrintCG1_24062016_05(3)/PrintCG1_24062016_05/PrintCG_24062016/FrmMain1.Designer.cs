@@ -53,6 +53,7 @@
             this.navBarItem27 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem28 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem32 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem33 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem20 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem21 = new DevExpress.XtraNavBar.NavBarItem();
@@ -74,7 +75,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblmabc = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblmanv = new System.Windows.Forms.ToolStripStatusLabel();
-            this.navBarItem33 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem34 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -161,7 +162,8 @@
             this.navBarItem30,
             this.navBarItem31,
             this.navBarItem32,
-            this.navBarItem33});
+            this.navBarItem33,
+            this.navBarItem34});
             this.navBarControl1.Location = new System.Drawing.Point(-4, 3);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 200;
@@ -271,7 +273,8 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem27),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem28),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem32),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem33)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem33),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem34)});
             this.navBarGroup3.Name = "navBarGroup3";
             // 
             // navBarItem18
@@ -309,6 +312,12 @@
             this.navBarItem32.Caption = "Tracking API";
             this.navBarItem32.Name = "navBarItem32";
             this.navBarItem32.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem32_LinkClicked);
+            // 
+            // navBarItem33
+            // 
+            this.navBarItem33.Caption = "Khách hàng đặc biệt";
+            this.navBarItem33.Name = "navBarItem33";
+            this.navBarItem33.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem33_LinkClicked);
             // 
             // navBarGroup4
             // 
@@ -446,11 +455,11 @@
             this.lblmanv.Size = new System.Drawing.Size(46, 17);
             this.lblmanv.Text = "Mã NV:";
             // 
-            // navBarItem33
+            // navBarItem34
             // 
-            this.navBarItem33.Caption = "Khách hàng đặc biệt";
-            this.navBarItem33.Name = "navBarItem33";
-            this.navBarItem33.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem33_LinkClicked);
+            this.navBarItem34.Caption = "In Hoá đơn";
+            this.navBarItem34.Name = "navBarItem34";
+            this.navBarItem34.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem34_LinkClicked);
             // 
             // FrmMain1
             // 
@@ -524,6 +533,7 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem31;
         private DevExpress.XtraNavBar.NavBarItem navBarItem32;
         private DevExpress.XtraNavBar.NavBarItem navBarItem33;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem34;
 
     }
 }

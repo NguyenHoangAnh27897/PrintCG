@@ -100,4 +100,36 @@ namespace SGPWebService.DataClass
         public string CustomerID { get; set; }
         public string CustomerName { get; set; }
     }
+
+    public class HoaDon
+    {
+        public string SoCT { get; set; }
+        public string SoHD { get; set; }
+        public int ID { get; set; }
+        public DateTime? CreateDate { get; set; }
+
+    }
+
+    public class ChiTietHoaDon
+    {
+        public string SoCT { get; set; }
+        public string TenHangHoa { get; set; }
+        public string SoCG { get; set; }
+        public DateTime? CreateDate { get; set; }
+        public int? CuocDV { get; set; }
+        public int? VAT { get; set; }
+        public int? Total { get; set; }
+        public int ID { get; set; }
+
+    }
+
+    public class getPostOfficeName
+    {
+        public string PostOfficeName { get; set; }
+    }
+
+    public class getUserName
+    {
+        public string UserName { get; set; }
+    }
 }

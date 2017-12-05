@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.375, 22.5" name="SGPMain">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.5, 22.5" name="SGPMain">
   <DataContextMoniker Name="/SGPMainDataContext" />
   <nestedChildShapes>
     <classShape Id="cd59a79e-eb06-41ff-baa0-68f35657ad6d" absoluteBounds="0.5, 0.5, 2, 3.6939111328124996">
@@ -72,7 +72,7 @@
         <classShapeMoniker Id="c072fb8b-3885-4426-873c-56dfe78a54fc" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(6.375 : 5.53125); (6.08333333333333 : 5.53125 : JumpStart); (5.91666666666667 : 5.53125 : JumpEnd); (5.5 : 5.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(6.375 : 5.53125); (6.20833333333333 : 5.53125 : JumpStart); (6.04166666666667 : 5.53125 : JumpEnd); (5.83333333333333 : 5.53125 : JumpStart); (5.66666666666667 : 5.53125 : JumpEnd); (5.5 : 5.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SGPMainDataContext/MM_Customer/MM_Customer_MM_Mailer" />
       <nodes>
         <classShapeMoniker Id="b6d102f4-f81a-42e7-9311-40ddeddf0b75" />
@@ -92,7 +92,7 @@
         <elementListCompartment Id="7a68caaf-ab32-4906-a7d1-6bb195537639" absoluteBounds="5.89, 14.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.5 : 15.7412019856771); (5.54166666666667 : 15.7412019856771 : JumpStart); (5.70833333333333 : 15.7412019856771 : JumpEnd); (5.875 : 15.7412019856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 15.7412019856771); (5.875 : 15.7412019856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SGPMainDataContext/MM_Mailer/MM_Mailer_MM_PackingListInternalDetail" />
       <nodes>
         <classShapeMoniker Id="c072fb8b-3885-4426-873c-56dfe78a54fc" />
@@ -105,7 +105,7 @@
         <elementListCompartment Id="3b0e0418-63d1-4c8d-b572-855a695e57fa" absoluteBounds="0.76499999999999968, 9.71, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 12.1546134440104); (3.25 : 12.1546134440104); (3.25 : 19.4531884765625); (5.875 : 19.4531884765625); (5.875 : 17.3574039713542); (5.625 : 17.3574039713542); (5.625 : 14.0881168619792); (6.875 : 14.0881168619792); (6.875 : 14.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 12.1546134440104); (3.25 : 12.1546134440104); (3.25 : 19.4531884765625); (4.35416666666667 : 19.4531884765625 : JumpStart); (4.52083333333333 : 19.4531884765625 : JumpEnd); (5.875 : 19.4531884765625); (5.875 : 17.3574039713542); (5.625 : 17.3574039713542); (5.625 : 14.0881168619792); (6.875 : 14.0881168619792); (6.875 : 14.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SGPMainDataContext/MM_PackingListInternal/MM_PackingListInternal_MM_PackingListInternalDetail" />
       <nodes>
         <classShapeMoniker Id="1127109d-bc84-4706-9928-081f071a38cb" />
@@ -118,7 +118,7 @@
         <elementListCompartment Id="97921882-d05f-492a-a864-dae7fb229479" absoluteBounds="6.515, 9.835, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(6.5 : 11.6065584309896); (6 : 11.6065584309896); (6 : 4.96799967447917); (4.58333333333333 : 4.96799967447917 : JumpStart); (4.41666666666667 : 4.96799967447917 : JumpEnd); (4.34895983333333 : 4.96799967447917 : JumpStart); (4.18229316666667 : 4.96799967447917 : JumpEnd); (2.75 : 4.96799967447917); (2.75 : 9.0208154296875); (1.5 : 9.0208154296875); (1.5 : 8.7708154296875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.5 : 11.6065584309896); (5.75 : 11.6065584309896); (5.75 : 4.96799967447917); (4.58333333333333 : 4.96799967447917 : JumpStart); (4.41666666666667 : 4.96799967447917 : JumpEnd); (2.75 : 4.96799967447917); (2.75 : 9.0208154296875); (1.5 : 9.0208154296875); (1.5 : 8.7708154296875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/SGPMainDataContext/MM_MailerDelivery/MM_MailerDelivery_MM_MailerDeliveryDetail" />
       <nodes>
         <classShapeMoniker Id="8df32e77-936a-4663-bbb6-241ed4e837f4" />
@@ -163,7 +163,7 @@
         <elementListCompartment Id="f9cbc355-57b9-4a8f-9191-7bf59ea46b08" absoluteBounds="9.14, 5.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(4.2656265 : 4.78049967447917); (4.2656265 : 5.0625); (5.91666666666667 : 5.0625 : JumpStart); (6.08333333333333 : 5.0625 : JumpEnd); (6.3125 : 5.0625); (6.3125 : 8.92942545572917); (9.03125 : 8.92942545572917); (9.03125 : 6.35659912109375); (9.125 : 6.35659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 3.70274983723958); (6.125 : 3.70274983723958); (6.125 : 3.09780110677083); (8.75 : 3.09780110677083); (8.75 : 4.82851399739583); (10.125 : 4.82851399739583); (10.125 : 5.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/SGPMainDataContext/BS_Province/BS_Province_BS_District" />
       <nodes>
         <classShapeMoniker Id="9513b944-3c58-47b9-8dfd-76eab2c82cf5" />
@@ -176,5 +176,80 @@
         <elementListCompartment Id="b3ae38f6-d99e-4453-bc2c-c9765a710948" absoluteBounds="9.015, 0.96, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="ac6b77b1-5460-49bf-b482-e6573e60cd9d" absoluteBounds="10.75, 8, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/SGPMainDataContext/MM_PostOffice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6227c6b-e995-46ea-b65c-5857fbb84671" absoluteBounds="10.765, 8.46, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.9687495 : 8); (11.9687495 : 0.4375); (5.59375 : 0.4375); (5.59375 : 1.08695077669271); (5.5 : 1.08695077669271)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SGPMainDataContext/MM_PostOffice/MM_PostOffice_UMS_tblUserAccountPostOffice" />
+      <nodes>
+        <classShapeMoniker Id="ac6b77b1-5460-49bf-b482-e6573e60cd9d" />
+        <classShapeMoniker Id="3b0b9cae-31e1-4a9a-9d89-f7be8195541c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 8.96269409179687); (10.5833333333333 : 8.96269409179687 : JumpStart); (10.4166666666667 : 8.96269409179687 : JumpEnd); (6.20833333333333 : 8.96269409179687 : JumpStart); (6.04166666666667 : 8.96269409179687 : JumpEnd); (5.83333333333333 : 8.96269409179687 : JumpStart); (5.66666666666667 : 8.96269409179687 : JumpEnd); (5.5 : 8.96269409179687)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SGPMainDataContext/MM_PostOffice/MM_PostOffice_MM_Mailer" />
+      <nodes>
+        <classShapeMoniker Id="ac6b77b1-5460-49bf-b482-e6573e60cd9d" />
+        <classShapeMoniker Id="c072fb8b-3885-4426-873c-56dfe78a54fc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 9.12096272786458); (10.5833333333333 : 9.12096272786458 : JumpStart); (10.4166666666667 : 9.12096272786458 : JumpEnd); (6.20833333333333 : 9.12096272786458 : JumpStart); (6.04166666666667 : 9.12096272786458 : JumpEnd); (5.83333333333333 : 9.12096272786458 : JumpStart); (5.66666666666667 : 9.12096272786458 : JumpEnd); (5.5 : 9.12096272786458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SGPMainDataContext/MM_PostOffice/MM_PostOffice_MM_Mailer1" />
+      <nodes>
+        <classShapeMoniker Id="ac6b77b1-5460-49bf-b482-e6573e60cd9d" />
+        <classShapeMoniker Id="c072fb8b-3885-4426-873c-56dfe78a54fc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 9.78125); (8.5 : 9.78125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SGPMainDataContext/MM_PostOffice/MM_PostOffice_MM_MailerDelivery" />
+      <nodes>
+        <classShapeMoniker Id="ac6b77b1-5460-49bf-b482-e6573e60cd9d" />
+        <classShapeMoniker Id="8df32e77-936a-4663-bbb6-241ed4e837f4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.15625 : 11.6939111328125); (12.15625 : 20.1354077148438); (8.125 : 20.1354077148438)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SGPMainDataContext/MM_PostOffice/MM_PostOffice_BS_Employee" />
+      <nodes>
+        <classShapeMoniker Id="ac6b77b1-5460-49bf-b482-e6573e60cd9d" />
+        <classShapeMoniker Id="38d66a87-effb-4dd3-996c-292b97f28d01" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.27287675585938); (6.125 : 4.27287675585938); (6.125 : 9.24192545572917); (10.5 : 9.24192545572917); (10.5 : 7.75); (11.32812275 : 7.75); (11.32812275 : 8)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SGPMainDataContext/BS_Province/BS_Province_MM_PostOffice" />
+      <nodes>
+        <classShapeMoniker Id="9513b944-3c58-47b9-8dfd-76eab2c82cf5" />
+        <classShapeMoniker Id="ac6b77b1-5460-49bf-b482-e6573e60cd9d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.75 : 9.28255453725962); (13 : 9.28255453725962); (13 : 10.4382328350361); (12.75 : 10.4382328350361)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SGPMainDataContext/MM_PostOffice/MM_PostOffice_MM_PostOffice" />
+      <nodes>
+        <classShapeMoniker Id="ac6b77b1-5460-49bf-b482-e6573e60cd9d" />
+        <classShapeMoniker Id="ac6b77b1-5460-49bf-b482-e6573e60cd9d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7d6af660-0c06-482a-9c2b-31de14c01a18" absoluteBounds="9, 12.625, 2, 4.2708154296875">
+      <DataClassMoniker Name="/SGPMainDataContext/BS_Employee1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38d7993a-691f-4971-84e2-c2b45df7ac94" absoluteBounds="9.015, 13.085, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9 : 13.2315584309896); (8.5 : 13.2315584309896)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SGPMainDataContext/BS_Employee1/BS_Employee1_MM_MailerDelivery" />
+      <nodes>
+        <classShapeMoniker Id="7d6af660-0c06-482a-9c2b-31de14c01a18" />
+        <classShapeMoniker Id="8df32e77-936a-4663-bbb6-241ed4e837f4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.546873 : 11.6939111328125); (11.546873 : 14.7604077148437); (11 : 14.7604077148437)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SGPMainDataContext/MM_PostOffice/MM_PostOffice_BS_Employee1" />
+      <nodes>
+        <classShapeMoniker Id="ac6b77b1-5460-49bf-b482-e6573e60cd9d" />
+        <classShapeMoniker Id="7d6af660-0c06-482a-9c2b-31de14c01a18" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

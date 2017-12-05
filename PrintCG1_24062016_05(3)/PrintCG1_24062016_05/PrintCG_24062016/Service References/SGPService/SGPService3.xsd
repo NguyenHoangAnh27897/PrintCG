@@ -14,6 +14,7 @@
       <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
       <xs:element minOccurs="0" name="LastEditDate" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="MM_Mailers" nillable="true" type="tns:ArrayOfMM_Mailer" />
+      <xs:element minOccurs="0" name="MM_PostOffices" nillable="true" type="tns:ArrayOfMM_PostOffice" />
       <xs:element minOccurs="0" name="PhoneCode" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ProvinceID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ProvinceName" nillable="true" type="xs:string" />
@@ -73,6 +74,8 @@
       <xs:element minOccurs="0" name="MM_MailerDeliveryDetails" nillable="true" type="tns:ArrayOfMM_MailerDeliveryDetail" />
       <xs:element minOccurs="0" name="MM_MailerDeliveryDetails1" nillable="true" type="tns:ArrayOfMM_MailerDeliveryDetail" />
       <xs:element minOccurs="0" name="MM_PackingListInternalDetails" nillable="true" type="tns:ArrayOfMM_PackingListInternalDetail" />
+      <xs:element minOccurs="0" name="MM_PostOffice" nillable="true" type="tns:MM_PostOffice" />
+      <xs:element minOccurs="0" name="MM_PostOffice1" nillable="true" type="tns:MM_PostOffice" />
       <xs:element minOccurs="0" name="MM_ServiceType" nillable="true" type="tns:MM_ServiceType" />
       <xs:element minOccurs="0" name="MM_Status" nillable="true" type="tns:MM_Status" />
       <xs:element minOccurs="0" name="MailerDescription" nillable="true" type="xs:string" />
@@ -191,6 +194,7 @@
   <xs:complexType name="MM_MailerDelivery">
     <xs:sequence>
       <xs:element minOccurs="0" name="BS_Employee" nillable="true" type="tns:BS_Employee" />
+      <xs:element minOccurs="0" name="BS_Employee1" nillable="true" type="tns:BS_Employee1" />
       <xs:element minOccurs="0" name="CreationDate" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="DocumentDate" nillable="true" type="xs:dateTime" />
@@ -201,6 +205,7 @@
       <xs:element minOccurs="0" name="LastSyncDate" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="LastUpdDate" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="MM_MailerDeliveryDetails" nillable="true" type="tns:ArrayOfMM_MailerDeliveryDetail" />
+      <xs:element minOccurs="0" name="MM_PostOffice" nillable="true" type="tns:MM_PostOffice" />
       <xs:element minOccurs="0" name="MailerCount" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="NumberOfPackage" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PostOfficeID" nillable="true" type="xs:string" />
@@ -229,6 +234,7 @@
       <xs:element minOccurs="0" name="IsCollaborators" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="LastEditDate" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="MM_MailerDeliveries" nillable="true" type="tns:ArrayOfMM_MailerDelivery" />
+      <xs:element minOccurs="0" name="MM_PostOffice" nillable="true" type="tns:MM_PostOffice" />
       <xs:element minOccurs="0" name="MemberOf" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
@@ -244,6 +250,116 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfMM_MailerDelivery" nillable="true" type="tns:ArrayOfMM_MailerDelivery" />
+  <xs:complexType name="MM_PostOffice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BS_Employee1s" nillable="true" type="tns:ArrayOfBS_Employee1" />
+      <xs:element minOccurs="0" name="BS_Employees" nillable="true" type="tns:ArrayOfBS_Employee" />
+      <xs:element minOccurs="0" name="BS_Province" nillable="true" type="tns:BS_Province" />
+      <xs:element minOccurs="0" name="BankAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreationDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FaxNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsCollaborator" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastEditDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MM_MailerDeliveries" nillable="true" type="tns:ArrayOfMM_MailerDelivery" />
+      <xs:element minOccurs="0" name="MM_Mailers" nillable="true" type="tns:ArrayOfMM_Mailer" />
+      <xs:element minOccurs="0" name="MM_Mailers1" nillable="true" type="tns:ArrayOfMM_Mailer" />
+      <xs:element minOccurs="0" name="MM_PostOffice1" nillable="true" type="tns:MM_PostOffice" />
+      <xs:element minOccurs="0" name="MM_PostOffices" nillable="true" type="tns:ArrayOfMM_PostOffice" />
+      <xs:element minOccurs="0" name="MemberOf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostOfficeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostOfficeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProvinceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UMS_tblUserAccountPostOffices" nillable="true" type="tns:ArrayOfUMS_tblUserAccountPostOffice" />
+      <xs:element minOccurs="0" name="ZoneID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MM_PostOffice" nillable="true" type="tns:MM_PostOffice" />
+  <xs:complexType name="ArrayOfBS_Employee1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BS_Employee1" nillable="true" type="tns:BS_Employee1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBS_Employee1" nillable="true" type="tns:ArrayOfBS_Employee1" />
+  <xs:complexType name="BS_Employee1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Birthday" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreationDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DepartmentID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FaxNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Imei" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsCollaborators" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastEditDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MM_MailerDeliveries" nillable="true" type="tns:ArrayOfMM_MailerDelivery" />
+      <xs:element minOccurs="0" name="MM_PostOffice" nillable="true" type="tns:MM_PostOffice" />
+      <xs:element minOccurs="0" name="MemberOf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostOfficeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProvinceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SGPEmployeeID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BS_Employee1" nillable="true" type="tns:BS_Employee1" />
+  <xs:complexType name="ArrayOfBS_Employee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BS_Employee" nillable="true" type="tns:BS_Employee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBS_Employee" nillable="true" type="tns:ArrayOfBS_Employee" />
+  <xs:complexType name="ArrayOfMM_PostOffice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MM_PostOffice" nillable="true" type="tns:MM_PostOffice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMM_PostOffice" nillable="true" type="tns:ArrayOfMM_PostOffice" />
+  <xs:complexType name="ArrayOfUMS_tblUserAccountPostOffice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UMS_tblUserAccountPostOffice" nillable="true" type="tns:UMS_tblUserAccountPostOffice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUMS_tblUserAccountPostOffice" nillable="true" type="tns:ArrayOfUMS_tblUserAccountPostOffice" />
+  <xs:complexType name="UMS_tblUserAccountPostOffice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreationDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastEditDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MM_PostOffice" nillable="true" type="tns:MM_PostOffice" />
+      <xs:element minOccurs="0" name="PostOfficeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UMS_tblUserAccount" nillable="true" type="tns:UMS_tblUserAccount" />
+      <xs:element minOccurs="0" name="UserGroupID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UMS_tblUserAccountPostOffice" nillable="true" type="tns:UMS_tblUserAccountPostOffice" />
+  <xs:complexType name="UMS_tblUserAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CantChangePwd" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CreationDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateOfChangePwd" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FAdm" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FGroup" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FSpv" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastEditDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MemberOf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MustChangePwd" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PwdNeverExpire" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UMS_tblUserAccountPostOffices" nillable="true" type="tns:ArrayOfUMS_tblUserAccountPostOffice" />
+      <xs:element minOccurs="0" name="UserGroupID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserGroupName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UMS_tblUserAccount" nillable="true" type="tns:UMS_tblUserAccount" />
   <xs:complexType name="ArrayOfMM_PackingListInternalDetail">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="MM_PackingListInternalDetail" nillable="true" type="tns:MM_PackingListInternalDetail" />

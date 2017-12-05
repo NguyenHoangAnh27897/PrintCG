@@ -182,6 +182,42 @@
   <wsdl:message name="ISGPService_addCustomerID_OutputMessage">
     <wsdl:part name="parameters" element="tns:addCustomerIDResponse" />
   </wsdl:message>
+  <wsdl:message name="ISGPService_addChiTietHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:addChiTietHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_addChiTietHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addChiTietHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_addHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:addHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_addHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:getHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getChiTietHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:getChiTietHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getChiTietHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getChiTietHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getPostOfficeName_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPostOfficeName" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getPostOfficeName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPostOfficeNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserName" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserNameResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISGPService">
     <wsdl:operation name="login">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/login" message="tns:ISGPService_login_InputMessage" />
@@ -298,6 +334,30 @@
     <wsdl:operation name="addCustomerID">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/addCustomerID" message="tns:ISGPService_addCustomerID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/addCustomerIDResponse" message="tns:ISGPService_addCustomerID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addChiTietHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/addChiTietHoaDon" message="tns:ISGPService_addChiTietHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/addChiTietHoaDonResponse" message="tns:ISGPService_addChiTietHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/addHoaDon" message="tns:ISGPService_addHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/addHoaDonResponse" message="tns:ISGPService_addHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getHoaDon" message="tns:ISGPService_getHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getHoaDonResponse" message="tns:ISGPService_getHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getChiTietHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getChiTietHoaDon" message="tns:ISGPService_getChiTietHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getChiTietHoaDonResponse" message="tns:ISGPService_getChiTietHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPostOfficeName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getPostOfficeName" message="tns:ISGPService_getPostOfficeName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getPostOfficeNameResponse" message="tns:ISGPService_getPostOfficeName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getUserName" message="tns:ISGPService_getUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getUserNameResponse" message="tns:ISGPService_getUserName_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISGPService" type="tns:ISGPService">
@@ -556,6 +616,60 @@
     </wsdl:operation>
     <wsdl:operation name="addCustomerID">
       <soap:operation soapAction="http://tempuri.org/ISGPService/addCustomerID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addChiTietHoaDon">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/addChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addHoaDon">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/addHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHoaDon">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getChiTietHoaDon">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPostOfficeName">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getPostOfficeName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserName">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getUserName" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

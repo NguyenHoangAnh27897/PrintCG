@@ -468,4 +468,97 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="addChiTietHoaDon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="soCT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="createdate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="soCG" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cuocDV" type="xs:int" />
+        <xs:element minOccurs="0" name="vat" type="xs:int" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="tenhanghoa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addChiTietHoaDonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addChiTietHoaDonResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addHoaDon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="soCT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="soHD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="createdate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addHoaDonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addHoaDonResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getHoaDon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fromdate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Todate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getHoaDonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="getHoaDonResult" nillable="true" type="q18:ArrayOfHoaDon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getChiTietHoaDon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="soCT" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getChiTietHoaDonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="getChiTietHoaDonResult" nillable="true" type="q19:ArrayOfChiTietHoaDon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPostOfficeName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="postofficeid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPostOfficeNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getPostOfficeNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getUserNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

@@ -60,6 +60,12 @@ namespace SGPWebService.DB
     partial void InsertSGP_CustomerWithZone(SGP_CustomerWithZone instance);
     partial void UpdateSGP_CustomerWithZone(SGP_CustomerWithZone instance);
     partial void DeleteSGP_CustomerWithZone(SGP_CustomerWithZone instance);
+    partial void InsertSGP_ChiTietHoaDon(SGP_ChiTietHoaDon instance);
+    partial void UpdateSGP_ChiTietHoaDon(SGP_ChiTietHoaDon instance);
+    partial void DeleteSGP_ChiTietHoaDon(SGP_ChiTietHoaDon instance);
+    partial void InsertSGP_HoaDon(SGP_HoaDon instance);
+    partial void UpdateSGP_HoaDon(SGP_HoaDon instance);
+    partial void DeleteSGP_HoaDon(SGP_HoaDon instance);
     #endregion
 		
 		public SGPAPIDataContext() : 
@@ -169,6 +175,22 @@ namespace SGPWebService.DB
 			get
 			{
 				return this.GetTable<SGP_CustomerWithZone>();
+			}
+		}
+		
+		public System.Data.Linq.Table<SGP_ChiTietHoaDon> SGP_ChiTietHoaDons
+		{
+			get
+			{
+				return this.GetTable<SGP_ChiTietHoaDon>();
+			}
+		}
+		
+		public System.Data.Linq.Table<SGP_HoaDon> SGP_HoaDons
+		{
+			get
+			{
+				return this.GetTable<SGP_HoaDon>();
 			}
 		}
 	}
@@ -1944,6 +1966,370 @@ namespace SGPWebService.DB
 					this._CustomerName = value;
 					this.SendPropertyChanged("CustomerName");
 					this.OnCustomerNameChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SGP_ChiTietHoaDon")]
+	public partial class SGP_ChiTietHoaDon : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _CGNumber;
+		
+		private string _PackageName;
+		
+		private System.Nullable<int> _CuocDV;
+		
+		private System.Nullable<int> _VAT;
+		
+		private System.Nullable<int> _Total;
+		
+		private string _SoCT;
+		
+		private System.Nullable<System.DateTime> _CreateDate;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnCGNumberChanging(string value);
+    partial void OnCGNumberChanged();
+    partial void OnPackageNameChanging(string value);
+    partial void OnPackageNameChanged();
+    partial void OnCuocDVChanging(System.Nullable<int> value);
+    partial void OnCuocDVChanged();
+    partial void OnVATChanging(System.Nullable<int> value);
+    partial void OnVATChanged();
+    partial void OnTotalChanging(System.Nullable<int> value);
+    partial void OnTotalChanged();
+    partial void OnSoCTChanging(string value);
+    partial void OnSoCTChanged();
+    partial void OnCreateDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreateDateChanged();
+    #endregion
+		
+		public SGP_ChiTietHoaDon()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CGNumber", DbType="NVarChar(50)")]
+		public string CGNumber
+		{
+			get
+			{
+				return this._CGNumber;
+			}
+			set
+			{
+				if ((this._CGNumber != value))
+				{
+					this.OnCGNumberChanging(value);
+					this.SendPropertyChanging();
+					this._CGNumber = value;
+					this.SendPropertyChanged("CGNumber");
+					this.OnCGNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PackageName", DbType="NVarChar(50)")]
+		public string PackageName
+		{
+			get
+			{
+				return this._PackageName;
+			}
+			set
+			{
+				if ((this._PackageName != value))
+				{
+					this.OnPackageNameChanging(value);
+					this.SendPropertyChanging();
+					this._PackageName = value;
+					this.SendPropertyChanged("PackageName");
+					this.OnPackageNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CuocDV", DbType="Int")]
+		public System.Nullable<int> CuocDV
+		{
+			get
+			{
+				return this._CuocDV;
+			}
+			set
+			{
+				if ((this._CuocDV != value))
+				{
+					this.OnCuocDVChanging(value);
+					this.SendPropertyChanging();
+					this._CuocDV = value;
+					this.SendPropertyChanged("CuocDV");
+					this.OnCuocDVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VAT", DbType="Int")]
+		public System.Nullable<int> VAT
+		{
+			get
+			{
+				return this._VAT;
+			}
+			set
+			{
+				if ((this._VAT != value))
+				{
+					this.OnVATChanging(value);
+					this.SendPropertyChanging();
+					this._VAT = value;
+					this.SendPropertyChanged("VAT");
+					this.OnVATChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Total", DbType="Int")]
+		public System.Nullable<int> Total
+		{
+			get
+			{
+				return this._Total;
+			}
+			set
+			{
+				if ((this._Total != value))
+				{
+					this.OnTotalChanging(value);
+					this.SendPropertyChanging();
+					this._Total = value;
+					this.SendPropertyChanged("Total");
+					this.OnTotalChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoCT", DbType="NVarChar(50)")]
+		public string SoCT
+		{
+			get
+			{
+				return this._SoCT;
+			}
+			set
+			{
+				if ((this._SoCT != value))
+				{
+					this.OnSoCTChanging(value);
+					this.SendPropertyChanging();
+					this._SoCT = value;
+					this.SendPropertyChanged("SoCT");
+					this.OnSoCTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreateDate
+		{
+			get
+			{
+				return this._CreateDate;
+			}
+			set
+			{
+				if ((this._CreateDate != value))
+				{
+					this.OnCreateDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreateDate = value;
+					this.SendPropertyChanged("CreateDate");
+					this.OnCreateDateChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SGP_HoaDon")]
+	public partial class SGP_HoaDon : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _SoCT;
+		
+		private string _InvoiceNumber;
+		
+		private System.Nullable<System.DateTime> _CreateDate;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnSoCTChanging(string value);
+    partial void OnSoCTChanged();
+    partial void OnInvoiceNumberChanging(string value);
+    partial void OnInvoiceNumberChanged();
+    partial void OnCreateDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreateDateChanged();
+    #endregion
+		
+		public SGP_HoaDon()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoCT", DbType="NVarChar(50)")]
+		public string SoCT
+		{
+			get
+			{
+				return this._SoCT;
+			}
+			set
+			{
+				if ((this._SoCT != value))
+				{
+					this.OnSoCTChanging(value);
+					this.SendPropertyChanging();
+					this._SoCT = value;
+					this.SendPropertyChanged("SoCT");
+					this.OnSoCTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InvoiceNumber", DbType="NVarChar(50)")]
+		public string InvoiceNumber
+		{
+			get
+			{
+				return this._InvoiceNumber;
+			}
+			set
+			{
+				if ((this._InvoiceNumber != value))
+				{
+					this.OnInvoiceNumberChanging(value);
+					this.SendPropertyChanging();
+					this._InvoiceNumber = value;
+					this.SendPropertyChanged("InvoiceNumber");
+					this.OnInvoiceNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreateDate
+		{
+			get
+			{
+				return this._CreateDate;
+			}
+			set
+			{
+				if ((this._CreateDate != value))
+				{
+					this.OnCreateDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreateDate = value;
+					this.SendPropertyChanged("CreateDate");
+					this.OnCreateDateChanged();
 				}
 			}
 		}

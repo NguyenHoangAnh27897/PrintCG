@@ -69,5 +69,17 @@ namespace SGPWebService
         bool changeCustomer(int id, string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note);
         [OperationContract]
         bool addCustomerID(string zoneid, string customerid, string customername);
+        [OperationContract]
+        bool addChiTietHoaDon(string soCT, DateTime createdate, string soCG, int cuocDV, int vat, int total, string tenhanghoa);
+        [OperationContract]
+        bool addHoaDon(string soCT, string soHD, DateTime createdate);
+        [OperationContract]
+        List<DataClass.HoaDon> getHoaDon(DateTime Fromdate, DateTime Todate);
+        [OperationContract]
+        List<DataClass.ChiTietHoaDon> getChiTietHoaDon(string soCT);
+        [OperationContract]
+        string getPostOfficeName(string postofficeid);
+        [OperationContract]
+        string getUserName(string userid);
     }
 }
