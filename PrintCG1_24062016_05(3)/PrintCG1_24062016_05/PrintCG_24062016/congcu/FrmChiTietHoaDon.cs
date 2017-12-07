@@ -24,13 +24,20 @@ namespace PrintCG_24062016.congcu
         {
             dgv1.ColumnCount = 5;
             dgv1.Columns[0].Name = "Số CG";
-            dgv1.Columns[1].Name = "Tên hàng háo, dịch vụ";
+            dgv1.Columns[1].Name = "Tên hàng hoá, dịch vụ";
             dgv1.Columns[2].Name = "Cước DV";
             dgv1.Columns[3].Name = "VAT";
             dgv1.Columns[4].Name = "Tổng";
 
 
             txtSoCT.Text = soct;
+            dgv2.DataSource = sv.getChiTietHoaDon(soct);
+            int count = dgv2.Rows.Count;
+            for (int i = 0; i < count; i++)
+            {
+                string[] row = new string[] { dgv2.Rows[i].Cells[3].Value.ToString(), dgv2.Rows[i].Cells[5].Value.ToString(), dgv2.Rows[i].Cells[1].Value.ToString(), dgv2.Rows[i].Cells[7].Value.ToString(), dgv2.Rows[i].Cells[6].Value.ToString() };
+                dgv1.Rows.Add(row);
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -54,7 +61,7 @@ namespace PrintCG_24062016.congcu
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            Rpt_HoaDon rp = new Rpt_HoaDon();
+            Rpt_BangKe rp = new Rpt_BangKe();
             DsHoaDon ds = new DsHoaDon();
             string userid = (String)Application.UserAppDataRegistry.GetValue("sony.frmlogin.txtuser", string.Empty);
             string postid = (String)Application.UserAppDataRegistry.GetValue("sony.frmlogin.txtpost", string.Empty);
@@ -69,11 +76,27 @@ namespace PrintCG_24062016.congcu
             }
             TextObject _txtPostOffice = (TextObject)rp.ReportDefinition.Sections["Section1"].ReportObjects["txtPostOffice"];
             _txtPostOffice.Text = postname;
-            TextObject _txtUser = (TextObject)rp.ReportDefinition.Sections["Section1"].ReportObjects["txtUser"];
+            TextObject _txtUser = (TextObject)rp.ReportDefinition.Sections["Section4"].ReportObjects["txtUser"];
             _txtUser.Text = username;
             rp.SetDataSource(ds);
             rp.PrintToPrinter(1, false, 0, 0);
             MessageBox.Show("In thành công");
+        }
+
+        private void dgv1_SelectionChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dgv1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
+        }
+
+        private void txtCuoc_KeyUp(object sender, KeyEventArgs e)
+        {
+            int vat = (int.Parse(txtCuoc.Text) / 100) * 10;
+            txtVAT.Text = vat.ToString();
         }
     }
 }

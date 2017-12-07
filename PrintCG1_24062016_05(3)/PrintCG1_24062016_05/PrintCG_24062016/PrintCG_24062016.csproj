@@ -168,6 +168,12 @@
     <Compile Include="congcu\Frm_SpecialCustomer.Designer.cs">
       <DependentUpon>Frm_SpecialCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="congcu\Rpt_BangKe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_BangKe.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="congcu\Rpt_HoaDon.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -632,6 +638,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="congcu\Frm_SpecialCustomer.resx">
       <DependentUpon>Frm_SpecialCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="congcu\Rpt_BangKe.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_BangKe.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="congcu\Rpt_HoaDon.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

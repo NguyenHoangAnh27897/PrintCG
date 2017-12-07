@@ -647,9 +647,9 @@ namespace SGPWebService
                          select new DataClass.ChiTietHoaDon()
                          {
                              SoCT = cthd.SoCT,//5
-                             SoCG = cthd.CGNumber,//3
+                             SoCG = cthd.CGNumber,//4
                              CreateDate = cthd.CreateDate,//0
-                             TenHangHoa = cthd.PackageName,//4
+                             TenHangHoa = cthd.PackageName,//5
                              CuocDV = cthd.CuocDV,//1
                              VAT = cthd.VAT,//7
                              Total = cthd.Total,//6
@@ -675,6 +675,23 @@ namespace SGPWebService
 
             string username = name.FirstOrDefault();
             return username;
+        }
+
+        public List<DataClass.ChiTietHoaDon> getChiTietHoaDonAll()
+        {
+            var query = (from cthd in api.SGP_ChiTietHoaDons
+                         select new DataClass.ChiTietHoaDon()
+                         {
+                             SoCT = cthd.SoCT,//5
+                             SoCG = cthd.CGNumber,//3
+                             CreateDate = cthd.CreateDate,//0
+                             TenHangHoa = cthd.PackageName,//4
+                             CuocDV = cthd.CuocDV,//1
+                             VAT = cthd.VAT,//7
+                             Total = cthd.Total,//6
+                             ID = cthd.ID//2
+                         });
+            return query.ToList();
         }
     }
 }

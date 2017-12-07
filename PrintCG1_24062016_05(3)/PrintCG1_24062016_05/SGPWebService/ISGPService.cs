@@ -81,5 +81,7 @@ namespace SGPWebService
         string getPostOfficeName(string postofficeid);
         [OperationContract]
         string getUserName(string userid);
+        [OperationContract]
+        List<DataClass.ChiTietHoaDon> getChiTietHoaDonAll();
     }
 }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace PrintCG_24062016.congcu
 {
@@ -19,8 +20,7 @@ namespace PrintCG_24062016.congcu
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            FrmChiTietHoaDon frm = new FrmChiTietHoaDon(dgv1.Rows[e.RowIndex].Cells[0].Value.ToString());
-            frm.Show();
+           
         }
 
         private void btnXem_Click(object sender, EventArgs e)
@@ -50,6 +50,8 @@ namespace PrintCG_24062016.congcu
 
             dtp2.Format = DateTimePickerFormat.Custom;
             dtp2.CustomFormat = "MM/dd/yyyy";
+
+            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -58,6 +60,56 @@ namespace PrintCG_24062016.congcu
             dgv1.Rows.Add(row);
             sv.addHoaDon(txtCT.Text, txtHD.Text, DateTime.Now);
             MessageBox.Show("Thêm thành công");
+        }
+
+        private void dgv1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = sender as DataGridView;
+            if (dgv == null)
+            {
+                return;
+            }
+            else
+            {
+                if (MessageBox.Show("In hoá đơn cho CG này?", "My Application", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Rpt_HoaDon rpt = new Rpt_HoaDon();
+
+                    dgv3.DataSource = sv.getChiTietHoaDon(dgv1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    int count = dgv3.Rows.Count;
+                    int total = 0;
+                    int addnumber= 0;
+                    for (int i = 0; i < count; i++)
+                    {
+                        addnumber = int.Parse(dgv3.Rows[i].Cells[6].Value.ToString());
+                        total += addnumber;
+                    }
+                    int vat = total / 10;
+                    int tong = total + vat;
+                    string postid = (String)Application.UserAppDataRegistry.GetValue("sony.frmlogin.txtpost", string.Empty);
+                    string postname = sv.getPostOfficeName(postid);
+                    TextObject _txtPostOffice = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtPostOffice"];
+                    _txtPostOffice.Text = postname;
+                    TextObject _txtDes = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtDes"];
+                    _txtDes.Text = dgv3.Rows[e.RowIndex].Cells[5].Value.ToString();
+                    TextObject _txtbefvatamount = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtbefvatamount"];
+                    _txtbefvatamount.Text = total.ToString();
+                    TextObject _txtbefvatamount1 = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtbefvatamount1"];
+                    _txtbefvatamount1.Text = total.ToString();
+                    TextObject _txtvat = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtvat"];
+                    _txtvat.Text = vat.ToString();
+
+                    TextObject _txtTotal = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtTotal"];
+                    _txtTotal.Text = tong.ToString();
+                    rpt.PrintToPrinter(1, false, 0, 0);
+                    MessageBox.Show("In thành công");
+                }
+                else
+                {
+                    FrmChiTietHoaDon frm = new FrmChiTietHoaDon(dgv1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    frm.Show();
+                }
+            }
         }
     }
 }

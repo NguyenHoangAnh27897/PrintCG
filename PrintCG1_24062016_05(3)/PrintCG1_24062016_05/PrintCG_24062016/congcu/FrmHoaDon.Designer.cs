@@ -40,8 +40,10 @@
             this.txtCT = new System.Windows.Forms.TextBox();
             this.txtHD = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.dgv3 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -96,14 +98,15 @@
             this.dgv1.Name = "dgv1";
             this.dgv1.Size = new System.Drawing.Size(712, 268);
             this.dgv1.TabIndex = 5;
+            this.dgv1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellClick);
             this.dgv1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dgv2
             // 
             this.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv2.Location = new System.Drawing.Point(518, 157);
+            this.dgv2.Location = new System.Drawing.Point(671, 299);
             this.dgv2.Name = "dgv2";
-            this.dgv2.Size = new System.Drawing.Size(195, 145);
+            this.dgv2.Size = new System.Drawing.Size(53, 43);
             this.dgv2.TabIndex = 6;
             this.dgv2.Visible = false;
             // 
@@ -149,11 +152,21 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Số hoá đơn";
             // 
+            // dgv3
+            // 
+            this.dgv3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv3.Location = new System.Drawing.Point(617, 312);
+            this.dgv3.Name = "dgv3";
+            this.dgv3.Size = new System.Drawing.Size(48, 30);
+            this.dgv3.TabIndex = 12;
+            this.dgv3.Visible = false;
+            // 
             // FrmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 354);
+            this.Controls.Add(this.dgv3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtHD);
             this.Controls.Add(this.txtCT);
@@ -171,6 +184,7 @@
             this.Load += new System.EventHandler(this.FrmHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,5 +204,6 @@
         private System.Windows.Forms.TextBox txtCT;
         private System.Windows.Forms.TextBox txtHD;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dgv3;
     }
 }

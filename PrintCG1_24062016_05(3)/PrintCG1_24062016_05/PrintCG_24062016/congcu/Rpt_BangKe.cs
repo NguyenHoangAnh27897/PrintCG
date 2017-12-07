@@ -16,14 +16,14 @@ namespace PrintCG_24062016.congcu {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Rpt_HoaDon : ReportClass {
+    public class Rpt_BangKe : ReportClass {
         
-        public Rpt_HoaDon() {
+        public Rpt_BangKe() {
         }
         
         public override string ResourceName {
             get {
-                return "Rpt_HoaDon.rpt";
+                return "Rpt_BangKe.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace PrintCG_24062016.congcu {
         
         public override string FullResourceName {
             get {
-                return "PrintCG_24062016.congcu.Rpt_HoaDon.rpt";
+                return "PrintCG_24062016.congcu.Rpt_BangKe.rpt";
             }
             set {
                 // Do nothing
@@ -66,7 +66,7 @@ namespace PrintCG_24062016.congcu {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section PageHeaderSection1 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
             get {
                 return this.ReportDefinition.Sections[2];
             }
@@ -74,7 +74,7 @@ namespace PrintCG_24062016.congcu {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,33 +82,17 @@ namespace PrintCG_24062016.congcu {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
-            get {
-                return this.ReportDefinition.Sections[4];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public CrystalDecisions.CrystalReports.Engine.Section Section5 {
             get {
-                return this.ReportDefinition.Sections[5];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_UserGroupID {
-            get {
-                return this.DataDefinition.ParameterFields[0];
+                return this.ReportDefinition.Sections[4];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedRpt_HoaDon : Component, ICachedReport {
+    public class CachedRpt_BangKe : Component, ICachedReport {
         
-        public CachedRpt_HoaDon() {
+        public CachedRpt_BangKe() {
         }
         
         [Browsable(false)]
@@ -145,7 +129,7 @@ namespace PrintCG_24062016.congcu {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Rpt_HoaDon rpt = new Rpt_HoaDon();
+            Rpt_BangKe rpt = new Rpt_BangKe();
             rpt.Site = this.Site;
             return rpt;
         }

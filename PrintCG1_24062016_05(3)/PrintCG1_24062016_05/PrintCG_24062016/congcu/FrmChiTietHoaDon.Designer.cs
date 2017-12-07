@@ -107,6 +107,8 @@
             this.dgv1.Name = "dgv1";
             this.dgv1.Size = new System.Drawing.Size(562, 242);
             this.dgv1.TabIndex = 6;
+            this.dgv1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellClick);
+            this.dgv1.SelectionChanged += new System.EventHandler(this.dgv1_SelectionChanged);
             // 
             // btnSave
             // 
@@ -132,9 +134,9 @@
             // dgv2
             // 
             this.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv2.Location = new System.Drawing.Point(495, 320);
+            this.dgv2.Location = new System.Drawing.Point(500, 324);
             this.dgv2.Name = "dgv2";
-            this.dgv2.Size = new System.Drawing.Size(79, 52);
+            this.dgv2.Size = new System.Drawing.Size(74, 48);
             this.dgv2.TabIndex = 9;
             this.dgv2.Visible = false;
             // 
@@ -144,6 +146,7 @@
             this.txtCuoc.Name = "txtCuoc";
             this.txtCuoc.Size = new System.Drawing.Size(89, 20);
             this.txtCuoc.TabIndex = 10;
+            this.txtCuoc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCuoc_KeyUp);
             // 
             // label4
             // 
@@ -173,7 +176,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(294, 93);
+            this.label6.Location = new System.Drawing.Point(294, 89);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(115, 13);
             this.label6.TabIndex = 14;
@@ -181,7 +184,7 @@
             // 
             // txtPackage
             // 
-            this.txtPackage.Location = new System.Drawing.Point(415, 90);
+            this.txtPackage.Location = new System.Drawing.Point(415, 86);
             this.txtPackage.Name = "txtPackage";
             this.txtPackage.Size = new System.Drawing.Size(89, 20);
             this.txtPackage.TabIndex = 15;
@@ -193,7 +196,7 @@
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(74, 23);
             this.btnPrint.TabIndex = 16;
-            this.btnPrint.Text = "In";
+            this.btnPrint.Text = "In bảng kê";
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 

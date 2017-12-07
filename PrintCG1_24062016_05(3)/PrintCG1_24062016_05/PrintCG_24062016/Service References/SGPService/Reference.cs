@@ -8028,6 +8028,9 @@ namespace PrintCG_24062016.SGPService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getUserName", ReplyAction="http://tempuri.org/ISGPService/getUserNameResponse")]
         string getUserName(string userid);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getChiTietHoaDonAll", ReplyAction="http://tempuri.org/ISGPService/getChiTietHoaDonAllResponse")]
+        PrintCG_24062016.SGPService.ChiTietHoaDon[] getChiTietHoaDonAll();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -8211,6 +8214,10 @@ namespace PrintCG_24062016.SGPService {
         
         public string getUserName(string userid) {
             return base.Channel.getUserName(userid);
+        }
+        
+        public PrintCG_24062016.SGPService.ChiTietHoaDon[] getChiTietHoaDonAll() {
+            return base.Channel.getChiTietHoaDonAll();
         }
     }
 }

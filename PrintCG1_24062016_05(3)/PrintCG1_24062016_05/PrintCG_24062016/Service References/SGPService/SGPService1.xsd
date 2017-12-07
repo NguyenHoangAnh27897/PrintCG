@@ -561,4 +561,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getChiTietHoaDonAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getChiTietHoaDonAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="getChiTietHoaDonAllResult" nillable="true" type="q20:ArrayOfChiTietHoaDon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
