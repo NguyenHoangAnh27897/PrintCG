@@ -71,7 +71,7 @@ namespace PrintCG_24062016.congcu
             }
             else
             {
-                if (MessageBox.Show("In hoá đơn cho CG này?", "My Application", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("In hoá đơn cho CT này?", "My Application", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Rpt_HoaDon rpt = new Rpt_HoaDon();
 
