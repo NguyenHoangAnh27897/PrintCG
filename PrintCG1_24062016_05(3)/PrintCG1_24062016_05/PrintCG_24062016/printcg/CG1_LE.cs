@@ -490,11 +490,12 @@ namespace PrintCG_24062016
                          //string province = myGrid1.CurrentRow.Cells["Provinceid"].Value.ToString();
                          string customer = myGrid1.CurrentRow.Cells["Sender"].Value.ToString();
                          string servicetype = myGrid1.CurrentRow.Cells["Servicetypeid"].Value.ToString();
+                         float price = float.Parse(myGrid1.CurrentRow.Cells["Price"].Value.ToString());
                          
                              //myGrid1.Rows[e.RowIndex].ErrorText = "Chưa khai báo thông tin";
                             if(chktinhcuoc.Checked == true)
                             {
-                                var pricelist = sgpservice.calPrice(quantity, weight, matinh, customer, servicetype);
+                                var pricelist = sgpservice.calPrice(quantity, weight, matinh, customer, servicetype,price);
                                 foreach (var item in pricelist)
                                 {
                                     myGrid1.CurrentRow.Cells["Price"].Value = item.Price;
@@ -530,12 +531,13 @@ namespace PrintCG_24062016
                          string province = myGrid1.CurrentRow.Cells["Provinceid"].Value.ToString();
                          string customer = myGrid1.CurrentRow.Cells["Sender"].Value.ToString();
                          string servicetype = myGrid1.CurrentRow.Cells["Servicetypeid"].Value.ToString();
+                         float price = float.Parse(myGrid1.CurrentRow.Cells["Price"].Value.ToString());
                          if (string.IsNullOrEmpty(e.FormattedValue.ToString()))
                          {
                              myGrid1.Rows[e.RowIndex].ErrorText = "Chưa khai báo thông tin";
                              if (chktinhcuoc.Checked == true)
                              {
-                                 var pricelist = sgpservice.calPrice(quantity, weight, province, customer, servicetype);
+                                 var pricelist = sgpservice.calPrice(quantity, weight, province, customer, servicetype,price);
                                  foreach (var item in pricelist)
                                  {
                                      myGrid1.CurrentCell.Value = item.Price;
@@ -559,7 +561,7 @@ namespace PrintCG_24062016
              }
              private void create_excel()
              {
-                DsExcel dsexcel = new DsExcel();
+                 DsExcelInphieuLe dsexcel = new DsExcelInphieuLe();
                 string data;
                 string _ngaynhan;
                 string _gio = "00:00";
@@ -570,9 +572,20 @@ namespace PrintCG_24062016
                 string _trongluong;
                 string _trongluongkhoi;
                 string _tenduong;
-                string _tinhthanh;
                 string _quanhuyen;
                 string _ghichu = "";
+                string _diachigui = "";
+                string _nguoigui = "";
+                string _sdtgui = "";
+                string _bp = "";
+                string _cuoc;
+                string _thukhac;
+                string _hengio = "";
+                string _cod = "";
+                string _nguoinhan = "";
+                string _thanhpho = "";
+                string _sdtnhan = "";
+                int numcolumn = myGrid1.ColumnCount;
                 SaveFileDialog fsave = new SaveFileDialog();
                 Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
                 fsave.Filter = "Excel |*.xls";
@@ -591,19 +604,25 @@ namespace PrintCG_24062016
                     MessageBox.Show("Excel is not properly installed!!");
                     return;
                 }
-               
-                xlWorkSheet.Cells[1, 1] = "Ngày";
+                xlWorkSheet.Cells[1, 1] = myGrid1.Columns[0].HeaderText.ToString();
                 xlWorkSheet.Cells[1, 2] = "Giờ";
-                xlWorkSheet.Cells[1, 3] = "Số phiếu";
-                xlWorkSheet.Cells[1, 4] = "LH";
-                xlWorkSheet.Cells[1, 5] = "DV";
-                xlWorkSheet.Cells[1, 6] = "SL";
-                xlWorkSheet.Cells[1, 7] = "TL";
-                xlWorkSheet.Cells[1, 8] = "TL Khối";
-                xlWorkSheet.Cells[1, 9] = "Địa chỉ(Nhận)";
-                xlWorkSheet.Cells[1, 10] = "Nơi đến";
-                xlWorkSheet.Cells[1, 11] = "Q/Huyện(Nhận)";
-                xlWorkSheet.Cells[1, 12] = "Ghi chú";
+                for (int i = 3; i < numcolumn; i++)
+                {
+                    xlWorkSheet.Cells[1, i] = myGrid1.Columns[i-2].HeaderText.ToString();
+                }
+                
+                //xlWorkSheet.Cells[1, 1] = "Ngày";
+                //xlWorkSheet.Cells[1, 2] = "Giờ";
+                //xlWorkSheet.Cells[1, 3] = "Số phiếu";
+                //xlWorkSheet.Cells[1, 4] = "LH";
+                //xlWorkSheet.Cells[1, 5] = "DV";
+                //xlWorkSheet.Cells[1, 6] = "SL";
+                //xlWorkSheet.Cells[1, 7] = "TL";
+                //xlWorkSheet.Cells[1, 8] = "TL Khối";
+                //xlWorkSheet.Cells[1, 9] = "Địa chỉ(Nhận)";
+                //xlWorkSheet.Cells[1, 10] = "Nơi đến";
+                //xlWorkSheet.Cells[1, 11] = "Q/Huyện(Nhận)";
+                //xlWorkSheet.Cells[1, 12] = "Ghi chú";
 
                                                            
                 for (int a = 0; a <= myGrid1.RowCount - 1; a++ )
@@ -618,15 +637,25 @@ namespace PrintCG_24062016
                             _loaihang = myGrid1.Rows[a].Cells["Mailertypeid"].Value.ToString();
                             _dichvu = myGrid1.Rows[a].Cells["Servicetypeid"].Value.ToString();
                             _soluong = convert.ConvertData.ToInt32(myGrid1.Rows[a].Cells["Quantity"].Value.ToString()).ToString();
+                            _thukhac = convert.ConvertData.ToInt32(myGrid1.Rows[a].Cells["Priceservice"].Value.ToString()).ToString();
+                            _cuoc = convert.ConvertData.ToInt32(myGrid1.Rows[a].Cells["Price"].Value.ToString()).ToString();
+                            _cod = convert.ConvertData.ToInt32(myGrid1.Rows[a].Cells["COD"].Value.ToString()).ToString();
+                            _hengio = convert.ConvertData.ToInt32(myGrid1.Rows[a].Cells["Timer"].Value.ToString()).ToString();
                             _trongluong = convert.ConvertData.ToInt32(myGrid1.Rows[a].Cells["Weight"].Value.ToString()).ToString();
                             _trongluongkhoi = convert.ConvertData.ToInt32(myGrid1.Rows[a].Cells["RealWeight"].Value.ToString()).ToString();
+                            _diachigui = convert.ConvertData.nullToString(myGrid1.Rows[a].Cells["SenderAddress"].Value.ToString());
+                            _nguoigui = convert.ConvertData.nullToString(myGrid1.Rows[a].Cells["Sender"].Value.ToString());
+                            _nguoinhan = convert.ConvertData.nullToString(myGrid1.Rows[a].Cells["ReciverName"].Value.ToString());
+                            _sdtgui = convert.ConvertData.nullToString(myGrid1.Rows[a].Cells["SenderPhone"].Value.ToString());
                             _tenduong = convert.ConvertData.nullToString(myGrid1.Rows[a].Cells["Address"].Value.ToString());
-                            _tinhthanh = convert.ConvertData.nullToString(myGrid1.Rows[a].Cells["Provinceid"].Value.ToString());
+                            _thanhpho = convert.ConvertData.nullToString(myGrid1.Rows[a].Cells["Provinceid"].Value.ToString());
+                            _sdtnhan = convert.ConvertData.nullToString(myGrid1.Rows[a].Cells["ReciverPhone"].Value.ToString());
+                            _bp = convert.ConvertData.ToInt32(myGrid1.Rows[a].Cells["BP"].Value.ToString()).ToString();
                             _quanhuyen = myGrid1.Rows[a].Cells["Districtid"].Value == null ? string.Empty : myGrid1.Rows[a].Cells["Districtid"].Value.ToString().ToUpper();
-                            _quanhuyen = "";//gan huyen vao
+                            //_quanhuyen = "";//gan huyen vao
                             _ghichu = myGrid1.Rows[a].Cells["Description"].Value== null ? string.Empty : myGrid1.Rows[a].Cells["Description"].Value.ToString().ToUpper();
                             dsexcel.Excel.AddExcelRow(DateTime.Parse(_ngaynhan).ToString("MM/dd/yyyy"), _gio, _sophieu, _loaihang, _dichvu, _soluong,
-                            _trongluong, _trongluongkhoi, _tenduong, _tinhthanh, _quanhuyen, _ghichu, "", "", "", "", "", "", "", "");
+                            _trongluong, _trongluongkhoi,_nguoigui,_diachigui,_sdtgui,_nguoinhan, _tenduong, _thanhpho, _cuoc,_thukhac,_hengio,_cod,_quanhuyen,_sdtnhan,_ghichu,_bp);
                         }
                     }catch
                     {
@@ -1097,6 +1126,27 @@ namespace PrintCG_24062016
                          // DataGridViewRow row = (DataGridViewRow)myGrid1.Rows[i].Clone()
                          myGrid1.Rows.Add();
                          float priceservice = 0;
+                         myGrid1.Rows[i].Cells["Acceptdate"].Value = dt.Rows[i]["Ngày"].ToString();
+                         myGrid1.Rows[i].Cells["MailerID"].Value = dt.Rows[i]["Số phiếu"].ToString();
+                         myGrid1.Rows[i].Cells["Mailertypeid"].Value = dt.Rows[i]["LH"].ToString();
+                         myGrid1.Rows[i].Cells["Servicetypeid"].Value = dt.Rows[i]["DV"].ToString();
+                         myGrid1.Rows[i].Cells["Quantity"].Value = dt.Rows[i]["SL"].ToString();
+                         myGrid1.Rows[i].Cells["Weight"].Value = dt.Rows[i]["TL"].ToString();
+                         myGrid1.Rows[i].Cells["Realweight"].Value = dt.Rows[i]["TL khối"].ToString();
+                         myGrid1.Rows[i].Cells["Sender"].Value = dt.Rows[i]["Người gửi"].ToString();
+                         myGrid1.Rows[i].Cells["SenderAddress"].Value = dt.Rows[i]["Địa chỉ gửi"].ToString();
+                         myGrid1.Rows[i].Cells["SenderPhone"].Value = dt.Rows[i]["SĐT gửi"].ToString();
+                         myGrid1.Rows[i].Cells["ReciverName"].Value = dt.Rows[i]["Người nhận"].ToString();
+                         myGrid1.Rows[i].Cells["Address"].Value = dt.Rows[i]["Địa chỉ nhận"].ToString();
+                         myGrid1.Rows[i].Cells["Provinceid"].Value = dt.Rows[i]["Thành phố"].ToString();
+                         myGrid1.Rows[i].Cells["Price"].Value = dt.Rows[i]["Cước"].ToString();
+                         myGrid1.Rows[i].Cells["Priceservice"].Value = dt.Rows[i]["Thu #"].ToString();
+                         myGrid1.Rows[i].Cells["Timer"].Value = dt.Rows[i]["Hẹn giờ"].ToString();
+                         myGrid1.Rows[i].Cells["COD"].Value = dt.Rows[i]["COD"].ToString();
+                         myGrid1.Rows[i].Cells["Districtid"].Value = dt.Rows[i]["Quận/Huyện"].ToString();
+                         myGrid1.Rows[i].Cells["ReciverPhone"].Value = dt.Rows[i]["SĐT nhận"].ToString();
+                         myGrid1.Rows[i].Cells["Description"].Value = dt.Rows[i]["Ghi chú"].ToString();
+                         myGrid1.Rows[i].Cells["BP"].Value = dt.Rows[i]["BP"].ToString();
                          for (int j = 0; j <= dt.Columns.Count - 1; j++)
                          {
                              if (myGrid1.Columns[j].Name == "Price")
@@ -1107,8 +1157,9 @@ namespace PrintCG_24062016
                                  string customer = myGrid1.Rows[i].Cells["Sender"].Value.ToString();
                                  string servicetype = myGrid1.Rows[i].Cells["Servicetypeid"].Value.ToString();
                                  string matinh = myGrid1.Rows[i].Cells["Provinceid"].Value.ToString();
+                                 float price = float.Parse(myGrid1.Rows[i].Cells["Price"].Value.ToString());
                                  //myGrid1.Rows[e.RowIndex].ErrorText = "Chưa khai báo thông tin";		
-                                 var pricelist = sgpservice.calPrice(quantity, weight, matinh, customer, servicetype);
+                                 var pricelist = sgpservice.calPrice(quantity, weight, matinh, customer, servicetype,price);
                                  foreach (var item in pricelist)
                                  {
                                      myGrid1.Rows[i].Cells["Price"].Value = item.Price;
@@ -1120,10 +1171,10 @@ namespace PrintCG_24062016
                              {
                                  myGrid1.Rows[i].Cells["Priceservice"].Value = priceservice;
                              }
-                             else
-                             {
-                                 myGrid1.Rows[i].Cells[j].Value = dt.Rows[i][j].ToString();
-                             }
+                             //else
+                             //{
+                             //    myGrid1.Rows[i].Cells[j].Value = dt.Rows[i][j].ToString();
+                             //}
 
                          }
                          //myGrid1.Rows.Add(row);

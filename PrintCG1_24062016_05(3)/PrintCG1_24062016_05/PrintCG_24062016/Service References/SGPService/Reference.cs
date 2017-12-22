@@ -7960,7 +7960,7 @@ namespace PrintCG_24062016.SGPService {
         PrintCG_24062016.SGPService.SGP_Price_Service_Value[] getPriceServiceValue(string PriceID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/calPrice", ReplyAction="http://tempuri.org/ISGPService/calPriceResponse")]
-        PrintCG_24062016.SGPService.PriceList[] calPrice(int Quantity, float Weight, string ProvinceID, string CustomerID, string ServiceType);
+        PrintCG_24062016.SGPService.PriceList[] calPrice(int Quantity, float Weight, string ProvinceID, string CustomerID, string ServiceType, float Price);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getUserTrackingProfile", ReplyAction="http://tempuri.org/ISGPService/getUserTrackingProfileResponse")]
         PrintCG_24062016.SGPService.Tools_Tracking[] getUserTrackingProfile(string User);
@@ -8128,8 +8128,8 @@ namespace PrintCG_24062016.SGPService {
             return base.Channel.getPriceServiceValue(PriceID);
         }
         
-        public PrintCG_24062016.SGPService.PriceList[] calPrice(int Quantity, float Weight, string ProvinceID, string CustomerID, string ServiceType) {
-            return base.Channel.calPrice(Quantity, Weight, ProvinceID, CustomerID, ServiceType);
+        public PrintCG_24062016.SGPService.PriceList[] calPrice(int Quantity, float Weight, string ProvinceID, string CustomerID, string ServiceType, float Price) {
+            return base.Channel.calPrice(Quantity, Weight, ProvinceID, CustomerID, ServiceType, Price);
         }
         
         public PrintCG_24062016.SGPService.Tools_Tracking[] getUserTrackingProfile(string User) {

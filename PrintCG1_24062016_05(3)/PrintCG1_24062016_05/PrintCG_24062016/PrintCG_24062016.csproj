@@ -19,7 +19,8 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
     <TargetFrameworkProfile />
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -29,10 +30,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -56,6 +57,18 @@
   <PropertyGroup>
     <StartupObject>
     </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DBE780214382B68AB8C50A07D69A647C6382BDA1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PrintCG_24062016_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -186,6 +199,19 @@
     </Compile>
     <Compile Include="dataset\DsCGLEBangKe.cs">
       <DependentUpon>DsCGLEBangKe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dataset\DsExcel.cs">
+      <DependentUpon>DsExcel.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DsExcelInphieuLe.cs">
+      <DependentUpon>DsExcelInphieuLe.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DsExcelInphieuLe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsExcelInphieuLe.xsd</DependentUpon>
     </Compile>
     <Compile Include="DsFuji.cs">
       <DependentUpon>DsFuji.xsd</DependentUpon>
@@ -1035,6 +1061,17 @@
     <None Include="dataset\dsPhieuGui.xss">
       <DependentUpon>dsPhieuGui.xsd</DependentUpon>
     </None>
+    <None Include="DsExcelInphieuLe.xsc">
+      <DependentUpon>DsExcelInphieuLe.xsd</DependentUpon>
+    </None>
+    <None Include="DsExcelInphieuLe.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsExcelInphieuLe.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsExcelInphieuLe.xss">
+      <DependentUpon>DsExcelInphieuLe.xsd</DependentUpon>
+    </None>
     <None Include="DsFuji.xsc">
       <DependentUpon>DsFuji.xsd</DependentUpon>
     </None>
@@ -1057,6 +1094,7 @@
     <None Include="DsHoaDon.xss">
       <DependentUpon>DsHoaDon.xsd</DependentUpon>
     </None>
+    <None Include="PrintCG_24062016_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

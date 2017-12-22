@@ -261,6 +261,7 @@
         <xs:element minOccurs="0" name="ProvinceID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="ServiceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Price" type="xs:float" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

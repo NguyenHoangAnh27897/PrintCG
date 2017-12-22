@@ -72,4 +72,51 @@
       <Column Name="ColumnIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.SGP_SpecialCustomer" Member="SGP_SpecialCustomers">
+    <Type Name="SGP_SpecialCustomer">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FromPlace" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CGNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoChungTuThuVe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoChungTuLienQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DeliveryDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NodeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShiptoAddress" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Hour" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Staff" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Zone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SGP_CustomerWithZone" Member="SGP_CustomerWithZones">
+    <Type Name="SGP_CustomerWithZone">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ZoneID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SGP_ChiTietHoaDon" Member="SGP_ChiTietHoaDons">
+    <Type Name="SGP_ChiTietHoaDon">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CGNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PackageName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CuocDV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VAT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoCT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SGP_HoaDon" Member="SGP_HoaDons">
+    <Type Name="SGP_HoaDon">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SoCT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InvoiceNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

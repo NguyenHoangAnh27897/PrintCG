@@ -209,6 +209,8 @@ namespace PrintCG_24062016
             string ShipName;
             string ShipAddress;
             string Remark;
+            DateTime pgi;
+            DateTime deliverydate;
             string error = string.Empty;
             try
             {
@@ -223,6 +225,8 @@ namespace PrintCG_24062016
                     string diachi = string.Empty;
                     string remark = string.Empty;
                     string DO = string.Empty;
+                    string pgidate = string.Empty;
+                    string deliverydatecon = string.Empty;
                     try
                     {
                         DO = row.Cells[cmbdo.Text].Value.ToString();
@@ -274,9 +278,13 @@ namespace PrintCG_24062016
                             //"'" + vung + "'," +
                             //"" + row.Cells["No"].Value.ToString() + "" +
                             //" )";
+                            pgi = DateTime.Parse(row.Cells[cmbpgi.Text].Value.ToString());
+                            pgidate = pgi.ToString("dd-MM-yyyy");
+                            deliverydate = DateTime.Parse(row.Cells[cmbdeliverydate.Text].Value.ToString());
+                            deliverydatecon = deliverydate.ToString("dd-MM-yyyy");
                             string query = "insert into tb_dhlplan ([D/O],PGI,DeliveryDate,ToZone,ZoneDesc,ToNodeCode,Quatity,Unit1,Weight,Unit2,Subcon,Unit3,ShiptoNM,ShiptoAddress,TP,KH,Vung,STT)" +
-                            " values('" + row.Cells[cmbdo.Text].Value.ToString() + "','" + row.Cells[cmbpgi.Text].Value.ToString() + "'," +
-                            " '" + row.Cells[cmbdeliverydate.Text].Value.ToString() + "','" + row.Cells[cmbtozone.Text].Value.ToString() + "'," +
+                            " values('" + row.Cells[cmbdo.Text].Value.ToString() + "','" + pgidate + "'," +
+                            " '" + deliverydatecon + "','" + row.Cells[cmbtozone.Text].Value.ToString() + "'," +
                             " '" + row.Cells[cmbzonedesc.Text].Value.ToString() + "','" + row.Cells[cmbshipcode.Text].Value.ToString() + "'," + row.Cells[cmbquality.Text].Value.ToString() + "," +
                             " '" + row.Cells[cmbunit1.Text].Value.ToString() + "'," + row.Cells[cmbweight.Text].Value.ToString() + "," +
                             " '" + row.Cells[cmbunit2.Text].Value.ToString() + "'," +

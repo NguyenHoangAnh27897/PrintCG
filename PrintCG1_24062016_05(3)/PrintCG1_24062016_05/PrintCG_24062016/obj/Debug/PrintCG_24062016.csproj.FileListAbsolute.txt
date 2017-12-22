@@ -1064,3 +1064,7 @@ C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\Pr
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.congcu.Frm_SpecialCustomer.resources
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.congcu.FrmChiTietHoaDon.resources
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.congcu.FrmHoaDon.resources
+C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe.manifest
+C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.application
+C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe.manifest
+C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.application

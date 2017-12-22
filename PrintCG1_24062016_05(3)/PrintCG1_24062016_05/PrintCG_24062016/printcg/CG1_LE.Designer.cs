@@ -91,11 +91,9 @@ namespace PrintCG_24062016
             // 
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.rbtinlien);
-            this.groupBox1.Location = new System.Drawing.Point(216, 7);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(162, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(179, 63);
+            this.groupBox1.Size = new System.Drawing.Size(134, 51);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cấu hình in";
@@ -104,10 +102,9 @@ namespace PrintCG_24062016
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(92, 26);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButton1.Location = new System.Drawing.Point(69, 21);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(61, 21);
+            this.radioButton1.Size = new System.Drawing.Size(50, 17);
             this.radioButton1.TabIndex = 1;
             this.radioButton1.Text = "In A5";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -116,10 +113,9 @@ namespace PrintCG_24062016
             // 
             this.rbtinlien.AutoSize = true;
             this.rbtinlien.Checked = true;
-            this.rbtinlien.Location = new System.Drawing.Point(8, 26);
-            this.rbtinlien.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtinlien.Location = new System.Drawing.Point(6, 21);
             this.rbtinlien.Name = "rbtinlien";
-            this.rbtinlien.Size = new System.Drawing.Size(71, 21);
+            this.rbtinlien.Size = new System.Drawing.Size(57, 17);
             this.rbtinlien.TabIndex = 0;
             this.rbtinlien.TabStop = true;
             this.rbtinlien.Text = "In Liên";
@@ -134,11 +130,9 @@ namespace PrintCG_24062016
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtbuucuc);
-            this.groupBox2.Location = new System.Drawing.Point(401, 9);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(301, 7);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1163, 62);
+            this.groupBox2.Size = new System.Drawing.Size(872, 50);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thiết lập chung";
@@ -146,9 +140,10 @@ namespace PrintCG_24062016
             // chktinhcuoc
             // 
             this.chktinhcuoc.AutoSize = true;
-            this.chktinhcuoc.Location = new System.Drawing.Point(1064, 28);
+            this.chktinhcuoc.Location = new System.Drawing.Point(798, 23);
+            this.chktinhcuoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chktinhcuoc.Name = "chktinhcuoc";
-            this.chktinhcuoc.Size = new System.Drawing.Size(92, 21);
+            this.chktinhcuoc.Size = new System.Drawing.Size(76, 17);
             this.chktinhcuoc.TabIndex = 34;
             this.chktinhcuoc.Text = "Tính cước";
             this.chktinhcuoc.UseVisualStyleBackColor = true;
@@ -157,10 +152,9 @@ namespace PrintCG_24062016
             // 
             this.rdbthucong.AutoSize = true;
             this.rdbthucong.Checked = true;
-            this.rdbthucong.Location = new System.Drawing.Point(624, 30);
-            this.rdbthucong.Margin = new System.Windows.Forms.Padding(4);
+            this.rdbthucong.Location = new System.Drawing.Point(468, 24);
             this.rdbthucong.Name = "rdbthucong";
-            this.rdbthucong.Size = new System.Drawing.Size(122, 21);
+            this.rdbthucong.Size = new System.Drawing.Size(96, 17);
             this.rdbthucong.TabIndex = 4;
             this.rdbthucong.TabStop = true;
             this.rdbthucong.Text = "Nhập thủ công";
@@ -170,10 +164,9 @@ namespace PrintCG_24062016
             // rdbtudong
             // 
             this.rdbtudong.AutoSize = true;
-            this.rdbtudong.Location = new System.Drawing.Point(477, 30);
-            this.rdbtudong.Margin = new System.Windows.Forms.Padding(4);
+            this.rdbtudong.Location = new System.Drawing.Point(358, 24);
             this.rdbtudong.Name = "rdbtudong";
-            this.rdbtudong.Size = new System.Drawing.Size(137, 21);
+            this.rdbtudong.Size = new System.Drawing.Size(107, 17);
             this.rdbtudong.TabIndex = 2;
             this.rdbtudong.Text = "Số phiếu tự động";
             this.rdbtudong.UseVisualStyleBackColor = true;
@@ -182,20 +175,18 @@ namespace PrintCG_24062016
             // txtnhanvien
             // 
             this.txtnhanvien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtnhanvien.Location = new System.Drawing.Point(128, 27);
-            this.txtnhanvien.Margin = new System.Windows.Forms.Padding(4);
+            this.txtnhanvien.Location = new System.Drawing.Point(96, 22);
             this.txtnhanvien.Name = "txtnhanvien";
-            this.txtnhanvien.Size = new System.Drawing.Size(132, 22);
+            this.txtnhanvien.Size = new System.Drawing.Size(100, 20);
             this.txtnhanvien.TabIndex = 30;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 30);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(11, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 17);
+            this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 31;
             this.label1.Text = "Nhân viên nhập";
             // 
@@ -203,29 +194,26 @@ namespace PrintCG_24062016
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(273, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(205, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 17);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 33;
             this.label2.Text = "Bưu cục";
             // 
             // txtbuucuc
             // 
             this.txtbuucuc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtbuucuc.Location = new System.Drawing.Point(337, 28);
-            this.txtbuucuc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbuucuc.Location = new System.Drawing.Point(253, 23);
             this.txtbuucuc.Name = "txtbuucuc";
-            this.txtbuucuc.Size = new System.Drawing.Size(95, 22);
+            this.txtbuucuc.Size = new System.Drawing.Size(72, 20);
             this.txtbuucuc.TabIndex = 32;
             // 
             // btnina5
             // 
             this.btnina5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnina5.Location = new System.Drawing.Point(187, 533);
-            this.btnina5.Margin = new System.Windows.Forms.Padding(4);
+            this.btnina5.Location = new System.Drawing.Point(140, 433);
             this.btnina5.Name = "btnina5";
-            this.btnina5.Size = new System.Drawing.Size(71, 28);
+            this.btnina5.Size = new System.Drawing.Size(53, 23);
             this.btnina5.TabIndex = 24;
             this.btnina5.Text = "In A5";
             this.btnina5.UseVisualStyleBackColor = true;
@@ -235,10 +223,9 @@ namespace PrintCG_24062016
             // 
             this.btnlien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnlien.Enabled = false;
-            this.btnlien.Location = new System.Drawing.Point(268, 533);
-            this.btnlien.Margin = new System.Windows.Forms.Padding(4);
+            this.btnlien.Location = new System.Drawing.Point(201, 433);
             this.btnlien.Name = "btnlien";
-            this.btnlien.Size = new System.Drawing.Size(69, 28);
+            this.btnlien.Size = new System.Drawing.Size(52, 23);
             this.btnlien.TabIndex = 25;
             this.btnlien.Text = "In Kim";
             this.btnlien.UseVisualStyleBackColor = true;
@@ -246,10 +233,9 @@ namespace PrintCG_24062016
             // btnexcel
             // 
             this.btnexcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnexcel.Location = new System.Drawing.Point(456, 533);
-            this.btnexcel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnexcel.Location = new System.Drawing.Point(342, 433);
             this.btnexcel.Name = "btnexcel";
-            this.btnexcel.Size = new System.Drawing.Size(99, 28);
+            this.btnexcel.Size = new System.Drawing.Size(74, 23);
             this.btnexcel.TabIndex = 26;
             this.btnexcel.Text = "Xuất excel";
             this.btnexcel.UseVisualStyleBackColor = true;
@@ -263,19 +249,17 @@ namespace PrintCG_24062016
             // dtppgi
             // 
             this.dtppgi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtppgi.Location = new System.Drawing.Point(100, 30);
-            this.dtppgi.Margin = new System.Windows.Forms.Padding(4);
+            this.dtppgi.Location = new System.Drawing.Point(75, 24);
             this.dtppgi.Name = "dtppgi";
-            this.dtppgi.Size = new System.Drawing.Size(105, 22);
+            this.dtppgi.Size = new System.Drawing.Size(80, 20);
             this.dtppgi.TabIndex = 28;
             // 
             // btnbaophat
             // 
             this.btnbaophat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnbaophat.Location = new System.Drawing.Point(345, 533);
-            this.btnbaophat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnbaophat.Location = new System.Drawing.Point(259, 433);
             this.btnbaophat.Name = "btnbaophat";
-            this.btnbaophat.Size = new System.Drawing.Size(99, 28);
+            this.btnbaophat.Size = new System.Drawing.Size(74, 23);
             this.btnbaophat.TabIndex = 29;
             this.btnbaophat.Text = "In báo phát";
             this.btnbaophat.UseVisualStyleBackColor = true;
@@ -284,20 +268,18 @@ namespace PrintCG_24062016
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 32);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(12, 26);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 17);
+            this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 34;
             this.label3.Text = "Ngày nhập";
             // 
             // txtsoluongin
             // 
             this.txtsoluongin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtsoluongin.Location = new System.Drawing.Point(95, 535);
-            this.txtsoluongin.Margin = new System.Windows.Forms.Padding(4);
+            this.txtsoluongin.Location = new System.Drawing.Point(71, 435);
             this.txtsoluongin.Name = "txtsoluongin";
-            this.txtsoluongin.Size = new System.Drawing.Size(88, 22);
+            this.txtsoluongin.Size = new System.Drawing.Size(67, 20);
             this.txtsoluongin.TabIndex = 35;
             this.txtsoluongin.Text = "1";
             // 
@@ -305,20 +287,18 @@ namespace PrintCG_24062016
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 539);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(9, 438);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 17);
+            this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 36;
             this.label4.Text = "Số lượng in";
             // 
             // btnbangke
             // 
             this.btnbangke.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnbangke.Location = new System.Drawing.Point(665, 533);
-            this.btnbangke.Margin = new System.Windows.Forms.Padding(4);
+            this.btnbangke.Location = new System.Drawing.Point(499, 433);
             this.btnbangke.Name = "btnbangke";
-            this.btnbangke.Size = new System.Drawing.Size(99, 28);
+            this.btnbangke.Size = new System.Drawing.Size(74, 23);
             this.btnbangke.TabIndex = 37;
             this.btnbangke.Text = "In bảng kê";
             this.btnbangke.UseVisualStyleBackColor = true;
@@ -327,10 +307,9 @@ namespace PrintCG_24062016
             // btnimportexcel
             // 
             this.btnimportexcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnimportexcel.Location = new System.Drawing.Point(560, 533);
-            this.btnimportexcel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnimportexcel.Location = new System.Drawing.Point(420, 433);
             this.btnimportexcel.Name = "btnimportexcel";
-            this.btnimportexcel.Size = new System.Drawing.Size(99, 28);
+            this.btnimportexcel.Size = new System.Drawing.Size(74, 23);
             this.btnimportexcel.TabIndex = 38;
             this.btnimportexcel.Text = "Nhập excel";
             this.btnimportexcel.UseVisualStyleBackColor = true;
@@ -366,10 +345,9 @@ namespace PrintCG_24062016
             this.BP,
             this.ProvinceName,
             this.DistrictName});
-            this.myGrid1.Location = new System.Drawing.Point(12, 76);
-            this.myGrid1.Margin = new System.Windows.Forms.Padding(4);
+            this.myGrid1.Location = new System.Drawing.Point(9, 62);
             this.myGrid1.Name = "myGrid1";
-            this.myGrid1.Size = new System.Drawing.Size(1552, 449);
+            this.myGrid1.Size = new System.Drawing.Size(1164, 365);
             this.myGrid1.TabIndex = 22;
             this.myGrid1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.myGrid1_CellEnter);
             this.myGrid1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.myGrid1_CellFormatting);
@@ -532,19 +510,18 @@ namespace PrintCG_24062016
             // btnexcelfox
             // 
             this.btnexcelfox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnexcelfox.Location = new System.Drawing.Point(772, 534);
-            this.btnexcelfox.Margin = new System.Windows.Forms.Padding(4);
+            this.btnexcelfox.Location = new System.Drawing.Point(579, 434);
             this.btnexcelfox.Name = "btnexcelfox";
-            this.btnexcelfox.Size = new System.Drawing.Size(135, 28);
+            this.btnexcelfox.Size = new System.Drawing.Size(101, 23);
             this.btnexcelfox.TabIndex = 39;
             this.btnexcelfox.Text = "Xuất excel foxpro";
             this.btnexcelfox.UseVisualStyleBackColor = true;
             // 
             // CG1_LE
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1580, 565);
+            this.ClientSize = new System.Drawing.Size(1185, 459);
             this.Controls.Add(this.btnexcelfox);
             this.Controls.Add(this.btnimportexcel);
             this.Controls.Add(this.btnbangke);
@@ -559,7 +536,6 @@ namespace PrintCG_24062016
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.myGrid1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CG1_LE";
             this.Text = "In phiếu gửi";
             this.Load += new System.EventHandler(this.CG1_LE_Load);
