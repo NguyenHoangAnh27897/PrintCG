@@ -83,5 +83,11 @@ namespace SGPWebService
         string getUserName(string userid);
         [OperationContract]
         List<DataClass.ChiTietHoaDon> getChiTietHoaDonAll();
+        [OperationContract]
+        List<DataClass.Customers> getCustomerIDbyPost(string PostOfficeID);
+        [OperationContract]
+        List<DataClass.CustomerGroup> getCustomerGroup();
+        [OperationContract]
+        List<DataClass.Customers> getCustomerIDbyGroup(string GroupID);
     }
 }

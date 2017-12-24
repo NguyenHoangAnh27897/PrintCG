@@ -574,4 +574,44 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getCustomerIDbyPost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PostOfficeID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCustomerIDbyPostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="getCustomerIDbyPostResult" nillable="true" type="q21:ArrayOfCustomers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCustomerGroup">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCustomerGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="getCustomerGroupResult" nillable="true" type="q22:ArrayOfCustomerGroup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCustomerIDbyGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCustomerIDbyGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass" minOccurs="0" name="getCustomerIDbyGroupResult" nillable="true" type="q23:ArrayOfCustomers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

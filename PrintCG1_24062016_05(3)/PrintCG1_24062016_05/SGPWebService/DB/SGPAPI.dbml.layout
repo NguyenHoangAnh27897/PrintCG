@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13, 8.5" name="SGPAPI">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13, 10.625" name="SGPAPI">
   <DataContextMoniker Name="/SGPAPIDataContext" />
   <nestedChildShapes>
     <classShape Id="06161dd7-1731-4d56-8031-27ecef2a7633" absoluteBounds="0.5, 0.5, 2, 1.1939925130208333">
@@ -72,6 +72,18 @@
       <DataClassMoniker Name="/SGPAPIDataContext/SGP_HoaDon" />
       <nestedChildShapes>
         <elementListCompartment Id="472ce75e-477c-414b-961b-df4ef27b1106" absoluteBounds="10.765, 5.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f2b7c1cd-7e39-4725-9c3a-1d8785c4130f" absoluteBounds="6.875, 8.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/SGPAPIDataContext/SGP_CutomerGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11cd6f3b-0a19-4b40-ae81-72c1b45e1878" absoluteBounds="6.89, 8.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="388d660d-5c71-4891-b385-78710ed00f70" absoluteBounds="4.5, 7.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SGPAPIDataContext/SGP_CustomerGroupDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15cbeb6a-c4e9-41dc-aa56-672f64c7706a" absoluteBounds="4.515, 7.7100000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

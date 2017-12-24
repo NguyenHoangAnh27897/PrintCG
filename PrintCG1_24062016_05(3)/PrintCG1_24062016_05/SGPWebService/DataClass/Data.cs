@@ -132,4 +132,18 @@ namespace SGPWebService.DataClass
     {
         public string UserName { get; set; }
     }
+
+    public class Customers
+    {
+        public string CustomerID { get; set; }
+    }
+    public class CustomerGroup
+    {
+        public string GroupID { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
+        public string Taxcode { get; set; }
+        public string ZoneID { get; set; }
+    }
 }

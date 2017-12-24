@@ -224,6 +224,24 @@
   <wsdl:message name="ISGPService_getChiTietHoaDonAll_OutputMessage">
     <wsdl:part name="parameters" element="tns:getChiTietHoaDonAllResponse" />
   </wsdl:message>
+  <wsdl:message name="ISGPService_getCustomerIDbyPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerIDbyPost" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getCustomerIDbyPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerIDbyPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getCustomerGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerGroup" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getCustomerGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getCustomerIDbyGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerIDbyGroup" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getCustomerIDbyGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerIDbyGroupResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISGPService">
     <wsdl:operation name="login">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/login" message="tns:ISGPService_login_InputMessage" />
@@ -368,6 +386,18 @@
     <wsdl:operation name="getChiTietHoaDonAll">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getChiTietHoaDonAll" message="tns:ISGPService_getChiTietHoaDonAll_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getChiTietHoaDonAllResponse" message="tns:ISGPService_getChiTietHoaDonAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerIDbyPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getCustomerIDbyPost" message="tns:ISGPService_getCustomerIDbyPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getCustomerIDbyPostResponse" message="tns:ISGPService_getCustomerIDbyPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getCustomerGroup" message="tns:ISGPService_getCustomerGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getCustomerGroupResponse" message="tns:ISGPService_getCustomerGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerIDbyGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getCustomerIDbyGroup" message="tns:ISGPService_getCustomerIDbyGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getCustomerIDbyGroupResponse" message="tns:ISGPService_getCustomerIDbyGroup_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISGPService" type="tns:ISGPService">
@@ -689,6 +719,33 @@
     </wsdl:operation>
     <wsdl:operation name="getChiTietHoaDonAll">
       <soap:operation soapAction="http://tempuri.org/ISGPService/getChiTietHoaDonAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerIDbyPost">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getCustomerIDbyPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerGroup">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getCustomerGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerIDbyGroup">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getCustomerIDbyGroup" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
