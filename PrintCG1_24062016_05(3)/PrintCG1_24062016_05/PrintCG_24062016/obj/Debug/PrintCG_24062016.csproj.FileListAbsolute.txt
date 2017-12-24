@@ -1079,3 +1079,5 @@ D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.khachhang.FrmNhomKhachHang.resources
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe.manifest
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.application
+C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.khachhang.FrmCongNoTongHop.resources
+C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.khachhang.FrmNhomKhachHang.resources

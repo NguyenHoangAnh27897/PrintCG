@@ -52,6 +52,9 @@
             this.navBarItem25 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem27 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem28 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem34 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem35 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem36 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem32 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -106,20 +109,18 @@
             this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel1.ID = new System.Guid("d3ab38bc-a778-4acf-92ee-70b75d1fb789");
             this.dockPanel1.Location = new System.Drawing.Point(0, 0);
-            this.dockPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.Options.ShowCloseButton = false;
             this.dockPanel1.OriginalSize = new System.Drawing.Size(243, 200);
-            this.dockPanel1.Size = new System.Drawing.Size(243, 654);
+            this.dockPanel1.Size = new System.Drawing.Size(243, 530);
             this.dockPanel1.Text = "Thanh menu";
             // 
             // dockPanel1_Container
             // 
             this.dockPanel1_Container.Controls.Add(this.navBarControl1);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 24);
-            this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(235, 626);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(235, 503);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // navBarControl1
@@ -165,12 +166,14 @@
             this.navBarItem30,
             this.navBarItem31,
             this.navBarItem32,
-            this.navBarItem33});
-            this.navBarControl1.Location = new System.Drawing.Point(-5, 4);
-            this.navBarControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.navBarItem33,
+            this.navBarItem34,
+            this.navBarItem35,
+            this.navBarItem36});
+            this.navBarControl1.Location = new System.Drawing.Point(-4, 3);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 233;
-            this.navBarControl1.Size = new System.Drawing.Size(233, 639);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 200;
+            this.navBarControl1.Size = new System.Drawing.Size(200, 519);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -267,13 +270,17 @@
             // navBarGroup3
             // 
             this.navBarGroup3.Caption = "Công cụ";
+            this.navBarGroup3.Expanded = true;
             this.navBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
             this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem18),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem19),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem25),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem27),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem28)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem28),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem34),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem35),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem36)});
             this.navBarGroup3.Name = "navBarGroup3";
             // 
             // navBarItem18
@@ -305,6 +312,24 @@
             this.navBarItem28.Caption = "Chi phí ngoài tuyến";
             this.navBarItem28.Name = "navBarItem28";
             this.navBarItem28.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem28_LinkClicked);
+            // 
+            // navBarItem34
+            // 
+            this.navBarItem34.Caption = "Khách hàng đặc biệt";
+            this.navBarItem34.Name = "navBarItem34";
+            this.navBarItem34.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem34_LinkClicked);
+            // 
+            // navBarItem35
+            // 
+            this.navBarItem35.Caption = "In Hoá Đơn";
+            this.navBarItem35.Name = "navBarItem35";
+            this.navBarItem35.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem35_LinkClicked);
+            // 
+            // navBarItem36
+            // 
+            this.navBarItem36.Caption = "Tracking API";
+            this.navBarItem36.Name = "navBarItem36";
+            this.navBarItem36.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem36_LinkClicked);
             // 
             // navBarGroup6
             // 
@@ -444,34 +469,32 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblmabc,
             this.lblmanv});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 654);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 530);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1498, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(1284, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // lblmabc
             // 
             this.lblmabc.Name = "lblmabc";
-            this.lblmabc.Size = new System.Drawing.Size(63, 20);
+            this.lblmabc.Size = new System.Drawing.Size(51, 17);
             this.lblmabc.Text = "Mã BC : ";
             // 
             // lblmanv
             // 
             this.lblmanv.Name = "lblmanv";
-            this.lblmanv.Size = new System.Drawing.Size(57, 20);
+            this.lblmanv.Size = new System.Drawing.Size(46, 17);
             this.lblmanv.Text = "Mã NV:";
             // 
             // FrmMain1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1498, 679);
+            this.ClientSize = new System.Drawing.Size(1284, 552);
             this.Controls.Add(this.dockPanel1);
             this.Controls.Add(this.statusStrip1);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmMain1";
             this.Text = "Chương trình in SGP";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -537,6 +560,9 @@
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup6;
         private DevExpress.XtraNavBar.NavBarItem navBarItem32;
         private DevExpress.XtraNavBar.NavBarItem navBarItem33;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem34;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem35;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem36;
 
     }
 }
