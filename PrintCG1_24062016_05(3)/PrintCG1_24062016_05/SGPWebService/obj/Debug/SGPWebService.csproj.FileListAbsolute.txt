@@ -14,3 +14,4 @@ C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\Pr
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\bin\SGPWebService.pdb
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.dll
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.pdb
+C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\SGPWebService\obj\Debug\SGPWebService.csprojResolveAssemblyReference.cache
