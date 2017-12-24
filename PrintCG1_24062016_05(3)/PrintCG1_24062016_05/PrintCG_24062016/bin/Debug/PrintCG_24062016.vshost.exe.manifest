@@ -134,6 +134,21 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Office.Interop.Excel" version="12.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Vbe.Interop" version="12.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="office" version="12.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="ShockwaveFlashObjects" version="1.0.0.0" publicKeyToken="692FBEA5521E1304" language="neutral" />
     </dependentAssembly>
   </dependency>
@@ -1907,18 +1922,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Office.Interop.Excel.dll" size="1276720">
-      <assemblyIdentity name="Microsoft.Office.Interop.Excel" version="12.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>NEVCIGHkg/arl6UuCFNlxV9F4W0=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="525824">
       <assemblyIdentity name="Newtonsoft.Json" version="10.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -1931,14 +1934,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PrintCG_24062016.exe" size="2462208">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PrintCG_24062016.exe" size="2463232">
       <assemblyIdentity name="PrintCG_24062016" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>miEcPuwqU7mhNfaiLaoH7raYVb0=</dsig:DigestValue>
+        <dsig:DigestValue>LEfZM1c+pdBEOfYjBEbgX5nI708=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

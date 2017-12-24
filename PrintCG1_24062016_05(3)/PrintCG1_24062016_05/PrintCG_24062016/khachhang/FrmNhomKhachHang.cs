@@ -68,5 +68,6 @@ namespace PrintCG_24062016.khachhang
             txttaxcode.Text = dataGridView2.Rows[rowIdx].Cells["TaxCode"].Value.ToString();
             dataGridView1.DataSource = sgpservice.getCustomerIDbyGroup(txtgroupid.Text.Trim());
         }
+
     }
 }
