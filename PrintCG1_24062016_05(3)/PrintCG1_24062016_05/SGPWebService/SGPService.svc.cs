@@ -703,5 +703,47 @@ namespace SGPWebService
                          });
             return query.ToList();
         }
+
+        public List<DataClass.Customers> getCustomerIDbyPost(string PostOfficeID)
+        {
+            var query = (from ds in pms.MM_Customers
+                         where ds.PostOfficeID == PostOfficeID
+                         select new DataClass.Customers()
+                         {
+                             CustomerID = ds.CustomerID,
+
+                         });
+            return query.ToList();
+        }
+
+
+        public List<DataClass.CustomerGroup> getCustomerGroup()
+        {
+            var query = (from ds in api.SGP_CutomerGroups
+                         select new DataClass.CustomerGroup()
+                         {
+                             GroupID = ds.GroupID,
+                             Name = ds.GroupName,
+                             Address = ds.Address,
+                             Phone = ds.Phone,
+                             Taxcode = ds.TaxCode,
+                             ZoneID = ds.ZoneID,
+
+                         });
+            return query.ToList();
+        }
+
+
+        public List<DataClass.Customers> getCustomerIDbyGroup(string GroupID)
+        {
+            var query = (from ds in api.SGP_CustomerGroupDetails
+                         where ds.GroupID == GroupID
+                         select new DataClass.Customers()
+                         {
+                             CustomerID = ds.CustomerID,
+
+                         });
+            return query.ToList();
+        }
     }
 }

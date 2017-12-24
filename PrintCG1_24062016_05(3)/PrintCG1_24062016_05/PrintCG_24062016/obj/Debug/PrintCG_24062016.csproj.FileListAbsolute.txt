@@ -833,7 +833,6 @@ D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLLuyKe.resources
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLPrint.resources
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmDHLXoaDO.resources
-D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmKHDB.resources
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmMain1.resources
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmNormal.resources
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.FrmSonyDiachi.resources
@@ -1068,3 +1067,15 @@ C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\Pr
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.application
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe.manifest
 C:\Users\hoang\Downloads\Programs\PortableGit\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.application
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.exe.manifest
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\PrintCG_24062016.application
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\Newtonsoft.Json.dll
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\Newtonsoft.Json.xml
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.API.TrackingAPI.resources
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.congcu.FrmChiTietHoaDon.resources
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.congcu.FrmHoaDon.resources
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.congcu.Frm_SpecialCustomer.resources
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.khachhang.FrmCongNoTongHop.resources
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.khachhang.FrmNhomKhachHang.resources
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.exe.manifest
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.application

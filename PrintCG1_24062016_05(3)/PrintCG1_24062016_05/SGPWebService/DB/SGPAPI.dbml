@@ -119,4 +119,21 @@
       <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.SGP_CutomerGroups" Member="SGP_CutomerGroups">
+    <Type Name="SGP_CutomerGroup">
+      <Column Name="GroupID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(110)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TaxCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ZoneID" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SGP_CustomerGroupDetails" Member="SGP_CustomerGroupDetails">
+    <Type Name="SGP_CustomerGroupDetail">
+      <Column Name="CustomerID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>
