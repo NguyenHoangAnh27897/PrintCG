@@ -16,8 +16,10 @@ namespace PrintCG_24062016
 {
     public partial class FrmDHL_Listweight : Form
     {
-        public FrmDHL_Listweight()
+        private string somay = "";
+        public FrmDHL_Listweight(string number)
         {
+            this.somay = number;
             InitializeComponent();
         }
         public static string socg = string.Empty;
@@ -30,7 +32,7 @@ namespace PrintCG_24062016
         {
             txtsocg.Text = socg;
             txtsoluong.Text = soluog;
-            string[] row = new string[] { "0", "1", "1" };
+            string[] row = new string[] { "0", "1", "1","0" };
             dataGridView1.Rows.Add(row);
             //OleDbConnection conn = new OleDbConnection();
             //DataSet ds = new DataSet();
@@ -185,16 +187,29 @@ namespace PrintCG_24062016
 
                 }
             }
-            //ket thuc kiem tra===========================================================================
+            //ket thuc kiem tra
         }
 
         private void btnclose_Click(object sender, EventArgs e)
         {
             try
             {
+                int tongmay = 0;
+                for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+                {
+                    tongmay += int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                }
+                if (int.Parse(somay) == tongmay)
+                {
                     update_weight();
                     insert_sltl();
                     textValue = txttotal.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Số máy không khớp");
+                }
+                    
                
             }
             catch (Exception ex)

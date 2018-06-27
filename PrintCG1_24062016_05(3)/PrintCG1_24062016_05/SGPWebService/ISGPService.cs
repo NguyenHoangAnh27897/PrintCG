@@ -60,13 +60,13 @@ namespace SGPWebService
         [OperationContract]
         List<DB.SGP_ChiPhi> getCPNT(DateTime FromDate,DateTime ToDate,int type,string Post);
         [OperationContract]
-        bool addCustomer(string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note);
+        bool addCustomer(string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note,string buucuc);
         [OperationContract]
-        List<DataClass.SpecialCustomer> getSpCustomer();
+        List<DataClass.SpeCustomer> getSpCustomer(string buucuc, string employee, string fromdate, string todate, int type);
         [OperationContract]
         List<DataClass.SpCustomer> getCustomerID();
         [OperationContract]
-        bool changeCustomer(int id, string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note);
+        bool changeCustomer(int id, string date, string hour, string deliveryto);
         [OperationContract]
         bool addCustomerID(string zoneid, string customerid, string customername);
         [OperationContract]
@@ -89,5 +89,29 @@ namespace SGPWebService
         List<DataClass.CustomerGroup> getCustomerGroup();
         [OperationContract]
         List<DataClass.Customers> getCustomerIDbyGroup(string GroupID);
+        [OperationContract]
+        List<DB.TB_DHLPlan> getDHLplan(DateTime FromDate, DateTime ToDate);
+        [OperationContract]
+        bool updateMailerDeliveryDetail(string mailerid, DateTime ngaygio, string nguoinhan, string trangthai);
+        [OperationContract]
+        List<DataClass.getCustomerIDTab4> getCustomerIDTab4(string postofficeid);
+        [OperationContract]
+        List<DataClass.getCustomerGroupTab4> getCustomerGroupTab4();
+        [OperationContract]
+        List<DataClass.getListSpCustomer> getListSpCustomer(string tungay, string denngay, string customerid, string buucuc, int loai);
+        [OperationContract]
+        List<DataClass.CGChuaNhapDT> getListCGChuaNhapDT(string tungay, string denngay, string buucuc);
+        [OperationContract]
+        List<DataClass.CGChuaNhapDT> getListCGChuaXuatBK(string tungay, string denngay, string buucuc);
+        [OperationContract]
+        List<DataClass.getPostOffice> getPostOffice();
+        [OperationContract]
+        List<DataClass.ZoneList> getZone();
+        [OperationContract]
+        List<DB.MM_CustomerGroup> getCustomerGroupPMS();
+        [OperationContract]
+        List<DataClass.getListSpCustomer> getListCustomerGroupDetails(string tungay, string denngay, string parameter,string customergroup,int loai);
+        [OperationContract]
+        List<DataClass.SpeCustomer> getMailerCustomerList(string buucuc, string employee, string fromdate, string todate, int type);
     }
 }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txttotal = new System.Windows.Forms.TextBox();
             this.btnxuatexcel = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@
             this.AcceptDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PostOfficeIDAccept = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txttotal = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -74,10 +74,9 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1496, 598);
+            this.tabControl1.Size = new System.Drawing.Size(771, 486);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -92,20 +91,29 @@
             this.tabPage1.Controls.Add(this.dtpfromdate);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1488, 569);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(763, 460);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Danh mục";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // txttotal
+            // 
+            this.txttotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txttotal.Location = new System.Drawing.Point(625, 14);
+            this.txttotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txttotal.Name = "txttotal";
+            this.txttotal.Size = new System.Drawing.Size(76, 20);
+            this.txttotal.TabIndex = 9;
+            // 
             // btnxuatexcel
             // 
-            this.btnxuatexcel.Location = new System.Drawing.Point(848, 16);
+            this.btnxuatexcel.Location = new System.Drawing.Point(565, 15);
+            this.btnxuatexcel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnxuatexcel.Name = "btnxuatexcel";
-            this.btnxuatexcel.Size = new System.Drawing.Size(75, 23);
+            this.btnxuatexcel.Size = new System.Drawing.Size(56, 19);
             this.btnxuatexcel.TabIndex = 8;
             this.btnxuatexcel.Text = "Xuất excel";
             this.btnxuatexcel.UseVisualStyleBackColor = true;
@@ -117,18 +125,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 53);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 43);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1459, 508);
+            this.dataGridView1.Size = new System.Drawing.Size(743, 413);
             this.dataGridView1.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(536, 18);
+            this.label5.Location = new System.Drawing.Point(343, 15);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 17);
+            this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Lọc theo";
             // 
@@ -138,16 +148,18 @@
             this.cmbloctheo.Items.AddRange(new object[] {
             "Ngày nhập",
             "Ngày nhận"});
-            this.cmbloctheo.Location = new System.Drawing.Point(608, 15);
+            this.cmbloctheo.Location = new System.Drawing.Point(397, 12);
+            this.cmbloctheo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbloctheo.Name = "cmbloctheo";
-            this.cmbloctheo.Size = new System.Drawing.Size(121, 24);
+            this.cmbloctheo.Size = new System.Drawing.Size(83, 21);
             this.cmbloctheo.TabIndex = 5;
             // 
             // btnxem
             // 
-            this.btnxem.Location = new System.Drawing.Point(754, 15);
+            this.btnxem.Location = new System.Drawing.Point(495, 15);
+            this.btnxem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnxem.Name = "btnxem";
-            this.btnxem.Size = new System.Drawing.Size(75, 23);
+            this.btnxem.Size = new System.Drawing.Size(56, 19);
             this.btnxem.TabIndex = 4;
             this.btnxem.Text = "Xem";
             this.btnxem.UseVisualStyleBackColor = true;
@@ -156,34 +168,38 @@
             // dtptodate
             // 
             this.dtptodate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtptodate.Location = new System.Drawing.Point(343, 15);
+            this.dtptodate.Location = new System.Drawing.Point(237, 12);
+            this.dtptodate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtptodate.Name = "dtptodate";
-            this.dtptodate.Size = new System.Drawing.Size(136, 22);
+            this.dtptodate.Size = new System.Drawing.Size(85, 20);
             this.dtptodate.TabIndex = 3;
             // 
             // dtpfromdate
             // 
             this.dtpfromdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpfromdate.Location = new System.Drawing.Point(84, 13);
+            this.dtpfromdate.Location = new System.Drawing.Point(63, 11);
+            this.dtpfromdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpfromdate.Name = "dtpfromdate";
-            this.dtpfromdate.Size = new System.Drawing.Size(136, 22);
+            this.dtpfromdate.Size = new System.Drawing.Size(92, 20);
             this.dtpfromdate.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(268, 18);
+            this.label4.Location = new System.Drawing.Point(180, 15);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 17);
+            this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Đến ngày";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 15);
+            this.label3.Location = new System.Drawing.Point(14, 12);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 17);
+            this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Từ ngày";
             // 
@@ -195,21 +211,19 @@
             this.tabPage2.Controls.Add(this.dtpngaynhap);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.myGrid1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1488, 569);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(763, 460);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Chi tiết";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btnluu
             // 
-            this.btnluu.Location = new System.Drawing.Point(523, 14);
-            this.btnluu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnluu.Location = new System.Drawing.Point(392, 11);
             this.btnluu.Name = "btnluu";
-            this.btnluu.Size = new System.Drawing.Size(100, 28);
+            this.btnluu.Size = new System.Drawing.Size(75, 23);
             this.btnluu.TabIndex = 5;
             this.btnluu.Text = "Lưu";
             this.btnluu.UseVisualStyleBackColor = true;
@@ -217,38 +231,34 @@
             // 
             // txtbuucuc
             // 
-            this.txtbuucuc.Location = new System.Drawing.Point(359, 15);
-            this.txtbuucuc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbuucuc.Location = new System.Drawing.Point(269, 12);
             this.txtbuucuc.Name = "txtbuucuc";
-            this.txtbuucuc.Size = new System.Drawing.Size(132, 22);
+            this.txtbuucuc.Size = new System.Drawing.Size(100, 20);
             this.txtbuucuc.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(289, 20);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(217, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 17);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Bưu cục";
             // 
             // dtpngaynhap
             // 
             this.dtpngaynhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpngaynhap.Location = new System.Drawing.Point(96, 15);
-            this.dtpngaynhap.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpngaynhap.Location = new System.Drawing.Point(72, 12);
             this.dtpngaynhap.Name = "dtpngaynhap";
-            this.dtpngaynhap.Size = new System.Drawing.Size(132, 22);
+            this.dtpngaynhap.Size = new System.Drawing.Size(100, 20);
             this.dtpngaynhap.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(8, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 17);
+            this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ngày nhập";
             // 
@@ -272,10 +282,9 @@
             this.AcceptDate,
             this.Weight,
             this.PostOfficeIDAccept});
-            this.myGrid1.Location = new System.Drawing.Point(8, 48);
-            this.myGrid1.Margin = new System.Windows.Forms.Padding(4);
+            this.myGrid1.Location = new System.Drawing.Point(6, 39);
             this.myGrid1.Name = "myGrid1";
-            this.myGrid1.Size = new System.Drawing.Size(1465, 508);
+            this.myGrid1.Size = new System.Drawing.Size(748, 413);
             this.myGrid1.TabIndex = 0;
             this.myGrid1.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.myGrid1_CellValidating);
             this.myGrid1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.myGrid1_EditingControlShowing);
@@ -363,23 +372,14 @@
             this.PostOfficeIDAccept.ReadOnly = true;
             this.PostOfficeIDAccept.Width = 80;
             // 
-            // txttotal
-            // 
-            this.txttotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txttotal.Location = new System.Drawing.Point(1380, 25);
-            this.txttotal.Name = "txttotal";
-            this.txttotal.Size = new System.Drawing.Size(100, 22);
-            this.txttotal.TabIndex = 9;
-            // 
             // FrmChiPhiNT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1496, 598);
+            this.ClientSize = new System.Drawing.Size(771, 486);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmChiPhiNT";
-            this.Text = "FrmChiPhiNT";
+            this.Text = "Quản lý chi phí ngoài tuyến";
             this.Load += new System.EventHandler(this.FrmChiPhiNT_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

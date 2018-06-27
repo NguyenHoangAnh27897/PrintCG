@@ -27,6 +27,7 @@
       <Column Name="LastEditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="UMS_tblUserAccount_UMS_tblUserAccountPostOffice" Member="UMS_tblUserAccount" ThisKey="UserGroupID" OtherKey="UserGroupID" Type="UMS_tblUserAccount" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="MM_PostOffice_UMS_tblUserAccountPostOffice" Member="MM_PostOffice" ThisKey="PostOfficeID" OtherKey="PostOfficeID" Type="MM_PostOffice" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.BS_Provinces" Member="BS_Provinces">
@@ -40,6 +41,7 @@
       <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="BS_Province_MM_Mailer" Member="MM_Mailers" ThisKey="ProvinceID" OtherKey="RecieverProvinceID" Type="MM_Mailer" />
       <Association Name="BS_Province_BS_District" Member="BS_Districts" ThisKey="ProvinceID" OtherKey="ProvinceID" Type="BS_District" />
+      <Association Name="BS_Province_MM_PostOffice" Member="MM_PostOffices" ThisKey="ProvinceID" OtherKey="ProvinceID" Type="MM_PostOffice" />
     </Type>
   </Table>
   <Table Name="dbo.MM_ServiceTypes" Member="MM_ServiceTypes">
@@ -188,6 +190,8 @@
       <Association Name="MM_Customer_MM_Mailer" Member="MM_Customer" ThisKey="SenderID" OtherKey="CustomerID" Type="MM_Customer" IsForeignKey="true" />
       <Association Name="MM_ServiceType_MM_Mailer" Member="MM_ServiceType" ThisKey="ServiceTypeID" OtherKey="ServiceTypeID" Type="MM_ServiceType" IsForeignKey="true" />
       <Association Name="MM_Status_MM_Mailer" Member="MM_Status" ThisKey="CurrentStatusID" OtherKey="StatusID" Type="MM_Status" IsForeignKey="true" />
+      <Association Name="MM_PostOffice_MM_Mailer" Member="MM_PostOffice" ThisKey="PostOfficeAcceptID" OtherKey="PostOfficeID" Type="MM_PostOffice" IsForeignKey="true" />
+      <Association Name="MM_PostOffice_MM_Mailer1" Member="MM_PostOffice1" ThisKey="PostOfficeRecieverMoneyID" OtherKey="PostOfficeID" Type="MM_PostOffice" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.MM_PackingListInternalDetail" Member="MM_PackingListInternalDetails">
@@ -260,6 +264,8 @@
       <Column Name="LastSyncDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="MM_MailerDelivery_MM_MailerDeliveryDetail" Member="MM_MailerDeliveryDetails" ThisKey="DocumentID" OtherKey="DocumentID" Type="MM_MailerDeliveryDetail" />
       <Association Name="BS_Employee_MM_MailerDelivery" Member="BS_Employee" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="BS_Employee" IsForeignKey="true" />
+      <Association Name="MM_PostOffice_MM_MailerDelivery" Member="MM_PostOffice" ThisKey="PostOfficeID" OtherKey="PostOfficeID" Type="MM_PostOffice" IsForeignKey="true" />
+      <Association Name="BS_Employee1_MM_MailerDelivery" Member="BS_Employee1" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="BS_Employee1" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.BS_Employees" Member="BS_Employees">
@@ -283,6 +289,7 @@
       <Column Name="SGPEmployeeID" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Column Name="Imei" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Association Name="BS_Employee_MM_MailerDelivery" Member="MM_MailerDeliveries" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="MM_MailerDelivery" />
+      <Association Name="MM_PostOffice_BS_Employee" Member="MM_PostOffice" ThisKey="PostOfficeID" OtherKey="PostOfficeID" Type="MM_PostOffice" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.MM_Status" Member="MM_Status">
@@ -331,6 +338,67 @@
       <Column Name="tinh" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
       <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="bcnhap" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MM_PostOffices" Member="MM_PostOffices">
+    <Type Name="MM_PostOffice">
+      <Column Name="PostOfficeID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PostOfficeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ZoneID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ProvinceID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="FaxNo" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsCollaborator" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LastEditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TaxCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BankAccount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MemberOf" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="MM_PostOffice_UMS_tblUserAccountPostOffice" Member="UMS_tblUserAccountPostOffices" ThisKey="PostOfficeID" OtherKey="PostOfficeID" Type="UMS_tblUserAccountPostOffice" />
+      <Association Name="MM_PostOffice_MM_Mailer" Member="MM_Mailers" ThisKey="PostOfficeID" OtherKey="PostOfficeAcceptID" Type="MM_Mailer" />
+      <Association Name="MM_PostOffice_MM_Mailer1" Member="MM_Mailers1" ThisKey="PostOfficeID" OtherKey="PostOfficeRecieverMoneyID" Type="MM_Mailer" />
+      <Association Name="MM_PostOffice_MM_MailerDelivery" Member="MM_MailerDeliveries" ThisKey="PostOfficeID" OtherKey="PostOfficeID" Type="MM_MailerDelivery" />
+      <Association Name="MM_PostOffice_BS_Employee" Member="BS_Employees" ThisKey="PostOfficeID" OtherKey="PostOfficeID" Type="BS_Employee" />
+      <Association Name="MM_PostOffice_MM_PostOffice" Member="MM_PostOffices" ThisKey="PostOfficeID" OtherKey="MemberOf" Type="MM_PostOffice" />
+      <Association Name="MM_PostOffice_BS_Employee1" Member="BS_Employee1s" ThisKey="PostOfficeID" OtherKey="PostOfficeID" Type="BS_Employee1" />
+      <Association Name="BS_Province_MM_PostOffice" Member="BS_Province" ThisKey="ProvinceID" OtherKey="ProvinceID" Type="BS_Province" IsForeignKey="true" />
+      <Association Name="MM_PostOffice_MM_PostOffice" Member="MM_PostOffice1" ThisKey="MemberOf" OtherKey="PostOfficeID" Type="MM_PostOffice" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BS_Employees" Member="BS_Employee1s">
+    <Type Name="BS_Employee1">
+      <Column Name="EmployeeID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EmployeeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DepartmentID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PostOfficeID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="FaxNo" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LastEditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MemberOf" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProvinceID" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="IsCollaborators" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SGPEmployeeID" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Imei" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="BS_Employee1_MM_MailerDelivery" Member="MM_MailerDeliveries" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="MM_MailerDelivery" />
+      <Association Name="MM_PostOffice_BS_Employee1" Member="MM_PostOffice" ThisKey="PostOfficeID" OtherKey="PostOfficeID" Type="MM_PostOffice" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MM_CustomerGroups" Member="MM_CustomerGroups">
+    <Type Name="MM_CustomerGroup">
+      <Column Name="CustomerGroupID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustomerGroupName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LastEditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

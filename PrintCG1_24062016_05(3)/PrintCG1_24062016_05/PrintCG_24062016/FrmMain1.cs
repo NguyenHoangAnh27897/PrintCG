@@ -12,10 +12,12 @@ namespace PrintCG_24062016
 {
     public partial class FrmMain1 : DevExpress.XtraEditors.XtraForm
     {
+        
         public FrmMain1()
         {
             InitializeComponent();
             Sender = new SendMessage(GetMessage);
+           
         }
         public static string user {get;set;}
         public static string postofficeid{get;set;}
@@ -400,7 +402,7 @@ namespace PrintCG_24062016
 
         private void FrmMain1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void navBarItem29_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -465,14 +467,25 @@ namespace PrintCG_24062016
 
         private void navBarItem34_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            congcu.Frm_SpecialCustomer frm = new congcu.Frm_SpecialCustomer();
-            if ((Application.OpenForms["Frm_SpecialCustomer"] as congcu.Frm_SpecialCustomer) != null)
+            //congcu.Frm_SpecialCustomer frm = new congcu.Frm_SpecialCustomer();
+            //if ((Application.OpenForms["Frm_SpecialCustomer"] as congcu.Frm_SpecialCustomer) != null)
+            //{
+            //    frm.Focus();
+            //}
+            //else
+            //{
+            //    frm = new congcu.Frm_SpecialCustomer();
+            //    frm.MdiParent = this;
+            //    frm.Show();
+            //}
+            congcu.FrmKhachHangDacBiet frm = new congcu.FrmKhachHangDacBiet();
+            if ((Application.OpenForms["FrmKhachHangDacBiet"] as congcu.FrmKhachHangDacBiet) != null)
             {
                 frm.Focus();
             }
             else
             {
-                frm = new congcu.Frm_SpecialCustomer();
+                frm = new congcu.FrmKhachHangDacBiet();
                 frm.MdiParent = this;
                 frm.Show();
             }
@@ -503,6 +516,101 @@ namespace PrintCG_24062016
             else
             {
                 frm = new API.TrackingAPI();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void navBarItem31_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            FrmDHLLuyKe frm = new FrmDHLLuyKe();
+            if ((Application.OpenForms["FrmDHLLuyKe"] as FrmDHLLuyKe) != null)
+            {
+                frm.Focus();
+            }
+            else
+            {
+                frm = new FrmDHLLuyKe();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void navBarItem37_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            FrmBCSLMsYen frm = new FrmBCSLMsYen();
+            if ((Application.OpenForms["BCSLMsYen"] as FrmBCSLMsYen) != null)
+            {
+                frm.Focus();
+            }
+            else
+            {
+                frm = new FrmBCSLMsYen();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void navBarItem38_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+           
+        }
+
+        private void navBarItem40_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            MayMan.FrmMayMan frm = new MayMan.FrmMayMan();
+            if ((Application.OpenForms["FrmMayMan"] as MayMan.FrmMayMan) != null)
+            {
+                frm.Focus();
+            }
+            else
+            {
+                frm = new MayMan.FrmMayMan();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void navBarItem25_LinkClicked_1(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            baocaodoanhthu.FrmCGChuaNhapDT frm = new baocaodoanhthu.FrmCGChuaNhapDT();
+            if ((Application.OpenForms["FrmCGChuaNhapDT"] as baocaodoanhthu.FrmCGChuaNhapDT) != null)
+            {
+                frm.Focus();
+            }
+            else
+            {
+                frm = new baocaodoanhthu.FrmCGChuaNhapDT();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void navBarItem41_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            baocaodoanhthu.FrmCGChuaChotBangKe frm = new baocaodoanhthu.FrmCGChuaChotBangKe();
+            if ((Application.OpenForms["FrmCGChuaChotBangKe"] as baocaodoanhthu.FrmCGChuaChotBangKe) != null)
+            {
+                frm.Focus();
+            }
+            else
+            {
+                frm = new baocaodoanhthu.FrmCGChuaChotBangKe();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void navBarItem42_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            hethong.FrmThongTinCapNhat frm = new hethong.FrmThongTinCapNhat();
+            if ((Application.OpenForms["FrmThongTinCapNhat"] as hethong.FrmThongTinCapNhat) != null)
+            {
+                frm.Focus();
+            }
+            else
+            {
+                frm = new hethong.FrmThongTinCapNhat();
                 frm.MdiParent = this;
                 frm.Show();
             }

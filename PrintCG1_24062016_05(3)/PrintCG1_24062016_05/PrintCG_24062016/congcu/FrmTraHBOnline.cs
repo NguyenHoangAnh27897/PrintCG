@@ -33,7 +33,7 @@ namespace PrintCG_24062016.congcu
         private void CopyDataGridViewToClipboard(DataGridView dgv)
         {
             DataGridView1.Columns[0].Visible = false;
-            DataGridView1.Columns[1].Visible = false;
+            //DataGridView1.Columns[1].Visible = false;
             string s = "";
             DataGridViewColumn oCurrentCol = default(DataGridViewColumn);
             //Get header
@@ -85,7 +85,17 @@ namespace PrintCG_24062016.congcu
             {
                 var row = dt.NewRow();
                 foreach (var pi in properties)
-                    row[pi.Name] = pi.GetValue(element, null);
+                {
+                    if (pi.GetValue(element,null) == null)
+                    {
+                        row[pi.Name] = DBNull.Value;
+                    }
+                    else
+                    {
+                        row[pi.Name] = pi.GetValue(element, null);
+                    }
+                    
+                }    
                 dt.Rows.Add(row);
             }
             return dt;
@@ -200,6 +210,7 @@ namespace PrintCG_24062016.congcu
         private void btnxem_Click(object sender, EventArgs e)
         {
             tracu();
+            MessageBox.Show("Xem thanh cong");
         }
 
         private void copyToolStripMenuItem_Click(object sender, EventArgs e)

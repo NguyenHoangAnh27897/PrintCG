@@ -81,6 +81,12 @@ namespace SGPWebService.DB
     partial void InsertBS_Employee1(BS_Employee1 instance);
     partial void UpdateBS_Employee1(BS_Employee1 instance);
     partial void DeleteBS_Employee1(BS_Employee1 instance);
+    partial void InsertMM_CustomerGroup(MM_CustomerGroup instance);
+    partial void UpdateMM_CustomerGroup(MM_CustomerGroup instance);
+    partial void DeleteMM_CustomerGroup(MM_CustomerGroup instance);
+    partial void InsertMM_Zone(MM_Zone instance);
+    partial void UpdateMM_Zone(MM_Zone instance);
+    partial void DeleteMM_Zone(MM_Zone instance);
     #endregion
 		
 		public SGPMainDataContext() : 
@@ -246,6 +252,22 @@ namespace SGPWebService.DB
 			get
 			{
 				return this.GetTable<BS_Employee1>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MM_CustomerGroup> MM_CustomerGroups
+		{
+			get
+			{
+				return this.GetTable<MM_CustomerGroup>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MM_Zone> MM_Zones
+		{
+			get
+			{
+				return this.GetTable<MM_Zone>();
 			}
 		}
 	}
@@ -7944,6 +7966,8 @@ namespace SGPWebService.DB
 		
 		private EntityRef<MM_PostOffice> _MM_PostOffice1;
 		
+		private EntityRef<MM_Zone> _MM_Zone;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -7991,6 +8015,7 @@ namespace SGPWebService.DB
 			this._BS_Employee1s = new EntitySet<BS_Employee1>(new Action<BS_Employee1>(this.attach_BS_Employee1s), new Action<BS_Employee1>(this.detach_BS_Employee1s));
 			this._BS_Province = default(EntityRef<BS_Province>);
 			this._MM_PostOffice1 = default(EntityRef<MM_PostOffice>);
+			this._MM_Zone = default(EntityRef<MM_Zone>);
 			OnCreated();
 		}
 		
@@ -8065,6 +8090,10 @@ namespace SGPWebService.DB
 			{
 				if ((this._ZoneID != value))
 				{
+					if (this._MM_Zone.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnZoneIDChanging(value);
 					this.SendPropertyChanging();
 					this._ZoneID = value;
@@ -8457,6 +8486,40 @@ namespace SGPWebService.DB
 						this._MemberOf = default(string);
 					}
 					this.SendPropertyChanged("MM_PostOffice1");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_Zone_MM_PostOffice", Storage="_MM_Zone", ThisKey="ZoneID", OtherKey="ZoneID", IsForeignKey=true)]
+		public MM_Zone MM_Zone
+		{
+			get
+			{
+				return this._MM_Zone.Entity;
+			}
+			set
+			{
+				MM_Zone previousValue = this._MM_Zone.Entity;
+				if (((previousValue != value) 
+							|| (this._MM_Zone.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MM_Zone.Entity = null;
+						previousValue.MM_PostOffices.Remove(this);
+					}
+					this._MM_Zone.Entity = value;
+					if ((value != null))
+					{
+						value.MM_PostOffices.Add(this);
+						this._ZoneID = value.ZoneID;
+					}
+					else
+					{
+						this._ZoneID = default(string);
+					}
+					this.SendPropertyChanged("MM_Zone");
 				}
 			}
 		}
@@ -9102,6 +9165,350 @@ namespace SGPWebService.DB
 		{
 			this.SendPropertyChanging();
 			entity.BS_Employee1 = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MM_CustomerGroups")]
+	public partial class MM_CustomerGroup : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _CustomerGroupID;
+		
+		private string _CustomerGroupName;
+		
+		private string _Notes;
+		
+		private System.Nullable<System.DateTime> _LastEditDate;
+		
+		private System.Nullable<System.DateTime> _CreationDate;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnCustomerGroupIDChanging(string value);
+    partial void OnCustomerGroupIDChanged();
+    partial void OnCustomerGroupNameChanging(string value);
+    partial void OnCustomerGroupNameChanged();
+    partial void OnNotesChanging(string value);
+    partial void OnNotesChanged();
+    partial void OnLastEditDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastEditDateChanged();
+    partial void OnCreationDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreationDateChanged();
+    #endregion
+		
+		public MM_CustomerGroup()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerGroupID", DbType="VarChar(15) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string CustomerGroupID
+		{
+			get
+			{
+				return this._CustomerGroupID;
+			}
+			set
+			{
+				if ((this._CustomerGroupID != value))
+				{
+					this.OnCustomerGroupIDChanging(value);
+					this.SendPropertyChanging();
+					this._CustomerGroupID = value;
+					this.SendPropertyChanged("CustomerGroupID");
+					this.OnCustomerGroupIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerGroupName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string CustomerGroupName
+		{
+			get
+			{
+				return this._CustomerGroupName;
+			}
+			set
+			{
+				if ((this._CustomerGroupName != value))
+				{
+					this.OnCustomerGroupNameChanging(value);
+					this.SendPropertyChanging();
+					this._CustomerGroupName = value;
+					this.SendPropertyChanged("CustomerGroupName");
+					this.OnCustomerGroupNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Notes", DbType="NVarChar(200)")]
+		public string Notes
+		{
+			get
+			{
+				return this._Notes;
+			}
+			set
+			{
+				if ((this._Notes != value))
+				{
+					this.OnNotesChanging(value);
+					this.SendPropertyChanging();
+					this._Notes = value;
+					this.SendPropertyChanged("Notes");
+					this.OnNotesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastEditDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastEditDate
+		{
+			get
+			{
+				return this._LastEditDate;
+			}
+			set
+			{
+				if ((this._LastEditDate != value))
+				{
+					this.OnLastEditDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastEditDate = value;
+					this.SendPropertyChanged("LastEditDate");
+					this.OnLastEditDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreationDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreationDate
+		{
+			get
+			{
+				return this._CreationDate;
+			}
+			set
+			{
+				if ((this._CreationDate != value))
+				{
+					this.OnCreationDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreationDate = value;
+					this.SendPropertyChanged("CreationDate");
+					this.OnCreationDateChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MM_Zones")]
+	public partial class MM_Zone : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _ZoneID;
+		
+		private string _ZoneName;
+		
+		private string _Notes;
+		
+		private System.Nullable<System.DateTime> _LastEditDate;
+		
+		private System.Nullable<System.DateTime> _CreationDate;
+		
+		private EntitySet<MM_PostOffice> _MM_PostOffices;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnZoneIDChanging(string value);
+    partial void OnZoneIDChanged();
+    partial void OnZoneNameChanging(string value);
+    partial void OnZoneNameChanged();
+    partial void OnNotesChanging(string value);
+    partial void OnNotesChanged();
+    partial void OnLastEditDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastEditDateChanged();
+    partial void OnCreationDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreationDateChanged();
+    #endregion
+		
+		public MM_Zone()
+		{
+			this._MM_PostOffices = new EntitySet<MM_PostOffice>(new Action<MM_PostOffice>(this.attach_MM_PostOffices), new Action<MM_PostOffice>(this.detach_MM_PostOffices));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ZoneID", DbType="VarChar(15) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string ZoneID
+		{
+			get
+			{
+				return this._ZoneID;
+			}
+			set
+			{
+				if ((this._ZoneID != value))
+				{
+					this.OnZoneIDChanging(value);
+					this.SendPropertyChanging();
+					this._ZoneID = value;
+					this.SendPropertyChanged("ZoneID");
+					this.OnZoneIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ZoneName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string ZoneName
+		{
+			get
+			{
+				return this._ZoneName;
+			}
+			set
+			{
+				if ((this._ZoneName != value))
+				{
+					this.OnZoneNameChanging(value);
+					this.SendPropertyChanging();
+					this._ZoneName = value;
+					this.SendPropertyChanged("ZoneName");
+					this.OnZoneNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Notes", DbType="NVarChar(200)")]
+		public string Notes
+		{
+			get
+			{
+				return this._Notes;
+			}
+			set
+			{
+				if ((this._Notes != value))
+				{
+					this.OnNotesChanging(value);
+					this.SendPropertyChanging();
+					this._Notes = value;
+					this.SendPropertyChanged("Notes");
+					this.OnNotesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastEditDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastEditDate
+		{
+			get
+			{
+				return this._LastEditDate;
+			}
+			set
+			{
+				if ((this._LastEditDate != value))
+				{
+					this.OnLastEditDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastEditDate = value;
+					this.SendPropertyChanged("LastEditDate");
+					this.OnLastEditDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreationDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreationDate
+		{
+			get
+			{
+				return this._CreationDate;
+			}
+			set
+			{
+				if ((this._CreationDate != value))
+				{
+					this.OnCreationDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreationDate = value;
+					this.SendPropertyChanged("CreationDate");
+					this.OnCreationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MM_Zone_MM_PostOffice", Storage="_MM_PostOffices", ThisKey="ZoneID", OtherKey="ZoneID")]
+		public EntitySet<MM_PostOffice> MM_PostOffices
+		{
+			get
+			{
+				return this._MM_PostOffices;
+			}
+			set
+			{
+				this._MM_PostOffices.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_MM_PostOffices(MM_PostOffice entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_Zone = this;
+		}
+		
+		private void detach_MM_PostOffices(MM_PostOffice entity)
+		{
+			this.SendPropertyChanging();
+			entity.MM_Zone = null;
 		}
 	}
 }

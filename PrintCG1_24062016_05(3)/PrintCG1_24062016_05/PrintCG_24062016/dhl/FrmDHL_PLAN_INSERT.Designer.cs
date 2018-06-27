@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbltotaldo = new System.Windows.Forms.Label();
             this.cmbshiptoaddress = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.cmbshiptoNM = new System.Windows.Forms.ComboBox();
@@ -67,7 +68,6 @@
             this.btninsert = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.lbltotaldo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -119,10 +119,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết plan";
             // 
+            // lbltotaldo
+            // 
+            this.lbltotaldo.AutoSize = true;
+            this.lbltotaldo.Location = new System.Drawing.Point(343, 133);
+            this.lbltotaldo.Name = "lbltotaldo";
+            this.lbltotaldo.Size = new System.Drawing.Size(85, 13);
+            this.lbltotaldo.TabIndex = 87;
+            this.lbltotaldo.Text = "Tổng số DO là : ";
+            // 
             // cmbshiptoaddress
             // 
             this.cmbshiptoaddress.FormattingEnabled = true;
-            this.cmbshiptoaddress.Location = new System.Drawing.Point(222, 128);
+            this.cmbshiptoaddress.Location = new System.Drawing.Point(243, 125);
             this.cmbshiptoaddress.Name = "cmbshiptoaddress";
             this.cmbshiptoaddress.Size = new System.Drawing.Size(71, 21);
             this.cmbshiptoaddress.TabIndex = 85;
@@ -205,18 +214,18 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(424, 102);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 77;
-            this.label6.Text = "Unit2";
+            this.label6.Text = "Unit 1";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(691, 102);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 75;
-            this.label7.Text = "Unit3";
+            this.label7.Text = "Unit 2";
             // 
             // cmbunit3
             // 
@@ -268,9 +277,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(123, 103);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 13);
+            this.label12.Size = new System.Drawing.Size(26, 13);
             this.label12.TabIndex = 71;
-            this.label12.Text = "Unit1";
+            this.label12.Text = "Unit";
             // 
             // cmbunit1
             // 
@@ -322,9 +331,9 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(687, 77);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(82, 13);
+            this.label21.Size = new System.Drawing.Size(74, 13);
             this.label21.TabIndex = 63;
-            this.label21.Text = "Ship node code";
+            this.label21.Text = "To node code";
             // 
             // cmbshipcode
             // 
@@ -458,15 +467,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
-            // 
-            // lbltotaldo
-            // 
-            this.lbltotaldo.AutoSize = true;
-            this.lbltotaldo.Location = new System.Drawing.Point(363, 136);
-            this.lbltotaldo.Name = "lbltotaldo";
-            this.lbltotaldo.Size = new System.Drawing.Size(85, 13);
-            this.lbltotaldo.TabIndex = 87;
-            this.lbltotaldo.Text = "Tổng số DO là : ";
             // 
             // FrmDHL_PLAN_INSERT
             // 

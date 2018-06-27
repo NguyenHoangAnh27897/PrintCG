@@ -76,7 +76,7 @@ namespace PrintCG_24062016
                 conn.ConnectionString = con;
                 OleDbCommand comm = new OleDbCommand();
                 conn.Open();
-                comm.CommandText = "SELECT CG,DO,DODate,ShipID,ShipName,ShipStreet,d.Province,GrossWeight,Quatity,DeliveryDate,RealWeight,d.Remark,MaTinh FROM (tb_sonydiachi d INNER JOIN tb_sonyplan s ON d.ShipID = s.ShipToParty) INNER JOIN tb_tinhthanh t ON d.Province = t.TenTinh  where DO = '" + txtdo.Text.Trim() + "' and [DODate] = CDate('" + dtppgi.Value.ToString("dd/MM/yyyy 00:00:00") + "')";
+                comm.CommandText = "SELECT CG,DO,DODate,ShipID,ShipName,ShipStreet,d.Province,GrossWeight,Quatity,DeliveryDate,RealWeight,d.Remark,MaTinh FROM (tb_sonydiachi d INNER JOIN tb_sonyplan s ON d.ShipID = s.ShipToParty) INNER JOIN tb_tinhthanh t ON d.Province = t.TenTinh  where DO like '" + txtdo.Text.Trim() + "' and [DODate] = CDate('" + dtppgi.Value.ToString("dd/MM/yyyy 00:00:00") + "')";
                 comm.Connection = conn;
                 OleDbDataAdapter da = new OleDbDataAdapter();
                 da.SelectCommand = comm;
@@ -170,7 +170,7 @@ namespace PrintCG_24062016
                 txttrongluong.SelectAll();
                 if (int.Parse(txtsoluong.Text) > 1)
                 {
-                    FrmDHL_Listweight frmtlcan = new FrmDHL_Listweight();
+                    FrmDHL_Listweight frmtlcan = new FrmDHL_Listweight(dataGridView1.Rows[0].Cells["Quatity"].Value.ToString());
                     FrmDHL_Listweight.socg = txtmabill.Text;
                     FrmDHL_Listweight.soluog = txtsoluong.Text;
                     if (frmtlcan.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -190,6 +190,10 @@ namespace PrintCG_24062016
 
         private void btnin_Click(object sender, EventArgs e)
         {
+            if (txttrongluong.Text == " ")
+            {
+                MessageBox.Show("Chưa nhập trọng lượng");
+            }
             //neu so luong dong > 1 thi cong du lieu vao nhau va lay so DO dau tien lam barcode.
             string sophieu = NullValue(dataGridView1.Rows[0].Cells["CG"].Value.ToString());
             string DO = NullValue(dataGridView1.Rows[0].Cells["DO"].Value.ToString());
@@ -246,9 +250,9 @@ namespace PrintCG_24062016
                     }
                     if (total > 0)
                     {
-                        get_sokien(DO);
-                        inphieugui();
-                        dataGridView1.Rows.Clear();
+                            get_sokien(DO);
+                            inphieugui();
+                            dataGridView1.Rows.Clear();  
                     }
                     else
                     {
@@ -271,7 +275,7 @@ namespace PrintCG_24062016
             conn.ConnectionString = con;
             conn.Open();
             string query = string.Empty;
-            query = "update tb_sonyplan set CG ='"+ cg +"',  SL = " + txtsoluong.Text + ",TL = " + txttongtrongluong.Text + ",Employee ='" + txtnvnhan.Text.Trim() + "',Contact1='" + txtlh1.Text +"',Contact2 ='"+ txtlh2.Text +"',Contact3 ='"+ txtlh3.Text +"',TongSL ='"+ tong +"',SenderName ='"+ txtnguoigui.Text +"',SenderAddress ='"+ txtdiachi.Text +"' where DO = '" + donumber + "'";
+            query = "update tb_sonyplan set CG ='"+ cg +"',  SL = " + txtsoluong.Text + ",TL = " + txttongtrongluong.Text + ",Employee ='" + txtnvnhan.Text.Trim() + "',Contact1='" + txtlh1.Text +"',Contact2 ='"+ txtlh2.Text +"',Contact3 ='"+ txtlh3.Text +"',TongSL ='"+ tong +"',SenderName ='"+ txtnguoigui.Text +"',SenderAddress ='"+ txtdiachi.Text +"' where DO like '" + donumber + "'";
             OleDbCommand cmd = new OleDbCommand(query, conn);
             cmd.ExecuteNonQuery();
             int int_upd = cmd.ExecuteNonQuery();
@@ -439,7 +443,7 @@ namespace PrintCG_24062016
             }
             catch (Exception ex)
             {
-                //MessageBox.Show("Lỗi: " + ex.Message);
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
 

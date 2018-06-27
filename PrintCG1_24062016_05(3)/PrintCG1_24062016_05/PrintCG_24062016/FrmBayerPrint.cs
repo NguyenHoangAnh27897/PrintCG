@@ -69,7 +69,7 @@ namespace PrintCG_24062016
                     {
                         _sophieu = "BY" + ngaygui.Substring(8, 2) + ngaygui.Substring(3, 2) + ngaygui.Substring(0, 2) + _stt;
                     }
-                    dscg11.CG11.AddCG11Row(ngaygui, "", _sophieu, loaihang, "SN", soluong, trongluong,trongluong, _nguoinhan, _diachinhan, _noiden, noidung,bc , nhanvien, nguoigui, diachigui, "", "", "", "", _telnhan, telgui, "", "", "","");
+                    dscg11.CG11.AddCG11Row(ngaygui, "", _sophieu, loaihang, "SN", soluong, trongluong,trongluong, _nguoinhan, _diachinhan, _noiden, noidung,bc , nhanvien, nguoigui, diachigui, "", "", "", "", _telnhan, telgui, "", "", "","","","");
                 }
                 conn.Close();
 

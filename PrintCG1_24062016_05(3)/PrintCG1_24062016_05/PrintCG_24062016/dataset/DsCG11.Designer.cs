@@ -331,6 +331,10 @@ namespace PrintCG_24062016.dataset {
             
             private global::System.Data.DataColumn columnThuHo;
             
+            private global::System.Data.DataColumn columnCMND;
+            
+            private global::System.Data.DataColumn columnTel;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public CG11DataTable() {
@@ -574,6 +578,22 @@ namespace PrintCG_24062016.dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CMNDColumn {
+                get {
+                    return this.columnCMND;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TelColumn {
+                get {
+                    return this.columnTel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -635,7 +655,9 @@ namespace PrintCG_24062016.dataset {
                         string COD, 
                         string NguoiGui, 
                         string DiaChiGui, 
-                        string ThuHo) {
+                        string ThuHo, 
+                        string CMND, 
+                        string Tel) {
                 CG11Row rowCG11Row = ((CG11Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         @__Ngày_nhận_,
@@ -663,7 +685,9 @@ namespace PrintCG_24062016.dataset {
                         COD,
                         NguoiGui,
                         DiaChiGui,
-                        ThuHo};
+                        ThuHo,
+                        CMND,
+                        Tel};
                 rowCG11Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCG11Row);
                 return rowCG11Row;
@@ -712,6 +736,8 @@ namespace PrintCG_24062016.dataset {
                 this.columnNguoiGui = base.Columns["NguoiGui"];
                 this.columnDiaChiGui = base.Columns["DiaChiGui"];
                 this.columnThuHo = base.Columns["ThuHo"];
+                this.columnCMND = base.Columns["CMND"];
+                this.columnTel = base.Columns["Tel"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -793,6 +819,10 @@ namespace PrintCG_24062016.dataset {
                 base.Columns.Add(this.columnDiaChiGui);
                 this.columnThuHo = new global::System.Data.DataColumn("ThuHo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnThuHo);
+                this.columnCMND = new global::System.Data.DataColumn("CMND", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCMND);
+                this.columnTel = new global::System.Data.DataColumn("Tel", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTel);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1351,6 +1381,38 @@ namespace PrintCG_24062016.dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CMND {
+                get {
+                    try {
+                        return ((string)(this[this.tableCG11.CMNDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CMND\' in table \'CG11\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCG11.CMNDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Tel {
+                get {
+                    try {
+                        return ((string)(this[this.tableCG11.TelColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tel\' in table \'CG11\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCG11.TelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Is__Ngày_nhận_Null() {
                 return this.IsNull(this.tableCG11.@__Ngày_nhận_Column);
             }
@@ -1659,6 +1721,30 @@ namespace PrintCG_24062016.dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetThuHoNull() {
                 this[this.tableCG11.ThuHoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCMNDNull() {
+                return this.IsNull(this.tableCG11.CMNDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCMNDNull() {
+                this[this.tableCG11.CMNDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTelNull() {
+                return this.IsNull(this.tableCG11.TelColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTelNull() {
+                this[this.tableCG11.TelColumn] = global::System.Convert.DBNull;
             }
         }
         

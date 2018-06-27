@@ -35,6 +35,8 @@ namespace PrintCG_24062016
             RptCG1_A5 rptcc1_a5 = new RptCG1_A5();
             RptCG1_Label rptcg1_label = new RptCG1_Label();
             RptCG1_Label_30 rptcg1__label30 = new RptCG1_Label_30();
+            RptCG1_A5__New rptcc1_a5_new = new RptCG1_A5__New();
+            RptCG1_A5_New2 rptcc1_a5_new2 = new RptCG1_A5_New2();
             DataTable dt = new DataTable();
             DsCG11 dscg11 = new DsCG11();
             dt = ReadExcelFile("CG11", path);
@@ -52,6 +54,8 @@ namespace PrintCG_24062016
             string _ghichu;
             string _bc;
             string _ems;
+            string _cmnd;
+            string _sdt;
             foreach (DataRow row in dt.Rows)
             {
 
@@ -94,6 +98,7 @@ namespace PrintCG_24062016
                 try
                 {
                     _dv = row[4].ToString();
+                   
                 }
                 catch (Exception ex)
                 {
@@ -163,6 +168,14 @@ namespace PrintCG_24062016
                 {
                     _ghichu = "";
                 }
+                try
+                {
+                    _sdt = row["Điện thoại(Nhận)"].ToString();
+                }
+                catch (Exception ex)
+                {
+                    _sdt = "";
+                }
 
                 try
                 {
@@ -181,7 +194,16 @@ namespace PrintCG_24062016
                 {
                     _ems = "";
                 }
-                dscg11.CG11.AddCG11Row(_ngaynhan, _gio, _sophieu, _lh, _dv, _sl, _tl, _tlkhoi, _hotennhan, _diachinhan, _tinhthanh, _ghichu,bcchapnhan,nvchapnhan,nguoigui,diachi,cuoc,hengio,phikhac,"0","","","","",_bc,_ems);
+
+                try
+                {
+                    _cmnd = row["CMND"].ToString();
+                }
+                catch (Exception ex)
+                {
+                    _cmnd = "";
+                }
+                dscg11.CG11.AddCG11Row(_ngaynhan, _gio, _sophieu, _lh, _dv, _sl, _tl, _tlkhoi, _hotennhan, _diachinhan, _tinhthanh, _ghichu,bcchapnhan,nvchapnhan,nguoigui,diachi,cuoc,hengio,phikhac,"0","","","","",_bc,_ems,_cmnd,_sdt);
 
                
                 
@@ -201,6 +223,15 @@ namespace PrintCG_24062016
             {      
                 rptcg1__label30.SetDataSource(dscg11);
                 crystalReportViewer1.ReportSource = rptcg1__label30;
+            }else if (flag == 4)
+            {      
+                rptcc1_a5_new.SetDataSource(dscg11);
+                crystalReportViewer1.ReportSource = rptcc1_a5_new;
+            }
+            else if (flag == 5)
+            {
+                rptcc1_a5_new2.SetDataSource(dscg11);
+                crystalReportViewer1.ReportSource = rptcc1_a5_new2;
             }
 
            

@@ -53,7 +53,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.txtghichuphat = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chkIn = new System.Windows.Forms.CheckBox();
             this.chkghep = new System.Windows.Forms.CheckBox();
             this.btnxoado = new System.Windows.Forms.Button();
             this.btndongbo = new System.Windows.Forms.Button();
@@ -98,6 +97,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txttrongluong = new System.Windows.Forms.TextBox();
             this.txttongtrongluong = new System.Windows.Forms.TextBox();
+            this.chkIn = new System.Windows.Forms.CheckBox();
             this.GrpIn = new System.Windows.Forms.GroupBox();
             this.cbbtem = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
@@ -387,17 +387,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "In phiếu gửi";
             // 
-            // chkIn
-            // 
-            this.chkIn.AutoSize = true;
-            this.chkIn.Location = new System.Drawing.Point(29, 21);
-            this.chkIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.chkIn.Name = "chkIn";
-            this.chkIn.Size = new System.Drawing.Size(55, 17);
-            this.chkIn.TabIndex = 69;
-            this.chkIn.Text = "In tem";
-            this.chkIn.UseVisualStyleBackColor = true;
-            // 
             // chkghep
             // 
             this.chkghep.AutoSize = true;
@@ -410,8 +399,8 @@
             // 
             // btnxoado
             // 
-            this.btnxoado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnxoado.Location = new System.Drawing.Point(861, 300);
+            this.btnxoado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnxoado.Location = new System.Drawing.Point(635, 300);
             this.btnxoado.Name = "btnxoado";
             this.btnxoado.Size = new System.Drawing.Size(65, 23);
             this.btnxoado.TabIndex = 67;
@@ -421,8 +410,8 @@
             // 
             // btndongbo
             // 
-            this.btndongbo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btndongbo.Location = new System.Drawing.Point(995, 300);
+            this.btndongbo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btndongbo.Location = new System.Drawing.Point(769, 300);
             this.btndongbo.Name = "btndongbo";
             this.btndongbo.Size = new System.Drawing.Size(90, 23);
             this.btndongbo.TabIndex = 66;
@@ -496,8 +485,8 @@
             // 
             // btndoanhthu
             // 
-            this.btndoanhthu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btndoanhthu.Location = new System.Drawing.Point(929, 300);
+            this.btndoanhthu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btndoanhthu.Location = new System.Drawing.Point(703, 300);
             this.btndoanhthu.Name = "btndoanhthu";
             this.btndoanhthu.Size = new System.Drawing.Size(65, 23);
             this.btndoanhthu.TabIndex = 56;
@@ -765,6 +754,17 @@
             this.txttongtrongluong.TabIndex = 30;
             this.txttongtrongluong.Text = " ";
             // 
+            // chkIn
+            // 
+            this.chkIn.AutoSize = true;
+            this.chkIn.Location = new System.Drawing.Point(29, 21);
+            this.chkIn.Margin = new System.Windows.Forms.Padding(2);
+            this.chkIn.Name = "chkIn";
+            this.chkIn.Size = new System.Drawing.Size(55, 17);
+            this.chkIn.TabIndex = 69;
+            this.chkIn.Text = "In tem";
+            this.chkIn.UseVisualStyleBackColor = true;
+            // 
             // GrpIn
             // 
             this.GrpIn.Controls.Add(this.chkIn);
@@ -780,7 +780,7 @@
             // 
             this.cbbtem.FormattingEnabled = true;
             this.cbbtem.Location = new System.Drawing.Point(92, 20);
-            this.cbbtem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbtem.Margin = new System.Windows.Forms.Padding(2);
             this.cbbtem.Name = "cbbtem";
             this.cbbtem.Size = new System.Drawing.Size(144, 21);
             this.cbbtem.TabIndex = 78;

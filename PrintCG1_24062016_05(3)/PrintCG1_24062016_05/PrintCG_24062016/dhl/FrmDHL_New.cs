@@ -69,7 +69,7 @@ namespace PrintCG_24062016
 
                 //neu so luong dong > 1 thi cong du lieu vao nhau va lay so DO dau tien lam barcode.
             int maxid;
-            maxid = getMax();
+            //maxid = getMax();
                 string sophieu = NullValue(dataGridView1.Rows[0].Cells["CG"].Value.ToString());
                 string DO = NullValue(dataGridView1.Rows[0].Cells["DO"].Value.ToString());
                 int countmailer = dataGridView1.Rows.Count - 1;
@@ -95,7 +95,8 @@ namespace PrintCG_24062016
                                     if (chkIn.Checked == true)
                                         if (int.Parse(txtsoluong.Text) > int.Parse(txtdieukien.Text))
                                         {
-                                            {                                              
+                                            {
+                                                maxid = getMax();
                                                 if (int.Parse(idkien) > maxid)
                                                 {
                                                     for (int i = 1; i <= int.Parse(txtsoluong.Text); i++)
@@ -134,11 +135,11 @@ namespace PrintCG_24062016
                                 get_sokien(DO);
                                 inphieugui();
                                 idkien = Get_Year() + Get_Month() + s + number(n);
-                                pd.Print();
                                 if (chkIn.Checked == true)
                                     if (int.Parse(txtsoluong.Text) > int.Parse(txtdieukien.Text))
                                     {
                                         {
+                                            maxid = getMax();
                                             if (int.Parse(idkien) > maxid)
                                             {
                                                 for (int i = 1; i <= int.Parse(txtsoluong.Text); i++)
@@ -188,11 +189,12 @@ namespace PrintCG_24062016
                             inphieugui();
                             idkien = Get_Year() + Get_Month() + s + number(n);
                             //pd.PrinterSettings.PrinterName = cbbtem.Text;
-                            pd.Print();
+                            //pd.Print();
                             if (chkIn.Checked == true)
                                 if (int.Parse(txtsoluong.Text) > int.Parse(txtdieukien.Text))
                                 {
                                     {
+                                        maxid = getMax();
                                         if (int.Parse(idkien) > maxid)
                                         {
                                             for (int i = 1; i <= int.Parse(txtsoluong.Text); i++)
@@ -244,7 +246,7 @@ namespace PrintCG_24062016
                 txttrongluong.SelectAll();
                 if (int.Parse(txtsoluong.Text) > 1)
                 {
-                    FrmDHL_Listweight frmtlcan = new FrmDHL_Listweight();
+                    FrmDHL_Listweight frmtlcan = new FrmDHL_Listweight(dataGridView1.Rows[0].Cells["Quantity"].Value.ToString());
                     FrmDHL_Listweight.socg = txtmabill.Text;
                     FrmDHL_Listweight.soluog = txtsoluong.Text;
                     if (frmtlcan.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -687,7 +689,7 @@ namespace PrintCG_24062016
                 {
                     query = "insert into tb_dhltem (ID_Kien,SoLuong,DiaChi,ThoiGianTraHang,DiaDiem,DenTinh,DenQuanHuyen) values  ('" + int.Parse(idkien) + "', '" + int.Parse(txtsoluong.Text) + "','" + dataGridView1.Rows[0].Cells["ShiptoAddress"].Value.ToString() + "','" + DateTime.Now + "','" + dataGridView1.Rows[0].Cells["KH"].Value.ToString() + "','" + " TPHCM " + "','" + "" + "')";
                 }
-                else if ((txtsoluong.Text) == "1")
+                else if (int.Parse(txtsoluong.Text) == 1)
                 {
                     query = "insert into tb_dhltem (ID_Kien,SoLuong,DiaChi,ThoiGianTraHang,DiaDiem,DenTinh,DenQuanHuyen) values  ('" + int.Parse(idkien) + "', '" + int.Parse(txtsoluong.Text) + "','" + dataGridView1.Rows[0].Cells["ShiptoAddress"].Value.ToString() + "','" + DateTime.Now + "','" + dataGridView1.Rows[0].Cells["KH"].Value.ToString() + "','" + " TPHCM " + "','" + "" + "')";
                 }
@@ -790,7 +792,7 @@ namespace PrintCG_24062016
         private void create_excel()
         {
             Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
-            fsave.Filter = "(All Files)|*.*|(All Files Excel)|*.xlsx";
+            fsave.Filter = "(Excel File)|*.xls";
             fsave.ShowDialog();
             if (fsave.FileName != "")
             {

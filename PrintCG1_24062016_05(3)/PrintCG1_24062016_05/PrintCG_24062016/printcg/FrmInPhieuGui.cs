@@ -13,13 +13,17 @@ using CrystalDecisions.Shared;
 using System.Drawing.Printing;
 using PrintCG_24062016.Report;
 using PrintCG_24062016.dataset;
+using Excel = Microsoft.Office.Interop.Excel;
+
 namespace PrintCG_24062016
 {
     public partial class FrmInPhieuGui : Form
     {
+        PrintCG_24062016.SGPService.SGPServiceClient sgpservice;
         public FrmInPhieuGui()
         {
             InitializeComponent();
+            sgpservice = new PrintCG_24062016.SGPService.SGPServiceClient();
         }
         string path;
         string path1;
@@ -55,6 +59,7 @@ namespace PrintCG_24062016
 
         private void FrmInPhieuGui_Load(object sender, EventArgs e)
         {
+           
             txtngaygui.Text = DateTime.Now.ToString("dd/MM/yyyy");
             load_settings();
         }
@@ -93,7 +98,7 @@ namespace PrintCG_24062016
             listtongtien = GetExcelSheetColumns(path);
             lista4masterkey = GetExcelSheetColumns(path);
 
-                //a4
+            //a4
             //lista4noidung = GetExcelSheetColumns(path);
             //lista4ghichu = GetExcelSheetColumns(path);
             //lista4sl = GetExcelSheetColumns(path);
@@ -153,6 +158,7 @@ namespace PrintCG_24062016
                     {
                         da.SelectCommand = comm;
                         da.Fill(dt);
+                        dataGridView1.DataSource = dt;
                         String[] excelSheetNames = new String[dt.Columns.Count];
                         //string a = " row " + dt.Rows.Count.ToString() + " Col " + dt.Columns.Count.ToString();
 
@@ -219,7 +225,7 @@ namespace PrintCG_24062016
 
         private void cmbloaihang_Enter(object sender, EventArgs e)
         {
-           // cmbloaihang.DataSource = listloaihang;
+            // cmbloaihang.DataSource = listloaihang;
         }
 
         private void cmbghichu_Enter(object sender, EventArgs e)
@@ -238,8 +244,9 @@ namespace PrintCG_24062016
                     string papername = string.Empty;
                     int i = 0;
                     System.Drawing.Printing.PrintDocument doctoprint = new System.Drawing.Printing.PrintDocument();
+                    string sotudong = "";
 
-                   // doctoprint.PrinterSettings.PrinterName = "\\\\RD2\\Epson LX-300+";
+                    // doctoprint.PrinterSettings.PrinterName = "\\\\RD2\\Epson LX-300+";
                     int rawKind = 0;
                     for (i = 0; i <= doctoprint.PrinterSettings.PaperSizes.Count - 1; i++)
                     {
@@ -250,7 +257,7 @@ namespace PrintCG_24062016
                             break; // TODO: might not be correct. Was : Exit For
                         }
                     }
-                   
+
                     if (papername == "CG1") //CG1
                     {
                         TextObject _txtbc = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtbc"];
@@ -283,7 +290,7 @@ namespace PrintCG_24062016
                         TextObject _txtcuocchinh = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtcuocchinh"];
                         if (cmbcuocchinh.Text != "0")
                         {
-                            _txtcuocchinh.Text = String.Format("{0:0,0}", float.Parse(cmbcuocchinh.Text)); 
+                            _txtcuocchinh.Text = String.Format("{0:0,0}", float.Parse(cmbcuocchinh.Text));
                         }
                         else
                         {
@@ -293,7 +300,7 @@ namespace PrintCG_24062016
                         TextObject _txthengio = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txthengio"];
                         if (cmbhengio.Text != "0")
                         {
-                            _txthengio.Text = String.Format("{0:0,0}", float.Parse(cmbhengio.Text)); 
+                            _txthengio.Text = String.Format("{0:0,0}", float.Parse(cmbhengio.Text));
                         }
                         else
                         {
@@ -302,19 +309,19 @@ namespace PrintCG_24062016
                         TextObject _txtphikhac = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtphikhac"];
                         if (cmbcuockhac.Text != "0")
                         {
-                            _txtphikhac.Text = String.Format("{0:0,0}", float.Parse(cmbcuockhac.Text)); 
+                            _txtphikhac.Text = String.Format("{0:0,0}", float.Parse(cmbcuockhac.Text));
                         }
                         else
                         {
                             _txtphikhac.Text = "";
                         }
 
-                       
+
                         TextObject _txttong = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttong"];
-                        
+
                         if (cmbcuockhac.Text != "0")
                         {
-                            _txttong.Text = String.Format("{0:0,0}", float.Parse(cmbcuockhac.Text)); 
+                            _txttong.Text = String.Format("{0:0,0}", float.Parse(cmbcuockhac.Text));
                         }
                         else
                         {
@@ -330,7 +337,7 @@ namespace PrintCG_24062016
                         else if (cmbloaihang.Text == "TL")
                         {
                             TextObject _txttl = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttl"];
-                             _txttl.Text = cmbloaihang.Text;
+                            _txttl.Text = cmbloaihang.Text;
 
                         }
 
@@ -385,6 +392,9 @@ namespace PrintCG_24062016
             if (lblfile.Text != "Bạn chưa chọn file")
             {
                 FrmInPhieuGuiPrint.paper = "Laser";
+                string sotudong = "";
+                //so tu dong
+
                 try
                 {
                     FrmInPhieuGuiPrint.path = lblfile.Text;
@@ -411,13 +421,23 @@ namespace PrintCG_24062016
                     FrmInPhieuGuiPrint.ghichu = cmbghichu.Text;
                     FrmInPhieuGuiPrint.cod = cmbcod.Text;
                     FrmInPhieuGuiPrint.thuho = cmbthuho.Text;
-                    FrmInPhieuGuiPrint.sophieu = cmbsophieu.Text;
+                    if (chkcgtudong.Checked == true)
+                    {
+                        FrmInPhieuGuiPrint.check = true;
+                    }
+                    else
+                    {
+                        FrmInPhieuGuiPrint.sophieu = cmbsophieu.Text;
+                    }
+                    //FrmInPhieuGuiPrint.sophieu = cmbsophieu.Text;
                     FrmInPhieuGuiPrint frm = new FrmInPhieuGuiPrint();
                     frm.ShowDialog();
                 }
                 catch (Exception ex)
                 {
                 }
+
+
             }
             else
             {
@@ -579,7 +599,7 @@ namespace PrintCG_24062016
         }
 
         private void txtsaochep_Enter(object sender, EventArgs e)
-        { 
+        {
             txtsaochep.SelectAll();
         }
 
@@ -590,22 +610,22 @@ namespace PrintCG_24062016
 
         private void txtcuocchinh_KeyUp(object sender, KeyEventArgs e)
         {
-            cmbtongtien.Text = (float.Parse(cmbcuocchinh.Text) + float.Parse(cmbhengio.Text) + float.Parse(cmbcuockhac.Text)).ToString(); 
+            cmbtongtien.Text = (float.Parse(cmbcuocchinh.Text) + float.Parse(cmbhengio.Text) + float.Parse(cmbcuockhac.Text)).ToString();
         }
 
         private void txthengio_KeyUp(object sender, KeyEventArgs e)
         {
-            cmbtongtien.Text = (float.Parse(cmbcuocchinh.Text) + float.Parse(cmbhengio.Text) + float.Parse(cmbcuockhac.Text)).ToString(); 
+            cmbtongtien.Text = (float.Parse(cmbcuocchinh.Text) + float.Parse(cmbhengio.Text) + float.Parse(cmbcuockhac.Text)).ToString();
         }
 
         private void txtcuockhac_KeyUp(object sender, KeyEventArgs e)
         {
-            cmbtongtien.Text = (float.Parse(cmbcuocchinh.Text) + float.Parse(cmbhengio.Text) + float.Parse(cmbcuockhac.Text)).ToString(); 
+            cmbtongtien.Text = (float.Parse(cmbcuocchinh.Text) + float.Parse(cmbhengio.Text) + float.Parse(cmbcuockhac.Text)).ToString();
         }
 
         private void cmbsheet_SelectedIndexChanged(object sender, EventArgs e)
         {
-           // MessageBox.Show("test");
+            // MessageBox.Show("test");
         }
         private void load_settings()
         {
@@ -613,7 +633,7 @@ namespace PrintCG_24062016
             cmbdiachigui.Text = (String)Application.UserAppDataRegistry.GetValue("frminphieugui.cmbdiachigui", String.Empty);
             cmbtelgui.Text = (String)Application.UserAppDataRegistry.GetValue("frminphieugui.cmbtelgui", String.Empty);
             txtnvnhan.Text = (String)Application.UserAppDataRegistry.GetValue("frminphieugui.txtnvnhan", String.Empty);
-            txtbcnhan.Text = (String)Application.UserAppDataRegistry.GetValue("frminphieugui.txtbcnhan", String.Empty);
+            txtbcnhan.Text = (String)Application.UserAppDataRegistry.GetValue("sony.frmlogin.txtpost", string.Empty);
             cmbnguoinhan.Text = (String)Application.UserAppDataRegistry.GetValue("frminphieugui.cmbnguoinhan", String.Empty);
             cmbdiachi.Text = (String)Application.UserAppDataRegistry.GetValue("frminphieugui.cmbdiachi", String.Empty);
             cmbthanhpho.Text = (String)Application.UserAppDataRegistry.GetValue("frminphieugui.cmbthanhpho", String.Empty);
@@ -766,7 +786,7 @@ namespace PrintCG_24062016
                 }
             }
         }
-        private DataTable ReadExcelFile1(string sheetName, string path,string shipcode)
+        private DataTable ReadExcelFile1(string sheetName, string path, string shipcode)
         {
 
             using (OleDbConnection conn = new OleDbConnection())
@@ -809,13 +829,13 @@ namespace PrintCG_24062016
                 {
                     TextObject _txtsophieu = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtsophieu"];
                     _txtsophieu.Text = "*" + row[cmbsophieu.Text].ToString() + "*";
-                     
+
 
                     TextObject _txtsophieu1 = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtsophieu1"];
-                    _txtsophieu1.Text =  row[cmbsophieu.Text].ToString() ;
+                    _txtsophieu1.Text = row[cmbsophieu.Text].ToString();
 
                     TextObject _txtbc = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtbuucuc"];
-                    _txtbc.Text = txtbcnhan.Text ;
+                    _txtbc.Text = txtbcnhan.Text;
                     TextObject _txtnguoigui = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnguoigui"];
                     _txtnguoigui.Text = row[cmbnguoigui.Text].ToString();
 
@@ -840,7 +860,7 @@ namespace PrintCG_24062016
                     }
 
                     TextObject _txtnguoinhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnguoinhan"];
-                    _txtnguoinhan.Text = row[cmbnguoinhan.Text].ToString(); 
+                    _txtnguoinhan.Text = row[cmbnguoinhan.Text].ToString();
                     TextObject _diachi = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtdiachinhan"];
                     _diachi.Text = row[cmbdiachi.Text].ToString();
 
@@ -848,25 +868,25 @@ namespace PrintCG_24062016
                     _telnhan.Text = row[cmbtelnhan.Text].ToString();
 
                     TextObject _noiden = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnoiden"];
-                    _noiden.Text = row[cmbthanhpho.Text].ToString(); 
+                    _noiden.Text = row[cmbthanhpho.Text].ToString();
 
-                    if(cmbloaihang.SelectedText =="HH")
+                    if (cmbloaihang.SelectedText == "HH")
                     {
                         TextObject _tl = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttl"];
                         _tl.Text = "";
                         TextObject _hh = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txthh"];
-                        _hh.Text = "X"; 
+                        _hh.Text = "X";
                     }
                     else
                     {
                         TextObject _tl = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttl"];
                         _tl.Text = "X";
                         TextObject _hh = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txthh"];
-                        _hh.Text = ""; 
+                        _hh.Text = "";
                     }
 
                     TextObject _noidung = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtghichu"];
-                    _noidung.Text = row[cmbghichu.Text].ToString(); 
+                    _noidung.Text = row[cmbghichu.Text].ToString();
                     TextObject _txtnvnhan = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txtnvnhan"];
                     _txtnvnhan.Text = txtnvnhan.Text;
 
@@ -879,9 +899,9 @@ namespace PrintCG_24062016
                     {
                         _txtsoluong.Text = "";
                     }
-                   
+
                     TextObject _txttrongluong = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttrongluong"];
-                    TextObject _txttrongluongkhoi = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttrongluongkhoi"];    
+                    TextObject _txttrongluongkhoi = (TextObject)rpt.ReportDefinition.Sections["Section3"].ReportObjects["txttrongluongkhoi"];
                     try
                     {
                         _txttrongluong.Text = row[cmbtrongluong.Text].ToString();
@@ -899,7 +919,8 @@ namespace PrintCG_24062016
                     try
                     {
                         _txtcuocchinh.Text = row[cmbcuocchinh.Text].ToString();
-                    }catch
+                    }
+                    catch
                     {
                         _txtcuocchinh.Text = cmbcuocchinh.Text.ToString();
                     }
@@ -933,7 +954,7 @@ namespace PrintCG_24062016
                     {
                         _txttongcong.Text = cmbtongtien.Text.ToString();
                     }
-                    
+
 
 
                     DataTable dt1 = ReadExcelFile1(cmba4sheet.SelectedItem.ToString(), path1, row[cmba4keymaster.Text].ToString());
@@ -968,8 +989,8 @@ namespace PrintCG_24062016
 
             lbla4file.Text = path1;
             listsheet1 = GetExcelSheetNames(path1);
-            cmba4sheet.DataSource = listsheet1;            
-           //a4
+            cmba4sheet.DataSource = listsheet1;
+            //a4
             lista4detailkey = GetExcelSheetColumns(path1);
             lista4noidung = GetExcelSheetColumns(path1);
             lista4ghichu = GetExcelSheetColumns(path1);
@@ -986,6 +1007,102 @@ namespace PrintCG_24062016
         {
             cmba4keydetails.DataSource = lista4detailkey;
         }
-       
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            if (chkcgtudong.Checked == true)
+            {
+                string sotudong;
+                for(int i = 0; i < dataGridView1.RowCount -1; i++)
+                {
+                    sotudong = sgpservice.getmaxMailerID("SGP");
+                    dataGridView1.Rows[i].Cells[0].Value = sotudong;
+                }
+
+                SaveFileDialog fsave = new SaveFileDialog();
+                Excel.Application obj = new Excel.Application();
+                Excel.Workbook wbook;
+
+                fsave.Filter = "(All Files)|*.*|(All Files Excel)|*.xlsx";
+                fsave.ShowDialog();
+                if (fsave.FileName != "")
+                {
+                    wbook = obj.Workbooks.Add(Type.Missing);
+                    obj.Columns.ColumnWidth = 25;
+                    wbook.Worksheets.Add();
+                    // truyen data
+                    for (int k = 0; k < dataGridView1.Rows.Count; k++)
+                    {
+                   
+                        //createdate = DateTime.Parse(dt.Rows[k][0].ToString());
+
+                        //dat ten sheet
+                        for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
+                        {
+                            obj.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+                        }
+
+                        for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                        {
+                            for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                            {
+                                if (dataGridView1.Rows[i].Cells[j].Value != null)
+                                {
+                                    obj.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                                }
+                            }
+                        }
+                    }
+
+
+                    wbook.SaveAs(fsave.FileName);
+                    MessageBox.Show("Save Success", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+               
+            }
+            else
+            {
+                SaveFileDialog fsave = new SaveFileDialog();
+                Excel.Application obj = new Excel.Application();
+                Excel.Workbook wbook;
+
+                fsave.Filter = "(All Files)|*.*|(All Files Excel)|*.xlsx";
+                fsave.ShowDialog();
+                if (fsave.FileName != "")
+                {
+                    wbook = obj.Workbooks.Add(Type.Missing);
+                    obj.Columns.ColumnWidth = 25;
+                    wbook.Worksheets.Add();
+                    // truyen data
+                    for (int k = 0; k < dataGridView1.Rows.Count; k++)
+                    {
+                        
+                        //createdate = DateTime.Parse(dt.Rows[k][0].ToString());
+
+                        //dat ten sheet
+                        for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
+                        {
+                            obj.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+                        }
+
+                        for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                        {
+                            for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                            {
+                                if (dataGridView1.Rows[i].Cells[j].Value != null)
+                                {
+                                    obj.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                                }
+                            }
+                        }
+                    }
+
+
+                    wbook.SaveAs(fsave.FileName);
+                    MessageBox.Show("Save Success", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+        }
     }
 }

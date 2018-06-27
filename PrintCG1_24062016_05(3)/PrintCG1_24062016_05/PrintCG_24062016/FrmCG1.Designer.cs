@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnlabel30 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.chkems = new System.Windows.Forms.CheckBox();
             this.btnlabel = new System.Windows.Forms.Button();
@@ -50,12 +52,14 @@
             this.lblfile = new System.Windows.Forms.Label();
             this.btnchonfile = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnlabel30 = new System.Windows.Forms.Button();
+            this.btnA5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnA5);
+            this.groupBox1.Controls.Add(this.btnNew);
             this.groupBox1.Controls.Add(this.btnlabel30);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.chkems);
@@ -84,6 +88,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "In từ file excel  ( file có cấu trúc giống pms)";
             // 
+            // btnNew
+            // 
+            this.btnNew.Location = new System.Drawing.Point(139, 282);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.TabIndex = 22;
+            this.btnNew.Text = "In mẫu mới";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnlabel30
+            // 
+            this.btnlabel30.Location = new System.Drawing.Point(301, 282);
+            this.btnlabel30.Name = "btnlabel30";
+            this.btnlabel30.Size = new System.Drawing.Size(75, 23);
+            this.btnlabel30.TabIndex = 21;
+            this.btnlabel30.Text = "In Label 30";
+            this.btnlabel30.UseVisualStyleBackColor = true;
+            this.btnlabel30.Click += new System.EventHandler(this.btnlabel30_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -106,7 +130,7 @@
             // 
             // btnlabel
             // 
-            this.btnlabel.Location = new System.Drawing.Point(239, 282);
+            this.btnlabel.Location = new System.Drawing.Point(220, 282);
             this.btnlabel.Name = "btnlabel";
             this.btnlabel.Size = new System.Drawing.Size(75, 23);
             this.btnlabel.TabIndex = 18;
@@ -235,7 +259,7 @@
             // 
             // btnxemin
             // 
-            this.btnxemin.Location = new System.Drawing.Point(143, 282);
+            this.btnxemin.Location = new System.Drawing.Point(58, 282);
             this.btnxemin.Name = "btnxemin";
             this.btnxemin.Size = new System.Drawing.Size(75, 23);
             this.btnxemin.TabIndex = 7;
@@ -267,15 +291,15 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // btnlabel30
+            // btnA5
             // 
-            this.btnlabel30.Location = new System.Drawing.Point(332, 282);
-            this.btnlabel30.Name = "btnlabel30";
-            this.btnlabel30.Size = new System.Drawing.Size(75, 23);
-            this.btnlabel30.TabIndex = 21;
-            this.btnlabel30.Text = "In Label 30";
-            this.btnlabel30.UseVisualStyleBackColor = true;
-            this.btnlabel30.Click += new System.EventHandler(this.btnlabel30_Click);
+            this.btnA5.Location = new System.Drawing.Point(382, 282);
+            this.btnA5.Name = "btnA5";
+            this.btnA5.Size = new System.Drawing.Size(75, 23);
+            this.btnA5.TabIndex = 23;
+            this.btnA5.Text = "In CG A5";
+            this.btnA5.UseVisualStyleBackColor = true;
+            this.btnA5.Click += new System.EventHandler(this.btnA5_Click);
             // 
             // FrmCG1
             // 
@@ -318,6 +342,8 @@
         private System.Windows.Forms.CheckBox chkems;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnlabel30;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btnA5;
 
     }
 }

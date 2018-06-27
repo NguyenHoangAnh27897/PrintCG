@@ -305,6 +305,7 @@ namespace PrintCG_24062016
                             }
                             catch (Exception ex)
                             {
+                                MessageBox.Show(ex.Message);
                             }
                             
                         }

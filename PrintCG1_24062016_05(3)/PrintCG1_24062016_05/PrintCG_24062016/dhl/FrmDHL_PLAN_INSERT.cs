@@ -249,7 +249,7 @@ namespace PrintCG_24062016
                             error = "Không tim thấy " + row.Cells[cmbzonedesc.Text].Value.ToString().Trim();
                         }
                        
-                        if (dt.Rows.Count > 0 && error == string.Empty)
+                        if (dt.Rows.Count > 0)
                         {
                             khachhang = dt.Rows[0][0].ToString();
                             if (khachhang.Length < 5)
@@ -263,26 +263,11 @@ namespace PrintCG_24062016
                             }
                             remark = dt.Rows[0][2].ToString();
 
-                            //string query = "insert into tb_dhlplan ([D/O],PGI,DeliveryDate,ToZone,ZoneDesc,ToNodeCode,Quatity,Unit1,Weight,Unit2,Subcon,Unit3,ShiptoNM,ShiptoAddress,TP,KH,Vung,STT)" +
-                            //" values('" + row.Cells[cmbdo.Text].Value.ToString() + "','" + row.Cells[cmbpgi.Text].Value.ToString() + "'," +
-                            //" '" + row.Cells[cmbdeliverydate.Text].Value.ToString() + "','" + row.Cells[cmbtozone.Text].Value.ToString() + "'," +
-                            //" '" + row.Cells[cmbzonedesc.Text].Value.ToString() + "','" + row.Cells[cmbshipcode.Text].Value.ToString() + "'," + row.Cells[cmbquality.Text].Value.ToString() + "," +
-                            //" '" + row.Cells[cmbunit1.Text].Value.ToString() + "'," + row.Cells[cmbweight.Text].Value.ToString() + "," +
-                            //" '" + row.Cells[cmbunit2.Text].Value.ToString() + "'," +
-                            //" '" + row.Cells[cmbsubcon.Text].Value.ToString() + "'," +
-                            //" '" + row.Cells[cmbunit3.Text].Value.ToString() + "'," +
-                            //" '" + khachhang + "'," +
-                            //"'" + diachi + "'," +
-                            //"'" + matinh + "'," +
-                            //"'" + remark + "', " +
-                            //"'" + vung + "'," +
-                            //"" + row.Cells["No"].Value.ToString() + "" +
-                            //" )";
                             pgi = DateTime.Parse(row.Cells[cmbpgi.Text].Value.ToString());
                             pgidate = pgi.ToString("dd-MM-yyyy");
                             deliverydate = DateTime.Parse(row.Cells[cmbdeliverydate.Text].Value.ToString());
                             deliverydatecon = deliverydate.ToString("dd-MM-yyyy");
-                            string query = "insert into tb_dhlplan ([D/O],PGI,DeliveryDate,ToZone,ZoneDesc,ToNodeCode,Quatity,Unit1,Weight,Unit2,Subcon,Unit3,ShiptoNM,ShiptoAddress,TP,KH,Vung,STT)" +
+                            string query = "insert into tb_dhlplan ([D/O],PGI,DeliveryDate,ToZone,ZoneDesc,ToNodeCode,Quatity,Unit1,Weight,Unit2,Subcon,Unit3,ShiptoNM,ShiptoAddress,TP,KH,Vung)" +
                             " values('" + row.Cells[cmbdo.Text].Value.ToString() + "','" + pgidate + "'," +
                             " '" + deliverydatecon + "','" + row.Cells[cmbtozone.Text].Value.ToString() + "'," +
                             " '" + row.Cells[cmbzonedesc.Text].Value.ToString() + "','" + row.Cells[cmbshipcode.Text].Value.ToString() + "'," + row.Cells[cmbquality.Text].Value.ToString() + "," +
@@ -294,8 +279,8 @@ namespace PrintCG_24062016
                             "'" + diachi + "'," +
                             "'" + matinh + "'," +
                             "'" + remark + "', " +
-                            "'" + vung + "'," +
-                            "" + row.Cells["No"].Value.ToString() + "" +
+                            "'" + vung + 
+                            "'" +
                             " )";
                            
                            
@@ -309,7 +294,7 @@ namespace PrintCG_24062016
                             catch (Exception ex)
                             {
                                 error = "Insert không thành công";
-                                MessageBox.Show(ex.ToString());
+                                //MessageBox.Show(ex.ToString());
                             }
                             
                         }
@@ -340,7 +325,7 @@ namespace PrintCG_24062016
             }
             catch (Exception ex)
             {
-                MessageBox.Show(error);
+                MessageBox.Show(ex.ToString());
             }
             MessageBox.Show("Cập nhật thành công " + total + " DO!");
             if (flag == false)

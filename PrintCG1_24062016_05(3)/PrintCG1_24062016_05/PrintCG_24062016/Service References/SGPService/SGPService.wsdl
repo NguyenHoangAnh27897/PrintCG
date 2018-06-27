@@ -242,6 +242,72 @@
   <wsdl:message name="ISGPService_getCustomerIDbyGroup_OutputMessage">
     <wsdl:part name="parameters" element="tns:getCustomerIDbyGroupResponse" />
   </wsdl:message>
+  <wsdl:message name="ISGPService_getDHLplan_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDHLplan" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getDHLplan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDHLplanResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_updateMailerDeliveryDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateMailerDeliveryDetail" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_updateMailerDeliveryDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateMailerDeliveryDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getCustomerIDTab4_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerIDTab4" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getCustomerIDTab4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerIDTab4Response" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getCustomerGroupTab4_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerGroupTab4" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getCustomerGroupTab4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerGroupTab4Response" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getListSpCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListSpCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getListSpCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListSpCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getListCGChuaNhapDT_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListCGChuaNhapDT" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getListCGChuaNhapDT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListCGChuaNhapDTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getListCGChuaXuatBK_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListCGChuaXuatBK" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getListCGChuaXuatBK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListCGChuaXuatBKResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getPostOffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPostOffice" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getPostOffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPostOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getZone_InputMessage">
+    <wsdl:part name="parameters" element="tns:getZone" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getZone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getZoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getCustomerGroupPMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerGroupPMS" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getCustomerGroupPMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerGroupPMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getListCustomerGroupDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListCustomerGroupDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISGPService_getListCustomerGroupDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListCustomerGroupDetailsResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISGPService">
     <wsdl:operation name="login">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/login" message="tns:ISGPService_login_InputMessage" />
@@ -398,6 +464,50 @@
     <wsdl:operation name="getCustomerIDbyGroup">
       <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getCustomerIDbyGroup" message="tns:ISGPService_getCustomerIDbyGroup_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getCustomerIDbyGroupResponse" message="tns:ISGPService_getCustomerIDbyGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDHLplan">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getDHLplan" message="tns:ISGPService_getDHLplan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getDHLplanResponse" message="tns:ISGPService_getDHLplan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateMailerDeliveryDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/updateMailerDeliveryDetail" message="tns:ISGPService_updateMailerDeliveryDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/updateMailerDeliveryDetailResponse" message="tns:ISGPService_updateMailerDeliveryDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerIDTab4">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getCustomerIDTab4" message="tns:ISGPService_getCustomerIDTab4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getCustomerIDTab4Response" message="tns:ISGPService_getCustomerIDTab4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerGroupTab4">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getCustomerGroupTab4" message="tns:ISGPService_getCustomerGroupTab4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getCustomerGroupTab4Response" message="tns:ISGPService_getCustomerGroupTab4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListSpCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getListSpCustomer" message="tns:ISGPService_getListSpCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getListSpCustomerResponse" message="tns:ISGPService_getListSpCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListCGChuaNhapDT">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getListCGChuaNhapDT" message="tns:ISGPService_getListCGChuaNhapDT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getListCGChuaNhapDTResponse" message="tns:ISGPService_getListCGChuaNhapDT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListCGChuaXuatBK">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getListCGChuaXuatBK" message="tns:ISGPService_getListCGChuaXuatBK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getListCGChuaXuatBKResponse" message="tns:ISGPService_getListCGChuaXuatBK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPostOffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getPostOffice" message="tns:ISGPService_getPostOffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getPostOfficeResponse" message="tns:ISGPService_getPostOffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getZone">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getZone" message="tns:ISGPService_getZone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getZoneResponse" message="tns:ISGPService_getZone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerGroupPMS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getCustomerGroupPMS" message="tns:ISGPService_getCustomerGroupPMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getCustomerGroupPMSResponse" message="tns:ISGPService_getCustomerGroupPMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListCustomerGroupDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISGPService/getListCustomerGroupDetails" message="tns:ISGPService_getListCustomerGroupDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISGPService/getListCustomerGroupDetailsResponse" message="tns:ISGPService_getListCustomerGroupDetails_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISGPService" type="tns:ISGPService">
@@ -746,6 +856,105 @@
     </wsdl:operation>
     <wsdl:operation name="getCustomerIDbyGroup">
       <soap:operation soapAction="http://tempuri.org/ISGPService/getCustomerIDbyGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDHLplan">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getDHLplan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMailerDeliveryDetail">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/updateMailerDeliveryDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerIDTab4">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getCustomerIDTab4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerGroupTab4">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getCustomerGroupTab4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListSpCustomer">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getListSpCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListCGChuaNhapDT">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getListCGChuaNhapDT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListCGChuaXuatBK">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getListCGChuaXuatBK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPostOffice">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getPostOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZone">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getZone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerGroupPMS">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getCustomerGroupPMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListCustomerGroupDetails">
+      <soap:operation soapAction="http://tempuri.org/ISGPService/getListCustomerGroupDetails" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

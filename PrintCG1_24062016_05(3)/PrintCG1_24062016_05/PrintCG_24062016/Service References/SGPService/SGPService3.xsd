@@ -267,6 +267,7 @@
       <xs:element minOccurs="0" name="MM_Mailers1" nillable="true" type="tns:ArrayOfMM_Mailer" />
       <xs:element minOccurs="0" name="MM_PostOffice1" nillable="true" type="tns:MM_PostOffice" />
       <xs:element minOccurs="0" name="MM_PostOffices" nillable="true" type="tns:ArrayOfMM_PostOffice" />
+      <xs:element minOccurs="0" name="MM_Zone" nillable="true" type="tns:MM_Zone" />
       <xs:element minOccurs="0" name="MemberOf" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
@@ -322,6 +323,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfMM_PostOffice" nillable="true" type="tns:ArrayOfMM_PostOffice" />
+  <xs:complexType name="MM_Zone">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreationDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastEditDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MM_PostOffices" nillable="true" type="tns:ArrayOfMM_PostOffice" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZoneID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZoneName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MM_Zone" nillable="true" type="tns:MM_Zone" />
   <xs:complexType name="ArrayOfUMS_tblUserAccountPostOffice">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="UMS_tblUserAccountPostOffice" nillable="true" type="tns:UMS_tblUserAccountPostOffice" />
@@ -580,4 +592,59 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="SGP_ChiPhi" nillable="true" type="tns:SGP_ChiPhi" />
+  <xs:complexType name="ArrayOfTB_DHLPlan">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_DHLPlan" nillable="true" type="tns:TB_DHLPlan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_DHLPlan" nillable="true" type="tns:ArrayOfTB_DHLPlan" />
+  <xs:complexType name="TB_DHLPlan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contact1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contact2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contact3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="D_O" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Employee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="KH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PGI" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Quatity" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SL" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SenderAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShiptoAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShiptoNM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subcon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TL" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToNodeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToZone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TongSL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Unit1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Unit2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Unit3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Zone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZoneDesc" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TB_DHLPlan" nillable="true" type="tns:TB_DHLPlan" />
+  <xs:complexType name="ArrayOfMM_CustomerGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MM_CustomerGroup" nillable="true" type="tns:MM_CustomerGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMM_CustomerGroup" nillable="true" type="tns:ArrayOfMM_CustomerGroup" />
+  <xs:complexType name="MM_CustomerGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreationDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CustomerGroupID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerGroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastEditDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MM_CustomerGroup" nillable="true" type="tns:MM_CustomerGroup" />
 </xs:schema>

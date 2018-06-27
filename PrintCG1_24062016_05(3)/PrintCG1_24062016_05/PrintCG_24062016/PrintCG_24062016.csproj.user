@@ -2,11 +2,11 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <ReferencePath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\;c:\Program Files (x86)\Business Objects\Common\2.8\managed\C:\Program Files\Business Objects\Common\2.8\managed\</ReferencePath>
-    <ProjectView>ShowAllFiles</ProjectView>
-    <PublishUrlHistory>D:\|publish\</PublishUrlHistory>
-    <InstallUrlHistory />
+    <ProjectView>ProjectFiles</ProjectView>
+    <PublishUrlHistory>ftp://112.213.89.17/setupprintcg.ssofty.com/|ftp://112.213.89.17.setupprintcg.ssofty.com/setupprintcg.ssofty.com/|http://setupprintcg.ssofty.com/update.html/|ftp://pms.sgp.vn/Loi/soft/AutoUpdate/PrintCG/|D:\PrintCG\</PublishUrlHistory>
+    <InstallUrlHistory>http://setupprintcg.ssofty.com/</InstallUrlHistory>
     <SupportUrlHistory />
-    <UpdateUrlHistory />
+    <UpdateUrlHistory>http://setupprintcg.ssofty.com/</UpdateUrlHistory>
     <BootstrapperUrlHistory />
     <ErrorReportUrlHistory />
     <FallbackCulture>en-US</FallbackCulture>

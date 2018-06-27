@@ -366,6 +366,7 @@
       <Association Name="MM_PostOffice_BS_Employee1" Member="BS_Employee1s" ThisKey="PostOfficeID" OtherKey="PostOfficeID" Type="BS_Employee1" />
       <Association Name="BS_Province_MM_PostOffice" Member="BS_Province" ThisKey="ProvinceID" OtherKey="ProvinceID" Type="BS_Province" IsForeignKey="true" />
       <Association Name="MM_PostOffice_MM_PostOffice" Member="MM_PostOffice1" ThisKey="MemberOf" OtherKey="PostOfficeID" Type="MM_PostOffice" IsForeignKey="true" />
+      <Association Name="MM_Zone_MM_PostOffice" Member="MM_Zone" ThisKey="ZoneID" OtherKey="ZoneID" Type="MM_Zone" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.BS_Employees" Member="BS_Employee1s">
@@ -390,6 +391,25 @@
       <Column Name="Imei" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Association Name="BS_Employee1_MM_MailerDelivery" Member="MM_MailerDeliveries" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="MM_MailerDelivery" />
       <Association Name="MM_PostOffice_BS_Employee1" Member="MM_PostOffice" ThisKey="PostOfficeID" OtherKey="PostOfficeID" Type="MM_PostOffice" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MM_CustomerGroups" Member="MM_CustomerGroups">
+    <Type Name="MM_CustomerGroup">
+      <Column Name="CustomerGroupID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustomerGroupName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LastEditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MM_Zones" Member="MM_Zones">
+    <Type Name="MM_Zone">
+      <Column Name="ZoneID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ZoneName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LastEditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="MM_Zone_MM_PostOffice" Member="MM_PostOffices" ThisKey="ZoneID" OtherKey="ZoneID" Type="MM_PostOffice" />
     </Type>
   </Table>
 </Database>

@@ -392,4 +392,13 @@
       <Association Name="MM_PostOffice_BS_Employee1" Member="MM_PostOffice" ThisKey="PostOfficeID" OtherKey="PostOfficeID" Type="MM_PostOffice" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.MM_CustomerGroups" Member="MM_CustomerGroups">
+    <Type Name="MM_CustomerGroup">
+      <Column Name="CustomerGroupID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustomerGroupName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LastEditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

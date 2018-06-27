@@ -43,7 +43,7 @@
             // 
             // btncancel
             // 
-            this.btncancel.Location = new System.Drawing.Point(259, 86);
+            this.btncancel.Location = new System.Drawing.Point(158, 81);
             this.btncancel.Name = "btncancel";
             this.btncancel.Size = new System.Drawing.Size(60, 23);
             this.btncancel.TabIndex = 15;
@@ -52,7 +52,7 @@
             // 
             // btnlogin
             // 
-            this.btnlogin.Location = new System.Drawing.Point(189, 86);
+            this.btnlogin.Location = new System.Drawing.Point(88, 81);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(64, 23);
             this.btnlogin.TabIndex = 14;
@@ -61,7 +61,7 @@
             // 
             // txtpost
             // 
-            this.txtpost.Location = new System.Drawing.Point(189, 60);
+            this.txtpost.Location = new System.Drawing.Point(88, 55);
             this.txtpost.Name = "txtpost";
             this.txtpost.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtpost.Size = new System.Drawing.Size(130, 20);
@@ -71,7 +71,7 @@
             // 
             // txtpass
             // 
-            this.txtpass.Location = new System.Drawing.Point(189, 36);
+            this.txtpass.Location = new System.Drawing.Point(88, 31);
             this.txtpass.Name = "txtpass";
             this.txtpass.Properties.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(130, 20);
@@ -80,7 +80,7 @@
             // 
             // txtuser
             // 
-            this.txtuser.Location = new System.Drawing.Point(189, 12);
+            this.txtuser.Location = new System.Drawing.Point(88, 7);
             this.txtuser.Name = "txtuser";
             this.txtuser.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtuser.Size = new System.Drawing.Size(130, 20);
@@ -88,7 +88,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(132, 63);
+            this.labelControl3.Location = new System.Drawing.Point(44, 58);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(38, 13);
             this.labelControl3.TabIndex = 10;
@@ -96,7 +96,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(126, 39);
+            this.labelControl2.Location = new System.Drawing.Point(38, 34);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(44, 13);
             this.labelControl2.TabIndex = 9;
@@ -104,7 +104,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(98, 15);
+            this.labelControl1.Location = new System.Drawing.Point(10, 10);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(72, 13);
             this.labelControl1.TabIndex = 8;
@@ -114,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 119);
+            this.ClientSize = new System.Drawing.Size(230, 114);
             this.Controls.Add(this.btncancel);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.txtpost);

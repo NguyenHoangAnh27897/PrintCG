@@ -21,12 +21,12 @@
     <MetadataSource Address="http://localhost:4351/SGPService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="SGPService.xsd" MetadataType="Schema" ID="8bd436b7-b5af-4864-89f5-8253258e5557" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?xsd=xsd1" />
-    <MetadataFile FileName="SGPService1.xsd" MetadataType="Schema" ID="1d95b542-8074-4351-9c04-5027ef51d315" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?xsd=xsd0" />
-    <MetadataFile FileName="SGPService2.xsd" MetadataType="Schema" ID="6f8e62de-f252-4672-9b82-b4f6d90cfec0" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?xsd=xsd3" />
-    <MetadataFile FileName="SGPService3.xsd" MetadataType="Schema" ID="b4c385a1-d3d2-4805-aa7a-dcbbd5b913dc" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?xsd=xsd2" />
-    <MetadataFile FileName="SGPService.wsdl" MetadataType="Wsdl" ID="59e2944d-60d0-4ac7-8f96-582fc4d1e998" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?wsdl" />
-    <MetadataFile FileName="SGPService.disco" MetadataType="Disco" ID="e462a32d-4c39-4330-80bd-d9426b871ab6" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?disco" />
+    <MetadataFile FileName="SGPService.xsd" MetadataType="Schema" ID="14622a76-c1b3-4533-b869-4fb3d0b15080" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SGPService1.xsd" MetadataType="Schema" ID="21311426-1fbd-4f65-9008-e03df3eb29c0" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SGPService2.xsd" MetadataType="Schema" ID="59198fe2-5db2-4591-9b66-7979c4b7886b" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SGPService3.xsd" MetadataType="Schema" ID="e75ff712-a83e-42e0-9c06-fc48f4e84f70" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SGPService.wsdl" MetadataType="Wsdl" ID="e9c83a27-0a3e-40c9-8379-7e512f4f158c" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?wsdl" />
+    <MetadataFile FileName="SGPService.disco" MetadataType="Disco" ID="adea9d55-5c44-4120-bac7-7c00514a171d" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

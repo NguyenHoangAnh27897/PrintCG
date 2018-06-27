@@ -4,6 +4,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace SGPWebService
 {
@@ -13,6 +15,8 @@ namespace SGPWebService
     {
         private DB.SGPAPIDataContext api = new DB.SGPAPIDataContext();  //API
         private DB.SGPMainDataContext pms = new DB.SGPMainDataContext(); //PMS-TEST
+        private DB.DBLISTEntities dbl = new DB.DBLISTEntities();  //DBLIST
+        private DB.SGPAPIEntities sgpapi = new DB.SGPAPIEntities();
         public bool login(string user, string pass, string post)
         {
             bool flag = false;
@@ -481,7 +485,7 @@ namespace SGPWebService
                 return data;
             }
         }
-        public bool addCustomer(string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note)
+        public bool addCustomer(string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note, string buucuc)
         {
             try
             {
@@ -500,7 +504,8 @@ namespace SGPWebService
                     Staff = staff,
                     Note = note,
                     Zone = zone,
-                    CustomerID = customerid
+                    CustomerID = customerid,
+                   PostOffice = buucuc
                 };
                 api.SGP_SpecialCustomers.InsertOnSubmit(rs);
                 api.SubmitChanges();
@@ -512,23 +517,14 @@ namespace SGPWebService
             }
         }
 
-        public bool changeCustomer(int id,string noigui, string socg, string sochungtuthuve, string sochungtulienquan, string deliverydate, string nodename, string shiptoaddress, string province, string zone, string customerid, string date, string hour, string staff, string note)
+        public bool changeCustomer(int id, string date, string hour, string deliveryto)
         {
             try
             {
                 var query = api.SGP_SpecialCustomers.FirstOrDefault(s=>s.ID == id);
-                query.FromPlace = noigui;
-                query.CGNumber = socg;
-                query.SoChungTuThuVe = sochungtuthuve;
-                query.SoChungTuLienQuan = sochungtulienquan;
-                query.DeliveryDate = deliverydate;
-                query.NodeName = nodename;
-                query.ShiptoAddress = shiptoaddress;
-                query.Province = province;
                 query.Date = date;
                 query.Hour = hour;
-                query.Staff = staff;
-                query.Note = note;
+                query.DeliveryTo = deliveryto;
                 api.SubmitChanges();
                 return true;
             }
@@ -549,28 +545,34 @@ namespace SGPWebService
             return query.ToList();
         }
 
-        public List<DataClass.SpecialCustomer> getSpCustomer() 
+        public List<DataClass.SpeCustomer> getSpCustomer(string buucuc, string employee, string fromdate,string todate,int type) 
         {
-            var query = (from sp in api.SGP_SpecialCustomers
-                         select new DataClass.SpecialCustomer()
-                         {
-                             ID = sp.ID,
-                             FromPlace = sp.FromPlace,
-                             CGNumber = sp.CGNumber,
-                             SoChungTuThuVe = sp.SoChungTuThuVe,
-                             SoChungTuLienQuan = sp.SoChungTuLienQuan,
-                             DeliveryDate = sp.DeliveryDate,
-                             NodeName = sp.NodeName,
-                             ShiptoAddress = sp.ShiptoAddress,
-                             Province = sp.Province,
-                             Date = sp.Date,
-                             Hour = sp.Hour,
-                             Staff = sp.Staff,
-                             Note = sp.Note,
-                             Zone = sp.Zone,
-                             CustomerID = sp.CustomerID
-                         });
-            return query.ToList();
+            var parafrom = new SqlParameter("@FromDate", fromdate);
+            var parato = new SqlParameter("@ToDate", todate);
+            var palaemploy = new SqlParameter("@EmployeeID", employee);
+            var parabuucuc = new SqlParameter("@PostOffice", buucuc);
+            var paraloai = new SqlParameter("@Type", type);
+            List<DataClass.SpeCustomer> list = new List<DataClass.SpeCustomer>();
+            var result = sgpapi.Database.SqlQuery<DataClass.SpeCustomer>("SGP_WEB_SpecialCustomer @FromDate,@ToDate,@EmployeeID,@PostOffice,@Type", parafrom, parato, palaemploy, parabuucuc, paraloai).ToList();
+            foreach (var item in result)
+            {
+                list.Add(new DataClass.SpeCustomer()
+                {
+                    ID = item.ID,//6
+                    EmployeeID = item.EmployeeID,//3
+                    FromPlace = item.FromPlace,//4
+                    CGNumber = item.CGNumber,//0
+                    SoChungTuThuVe = item.SoChungTuThuVe,//10
+                    NodeName = item.NodeName,//7
+                    ShiptoAddress = item.ShiptoAddress,//9
+                    DeliveryTo = item.DeliveryTo,//2    
+                    Date = item.Date,//1
+                    Hour = item.Hour,//5
+                    Note = item.Note,//8
+                    PostOfficeID = item.PostOfficeID//11
+                });
+            }
+            return list;
         }
 
         public bool addCustomerID(string zoneid, string customerid, string customername) 
@@ -744,6 +746,181 @@ namespace SGPWebService
 
                          });
             return query.ToList();
+        }
+
+        public List<DB.TB_DHLPlan> getDHLplan(DateTime FromDate, DateTime ToDate)
+        {
+            List<DB.TB_DHLPlan> data = dbl.TB_DHLPlan.Where(t => t.PGI >= FromDate.Date && t.PGI <= ToDate.Date).ToList();
+            return data;
+        }
+
+        public bool updateMailerDeliveryDetail(string mailerid, DateTime ngaygio, string nguoinhan, string trangthai)
+        {
+            try
+            {
+                var query = pms.MM_MailerDeliveryDetails.Where(s => s.MailerID == mailerid).OrderByDescending(s=>s.ID).FirstOrDefault();
+                query.DeliveryDate = ngaygio;
+                query.DeliveryTo = nguoinhan;
+                query.DeliveryStatus = trangthai;
+                pms.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public List<DataClass.getCustomerIDTab4> getCustomerIDTab4(string postofficeid)
+        {
+            var query = (from ds in pms.MM_Customers
+                         where ds.IsActive == true && ds.PostOfficeID == postofficeid
+                         select new DataClass.getCustomerIDTab4()
+                         {
+                             CustomerID = ds.CustomerID
+
+                         });
+            return query.ToList();
+        }
+
+        public List<DataClass.getCustomerGroupTab4> getCustomerGroupTab4()
+        {
+            var query = (from ds in pms.MM_CustomerGroups
+                         select new DataClass.getCustomerGroupTab4()
+                         {
+                             CustomerGroupID = ds.CustomerGroupID,
+                             CustomerGroupName = ds.CustomerGroupName
+
+                         });
+            return query.ToList();
+        }
+
+        public List<DataClass.getListSpCustomer> getListSpCustomer(string tungay, string denngay, string customerid, string buucuc, int loai)
+        {
+            var parafrom = new SqlParameter("@FromDate", tungay);
+            var parato = new SqlParameter("@ToDate", denngay);
+            var paracustomer = new SqlParameter("@CustomerID", customerid);
+            var parabuucuc = new SqlParameter("@PostOfficeID", buucuc);
+            var paraloai = new SqlParameter("@Loai", loai);
+            List<DataClass.getListSpCustomer> list = new List<DataClass.getListSpCustomer>();
+            var result = sgpapi.Database.SqlQuery<DataClass.getListSpCustomer>("SGP_WEB_SpecialCustomerTab4 @FromDate,@ToDate,@CustomerID,@PostOfficeID,@Loai", parafrom, parato, paracustomer, parabuucuc, paraloai).ToList();
+            foreach (var item in result)
+            {
+                list.Add(new DataClass.getListSpCustomer()
+                {
+                    PostOfficeAcceptID = item.PostOfficeAcceptID,
+                    ReceiveProvinceID = item.ReceiveProvinceID,
+                    RecieverAddress = item.RecieverAddress,
+                    SenderName = item.SenderName,
+                    Amount = item.Amount,
+                    DeliveryDate = item.DeliveryDate,
+                    DeliveryTo = item.DeliveryTo, 
+                    MailerID = item.MailerID,
+                    Price = item.Price,
+                    Quantity = item.Quantity,
+                    SenderID = item.SenderID,
+                    ServiceTypeID = item.ServiceTypeID
+                });
+            }
+            return list;
+        }
+
+
+        public List<DataClass.CGChuaNhapDT> getListCGChuaNhapDT(string tungay, string denngay, string buucuc)
+        {
+            var parafrom = new SqlParameter("@FromDate", tungay);
+            var parato = new SqlParameter("@ToDate", denngay);
+            var parabuucuc = new SqlParameter("@PostOfficeID", buucuc);
+            List<DataClass.CGChuaNhapDT> list = new List<DataClass.CGChuaNhapDT>();
+            var result = sgpapi.Database.SqlQuery<DataClass.CGChuaNhapDT>("SGP_WIN_CGChuaNhapDT @FromDate,@ToDate,@PostOfficeID", parafrom, parato, parabuucuc).ToList();           
+            return result;
+        }
+
+        public List<DataClass.CGChuaNhapDT> getListCGChuaXuatBK(string tungay, string denngay, string buucuc)
+        {
+            var parafrom = new SqlParameter("@FromDate", tungay);
+            var parato = new SqlParameter("@ToDate", denngay);
+            var parabuucuc = new SqlParameter("@PostOfficeID", buucuc);
+            List<DataClass.CGChuaNhapDT> list = new List<DataClass.CGChuaNhapDT>();
+            var result = sgpapi.Database.SqlQuery<DataClass.CGChuaNhapDT>("SGP_WIN_CGChuaXuatBK @FromDate,@ToDate,@PostOfficeID", parafrom, parato, parabuucuc).ToList();
+            return result;
+        }
+    
+        public List<DataClass.getPostOffice> getPostOffice()
+        {
+            var query = (from ds in pms.MM_PostOffices
+                         select new DataClass.getPostOffice()
+                         {
+                             PostOfficeID = ds.PostOfficeID,
+                             PostOfficeName = ds.PostOfficeName
+
+                         });
+            return query.ToList();
+        }
+
+
+        public List<DB.MM_CustomerGroup> getCustomerGroupPMS()
+        {            
+            List<DB.MM_CustomerGroup> data = pms.MM_CustomerGroups.ToList();
+            return data;
+        }
+
+
+        public List<DataClass.getListSpCustomer> getListCustomerGroupDetails(string tungay, string denngay, string parameter, string customergroup, int loai)
+        {
+            var parafrom = new SqlParameter("@FromDate", tungay);
+            var parato = new SqlParameter("@ToDate", denngay);
+            var parapara = new SqlParameter("@Parameter", parameter);
+            var paracustomergroup = new SqlParameter("@CustomerGroupID", customergroup);
+            var paraloai = new SqlParameter("@Loai", loai);
+            List<DataClass.getListSpCustomer> list = new List<DataClass.getListSpCustomer>();
+            var result = sgpapi.Database.SqlQuery<DataClass.getListSpCustomer>("SGP_WIN_SpecialCustomer @FromDate,@ToDate,@Parameter,@CustomerGroupID,@Loai", parafrom, parato, parapara, paracustomergroup, paraloai).ToList();
+            //foreach (var item in result)
+            //{
+            //    list.Add(new DataClass.getListSpCustomer()
+            //    {
+            //        AcceptDate = item.AcceptDate,
+            //        PostOfficeAcceptID = item.PostOfficeAcceptID,     
+            //        ReceiveProvinceID = item.ReceiveProvinceID,
+            //        RecieverAddress = item.RecieverAddress,
+            //        SenderName = item.SenderName,
+            //        Amount = item.Amount,
+            //        DeliveryDate = item.DeliveryDate,
+            //        DeliveryTo = item.DeliveryTo,
+            //        MailerID = item.MailerID,
+            //        Price = item.Price,
+            //        Quantity = item.Quantity,
+            //        Weight = item.Weight,
+            //        SenderID = item.SenderID,
+            //        ServiceTypeID = item.ServiceTypeID,
+            //        PostOfficeDelivery = item.PostOfficeDelivery
+            //    });
+            //}
+            return result;
+        }
+
+        public List<DataClass.ZoneList> getZone()
+        {
+            var query = (from ds in pms.MM_Zones
+                         select new DataClass.ZoneList()
+                         {
+                             ZoneID = ds.ZoneID
+
+                         });
+            return query.ToList();
+        }
+
+
+        public List<DataClass.SpeCustomer> getMailerCustomerList(string buucuc, string employee, string fromdate, string todate, int type)
+        {
+            var parafrom = new SqlParameter("@FromDate", fromdate);
+            var parato = new SqlParameter("@ToDate", todate);
+            var palaemploy = new SqlParameter("@EmployeeID", employee);
+            var parabuucuc = new SqlParameter("@PostOffice", buucuc);
+            var paraloai = new SqlParameter("@Type", type);
+            List<DataClass.SpeCustomer> list = new List<DataClass.SpeCustomer>();
+            var result = sgpapi.Database.SqlQuery<DataClass.SpeCustomer>("SGP_WEB_SpecialCustomer @FromDate,@ToDate,@EmployeeID,@PostOffice,@Type", parafrom, parato, palaemploy, parabuucuc, paraloai).ToList();
+            return result;
         }
     }
 }

@@ -1,0 +1,4 @@
+http://localhost:4351/SGPService.svc
+http://pms.sgp.vn/SGPService/SGPService.svc
+
+https://dllkit.com/vi/dll/FlashControlV71_dll

@@ -18,9 +18,11 @@ namespace PrintCG_24062016
 {
     public partial class FrmInPhieuGuiPrint : Form
     {
+        PrintCG_24062016.SGPService.SGPServiceClient sgpservice;
         public FrmInPhieuGuiPrint()
         {
             InitializeComponent();
+            sgpservice = new PrintCG_24062016.SGPService.SGPServiceClient();
         }
         public static string sheet = string.Empty;
         public static  string path = string.Empty;
@@ -54,6 +56,7 @@ namespace PrintCG_24062016
         public static string a4ghichu = string.Empty;
         public static string a4sl = string.Empty;
         public static string a4tl = string.Empty;
+        public static bool check = false;
 
         private void FrmInPhieuGuiPrint_Load(object sender, EventArgs e)
         {
@@ -69,6 +72,7 @@ namespace PrintCG_24062016
             //khai bao cho a4
 
             dt = ReadExcelFile(sheet, path);
+            string sotudong;
             string _ngaynhan;
             string _gio = "00:00";
             string _sophieu = "";
@@ -165,19 +169,20 @@ namespace PrintCG_24062016
                 try
                 {
                     
-                    OleDbConnection conn = new OleDbConnection();
-                    DataTable dttt = new DataTable();
-                    string con = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + "\\PrintCG.mdb";
-                    conn.ConnectionString = con;
-                    OleDbCommand comm = new OleDbCommand();
-                    conn.Open();
-                    comm.CommandText = "Select TenTinh from tb_tinhthanh where MaTinh = '" + row[thanhpho].ToString() + "'";
-                    comm.Connection = conn;
-                    OleDbDataAdapter da = new OleDbDataAdapter();
-                    da.SelectCommand = comm;
-                    da.Fill(dttt);
-                    _tinhthanh = dttt.Rows[0][0].ToString();
-                    conn.Close();
+                    //OleDbConnection conn = new OleDbConnection();
+                    //DataTable dttt = new DataTable();
+                    //string con = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + "\\PrintCG.mdb";
+                    //conn.ConnectionString = con;
+                    //OleDbCommand comm = new OleDbCommand();
+                    //conn.Open();
+                    //comm.CommandText = "Select TenTinh from tb_tinhthanh where MaTinh = '" + row[thanhpho].ToString() + "'";
+                    //comm.Connection = conn;
+                    //OleDbDataAdapter da = new OleDbDataAdapter();
+                    //da.SelectCommand = comm;
+                    //da.Fill(dttt);
+                    //_tinhthanh = dttt.Rows[0][0].ToString();
+                    //conn.Close();
+                    _tinhthanh = row[thanhpho].ToString();
                 }
                 catch (Exception ex)
                 {
@@ -285,7 +290,16 @@ namespace PrintCG_24062016
 
                 try
                 {
-                    _sophieu = row[sophieu].ToString();
+                    if (check == true)
+                    {
+                        sotudong = sgpservice.getmaxMailerID("SGP");
+                        _sophieu = sotudong;
+                    }
+                    else
+                    {
+                        _sophieu = row[sophieu].ToString();
+                    }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -309,7 +323,7 @@ namespace PrintCG_24062016
                 {
                     _thuho = "0";
                 }
-                dscg11.CG11.AddCG11Row(_ngaynhan, _gio, _sophieu, _lh, _dv, _sl, _tl, _tlkhoi, _hotennhan, _diachinhan, _tinhthanh, _ghichu, _bc, _nv, _kh, _diachi, _cuoc, _hengio, _phikhac, _tongtien, _telnhan, _telgui,_cod,"","","");
+                dscg11.CG11.AddCG11Row(_ngaynhan, _gio, _sophieu, _lh, _dv, _sl, _tl, _tlkhoi, _hotennhan, _diachinhan, _tinhthanh, _ghichu, _bc, _nv, _kh, _diachi, _cuoc, _hengio, _phikhac, _tongtien, _telnhan, _telgui,_cod,"","","","","");
             }
             //string papername = string.Empty;
             //int i = 0;

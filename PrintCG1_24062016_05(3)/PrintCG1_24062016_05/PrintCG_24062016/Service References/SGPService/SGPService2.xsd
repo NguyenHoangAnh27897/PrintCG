@@ -106,32 +106,29 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="District" nillable="true" type="tns:District" />
-  <xs:complexType name="ArrayOfSpecialCustomer">
+  <xs:complexType name="ArrayOfSpeCustomer">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpecialCustomer" nillable="true" type="tns:SpecialCustomer" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpeCustomer" nillable="true" type="tns:SpeCustomer" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfSpecialCustomer" nillable="true" type="tns:ArrayOfSpecialCustomer" />
-  <xs:complexType name="SpecialCustomer">
+  <xs:element name="ArrayOfSpeCustomer" nillable="true" type="tns:ArrayOfSpeCustomer" />
+  <xs:complexType name="SpeCustomer">
     <xs:sequence>
       <xs:element minOccurs="0" name="CGNumber" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="DeliveryDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FromPlace" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Hour" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ID" type="xs:int" />
       <xs:element minOccurs="0" name="NodeName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Province" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostOfficeID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ShiptoAddress" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SoChungTuLienQuan" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SoChungTuThuVe" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Staff" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Zone" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="SpecialCustomer" nillable="true" type="tns:SpecialCustomer" />
+  <xs:element name="SpeCustomer" nillable="true" type="tns:SpeCustomer" />
   <xs:complexType name="ArrayOfSpCustomer">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="SpCustomer" nillable="true" type="tns:SpCustomer" />
@@ -209,4 +206,87 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CustomerGroup" nillable="true" type="tns:CustomerGroup" />
+  <xs:complexType name="ArrayOfgetCustomerIDTab4">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="getCustomerIDTab4" nillable="true" type="tns:getCustomerIDTab4" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgetCustomerIDTab4" nillable="true" type="tns:ArrayOfgetCustomerIDTab4" />
+  <xs:complexType name="getCustomerIDTab4">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getCustomerIDTab4" nillable="true" type="tns:getCustomerIDTab4" />
+  <xs:complexType name="ArrayOfgetCustomerGroupTab4">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="getCustomerGroupTab4" nillable="true" type="tns:getCustomerGroupTab4" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgetCustomerGroupTab4" nillable="true" type="tns:ArrayOfgetCustomerGroupTab4" />
+  <xs:complexType name="getCustomerGroupTab4">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerGroupID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerGroupName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getCustomerGroupTab4" nillable="true" type="tns:getCustomerGroupTab4" />
+  <xs:complexType name="ArrayOfgetListSpCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="getListSpCustomer" nillable="true" type="tns:getListSpCustomer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgetListSpCustomer" nillable="true" type="tns:ArrayOfgetListSpCustomer" />
+  <xs:complexType name="getListSpCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AcceptDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DeliveryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeliveryTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MailerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostOfficeAcceptID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostOfficeDelivery" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="ReceiveProvinceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecieverAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceTypeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getListSpCustomer" nillable="true" type="tns:getListSpCustomer" />
+  <xs:complexType name="ArrayOfCGChuaNhapDT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CGChuaNhapDT" nillable="true" type="tns:CGChuaNhapDT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCGChuaNhapDT" nillable="true" type="tns:ArrayOfCGChuaNhapDT" />
+  <xs:complexType name="CGChuaNhapDT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NgayNhan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoiDen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SL" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TL" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="TLKhoi" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CGChuaNhapDT" nillable="true" type="tns:CGChuaNhapDT" />
+  <xs:complexType name="ArrayOfgetPostOffice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="getPostOffice" nillable="true" type="tns:getPostOffice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgetPostOffice" nillable="true" type="tns:ArrayOfgetPostOffice" />
+  <xs:complexType name="getPostOffice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PostOfficeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostOfficeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getPostOffice" nillable="true" type="tns:getPostOffice" />
 </xs:schema>
