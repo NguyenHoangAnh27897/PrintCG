@@ -34,7 +34,7 @@
     <UpdateUrl>http://setupprintcg.ssofty.com/</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.11</MinimumRequiredVersion>
     <WebPage>update.html</WebPage>
-    <ApplicationRevision>23</ApplicationRevision>
+    <ApplicationRevision>25</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -165,11 +165,23 @@
     <Compile Include="baocaodoanhthu\FrmCGChuaNhapDT.Designer.cs">
       <DependentUpon>FrmCGChuaNhapDT.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChuyenDoiDuLieu\FrmExcelToFox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChuyenDoiDuLieu\FrmExcelToFox.Designer.cs">
+      <DependentUpon>FrmExcelToFox.cs</DependentUpon>
+    </Compile>
     <Compile Include="congcu\FrmKhachHangDacBiet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="congcu\FrmKhachHangDacBiet.Designer.cs">
       <DependentUpon>FrmKhachHangDacBiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="congcu\FrmLuuChuyenChungTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="congcu\FrmLuuChuyenChungTu.Designer.cs">
+      <DependentUpon>FrmLuuChuyenChungTu.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBCSLMsYen.cs">
       <SubType>Form</SubType>
@@ -729,13 +741,16 @@
     <Content Include="PrintCG.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Service References\SGPService\SGPService1.disco" />
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.DocumentReturn.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.getPostOffice.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.MM_CustomerGroup.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SGPService\SGPService.disco" />
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.CGChuaNhapDT.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -748,8 +763,14 @@
     <EmbeddedResource Include="baocaodoanhthu\FrmCGChuaNhapDT.resx">
       <DependentUpon>FrmCGChuaNhapDT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChuyenDoiDuLieu\FrmExcelToFox.resx">
+      <DependentUpon>FrmExcelToFox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="congcu\FrmKhachHangDacBiet.resx">
       <DependentUpon>FrmKhachHangDacBiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="congcu\FrmLuuChuyenChungTu.resx">
+      <DependentUpon>FrmLuuChuyenChungTu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBCSLMsYen.resx">
       <DependentUpon>FrmBCSLMsYen.cs</DependentUpon>
@@ -1495,17 +1516,17 @@
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.ZoneList.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SGPService\SGPService.wsdl" />
-    <None Include="Service References\SGPService\SGPService.xsd">
+    <None Include="Service References\SGPService\SGPService1.wsdl" />
+    <None Include="Service References\SGPService\SGPService4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SGPService\SGPService1.xsd">
+    <None Include="Service References\SGPService\SGPService41.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SGPService\SGPService2.xsd">
+    <None Include="Service References\SGPService\SGPService42.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SGPService\SGPService3.xsd">
+    <None Include="Service References\SGPService\SGPService43.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="tinhcuoc\dataset\DsCuoc.xsc">

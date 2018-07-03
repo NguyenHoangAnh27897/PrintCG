@@ -72,6 +72,9 @@ namespace SGPWebService.DB
     partial void InsertSGP_SpecialCustomer(SGP_SpecialCustomer instance);
     partial void UpdateSGP_SpecialCustomer(SGP_SpecialCustomer instance);
     partial void DeleteSGP_SpecialCustomer(SGP_SpecialCustomer instance);
+    partial void InsertSGP_DocumentReturn(SGP_DocumentReturn instance);
+    partial void UpdateSGP_DocumentReturn(SGP_DocumentReturn instance);
+    partial void DeleteSGP_DocumentReturn(SGP_DocumentReturn instance);
     #endregion
 		
 		public SGPAPIDataContext() : 
@@ -213,6 +216,14 @@ namespace SGPWebService.DB
 			get
 			{
 				return this.GetTable<SGP_SpecialCustomer>();
+			}
+		}
+		
+		public System.Data.Linq.Table<SGP_DocumentReturn> SGP_DocumentReturns
+		{
+			get
+			{
+				return this.GetTable<SGP_DocumentReturn>();
 			}
 		}
 	}
@@ -2692,6 +2703,140 @@ namespace SGPWebService.DB
 					this._PostOffice = value;
 					this.SendPropertyChanged("PostOffice");
 					this.OnPostOfficeChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SGP_DocumentReturns")]
+	public partial class SGP_DocumentReturn : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _POD;
+		
+		private string _DocumentID;
+		
+		private System.Nullable<System.DateTime> _DocumentDate;
+		
+		private string _PostOfficeID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPODChanging(string value);
+    partial void OnPODChanged();
+    partial void OnDocumentIDChanging(string value);
+    partial void OnDocumentIDChanged();
+    partial void OnDocumentDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnDocumentDateChanged();
+    partial void OnPostOfficeIDChanging(string value);
+    partial void OnPostOfficeIDChanged();
+    #endregion
+		
+		public SGP_DocumentReturn()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_POD", DbType="NVarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string POD
+		{
+			get
+			{
+				return this._POD;
+			}
+			set
+			{
+				if ((this._POD != value))
+				{
+					this.OnPODChanging(value);
+					this.SendPropertyChanging();
+					this._POD = value;
+					this.SendPropertyChanged("POD");
+					this.OnPODChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DocumentID", DbType="NVarChar(20)")]
+		public string DocumentID
+		{
+			get
+			{
+				return this._DocumentID;
+			}
+			set
+			{
+				if ((this._DocumentID != value))
+				{
+					this.OnDocumentIDChanging(value);
+					this.SendPropertyChanging();
+					this._DocumentID = value;
+					this.SendPropertyChanged("DocumentID");
+					this.OnDocumentIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DocumentDate", DbType="Date")]
+		public System.Nullable<System.DateTime> DocumentDate
+		{
+			get
+			{
+				return this._DocumentDate;
+			}
+			set
+			{
+				if ((this._DocumentDate != value))
+				{
+					this.OnDocumentDateChanging(value);
+					this.SendPropertyChanging();
+					this._DocumentDate = value;
+					this.SendPropertyChanged("DocumentDate");
+					this.OnDocumentDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostOfficeID", DbType="NVarChar(5)")]
+		public string PostOfficeID
+		{
+			get
+			{
+				return this._PostOfficeID;
+			}
+			set
+			{
+				if ((this._PostOfficeID != value))
+				{
+					this.OnPostOfficeIDChanging(value);
+					this.SendPropertyChanging();
+					this._PostOfficeID = value;
+					this.SendPropertyChanged("PostOfficeID");
+					this.OnPostOfficeIDChanged();
 				}
 			}
 		}

@@ -30,6 +30,16 @@
         {
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtcg = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dtpngaynhan = new System.Windows.Forms.DateTimePicker();
+            this.dtpgionhan = new System.Windows.Forms.DateTimePicker();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtnguoinhan = new System.Windows.Forms.TextBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.PostOfficeAcceptID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,23 +63,13 @@
             this.label15 = new System.Windows.Forms.Label();
             this.dtptotab4 = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtcg = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dtpngaynhan = new System.Windows.Forms.DateTimePicker();
-            this.dtpgionhan = new System.Windows.Forms.DateTimePicker();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtnguoinhan = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -91,6 +91,102 @@
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(614, 408);
             this.xtraTabPage1.Text = "Danh sách bưu phẩm/ bưu kiện";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.txtcg);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.dtpngaynhan);
+            this.groupBox4.Controls.Add(this.dtpgionhan);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.txtnguoinhan);
+            this.groupBox4.Location = new System.Drawing.Point(446, 111);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(163, 288);
+            this.groupBox4.TabIndex = 43;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Thông tin chi tiết";
+            // 
+            // txtcg
+            // 
+            this.txtcg.Location = new System.Drawing.Point(69, 20);
+            this.txtcg.Name = "txtcg";
+            this.txtcg.Size = new System.Drawing.Size(91, 21);
+            this.txtcg.TabIndex = 40;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(30, 23);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(36, 13);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Số CG";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(33, 78);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(32, 13);
+            this.label12.TabIndex = 34;
+            this.label12.Text = "Ngày";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(85, 128);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Cập nhật";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(43, 106);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(22, 13);
+            this.label13.TabIndex = 39;
+            this.label13.Text = "Giờ";
+            // 
+            // dtpngaynhan
+            // 
+            this.dtpngaynhan.CustomFormat = "";
+            this.dtpngaynhan.Location = new System.Drawing.Point(69, 74);
+            this.dtpngaynhan.Name = "dtpngaynhan";
+            this.dtpngaynhan.Size = new System.Drawing.Size(91, 21);
+            this.dtpngaynhan.TabIndex = 35;
+            // 
+            // dtpgionhan
+            // 
+            this.dtpgionhan.CustomFormat = "";
+            this.dtpgionhan.Location = new System.Drawing.Point(69, 101);
+            this.dtpgionhan.Name = "dtpgionhan";
+            this.dtpgionhan.Size = new System.Drawing.Size(91, 21);
+            this.dtpgionhan.TabIndex = 38;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(4, 50);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(62, 13);
+            this.label14.TabIndex = 36;
+            this.label14.Text = "Người nhận";
+            // 
+            // txtnguoinhan
+            // 
+            this.txtnguoinhan.Location = new System.Drawing.Point(69, 47);
+            this.txtnguoinhan.Name = "txtnguoinhan";
+            this.txtnguoinhan.Size = new System.Drawing.Size(91, 21);
+            this.txtnguoinhan.TabIndex = 37;
             // 
             // gridControl1
             // 
@@ -334,102 +430,6 @@
             this.label16.TabIndex = 27;
             this.label16.Text = "Đến ngày";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.txtcg);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.dtpngaynhan);
-            this.groupBox4.Controls.Add(this.dtpgionhan);
-            this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.txtnguoinhan);
-            this.groupBox4.Location = new System.Drawing.Point(446, 111);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(163, 288);
-            this.groupBox4.TabIndex = 43;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Thông tin chi tiết";
-            // 
-            // txtcg
-            // 
-            this.txtcg.Location = new System.Drawing.Point(69, 20);
-            this.txtcg.Name = "txtcg";
-            this.txtcg.Size = new System.Drawing.Size(91, 21);
-            this.txtcg.TabIndex = 40;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(30, 23);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(36, 13);
-            this.label9.TabIndex = 41;
-            this.label9.Text = "Số CG";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(33, 78);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 13);
-            this.label12.TabIndex = 34;
-            this.label12.Text = "Ngày";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(85, 128);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Cập nhật";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(43, 106);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(22, 13);
-            this.label13.TabIndex = 39;
-            this.label13.Text = "Giờ";
-            // 
-            // dtpngaynhan
-            // 
-            this.dtpngaynhan.CustomFormat = "";
-            this.dtpngaynhan.Location = new System.Drawing.Point(69, 74);
-            this.dtpngaynhan.Name = "dtpngaynhan";
-            this.dtpngaynhan.Size = new System.Drawing.Size(91, 21);
-            this.dtpngaynhan.TabIndex = 35;
-            // 
-            // dtpgionhan
-            // 
-            this.dtpgionhan.CustomFormat = "";
-            this.dtpgionhan.Location = new System.Drawing.Point(69, 101);
-            this.dtpgionhan.Name = "dtpgionhan";
-            this.dtpgionhan.Size = new System.Drawing.Size(91, 21);
-            this.dtpgionhan.TabIndex = 38;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(4, 50);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(62, 13);
-            this.label14.TabIndex = 36;
-            this.label14.Text = "Người nhận";
-            // 
-            // txtnguoinhan
-            // 
-            this.txtnguoinhan.Location = new System.Drawing.Point(69, 47);
-            this.txtnguoinhan.Name = "txtnguoinhan";
-            this.txtnguoinhan.Size = new System.Drawing.Size(91, 21);
-            this.txtnguoinhan.TabIndex = 37;
-            // 
             // FrmKhachHangDacBiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,15 +438,16 @@
             this.Controls.Add(this.xtraTabControl1);
             this.Name = "FrmKhachHangDacBiet";
             this.Text = "Khách hàng đặc biệt";
+            this.Load += new System.EventHandler(this.FrmKhachHangDacBiet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }

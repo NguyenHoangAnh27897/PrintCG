@@ -922,5 +922,76 @@ namespace SGPWebService
             var result = sgpapi.Database.SqlQuery<DataClass.SpeCustomer>("SGP_WEB_SpecialCustomer @FromDate,@ToDate,@EmployeeID,@PostOffice,@Type", parafrom, parato, palaemploy, parabuucuc, paraloai).ToList();
             return result;
         }
+
+
+        public bool insert_DocumentReturn(string DocumentID, DateTime DocumentDate, string POD,string PostOfficeID)
+        {
+            try
+            {
+                var pl = new DB.SGP_DocumentReturn()
+                {
+                    DocumentID = DocumentID,
+                    DocumentDate = DocumentDate,
+                    POD = POD,
+                    PostOfficeID = PostOfficeID
+                   
+                };
+                api.SGP_DocumentReturns.InsertOnSubmit(pl);
+                api.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
+        public List<DataClass.DocumentReturn> get_DocumentReturn(DateTime tungay, DateTime denngay, string buucuc)
+        {
+            var query = (from ds in api.SGP_DocumentReturns 
+                         where ds.PostOfficeID == buucuc && ds.DocumentDate >= tungay.Date && ds.DocumentDate <= denngay.Date
+                         select new DataClass.DocumentReturn()
+                         {
+                             PostOfficeID = ds.PostOfficeID,
+                             DocumentID = ds.DocumentID,
+                             POD = ds.POD,
+                             DocumentDate = ds.DocumentDate
+
+                         });
+            return query.ToList();
+        }
+
+
+        public bool delete_DocumentReturn(string POD, string PostOfficeID)
+        {
+            DB.SGP_DocumentReturn dr = api.SGP_DocumentReturns.Single(t => t.PostOfficeID == PostOfficeID && t.POD == POD);
+            if(dr != null)
+            {
+                api.SGP_DocumentReturns.DeleteOnSubmit(dr);
+                api.SubmitChanges();
+                return true;
+            }else
+            {
+                return false;
+            }
+           
+        }
+
+        public List<DataClass.DocumentReturn> get_DocumentReturnbyPOD(string pod)
+        {
+            var query = (from ds in api.SGP_DocumentReturns
+                         where ds.POD == pod
+                         select new DataClass.DocumentReturn()
+                         {
+                             PostOfficeID = ds.PostOfficeID,
+                             DocumentID = ds.DocumentID,
+                             POD = ds.POD,
+                             DocumentDate = ds.DocumentDate
+
+                         });
+            return query.ToList();
+        }
+
     }
 }

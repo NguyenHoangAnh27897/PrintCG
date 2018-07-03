@@ -113,5 +113,14 @@ namespace SGPWebService
         List<DataClass.getListSpCustomer> getListCustomerGroupDetails(string tungay, string denngay, string parameter,string customergroup,int loai);
         [OperationContract]
         List<DataClass.SpeCustomer> getMailerCustomerList(string buucuc, string employee, string fromdate, string todate, int type);
+        [OperationContract]
+        bool insert_DocumentReturn(string DocumentID,DateTime DocumentDate,string POD,string PostOfficeID);
+        [OperationContract]
+        List<DataClass.DocumentReturn> get_DocumentReturn(DateTime tungay, DateTime denngay, string buucuc);
+        [OperationContract]
+        bool delete_DocumentReturn(string POD, string PostOfficeID);
+        [OperationContract]
+        List<DataClass.DocumentReturn> get_DocumentReturnbyPOD( string pod);
+     
     }
 }

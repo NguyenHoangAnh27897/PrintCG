@@ -43,6 +43,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnDown = new System.Windows.Forms.Button();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -95,7 +96,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtPost = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -249,7 +249,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(12, 12);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(940, 438);
+            this.xtraTabControl1.Size = new System.Drawing.Size(516, 438);
             this.xtraTabControl1.TabIndex = 20;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -269,6 +269,16 @@
             this.xtraTabPage1.Size = new System.Drawing.Size(934, 410);
             this.xtraTabPage1.Text = "Nhập Excel và Lưu";
             this.xtraTabPage1.Click += new System.EventHandler(this.xtraTabPage1_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(8, 76);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(193, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Định dạng ngày cho phép dd/MM/yyyy";
             // 
             // btnDown
             // 
@@ -539,7 +549,7 @@
             this.xtraTabPage3.Controls.Add(this.labelControl2);
             this.xtraTabPage3.Controls.Add(this.labelControl1);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(934, 410);
+            this.xtraTabPage3.Size = new System.Drawing.Size(510, 410);
             this.xtraTabPage3.Text = "Tạo khách hàng mới";
             // 
             // txtName
@@ -774,21 +784,11 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Mã bưu cục";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(8, 76);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(193, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Định dạng ngày cho phép dd/MM/yyyy";
-            // 
             // Frm_SpecialCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(964, 462);
+            this.ClientSize = new System.Drawing.Size(540, 462);
             this.Controls.Add(this.xtraTabControl1);
             this.Name = "Frm_SpecialCustomer";
             this.Text = "Khách hàng đặc biệt";

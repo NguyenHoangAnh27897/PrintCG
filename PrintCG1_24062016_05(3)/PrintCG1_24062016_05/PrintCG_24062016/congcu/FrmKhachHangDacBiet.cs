@@ -112,5 +112,10 @@ namespace PrintCG_24062016.congcu
 
             }
         }
+
+        private void FrmKhachHangDacBiet_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

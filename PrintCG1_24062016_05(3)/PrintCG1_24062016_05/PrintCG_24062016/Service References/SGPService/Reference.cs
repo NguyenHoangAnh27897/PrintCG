@@ -9051,6 +9051,12 @@ namespace PrintCG_24062016.SGPService {
         private string CGField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal DoanhThuField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaKHField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NgayNhanField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -9064,6 +9070,9 @@ namespace PrintCG_24062016.SGPService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<double> TLKhoiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TenKHField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -9097,6 +9106,32 @@ namespace PrintCG_24062016.SGPService {
                 if ((object.ReferenceEquals(this.CGField, value) != true)) {
                     this.CGField = value;
                     this.RaisePropertyChanged("CG");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal DoanhThu {
+            get {
+                return this.DoanhThuField;
+            }
+            set {
+                if ((this.DoanhThuField.Equals(value) != true)) {
+                    this.DoanhThuField = value;
+                    this.RaisePropertyChanged("DoanhThu");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaKH {
+            get {
+                return this.MaKHField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaKHField, value) != true)) {
+                    this.MaKHField = value;
+                    this.RaisePropertyChanged("MaKH");
                 }
             }
         }
@@ -9162,6 +9197,19 @@ namespace PrintCG_24062016.SGPService {
                 if ((this.TLKhoiField.Equals(value) != true)) {
                     this.TLKhoiField = value;
                     this.RaisePropertyChanged("TLKhoi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TenKH {
+            get {
+                return this.TenKHField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TenKHField, value) != true)) {
+                    this.TenKHField = value;
+                    this.RaisePropertyChanged("TenKH");
                 }
             }
         }
@@ -9346,6 +9394,99 @@ namespace PrintCG_24062016.SGPService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DocumentReturn", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass")]
+    [System.SerializableAttribute()]
+    public partial class DocumentReturn : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> DocumentDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DocumentIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PODField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PostOfficeIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> DocumentDate {
+            get {
+                return this.DocumentDateField;
+            }
+            set {
+                if ((this.DocumentDateField.Equals(value) != true)) {
+                    this.DocumentDateField = value;
+                    this.RaisePropertyChanged("DocumentDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DocumentID {
+            get {
+                return this.DocumentIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DocumentIDField, value) != true)) {
+                    this.DocumentIDField = value;
+                    this.RaisePropertyChanged("DocumentID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string POD {
+            get {
+                return this.PODField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PODField, value) != true)) {
+                    this.PODField = value;
+                    this.RaisePropertyChanged("POD");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PostOfficeID {
+            get {
+                return this.PostOfficeIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PostOfficeIDField, value) != true)) {
+                    this.PostOfficeIDField = value;
+                    this.RaisePropertyChanged("PostOfficeID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SGPService.ISGPService")]
     public interface ISGPService {
@@ -9515,6 +9656,21 @@ namespace PrintCG_24062016.SGPService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getListCustomerGroupDetails", ReplyAction="http://tempuri.org/ISGPService/getListCustomerGroupDetailsResponse")]
         PrintCG_24062016.SGPService.getListSpCustomer[] getListCustomerGroupDetails(string tungay, string denngay, string parameter, string customergroup, int loai);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getMailerCustomerList", ReplyAction="http://tempuri.org/ISGPService/getMailerCustomerListResponse")]
+        PrintCG_24062016.SGPService.SpeCustomer[] getMailerCustomerList(string buucuc, string employee, string fromdate, string todate, int type);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/insert_DocumentReturn", ReplyAction="http://tempuri.org/ISGPService/insert_DocumentReturnResponse")]
+        bool insert_DocumentReturn(string DocumentID, System.DateTime DocumentDate, string POD, string PostOfficeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/get_DocumentReturn", ReplyAction="http://tempuri.org/ISGPService/get_DocumentReturnResponse")]
+        PrintCG_24062016.SGPService.DocumentReturn[] get_DocumentReturn(System.DateTime tungay, System.DateTime denngay, string buucuc);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/delete_DocumentReturn", ReplyAction="http://tempuri.org/ISGPService/delete_DocumentReturnResponse")]
+        bool delete_DocumentReturn(string POD, string PostOfficeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/get_DocumentReturnbyPOD", ReplyAction="http://tempuri.org/ISGPService/get_DocumentReturnbyPODResponse")]
+        PrintCG_24062016.SGPService.DocumentReturn[] get_DocumentReturnbyPOD(string pod);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -9758,6 +9914,26 @@ namespace PrintCG_24062016.SGPService {
         
         public PrintCG_24062016.SGPService.getListSpCustomer[] getListCustomerGroupDetails(string tungay, string denngay, string parameter, string customergroup, int loai) {
             return base.Channel.getListCustomerGroupDetails(tungay, denngay, parameter, customergroup, loai);
+        }
+        
+        public PrintCG_24062016.SGPService.SpeCustomer[] getMailerCustomerList(string buucuc, string employee, string fromdate, string todate, int type) {
+            return base.Channel.getMailerCustomerList(buucuc, employee, fromdate, todate, type);
+        }
+        
+        public bool insert_DocumentReturn(string DocumentID, System.DateTime DocumentDate, string POD, string PostOfficeID) {
+            return base.Channel.insert_DocumentReturn(DocumentID, DocumentDate, POD, PostOfficeID);
+        }
+        
+        public PrintCG_24062016.SGPService.DocumentReturn[] get_DocumentReturn(System.DateTime tungay, System.DateTime denngay, string buucuc) {
+            return base.Channel.get_DocumentReturn(tungay, denngay, buucuc);
+        }
+        
+        public bool delete_DocumentReturn(string POD, string PostOfficeID) {
+            return base.Channel.delete_DocumentReturn(POD, PostOfficeID);
+        }
+        
+        public PrintCG_24062016.SGPService.DocumentReturn[] get_DocumentReturnbyPOD(string pod) {
+            return base.Channel.get_DocumentReturnbyPOD(pod);
         }
     }
 }

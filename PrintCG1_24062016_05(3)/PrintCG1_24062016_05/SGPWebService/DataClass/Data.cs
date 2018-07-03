@@ -217,5 +217,24 @@ namespace SGPWebService.DataClass
         public double? TL { get; set; }
         public double? TLKhoi { get; set; }
         public string NoiDen { get; set; }
+        public string MaKH { get; set; }
+        public string TenKH { get; set; }
+        public decimal DoanhThu { get; set; }
+    }
+    public class DocumentReturn
+    {
+        public string DocumentID { get; set; }
+        public string PostOfficeID { get; set; }
+        public DateTime? DocumentDate { get; set; }
+        public string POD { get; set; }
+    }
+    public class BaoCaoThang
+    {
+        public string STT { get; set; }
+        public string Note { get; set; }
+        public double? TongCG { get; set; }
+        public double? SL { get; set; }
+        public double? TL { get; set; }
+        public decimal? DoanhThu { get; set; }
     }
 }

@@ -138,4 +138,12 @@
       <Column Name="PostOffice" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.SGP_DocumentReturns" Member="SGP_DocumentReturns">
+    <Type Name="SGP_DocumentReturn">
+      <Column Name="POD" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DocumentID" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="DocumentDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PostOfficeID" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

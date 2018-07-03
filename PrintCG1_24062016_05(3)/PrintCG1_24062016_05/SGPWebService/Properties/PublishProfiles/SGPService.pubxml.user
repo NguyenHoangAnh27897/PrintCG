@@ -16,7 +16,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/12/2018 09:55:13</publishTime>
     </File>
     <File Include="bin/SGPWebService.dll">
-      <publishTime>06/21/2018 15:18:48</publishTime>
+      <publishTime>06/29/2018 11:49:33</publishTime>
     </File>
     <File Include="DB/APIEntity.edmx.diagram">
       <publishTime>06/11/2018 16:35:16</publishTime>
@@ -25,16 +25,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/12/2018 09:55:56</publishTime>
     </File>
     <File Include="DB/SGPAPI.dbml">
-      <publishTime>06/11/2018 17:32:25</publishTime>
+      <publishTime>06/28/2018 09:35:02</publishTime>
     </File>
     <File Include="DB/SGPMain.dbml">
-      <publishTime>06/14/2018 15:38:08</publishTime>
+      <publishTime>06/25/2018 14:16:17</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>01/12/2018 09:55:31</publishTime>
     </File>
     <File Include="SGPService.svc">
-      <publishTime>04/12/2017 14:47:27</publishTime>
+      <publishTime>12/04/2017 14:47:27</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>06/21/2018 15:18:48</publishTime>

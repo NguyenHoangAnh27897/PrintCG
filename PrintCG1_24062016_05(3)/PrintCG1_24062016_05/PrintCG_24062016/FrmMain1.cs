@@ -615,5 +615,35 @@ namespace PrintCG_24062016
                 frm.Show();
             }
         }
+
+        private void navitemlcct_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            congcu.FrmLuuChuyenChungTu frm = new congcu.FrmLuuChuyenChungTu();
+            if ((Application.OpenForms["FrmLuuChuyenChungTu"] as congcu.FrmLuuChuyenChungTu) != null)
+            {
+                frm.Focus();
+            }
+            else
+            {
+                frm = new congcu.FrmLuuChuyenChungTu();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void navBarItem43_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ChuyenDoiDuLieu.FrmExcelToFox frm = new ChuyenDoiDuLieu.FrmExcelToFox();
+            if ((Application.OpenForms["FrmExcelToFox"] as ChuyenDoiDuLieu.FrmExcelToFox) != null)
+            {
+                frm.Focus();
+            }
+            else
+            {
+                frm = new ChuyenDoiDuLieu.FrmExcelToFox();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
     }
 }

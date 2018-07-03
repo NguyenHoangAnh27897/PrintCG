@@ -56,6 +56,7 @@
             this.navBarItem35 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem36 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem37 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navitemlcct = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem20 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem21 = new DevExpress.XtraNavBar.NavBarItem();
@@ -85,6 +86,8 @@
             this.lblmanv = new System.Windows.Forms.ToolStripStatusLabel();
             this.navBarItem39 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem38 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem43 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -139,7 +142,8 @@
             this.navBarGroup4,
             this.navBarGroup2,
             this.navBarGroup7,
-            this.navBarGroup5});
+            this.navBarGroup5,
+            this.navBarGroup6});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.navBarItem1,
             this.navBarItem2,
@@ -180,7 +184,9 @@
             this.navBarItem40,
             this.navBarItem25,
             this.navBarItem41,
-            this.navBarItem42});
+            this.navBarItem42,
+            this.navitemlcct,
+            this.navBarItem43});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.navBarControl1.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -290,7 +296,6 @@
             // navBarGroup3
             // 
             this.navBarGroup3.Caption = "Công cụ";
-            this.navBarGroup3.Expanded = true;
             this.navBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
             this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem18),
@@ -300,7 +305,8 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem34),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem35),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem36),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem37)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem37),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navitemlcct)});
             this.navBarGroup3.Name = "navBarGroup3";
             // 
             // navBarItem18
@@ -350,6 +356,12 @@
             this.navBarItem37.Caption = "Báo cáo sản lượng";
             this.navBarItem37.Name = "navBarItem37";
             this.navBarItem37.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem37_LinkClicked);
+            // 
+            // navitemlcct
+            // 
+            this.navitemlcct.Caption = "Lưu chuyển chứng từ";
+            this.navitemlcct.Name = "navitemlcct";
+            this.navitemlcct.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navitemlcct_LinkClicked);
             // 
             // navBarGroup4
             // 
@@ -539,6 +551,20 @@
             this.navBarItem38.Name = "navBarItem38";
             this.navBarItem38.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem38_LinkClicked);
             // 
+            // navBarGroup6
+            // 
+            this.navBarGroup6.Caption = "Chuyển đổi dữ liệu";
+            this.navBarGroup6.Expanded = true;
+            this.navBarGroup6.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem43)});
+            this.navBarGroup6.Name = "navBarGroup6";
+            // 
+            // navBarItem43
+            // 
+            this.navBarItem43.Caption = "Excel to Foxpro";
+            this.navBarItem43.Name = "navBarItem43";
+            this.navBarItem43.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem43_LinkClicked);
+            // 
             // FrmMain1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -621,6 +647,9 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem25;
         private DevExpress.XtraNavBar.NavBarItem navBarItem41;
         private DevExpress.XtraNavBar.NavBarItem navBarItem42;
+        private DevExpress.XtraNavBar.NavBarItem navitemlcct;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup6;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem43;
 
     }
 }

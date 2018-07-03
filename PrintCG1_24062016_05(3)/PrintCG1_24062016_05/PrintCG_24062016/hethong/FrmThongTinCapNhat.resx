@@ -123,6 +123,12 @@ Tính năng mới:
 -Bổ sung báo cáo CG chưa nhập doanh thu.
 -Bổ sung báo cáo CG chưa lên bảng kê công nợ.
 Sửa lỗi:
--Sửa lỗi khi cập nhật thông tin người nhận tại chức năng khách hàng đặc biệt.</value>
+-Sửa lỗi khi cập nhật thông tin người nhận tại chức năng khách hàng đặc biệt.
+=============================================================
+Ngày cập nhật: 28/06/2018
+Tính năng mới:
+-Lưu chuyển chứng từ giữa SGP và khách hàng
+Sửa lỗi:
+-Khách hàng đặc biệt kế thừa từ đóng gói và gửi chuyến thư nội bộ, không cập nhật từ excel</value>
   </data>
 </root>
