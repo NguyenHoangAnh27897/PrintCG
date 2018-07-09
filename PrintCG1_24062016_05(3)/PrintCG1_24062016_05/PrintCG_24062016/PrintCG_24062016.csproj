@@ -1660,6 +1660,7 @@
   <ItemGroup>
     <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1670,6 +1671,8 @@
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -1680,6 +1683,7 @@
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1690,6 +1694,8 @@
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -1700,6 +1706,7 @@
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1710,6 +1717,8 @@
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -1720,6 +1729,7 @@
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1730,6 +1740,8 @@
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -1740,6 +1752,7 @@
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1750,6 +1763,8 @@
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -1760,6 +1775,7 @@
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1770,6 +1786,8 @@
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -1780,6 +1798,7 @@
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1790,6 +1809,8 @@
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportSource">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -1800,6 +1821,7 @@
     </PublishFile>
     <PublishFile Include="CrystalDecisions.Shared">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1810,6 +1832,8 @@
     </PublishFile>
     <PublishFile Include="CrystalDecisions.Windows.Forms">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -1820,6 +1844,7 @@
     </PublishFile>
     <PublishFile Include="DevExpress.Charts.v14.2.Core">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1830,6 +1855,8 @@
     </PublishFile>
     <PublishFile Include="DevExpress.CodeParser.v14.2">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -1840,6 +1867,7 @@
     </PublishFile>
     <PublishFile Include="DevExpress.Data.v14.2">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1850,6 +1878,8 @@
     </PublishFile>
     <PublishFile Include="DevExpress.DataAccess.v14.2">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -1860,6 +1890,7 @@
     </PublishFile>
     <PublishFile Include="DevExpress.DataAccess.v14.2.UI">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1870,6 +1901,8 @@
     </PublishFile>
     <PublishFile Include="DevExpress.ExpressApp.v14.2">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -1880,6 +1913,7 @@
     </PublishFile>
     <PublishFile Include="DevExpress.ExpressApp.Xpo.v14.2">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1890,6 +1924,8 @@
     </PublishFile>
     <PublishFile Include="DevExpress.Office.v14.2.Core">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -1900,6 +1936,7 @@
     </PublishFile>
     <PublishFile Include="DevExpress.Persistent.Base.v14.2">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1910,6 +1947,8 @@
     </PublishFile>
     <PublishFile Include="DevExpress.PivotGrid.v14.2.Core">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -1920,6 +1959,7 @@
     </PublishFile>
     <PublishFile Include="DevExpress.Printing.v14.2.Core">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1930,6 +1970,8 @@
     </PublishFile>
     <PublishFile Include="DevExpress.RichEdit.v14.2.Core">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -1940,6 +1982,7 @@
     </PublishFile>
     <PublishFile Include="DevExpress.Sparkline.v14.2.Core">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1950,6 +1993,8 @@
     </PublishFile>
     <PublishFile Include="DevExpress.Utils.v14.2">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -1960,6 +2005,7 @@
     </PublishFile>
     <PublishFile Include="DevExpress.Utils.v14.2.UI">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -1970,6 +2016,8 @@
     </PublishFile>
     <PublishFile Include="DevExpress.Xpo.v14.2">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
@@ -2140,6 +2188,7 @@
     </PublishFile>
     <PublishFile Include="DevExpress.XtraWizard.v14.2">
       <Visible>False</Visible>
+<<<<<<< HEAD
       <Group>
       </Group>
       <TargetPath>
@@ -2150,13 +2199,19 @@
     </PublishFile>
     <PublishFile Include="PrintCG.mdb">
       <Visible>False</Visible>
+=======
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
       <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
+<<<<<<< HEAD
       <FileType>File</FileType>
+=======
+      <FileType>Assembly</FileType>
+>>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
