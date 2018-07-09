@@ -217,7 +217,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.ReportAppServer.XmlSerialize.dll" size="16384">
       <assemblyIdentity name="CrystalDecisions.ReportAppServer.XmlSerialize" version="13.0.2000.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -227,7 +226,6 @@
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
         <dsig:DigestValue>7RPTFtWgHTWvZ5dk/pJPKTMk6Us=</dsig:DigestValue>
       </hash>
-=======
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="Microsoft.Office.Interop.Excel" version="12.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" />
     </dependentAssembly>
@@ -245,7 +243,6 @@
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="ShockwaveFlashObjects" version="1.0.0.0" publicKeyToken="692FBEA5521E1304" language="neutral" />
->>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
     </dependentAssembly>
   </dependency>
   <dependency>
@@ -2080,11 +2077,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-<<<<<<< HEAD
+
         <dsig:DigestValue>3RlGBq1FZCJDtGUrPi0NR3Aj00I=</dsig:DigestValue>
-=======
+
         <dsig:DigestValue>WB+p+5osgTs2ISBwqTkM1RFvNkc=</dsig:DigestValue>
->>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
+
       </hash>
     </dependentAssembly>
   </dependency>

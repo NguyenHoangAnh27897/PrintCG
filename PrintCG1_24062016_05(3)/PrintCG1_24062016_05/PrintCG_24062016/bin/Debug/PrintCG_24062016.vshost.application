@@ -14,23 +14,17 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-<<<<<<< HEAD
     <dependentAssembly dependencyType="install" codebase="PrintCG_24062016.exe.manifest" size="123574">
       <assemblyIdentity name="PrintCG_24062016.exe" version="1.0.0.26" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
-=======
     <dependentAssembly dependencyType="install" codebase="PrintCG_24062016.exe.manifest" size="115393">
       <assemblyIdentity name="PrintCG_24062016.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
->>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-<<<<<<< HEAD
         <dsig:DigestValue>gLi8FZDpNQvWAM9RRTzUcTRhMZU=</dsig:DigestValue>
-=======
         <dsig:DigestValue>n/XF6ax5htfpOeZLmc6r0t7e5kU=</dsig:DigestValue>
->>>>>>> c77dcd39296ceb7524f3b159a4017d9e10d9c174
       </hash>
     </dependentAssembly>
   </dependency>
