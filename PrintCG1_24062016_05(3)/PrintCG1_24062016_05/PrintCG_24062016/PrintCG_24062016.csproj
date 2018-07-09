@@ -34,7 +34,7 @@
     <UpdateUrl>http://setupprintcg.ssofty.com/</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.11</MinimumRequiredVersion>
     <WebPage>update.html</WebPage>
-    <ApplicationRevision>25</ApplicationRevision>
+    <ApplicationRevision>26</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -94,6 +94,9 @@
     <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v14.2.Extensions, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.4.5.2.1\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="ExcelLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ExcelLibrary.dll</HintPath>
@@ -106,6 +109,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\packages\Newtonsoft.Json.10.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
@@ -115,6 +119,7 @@
     <Reference Include="System.Runtime.Serialization">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
@@ -386,6 +391,12 @@
     </Compile>
     <Compile Include="FrmNormal.Designer.cs">
       <DependentUpon>FrmNormal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="printcg\FrmNestle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="printcg\FrmNestle.Designer.cs">
+      <DependentUpon>FrmNestle.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\RptCG1_A5 _New.cs">
       <DependentUpon>RptCG1_A5 _New.rpt</DependentUpon>
@@ -741,7 +752,17 @@
     <Content Include="PrintCG.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Service References\SGPService\SGPService1.disco" />
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.MM_Distances_procGetById.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.PriceMatrix.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SGPService\PrintCG_24062016.SGPService.PriceMaTrixDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SGPService\SGPService.disco" />
+    <None Include="packages.config" />
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.DocumentReturn.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -845,6 +866,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNormal.resx">
       <DependentUpon>FrmNormal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="printcg\FrmNestle.resx">
+      <DependentUpon>FrmNestle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\RptCG1_A5 _New.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1516,17 +1540,17 @@
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.ZoneList.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SGPService\SGPService1.wsdl" />
-    <None Include="Service References\SGPService\SGPService4.xsd">
+    <None Include="Service References\SGPService\SGPService.wsdl" />
+    <None Include="Service References\SGPService\SGPService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SGPService\SGPService41.xsd">
+    <None Include="Service References\SGPService\SGPService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SGPService\SGPService42.xsd">
+    <None Include="Service References\SGPService\SGPService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SGPService\SGPService43.xsd">
+    <None Include="Service References\SGPService\SGPService3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="tinhcuoc\dataset\DsCuoc.xsc">

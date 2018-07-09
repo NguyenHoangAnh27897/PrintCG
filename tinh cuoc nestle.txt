@@ -1,0 +1,26 @@
+B1 - lay ra khoang cach 
+exec MM_Distances_procGetById @PostOfficeID=N'CNTT',@ProvinceID=N'HCM' ==> Distance =4
+
+B2 - lay ra thong tin bang gia
+- lay thong tin bang gia
+- lay ra thong tin chi tiet bang gia
+
+exec MM_PriceMatrix_procGetPriceData 
+@DocumentDate='2018-07-09 00:00:00',
+@PostOfficeID=N'CNTT',
+@ServiceTypeID=N'SN',
+@CustomerID=N'CNTT-2-CNTT',
+@ProvinceID=N'HCM',
+@DistanceID=4,
+@PriceMatrixType=N'1',
+@PriceType=N'N',
+@ZoneID=N'KV2'
+
+B3 - lay ra chinh sach chiet khau
+
+exec MM_DiscountPolicy_procGetDiscountData 
+@DocumentDate='2018-07-09 00:00:00',
+@PostOfficeID=N'CNTT',
+@ServiceTypeID=N'SN',
+@CustomerID=N'CNTT-2-CNTT',
+@ProvinceID=N'HCM'

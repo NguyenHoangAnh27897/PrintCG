@@ -237,4 +237,25 @@ namespace SGPWebService.DataClass
         public double? TL { get; set; }
         public decimal? DoanhThu { get; set; }
     }
+    public class MM_Distances_procGetById
+    {
+        public string PostOfficeID { get; set; }
+        public string CountryID { get; set; }
+        public string ProvinceID { get; set; }
+        public string Distance { get; set; }
+    }
+    public class PriceMatrix
+    {
+        public string PriceMatrixID { get; set; }
+        public DateTime? EffectDateBegin { get; set; }
+        public DateTime? EffectDateEnd { get; set; }
+        public double? NextValue { get; set; }
+    }
+    public class PriceMaTrixDetails 
+    {
+        public int RowIndex { get; set; }
+        public double? RangeWeightFrom { get; set; }
+        public double? RangeWeightTo { get; set; }
+        public double? Price { get; set; }
+    }
 }

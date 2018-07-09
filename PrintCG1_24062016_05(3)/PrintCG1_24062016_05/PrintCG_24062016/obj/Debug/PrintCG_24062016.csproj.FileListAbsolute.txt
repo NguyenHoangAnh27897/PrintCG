@@ -1244,3 +1244,6 @@ D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.csprojResolveAssemblyReference.cache
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.congcu.FrmLuuChuyenChungTu.resources
 D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.ChuyenDoiDuLieu.FrmExcelToFox.resources
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\EPPlus.dll
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\bin\Debug\EPPlus.xml
+D:\Laptrinh\Github\PrintCG\PrintCG1_24062016_05(3)\PrintCG1_24062016_05\PrintCG_24062016\obj\Debug\PrintCG_24062016.printcg.FrmNestle.resources

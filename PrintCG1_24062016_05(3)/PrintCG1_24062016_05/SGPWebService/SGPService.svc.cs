@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
+using SGPWebService.DataClass;
 
 namespace SGPWebService
 {
@@ -993,5 +994,50 @@ namespace SGPWebService
             return query.ToList();
         }
 
+
+
+        public DataClass.MM_Distances_procGetById getMM_Distances_procGetById(string postofficeid, string provinceid)
+        {
+            var parapost = new SqlParameter("@PostOfficeID", postofficeid);
+            var paraprovince = new SqlParameter("@ProvinceID", provinceid);
+            DataClass.MM_Distances_procGetById list = new DataClass.MM_Distances_procGetById();
+            var result = sgpapi.Database.SqlQuery<DataClass.MM_Distances_procGetById>("MM_Distances_procGetById @PostOfficeID,@ProvinceID", parapost, paraprovince).FirstOrDefault();
+            return result;
+        }
+
+
+
+        public DataClass.PriceMatrix getMM_PriceMatrix_procGetPriceData(string DocumentDate, string PostOfficeID, string ServiceTypeID, string CustomerID, string ProvinceID, int DistanceD, int PriceMatrixType, string PriceType, string ZoneID)
+        {
+
+            var paradocumentdate = new SqlParameter("@DocumentDate", DocumentDate);
+            var parapost = new SqlParameter("@PostOfficeID", PostOfficeID);
+            var paraservice = new SqlParameter("@ServiceTypeID", ServiceTypeID);
+            var paracustomer = new SqlParameter("@CustomerID", CustomerID);
+            var paraprovince = new SqlParameter("@ProvinceID", ProvinceID);
+            var paradistance = new SqlParameter("@DistanceD", DistanceD);
+            var parapricematrixtype = new SqlParameter("@PriceMatrixType", PriceMatrixType);
+            var parapricetype = new SqlParameter("@PriceType", PriceType);
+            var parazoneid = new SqlParameter("@ZoneID", ZoneID);
+            DataClass.PriceMatrix list = new DataClass.PriceMatrix();
+            var result = sgpapi.Database.SqlQuery<DataClass.PriceMatrix>("MM_PriceMatrix_procGetPriceData @DocumentDate,@PostOfficeID,@ServiceTypeID,@CustomerID,@ProvinceID,DistanceD,@PriceMatrixType,@PriceType,ZoneID", paradocumentdate, parapost, paraservice, paracustomer, paraprovince, paradistance, parapricematrixtype, parapricetype, parazoneid).FirstOrDefault();
+            return result;
+        }
+
+        public List<PriceMaTrixDetails> getMM_PriceMatrix_procGetPriceDataDEtails(string DocumentDate, string PostOfficeID, string ServiceTypeID, string CustomerID, string ProvinceID, int DistanceD, int PriceMatrixType, string PriceType, string ZoneID)
+        {
+            var paradocumentdate = new SqlParameter("@DocumentDate", DocumentDate);
+            var parapost = new SqlParameter("@PostOfficeID", PostOfficeID);
+            var paraservice = new SqlParameter("@ServiceTypeID", ServiceTypeID);
+            var paracustomer = new SqlParameter("@CustomerID", CustomerID);
+            var paraprovince = new SqlParameter("@ProvinceID", ProvinceID);
+            var paradistance = new SqlParameter("@DistanceD", DistanceD);
+            var parapricematrixtype = new SqlParameter("@PriceMatrixType", PriceMatrixType);
+            var parapricetype = new SqlParameter("@PriceType", PriceType);
+            var parazoneid = new SqlParameter("@ZoneID", ZoneID);
+            DataClass.PriceMaTrixDetails list = new DataClass.PriceMaTrixDetails();
+            var result = sgpapi.Database.SqlQuery<DataClass.PriceMaTrixDetails>("MM_PriceMatrix_procGetPriceData @DocumentDate,@PostOfficeID,@ServiceTypeID,@CustomerID,@ProvinceID,DistanceD,@PriceMatrixType,@PriceType,ZoneID", paradocumentdate, parapost, paraservice, paracustomer, paraprovince, paradistance, parapricematrixtype, parapricetype, parazoneid).ToList();
+            return result;
+        }
     }
 }

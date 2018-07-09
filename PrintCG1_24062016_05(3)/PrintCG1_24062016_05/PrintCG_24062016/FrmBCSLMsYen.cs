@@ -200,7 +200,7 @@ namespace PrintCG_24062016
                         tongcg += Convert.ToInt32(bcthang.Rows[i].Cells[2].Value);
                         tongsl += Convert.ToInt32(bcthang.Rows[i].Cells[3].Value);
                         tongtl += Convert.ToInt32(bcthang.Rows[i].Cells[4].Value);
-                        tongdt += Convert.ToInt32(bcthang.Rows[i].Cells[5].Value);
+                        tongdt += Convert.ToInt64(bcthang.Rows[i].Cells[5].Value);
                     }catch
                     {
 

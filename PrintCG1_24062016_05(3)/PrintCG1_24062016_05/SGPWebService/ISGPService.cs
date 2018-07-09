@@ -121,6 +121,12 @@ namespace SGPWebService
         bool delete_DocumentReturn(string POD, string PostOfficeID);
         [OperationContract]
         List<DataClass.DocumentReturn> get_DocumentReturnbyPOD( string pod);
+        [OperationContract]
+        DataClass.MM_Distances_procGetById getMM_Distances_procGetById(string postofficeid,string provinceid);
+        [OperationContract]
+        DataClass.PriceMatrix getMM_PriceMatrix_procGetPriceData(string DocumentDate, string PostOfficeID, string ServiceTypeID, string CustomerID, string ProvinceID, int DistanceD, int PriceMatrixType, string PriceType, string ZoneID);
+        [OperationContract]
+        List< DataClass.PriceMaTrixDetails> getMM_PriceMatrix_procGetPriceDataDEtails(string DocumentDate, string PostOfficeID, string ServiceTypeID, string CustomerID, string ProvinceID, int DistanceD, int PriceMatrixType, string PriceType, string ZoneID);
      
     }
 }

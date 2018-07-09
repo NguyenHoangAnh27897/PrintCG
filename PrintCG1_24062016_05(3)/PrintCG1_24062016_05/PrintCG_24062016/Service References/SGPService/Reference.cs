@@ -9487,6 +9487,285 @@ namespace PrintCG_24062016.SGPService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MM_Distances_procGetById", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass")]
+    [System.SerializableAttribute()]
+    public partial class MM_Distances_procGetById : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CountryIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DistanceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PostOfficeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProvinceIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CountryID {
+            get {
+                return this.CountryIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountryIDField, value) != true)) {
+                    this.CountryIDField = value;
+                    this.RaisePropertyChanged("CountryID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Distance {
+            get {
+                return this.DistanceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DistanceField, value) != true)) {
+                    this.DistanceField = value;
+                    this.RaisePropertyChanged("Distance");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PostOfficeID {
+            get {
+                return this.PostOfficeIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PostOfficeIDField, value) != true)) {
+                    this.PostOfficeIDField = value;
+                    this.RaisePropertyChanged("PostOfficeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProvinceID {
+            get {
+                return this.ProvinceIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProvinceIDField, value) != true)) {
+                    this.ProvinceIDField = value;
+                    this.RaisePropertyChanged("ProvinceID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PriceMatrix", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass")]
+    [System.SerializableAttribute()]
+    public partial class PriceMatrix : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> EffectDateBeginField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> EffectDateEndField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<double> NextValueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PriceMatrixIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> EffectDateBegin {
+            get {
+                return this.EffectDateBeginField;
+            }
+            set {
+                if ((this.EffectDateBeginField.Equals(value) != true)) {
+                    this.EffectDateBeginField = value;
+                    this.RaisePropertyChanged("EffectDateBegin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> EffectDateEnd {
+            get {
+                return this.EffectDateEndField;
+            }
+            set {
+                if ((this.EffectDateEndField.Equals(value) != true)) {
+                    this.EffectDateEndField = value;
+                    this.RaisePropertyChanged("EffectDateEnd");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> NextValue {
+            get {
+                return this.NextValueField;
+            }
+            set {
+                if ((this.NextValueField.Equals(value) != true)) {
+                    this.NextValueField = value;
+                    this.RaisePropertyChanged("NextValue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PriceMatrixID {
+            get {
+                return this.PriceMatrixIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PriceMatrixIDField, value) != true)) {
+                    this.PriceMatrixIDField = value;
+                    this.RaisePropertyChanged("PriceMatrixID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PriceMaTrixDetails", Namespace="http://schemas.datacontract.org/2004/07/SGPWebService.DataClass")]
+    [System.SerializableAttribute()]
+    public partial class PriceMaTrixDetails : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<double> PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<double> RangeWeightFromField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<double> RangeWeightToField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int RowIndexField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> RangeWeightFrom {
+            get {
+                return this.RangeWeightFromField;
+            }
+            set {
+                if ((this.RangeWeightFromField.Equals(value) != true)) {
+                    this.RangeWeightFromField = value;
+                    this.RaisePropertyChanged("RangeWeightFrom");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<double> RangeWeightTo {
+            get {
+                return this.RangeWeightToField;
+            }
+            set {
+                if ((this.RangeWeightToField.Equals(value) != true)) {
+                    this.RangeWeightToField = value;
+                    this.RaisePropertyChanged("RangeWeightTo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int RowIndex {
+            get {
+                return this.RowIndexField;
+            }
+            set {
+                if ((this.RowIndexField.Equals(value) != true)) {
+                    this.RowIndexField = value;
+                    this.RaisePropertyChanged("RowIndex");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SGPService.ISGPService")]
     public interface ISGPService {
@@ -9671,6 +9950,15 @@ namespace PrintCG_24062016.SGPService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/get_DocumentReturnbyPOD", ReplyAction="http://tempuri.org/ISGPService/get_DocumentReturnbyPODResponse")]
         PrintCG_24062016.SGPService.DocumentReturn[] get_DocumentReturnbyPOD(string pod);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getMM_Distances_procGetById", ReplyAction="http://tempuri.org/ISGPService/getMM_Distances_procGetByIdResponse")]
+        PrintCG_24062016.SGPService.MM_Distances_procGetById getMM_Distances_procGetById(string postofficeid, string provinceid);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getMM_PriceMatrix_procGetPriceData", ReplyAction="http://tempuri.org/ISGPService/getMM_PriceMatrix_procGetPriceDataResponse")]
+        PrintCG_24062016.SGPService.PriceMatrix getMM_PriceMatrix_procGetPriceData(string DocumentDate, string PostOfficeID, string ServiceTypeID, string CustomerID, string ProvinceID, int DistanceD, int PriceMatrixType, string PriceType, string ZoneID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISGPService/getMM_PriceMatrix_procGetPriceDataDEtails", ReplyAction="http://tempuri.org/ISGPService/getMM_PriceMatrix_procGetPriceDataDEtailsResponse")]
+        PrintCG_24062016.SGPService.PriceMaTrixDetails[] getMM_PriceMatrix_procGetPriceDataDEtails(string DocumentDate, string PostOfficeID, string ServiceTypeID, string CustomerID, string ProvinceID, int DistanceD, int PriceMatrixType, string PriceType, string ZoneID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -9934,6 +10222,18 @@ namespace PrintCG_24062016.SGPService {
         
         public PrintCG_24062016.SGPService.DocumentReturn[] get_DocumentReturnbyPOD(string pod) {
             return base.Channel.get_DocumentReturnbyPOD(pod);
+        }
+        
+        public PrintCG_24062016.SGPService.MM_Distances_procGetById getMM_Distances_procGetById(string postofficeid, string provinceid) {
+            return base.Channel.getMM_Distances_procGetById(postofficeid, provinceid);
+        }
+        
+        public PrintCG_24062016.SGPService.PriceMatrix getMM_PriceMatrix_procGetPriceData(string DocumentDate, string PostOfficeID, string ServiceTypeID, string CustomerID, string ProvinceID, int DistanceD, int PriceMatrixType, string PriceType, string ZoneID) {
+            return base.Channel.getMM_PriceMatrix_procGetPriceData(DocumentDate, PostOfficeID, ServiceTypeID, CustomerID, ProvinceID, DistanceD, PriceMatrixType, PriceType, ZoneID);
+        }
+        
+        public PrintCG_24062016.SGPService.PriceMaTrixDetails[] getMM_PriceMatrix_procGetPriceDataDEtails(string DocumentDate, string PostOfficeID, string ServiceTypeID, string CustomerID, string ProvinceID, int DistanceD, int PriceMatrixType, string PriceType, string ZoneID) {
+            return base.Channel.getMM_PriceMatrix_procGetPriceDataDEtails(DocumentDate, PostOfficeID, ServiceTypeID, CustomerID, ProvinceID, DistanceD, PriceMatrixType, PriceType, ZoneID);
         }
     }
 }

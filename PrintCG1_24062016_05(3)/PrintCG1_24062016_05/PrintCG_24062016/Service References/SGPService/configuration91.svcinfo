@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="0RqYHHwrH/ZCQjt2ApfB5X+SolQ=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="/0H1lpVmPjPbj7heQHgAgoUe8Lw=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ISGPService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ISGPService" contract="SGPService.ISGPService" bindingType="basicHttpBinding" address="http://pms.sgp.vn/SGPService/SGPService.svc" bindingConfiguration="BasicHttpBinding_ISGPService">
+    <endpoint name="BasicHttpBinding_ISGPService" contract="SGPService.ISGPService" bindingType="basicHttpBinding" address="http://localhost:4351/SGPService.svc" bindingConfiguration="BasicHttpBinding_ISGPService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://pms.sgp.vn/SGPService/SGPService.svc</serializedValue>
+          <serializedValue>http://localhost:4351/SGPService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
