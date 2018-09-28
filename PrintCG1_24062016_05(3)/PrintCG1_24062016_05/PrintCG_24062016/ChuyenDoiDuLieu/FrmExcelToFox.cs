@@ -35,12 +35,14 @@ namespace PrintCG_24062016.ChuyenDoiDuLieu
         {
             txtnhan.Text = (String)Application.UserAppDataRegistry.GetValue("printcg.frmexceltofox.txtnhan", string.Empty);
             txtphat.Text = (String)Application.UserAppDataRegistry.GetValue("printcg.frmexceltofox.txtphat", string.Empty);
+            txtdt.Text = (String)Application.UserAppDataRegistry.GetValue("printcg.frmexceltofox.txtdt", string.Empty);
         }
 
         private void save_settings()
         {
             Application.UserAppDataRegistry.SetValue("printcg.frmexceltofox.txtnhan", txtnhan.Text);
             Application.UserAppDataRegistry.SetValue("printcg.frmexceltofox.txtphat", txtphat.Text);
+            Application.UserAppDataRegistry.SetValue("printcg.frmexceltofox.txtdt", txtdt.Text);
         }
         public bool ConnectFox(string DataPath)
         {
@@ -79,6 +81,10 @@ namespace PrintCG_24062016.ChuyenDoiDuLieu
                 }else if(loai ==1)
                 {
                     strsql = txtphat.Text.Trim();
+                }
+                else if (loai == 2)
+                {
+                    strsql = txtdt.Text.Trim();
                 }
                 try
                 {
@@ -164,6 +170,10 @@ namespace PrintCG_24062016.ChuyenDoiDuLieu
             {
                 loai = 1;
             }
+            else if (rdbdt.Checked == true)
+            {
+                loai = 2;
+            }
             try
             {
                 bool create = createfoxtable(loai);
@@ -175,9 +185,9 @@ namespace PrintCG_24062016.ChuyenDoiDuLieu
                     MessageBox.Show("Tên cột quá dài");
                 }
                               
-            }catch
+            }catch(Exception ex)
             {
-
+                MessageBox.Show(ex.ToString());
             }
             MessageBox.Show("Hoàn tất");
            
@@ -228,6 +238,7 @@ namespace PrintCG_24062016.ChuyenDoiDuLieu
             string Ghichu13 =string.Empty;
             double HH14 =0;
             double Ck15 = 0;
+            string dichvu = string.Empty;
             //khai bao tham so cho cac bien phat
             string MailerID1 = string.Empty;
             string SenderProvinceID2 = string.Empty;
@@ -310,7 +321,33 @@ namespace PrintCG_24062016.ChuyenDoiDuLieu
                          string str = "insert into " + "" + Path.GetFileNameWithoutExtension(pathfox) + " values('" + MailerID1 + "','" + SenderProvinceID2 + "','" + ReceiveProvinceID3 + "','" + ServiceTypeID4 + "','" + MailerTypeID5 + "'," + Quantity6 + "," + RealWeight7 + "," + Weight8 + ",'" + PostOfficeAcceptID9 + "','" + PaymentMethodID10 + "','" + PostOfficeRecieverMoneyID11 + "','" + MailerDescription12 + "','" + PostOfficeID13 + "','" + ZoneID14 + "','" + DeliveryPostOfficeID15 + "','" + EmployeeID16 + "')";
                         OleDbCommand cmd1 = new OleDbCommand(str, cnfox);
                         cmd1.ExecuteNonQuery();
-                    }                                         
+                    }else if (loai == 2)
+                    {
+                        MaBc1 = ws.Cells[row, 1].Text;
+                        Barcode2 = ws.Cells[row, 2].Text;                     
+                        Noiden5 = ws.Cells[row, 3].Text;
+                        Loaihinh6 = ws.Cells[row, 4].Text;
+                        Soluong7 = int.Parse(ws.Cells[row, 5].Text);
+                        Trluong8 = double.Parse(ws.Cells[row, 6].Text);
+                        TrLuongBQ9 = double.Parse(ws.Cells[row, 7].Text);                      
+                        ttoan12 = ws.Cells[row, 8].Text;
+                        dichvu = ws.Cells[row, 9].Text;
+                        if (ttoan12 == "GN")
+                        {
+                            ttoan12 = "N";
+                        }
+                        else if (ttoan12 == "TM")
+                        {
+                            ttoan12 = "T";
+                        }
+                        else
+                        {
+                            ttoan12 = "H";
+                        }                     
+                        string str = "insert into " + "" + Path.GetFileNameWithoutExtension(pathfox) + " values('" + MaBc1 + "','" + Barcode2 + "','" + Noiden5 + "','" + Loaihinh6 + "'," + Soluong7 + "," + Trluong8 + "," + TrLuongBQ9 + ",'" + ttoan12 + "','" + dichvu + "')";
+                        OleDbCommand cmd1 = new OleDbCommand(str, cnfox);
+                        cmd1.ExecuteNonQuery();
+                    }
                 }               
                // return tbl;
             }

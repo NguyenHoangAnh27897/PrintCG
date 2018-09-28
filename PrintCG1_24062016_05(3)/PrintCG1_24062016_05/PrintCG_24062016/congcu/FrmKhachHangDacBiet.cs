@@ -46,7 +46,7 @@ namespace PrintCG_24062016.congcu
         {
             try
             {
-                if (cbbloctheo.SelectedIndex == 0)
+                if (cbbloctheo.SelectedIndex == 0) // tat ca
                 {
                     int loai = cbbloctheo.SelectedIndex;
                     string tungay = dtpfromtab4.Value.ToString("yyyy-MM-dd");

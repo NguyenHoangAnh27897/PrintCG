@@ -22,7 +22,9 @@ namespace PrintCG_24062016.baocaodoanhthu
 
         private void FrmCGChuaChotBangKe_Load(object sender, EventArgs e)
         {
-
+            cmbpost.DataSource = sv.getPostOffice();
+            cmbpost.ValueMember = "PostOfficeID";
+            cmbpost.DisplayMember = "PostOfficeName";
         }
 
         private void btnxem_Click(object sender, EventArgs e)
@@ -31,7 +33,7 @@ namespace PrintCG_24062016.baocaodoanhthu
             {
                 string tungay = dtptungay.Value.ToString("yyyy-MM-dd");
                 string denngay = dtpdenngay.Value.ToString("yyyy-MM-dd");
-                var lst = sv.getListCGChuaXuatBK(tungay, denngay, mabc).ToList();
+                var lst = sv.getListCGChuaXuatBK(tungay, denngay, cmbpost.SelectedValue.ToString()).ToList();
                 dataGridView1.DataSource = lst;
                 txttongso.Text = dataGridView1.Rows.Count.ToString();
 

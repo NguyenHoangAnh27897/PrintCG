@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtptungay = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cmbpost = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             // 
             // btnxem
             // 
-            this.btnxem.Location = new System.Drawing.Point(315, 15);
+            this.btnxem.Location = new System.Drawing.Point(445, 15);
             this.btnxem.Name = "btnxem";
             this.btnxem.Size = new System.Drawing.Size(75, 23);
             this.btnxem.TabIndex = 12;
@@ -100,11 +101,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(681, 417);
             this.dataGridView1.TabIndex = 7;
             // 
+            // cmbpost
+            // 
+            this.cmbpost.FormattingEnabled = true;
+            this.cmbpost.Location = new System.Drawing.Point(303, 17);
+            this.cmbpost.Name = "cmbpost";
+            this.cmbpost.Size = new System.Drawing.Size(121, 21);
+            this.cmbpost.TabIndex = 14;
+            // 
             // FrmCGChuaChotBangKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 474);
+            this.Controls.Add(this.cmbpost);
             this.Controls.Add(this.txttongso);
             this.Controls.Add(this.btnxem);
             this.Controls.Add(this.label2);
@@ -130,5 +140,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtptungay;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cmbpost;
     }
 }

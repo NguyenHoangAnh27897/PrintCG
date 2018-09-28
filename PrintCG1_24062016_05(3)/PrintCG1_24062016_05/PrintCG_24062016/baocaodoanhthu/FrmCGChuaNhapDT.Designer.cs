@@ -35,6 +35,7 @@
             this.btnxem = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txttongso = new System.Windows.Forms.TextBox();
+            this.cmbpost = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +75,7 @@
             // 
             // btnxem
             // 
-            this.btnxem.Location = new System.Drawing.Point(324, 7);
+            this.btnxem.Location = new System.Drawing.Point(459, 7);
             this.btnxem.Name = "btnxem";
             this.btnxem.Size = new System.Drawing.Size(75, 23);
             this.btnxem.TabIndex = 5;
@@ -100,11 +101,20 @@
             this.txttongso.Size = new System.Drawing.Size(100, 20);
             this.txttongso.TabIndex = 6;
             // 
+            // cmbpost
+            // 
+            this.cmbpost.FormattingEnabled = true;
+            this.cmbpost.Location = new System.Drawing.Point(312, 9);
+            this.cmbpost.Name = "cmbpost";
+            this.cmbpost.Size = new System.Drawing.Size(121, 21);
+            this.cmbpost.TabIndex = 15;
+            // 
             // FrmCGChuaNhapDT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(677, 456);
+            this.Controls.Add(this.cmbpost);
             this.Controls.Add(this.txttongso);
             this.Controls.Add(this.btnxem);
             this.Controls.Add(this.label2);
@@ -114,6 +124,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmCGChuaNhapDT";
             this.Text = "Danh sách CG chưa nhập doanh thu";
+            this.Load += new System.EventHandler(this.FrmCGChuaNhapDT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,5 +140,6 @@
         private System.Windows.Forms.Button btnxem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txttongso;
+        private System.Windows.Forms.ComboBox cmbpost;
     }
 }

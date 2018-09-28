@@ -44,8 +44,10 @@
             this.txtnhan = new System.Windows.Forms.TextBox();
             this.txtphat = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdbnhan = new System.Windows.Forms.RadioButton();
             this.rdbphat = new System.Windows.Forms.RadioButton();
+            this.rdbnhan = new System.Windows.Forms.RadioButton();
+            this.rdbdt = new System.Windows.Forms.RadioButton();
+            this.txtdt = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -185,16 +187,28 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.rdbdt);
             this.groupBox1.Controls.Add(this.rdbphat);
             this.groupBox1.Controls.Add(this.rdbnhan);
+            this.groupBox1.Controls.Add(this.txtdt);
             this.groupBox1.Controls.Add(this.txtnhan);
             this.groupBox1.Controls.Add(this.txtphat);
             this.groupBox1.Location = new System.Drawing.Point(11, 149);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(414, 115);
+            this.groupBox1.Size = new System.Drawing.Size(414, 160);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tạo bảng";
+            // 
+            // rdbphat
+            // 
+            this.rdbphat.AutoSize = true;
+            this.rdbphat.Location = new System.Drawing.Point(3, 76);
+            this.rdbphat.Name = "rdbphat";
+            this.rdbphat.Size = new System.Drawing.Size(76, 17);
+            this.rdbphat.TabIndex = 18;
+            this.rdbphat.Text = "Table phát";
+            this.rdbphat.UseVisualStyleBackColor = true;
             // 
             // rdbnhan
             // 
@@ -208,21 +222,31 @@
             this.rdbnhan.Text = "Table nhận";
             this.rdbnhan.UseVisualStyleBackColor = true;
             // 
-            // rdbphat
+            // rdbdt
             // 
-            this.rdbphat.AutoSize = true;
-            this.rdbphat.Location = new System.Drawing.Point(3, 76);
-            this.rdbphat.Name = "rdbphat";
-            this.rdbphat.Size = new System.Drawing.Size(76, 17);
-            this.rdbphat.TabIndex = 18;
-            this.rdbphat.Text = "Table phát";
-            this.rdbphat.UseVisualStyleBackColor = true;
+            this.rdbdt.AutoSize = true;
+            this.rdbdt.Location = new System.Drawing.Point(3, 121);
+            this.rdbdt.Name = "rdbdt";
+            this.rdbdt.Size = new System.Drawing.Size(64, 17);
+            this.rdbdt.TabIndex = 20;
+            this.rdbdt.Text = "Table dt";
+            this.rdbdt.UseVisualStyleBackColor = true;
+            // 
+            // txtdt
+            // 
+            this.txtdt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtdt.Location = new System.Drawing.Point(85, 111);
+            this.txtdt.Multiline = true;
+            this.txtdt.Name = "txtdt";
+            this.txtdt.Size = new System.Drawing.Size(322, 39);
+            this.txtdt.TabIndex = 19;
             // 
             // FrmExcelToFox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 281);
+            this.ClientSize = new System.Drawing.Size(432, 376);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblsodong);
             this.Controls.Add(this.lblfiledich);
@@ -266,5 +290,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rdbphat;
         private System.Windows.Forms.RadioButton rdbnhan;
+        private System.Windows.Forms.RadioButton rdbdt;
+        private System.Windows.Forms.TextBox txtdt;
     }
 }

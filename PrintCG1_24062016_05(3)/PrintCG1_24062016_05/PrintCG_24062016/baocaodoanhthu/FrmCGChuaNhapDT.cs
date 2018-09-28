@@ -26,7 +26,7 @@ namespace PrintCG_24062016.baocaodoanhthu
             {
                 string tungay = dtptungay.Value.ToString("yyyy-MM-dd");
                 string denngay = dtpdenngay.Value.ToString("yyyy-MM-dd");
-                var lst = sv.getListCGChuaNhapDT(tungay, denngay,mabc).ToList();
+                var lst = sv.getListCGChuaNhapDT(tungay, denngay,cmbpost.SelectedValue.ToString()).ToList();
                 dataGridView1.DataSource = lst;
                 txttongso.Text = dataGridView1.Rows.Count.ToString();
 
@@ -34,6 +34,13 @@ namespace PrintCG_24062016.baocaodoanhthu
             {
                 MessageBox.Show("Save Success", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void FrmCGChuaNhapDT_Load(object sender, EventArgs e)
+        {
+            cmbpost.DataSource = sv.getPostOffice();
+            cmbpost.ValueMember = "PostOfficeID";
+            cmbpost.DisplayMember = "PostOfficeName";
         }
     }
 }

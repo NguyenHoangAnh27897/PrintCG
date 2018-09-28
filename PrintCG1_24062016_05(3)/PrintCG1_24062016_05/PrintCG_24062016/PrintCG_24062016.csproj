@@ -33,8 +33,9 @@
     <InstallUrl>http://setupprintcg.ssofty.com/</InstallUrl>
     <UpdateUrl>http://setupprintcg.ssofty.com/</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.11</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>update.html</WebPage>
-    <ApplicationRevision>26</ApplicationRevision>
+    <ApplicationRevision>33</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -48,7 +49,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -104,7 +105,12 @@
     <Reference Include="KeepAutomation.Barcode.Windows">
       <HintPath>..\..\..\..\..\setup\application\KA.Barcode.for.NETSuite\KeepAutomation.Barcode.Windows.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\packages\Newtonsoft.Json.10.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
@@ -245,11 +251,9 @@
     </Compile>
     <Compile Include="dataset\DsExcel.cs">
       <DependentUpon>DsExcel.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DsExcelInphieuLe.cs">
       <DependentUpon>DsExcelInphieuLe.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DsExcelInphieuLe.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -258,7 +262,6 @@
     </Compile>
     <Compile Include="DsFuji.cs">
       <DependentUpon>DsFuji.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DsFuji.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -536,7 +539,6 @@
     </Compile>
     <Compile Include="dataset\DsCG11.cs">
       <DependentUpon>DsCG11.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="dataset\DsCG11.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -545,7 +547,6 @@
     </Compile>
     <Compile Include="dataset\DsCG14.cs">
       <DependentUpon>DsCG14.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="dataset\DsCG14.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -752,6 +753,7 @@
     <Content Include="PrintCG.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Service References\SGPService\SGPService1.disco" />
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.MM_Distances_procGetById.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -761,7 +763,6 @@
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.PriceMaTrixDetails.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SGPService\SGPService.disco" />
     <None Include="packages.config" />
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.DocumentReturn.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -1540,17 +1541,17 @@
     <None Include="Service References\SGPService\PrintCG_24062016.SGPService.ZoneList.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SGPService\SGPService.wsdl" />
-    <None Include="Service References\SGPService\SGPService.xsd">
+    <None Include="Service References\SGPService\SGPService1.wsdl" />
+    <None Include="Service References\SGPService\SGPService4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SGPService\SGPService1.xsd">
+    <None Include="Service References\SGPService\SGPService41.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SGPService\SGPService2.xsd">
+    <None Include="Service References\SGPService\SGPService42.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SGPService\SGPService3.xsd">
+    <None Include="Service References\SGPService\SGPService43.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="tinhcuoc\dataset\DsCuoc.xsc">
@@ -2148,6 +2149,16 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
     <PublishFile Include="PrintCG.mdb">
       <Visible>False</Visible>
       <Group>
@@ -2156,7 +2167,6 @@
       </TargetPath>
       <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
-      <FileType>File</FileType>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>
@@ -2181,6 +2191,26 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

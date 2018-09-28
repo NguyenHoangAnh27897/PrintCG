@@ -13,8 +13,8 @@ using System.IO;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Drawing.Printing;
 using System.Runtime.InteropServices;
-using KeepAutomation;
-using KeepAutomation.Barcode.Bean;
+//using KeepAutomation;
+//using KeepAutomation.Barcode.Bean;
 using PrintCG_24062016.Report;
 using PrintCG_24062016.dataset;
 namespace PrintCG_24062016

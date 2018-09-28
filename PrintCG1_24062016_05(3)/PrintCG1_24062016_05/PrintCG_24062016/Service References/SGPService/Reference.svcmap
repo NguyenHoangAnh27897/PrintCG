@@ -18,15 +18,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:4351/SGPService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://pms.sgp.vn/SGPService/SGPService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="SGPService.xsd" MetadataType="Schema" ID="9e6a95bb-f9ed-4621-b501-736ce85a858c" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?xsd=xsd1" />
-    <MetadataFile FileName="SGPService1.xsd" MetadataType="Schema" ID="6c4fe95b-196e-477f-ac35-a81c1f18a74f" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?xsd=xsd0" />
-    <MetadataFile FileName="SGPService2.xsd" MetadataType="Schema" ID="ed715d67-ebb7-4b9d-9e61-07c20fc6874f" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?xsd=xsd3" />
-    <MetadataFile FileName="SGPService3.xsd" MetadataType="Schema" ID="cc334aff-7963-45d7-832c-903604673b9b" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?xsd=xsd2" />
-    <MetadataFile FileName="SGPService.wsdl" MetadataType="Wsdl" ID="044ecafb-2574-4cd3-8be8-07d5d3c26698" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?wsdl" />
-    <MetadataFile FileName="SGPService.disco" MetadataType="Disco" ID="6b13e9e4-3ca6-46b4-bebe-b8917c8f9e70" SourceId="1" SourceUrl="http://localhost:4351/SGPService.svc?disco" />
+    <MetadataFile FileName="SGPService4.xsd" MetadataType="Schema" ID="1a1c3439-fa7f-4b59-9868-d665662c2ddd" SourceId="1" SourceUrl="http://pms.sgp.vn/SGPService/SGPService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SGPService1.disco" MetadataType="Disco" ID="78c84954-7b1d-4d36-ae55-a0a4ea29e10e" SourceId="1" SourceUrl="http://pms.sgp.vn/SGPService/SGPService.svc?disco" />
+    <MetadataFile FileName="SGPService1.wsdl" MetadataType="Wsdl" ID="f357bb34-2f5c-414a-b4c9-c64a6e336128" SourceId="1" SourceUrl="http://pms.sgp.vn/SGPService/SGPService.svc?wsdl" />
+    <MetadataFile FileName="SGPService41.xsd" MetadataType="Schema" ID="3f943409-4eba-4788-9b7c-c9b2eb0a58b3" SourceId="1" SourceUrl="http://pms.sgp.vn/SGPService/SGPService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SGPService42.xsd" MetadataType="Schema" ID="3d8af38d-80e2-404c-8260-4f2d05d849b1" SourceId="1" SourceUrl="http://pms.sgp.vn/SGPService/SGPService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SGPService43.xsd" MetadataType="Schema" ID="92e2a5b8-87e0-4d76-bfd0-278e83de8c28" SourceId="1" SourceUrl="http://pms.sgp.vn/SGPService/SGPService.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
